@@ -1,3 +1,4 @@
+import React from 'react'
 import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -6,20 +7,20 @@ export default function CoverImage({ title, src, slug, height, width }) {
   const image = (
     <Image
       src={src}
-      alt={`Cover Image for ${title}`}
+      alt={`Cover Image for ${ title }`}
       className={cn('shadow-sm', {
-        'hover:shadow-md transition-shadow duration-200': slug,
+        'hover:shadow-md transition-shadow duration-200': slug
       })}
-      layout="responsive"
+      layout='responsive'
       width={width}
       height={height}
     />
   )
   return (
-    <div className="sm:mx-0">
+    <div className='sm:mx-0'>
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a aria-label={title}>{image}</a>
+        <Link as={`/posts/${ slug }`} href='/posts/[slug]'>
+          <a href='/' aria-label={title}>{image}</a>
         </Link>
       ) : (
         image

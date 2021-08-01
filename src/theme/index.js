@@ -55,8 +55,11 @@ const fontFamily = {
 /**
  * Fator de escala: 1500
  * Link do type-scale com a configuração atual
- * https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
 */
+
+// eslint-disable-next-line max-len
+// https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
+
 const fontSize = {
   pageTitle: '3.375rem', // h1
   sectionTitle: '2.25rem', // h2

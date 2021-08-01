@@ -1,7 +1,7 @@
-import { ThemeProvider } from "styled-components";
-import { theme } from "../src/theme";
-import { GlobalStyle } from "../src/theme/globalStyle";
-
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../src/theme'
+import { GlobalStyle } from '../src/theme/globalStyle'
 
 export default function MyApp({ Component, pageProps }) {
   return (
