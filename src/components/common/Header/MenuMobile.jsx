@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CloseModalButton from '../CloseModalButton'
 import SocialMedia from '../SocialMedia'
 import Navigation from './Navigation'
 
@@ -17,23 +18,11 @@ const Menu = styled.div`
   transition: ${ ({ theme }) => theme.transition.medium };
 `
 
-const CloseButton = styled.div`
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 30px;
-  text-align: center;
-  background-color: ${ ({ theme }) => theme.color.gray };
-  cursor: pointer;
-`
-
 export default function MenuMobile({ openMenu, setOpenMenu }) {
   return (
     <Menu openMenu={openMenu}>
-      <CloseButton onClick={() => setOpenMenu(!openMenu)}>
-        &times;
-      </CloseButton>
-      <Navigation closeButton />
+      <CloseModalButton handleClick={() => setOpenMenu(!openMenu)} />
+      <Navigation />
       <SocialMedia />
     </Menu>
   )
