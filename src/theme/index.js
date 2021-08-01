@@ -1,5 +1,5 @@
 const color = {
-  red1: '#D10015',
+  red: '#D10015',
   red2: '#C40014',
   red3: '#AB0011',
   red4: '#91000F',
@@ -15,7 +15,7 @@ const color = {
   redAlt9: '#7d0f07',
   white: '#FFFFFF',
   gray1: '#FAFAFA',
-  gray2: '#EEEEEE',
+  gray: '#EEEEEE',
   gray3: '#DDDDDD',
   gray4: '#D4D4D4',
   gray5: '#D0D0D0',
@@ -76,13 +76,13 @@ const fontWeight = {
   bold: '700' // h1
 }
 
-const gutter = (...args) => {
-  const multiplier = 4
-  const validValues = args.slice(0, 4)
-  const valuesWithPX = validValues.map(value => `${value * multiplier}px`)
-  const values = valuesWithPX.join().replaceAll(',', ' ')
-  return values
-}
+// const gutter = (...args) => {
+//   const multiplier = 4
+//   const validValues = args.slice(0, 4)
+//   const valuesWithPX = validValues.map(value => `${value * multiplier}px`)
+//   const values = valuesWithPX.join().replaceAll(',', ' ')
+//   return values
+// }
 
 const letterSpacing = {
   // ainda não sei quais são os valores
@@ -128,7 +128,7 @@ export const theme = {
   fontFamily,
   fontSize,
   fontWeight,
-  gutter,
+  // gutter,
   letterSpacing,
   lineHeight,
   opacity,
