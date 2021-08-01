@@ -23,7 +23,7 @@ const color = {
   gray7: '#BBBBBB',
   gray8: '#AAAAAA',
   black: '#121221',
-  blackAlt: '#333333',
+  blackAlt: '#333333'
 }
 
 const borderRadius = '4px'
@@ -40,13 +40,13 @@ const breakpoints = {
   md: '768',
   lg: '992',
   xl: '1200',
-  xxl: '1400',
+  xxl: '1400'
 }
 
 const fontFamily = {
   title: 'Ubuntu, sans-serif',
   text: '"Montserrat", sans-serif',
-  code: 'Ubuntu Mono, sans-serif',
+  code: 'Ubuntu Mono, sans-serif'
   // Fontes reservas caso dê ruim
   // fontFamily: 'Raleway, sans-serif',
   // fontFamily: 'Open Sans, sans-serif',
@@ -87,7 +87,7 @@ const fontWeight = {
 const letterSpacing = {
   // ainda não sei quais são os valores
   // title: ,
-  // text: 
+  // text:
 }
 
 const lineHeight = {
@@ -133,5 +133,5 @@ export const theme = {
   lineHeight,
   opacity,
   transition,
-  zIndex,
+  zIndex
 }
