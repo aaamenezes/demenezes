@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     ${ ({ theme }) => ({
-    fontSize: theme.fontSize.base.desktop,
+    fontSize: theme.fontSize.base.mobile,
     fontFamily: theme.fontFamily.text,
     lineHeight: 1.5,
     color: theme.color.black,
@@ -21,6 +21,25 @@ export const GlobalStyle = createGlobalStyle`
   /* #__next {
     min-height: 100vh;
   } */
+
+  nav {
+    ${ ({ theme }) => ({
+    fontSize: theme.fontSize.text,
+  }) }
+  }
+
+  ul {
+    ${ ({ theme }) => ({
+    fontSize: theme.fontSize.text,
+    listStyle: 'none'
+  }) }
+  }
+
+  li {
+    ${ ({ theme }) => ({
+    fontSize: theme.fontSize.text
+  }) }
+  }
 
   h1 {
     ${ ({ theme }) => ({
@@ -49,18 +68,6 @@ export const GlobalStyle = createGlobalStyle`
   }) }
   }
 
-  ul {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text
-  }) }
-  }
-
-  li {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text
-  }) }
-  }
-
   span {
     ${ ({ theme }) => ({
     fontSize: theme.fontSize.text
@@ -71,6 +78,12 @@ export const GlobalStyle = createGlobalStyle`
     ${ ({ theme }) => ({
     fontSize: theme.fontSize.text,
     textDecoration: 'none'
+  }) }
+  }
+
+  i {
+    ${ ({ theme }) => ({
+    fontSize: theme.fontSize.text
   }) }
   }
 

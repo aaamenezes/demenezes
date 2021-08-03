@@ -61,12 +61,12 @@ const fontFamily = {
 // https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
 
 const fontSize = {
-  pageTitle: '3.375rem', // h1
-  sectionTitle: '2.25rem', // h2
-  articleText: '1.5rem', // h3, button
-  text: '1rem', // p, a, span
-  subText: '.667rem',
-  subSubText: '.444rem',
+  pageTitle: '3.375em', // h1
+  sectionTitle: '2.25em', // h2
+  articleText: '1.5em', // h3, button
+  text: '1em', // p, a, span
+  subText: '.667em',
+  subSubText: '.444em',
   base: {
     desktop: '20px',
     mobile: '16px'

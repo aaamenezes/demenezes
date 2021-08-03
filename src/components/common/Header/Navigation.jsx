@@ -3,10 +3,6 @@ import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import LinkButton from '../LinkButton'
 
-const NavList = styled.ul`
-  list-style: none;
-`
-
 const NavItem = styled.li`
   border-bottom: 1px solid ${ ({ theme }) => theme.color.gray };
 
@@ -49,9 +45,9 @@ export default function Navigation() {
 
   return (
     <nav>
-      <NavList>
+      <ul>
         {navigationElements}
-      </NavList>
+      </ul>
     </nav>
   )
 }

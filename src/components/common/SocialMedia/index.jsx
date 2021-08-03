@@ -1,24 +1,49 @@
 import React from 'react'
 import styled from 'styled-components'
+import Icon from '../Icon'
+import LinkButton from '../LinkButton'
 
 const SocialMediaWrapper = styled.nav`
-  display: flex;
-  justify-content: space-around;
-  /* justify-content: space-evenly; */
   padding: 20px 5%;
 `
 
-const Icon = styled.div`
-  width: 30px;
-  height: 30px;
+const SocialList = styled.ul`
+  display: flex;
+  justify-content: space-around;
+`
+
+const SocialLink = styled(LinkButton)`
+  display: block;
+  padding: 12px 16px;
+
+  &:hover {
+    i {
+      transform: scale(1.5);
+    }
+  }
 `
 
 export default function SocialMedia() {
+  const socialMedias = [
+    { title: 'github', url: 'https://github.com/aaamenezes' },
+    { title: 'linkedin', url: 'https://www.linkedin.com/in/aaamenezes' },
+    { title: 'twitter', url: 'https://twitter.com/aaamenezes' },
+    { title: 'instagram', url: 'https://instagram.com/aaamenezes' }
+  ]
+
+  const socialElements = socialMedias.map(socialMedia => (
+    <li key={socialMedia.title}>
+      <SocialLink href={socialMedia.url} external>
+        <Icon name={socialMedia.title} />
+      </SocialLink>
+    </li>
+  ))
+
   return (
     <SocialMediaWrapper>
-      <Icon>G</Icon>
-      <Icon>L</Icon>
-      <Icon>T</Icon>
+      <SocialList>
+        {socialElements}
+      </SocialList>
     </SocialMediaWrapper>
   )
 }
