@@ -18,10 +18,10 @@ const Menu = styled.div`
   transition: ${ ({ theme }) => theme.transition.medium };
 `
 
-export default function MenuMobile({ openMenu, setOpenMenu }) {
+export default function MenuMobile({ openMenu, toggleMenu }) {
   return (
     <Menu openMenu={openMenu}>
-      <CloseModalButton handleClick={() => setOpenMenu(!openMenu)} />
+      <CloseModalButton handleClick={toggleMenu} />
       <Navigation />
       <SocialMedia />
     </Menu>

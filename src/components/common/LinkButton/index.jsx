@@ -19,7 +19,7 @@ export default function LinkButton({
       <NextLink href={href} passHref>
         <LinkButtonStyled
           target={external ? '_blank' : '_self'}
-          rel={external ? 'noopener' : 'same'}
+          rel={external ? 'noopener external' : 'same'}
           inline={inline}
           {...props}
         >

@@ -22,9 +22,9 @@ const Path = styled.div`
   background-color: ${ ({ theme }) => theme.color.red };
 `
 
-export default function OpenMenuMobileButton({ openMenu, setOpenMenu }) {
+export default function OpenMenuMobileButton({ toggleMenu }) {
   return (
-    <Button onClick={() => setOpenMenu(!openMenu)}>
+    <Button onClick={toggleMenu}>
       <Path />
       <Path />
       <Path />

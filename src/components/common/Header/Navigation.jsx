@@ -15,6 +15,15 @@ const NavItem = styled.li`
   }
 `
 
+const NavLink = styled(LinkButton)`
+  ${ ({ theme, currentPage }) => ({
+    display: 'block',
+    padding: '20px 5%',
+    color: currentPage ? theme.color.white : theme.color.black,
+    backgroundColor: currentPage ? theme.color.red : theme.color.white
+  }) }
+`
+
 export default function Navigation() {
   const router = useRouter()
 
@@ -28,18 +37,13 @@ export default function Navigation() {
     const currentPage = router.pathname === menu.url
 
     return (
-      <NavItem>
-        <LinkButton
+      <NavItem key={menu.title}>
+        <NavLink
           href={menu.url}
-          style={{
-            display: 'block',
-            padding: '20px 5%',
-            color: currentPage ? 'white' : 'initial',
-            backgroundColor: currentPage ? 'darkred' : 'initial'
-          }}
+          currentPage={currentPage}
         >
           {menu.title}
-        </LinkButton>
+        </NavLink>
       </NavItem>
     )
   })
