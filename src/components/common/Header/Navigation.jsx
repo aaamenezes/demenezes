@@ -35,7 +35,6 @@ export default function Navigation() {
 
   const navigationElements = navigationList.map(menu => {
     const currentPage = router.pathname === menu.url
-
     return (
       <NavItem key={menu.title}>
         <NavLink
