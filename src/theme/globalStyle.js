@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 
   nav {
     ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text,
+    fontSize: theme.fontSize.text
   }) }
   }
 
