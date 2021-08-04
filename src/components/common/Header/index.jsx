@@ -6,9 +6,13 @@ import MenuMobile from './MenuMobile'
 import LinkButton from '../LinkButton'
 
 const HeaderWrapper = styled.header`
+  position: fixed;
+  top: 0;
+  z-index: ${ ({ theme }) => theme.zIndex.fixed };
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 12px 5%;
 `
 

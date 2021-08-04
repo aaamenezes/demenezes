@@ -2,6 +2,7 @@ import React from 'react'
 import { getAllPosts } from '../lib/api'
 import Header from '../src/components/common/Header'
 import Footer from '../src/components/Footer'
+import PostsWrapper from '../src/components/Home/PostsWrapper'
 
 // import Container from '../components/container'
 // import MoreStories from '../components/more-stories'
@@ -11,12 +12,11 @@ import Footer from '../src/components/Footer'
 // import Head from 'next/head'
 // import { CMS_NAME } from '../lib/constants'
 
-// export default function Home({ allPosts }) {
-export default function Home() {
+export default function Home({ allPosts }) {
   return (
     <>
       <Header />
-      {/* <main>Main</main> */}
+      <PostsWrapper allPosts={allPosts} />
       <Footer />
     </>
   )
