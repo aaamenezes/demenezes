@@ -31,13 +31,19 @@ export default function Header() {
           ? (
             <h1>
               <LinkButton href='/'>
-                <Logo src='http://placehold.it/200x50/' alt='Logo do site' />
+                <Logo
+                  src='https://via.placeholder.com/200x50'
+                  alt='Logo do site'
+                />
               </LinkButton>
             </h1>
           )
           : (
             <LinkButton href='/'>
-              <Logo src='http://placehold.it/200x50/' alt='Logo do site' />
+              <Logo
+                src='https://via.placeholder.com/200x50'
+                alt='Logo do site'
+              />
             </LinkButton>
           )
       }
