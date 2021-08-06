@@ -1,31 +1,33 @@
 import React from 'react'
+import styled, { css } from 'styled-components'
 import Container from '../../common/Container'
+
+const HeroWrapper = styled.article`
+  ${ ({ theme, heroPost }) => css`
+      height: 100vh;
+      padding-top: 74px;
+      background: linear-gradient(
+        0deg,
+        ${ theme.color.black + theme.opacity.medium.hex },
+        ${ theme.color.black + theme.opacity.medium.hex }
+      ), url('${ heroPost.coverImage }');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+  ` }
+`
+
+const HeroTitle = styled.h3`
+  color: ${ ({ theme }) => theme.color.white };
+`
 
 export default function PostsWrapper({ allPosts }) {
   const heroPost = allPosts[0]
-  const heroPostElement = (
-    <Container
-      as='article'
-      style={{
-        height: '100vh',
-        paddingTop: '74px',
-        backgroundImage: `url(${ heroPost.coverImage })`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      <h3>{heroPost.title}</h3>
-    </Container>
-  )
 
   const otherPosts = allPosts.slice(1)
   const otherPostsElements = otherPosts.map(post => (
-    <Container
-      as='article'
-      key={post.title}
-    >
+    <Container as='article' key={post.title}>
       <h3>{post.title}</h3>
       <img
         src={post.coverImage}
@@ -36,7 +38,9 @@ export default function PostsWrapper({ allPosts }) {
 
   return (
     <Container as='main' style={{ padding: '0' }}>
-      {heroPostElement}
+      <Container as={HeroWrapper} heroPost={heroPost}>
+        <HeroTitle>{heroPost.title}</HeroTitle>
+      </Container>
       {otherPostsElements}
     </Container>
   )

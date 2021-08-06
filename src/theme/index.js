@@ -22,7 +22,7 @@ const color = {
   gray6: '#CCCCCC',
   gray7: '#BBBBBB',
   gray8: '#AAAAAA',
-  black: '#121221',
+  black: '#121212',
   blackAlt: '#333333'
 }
 
@@ -99,9 +99,18 @@ const lineHeight = {
 }
 
 const opacity = {
-  transparent: '.3',
-  medium: '.6',
-  light: '.9'
+  light: {
+    rgb: '.3',
+    hex: '4D'
+  },
+  medium: {
+    rgb: '.6',
+    hex: '99'
+  },
+  hard: {
+    rgb: '.9',
+    hex: 'E6'
+  }
 }
 
 const transition = {
