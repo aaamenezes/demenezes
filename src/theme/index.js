@@ -79,14 +79,6 @@ const fontWeight = {
   bold: '700' // h1
 }
 
-// const gutter = (...args) => {
-//   const multiplier = 4
-//   const validValues = args.slice(0, 4)
-//   const valuesWithPX = validValues.map(value => `${value * multiplier}px`)
-//   const values = valuesWithPX.join().replaceAll(',', ' ')
-//   return values
-// }
-
 const letterSpacing = {
   // ainda não sei quais são os valores
   // title: ,
@@ -140,7 +132,6 @@ export const theme = {
   fontFamily,
   fontSize,
   fontWeight,
-  // gutter,
   letterSpacing,
   lineHeight,
   opacity,

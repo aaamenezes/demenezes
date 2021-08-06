@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import LinkButton from '../LinkButton'
+import { getGutter } from '../../../utils/getGutter'
 
 const NavItem = styled.li`
   border-bottom: 1px solid ${ ({ theme }) => theme.color.gray };
@@ -14,7 +15,7 @@ const NavItem = styled.li`
 const NavLink = styled(LinkButton)`
   ${ ({ theme, currentPage }) => ({
     display: 'block',
-    padding: '20px 5%',
+    padding: getGutter(5, '5%'),
     color: currentPage ? theme.color.white : theme.color.black,
     backgroundColor: currentPage ? theme.color.red : theme.color.white
   }) }

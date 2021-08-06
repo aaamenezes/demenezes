@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { getGutter } from '../../../utils/getGutter'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'
 
 const SocialMediaWrapper = styled.nav`
-  padding: 20px 5%;
+  padding: ${ getGutter(5, '5%') };
 `
 
 const SocialList = styled.ul`
@@ -14,7 +15,7 @@ const SocialList = styled.ul`
 
 const SocialLink = styled(LinkButton)`
   display: block;
-  padding: 12px 16px;
+  padding: ${ getGutter(3, 4) };
 
   &:hover {
     i {

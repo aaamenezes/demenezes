@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import OpenMenuMobileButton from './OpenMenuMobileButton'
 import MenuMobile from './MenuMobile'
 import LinkButton from '../LinkButton'
+import { getGutter } from '../../../utils/getGutter'
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -13,7 +14,7 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 12px 5%;
+  padding: ${ getGutter(3, '5%') };
 `
 
 const Logo = styled.img`
