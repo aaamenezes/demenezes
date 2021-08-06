@@ -9,13 +9,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.base.mobile,
-    fontFamily: theme.fontFamily.text,
-    lineHeight: 1.5,
-    color: theme.color.black,
-    backgroundColor: theme.color.white
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.base.mobile };
+    font-family: ${ ({ theme }) => theme.fontFamily.text };
+    line-height: 1.5;
+    color: ${ ({ theme }) => theme.color.black };
+    background-color: ${ ({ theme }) => theme.color.white };
   }
 
   /* #__next {
@@ -23,68 +21,48 @@ export const GlobalStyle = createGlobalStyle`
   } */
 
   nav {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.text }
   }
 
   ul {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text,
-    listStyle: 'none'
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.text };
+    list-style: none;
   }
 
   li {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.text };
   }
 
   h1 {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.pageTitle,
-    fontFamily: theme.fontFamily.title
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.pageTitle };
+    font-family: ${ ({ theme }) => theme.fontFamily.title };
   }
 
   h2 {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.sectionTitle,
-    fontFamily: theme.fontFamily.title
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.sectionTitle };
+    font-family: ${ ({ theme }) => theme.fontFamily.title };
   }
 
   h3 {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.articleTitle,
-    fontFamily: theme.fontFamily.title
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.articleTitle };
+    font-family: ${ ({ theme }) => theme.fontFamily.title };
   }
 
   p {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.text };
   }
 
   span {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.text };
   }
 
   a {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text,
-    textDecoration: 'none'
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.text };;
+    text-decoration: none;
   }
 
   i {
-    ${ ({ theme }) => ({
-    fontSize: theme.fontSize.text
-  }) }
+    font-size: ${ ({ theme }) => theme.fontSize.text };
   }
 
   img {
