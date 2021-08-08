@@ -14,16 +14,19 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: ${ ({ theme, highLight }) => (
+    highLight ? `brightness(${ theme.opacity.medium.rgb })` : 'initial'
+  ) };
 `
 
-export default function CropedImage({ src, alt, ratio }) {
+export default function CropedImage({ src, alt, ratio, highLight }) {
   if (ratio.indexOf('x') === -1) return null
 
   const [ width, height ] = ratio.split('x')
 
   return (
     <Crop width={width} height={height}>
-      <Image src={src} alt={alt} />
+      <Image src={src} alt={alt} highLight={highLight} />
     </Crop>
   )
 }
