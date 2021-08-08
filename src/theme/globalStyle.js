@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-size: ${ ({ theme }) => theme.fontSize.base.mobile };
     font-family: ${ ({ theme }) => theme.fontFamily.text };
-    line-height: 1.5;
+    line-height: 1;
     color: ${ ({ theme }) => theme.color.black };
     background-color: ${ ({ theme }) => theme.color.white };
   }

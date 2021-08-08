@@ -15,7 +15,7 @@ const HeroWrapper = styled.article`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; */
+  background-attachment: fixed;
 `
 
 const HeroTitle = styled.h3`
@@ -30,6 +30,7 @@ export default function PostsWrapper({ allPosts }) {
     <PostCard
       key={post.title}
       title={post.title}
+      postLink={`/posts/${ post.slug }`}
       imageURL={post.coverImage}
       imageAlt={`Imagem de capa: ${ post.title }`}
       imageRatio='4x3'
@@ -41,6 +42,11 @@ export default function PostsWrapper({ allPosts }) {
       <Container as={HeroWrapper} heroPost={heroPost}>
         <HeroTitle>{heroPost.title}</HeroTitle>
       </Container>
+      {otherPostsElements}
+      {otherPostsElements}
+      {otherPostsElements}
+      {otherPostsElements}
+      {otherPostsElements}
       {otherPostsElements}
     </main>
   )
