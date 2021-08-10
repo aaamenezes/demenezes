@@ -1,8 +1,10 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { getAllPosts } from '../lib/api'
 import Header from '../src/components/common/Header'
 import Footer from '../src/components/Footer'
 import PostsWrapper from '../src/components/Home/PostsWrapper'
+import Pagination from '../src/components/Pagination'
 
 // import Container from '../components/container'
 // import MoreStories from '../components/more-stories'
@@ -13,10 +15,28 @@ import PostsWrapper from '../src/components/Home/PostsWrapper'
 // import { CMS_NAME } from '../lib/constants'
 
 export default function Home({ allPosts }) {
+  const router = useRouter()
+  const postsPerPage = 5
+  const currentPage = router.query.page || 1
+
+  const postsList = allPosts.slice(
+    (currentPage - 1) * postsPerPage, currentPage * postsPerPage
+  )
+
+  const lastPage = Math.ceil(allPosts.length / postsPerPage)
+  const isLastPage = +currentPage === +lastPage
+
   return (
     <>
       <Header />
-      <PostsWrapper allPosts={allPosts} />
+      <PostsWrapper postsList={postsList} />
+      {allPosts.length > postsPerPage && (
+        <Pagination
+          currentPage={currentPage}
+          postsPerPage={postsPerPage}
+          isLastPage={isLastPage}
+        />
+      )}
       <Footer />
     </>
   )

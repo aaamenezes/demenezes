@@ -1,3 +1,5 @@
+import { getGutter } from '../utils/getGutter'
+
 const color = {
   red: '#D10015',
   red2: '#C40014',
@@ -26,7 +28,7 @@ const color = {
   blackAlt: '#333333'
 }
 
-const borderRadius = '4px'
+const borderRadius = getGutter(1)
 
 const boxShadow = {
   low: '0 0 40px -30px black',
