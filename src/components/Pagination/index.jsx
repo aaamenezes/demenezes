@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { POSTS_PER_PAGE } from '../../../lib/constants'
 import { getGutter } from '../../utils/getGutter'
 import Container from '../common/Container'
 import LinkButton from '../common/LinkButton'
@@ -21,9 +22,9 @@ const PaginationButton = styled.a`
   }
 `
 
-export default function Pagination({ currentPage, postsPerPage, isLastPage }) {
-  const previousLink = +currentPage === 2 ? '/' : `/?page=${ currentPage - 1 }`
-  const nextLink = `/?page=${ +currentPage + 1 }`
+export default function Pagination({ currentPage, isLastPage }) {
+  const previousLink = +currentPage === 2 ? '/' : `/page/${ currentPage - 1 }`
+  const nextLink = `/page/${ +currentPage + 1 }`
 
   return (
     <Container as={PaginationWrapper}>
@@ -32,22 +33,24 @@ export default function Pagination({ currentPage, postsPerPage, isLastPage }) {
           <LinkButton
             as={PaginationButton}
             href={previousLink}
-            aria-labelledby={`Ver os ${ postsPerPage } posts mais recentes`}
+            aria-labelledby={`Ver os ${ POSTS_PER_PAGE } posts mais recentes`}
           >
             Posts mais recentes
           </LinkButton>
         )
       }
       {
-        !isLastPage && (
-          <LinkButton
-            as={PaginationButton}
-            href={nextLink}
-            aria-labelledby={`Ver os ${ postsPerPage } posts mais antigos`}
-          >
-            Próxima página
-          </LinkButton>
-        )
+        !isLastPage
+          ? (
+            <LinkButton
+              as={PaginationButton}
+              href={nextLink}
+              aria-labelledby={`Ver os ${ POSTS_PER_PAGE } posts mais antigos`}
+            >
+              Próxima página
+            </LinkButton>
+          )
+          : <div>Parabéns, você chegou ao início do blog :)</div>
       }
     </Container>
   )
