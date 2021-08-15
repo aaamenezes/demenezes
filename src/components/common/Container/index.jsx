@@ -10,11 +10,3 @@ const Container = styled.div`
 `
 
 export default Container
-
-// function Container({ children, ...props }) {
-//   return (
-//     <ContainerWrapper {...props}>
-//       {children}
-//     </ContainerWrapper>
-//   )
-// }

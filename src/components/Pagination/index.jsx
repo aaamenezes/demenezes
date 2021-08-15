@@ -23,7 +23,7 @@ const PaginationButton = styled.a`
 `
 
 export default function Pagination({ currentPage, isLastPage }) {
-  const previousLink = +currentPage === 2 ? '/' : `/page/${ currentPage - 1 }`
+  const previousLink = `/page/${ +currentPage - 1 }`.replace('page/1', '')
   const nextLink = `/page/${ +currentPage + 1 }`
 
   return (

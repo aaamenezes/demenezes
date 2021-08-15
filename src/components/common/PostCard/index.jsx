@@ -10,8 +10,7 @@ const PostCardWrapper = styled.article`
     paddingTop: highLight ? 0 : getGutter(5),
     paddingBottom: highLight ? 0 : getGutter(5),
     paddingLeft: (highLight && 0),
-    paddingRight: (highLight && 0),
-    marginBottom: getGutter('15')
+    paddingRight: (highLight && 0)
   }) }
 `
 
@@ -62,8 +61,8 @@ export default function PostCard({
   imageRatio,
   index
 }) {
-  // Number.isInteger(index / 3)
   const highLight = Number.isInteger((index + 1) / 3) && index !== 0
+
   return (
     <Container as={PostCardWrapper} highLight={highLight}>
       <PostCardLink href={postLink}>
