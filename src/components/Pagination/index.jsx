@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { POSTS_PER_PAGE } from '../../../lib/constants'
 import { getGutter } from '../../utils/getGutter'
-import Container from '../common/Container'
-import LinkButton from '../common/LinkButton'
+import Container from '../Common/Container'
+import LinkButton from '../Common/LinkButton'
 
 const PaginationWrapper = styled.section`
   display: flex;

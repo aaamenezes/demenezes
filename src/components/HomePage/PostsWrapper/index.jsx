@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import HeroPostCard from '../HeroPostCard'
-import PostCard from '../../common/PostCard'
-import Newsletter from '../../common/Newsletter'
+import PostCard from '../../Common/PostCard'
+import Newsletter from '../../Common/Newsletter'
 import { getGutter } from '../../../utils/getGutter'
 
 const StyledPostsWrapper = styled.main`

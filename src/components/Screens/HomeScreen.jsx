@@ -1,7 +1,7 @@
 import React from 'react'
 import { POSTS_PER_PAGE } from '../../../lib/constants'
 import { headerBehavior } from '../../utils/headerBehavior'
-import Header from '../common/Header'
+import Header from '../Common/Header'
 import Footer from '../Footer'
 import PostsWrapper from '../HomePage/PostsWrapper'
 import Pagination from '../Pagination'

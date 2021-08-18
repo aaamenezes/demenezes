@@ -2,7 +2,7 @@
 // https://emersonbroga.com/e/sobre/
 
 import React from 'react'
-import Header from '../src/components/common/Header'
+import Header from '../src/components/Common/Header'
 
 export default function Contact() {
   return (

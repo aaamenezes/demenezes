@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Container from '../../common/Container'
+import Container from '../../Common/Container'
 
 const HeroWrapper = styled.article`
   height: 100vh;
