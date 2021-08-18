@@ -1,5 +1,6 @@
 import React from 'react'
 import { POSTS_PER_PAGE } from '../../../lib/constants'
+import { headerBehavior } from '../../utils/headerBehavior'
 import Header from '../common/Header'
 import Footer from '../Footer'
 import PostsWrapper from '../HomePage/PostsWrapper'
@@ -11,15 +12,14 @@ export default function HomeScreen({
   currentPage,
   isLastPage
 }) {
+  const [ heroRef, isMinimizeHeader ] = headerBehavior()
+
   return (
     <>
-      <Header />
-      <PostsWrapper postsList={currentPosts} />
+      <Header isMinimizeHeader={isMinimizeHeader} />
+      <PostsWrapper postsList={currentPosts} heroRef={heroRef} />
       {totalPosts > POSTS_PER_PAGE && (
-        <Pagination
-          currentPage={currentPage}
-          isLastPage={isLastPage}
-        />
+        <Pagination currentPage={currentPage} isLastPage={isLastPage} />
       )}
       <Footer />
     </>

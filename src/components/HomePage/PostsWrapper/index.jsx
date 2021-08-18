@@ -11,7 +11,7 @@ const StyledPostsWrapper = styled.main`
   }
 `
 
-export default function PostsWrapper({ postsList }) {
+export default function PostsWrapper({ postsList, heroRef }) {
   const heroPost = postsList[0]
 
   const firstBlockStart = 1
@@ -48,7 +48,7 @@ export default function PostsWrapper({ postsList }) {
 
   return (
     <StyledPostsWrapper>
-      <HeroPostCard post={heroPost} />
+      <HeroPostCard post={heroPost} heroRef={heroRef} />
       {firstBlockPosts}
       <Newsletter />
       {secondBlockPosts}

@@ -21,9 +21,9 @@ const HeroTitle = styled.h3`
   color: ${ ({ theme }) => theme.color.white };
 `
 
-export default function HeroPostCard({ post }) {
+export default function HeroPostCard({ post, heroRef }) {
   return (
-    <Container as={HeroWrapper} post={post}>
+    <Container as={HeroWrapper} post={post} ref={heroRef}>
       <HeroTitle>{post.title}</HeroTitle>
     </Container>
   )

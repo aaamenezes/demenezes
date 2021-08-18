@@ -17,11 +17,19 @@ const HeaderWrapper = styled.header`
   padding: ${ getGutter(3, '5%') };
 `
 
+const LogoLink = styled.a`
+  display: block;
+  transform: ${ ({ isMinimizeHeader }) => (
+    isMinimizeHeader ? 'translateX(200%)' : 'translateX(0)'
+  ) };
+  transition: ${ ({ theme }) => theme.transition.medium };
+`
+
 const Logo = styled.img`
   margin: 0;
 `
 
-export default function Header() {
+export default function Header({ isMinimizeHeader }) {
   const router = useRouter()
   const [ openMenu, setOpenMenu ] = useState(false)
 
@@ -35,7 +43,11 @@ export default function Header() {
         router.pathname === '/'
           ? (
             <h1>
-              <LinkButton href='/'>
+              <LinkButton
+                href='/'
+                as={LogoLink}
+                isMinimizeHeader={isMinimizeHeader}
+              >
                 <Logo
                   src='https://via.placeholder.com/200x50'
                   alt='Logo do site'
