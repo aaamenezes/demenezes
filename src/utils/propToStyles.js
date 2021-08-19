@@ -17,6 +17,7 @@ export default function propToStyle(propName) {
       if (propValue.md) breakpoints.md = { [propName]: propValue.md }
       if (propValue.lg) breakpoints.lg = { [propName]: propValue.lg }
       if (propValue.xl) breakpoints.xl = { [propName]: propValue.xl }
+      if (propValue.xxl) breakpoints.xxl = { [propName]: propValue.xxl }
       return getBreakpoints(breakpoints)
     }
 

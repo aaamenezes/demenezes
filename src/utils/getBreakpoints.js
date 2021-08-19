@@ -3,7 +3,7 @@ import { theme } from '../theme'
 
 const { breakpoints } = theme
 
-export default function breakpointsMedia(cssByBreakpoints) {
+export default function getBreakpoints(cssByBreakpoints) {
   const breakpointsNames = Object.keys(cssByBreakpoints)
 
   return breakpointsNames.map(breakpointName => css`

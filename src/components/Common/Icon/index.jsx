@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import propToStyle from '../../../utils/propToStyles'
 
 const IconStyled = styled.i`
   transition: ${ ({ theme }) => theme.transition.fast };
+
+  ${ propToStyle('color') }
 
   /* &:not(:hover) { */
     /* Lembrar de deixar tudo preto no desktop, e colorir no hover */
@@ -21,7 +24,7 @@ export default function Icon({ name, inline }) {
       <IconStyled
         className='fab fa-github'
         name={name}
-        style={{ color: '#272727' }}
+        color={{ xs: '#272727' }}
       />
     )
   case 'twitter':
@@ -29,7 +32,7 @@ export default function Icon({ name, inline }) {
       <IconStyled
         className='fab fa-twitter'
         name={name}
-        style={{ color: '#4EA6E9' }}
+        color={{ xs: '#4EA6E9' }}
       />
     )
   case 'medium':
@@ -37,7 +40,7 @@ export default function Icon({ name, inline }) {
       <IconStyled
         className='fab fa-medium'
         name={name}
-        style={{ color: '#11100E' }}
+        color={{ xs: '#11100E' }}
       />
     )
   case 'linkedin':
@@ -45,7 +48,7 @@ export default function Icon({ name, inline }) {
       <IconStyled
         className='fab fa-linkedin'
         name={name}
-        style={{ color: '#0073AF' }}
+        color={{ xs: '#0073AF' }}
       />
     )
   case 'external':
@@ -54,7 +57,7 @@ export default function Icon({ name, inline }) {
         className='fas fa-external-link-alt'
         name={name}
         inline={inline}
-        style={{ color: 'currentColor' }}
+        color={{ xs: 'currentColor' }}
       />
     )
   case 'instagram':
@@ -63,7 +66,26 @@ export default function Icon({ name, inline }) {
         className='fab fa-instagram'
         name={name}
         inline={inline}
-        style={{ color: '#F02002' }}
+        color={{ xs: '#F02002' }}
+      />
+    )
+  case 'search':
+    return (
+      <IconStyled
+        className='fas fa-search'
+        name={name}
+        inline={inline}
+        color={{ xs: 'currentColor' }}
+      />
+    )
+  case 'close':
+    return (
+      <IconStyled
+        className='fas fa-times-circle'
+        // className='far fa-times-circle'
+        name={name}
+        inline={inline}
+        color={{ xs: 'currentColor' }}
       />
     )
   default:
@@ -71,7 +93,7 @@ export default function Icon({ name, inline }) {
       <IconStyled
         className='fas fa-question-circle'
         name={name}
-        style={{ color: 'currentColor' }}
+        color={{ xs: 'currentColor' }}
       />
     )
   }

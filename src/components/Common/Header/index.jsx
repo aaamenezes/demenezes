@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
-import OpenMenuMobileButton from './OpenMenuMobileButton'
-import MenuMobile from './MenuMobile'
 import LinkButton from '../LinkButton'
+import Navigation from './Navigation'
 import { getGutter } from '../../../utils/getGutter'
+import SearchWrapper from './SearchWrapper'
+import ToggleModalButton from './ToggleModalButton'
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -20,7 +21,7 @@ const HeaderWrapper = styled.header`
 const LogoLink = styled.a`
   display: block;
   transform: ${ ({ isMinimizeHeader }) => (
-    isMinimizeHeader ? 'translateX(200%)' : 'translateX(0)'
+    isMinimizeHeader ? 'translateX(100vw)' : 'translateX(0)'
   ) };
   transition: ${ ({ theme }) => theme.transition.medium };
 `
@@ -37,35 +38,33 @@ export default function Header({ isMinimizeHeader }) {
     setOpenMenu(!openMenu)
   }
 
+  const logoImage = (
+    <LinkButton
+      href='/'
+      as={LogoLink}
+      isMinimizeHeader={isMinimizeHeader}
+    >
+      <Logo
+        src='https://via.placeholder.com/200x50'
+        alt='Logo do site'
+      />
+    </LinkButton>
+  )
+
+  const logoWrapper = router.pathname === '/' ? <h1>{logoImage}</h1> : logoImage
+
   return (
     <HeaderWrapper>
-      {
-        router.pathname === '/'
-          ? (
-            <h1>
-              <LinkButton
-                href='/'
-                as={LogoLink}
-                isMinimizeHeader={isMinimizeHeader}
-              >
-                <Logo
-                  src='https://via.placeholder.com/200x50'
-                  alt='Logo do site'
-                />
-              </LinkButton>
-            </h1>
-          )
-          : (
-            <LinkButton href='/'>
-              <Logo
-                src='https://via.placeholder.com/200x50'
-                alt='Logo do site'
-              />
-            </LinkButton>
-          )
-      }
-      <OpenMenuMobileButton openMenu={openMenu} toggleMenu={toggleMenu} />
-      <MenuMobile openMenu={openMenu} toggleMenu={toggleMenu} />
+      {logoWrapper}
+      <ToggleModalButton
+        onClick={toggleMenu}
+        icon='bars'
+        display={{
+          md: 'none'
+        }}
+      />
+      <Navigation openMenu={openMenu} toggleMenu={toggleMenu} />
+      <SearchWrapper />
     </HeaderWrapper>
   )
 }

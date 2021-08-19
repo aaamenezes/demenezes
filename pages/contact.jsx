@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <div>otariu</div>
+      <div> </div>
     </>
   )
 }

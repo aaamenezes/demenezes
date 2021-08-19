@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <div>otariu</div>
+      <div> </div>
     </>
   )
 }
