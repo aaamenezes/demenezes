@@ -18,7 +18,7 @@ export function headerBehavior() {
   const intersectOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5 // 50% of the viewport height
+    threshold: [ 0.4, 0.5, 0.6, 0.7 ]
   }
 
   useEffect(() => {
