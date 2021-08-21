@@ -65,7 +65,7 @@ const fontFamily = {
 const fontSize = {
   pageTitle: '3.375em', // h1
   sectionTitle: '2.25em', // h2
-  articleText: '1.5em', // h3, button
+  articleTitle: '1.5em', // h3, button
   text: '1em', // p, a, span
   subText: '.667em',
   subSubText: '.444em',

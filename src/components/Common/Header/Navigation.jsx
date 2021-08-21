@@ -17,9 +17,12 @@ const NavWrapper = styled.nav`
       max-width: ${ ({ theme }) => `${ theme.breakpoints.sm }px` };
       height: 100vh;
       background-color: ${ ({ theme }) => theme.color.white };
-      transition: right ${ ({ theme }) => theme.transition.medium };
+      transition: ${ ({ theme }) => theme.transition.medium };
     `,
     md: css`
+      transform: ${ ({ isMinimizeHeader }) => (
+    isMinimizeHeader ? 'translateX(100vw)' : 'translateX(0)'
+  ) };
       position: initial;
       width: auto;
       height: auto;
@@ -37,10 +40,14 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   ${ getBreakpoints({
-    xs: css`border-bottom: 1px solid ${ ({ theme }) => theme.color.gray };`,
-    md: css`border-bottom: 1px solid ${ ({ theme, isCurrentPage }) => (
-      isCurrentPage && theme.color.white
-    ) };`
+    xs: css`
+      border-bottom: 1px solid ${ ({ theme }) => theme.color.gray };
+    `,
+    md: css`
+      border-bottom: 1px solid ${ ({ theme, isCurrentPage, borderColor }) => (
+    isCurrentPage ? theme.color[borderColor] : 'transparent'
+  ) };
+    `
   }) }
 
   &:first-child {
@@ -51,7 +58,7 @@ const NavItem = styled.li`
   }
 `
 
-const NavLink = styled(LinkButton)`
+const NavLink = styled.a`
   ${ getBreakpoints({
     xs: css`
       display: block;
@@ -64,7 +71,8 @@ const NavLink = styled(LinkButton)`
   ) };
     `,
     md: css`
-      padding: ${ getGutter(5) };
+      padding: ${ getGutter(4) };
+      color: ${ ({ theme, linkColor }) => theme.color[linkColor] };
       background-color: transparent;
     `
   }) }
@@ -98,7 +106,7 @@ const CloseMenuMobileButton = styled.button`
   }) }
 `
 
-export default function Navigation({ openMenu, toggleMenu }) {
+export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
   const router = useRouter()
 
   const navigationList = [
@@ -109,11 +117,24 @@ export default function Navigation({ openMenu, toggleMenu }) {
 
   const navigationElements = navigationList.map(menu => {
     const isCurrentPage = router.pathname === menu.url
+    const isHome = router.pathname === '/'
+    const borderColor = isHome ? 'white' : 'black'
+    const linkColor = isCurrentPage && isHome ? 'white' : 'black'
+
     return (
-      <NavItem key={menu.title} isCurrentPage={isCurrentPage}>
-        <NavLink href={menu.url} isCurrentPage={isCurrentPage}>
+      <NavItem
+        key={menu.title}
+        isCurrentPage={isCurrentPage}
+        borderColor={borderColor}
+      >
+        <LinkButton
+          href={menu.url}
+          as={NavLink}
+          isCurrentPage={isCurrentPage}
+          linkColor={linkColor}
+        >
           {menu.title}
-        </NavLink>
+        </LinkButton>
       </NavItem>
     )
   })
@@ -121,13 +142,14 @@ export default function Navigation({ openMenu, toggleMenu }) {
   return (
     <>
       <Overlay openMenu={openMenu} onClick={toggleMenu} />
-      <NavWrapper openMenu={openMenu}>
+      <NavWrapper openMenu={openMenu} isMinimizeHeader={isMinimizeHeader}>
         <NavList>
           {navigationElements}
         </NavList>
         <ToggleModalButton
           onClick={toggleMenu}
           icon='close'
+          color='blackAlt'
           as={CloseMenuMobileButton}
         />
       </NavWrapper>

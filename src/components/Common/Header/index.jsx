@@ -51,7 +51,11 @@ export default function Header({ isMinimizeHeader }) {
     </LinkButton>
   )
 
-  const logoWrapper = router.pathname === '/' ? <h1>{logoImage}</h1> : logoImage
+  const isHome = router.pathname === '/'
+  const logoWrapper = isHome ? <h1>{logoImage}</h1> : logoImage
+  const toggleMenuColor = (
+    (isHome && isMinimizeHeader) || !(isHome) ? 'black' : 'gray'
+  )
 
   return (
     <HeaderWrapper>
@@ -59,12 +63,17 @@ export default function Header({ isMinimizeHeader }) {
       <ToggleModalButton
         onClick={toggleMenu}
         icon='bars'
+        color={toggleMenuColor}
         display={{
           md: 'none'
         }}
       />
-      <Navigation openMenu={openMenu} toggleMenu={toggleMenu} />
-      <SearchWrapper />
+      <Navigation
+        openMenu={openMenu}
+        toggleMenu={toggleMenu}
+        isMinimizeHeader={isMinimizeHeader}
+      />
+      <SearchWrapper isMinimizeHeader={isMinimizeHeader} />
     </HeaderWrapper>
   )
 }

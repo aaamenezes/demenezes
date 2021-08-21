@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 import styled, { css } from 'styled-components'
 import Container from '../Container'
 import ToggleModalButton from './ToggleModalButton'
@@ -10,6 +11,13 @@ const Search = styled.div`
     xs: css`display: none;`,
     md: css`display: block;`
   }) }
+`
+
+const SearchToggleButton = styled.button`
+  transform: ${ ({ isMinimizeHeader }) => (
+    isMinimizeHeader ? 'translateX(100vw)' : 'translateX(0)'
+  ) };
+  transition: ${ ({ theme }) => theme.transition.medium };
 `
 
 const SearchContent = styled.div`
@@ -41,8 +49,9 @@ const CloseMenuMobileButton = styled.button`
   }) }
 `
 
-export default function SearchWrapper() {
+export default function SearchWrapper({ isMinimizeHeader }) {
   const [ openSearch, setOpenSearch ] = useState(false)
+  const router = useRouter()
 
   function toggleSearch() {
     setOpenSearch(!openSearch)
@@ -51,17 +60,21 @@ export default function SearchWrapper() {
   return (
     <Search>
       <ToggleModalButton
+        isMinimizeHeader={isMinimizeHeader}
+        as={SearchToggleButton}
         onClick={toggleSearch}
         icon='search'
+        color={router.pathname === '/' ? 'gray' : 'blackAlt'}
         display={{
           xs: 'none',
-          md: 'block'
+          md: 'flex'
         }}
       />
       <Container as={SearchContent} openSearch={openSearch}>
         <ToggleModalButton
           onClick={toggleSearch}
           icon='close'
+          color='gray'
           as={CloseMenuMobileButton}
         />
       </Container>
