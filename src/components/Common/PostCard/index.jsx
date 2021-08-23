@@ -1,16 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 import Container from '../Container'
 import CropedImage from '../CropedImage'
 
 const PostCardWrapper = styled.article`
-  ${ ({ highLight }) => ({
-    position: 'relative',
-    paddingTop: highLight ? 0 : getGutter(5),
-    paddingBottom: highLight ? 0 : getGutter(5),
-    paddingLeft: (highLight && 0),
-    paddingRight: (highLight && 0)
+  ${ getBreakpoints({
+    xs: css`
+      position: relative;
+      padding-top: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
+      padding-bottom: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
+      padding-left: ${ ({ highLight }) => highLight && 0 };
+      padding-right: ${ ({ highLight }) => highLight && 0 };
+    `,
+    md: css`
+      padding-top: ${ getGutter(5) };
+      padding-bottom: ${ getGutter(5) };
+      padding-left: 0;
+      padding-right: 0;
+    `
   }) }
 `
 
@@ -19,37 +28,62 @@ const PostCardLink = styled.a`
 `
 
 const PostCardTStripe = styled.div`
-  ${ ({ theme, highLight }) => ({
-    position: 'absolute',
-    zIndex: theme.zIndex.absolute,
-    top: highLight ? 0 : getGutter(5),
-    left: highLight ? 0 : '5%',
-    width: highLight ? '100%' : '90%',
-    padding: getGutter(2, 3),
-    color: theme.color.white,
-    backgroundColor: theme.color.red
+  ${ getBreakpoints({
+    xs: css`
+      position: absolute;
+      z-index: ${ ({ theme }) => theme.zIndex.absolute };
+      top: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
+      left: ${ ({ highLight }) => highLight ? 0 : '5%' };
+      width: ${ ({ highLight }) => highLight ? '100%' : '90%' };
+      padding: ${ getGutter(2, 3) };
+      color: ${ ({ theme }) => theme.color.white };
+      background-color: ${ ({ theme }) => theme.color.red };
+    `,
+    md: css`
+      top: ${ getGutter(5) };
+      left: 0;
+      width: 100%;
+    `
   }) }
 `
 
 const PostCardLabel = styled.div`
-  ${ ({ theme, highLight }) => ({
-    position: 'absolute',
-    zIndex: theme.zIndex.absolute,
-    top: highLight ? 0 : getGutter(5),
-    right: highLight ? 0 : '5%',
-    padding: getGutter(2, 3),
-    color: theme.color.white,
-    backgroundColor: theme.color.red
+  ${ getBreakpoints({
+    xs: css`
+      position: absolute;
+      z-index: ${ ({ theme }) => theme.zIndex.absolute };
+      top: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
+      right: ${ ({ highLight }) => highLight ? 0 : '5%' };
+      padding: ${ getGutter(2, 3) };
+      color: ${ ({ theme }) => theme.color.white };
+      background-color: ${ ({ theme }) => theme.color.red };
+    `,
+    md: css`
+      top: ${ getGutter(5) };
+      right: 0;
+    `
   }) }
 `
 
 const PostCardTitle = styled.h3`
-  ${ ({ theme, highLight }) => ({
-    position: highLight ? 'absolute' : 'initial',
-    bottom: highLight ? getGutter(3) : 'initial',
-    padding: highLight ? getGutter(0, '5%') : 'initial',
-    marginTop: getGutter(5),
-    color: highLight ? theme.color.white : theme.color.black
+  ${ getBreakpoints({
+    xs: css`
+      position: ${ ({ highLight }) => highLight ? 'absolute' : 'initial' };
+      bottom: ${ ({ highLight }) => highLight ? getGutter(3) : 'initial' };
+      padding: ${ ({ highLight }) => (
+    highLight ? getGutter(0, '5%') : 'initial'
+  ) };
+      marginTop: ${ getGutter(5) };
+      color: ${ ({ theme, highLight }) => (
+    highLight ? theme.color.white : theme.color.black
+  ) };
+    `,
+    md: css`
+      position: initial;
+      bottom: initial;
+      padding: initial;
+      color: ${ ({ theme }) => theme.color.black };
+    `
   }) }
 `
 

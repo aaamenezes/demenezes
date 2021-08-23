@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import getBreakpoints from '../../../utils/getBreakpoints'
 
 const Crop = styled.div`
   position: relative;
@@ -9,14 +10,22 @@ const Crop = styled.div`
 `
 
 const Image = styled.img`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: ${ ({ theme, highLight }) => (
+ ${ getBreakpoints({
+    xs: css`
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: ${ ({ theme, highLight }) => (
     highLight ? `brightness(${ theme.opacity.medium.rgb })` : 'initial'
   ) };
+    `,
+    md: css`
+      filter: initial;
+    `
+  }) }
+  
 `
 
 export default function CropedImage({ src, alt, ratio, highLight }) {

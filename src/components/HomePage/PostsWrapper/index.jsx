@@ -1,14 +1,26 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import HeroPostCard from '../HeroPostCard'
 import PostCard from '../../Common/PostCard'
 import Newsletter from '../../Common/Newsletter'
+import getBreakpoints from '../../../utils/getBreakpoints'
+import Container from '../../Common/Container'
 import { getGutter } from '../../../utils/getGutter'
 
 const StyledPostsWrapper = styled.main`
   > * {
-    margin-bottom: ${ getGutter('15') };
+    margin-bottom: ${ getGutter(15) };
   }
+`
+
+const OtherPosts = styled.section`
+  ${ getBreakpoints({
+    md: css`
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 5%;
+    `
+  }) }
 `
 
 export default function PostsWrapper({ postsList, heroRef }) {
@@ -49,9 +61,11 @@ export default function PostsWrapper({ postsList, heroRef }) {
   return (
     <StyledPostsWrapper>
       <HeroPostCard post={heroPost} heroRef={heroRef} />
-      {firstBlockPosts}
-      <Newsletter />
-      {secondBlockPosts}
+      <Container as={OtherPosts}>
+        {firstBlockPosts}
+        <Newsletter />
+        {secondBlockPosts}
+      </Container>
     </StyledPostsWrapper>
   )
 }
