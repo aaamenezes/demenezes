@@ -12,7 +12,7 @@ const NavWrapper = styled.nav`
       position: fixed;
       z-index: ${ ({ theme }) => theme.zIndex.fixed };
       top: 0;
-      right: ${ ({ openMenu }) => (openMenu ? '0' : '-100%') };
+      right: ${ ({ openMenu }) => openMenu ? '0' : '-100%' };
       width: 100vw;
       max-width: ${ ({ theme }) => `${ theme.breakpoints.sm }px` };
       height: 100vh;
@@ -88,9 +88,9 @@ const Overlay = styled.div`
   background-color: ${ ({ theme }) => (
     theme.color.black + theme.opacity.light.hex
   ) };
-  opacity: ${ ({ openMenu }) => (openMenu ? '1' : '0') };
+  opacity: ${ ({ openMenu }) => openMenu ? '1' : '0' };
   transition: ${ ({ theme }) => theme.transition.medium };
-  pointer-events: ${ ({ openMenu }) => (openMenu ? 'all' : 'none') };
+  pointer-events: ${ ({ openMenu }) => openMenu ? 'all' : 'none' };
 `
 
 const CloseMenuMobileButton = styled.button`

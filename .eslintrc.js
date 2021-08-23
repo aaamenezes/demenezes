@@ -55,6 +55,8 @@ module.exports = {
     // Permitir inserção de HTML externo no React por causa do DatoCMS
     'react/no-danger': 'off',
     // Ignorar propTypes
-    'react/prop-types': [ 0 ]
+    'react/prop-types': [ 0 ],
+    // Não exigir parênteses em if ternário
+    'no-confusing-arrow': 'off'
   }
 }

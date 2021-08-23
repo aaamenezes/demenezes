@@ -32,9 +32,9 @@ const SearchContent = styled.div`
       background-color: ${ ({ theme }) => (
     theme.color.black + theme.opacity.hard.hex
   ) };
-      opacity: ${ ({ openSearch }) => (openSearch ? '1' : '0') };
+      opacity: ${ ({ openSearch }) => openSearch ? '1' : '0' };
       transition: ${ ({ theme }) => theme.transition.medium };
-      pointer-events: ${ ({ openSearch }) => (openSearch ? 'all' : 'none') };
+      pointer-events: ${ ({ openSearch }) => openSearch ? 'all' : 'none' };
     `
   }) }
 `
