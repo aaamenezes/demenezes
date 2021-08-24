@@ -8,6 +8,7 @@ const HeroWrapper = styled.article`
     xs: css`
       height: 100vh;
       padding-top: 74px;
+      margin-bottom: 15%;
       background: ${ ({ theme, post }) => css`linear-gradient(
         0deg,
         ${ theme.color.black + theme.opacity.medium.hex },

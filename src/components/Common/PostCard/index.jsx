@@ -8,23 +8,37 @@ import CropedImage from '../CropedImage'
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
-      position: relative;
-      padding-top: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
-      padding-bottom: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
       padding-left: ${ ({ highLight }) => highLight && 0 };
       padding-right: ${ ({ highLight }) => highLight && 0 };
-    `,
-    md: css`
-      padding-top: ${ getGutter(5) };
-      padding-bottom: ${ getGutter(5) };
-      padding-left: 0;
-      padding-right: 0;
+      margin-bottom: 15%;
     `
   }) }
 `
 
 const PostCardLink = styled.a`
-  display: block;
+  ${ getBreakpoints({
+    xs: css`
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    `,
+    sm: css`
+      flex-direction: row;
+    `
+  }) }
+`
+
+const ImageWrapper = styled.div`
+  ${ getBreakpoints({
+    sm: css`
+      position: relative;
+      width: ${ ({ highLight }) => highLight ? '100%' : '50%' };
+      max-width: ${ ({ highLight }) => !highLight && getGutter(125) };
+      max-height: ${ ({ highLight }) => highLight && getGutter(125) };
+      margin-right: ${ ({ highLight }) => highLight ? 0 : '2%' };
+      overflow: ${ ({ highLight }) => highLight && 'hidden' };
+    `
+  }) }
 `
 
 const PostCardTStripe = styled.div`
@@ -32,17 +46,12 @@ const PostCardTStripe = styled.div`
     xs: css`
       position: absolute;
       z-index: ${ ({ theme }) => theme.zIndex.absolute };
-      top: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
-      left: ${ ({ highLight }) => highLight ? 0 : '5%' };
-      width: ${ ({ highLight }) => highLight ? '100%' : '90%' };
+      top: 0;
+      left: 0;
+      width: 100%;
       padding: ${ getGutter(2, 3) };
       color: ${ ({ theme }) => theme.color.white };
       background-color: ${ ({ theme }) => theme.color.red };
-    `,
-    md: css`
-      top: ${ getGutter(5) };
-      left: 0;
-      width: 100%;
     `
   }) }
 `
@@ -52,15 +61,30 @@ const PostCardLabel = styled.div`
     xs: css`
       position: absolute;
       z-index: ${ ({ theme }) => theme.zIndex.absolute };
-      top: ${ ({ highLight }) => highLight ? 0 : getGutter(5) };
-      right: ${ ({ highLight }) => highLight ? 0 : '5%' };
+      top: 0;
+      right: 0;
       padding: ${ getGutter(2, 3) };
       color: ${ ({ theme }) => theme.color.white };
       background-color: ${ ({ theme }) => theme.color.red };
+      font-size: ${ ({ theme }) => theme.fontSize.small };
+    `
+  }) }
+`
+
+const InfosWrapper = styled.div`
+  ${ getBreakpoints({
+    xs: css`
+      position: ${ ({ highLight }) => highLight ? 'absolute' : 'initial' };
+      top: ${ ({ highLight }) => highLight ? getGutter(10) : 'initial' };
+      padding: ${ ({ highLight }) => (
+    highLight ? getGutter(0, '5%') : getGutter(5, 0)
+  ) };
+      color: ${ ({ theme, highLight }) => (
+    highLight ? theme.color.white : theme.color.black
+  ) };
     `,
     md: css`
-      top: ${ getGutter(5) };
-      right: 0;
+      
     `
   }) }
 `
@@ -68,21 +92,10 @@ const PostCardLabel = styled.div`
 const PostCardTitle = styled.h3`
   ${ getBreakpoints({
     xs: css`
-      position: ${ ({ highLight }) => highLight ? 'absolute' : 'initial' };
-      bottom: ${ ({ highLight }) => highLight ? getGutter(3) : 'initial' };
-      padding: ${ ({ highLight }) => (
-    highLight ? getGutter(0, '5%') : 'initial'
-  ) };
-      marginTop: ${ getGutter(5) };
-      color: ${ ({ theme, highLight }) => (
-    highLight ? theme.color.white : theme.color.black
-  ) };
+      
     `,
     md: css`
-      position: initial;
-      bottom: initial;
-      padding: initial;
-      color: ${ ({ theme }) => theme.color.black };
+      
     `
   }) }
 `
@@ -100,17 +113,21 @@ export default function PostCard({
   return (
     <Container as={PostCardWrapper} highLight={highLight}>
       <PostCardLink href={postLink}>
-        <PostCardTStripe highLight={highLight} />
-        <PostCardLabel highLight={highLight}>
-          <span>PROPS.CATEGORIA</span>
-        </PostCardLabel>
-        <CropedImage
-          src={imageURL}
-          alt={imageAlt}
-          ratio={imageRatio}
-          highLight={highLight}
-        />
-        <PostCardTitle highLight={highLight}>{title}</PostCardTitle>
+        <ImageWrapper highLight={highLight}>
+          <CropedImage
+            src={imageURL}
+            alt={imageAlt}
+            ratio={imageRatio}
+            highLight={highLight}
+          />
+          <PostCardTStripe highLight={highLight} />
+          <PostCardLabel highLight={highLight}>
+            <span>PROPS.CATEGORIA</span>
+          </PostCardLabel>
+        </ImageWrapper>
+        <InfosWrapper highLight={highLight}>
+          <PostCardTitle highLight={highLight}>{title}</PostCardTitle>
+        </InfosWrapper>
       </PostCardLink>
     </Container>
   )

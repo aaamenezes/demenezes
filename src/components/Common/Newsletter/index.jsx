@@ -1,14 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 import Container from '../Container'
 
 const NewsletterWrapper = styled.section`
-  ${ ({ theme }) => ({
-    paddingTop: getGutter(5),
-    paddingBottom: getGutter(5),
-    color: theme.color.white,
-    backgroundColor: theme.color.gray
+  ${ getBreakpoints({
+    xs: css`
+      padding-top: ${ getGutter(5) };
+      padding-bottom: ${ getGutter(5) };
+      margin-bottom: 15%;
+      color: ${ ({ theme }) => theme.color.white };
+      background-color: ${ ({ theme }) => theme.color.gray };
+    `
   }) }
 `
 
