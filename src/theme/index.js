@@ -1,5 +1,22 @@
 import { getGutter } from '../utils/getGutter'
 
+const borderRadius = getGutter(1)
+
+const boxShadow = {
+  low: '0 0 40px -30px black',
+  medium: '0 0 40px -20px black',
+  high: '0 0 40px -10px black'
+}
+
+const breakpoints = {
+  xs: '0',
+  sm: '576',
+  md: '768',
+  lg: '992',
+  xl: '1200',
+  xxl: '1400'
+}
+
 const color = {
   red: '#D10015',
   red2: '#C40014',
@@ -28,23 +45,6 @@ const color = {
   blackAlt: '#333333'
 }
 
-const borderRadius = getGutter(1)
-
-const boxShadow = {
-  low: '0 0 40px -30px black',
-  medium: '0 0 40px -20px black',
-  high: '0 0 40px -10px black'
-}
-
-const breakpoints = {
-  xs: '0',
-  sm: '576',
-  md: '768',
-  lg: '992',
-  xl: '1200',
-  xxl: '1400'
-}
-
 const fontFamily = {
   title: 'Ubuntu, sans-serif',
   text: '"Montserrat", sans-serif',
@@ -67,11 +67,15 @@ const fontSize = {
   sectionTitle: '2.25em', // h2
   articleTitle: '1.5em', // h3, button
   text: '1em', // p, a, span
-  subText: '.667em',
-  subSubText: '.444em',
+  small: '.667em',
+  tiny: '.444em',
   base: {
-    desktop: '20px',
-    mobile: '16px'
+    xs: '16px',
+    sm: '17px',
+    md: '18px',
+    lg: '19px',
+    xl: '20px'
+    // xxl: '?'
   }
 }
 

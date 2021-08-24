@@ -6,16 +6,19 @@ import Navigation from './Navigation'
 import { getGutter } from '../../../utils/getGutter'
 import SearchWrapper from './SearchWrapper'
 import ToggleModalButton from './ToggleModalButton'
+import Container from '../Container'
 
 const HeaderWrapper = styled.header`
   position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
   top: 0;
   z-index: ${ ({ theme }) => theme.zIndex.fixed };
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: ${ getGutter(3, '5%') };
+  padding-top: ${ getGutter(3) };
+  padding-bottom: ${ getGutter(3) };
 `
 
 const LogoLink = styled.a`
@@ -58,7 +61,7 @@ export default function Header({ isMinimizeHeader }) {
   )
 
   return (
-    <HeaderWrapper>
+    <Container as={HeaderWrapper}>
       {logoWrapper}
       <ToggleModalButton
         onClick={toggleMenu}
@@ -74,6 +77,6 @@ export default function Header({ isMinimizeHeader }) {
         isMinimizeHeader={isMinimizeHeader}
       />
       <SearchWrapper isMinimizeHeader={isMinimizeHeader} />
-    </HeaderWrapper>
+    </Container>
   )
 }

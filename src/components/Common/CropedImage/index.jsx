@@ -20,9 +20,6 @@ const Image = styled.img`
       filter: ${ ({ theme, highLight }) => (
     highLight ? `brightness(${ theme.opacity.medium.rgb })` : 'initial'
   ) };
-    `,
-    md: css`
-      filter: initial;
     `
   }) }
   

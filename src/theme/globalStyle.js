@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
+import getBreakpoints from '../utils/getBreakpoints'
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -9,11 +10,27 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-size: ${ ({ theme }) => theme.fontSize.base.mobile };
-    font-family: ${ ({ theme }) => theme.fontFamily.text };
-    line-height: 1;
-    color: ${ ({ theme }) => theme.color.black };
-    background-color: ${ ({ theme }) => theme.color.white };
+    ${ getBreakpoints({
+    xs: css`
+      font-size: ${ ({ theme }) => theme.fontSize.base.xs };
+      font-family: ${ ({ theme }) => theme.fontFamily.text };
+      line-height: 1;
+      color: ${ ({ theme }) => theme.color.black };
+      background-color: ${ ({ theme }) => theme.color.white };
+    `,
+    sm: css`
+      font-size: ${ ({ theme }) => theme.fontSize.base.sm };
+    `,
+    md: css`
+      font-size: ${ ({ theme }) => theme.fontSize.base.md };
+    `,
+    lg: css`
+      font-size: ${ ({ theme }) => theme.fontSize.base.lg };
+    `,
+    xl: css`
+      font-size: ${ ({ theme }) => theme.fontSize.base.xl };
+    `
+  }) }
   }
 
   /* #__next {
