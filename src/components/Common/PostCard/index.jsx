@@ -21,6 +21,13 @@ const PostCardLink = styled.a`
       position: relative;
       display: flex;
       flex-direction: column;
+      transition: ${ ({ theme }) => theme.transition.fast };
+
+      &:hover {
+        box-shadow: ${ ({ theme }) => (
+    `${ getGutter(0, 0, 4, -1) } ${ theme.color.blackAlt }`
+  ) };
+      }
     `,
     sm: css`
       flex-direction: row;

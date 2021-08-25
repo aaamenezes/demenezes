@@ -22,11 +22,13 @@ export default function Home({
 export async function getStaticProps({ params }) {
   const allPosts = getAllPosts([
     'title',
+    'lead',
     'date',
+    'category',
     'slug',
-    'author',
-    'coverImage',
-    'excerpt'
+    'tags',
+    'mainTags',
+    'coverImage'
   ])
 
   const {

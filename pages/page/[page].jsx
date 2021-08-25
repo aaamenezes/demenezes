@@ -23,11 +23,13 @@ export default function Home({
 export async function getStaticProps({ params }) {
   const allPosts = getAllPosts([
     'title',
+    'lead',
     'date',
+    'category',
     'slug',
-    'author',
-    'coverImage',
-    'excerpt'
+    'tags',
+    'mainTags',
+    'coverImage'
   ])
 
   const {
@@ -40,7 +42,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const allPosts = getAllPosts([ 'title' ])
+  const allPosts = getAllPosts([ 'slug' ])
   const totalPosts = allPosts.length
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE)
 
