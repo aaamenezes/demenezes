@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     xs: css`
       font-size: ${ ({ theme }) => theme.fontSize.base.xs };
       font-family: ${ ({ theme }) => theme.fontFamily.text };
-      line-height: 1;
+      line-height: 1.2;
       color: ${ ({ theme }) => theme.color.black };
       background-color: ${ ({ theme }) => theme.color.white };
     `,

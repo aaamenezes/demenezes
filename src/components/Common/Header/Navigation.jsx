@@ -63,6 +63,7 @@ const NavLink = styled.a`
     xs: css`
       display: block;
       padding: ${ getGutter(5, '5%') };
+      font-size: ${ ({ theme }) => theme.fontSize.small };
       color: ${ ({ theme, isCurrentPage }) => (
     isCurrentPage ? theme.color.white : theme.color.black
   ) };
@@ -72,7 +73,9 @@ const NavLink = styled.a`
     `,
     md: css`
       padding: ${ getGutter(4) };
-      color: ${ ({ theme, linkColor }) => theme.color[linkColor] };
+      color: ${ ({ theme, isHome }) => (
+    isHome ? theme.color.white : theme.color.black
+  ) };
       background-color: transparent;
     `
   }) }
@@ -119,7 +122,6 @@ export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
     const isCurrentPage = router.pathname === menu.url
     const isHome = router.pathname === '/'
     const borderColor = isHome ? 'white' : 'black'
-    const linkColor = isCurrentPage && isHome ? 'white' : 'black'
 
     return (
       <NavItem
@@ -131,7 +133,7 @@ export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
           href={menu.url}
           as={NavLink}
           isCurrentPage={isCurrentPage}
-          linkColor={linkColor}
+          isHome={isHome}
         >
           {menu.title}
         </LinkButton>

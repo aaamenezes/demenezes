@@ -22,13 +22,12 @@ const Image = styled.img`
   ) };
     `
   }) }
-  
 `
 
 export default function CropedImage({ src, alt, ratio, highLight }) {
-  if (ratio.indexOf('x') === -1) return null
-
-  const [ width, height ] = ratio.split('x')
+  const [ width, height ] = ratio.indexOf('x') > -1
+    ? ratio.split('x')
+    : [ '1', '1' ]
 
   return (
     <Crop width={width} height={height}>

@@ -4,6 +4,7 @@ import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 import Container from '../Container'
 import CropedImage from '../CropedImage'
+import LinkButton from '../LinkButton'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
@@ -41,7 +42,6 @@ const ImageWrapper = styled.div`
       position: relative;
       width: ${ ({ highLight }) => highLight ? '100%' : '50%' };
       max-width: ${ ({ highLight }) => !highLight && getGutter(125) };
-      max-height: ${ ({ highLight }) => highLight && getGutter(125) };
       margin-right: ${ ({ highLight }) => highLight ? 0 : '2%' };
       overflow: ${ ({ highLight }) => highLight && 'hidden' };
     `
@@ -96,46 +96,31 @@ const InfosWrapper = styled.div`
   }) }
 `
 
-const PostCardTitle = styled.h3`
-  ${ getBreakpoints({
-    xs: css`
-      
-    `,
-    md: css`
-      
-    `
-  }) }
-`
+const PostCardTitle = styled.h3``
 
-export default function PostCard({
-  postLink,
-  title,
-  imageURL,
-  imageAlt,
-  imageRatio,
-  index
-}) {
+export default function PostCard({ post, imageRatio, index }) {
+  const { title, date, slug, coverImage, mainTags, lead, category } = post
   const highLight = Number.isInteger((index + 1) / 3) && index !== 0
 
   return (
     <Container as={PostCardWrapper} highLight={highLight}>
-      <PostCardLink href={postLink}>
+      <LinkButton as={PostCardLink} href={`/posts/${ slug }`}>
         <ImageWrapper highLight={highLight}>
           <CropedImage
-            src={imageURL}
-            alt={imageAlt}
+            src={coverImage}
+            alt={`Imagem de capa do post: ${ title }`}
             ratio={imageRatio}
             highLight={highLight}
           />
           <PostCardTStripe highLight={highLight} />
           <PostCardLabel highLight={highLight}>
-            <span>PROPS.CATEGORIA</span>
+            {category}
           </PostCardLabel>
         </ImageWrapper>
         <InfosWrapper highLight={highLight}>
           <PostCardTitle highLight={highLight}>{title}</PostCardTitle>
         </InfosWrapper>
-      </PostCardLink>
+      </LinkButton>
     </Container>
   )
 }

@@ -10,15 +10,7 @@ export default function PostsWrapper({ postsList, heroRef }) {
   const firstBlockEnd = postsList.length / 2
   const firstBlockPosts = postsList.slice(firstBlockStart, firstBlockEnd).map(
     (post, index) => (
-      <PostCard
-        key={post.title}
-        title={post.title}
-        postLink={`/posts/${ post.slug }`}
-        imageURL={post.coverImage}
-        imageAlt={`Imagem de capa do post: ${ post.title }`}
-        imageRatio='4x3'
-        index={index}
-      />
+      <PostCard key={post.title} post={post} imageRatio='4x3' index={index} />
     )
   )
 
@@ -27,15 +19,7 @@ export default function PostsWrapper({ postsList, heroRef }) {
   const secondBlockPosts = postsList.slice(
     secondBlockStart, secondBlockEnd
   ).map((post, index) => (
-    <PostCard
-      key={post.title}
-      title={post.title}
-      postLink={`/posts/${ post.slug }`}
-      imageURL={post.coverImage}
-      imageAlt={`Imagem de capa do post: ${ post.title }`}
-      imageRatio='4x3'
-      index={index}
-    />
+    <PostCard key={post.title} post={post} imageRatio='4x3' index={index} />
   ))
 
   return (
