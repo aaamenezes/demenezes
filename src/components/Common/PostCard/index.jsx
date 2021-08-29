@@ -1,17 +1,20 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../../utils/getBreakpoints'
-import { getGutter } from '../../../utils/getGutter'
 import Container from '../Container'
 import CropedImage from '../CropedImage'
 import LinkButton from '../LinkButton'
+import PostHeader from './PostHeader'
+import PostFooter from './PostFooter'
+import getBreakpoints from '../../../utils/getBreakpoints'
+import { getGutter } from '../../../utils/getGutter'
+import PostLead from './PostLead'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
       padding-left: ${ ({ highLight }) => highLight && 0 };
       padding-right: ${ ({ highLight }) => highLight && 0 };
-      margin-bottom: 15%;
+      margin-bottom: 10%;
     `
   }) }
 `
@@ -23,14 +26,8 @@ const PostCardLink = styled.a`
       display: flex;
       flex-direction: column;
       transition: ${ ({ theme }) => theme.transition.fast };
-
-      &:hover {
-        box-shadow: ${ ({ theme }) => (
-    `${ getGutter(0, 0, 4, -1) } ${ theme.color.blackAlt }`
-  ) };
-      }
     `,
-    sm: css`
+    md: css`
       flex-direction: row;
     `
   }) }
@@ -38,7 +35,7 @@ const PostCardLink = styled.a`
 
 const ImageWrapper = styled.div`
   ${ getBreakpoints({
-    sm: css`
+    md: css`
       position: relative;
       width: ${ ({ highLight }) => highLight ? '100%' : '50%' };
       max-width: ${ ({ highLight }) => !highLight && getGutter(125) };
@@ -48,7 +45,7 @@ const ImageWrapper = styled.div`
   }) }
 `
 
-const PostCardTStripe = styled.div`
+const PostStripe = styled.div`
   ${ getBreakpoints({
     xs: css`
       position: absolute;
@@ -63,7 +60,7 @@ const PostCardTStripe = styled.div`
   }) }
 `
 
-const PostCardLabel = styled.div`
+const PostLabel = styled.div`
   ${ getBreakpoints({
     xs: css`
       position: absolute;
@@ -83,27 +80,33 @@ const InfosWrapper = styled.div`
     xs: css`
       position: ${ ({ highLight }) => highLight ? 'absolute' : 'initial' };
       top: ${ ({ highLight }) => highLight ? getGutter(10) : 'initial' };
+      flex: 1;
       padding: ${ ({ highLight }) => (
-    highLight ? getGutter(0, '5%') : getGutter(5, 0)
+    highLight ? getGutter(0, '5%') : getGutter(2, 0, 7)
   ) };
       color: ${ ({ theme, highLight }) => (
     highLight ? theme.color.white : theme.color.black
   ) };
     `,
     md: css`
-      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: ${ ({ highLight }) => (
+    highLight ? getGutter(0, '5%') : 0
+  ) };
     `
   }) }
 `
 
-const PostCardTitle = styled.h3``
-
+// eslint-disable-next-line no-unused-vars
 export default function PostCard({ post, imageRatio, index }) {
-  const { title, date, slug, coverImage, mainTags, lead, category } = post
-  const highLight = Number.isInteger((index + 1) / 3) && index !== 0
+  const { title, date, slug, coverImage, lead, category } = post
+  // const highLight = Number.isInteger((index + 1) / 3) && index !== 0
+  const highLight = false
 
   return (
-    <Container as={PostCardWrapper} highLight={highLight}>
+    <Container as={PostCardWrapper} highLight={highLight} padding='10%'>
       <LinkButton as={PostCardLink} href={`/posts/${ slug }`}>
         <ImageWrapper highLight={highLight}>
           <CropedImage
@@ -112,13 +115,15 @@ export default function PostCard({ post, imageRatio, index }) {
             ratio={imageRatio}
             highLight={highLight}
           />
-          <PostCardTStripe highLight={highLight} />
-          <PostCardLabel highLight={highLight}>
+          <PostStripe highLight={highLight} />
+          <PostLabel highLight={highLight}>
             {category}
-          </PostCardLabel>
+          </PostLabel>
         </ImageWrapper>
         <InfosWrapper highLight={highLight}>
-          <PostCardTitle highLight={highLight}>{title}</PostCardTitle>
+          <PostHeader title={title} />
+          <PostLead lead={lead} />
+          <PostFooter category={category} date={date} />
         </InfosWrapper>
       </LinkButton>
     </Container>

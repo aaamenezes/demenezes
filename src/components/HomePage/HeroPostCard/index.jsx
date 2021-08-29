@@ -1,9 +1,11 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { convertDate } from '../../../utils/convertDate'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 import Container from '../../Common/Container'
+import PostFooter from '../../Common/PostCard/PostFooter'
+import PostHeader from '../../Common/PostCard/PostHeader'
+import PostLead from '../../Common/PostCard/PostLead'
 
 const HeroWrapper = styled.article`
   ${ getBreakpoints({
@@ -11,8 +13,7 @@ const HeroWrapper = styled.article`
       height: 100vh;
       padding-top: ${ getGutter(30) };
       padding-bottom: ${ getGutter(10) };
-      margin-bottom: 15%;
-      color: ${ ({ theme }) => theme.color.white };
+      margin-bottom: 10%;
       background-image: ${ ({ theme, post }) => css`linear-gradient(
         270deg,
         ${ theme.color.black + theme.opacity.medium.hex },
@@ -28,7 +29,7 @@ const HeroWrapper = styled.article`
         270deg,
         ${ theme.color.black + theme.opacity.hard.hex } 50%,
         ${ theme.color.black + theme.opacity.medium.hex }
-      ), url('${ post.coverImage }') ` };
+      ), url('${ post.coverImage }')` };
     `
   }) }
 `
@@ -40,6 +41,7 @@ const HeroLink = styled.a`
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+      color: ${ ({ theme }) => theme.color.white };
     `,
     md: css`
       width: 50%;
@@ -48,55 +50,15 @@ const HeroLink = styled.a`
   }) }
 `
 
-const PostTitle = styled.h3``
-
-const PostCardBody = styled.div``
-
-const PostCategory = styled.p`
-  margin-bottom: ${ getGutter(3) };
-`
-
-const TagsList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: ${ getGutter(3) };
-`
-
-const TagItem = styled.li`
-  padding: ${ getGutter(1) };
-  border-radius: ${ ({ theme }) => theme.borderRadius };
-  font-size: ${ ({ theme }) => theme.fontSize.small };
-  background-color: ${ ({ theme }) => theme.color.red };
-
-  &:not(:last-child) {
-    margin-right: ${ getGutter(1) };
-  }
-`
-
-const PostDate = styled.p`
-  font-size: ${ ({ theme }) => theme.fontSize.small };
-`
-
 export default function HeroPostCard({ post, heroRef }) {
-  const { title, date, mainTags, lead, category } = post
+  const { title, date, slug, lead, category } = post
 
-  const mainTagsElements = mainTags.map(tag => (
-    <TagItem key={tag}>
-      <p>{tag}</p>
-    </TagItem>
-  ))
   return (
     <Container as={HeroWrapper} post={post} ref={heroRef}>
-      <HeroLink>
-        <header>
-          <PostTitle>{title}</PostTitle>
-        </header>
-        <PostCardBody>{lead}</PostCardBody>
-        <footer>
-          <PostCategory>{category}</PostCategory>
-          <TagsList>{mainTagsElements}</TagsList>
-          <PostDate>{convertDate(date)}</PostDate>
-        </footer>
+      <HeroLink href={`/posts/${ slug }`}>
+        <PostHeader category={category} title={title} hero />
+        <PostLead lead={lead} hero />
+        <PostFooter date={date} hero />
       </HeroLink>
     </Container>
   )
