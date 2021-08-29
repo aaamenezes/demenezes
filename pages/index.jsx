@@ -27,7 +27,6 @@ export async function getStaticProps({ params }) {
     'category',
     'slug',
     'tags',
-    'mainTags',
     'coverImage'
   ])
 
