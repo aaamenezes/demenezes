@@ -9,7 +9,7 @@ const NewsletterWrapper = styled.section`
     xs: css`
       padding-top: ${ getGutter(5) };
       padding-bottom: ${ getGutter(5) };
-      margin-bottom: 15%;
+      margin-bottom: 10%;
       color: ${ ({ theme }) => theme.color.white };
       background-color: ${ ({ theme }) => theme.color.gray };
     `
