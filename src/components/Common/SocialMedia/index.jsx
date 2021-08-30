@@ -5,6 +5,8 @@ import Icon from '../Icon'
 import LinkButton from '../LinkButton'
 
 const SocialMediaWrapper = styled.nav`
+  width: 100%;
+  max-width: ${ getGutter(100) };
   padding: ${ getGutter(5, '5%') };
 `
 
@@ -13,7 +15,7 @@ const SocialList = styled.ul`
   justify-content: space-around;
 `
 
-const SocialLink = styled(LinkButton)`
+const SocialLink = styled.a`
   display: block;
   padding: ${ getGutter(3, 4) };
 
@@ -34,9 +36,9 @@ export default function SocialMedia() {
 
   const socialElements = socialMedias.map(socialMedia => (
     <li key={socialMedia.title}>
-      <SocialLink href={socialMedia.url} external>
+      <LinkButton as={SocialLink} href={socialMedia.url} external>
         <Icon name={socialMedia.title} />
-      </SocialLink>
+      </LinkButton>
     </li>
   ))
 
