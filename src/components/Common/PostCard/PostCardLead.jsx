@@ -1,14 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
+import { getGutter } from '../../../utils/getGutter'
 
-const PostLeadWrapper = styled.p`
+const PostCardLeadWrapper = styled.p`
   ${ getBreakpoints({
     xs: css`
       display: ${ ({ hero }) => hero ? 'block' : 'none' };
-      color: ${ ({ theme, hero }) => (
-    hero ? theme.color.white : theme.color.blackAlt
-  ) };
+      margin: ${ getGutter(5, 0) };
     `,
     md: css`
       display: block;
@@ -16,10 +15,10 @@ const PostLeadWrapper = styled.p`
   }) }
 `
 
-export default function PostLead({ lead, hero }) {
+export default function PostCardLead({ lead, hero }) {
   return (
-    <PostLeadWrapper hero={hero}>
+    <PostCardLeadWrapper hero={hero}>
       {lead}
-    </PostLeadWrapper>
+    </PostCardLeadWrapper>
   )
 }

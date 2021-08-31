@@ -30,7 +30,7 @@ const PaginationButton = styled.a`
       width: 100%;
       max-width: ${ getGutter(75) };
       text-align: center;
-      padding: ${ getGutter(5) };
+      padding: ${ getGutter(3) };
       border-radius: ${ ({ theme }) => theme.borderRadius };
       border: 1px solid ${ ({ theme }) => theme.color.black };
 

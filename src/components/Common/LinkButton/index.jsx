@@ -5,6 +5,8 @@ import propToStyle from '../../../utils/propToStyles'
 // import Icon from '../icon'
 
 const LinkButtonStyled = styled.a`
+  color: currentColor;
+
   ${ propToStyle('display') }
   ${ propToStyle('padding') }
   ${ propToStyle('borderBottom') }
