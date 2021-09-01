@@ -24,6 +24,7 @@ const PaginationWrapper = styled.section`
 const PaginationButton = styled.a`
   ${ getBreakpoints({
     xs: css`
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -32,7 +33,27 @@ const PaginationButton = styled.a`
       text-align: center;
       padding: ${ getGutter(3) };
       border-radius: ${ ({ theme }) => theme.borderRadius };
-      border: 1px solid ${ ({ theme }) => theme.color.black };
+      border: 2px solid ${ ({ theme }) => theme.color.black };
+      transition: ${ ({ theme }) => theme.transition.fast };
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: ${ ({ theme }) => theme.zIndex.under };
+        ${ ({ label }) => label === 'previous' ? 'right: 0;' : 'left: 0;' };
+        height: 100%;
+        width: 0;
+        background-color: ${ ({ theme }) => theme.color.red5 };
+        transition: ${ ({ theme }) => theme.transition.fast };
+      }
+
+      &:hover {
+        color: ${ ({ theme }) => theme.color.white };
+        border-color: ${ ({ theme }) => theme.color.red5 };
+        &::after {
+          width: 100%;
+        }
+      }
 
       &:nth-child(2) {
         margin: ${ getGutter(10, 0, 0) };
@@ -59,6 +80,7 @@ export default function Pagination({ currentPage, isLastPage }) {
             as={PaginationButton}
             href={previousLink}
             aria-labelledby={`Ver os ${ POSTS_PER_PAGE } posts mais recentes`}
+            label='previous'
           >
             Posts mais recentes
           </LinkButton>
@@ -71,6 +93,7 @@ export default function Pagination({ currentPage, isLastPage }) {
               as={PaginationButton}
               href={nextLink}
               aria-labelledby={`Ver os ${ POSTS_PER_PAGE } posts mais antigos`}
+              label='next'
             >
               Próxima página
             </LinkButton>
@@ -80,6 +103,7 @@ export default function Pagination({ currentPage, isLastPage }) {
               as={PaginationButton}
               href='#'
               aria-labelledby='Parabéns, você chegou ao início do blog :)'
+              label='next'
             >
               Parabéns, você chegou ao início do blog :)
             </LinkButton>
