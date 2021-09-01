@@ -44,9 +44,9 @@ const NavItem = styled.li`
       border-bottom: 1px solid ${ ({ theme }) => theme.color.gray };
     `,
     md: css`
-      border-bottom: 1px solid ${ ({ theme, isCurrentPage, borderColor }) => (
-    isCurrentPage ? theme.color[borderColor] : 'transparent'
-  ) };
+      border-bottom: 1px solid ${ ({
+    theme, isCurrentPage, borderColor, isListing
+  }) => isCurrentPage || isListing ? theme.color[borderColor] : 'transparent' };
     `
   }) }
 
@@ -121,6 +121,7 @@ export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
   const navigationElements = navigationList.map(menu => {
     const isCurrentPage = router.pathname === menu.url
     const isHome = router.pathname === '/'
+    const isListing = router.pathname.includes('/page/') && menu.url === '/'
     const borderColor = isHome ? 'white' : 'black'
 
     return (
@@ -128,6 +129,7 @@ export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
         key={menu.title}
         isCurrentPage={isCurrentPage}
         borderColor={borderColor}
+        isListing={isListing}
       >
         <LinkButton
           href={menu.url}
