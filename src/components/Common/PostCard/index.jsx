@@ -12,6 +12,7 @@ const PostCardWrapper = styled.article`
     xs: css`
       display: flex;
       flex-direction: column;
+      padding: 0 10%;
       margin-bottom: 10%;
       `,
     md: css`
@@ -64,11 +65,11 @@ const PostCardLabel = styled.div`
   }) }
 `
 
-export default function PostCard({ post, imageRatio }) {
+export default function PostCard({ post, imageRatio, heroRef }) {
   const { title, slug, coverImage, category } = post
 
   return (
-    <Container as={PostCardWrapper} padding='10%'>
+    <Container as={PostCardWrapper} ref={heroRef}>
       <PostCardImage>
         <LinkButton href={`/posts/${ slug }`}>
           <CropedImage
