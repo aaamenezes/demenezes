@@ -19,6 +19,13 @@ const HeaderWrapper = styled.header`
   align-items: center;
   padding-top: ${ getGutter(3) };
   padding-bottom: ${ getGutter(3) };
+  background-color: ${ ({ theme, isMinimizeHeader, isListing }) => (
+    isListing && !isMinimizeHeader && (
+      theme.color.black + theme.opacity.hard.hex
+    ))
+};
+  transition: ${ ({ theme }) => theme.transition.medium };
+  // pointer-events: ${ ({ isMinimizeHeader }) => isMinimizeHeader && 'none' };
 `
 
 export default function Header({ isMinimizeHeader }) {
@@ -30,12 +37,21 @@ export default function Header({ isMinimizeHeader }) {
   }
 
   const isHome = router.pathname === '/'
+  const isListing = router.pathname.includes('/page/')
+  const isPosts = router.pathname.includes('/posts/')
   const toggleMenuColor = (
-    (isHome && isMinimizeHeader) || !(isHome) ? 'black' : 'gray'
+    ((isHome || isListing || isPosts) && isMinimizeHeader)
+    || (!isHome && !isListing && !isPosts)
+      ? 'black'
+      : 'gray'
   )
 
   return (
-    <Container as={HeaderWrapper}>
+    <Container
+      as={HeaderWrapper}
+      isMinimizeHeader={isMinimizeHeader}
+      isListing={isListing}
+    >
       <Logowrapper isMinimizeHeader={isMinimizeHeader} />
       <ToggleModalButton
         onClick={toggleMenu}

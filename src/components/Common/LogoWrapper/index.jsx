@@ -5,7 +5,7 @@ import LinkButton from '../LinkButton'
 const LogoLink = styled.a`
   display: block;
   transform: ${ ({ isMinimizeHeader }) => (
-    isMinimizeHeader ? 'translateX(100vw)' : 'translateX(0)'
+    isMinimizeHeader ? 'translateY(-200%)' : 'translateX(0)'
   ) };
   transition: ${ ({ theme }) => theme.transition.medium };
 `

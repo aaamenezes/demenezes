@@ -21,7 +21,7 @@ const NavWrapper = styled.nav`
     `,
     md: css`
       transform: ${ ({ isMinimizeHeader }) => (
-    isMinimizeHeader ? 'translateX(100vw)' : 'translateX(0)'
+    isMinimizeHeader ? 'translateY(-200%)' : 'translateX(0)'
   ) };
       position: initial;
       width: auto;
@@ -44,9 +44,9 @@ const NavItem = styled.li`
       border-bottom: 1px solid ${ ({ theme }) => theme.color.gray };
     `,
     md: css`
-      border-bottom: 1px solid ${ ({
-    theme, isCurrentPage, borderColor, isListing
-  }) => isCurrentPage || isListing ? theme.color[borderColor] : 'transparent' };
+      border-bottom: 1px solid ${ ({ theme, isCurrentPage, color }) => (
+    isCurrentPage ? theme.color[color] : 'transparent'
+  ) };
     `
   }) }
 
@@ -73,9 +73,7 @@ const NavLink = styled.a`
     `,
     md: css`
       padding: ${ getGutter(4) };
-      color: ${ ({ theme, isHome }) => (
-    isHome ? theme.color.white : theme.color.black
-  ) };
+      color: ${ ({ theme, color }) => theme.color[color] };
       background-color: transparent;
     `
   }) }
@@ -111,6 +109,9 @@ const CloseMenuMobileButton = styled.button`
 
 export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
   const router = useRouter()
+  const isHome = router.pathname === '/'
+  const isListing = router.pathname.includes('/page/')
+  const isPosts = router.pathname.includes('/posts/')
 
   const navigationList = [
     { title: 'Home', url: '/' },
@@ -119,23 +120,19 @@ export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
   ]
 
   const navigationElements = navigationList.map(menu => {
-    const isCurrentPage = router.pathname === menu.url
-    const isHome = router.pathname === '/'
-    const isListing = router.pathname.includes('/page/') && menu.url === '/'
-    const borderColor = isHome ? 'white' : 'black'
+    const isCurrentPage = (
+      router.pathname === menu.url
+      || (isListing && menu.title === 'Home')
+    )
+    const color = isHome || isListing || isPosts ? 'white' : 'black'
 
     return (
-      <NavItem
-        key={menu.title}
-        isCurrentPage={isCurrentPage}
-        borderColor={borderColor}
-        isListing={isListing}
-      >
+      <NavItem key={menu.title} isCurrentPage={isCurrentPage} color={color}>
         <LinkButton
           href={menu.url}
           as={NavLink}
+          color={color}
           isCurrentPage={isCurrentPage}
-          isHome={isHome}
         >
           {menu.title}
         </LinkButton>

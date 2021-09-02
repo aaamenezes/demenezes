@@ -15,7 +15,7 @@ const Search = styled.div`
 
 const SearchToggleButton = styled.button`
   transform: ${ ({ isMinimizeHeader }) => (
-    isMinimizeHeader ? 'translateX(100vw)' : 'translateX(0)'
+    isMinimizeHeader ? 'translateY(-200%)' : 'translateX(0)'
   ) };
   transition: ${ ({ theme }) => theme.transition.medium };
 `
