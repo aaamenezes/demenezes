@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { SOCIAL_MEDIA } from '../../../settings'
 import { getGutter } from '../../../utils/getGutter'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'
@@ -16,14 +17,7 @@ const SocialList = styled.ul`
 `
 
 export default function SocialMedia() {
-  const socialMedias = [
-    { title: 'github', url: 'https://github.com/aaamenezes' },
-    { title: 'linkedin', url: 'https://www.linkedin.com/in/aaamenezes' },
-    { title: 'twitter', url: 'https://twitter.com/aaamenezes' },
-    { title: 'instagram', url: 'https://instagram.com/aaamenezes' }
-  ]
-
-  const socialElements = socialMedias.map(socialMedia => (
+  const socialElements = SOCIAL_MEDIA.map(socialMedia => (
     <li key={socialMedia.title}>
       <LinkButton href={socialMedia.url} external>
         <Icon name={socialMedia.title} />

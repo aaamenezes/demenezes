@@ -5,6 +5,7 @@ import LinkButton from '../LinkButton'
 import { getGutter } from '../../../utils/getGutter'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import ToggleModalButton from './ToggleModalButton'
+import { NAVIGATION_MENU } from '../../../settings'
 
 const NavWrapper = styled.nav`
   ${ getBreakpoints({
@@ -118,13 +119,7 @@ export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
   const isListing = router.pathname.includes('/page/')
   const isPosts = router.pathname.includes('/posts/')
 
-  const navigationList = [
-    { title: 'Home', url: '/' },
-    { title: 'Sobre', url: '/about' },
-    { title: 'Contato', url: '/contact' }
-  ]
-
-  const navigationElements = navigationList.map(menu => {
+  const navigationElements = NAVIGATION_MENU.map(menu => {
     const isCurrentPage = (
       router.pathname === menu.url
       || (isListing && menu.title === 'Home')

@@ -1,6 +1,6 @@
 import React from 'react'
 import { getAllPosts } from '../../lib/api'
-import { POSTS_PER_PAGE } from '../../lib/constants'
+import { POSTS_PER_PAGE } from '../../src/settings'
 import HomeScreen from '../../src/components/Screens/HomeScreen'
 import { getPaginationInfos } from '../../src/utils/getPaginationInfos'
 

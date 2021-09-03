@@ -1,4 +1,4 @@
-import { POSTS_PER_PAGE } from '../../lib/constants'
+import { POSTS_PER_PAGE } from '../settings'
 
 export function getPaginationInfos(allPosts, params) {
   const currentPage = params ? params.page : 1

@@ -1,5 +1,5 @@
 import React from 'react'
-import { POSTS_PER_PAGE } from '../../../lib/constants'
+import { POSTS_PER_PAGE } from '../../settings'
 import { headerBehavior } from '../../utils/headerBehavior'
 import Header from '../Common/Header'
 import Footer from '../Footer'

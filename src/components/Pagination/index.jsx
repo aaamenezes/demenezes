@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { POSTS_PER_PAGE } from '../../../lib/constants'
+import { POSTS_PER_PAGE } from '../../settings'
 import getBreakpoints from '../../utils/getBreakpoints'
 import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
