@@ -15,17 +15,6 @@ const SocialList = styled.ul`
   justify-content: space-around;
 `
 
-const SocialLink = styled.a`
-  display: block;
-  padding: ${ getGutter(3, 4) };
-
-  &:hover {
-    i {
-      transform: scale(1.5);
-    }
-  }
-`
-
 export default function SocialMedia() {
   const socialMedias = [
     { title: 'github', url: 'https://github.com/aaamenezes' },
@@ -36,7 +25,7 @@ export default function SocialMedia() {
 
   const socialElements = socialMedias.map(socialMedia => (
     <li key={socialMedia.title}>
-      <LinkButton as={SocialLink} href={socialMedia.url} external>
+      <LinkButton href={socialMedia.url} external>
         <Icon name={socialMedia.title} />
       </LinkButton>
     </li>

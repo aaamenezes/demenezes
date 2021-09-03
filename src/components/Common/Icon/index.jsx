@@ -1,9 +1,28 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import getBreakpoints from '../../../utils/getBreakpoints'
+import { getGutter } from '../../../utils/getGutter'
 import propToStyle from '../../../utils/propToStyles'
 
-const IconStyled = styled.i`
-  transition: ${ ({ theme }) => theme.transition.fast };
+const StyledIcon = styled.i`
+  ${ getBreakpoints({
+    xs: css`
+      padding: ${ getGutter(3, 4) };
+      color: ${ ({ color }) => color };
+      transition: ${ ({ theme }) => theme.transition.fast };
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    `,
+    md: css`
+      color: ${ ({ theme }) => theme.color.white };
+
+      &:hover {
+        color: ${ ({ color }) => color };
+      }
+    `
+  }) }
 
   ${ propToStyle('color') }
 
@@ -17,83 +36,83 @@ export default function Icon({ name, inline }) {
   switch (name) {
   case 'bars':
     return (
-      <IconStyled className='fas fa-bars' name={name} />
+      <StyledIcon className='fas fa-bars' name={name} />
     )
   case 'github':
     return (
-      <IconStyled
+      <StyledIcon
         className='fab fa-github'
         name={name}
-        color={{ xs: '#272727' }}
+        color='#9BA5AA'
       />
     )
   case 'twitter':
     return (
-      <IconStyled
+      <StyledIcon
         className='fab fa-twitter'
         name={name}
-        color={{ xs: '#4EA6E9' }}
+        color='#4EA6E9'
       />
     )
   case 'medium':
     return (
-      <IconStyled
+      <StyledIcon
         className='fab fa-medium'
         name={name}
-        color={{ xs: '#11100E' }}
+        color='#11100E'
       />
     )
   case 'linkedin':
     return (
-      <IconStyled
+      <StyledIcon
         className='fab fa-linkedin'
         name={name}
-        color={{ xs: '#0073AF' }}
+        color='#0073AF'
       />
     )
   case 'external':
     return (
-      <IconStyled
+      <StyledIcon
         className='fas fa-external-link-alt'
         name={name}
         inline={inline}
-        color={{ xs: 'currentColor' }}
+        color='currentColor'
       />
     )
   case 'instagram':
     return (
-      <IconStyled
+      <StyledIcon
         className='fab fa-instagram'
         name={name}
         inline={inline}
-        color={{ xs: '#F02002' }}
+        color='#F02002'
       />
     )
   case 'search':
     return (
-      <IconStyled
+      <StyledIcon
         className='fas fa-search'
         name={name}
         inline={inline}
-        color={{ xs: 'currentColor' }}
+        color='currentColor'
       />
     )
   case 'close':
     return (
-      <IconStyled
+      <StyledIcon
         className='fas fa-times-circle'
         // className='far fa-times-circle'
         name={name}
         inline={inline}
-        color={{ xs: 'currentColor' }}
+        color='currentColor'
       />
     )
   default:
     return (
-      <IconStyled
+      <StyledIcon
         className='fas fa-question-circle'
         name={name}
-        color={{ xs: 'currentColor' }}
+        color='currentColor'
       />
     )
   }

@@ -57,6 +57,10 @@ export default function SearchWrapper({ isMinimizeHeader }) {
     setOpenSearch(!openSearch)
   }
 
+  const isHome = router.pathname === '/'
+  const isListing = router.pathname.includes('/page/')
+  const isPosts = router.pathname.includes('/posts/')
+
   return (
     <Search>
       <ToggleModalButton
@@ -64,7 +68,7 @@ export default function SearchWrapper({ isMinimizeHeader }) {
         as={SearchToggleButton}
         onClick={toggleSearch}
         icon='search'
-        color={router.pathname === '/' ? 'gray' : 'blackAlt'}
+        color={isHome || isListing || isPosts ? 'gray' : 'blackAlt'}
         display={{
           xs: 'none',
           md: 'flex'

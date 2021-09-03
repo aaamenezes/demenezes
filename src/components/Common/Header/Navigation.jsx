@@ -47,6 +47,11 @@ const NavItem = styled.li`
       border-bottom: 1px solid ${ ({ theme, isCurrentPage, color }) => (
     isCurrentPage ? theme.color[color] : 'transparent'
   ) };
+      transition: ${ ({ theme }) => theme.transition.fast };
+
+      &:hover {
+        border-bottom: 1px solid ${ ({ theme, color }) => theme.color[color] };
+      }
     `
   }) }
 
