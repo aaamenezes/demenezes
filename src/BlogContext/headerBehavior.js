@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import Header from '../components/Common/Header'
 
 export function headerBehavior() {
   const heroRef = useRef(null)
@@ -24,7 +25,7 @@ export function headerBehavior() {
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersect, intersectOptions)
     if (heroRef.current) observer.observe(heroRef.current)
-  }, [])
+  }, [ <Header /> ])
 
   return [ heroRef, isMinimizeHeader ]
 }

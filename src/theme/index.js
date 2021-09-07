@@ -94,6 +94,13 @@ const letterSpacing = {
 const lineHeight = {
   title: 1.7,
   text: 1.2
+  /**
+   * Ouvi dizer que o modo abaixo se adapta a tudo
+   * Testar:
+   * line-height: calc(0.25rem + 1em);
+   * Pode testar mais nesse site aqui
+   * https://hihayk.github.io/doppler/
+   */
 }
 
 const opacity = {

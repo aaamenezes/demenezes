@@ -68,14 +68,14 @@ const PaginationButton = styled.a`
   }) }
 `
 
-export default function Pagination({ currentPage, isLastPage }) {
-  const previousLink = `/page/${ +currentPage - 1 }`.replace('page/1', '')
-  const nextLink = `/page/${ +currentPage + 1 }`
+export default function Pagination({ currentPagination, isLastPagination }) {
+  const previousLink = `/page/${ +currentPagination - 1 }`.replace('page/1', '')
+  const nextLink = `/page/${ +currentPagination + 1 }`
 
   return (
     <Container as={PaginationWrapper}>
       {
-        currentPage > 1 && (
+        currentPagination > 1 && (
           <LinkButton
             as={PaginationButton}
             href={previousLink}
@@ -87,7 +87,7 @@ export default function Pagination({ currentPage, isLastPage }) {
         )
       }
       {
-        !isLastPage
+        !isLastPagination
           ? (
             <LinkButton
               as={PaginationButton}
@@ -101,7 +101,7 @@ export default function Pagination({ currentPage, isLastPage }) {
           : (
             <LinkButton
               as={PaginationButton}
-              href='#'
+              href='/'
               aria-labelledby='Parabéns, você chegou ao início do blog :)'
               label='next'
             >

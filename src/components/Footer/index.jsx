@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
-import Logowrapper from '../Common/LogoWrapper'
+import LogoWrapper from '../Common/LogoWrapper'
 import SocialMedia from '../Common/SocialMedia'
 
 const FooterWrapper = styled.footer`
@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <Container as={FooterWrapper}>
       <FooterLogoWrapper>
-        <Logowrapper isMinimizeHeader={false} />
+        <LogoWrapper />
       </FooterLogoWrapper>
       <SocialMedia />
     </Container>

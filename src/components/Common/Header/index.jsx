@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import Navigation from './Navigation'
 import { getGutter } from '../../../utils/getGutter'
@@ -7,6 +6,7 @@ import SearchWrapper from './SearchWrapper'
 import ToggleModalButton from './ToggleModalButton'
 import Container from '../Container'
 import Logowrapper from '../LogoWrapper'
+import { BlogContext } from '../../../BlogContext'
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -19,29 +19,26 @@ const HeaderWrapper = styled.header`
   align-items: center;
   padding-top: ${ getGutter(3) };
   padding-bottom: ${ getGutter(3) };
-  background-color: ${ ({ theme, isMinimizeHeader, isListing }) => (
-    isListing && !isMinimizeHeader && (
+  background-color: ${ ({ theme, isMinimizeHeader, currentPage }) => (
+    currentPage === 'listing' && !isMinimizeHeader && (
       theme.color.black + theme.opacity.hard.hex
-    ))
+    )
+  )
 };
   transition: ${ ({ theme }) => theme.transition.medium };
-  // pointer-events: ${ ({ isMinimizeHeader }) => isMinimizeHeader && 'none' };
 `
 
 export default function Header({ isMinimizeHeader }) {
-  const router = useRouter()
   const [ openMenu, setOpenMenu ] = useState(false)
+  const { currentPage, headerTemplate } = useContext(BlogContext)
 
   function toggleMenu() {
     setOpenMenu(!openMenu)
   }
 
-  const isHome = router.pathname === '/'
-  const isListing = router.pathname.includes('/page/')
-  const isPosts = router.pathname.includes('/posts/')
   const toggleMenuColor = (
-    ((isHome || isListing || isPosts) && isMinimizeHeader)
-    || (!isHome && !isListing && !isPosts)
+    ((headerTemplate === 'primary') && isMinimizeHeader)
+    || (headerTemplate === 'secondary')
       ? 'black'
       : 'gray'
   )
@@ -50,7 +47,7 @@ export default function Header({ isMinimizeHeader }) {
     <Container
       as={HeaderWrapper}
       isMinimizeHeader={isMinimizeHeader}
-      isListing={isListing}
+      currentPage={currentPage}
     >
       <Logowrapper isMinimizeHeader={isMinimizeHeader} />
       <ToggleModalButton

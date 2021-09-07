@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
+import React, { useContext, useState } from 'react'
 import styled, { css } from 'styled-components'
 import Container from '../Container'
 import ToggleModalButton from './ToggleModalButton'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
+import { BlogContext } from '../../../BlogContext'
 
 const Search = styled.div`
   ${ getBreakpoints({
@@ -51,15 +51,11 @@ const CloseMenuMobileButton = styled.button`
 
 export default function SearchWrapper({ isMinimizeHeader }) {
   const [ openSearch, setOpenSearch ] = useState(false)
-  const router = useRouter()
+  const { headerTemplate } = useContext(BlogContext)
 
   function toggleSearch() {
     setOpenSearch(!openSearch)
   }
-
-  const isHome = router.pathname === '/'
-  const isListing = router.pathname.includes('/page/')
-  const isPosts = router.pathname.includes('/posts/')
 
   return (
     <Search>
@@ -68,7 +64,7 @@ export default function SearchWrapper({ isMinimizeHeader }) {
         as={SearchToggleButton}
         onClick={toggleSearch}
         icon='search'
-        color={isHome || isListing || isPosts ? 'gray' : 'blackAlt'}
+        color={headerTemplate === 'primary' ? 'gray' : 'blackAlt'}
         display={{
           xs: 'none',
           md: 'flex'

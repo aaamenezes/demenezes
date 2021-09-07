@@ -14,7 +14,7 @@ const Logo = styled.img`
   margin: 0;
 `
 
-export default function Logowrapper({ isMinimizeHeader }) {
+export default function LogoWrapper({ isMinimizeHeader }) {
   return (
     <LinkButton
       href='/'

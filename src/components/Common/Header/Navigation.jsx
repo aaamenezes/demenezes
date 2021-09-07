@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
 import styled, { css } from 'styled-components'
 import LinkButton from '../LinkButton'
@@ -6,6 +6,7 @@ import { getGutter } from '../../../utils/getGutter'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import ToggleModalButton from './ToggleModalButton'
 import { NAVIGATION_MENU } from '../../../settings'
+import { BlogContext } from '../../../BlogContext'
 
 const NavWrapper = styled.nav`
   ${ getBreakpoints({
@@ -93,7 +94,7 @@ const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${ ({ theme }) => (
-    theme.color.black + theme.opacity.light.hex
+    theme.color.black + theme.opacity.medium.hex
   ) };
   opacity: ${ ({ openMenu }) => openMenu ? '1' : '0' };
   transition: ${ ({ theme }) => theme.transition.medium };
@@ -115,16 +116,15 @@ const CloseMenuMobileButton = styled.button`
 
 export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
   const router = useRouter()
-  const isHome = router.pathname === '/'
-  const isListing = router.pathname.includes('/page/')
-  const isPosts = router.pathname.includes('/posts/')
+  const { currentPage, headerTemplate } = useContext(BlogContext)
 
   const navigationElements = NAVIGATION_MENU.map(menu => {
     const isCurrentPage = (
       router.pathname === menu.url
-      || (isListing && menu.title === 'Home')
+      || (currentPage === 'listing' && menu.title === 'Home')
     )
-    const color = isHome || isListing || isPosts ? 'white' : 'black'
+
+    const color = headerTemplate === 'primary' ? 'white' : 'black'
 
     return (
       <NavItem key={menu.title} isCurrentPage={isCurrentPage} color={color}>
