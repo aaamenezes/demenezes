@@ -76,6 +76,7 @@ export const GlobalStyle = createGlobalStyle`
   a {
     font-size: ${ ({ theme }) => theme.fontSize.text };;
     text-decoration: none;
+    color: currentColor;
   }
 
   i {

@@ -40,7 +40,7 @@ const PaginationButton = styled.a`
         content: '';
         position: absolute;
         z-index: ${ ({ theme }) => theme.zIndex.under };
-        ${ ({ label }) => label === 'previous' ? 'right: 0;' : 'left: 0;' };
+        ${ ({ label }) => label === 'previous' ? 'right: 0;' : 'left: 0;' }
         height: 100%;
         width: 0;
         background-color: ${ ({ theme }) => theme.color.red5 };
@@ -68,14 +68,16 @@ const PaginationButton = styled.a`
   }) }
 `
 
-export default function Pagination({ currentPagination, isLastPagination }) {
-  const previousLink = `/page/${ +currentPagination - 1 }`.replace('page/1', '')
-  const nextLink = `/page/${ +currentPagination + 1 }`
+export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
+  const previousLink = (
+    `/page/${ +CURRENT_PAGINATION - 1 }`.replace('page/1', '')
+  )
+  const nextLink = `/page/${ +CURRENT_PAGINATION + 1 }`
 
   return (
     <Container as={PaginationWrapper}>
       {
-        currentPagination > 1 && (
+        CURRENT_PAGINATION > 1 && (
           <LinkButton
             as={PaginationButton}
             href={previousLink}
@@ -87,7 +89,7 @@ export default function Pagination({ currentPagination, isLastPagination }) {
         )
       }
       {
-        !isLastPagination
+        !IS_LAST_PAGINATION
           ? (
             <LinkButton
               as={PaginationButton}

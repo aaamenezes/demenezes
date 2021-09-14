@@ -2,12 +2,12 @@
 // https://emersonbroga.com/e/sobre/
 
 import React from 'react'
-import Header from '../src/components/Common/Header'
+import PageHeader from '../src/components/Common/PageHeader'
 
 export default function Contact() {
   return (
     <>
-      <Header />
+      <PageHeader />
       <div> </div>
     </>
   )

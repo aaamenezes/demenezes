@@ -1,27 +1,24 @@
 import React from 'react'
-import { headerBehavior } from '../../BlogContext/headerBehavior'
 import { POSTS_PER_PAGE } from '../../settings'
-import Header from '../Common/Header'
+import PageHeader from '../Common/PageHeader'
 import Footer from '../Footer'
 import PostsWrapper from '../HomePage/PostsWrapper'
 import Pagination from '../Pagination'
 
 export default function HomeScreen({
-  currentPosts,
-  totalPosts,
-  currentPagination,
-  isLastPagination
+  CURRENT_POSTS,
+  TOTAL_POSTS,
+  CURRENT_PAGINATION,
+  IS_LAST_PAGINATION
 }) {
-  const [ heroRef, isMinimizeHeader ] = headerBehavior()
-
   return (
     <>
-      <Header isMinimizeHeader={isMinimizeHeader} />
-      <PostsWrapper postsList={currentPosts} heroRef={heroRef} />
-      {totalPosts > POSTS_PER_PAGE && (
+      <PageHeader />
+      <PostsWrapper postsList={CURRENT_POSTS} />
+      {TOTAL_POSTS > POSTS_PER_PAGE && (
         <Pagination
-          currentPagination={currentPagination}
-          isLastPagination={isLastPagination}
+          CURRENT_PAGINATION={CURRENT_PAGINATION}
+          IS_LAST_PAGINATION={IS_LAST_PAGINATION}
         />
       )}
       <Footer />

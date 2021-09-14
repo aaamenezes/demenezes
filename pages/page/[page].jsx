@@ -5,17 +5,17 @@ import HomeScreen from '../../src/components/Screens/HomeScreen'
 import { getPaginationInfos } from '../../src/utils/getPaginationInfos'
 
 export default function Home({
-  currentPosts,
-  totalPosts,
-  currentPagination,
-  isLastPagination
+  CURRENT_POSTS,
+  TOTAL_POSTS,
+  CURRENT_PAGINATION,
+  IS_LAST_PAGINATION
 }) {
   return (
     <HomeScreen
-      currentPosts={currentPosts}
-      totalPosts={totalPosts}
-      currentPagination={currentPagination}
-      isLastPagination={isLastPagination}
+      CURRENT_POSTS={CURRENT_POSTS}
+      TOTAL_POSTS={TOTAL_POSTS}
+      CURRENT_PAGINATION={CURRENT_PAGINATION}
+      IS_LAST_PAGINATION={IS_LAST_PAGINATION}
     />
   )
 }
@@ -32,26 +32,31 @@ export async function getStaticProps({ params }) {
   ])
 
   const {
-    currentPosts, totalPosts, currentPagination, isLastPagination
+    CURRENT_POSTS, TOTAL_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION
   } = getPaginationInfos(allPosts, params)
 
   return {
-    props: { currentPosts, totalPosts, currentPagination, isLastPagination }
+    props: {
+      CURRENT_POSTS,
+      TOTAL_POSTS,
+      CURRENT_PAGINATION,
+      IS_LAST_PAGINATION
+    }
   }
 }
 
 export async function getStaticPaths() {
   const allPosts = getAllPosts([ 'slug' ])
-  const totalPosts = allPosts.length
-  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE)
+  const TOTAL_POSTS = allPosts.length
+  const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
 
-  function createDynamicPaths(pageNumber, array = [ null ]) {
+  function createDynamicPaths(pageNumber, array = []) {
     return pageNumber > 0
       ? createDynamicPaths(
         pageNumber - 1,
         [ ...array, { params: { page: pageNumber.toString() } } ]
       )
-      : [ ...array ].slice(1).reverse()
+      : [ ...array ].reverse()
   }
 
   const dynamicPaths = createDynamicPaths(totalPages)

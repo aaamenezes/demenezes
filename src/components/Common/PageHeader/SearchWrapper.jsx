@@ -1,23 +1,15 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import Container from '../Container'
 import ToggleModalButton from './ToggleModalButton'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
-import { BlogContext } from '../../../BlogContext'
 
 const Search = styled.div`
   ${ getBreakpoints({
     xs: css`display: none;`,
     md: css`display: block;`
   }) }
-`
-
-const SearchToggleButton = styled.button`
-  transform: ${ ({ isMinimizeHeader }) => (
-    isMinimizeHeader ? 'translateY(-200%)' : 'translateX(0)'
-  ) };
-  transition: ${ ({ theme }) => theme.transition.medium };
 `
 
 const SearchContent = styled.div`
@@ -39,19 +31,14 @@ const SearchContent = styled.div`
   }) }
 `
 
-const CloseMenuMobileButton = styled.button`
-  ${ getBreakpoints({
-    xs: css`
-      position: absolute;
-      top: ${ getGutter(3) };
-      right: 5%;
-    `
-  }) }
+const CloseSearchButton = styled.button`
+  position: absolute;
+  top: ${ getGutter(3) };
+  right: 5%;
 `
 
-export default function SearchWrapper({ isMinimizeHeader }) {
+export default function SearchWrapper() {
   const [ openSearch, setOpenSearch ] = useState(false)
-  const { headerTemplate } = useContext(BlogContext)
 
   function toggleSearch() {
     setOpenSearch(!openSearch)
@@ -60,22 +47,22 @@ export default function SearchWrapper({ isMinimizeHeader }) {
   return (
     <Search>
       <ToggleModalButton
-        isMinimizeHeader={isMinimizeHeader}
-        as={SearchToggleButton}
         onClick={toggleSearch}
         icon='search'
-        color={headerTemplate === 'primary' ? 'gray' : 'blackAlt'}
+        color='gray'
         display={{
           xs: 'none',
           md: 'flex'
         }}
+        aria-labelledby='Abrir busca do blog'
       />
       <Container as={SearchContent} openSearch={openSearch}>
         <ToggleModalButton
           onClick={toggleSearch}
           icon='close'
           color='gray'
-          as={CloseMenuMobileButton}
+          as={CloseSearchButton}
+          aria-labelledby='Fechar busca do blog'
         />
       </Container>
     </Search>

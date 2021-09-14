@@ -4,17 +4,17 @@ import HomeScreen from '../src/components/Screens/HomeScreen'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
 export default function Home({
-  currentPosts,
-  totalPosts,
-  currentPagination,
-  isLastPagination
+  CURRENT_POSTS,
+  TOTAL_POSTS,
+  CURRENT_PAGINATION,
+  IS_LAST_PAGINATION
 }) {
   return (
     <HomeScreen
-      currentPosts={currentPosts}
-      totalPosts={totalPosts}
-      currentPagination={currentPagination}
-      isLastPagination={isLastPagination}
+      CURRENT_POSTS={CURRENT_POSTS}
+      TOTAL_POSTS={TOTAL_POSTS}
+      CURRENT_PAGINATION={CURRENT_PAGINATION}
+      IS_LAST_PAGINATION={IS_LAST_PAGINATION}
     />
   )
 }
@@ -31,10 +31,15 @@ export async function getStaticProps({ params }) {
   ])
 
   const {
-    currentPosts, totalPosts, currentPagination, isLastPagination
+    CURRENT_POSTS, TOTAL_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION
   } = getPaginationInfos(allPosts, params)
 
   return {
-    props: { currentPosts, totalPosts, currentPagination, isLastPagination }
+    props: {
+      CURRENT_POSTS,
+      TOTAL_POSTS,
+      CURRENT_PAGINATION,
+      IS_LAST_PAGINATION
+    }
   }
 }

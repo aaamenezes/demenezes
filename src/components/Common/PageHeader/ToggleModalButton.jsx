@@ -12,6 +12,7 @@ const Button = styled.button`
   height: 45px;
   padding: ${ getGutter(3) };
   border: 0;
+  color: ${ ({ theme, color }) => theme.color[color] || 'currentColor' };
   background-color: transparent;
   border-radius: ${ ({ theme }) => theme.borderRadius };
   cursor: pointer;
@@ -20,7 +21,6 @@ const Button = styled.button`
 
   i {
     font-size: ${ ({ theme }) => theme.fontSize.articleTitle };
-    color: ${ ({ theme, color }) => theme.color[color] };
   }
 `
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useRouter } from 'next/router'
 import styled, { css } from 'styled-components'
 import LinkButton from '../LinkButton'
@@ -6,7 +6,7 @@ import { getGutter } from '../../../utils/getGutter'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import ToggleModalButton from './ToggleModalButton'
 import { NAVIGATION_MENU } from '../../../settings'
-import { BlogContext } from '../../../BlogContext'
+import { getPageInfos } from '../../../utils/getPageInfos'
 
 const NavWrapper = styled.nav`
   ${ getBreakpoints({
@@ -22,9 +22,6 @@ const NavWrapper = styled.nav`
       transition: ${ ({ theme }) => theme.transition.medium };
     `,
     md: css`
-      transform: ${ ({ isMinimizeHeader }) => (
-    isMinimizeHeader ? 'translateY(-200%)' : 'translateX(0)'
-  ) };
       position: initial;
       width: auto;
       height: auto;
@@ -114,17 +111,18 @@ const CloseMenuMobileButton = styled.button`
   }) }
 `
 
-export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
+export default function Navigation({ openMenu, toggleMenu }) {
   const router = useRouter()
-  const { currentPage, headerTemplate } = useContext(BlogContext)
+  const { /* CURRENT_PAGE, */ HEADER_TEMPLATE } = getPageInfos()
 
   const navigationElements = NAVIGATION_MENU.map(menu => {
-    const isCurrentPage = (
-      router.pathname === menu.url
-      || (currentPage === 'listing' && menu.title === 'Home')
-    )
+    const isCurrentPage = router.pathname === menu.url
+    // const isCurrentPage = (
+    //   router.pathname === menu.url
+    //   || (CURRENT_PAGE === 'listing' && menu.title === 'Home')
+    // )
 
-    const color = headerTemplate === 'primary' ? 'white' : 'black'
+    const color = HEADER_TEMPLATE === 'primary' ? 'white' : 'black'
 
     return (
       <NavItem key={menu.title} isCurrentPage={isCurrentPage} color={color}>
@@ -143,7 +141,7 @@ export default function Navigation({ openMenu, toggleMenu, isMinimizeHeader }) {
   return (
     <>
       <Overlay openMenu={openMenu} onClick={toggleMenu} />
-      <NavWrapper openMenu={openMenu} isMinimizeHeader={isMinimizeHeader}>
+      <NavWrapper openMenu={openMenu}>
         <NavList>
           {navigationElements}
         </NavList>

@@ -32,12 +32,11 @@ const HeroWrapper = styled.article`
   }) }
 `
 
-export default function HeroPostCard({ post, heroRef }) {
+export default function HeroPostCard({ post }) {
   return (
     <Container
       as={HeroWrapper}
       post={post}
-      ref={heroRef}
     >
       <PostCardInfos
         post={post}

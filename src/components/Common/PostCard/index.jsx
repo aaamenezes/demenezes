@@ -65,11 +65,11 @@ const PostCardLabel = styled.div`
   }) }
 `
 
-export default function PostCard({ post, imageRatio, heroRef }) {
+export default function PostCard({ post, imageRatio }) {
   const { title, slug, coverImage, category } = post
 
   return (
-    <Container as={PostCardWrapper} ref={heroRef}>
+    <Container as={PostCardWrapper}>
       <PostCardImage>
         <LinkButton href={`/posts/${ slug }`}>
           <CropedImage
