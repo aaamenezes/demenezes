@@ -29,10 +29,11 @@ export default function Post({ post, preview }) {
             <article className='mb-32'>
               <Head>
                 <title>
-                  {post.title}
+                  Esse title tem que corrigir
+                  {/* {post.title}
                   {' '}
                   | Next.js Blog Example with
-                  {CMS_NAME}
+                  {CMS_NAME} */}
                 </title>
                 <meta property='og:image' content={post.ogImage.url} />
               </Head>

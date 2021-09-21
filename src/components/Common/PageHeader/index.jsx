@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 import Navigation from './Navigation'
 import { getGutter } from '../../../utils/getGutter'
-import SearchWrapper from './SearchWrapper'
 import ToggleModalButton from './ToggleModalButton'
 import Container from '../Container'
 import Logowrapper from '../LogoWrapper'
@@ -74,7 +73,7 @@ export default function PageHeader() {
         openMenu={openMenu}
         toggleMenu={toggleMenu}
       />
-      <SearchWrapper />
+      {/* <SearchWrapper /> */}
     </Container>
   )
 }

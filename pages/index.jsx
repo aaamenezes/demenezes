@@ -1,9 +1,11 @@
 import React from 'react'
 import { getAllPosts } from '../lib/api'
 import HomeScreen from '../src/components/Screens/HomeScreen'
+import pageWrapper from '../src/components/Wrappers/pageWrapper'
+import { BLOG_DESCRIPTION_BASE, BLOG_TITLE_BASE } from '../src/settings'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
-export default function Home({
+function Home({
   CURRENT_POSTS,
   TOTAL_POSTS,
   CURRENT_PAGINATION,
@@ -18,6 +20,14 @@ export default function Home({
     />
   )
 }
+
+export default pageWrapper(Home, {
+  pageTitle: BLOG_TITLE_BASE,
+  pageDescription: BLOG_DESCRIPTION_BASE,
+  keyWords: [
+    'front-end', 'programação', 'carreira'
+  ]
+})
 
 export async function getStaticProps({ params }) {
   const allPosts = getAllPosts([

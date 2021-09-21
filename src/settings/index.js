@@ -2,54 +2,26 @@ import React from 'react'
 import styled from 'styled-components'
 
 /**
- * SETTINGS
+ * INFORMAÇÕES DO BLOG
  */
 
-export const POSTS_PER_PAGE = 5
-
-export const PAGES = [ // Configurar currentPage na contextAPI
-  {
-    name: 'home',
-    url: '/',
-    headerTemplate: 'primary'
-  },
-  {
-    name: 'listing',
-    url: '/page/[page]',
-    headerTemplate: 'primary'
-  },
-  {
-    name: 'post',
-    url: '/posts/[slug]',
-    headerTemplate: 'primary'
-  },
-  {
-    name: 'about',
-    url: '/about',
-    headerTemplate: 'secondary'
-  },
-  {
-    name: 'contact',
-    url: '/contact',
-    headerTemplate: 'secondary'
-  }
-]
+export const BLOG_TITLE_BASE = 'deMenezes: Front-end, carreira e [alguma coisa]'
+export const BLOG_DESCRIPTION_BASE = 'Um blog sobre isso, isso e isso'
 
 /**
  * CADASTROS
  */
 
-export const NAVIGATION_MENU = [ // Header e menu lateral mobile
+export const NAVIGATION_MENU = [
   { title: 'Home', url: '/' },
   { title: 'Sobre', url: '/about' },
   { title: 'Contato', url: '/contact' }
 ]
 
+// export const LOGO = <h1>deMenezes</h1>
 const Logo = styled.img`
   margin: 0;
 `
-
-// export const LOGO = <h1>deMenezes</h1>
 
 export const LOGO = (
   <Logo
@@ -63,6 +35,45 @@ export const SOCIAL_MEDIA = [ // Rodapé
   { title: 'linkedin', url: 'https://www.linkedin.com/in/aaamenezes' },
   { title: 'twitter', url: 'https://twitter.com/aaamenezes' },
   { title: 'instagram', url: 'https://instagram.com/aaamenezes' }
+]
+
+/**
+ * CONFIGURAÇÕES
+ */
+
+export const POSTS_PER_PAGE = 5
+
+export const PAGES = [
+  {
+    name: 'home',
+    pageTitle: 'Home',
+    url: '/',
+    headerTemplate: 'primary'
+  },
+  {
+    name: 'listing',
+    pageTitle: 'Home',
+    url: '/page/[page]',
+    headerTemplate: 'primary'
+  },
+  {
+    name: 'post',
+    pageTitle: 'Artigo',
+    url: '/posts/[slug]',
+    headerTemplate: 'primary'
+  },
+  {
+    name: 'about',
+    pageTitle: 'Sobre',
+    url: '/about',
+    headerTemplate: 'secondary'
+  },
+  {
+    name: 'contact',
+    pageTitle: 'Contato',
+    url: '/contact',
+    headerTemplate: 'secondary'
+  }
 ]
 
 /**
