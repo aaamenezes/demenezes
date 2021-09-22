@@ -113,14 +113,13 @@ const CloseMenuMobileButton = styled.button`
 
 export default function Navigation({ openMenu, toggleMenu }) {
   const router = useRouter()
-  const { /* CURRENT_PAGE, */ HEADER_TEMPLATE } = getPageInfos()
+  const { CURRENT_PAGE, HEADER_TEMPLATE } = getPageInfos()
 
   const navigationElements = NAVIGATION_MENU.map(menu => {
-    const isCurrentPage = router.pathname === menu.url
-    // const isCurrentPage = (
-    //   router.pathname === menu.url
-    //   || (CURRENT_PAGE === 'listing' && menu.title === 'Home')
-    // )
+    const isCurrentPage = (
+      router.pathname === menu.url
+      || (CURRENT_PAGE === 'listing' && menu.title === 'Home')
+    )
 
     const color = HEADER_TEMPLATE === 'primary' ? 'white' : 'black'
 
