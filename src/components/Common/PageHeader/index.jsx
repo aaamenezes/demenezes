@@ -22,7 +22,9 @@ const HeaderWrapper = styled.header`
   padding-bottom: ${ getGutter(3) };
   color: ${ ({ theme, headerColor }) => theme.color[headerColor] };
   background-color: ${ ({ theme, CURRENT_PAGE }) => (
-    CURRENT_PAGE === 'listing' && theme.color.black + theme.opacity.hard.hex
+    (CURRENT_PAGE === 'listing' || CURRENT_PAGE === 'post') && (
+      theme.color.black + theme.opacity.hard.hex
+    )
   ) };
   transition: ${ ({ theme }) => theme.transition.medium };
 `
