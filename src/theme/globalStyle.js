@@ -1,5 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components'
 import getBreakpoints from '../utils/getBreakpoints'
+import { getGutter } from '../utils/getGutter'
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -51,11 +52,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
+    margin-bottom: ${ getGutter(10) };
     font-size: ${ ({ theme }) => theme.fontSize.pageTitle };
     font-family: ${ ({ theme }) => theme.fontFamily.title };
   }
 
   h2 {
+    margin-bottom: ${ getGutter(10) };
     font-size: ${ ({ theme }) => theme.fontSize.sectionTitle };
     font-family: ${ ({ theme }) => theme.fontFamily.title };
   }

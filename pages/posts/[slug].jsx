@@ -1,67 +1,51 @@
 import React from 'react'
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Head from 'next/head'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import PageHeader from '../../src/components/Common/PageHeader'
-import PostHeader from '../../components/post-header'
-import Layout from '../../components/layout'
+import styled from 'styled-components'
+import pageWrapper from '../../src/components/Wrappers/pageWrapper'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
-import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
+import PostHeader from '../../src/components/PostPage/PostHeader'
+import PostContent from '../../src/components/PostPage/PostContent'
+import PostComments from '../../src/components/PostPage/PostComments'
+import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 
-// export default function Post({ post, morePosts, preview }) {
-export default function Post({ post, preview }) {
-  const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
+const PostPage = styled.main``
+
+function Post({ post }) {
   return (
-    <Layout preview={preview}>
-      <PageHeader />
-      <Container>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className='mb-32'>
-              <Head>
-                <title>
-                  Esse title tem que corrigir
-                  {/* {post.title}
-                  {' '}
-                  | Next.js Blog Example with
-                  {CMS_NAME} */}
-                </title>
-                <meta property='og:image' content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+    <>
+      <PostPage>
+        <PostHeader
+          title={post.title}
+          description={post.description}
+          date={post.date}
+          category={post.category}
+          keywords={post.keywords}
+          coverImage={post.coverImage}
+        />
+        <PostContent content={post.content} />
+      </PostPage>
+      <PostComments />
+      <RelatedPosts />
+    </>
   )
 }
+
+export default pageWrapper(Post)
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     'title',
+    'description',
     'date',
+    'category',
+    'keywords',
     'slug',
     'author',
     'content',
     'ogImage',
     'coverImage'
   ])
+
   const content = await markdownToHtml(post.content || '')
 
   return {
