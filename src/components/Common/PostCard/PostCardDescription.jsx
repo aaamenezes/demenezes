@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 
-const PostCardLeadWrapper = styled.p`
+const PostCardDescriptionWrapper = styled.p`
   ${ getBreakpoints({
     xs: css`
       display: ${ ({ hero }) => hero ? 'block' : 'none' };
@@ -15,10 +15,10 @@ const PostCardLeadWrapper = styled.p`
   }) }
 `
 
-export default function PostCardLead({ lead, hero }) {
+export default function PostCardDescription({ description, hero }) {
   return (
-    <PostCardLeadWrapper hero={hero}>
-      {lead}
-    </PostCardLeadWrapper>
+    <PostCardDescriptionWrapper hero={hero}>
+      {description}
+    </PostCardDescriptionWrapper>
   )
 }

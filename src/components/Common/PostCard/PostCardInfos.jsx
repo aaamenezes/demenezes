@@ -4,7 +4,7 @@ import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 import PostCardFooter from './PostCardFooter'
 import PostCardHeader from './PostCardHeader'
-import PostCardLead from './PostCardLead'
+import PostCardDescription from './PostCardDescription'
 
 const PostCardInfosWrapper = styled.div`
   ${ getBreakpoints({
@@ -27,12 +27,12 @@ const PostCardInfosWrapper = styled.div`
 `
 
 export default function PostCardInfos({ post, hero }) {
-  const { date, lead } = post
+  const { date, description } = post
 
   return (
     <PostCardInfosWrapper hero={hero}>
       <PostCardHeader post={post} hero={hero} />
-      <PostCardLead lead={lead} hero={hero} />
+      <PostCardDescription description={description} hero={hero} />
       <PostCardFooter date={date} />
     </PostCardInfosWrapper>
   )
