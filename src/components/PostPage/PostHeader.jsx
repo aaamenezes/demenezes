@@ -31,16 +31,9 @@ export default function PostHeader({
   description,
   date,
   category,
-  keywords,
   coverImage
 }) {
   const footerContent = `${ convertDate(date) } - ${ category }`
-
-  const keywordsList = keywords.map(keyword => (
-    <li key={keyword}>
-      {keyword}
-    </li>
-  ))
 
   return (
     <Container as={StyledPostHeader}>
