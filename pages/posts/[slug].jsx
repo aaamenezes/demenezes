@@ -5,10 +5,12 @@ import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostHeader from '../../src/components/PostPage/PostHeader'
 import PostContent from '../../src/components/PostPage/PostContent'
-// import PostComments from '../../src/components/PostPage/PostComments'
+import PostComments from '../../src/components/PostPage/PostComments'
 // import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 
-const PostPage = styled.main``
+const PostPage = styled.main`
+  margin-bottom: 10%;
+`
 
 function Post({ post }) {
   return (
@@ -24,7 +26,7 @@ function Post({ post }) {
         />
         <PostContent content={post.content} />
       </PostPage>
-      {/* <PostComments /> */}
+      <PostComments />
       {/* <RelatedPosts /> */}
     </>
   )
