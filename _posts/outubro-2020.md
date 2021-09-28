@@ -1,10 +1,10 @@
 ---
 title: 'Outubro 2020'
-lead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/preview/cover.jpg'
 date: '2020-10-16T05:35:07.322Z'
 category: 'Mês'
-tags: ['calendario', 'mes', 'data', 'teste', 'azul', 'mesa', 'cadeira']
+keywords: ['calendario', 'mes', 'data', 'teste', 'azul', 'mesa', 'cadeira']
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
