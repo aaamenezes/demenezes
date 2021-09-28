@@ -7,6 +7,7 @@ import Container from '../Common/Container'
 const StyledPostHeader = styled.header`
   min-height: 100vh;
   padding-top: ${ getGutter(30) };
+  margin-bottom: 10%;
   color: ${ ({ theme }) => theme.color.white };
   background-image: ${ ({ theme }) => (
     `linear-gradient(
