@@ -3,12 +3,10 @@
 
 import React from 'react'
 import PageHeader from '../src/components/Common/PageHeader'
+import pageWrapper from '../src/components/Wrappers/pageWrapper'
 
-export default function Contact() {
-  return (
-    <>
-      <PageHeader />
-      <div> </div>
-    </>
-  )
+function Contact() {
+  return <PageHeader />
 }
+
+export default pageWrapper(Contact)

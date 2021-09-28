@@ -4,7 +4,7 @@ import pageWrapper from '../../src/components/Wrappers/pageWrapper'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostHeader from '../../src/components/PostPage/PostHeader'
-// import PostContent from '../../src/components/PostPage/PostContent'
+import PostContent from '../../src/components/PostPage/PostContent'
 // import PostComments from '../../src/components/PostPage/PostComments'
 // import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 
@@ -22,7 +22,7 @@ function Post({ post }) {
           keywords={post.keywords}
           coverImage={post.coverImage}
         />
-        {/* <PostContent content={post.content} /> */}
+        <PostContent content={post.content} />
       </PostPage>
       {/* <PostComments /> */}
       {/* <RelatedPosts /> */}

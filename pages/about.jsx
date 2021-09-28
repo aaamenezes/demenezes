@@ -3,12 +3,10 @@
 
 import React from 'react'
 import PageHeader from '../src/components/Common/PageHeader'
+import pageWrapper from '../src/components/Wrappers/pageWrapper'
 
-export default function About() {
-  return (
-    <>
-      <PageHeader />
-      <div> </div>
-    </>
-  )
+function About() {
+  return <PageHeader />
 }
+
+export default pageWrapper(About)
