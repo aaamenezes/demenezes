@@ -1,6 +1,8 @@
 import { POSTS_PER_PAGE } from '../settings'
 
 export function getPaginationInfos(allPosts, params) {
+  if (!allPosts) return {}
+
   const CURRENT_PAGINATION = params ? params.page : 1
 
   const CURRENT_POSTS = allPosts.slice(
