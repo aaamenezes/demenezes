@@ -5,8 +5,11 @@ import styled from 'styled-components'
  * INFORMAÇÕES DO BLOG
  */
 
-export const BLOG_TITLE_BASE = 'deMenezes: Front-end, carreira e [alguma coisa]'
+export const BLOG_TITLE_BASE = 'deMenezes: Front-end, carreira e css-life-style'
 export const BLOG_DESCRIPTION_BASE = 'Um blog sobre isso, isso e isso'
+export const BLOG_KEYWORDS_BASE = [
+  'front-end', 'programação', 'carreira', 'blog pessoal'
+]
 
 /**
  * CADASTROS

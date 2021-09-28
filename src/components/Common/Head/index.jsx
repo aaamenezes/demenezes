@@ -1,44 +1,45 @@
 import React from 'react'
 import NextHead from 'next/head'
+import { getPaginationInfos } from '../../../utils/getPaginationInfos'
 import { getPageInfos } from '../../../utils/getPageInfos'
+import { getPageTitle } from './getPageTitle'
+import { getPageDescription } from './getPageDescription'
+import { getPageKeywords } from './getPageKeyWords'
 
-export default function Head({
-  pageTitle,
-  pageDescription,
-  keyWords,
-  currentPagination
-}) {
-  const { CURRENT_PAGE, PAGE_TITLE } = getPageInfos()
+export default function Head({ componentProps }) {
+  const { CURRENT_POSTS } = componentProps
+  const { CURRENT_PAGINATION } = getPaginationInfos(CURRENT_POSTS)
+  const { CURRENT_PAGE } = getPageInfos()
 
-  const currentTitle = CURRENT_PAGE === 'listing'
-    ? `Page ${ currentPagination } | ${ pageTitle }`
-    : pageTitle
+  const { title } = componentProps.post || ''
+  const { description } = componentProps.post || ''
+  const { keywords } = componentProps.post || ''
 
-  const currentKeyWorkds = CURRENT_PAGE === 'listing'
-    ? `${ keyWords },página ${ currentPagination }`
-    : keyWords
+  const pageTitle = getPageTitle(
+    CURRENT_PAGE,
+    CURRENT_PAGINATION,
+    title,
+    description
+  )
 
-  function getCurrentPageDescription(page, description) {
-    switch (page) {
-    case 'about':
-      return `Página ${ PAGE_TITLE } | ${ description }`
-    case 'contact':
-      return `Página ${ PAGE_TITLE } | ${ description }`
-    default:
-      return description
-    }
-  }
+  const pageDescription = getPageDescription(
+    CURRENT_PAGE,
+    CURRENT_PAGINATION,
+    description
+  )
 
-  const currentPageDescription = getCurrentPageDescription(
-    CURRENT_PAGE, pageDescription
+  const pageKeywords = getPageKeywords(
+    CURRENT_PAGE,
+    CURRENT_PAGINATION,
+    keywords
   )
 
   return (
     <NextHead>
-      <title>{currentTitle}</title>
+      <title>{pageTitle}</title>
       <meta name='author' content='André Menezes' />
-      <meta name='description' content={currentPageDescription} />
-      <meta name='keywords' content={currentKeyWorkds} />
+      <meta name='description' content={pageDescription} />
+      <meta name='keywords' content={pageKeywords} />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       <meta charSet='UTF-8' />
