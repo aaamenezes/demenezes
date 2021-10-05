@@ -3,7 +3,7 @@ title: 'Agosto 2020'
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2020-08-16T05:35:07.322Z'
-category: 'Mês'
+category: 'Semana'
 keywords: ['calendario', 'mes', 'data', 'teste', 'azul', 'mesa', 'cadeira']
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
