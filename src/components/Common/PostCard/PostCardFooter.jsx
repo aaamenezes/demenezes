@@ -20,12 +20,16 @@ const PostCardDate = styled.p`
   color: ${ ({ theme }) => theme.color.gray8 };
 `
 
-export default function PostCardFooter({ date, hero }) {
+export default function PostCardFooter({ date }) {
   return (
-    <PostCardFooterWrapper hero={hero}>
-      <PostCardDate hero={hero}>
-        {convertDate(date)}
-      </PostCardDate>
-    </PostCardFooterWrapper>
+    date
+      ? (
+        <PostCardFooterWrapper>
+          <PostCardDate>
+            {convertDate(date)}
+          </PostCardDate>
+        </PostCardFooterWrapper>
+      )
+      : <></>
   )
 }

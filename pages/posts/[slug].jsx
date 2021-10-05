@@ -6,7 +6,7 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import PostHeader from '../../src/components/PostPage/PostHeader'
 import PostContent from '../../src/components/PostPage/PostContent'
 import PostComments from '../../src/components/PostPage/PostComments'
-// import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
+import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 
 const PostPage = styled.main`
   margin-bottom: 10%;
@@ -27,7 +27,10 @@ function Post({ post }) {
         <PostContent content={post.content} />
       </PostPage>
       <PostComments />
-      {/* <RelatedPosts /> */}
+      <RelatedPosts
+        postCategory={post.category}
+        relatedPosts={post.relatedPosts}
+      />
     </>
   )
 }
@@ -50,11 +53,18 @@ export async function getStaticProps({ params }) {
 
   const content = await markdownToHtml(post.content || '')
 
+  const relatedPosts = getAllPosts([
+    'category', 'title', 'coverImage', 'slug'
+  ]).filter(
+    currentPost => currentPost.category === post.category
+  )
+
   return {
     props: {
       post: {
         ...post,
-        content
+        content,
+        relatedPosts
       }
     }
   }

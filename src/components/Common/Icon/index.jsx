@@ -25,19 +25,10 @@ const StyledIcon = styled.i`
   }) }
 
   ${ propToStyle('color') }
-
-  /* &:not(:hover) { */
-    /* Lembrar de deixar tudo preto no desktop, e colorir no hover */
-    /* color: ${ ({ theme }) => theme.color.black } !important; */
-  /* } */
 `
 
 export default function Icon({ name, inline }) {
   switch (name) {
-  case 'bars':
-    return (
-      <StyledIcon className='fas fa-bars' name={name} />
-    )
   case 'github':
     return (
       <StyledIcon
@@ -70,15 +61,6 @@ export default function Icon({ name, inline }) {
         color='#0073AF'
       />
     )
-  case 'external':
-    return (
-      <StyledIcon
-        className='fas fa-external-link-alt'
-        name={name}
-        inline={inline}
-        color='currentColor'
-      />
-    )
   case 'instagram':
     return (
       <StyledIcon
@@ -88,10 +70,23 @@ export default function Icon({ name, inline }) {
         color='#F02002'
       />
     )
+  case 'bars':
+    return (
+      <StyledIcon className='fas fa-bars' name={name} />
+    )
   case 'search':
     return (
       <StyledIcon
         className='fas fa-search'
+        name={name}
+        inline={inline}
+        color='currentColor'
+      />
+    )
+  case 'external':
+    return (
+      <StyledIcon
+        className='fas fa-external-link-alt'
         name={name}
         inline={inline}
         color='currentColor'
@@ -105,6 +100,22 @@ export default function Icon({ name, inline }) {
         name={name}
         inline={inline}
         color='currentColor'
+      />
+    )
+  case 'arrow-left':
+    return (
+      <StyledIcon
+        className='fas fa-angle-left'
+        name={name}
+        inline={inline}
+      />
+    )
+  case 'arrow-right':
+    return (
+      <StyledIcon
+        className='fas fa-angle-right'
+        name={name}
+        inline={inline}
       />
     )
   default:
