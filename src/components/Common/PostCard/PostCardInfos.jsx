@@ -19,21 +19,35 @@ const PostCardInfosWrapper = styled.div`
   ) };
     `,
     md: css`
-      width: ${ ({ hero }) => hero ? '50%' : '62%' };
-      padding: 0;
-      margin-left: auto;
+      width: ${ ({ wrapperWidth }) => wrapperWidth };
+      padding: ${ ({ isCompact }) => isCompact ? getGutter(2, 0, 7) : 0 };
+      margin-left: ${ ({ isCompact }) => isCompact ? '0' : 'auto' };
     `
   }) }
 `
 
-export default function PostCardInfos({ post, hero }) {
+export default function PostCardInfos({ post, hero, isCompact }) {
   const { date, description } = post
 
+  function getWrapperWidth(isHero, compact) {
+    if (compact) { return '100%' }
+    if (isHero) { return '50%' }
+    return '62%'
+  }
+
   return (
-    <PostCardInfosWrapper hero={hero}>
+    <PostCardInfosWrapper
+      hero={hero}
+      isCompact={isCompact}
+      wrapperWidth={getWrapperWidth(hero, isCompact)}
+    >
       <PostCardHeader post={post} hero={hero} />
-      <PostCardDescription description={description} hero={hero} />
-      <PostCardFooter date={date} />
+      <PostCardDescription
+        description={description}
+        hero={hero}
+        isCompact={isCompact}
+      />
+      <PostCardFooter date={date} isCompact={isCompact} />
     </PostCardInfosWrapper>
   )
 }

@@ -10,7 +10,7 @@ const PostCardFooterWrapper = styled.footer`
       margin-top: ${ getGutter(2) };
     `,
     md: css`
-      margin-top: 0;
+      margin-top: ${ ({ isCompact }) => isCompact ? getGutter(2) : 0 };
     `
   }) }
 `
@@ -20,11 +20,11 @@ const PostCardDate = styled.p`
   color: ${ ({ theme }) => theme.color.gray8 };
 `
 
-export default function PostCardFooter({ date }) {
+export default function PostCardFooter({ date, isCompact }) {
   return (
     date
       ? (
-        <PostCardFooterWrapper>
+        <PostCardFooterWrapper isCompact={isCompact}>
           <PostCardDate>
             {convertDate(date)}
           </PostCardDate>

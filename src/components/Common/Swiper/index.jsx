@@ -3,7 +3,6 @@ import { Swiper as SwiperContainer, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper/core'
 import 'swiper/swiper-bundle.min.css'
 import PostCard from '../PostCard'
-import ArrowButton from './Arrows'
 import { theme } from '../../../theme'
 
 SwiperCore.use([ Navigation, Pagination ])
@@ -18,8 +17,6 @@ export default function Swiper({ slides }) {
   useEffect(() => {
     handleResize()
     window.addEventListener('resize', handleResize)
-    // REMOVER ESSE REMOVE EVENT?
-    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   function getSlidesPerView() {
@@ -31,14 +28,16 @@ export default function Swiper({ slides }) {
 
     const slidesPerView = breakpointsEntries
       .reverse()
-      .indexOf(currentBreakpoint) + 1
+      .indexOf(currentBreakpoint) || 1
 
-    return slidesPerView
+    const fraction = 0.3
+
+    return slidesPerView < 4 ? slidesPerView + fraction : 4 + fraction
   }
 
   const postsList = slides.map(slide => (
     <SwiperSlide key={slide.title} tag='li'>
-      <PostCard post={slide} imageRatio='4x3' />
+      <PostCard post={slide} imageRatio='4x3' isCompact />
     </SwiperSlide>
   ))
 
@@ -47,12 +46,12 @@ export default function Swiper({ slides }) {
       spaceBetween={getSlidesPerView() * 10}
       slidesPerView={getSlidesPerView()}
       wrapperTag='ul'
-      navigation
       pagination
+      // navigation
     >
       {postsList}
-      <ArrowButton direction='prev' />
-      <ArrowButton direction='next' />
+      {/* <ArrowButton direction='prev' />
+      <ArrowButton direction='next' /> */}
     </SwiperContainer>
   )
 }

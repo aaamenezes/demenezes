@@ -10,14 +10,14 @@ const PostCardDescriptionWrapper = styled.p`
       margin: ${ getGutter(5, 0) };
     `,
     md: css`
-      display: block;
+      display: ${ ({ isCompact }) => isCompact ? 'none' : 'block' };
     `
   }) }
 `
 
-export default function PostCardDescription({ description, hero }) {
+export default function PostCardDescription({ description, hero, isCompact }) {
   return (
-    <PostCardDescriptionWrapper hero={hero}>
+    <PostCardDescriptionWrapper hero={hero} isCompact={isCompact}>
       {description}
     </PostCardDescriptionWrapper>
   )
