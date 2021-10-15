@@ -10,10 +10,12 @@ import { getPageInfos } from '../../../utils/getPageInfos'
 
 const HeaderWrapper = styled.header`
   position: fixed;
-  transform: ${ ({ openHeader }) => !openHeader && 'translateY(-100%)' };
+  transform: ${ ({ openHeader }) => (
+    openHeader ? 'translate(-50%, 0)' : 'translate(-50%, -110%)'
+  ) };
   z-index: ${ ({ theme }) => theme.zIndex.fixed };
   top: 0;
-  left: 0;
+  left: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,8 +50,7 @@ export default function PageHeader() {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      // eslint-disable-next-line no-restricted-globals
-      setOpenHeader(scrollY < innerHeight)
+      setOpenHeader(window.scrollY < window.innerHeight)
     })
   }, [])
 
