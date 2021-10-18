@@ -7,6 +7,7 @@ import PostHeader from '../../src/components/PostPage/PostHeader'
 import PostContent from '../../src/components/PostPage/PostContent'
 import PostComments from '../../src/components/PostPage/PostComments'
 import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
+import ProgressBar from '../../src/components/PostPage/ProgressBar'
 
 const PostPage = styled.main`
   margin-bottom: 10%;
@@ -31,6 +32,7 @@ function Post({ post }) {
         postCategory={post.category}
         relatedPosts={post.relatedPosts}
       />
+      <ProgressBar />
     </>
   )
 }
