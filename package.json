@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint './pages/**' './src/**' './lib/**'",
+    "lint-bkp": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "classnames": "2.2.6",

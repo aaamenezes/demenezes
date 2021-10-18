@@ -61,7 +61,6 @@ const PostCardLabel = styled.div`
 export default function PostCard({ post, imageRatio, isCompact }) {
   const { title, slug, coverImage, category } = post
 
-
   return (
     <Container as={PostCardWrapper} isCompact={isCompact}>
       <PostCardImage isCompact={isCompact}>
