@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { getGutter } from '../../../utils/getGutter'
-import propToStyle from '../../../utils/propToStyles'
 import Icon from '../Icon'
 
 const Button = styled.button`
@@ -16,8 +15,6 @@ const Button = styled.button`
   background-color: transparent;
   border-radius: ${ ({ theme }) => theme.borderRadius };
   cursor: pointer;
-
-  ${ propToStyle('display') }
 
   i {
     font-size: ${ ({ theme }) => theme.fontSize.articleTitle };

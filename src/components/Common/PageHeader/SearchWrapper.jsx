@@ -5,6 +5,17 @@ import ToggleModalButton from './ToggleModalButton'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 
+const ToggleSearchModal = styled.button`
+  ${ getBreakpoints({
+    xs: css`
+      display: none;
+    `,
+    md: css`
+      display: flex;
+    `
+  }) }
+`
+
 const Search = styled.div`
   ${ getBreakpoints({
     xs: css`display: none;`,
@@ -50,10 +61,7 @@ export default function SearchWrapper() {
         onClick={toggleSearch}
         icon='search'
         color='gray'
-        display={{
-          xs: 'none',
-          md: 'flex'
-        }}
+        as={ToggleSearchModal}
         aria-labelledby='Abrir busca do blog'
       />
       <Container as={SearchContent} openSearch={openSearch}>

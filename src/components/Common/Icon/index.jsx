@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
-import propToStyle from '../../../utils/propToStyles'
 
 const StyledIcon = styled.i`
   ${ getBreakpoints({
@@ -23,8 +22,6 @@ const StyledIcon = styled.i`
       }
     `
   }) }
-
-  ${ propToStyle('color') }
 `
 
 export default function Icon({ name, inline }) {

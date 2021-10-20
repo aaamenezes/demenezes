@@ -1,16 +1,9 @@
 import React from 'react'
 import NextLink from 'next/link'
 import styled from 'styled-components'
-import propToStyle from '../../../utils/propToStyles'
-// import Icon from '../icon'
 
 const LinkButtonStyled = styled.a`
   color: currentColor;
-
-  ${ propToStyle('display') }
-  ${ propToStyle('padding') }
-  ${ propToStyle('borderBottom') }
-  ${ propToStyle('backgroundColor') }
 `
 
 export default function LinkButton({
