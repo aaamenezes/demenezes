@@ -5,7 +5,7 @@ import getBreakpoints from '../../../utils/getBreakpoints'
 const Crop = styled.div`
   position: relative;
   height: 0;
-  padding-top: ${ ({ width, height }) => `${ (height / width) * 100 }%` };
+  padding-top: ${ ({ aspectRatio }) => aspectRatio };
   overflow: hidden;
 `
 
@@ -29,8 +29,10 @@ export default function CropedImage({ src, alt, ratio, highLight }) {
     ? ratio.split('x')
     : [ '1', '1' ]
 
+  const aspectRatio = `${ (height / width) * 100 }%`
+
   return (
-    <Crop width={width} height={height}>
+    <Crop aspectRatio={aspectRatio}>
       <Image src={src} alt={alt} highLight={highLight} />
     </Crop>
   )
