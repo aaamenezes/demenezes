@@ -3,14 +3,14 @@
 
 import React from 'react'
 import Greeting from '../src/components/AboutPage/Greeting'
-import Numbers from '../src/components/AboutPage/Numbers'
+import Categories from '../src/components/AboutPage/Categories'
 import pageWrapper from '../src/components/Wrappers/pageWrapper'
 
 function About() {
   return (
     <>
       <Greeting />
-      <Numbers />
+      <Categories />
       <h2>Vídeo</h2>
       <iframe src='http://www.youtube.com/results?search_type=&search_query=video+aula+gimp&gl=BR&hl=pt' frameBorder='0' />
       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque expedita, eveniet repellat eaque totam iste voluptatum voluptatem mollitia fugiat eius tempora error harum fugit? Quas aliquam quod vel ipsam rem.</h2>

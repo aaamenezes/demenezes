@@ -7,7 +7,7 @@ const StyledIcon = styled.i`
   ${ getBreakpoints({
     xs: css`
       padding: ${ getGutter(3, 4) };
-      color: ${ ({ color }) => color };
+      color: ${ ({ color }) => color || 'currentColor' };
       transition: ${ ({ theme }) => theme.transition.fast };
 
       &:hover {
@@ -15,7 +15,11 @@ const StyledIcon = styled.i`
       }
     `,
     md: css`
-      color: ${ ({ theme }) => theme.color.white };
+      color: ${ ({ theme, color }) => (
+    color === 'currentColor'
+      ? color
+      : theme.color.white
+  ) };
 
       &:hover {
         color: ${ ({ color }) => color };
@@ -77,7 +81,6 @@ export default function Icon({ name, inline }) {
         className='fas fa-search'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'external':
@@ -86,7 +89,6 @@ export default function Icon({ name, inline }) {
         className='fas fa-external-link-alt'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'close':
@@ -96,7 +98,6 @@ export default function Icon({ name, inline }) {
         // className='far fa-times-circle'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'arrow-left':
@@ -115,12 +116,65 @@ export default function Icon({ name, inline }) {
         inline={inline}
       />
     )
+  case 'code':
+    return (
+      <StyledIcon
+        className='fas fa-code'
+        name={name}
+        inline={inline}
+        color='currentColor'
+      />
+    )
+  case 'terminal':
+    return (
+      <StyledIcon
+        className='fas fa-terminal'
+        name={name}
+        inline={inline}
+        color='currentColor'
+      />
+    )
+  case 'people':
+    return (
+      <StyledIcon
+        className='fas fa-people-carry'
+        name={name}
+        inline={inline}
+        color='currentColor'
+      />
+    )
+  case 'job':
+    return (
+      <StyledIcon
+        className='far fa-building'
+        name={name}
+        inline={inline}
+        color='currentColor'
+      />
+    )
+  case 'tool':
+    return (
+      <StyledIcon
+        className='fas fa-hammer'
+        name={name}
+        inline={inline}
+        color='currentColor'
+      />
+    )
+  case 'balance':
+    return (
+      <StyledIcon
+        className='fas fa-balance-scale'
+        name={name}
+        inline={inline}
+        color='currentColor'
+      />
+    )
   default:
     return (
       <StyledIcon
         className='fas fa-question-circle'
         name={name}
-        color='currentColor'
       />
     )
   }
