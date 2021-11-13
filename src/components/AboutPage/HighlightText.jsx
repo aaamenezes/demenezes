@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Container from '../Common/Container'
 
-const StyledHighlightText = styled.section`
+const TextWrapper = styled.div`
   padding: 20% 10%;
   background-image: ${ ({ theme }) => (
     `linear-gradient(
@@ -15,16 +15,16 @@ const StyledHighlightText = styled.section`
   ) };
 `
 
-const HighlightTitle = styled.h2`
+const Text = styled.p`
   color: ${ ({ theme }) => theme.color.gray };
 `
 
-export default function HighlightText() {
+export default function HighlightText({ text }) {
   return (
-    <Container as={StyledHighlightText}>
-      <HighlightTitle>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque expedita, eveniet repellat eaque totam iste voluptatum voluptatem mollitia fugiat eius tempora error harum fugit? Quas aliquam quod vel ipsam rem.
-      </HighlightTitle>
+    <Container as={TextWrapper}>
+      <Text>
+        {text}
+      </Text>
     </Container>
   )
 }

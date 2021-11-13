@@ -85,7 +85,7 @@ export default function Categories() {
     <Container>
       <header>
         <h2>
-          Categorias
+          Categorias: o que tem por aqui
         </h2>
       </header>
 
