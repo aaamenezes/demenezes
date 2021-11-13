@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Container from '../Common/Container'
 
 const StyledHighlightText = styled.section`
   padding: 20% 10%;
@@ -20,10 +21,10 @@ const HighlightTitle = styled.h2`
 
 export default function HighlightText() {
   return (
-    <StyledHighlightText>
+    <Container as={StyledHighlightText}>
       <HighlightTitle>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque expedita, eveniet repellat eaque totam iste voluptatum voluptatem mollitia fugiat eius tempora error harum fugit? Quas aliquam quod vel ipsam rem.
       </HighlightTitle>
-    </StyledHighlightText>
+    </Container>
   )
 }
