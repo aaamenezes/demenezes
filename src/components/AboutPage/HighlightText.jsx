@@ -19,11 +19,11 @@ const Text = styled.p`
   color: ${ ({ theme }) => theme.color.gray };
 `
 
-export default function HighlightText({ text }) {
+export default function HighlightText({ children }) {
   return (
     <Container as={TextWrapper}>
       <Text>
-        {text}
+        {children}
       </Text>
     </Container>
   )
