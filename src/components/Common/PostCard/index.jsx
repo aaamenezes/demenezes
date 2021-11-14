@@ -12,13 +12,13 @@ const PostCardWrapper = styled.article`
     xs: css`
       display: flex;
       flex-direction: column;
-      padding: ${ ({ isCompact }) => isCompact ? 0 : '0 10%' };
+      padding: 0;
       margin-bottom: 10%;
       `,
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };
       justify-content: space-between;
-      padding: ${ ({ isCompact }) => isCompact ? 0 : '10%' };
+      padding: 0;
     `
   }) }
 `
@@ -62,7 +62,11 @@ export default function PostCard({ post, imageRatio, isCompact }) {
   const { title, slug, coverImage, category } = post
 
   return (
-    <Container as={PostCardWrapper} isCompact={isCompact}>
+    <Container
+      as={PostCardWrapper}
+      maxWidth='xl'
+      isCompact={isCompact}
+    >
       <PostCardImage isCompact={isCompact}>
         <LinkButton href={`/posts/${ slug }`}>
           <CropedImage
