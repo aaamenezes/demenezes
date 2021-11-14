@@ -1,11 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react'
+import styled from 'styled-components'
 import Container from '../Common/Container'
 import HighlightText from './HighlightText'
 
+const StorySection = styled.section`
+  padding: 0;
+`
+
 export default function Story() {
   return (
-    <>
+    <Container as={StorySection}>
       <Container>
         <h2>Como tudo começou...</h2>
         <p>A primeira vez que "programei" na vida foi durante o técnico em Redes de Computadores que fiz no Senai. Digo "programei", porque foi em HTML e CSS, e tem uma galera que faz treta se chamar elas de linguagem de programação. Mas sempre foi algo por hobbie mesmo, até porque eu achava muito difícil (e é).</p>
@@ -29,6 +34,6 @@ export default function Story() {
         <p>Conforme percebi uma evolução nos estudos (que sempre foram online) e que eu gostei de criar coisas e colocar ideias em prática, decidi mudar de carreira. Minha primeira vaga veio no ano seguinte, 2020.</p>
         <p>Desde então sempre foquei no front-end, criei esse blog usando 3 tecnologias que gosto muito (React, Next e Styled Componentes) com o objetivo de praticar e registrar aqui o que eu estiver aprendendo.</p>
       </Container>
-    </>
+    </Container>
   )
 }

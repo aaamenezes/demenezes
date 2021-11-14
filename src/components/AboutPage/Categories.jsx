@@ -82,7 +82,7 @@ export default function Categories() {
   ))
 
   return (
-    <Container>
+    <Container as='section'>
       <header>
         <h2>
           Categorias: o que tem por aqui

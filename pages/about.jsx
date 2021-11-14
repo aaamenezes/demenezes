@@ -13,13 +13,15 @@ function About() {
       <Greeting />
       <Categories />
       <Story />
-      <Container>
+      <Container as='section'>
         <h2>Hobbies</h2>
         <p>Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game.</p>
       </Container>
-      <SocialMedia />
+      <Container as='section'>
+        <SocialMedia />
+      </Container>
       <Contact />
-      <Container>
+      <Container as='section'>
         <p>Muito prazer!</p>
       </Container>
     </>
