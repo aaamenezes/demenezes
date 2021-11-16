@@ -4,7 +4,8 @@ function formatValue(value) {
   const stringValue = (value).toString()
   const isPercent = stringValue.includes('%')
   const isAuto = stringValue.includes('auto')
-  if (isPercent || isAuto) return value
+  const isInitial = stringValue.includes('initial')
+  if (isPercent || isAuto || isInitial) return value
   return `${ value * gutterMultiplier }px`
 }
 

@@ -7,9 +7,9 @@ import Container from '../Container'
 const NewsletterWrapper = styled.section`
   ${ getBreakpoints({
     xs: css`
+      /* padding-top: max(40px, min(5vw, 160px));; */
       padding-top: ${ getGutter(5) };
       padding-bottom: ${ getGutter(5) };
-      margin-bottom: 10%;
       color: ${ ({ theme }) => theme.color.white };
       background-color: ${ ({ theme }) => theme.color.gray };
     `

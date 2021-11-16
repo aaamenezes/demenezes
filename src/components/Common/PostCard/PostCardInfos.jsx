@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
-import { getGutter } from '../../../utils/getGutter'
 import PostCardFooter from './PostCardFooter'
 import PostCardHeader from './PostCardHeader'
 import PostCardDescription from './PostCardDescription'
@@ -12,16 +11,15 @@ const PostCardInfosWrapper = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: ${ ({ hero }) => hero ? '100%' : 'initial' };
-      padding: ${ getGutter(2, 0, 7) };
+      height: ${ ({ hero }) => hero && '100%' };
       color: ${ ({ theme, hero }) => (
     hero ? theme.color.gray : theme.color.black
   ) };
     `,
     md: css`
       width: ${ ({ wrapperWidth }) => wrapperWidth };
-      padding: ${ ({ isCompact }) => isCompact ? getGutter(2, 0, 7) : 0 };
-      margin-left: ${ ({ isCompact }) => isCompact ? '0' : 'auto' };
+      margin-left: ${ ({ isCompact }) => !isCompact && 'auto' };
+      margin-right: 0;
     `
   }) }
 `

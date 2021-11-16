@@ -6,19 +6,19 @@ import LinkButton from '../LinkButton'
 import PostCardInfos from './PostCardInfos'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
+import { getWidth } from '../../../utils/getWidth'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
       display: flex;
       flex-direction: column;
-      padding: 0;
       margin-bottom: 10%;
-      `,
+      padding: 0;
+    `,
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };
       justify-content: space-between;
-      padding: 0;
     `
   }) }
 `
@@ -62,11 +62,7 @@ export default function PostCard({ post, imageRatio, isCompact }) {
   const { title, slug, coverImage, category } = post
 
   return (
-    <Container
-      as={PostCardWrapper}
-      maxWidth='xl'
-      isCompact={isCompact}
-    >
+    <Container as={PostCardWrapper} isCompact={isCompact}>
       <PostCardImage isCompact={isCompact}>
         <LinkButton href={`/posts/${ slug }`}>
           <CropedImage
