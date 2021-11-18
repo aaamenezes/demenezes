@@ -4,7 +4,7 @@ import { theme } from '../../../theme'
 import { GlobalStyle } from '../../../theme/globalStyle'
 import Head from '../../Common/Head'
 import PageHeader from '../../Common/PageHeader'
-import Footer from '../../Footer'
+import PageFooter from '../../PageFooter'
 
 export default function pageWrapper(PageComponent) {
   return componentProps => (
@@ -13,7 +13,7 @@ export default function pageWrapper(PageComponent) {
       <GlobalStyle />
       <PageHeader />
       <PageComponent {...componentProps} />
-      <Footer />
+      <PageFooter />
     </ThemeProvider>
   )
 }

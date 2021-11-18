@@ -22,18 +22,6 @@ export const NAVIGATION_MENU = [
   { title: 'Contato', url: '/contact' }
 ]
 
-// export const LOGO = <h1>deMenezes</h1>
-const Logo = styled.img`
-  margin: 0;
-`
-
-export const LOGO = (
-  <Logo
-    src='https://via.placeholder.com/200x50'
-    alt='Logo do site'
-  />
-)
-
 export const SOCIAL_MEDIA = [ // Rodapé
   { title: 'github', url: 'https://github.com/aaamenezes' },
   { title: 'linkedin', url: 'https://www.linkedin.com/in/aaamenezes' },

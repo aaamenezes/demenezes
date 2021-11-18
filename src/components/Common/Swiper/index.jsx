@@ -47,7 +47,6 @@ export default function Swiper({ slides }) {
       slidesPerView={getSlidesPerView()}
       wrapperTag='ul'
       pagination
-      // navigation
     >
       {postsList}
       {/* <ArrowButton direction='prev' />

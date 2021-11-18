@@ -1,10 +1,21 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import getBreakpoints from '../../utils/getBreakpoints'
 import { getWidth } from '../../utils/getWidth'
-import Container from '../Common/Container'
+import Container, { containerPadding } from '../Common/Container'
 
 const StyledPostContent = styled.div`
-  max-width: ${ getWidth('xl') };
+  ${ getBreakpoints({
+    xs: css`
+      max-width: ${ getWidth('md') };
+      padding-right: 0;
+      padding-left: 0;
+    `,
+    md: css`
+      padding-right: ${ containerPadding };
+      padding-left: ${ containerPadding };
+    `
+  })}
 `
 
 export default function PostContent({ content }) {

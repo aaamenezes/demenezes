@@ -5,8 +5,8 @@ export default function Contact() {
   return (
     <Container as='section'>
       <h2>Fala comigo</h2>
-      <p>Quer conversar sobre algum projeto, pedir alguma ajuda, ou apenas falar sobre como é prazeroso usar `display: grid;`?</p>
-      <p>Me deixe uma mensagem:</p>
+      <p>Quer falar sobre algum projeto, carreira, mercado de trabalho, ou apenas conversar sobre como é prazeroso usar `display: grid;`?</p>
+      <p>Me deixa uma mensagem aí:</p>
       <div>[FORMULÁRIO]</div>
     </Container>
   )

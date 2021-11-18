@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container from '../Common/Container'
+import Container, { containerPadding } from '../Common/Container'
 
 const TextWrapper = styled.div`
-  padding: 20% 10%;
+  padding: ${ containerPadding };
   background-image: ${ ({ theme }) => (
     `linear-gradient(
       179deg,
@@ -16,15 +16,16 @@ const TextWrapper = styled.div`
 `
 
 const Text = styled.p`
+  margin-bottom: 0;
   color: ${ ({ theme }) => theme.color.gray };
 `
 
 export default function HighlightText({ children }) {
   return (
-    <Container as={TextWrapper}>
-      <Text>
+    <Container as={TextWrapper} fullWidth>
+      <Container as={Text}>
         {children}
-      </Text>
+      </Container>
     </Container>
   )
 }

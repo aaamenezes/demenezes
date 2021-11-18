@@ -8,11 +8,9 @@ import PostCardInfos from '../../Common/PostCard/PostCardInfos'
 const HeroWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
-      width: min(100%, 2000px);
       height: 100vh;
       padding-top: ${ getGutter(30) };
       padding-bottom: ${ getGutter(10) };
-      margin-bottom: 10%;
       background-image: ${ ({ theme, image }) => css`linear-gradient(
         270deg,
         ${ theme.color.black + theme.opacity.medium.hex },
@@ -38,6 +36,7 @@ export default function HeroPostCard({ post }) {
     <Container
       as={HeroWrapper}
       image={post.coverImage}
+      fullWidth
     >
       <PostCardInfos
         post={post}

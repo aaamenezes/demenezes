@@ -12,7 +12,6 @@ const PaginationWrapper = styled.section`
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 5%;
     `,
     md: css`
       flex-direction: row;

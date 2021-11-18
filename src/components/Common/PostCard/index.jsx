@@ -1,24 +1,25 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Container from '../Container'
+import Container, { containerPadding } from '../Container'
 import CropedImage from '../CropedImage'
 import LinkButton from '../LinkButton'
 import PostCardInfos from './PostCardInfos'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
-import { getWidth } from '../../../utils/getWidth'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
       display: flex;
       flex-direction: column;
-      margin-bottom: 10%;
-      padding: 0;
+      padding-right: 0;
+      padding-left: 0;
     `,
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };
       justify-content: space-between;
+      padding-right: ${ ({ isCompact }) => !isCompact && containerPadding };
+      padding-left: ${ ({ isCompact }) => !isCompact && containerPadding };
     `
   }) }
 `
@@ -28,9 +29,11 @@ const PostCardImage = styled.div`
     xs: css`
       position: relative;
       width: 100%;
+      margin-bottom: ${ getGutter(3) };
     `,
     md: css`
       width: ${ ({ isCompact }) => isCompact ? '100%' : '35%' };
+      margin-bottom: 0;
       overflow: hidden;
     `
   }) }

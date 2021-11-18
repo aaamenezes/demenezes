@@ -19,7 +19,6 @@ const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
   padding-top: ${ getGutter(3) };
   padding-bottom: ${ getGutter(3) };
   color: ${ ({ theme, headerColor }) => theme.color[headerColor] };
@@ -65,6 +64,7 @@ export default function PageHeader() {
       CURRENT_PAGE={CURRENT_PAGE}
       headerColor={headerColor}
       openHeader={openHeader}
+      fullWidth
     >
       <Logowrapper />
       <ToggleModalButton

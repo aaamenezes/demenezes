@@ -11,6 +11,7 @@ const FooterWrapper = styled.footer`
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 0;
       background-color: ${ ({ theme }) => theme.color.blackAlt };
     `,
     md: css`
@@ -30,9 +31,9 @@ const FooterLogoWrapper = styled.div`
   }) }
 `
 
-export default function Footer() {
+export default function PageFooter() {
   return (
-    <Container as={FooterWrapper}>
+    <Container as={FooterWrapper} fullWidth>
       <FooterLogoWrapper>
         <LogoWrapper />
       </FooterLogoWrapper>

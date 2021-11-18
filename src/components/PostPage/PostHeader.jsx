@@ -5,7 +5,6 @@ import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 
 const StyledPostHeader = styled.header`
-  min-height: 100vh;
   padding-top: ${ getGutter(30) };
   margin-bottom: 10%;
   color: ${ ({ theme }) => theme.color.white };
@@ -37,7 +36,7 @@ export default function PostHeader({
   const footerContent = `${ convertDate(date) } - ${ category }`
 
   return (
-    <Container as={StyledPostHeader}>
+    <Container as={StyledPostHeader} fullWidth>
       <PostTitle>{title}</PostTitle>
       <h2>{description}</h2>
       <PostHeaderFooter>
