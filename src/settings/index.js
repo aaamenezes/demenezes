@@ -1,7 +1,3 @@
-import React from 'react'
-import styled from 'styled-components'
-import { getGutter } from '../utils/getGutter'
-
 /**
  * INFORMAÇÕES DO BLOG
  */

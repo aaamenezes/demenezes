@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react'
 import Greeting from '../src/components/AboutPage/Greeting'
 import Categories from '../src/components/AboutPage/Categories'
@@ -18,7 +19,7 @@ function About() {
         <p>Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game.</p>
       </Container>
       <Container as='section'>
-        <SocialMedia />
+        <SocialMedia center />
       </Container>
       <Contact />
       <Container as='section'>

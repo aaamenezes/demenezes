@@ -15,7 +15,7 @@ const StyledPostContent = styled.div`
       padding-right: ${ containerPadding };
       padding-left: ${ containerPadding };
     `
-  })}
+  }) }
 `
 
 export default function PostContent({ content }) {
