@@ -9,19 +9,12 @@ const StyledIcon = styled.i`
       padding: ${ getGutter(3, 4) };
       color: ${ ({ color }) => color || 'currentColor' };
       transition: ${ ({ theme }) => theme.transition.fast };
+    `,
+    md: css`
+      color: ${ ({ color }) => color || 'currentColor' };
 
       &:hover {
         transform: scale(1.5);
-      }
-    `,
-    md: css`
-      color: ${ ({ theme, color }) => (
-    color === 'currentColor'
-      ? color
-      : theme.color.white
-  ) };
-
-      &:hover {
         color: ${ ({ color }) => color };
       }
     `
@@ -122,7 +115,6 @@ export default function Icon({ name, inline }) {
         className='fas fa-code'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'terminal':
@@ -131,7 +123,6 @@ export default function Icon({ name, inline }) {
         className='fas fa-terminal'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'people':
@@ -140,7 +131,6 @@ export default function Icon({ name, inline }) {
         className='fas fa-people-carry'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'job':
@@ -149,7 +139,6 @@ export default function Icon({ name, inline }) {
         className='far fa-building'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'tool':
@@ -158,7 +147,6 @@ export default function Icon({ name, inline }) {
         className='fas fa-hammer'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   case 'balance':
@@ -167,7 +155,6 @@ export default function Icon({ name, inline }) {
         className='fas fa-balance-scale'
         name={name}
         inline={inline}
-        color='currentColor'
       />
     )
   default:

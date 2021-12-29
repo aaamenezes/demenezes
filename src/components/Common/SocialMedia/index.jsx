@@ -1,6 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { SOCIAL_MEDIA } from '../../../settings'
+import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'
@@ -8,7 +9,8 @@ import LinkButton from '../LinkButton'
 const SocialMediaWrapper = styled.nav`
   width: 100%;
   max-width: ${ getGutter(100) };
-  padding: ${ getGutter(5, '5%') };
+  padding: ${ getGutter(5, 0) };
+  margin: ${ ({ center }) => center && '0 auto' };
 `
 
 const SocialList = styled.ul`
@@ -16,17 +18,24 @@ const SocialList = styled.ul`
   justify-content: space-around;
 `
 
-export default function SocialMedia() {
+const SocialIcon = styled.i`
+  ${ getBreakpoints({
+    xs: css``,
+    md: css``
+  }) }
+`
+
+export default function SocialMedia({ center }) {
   const socialElements = SOCIAL_MEDIA.map(socialMedia => (
     <li key={socialMedia.title}>
       <LinkButton href={socialMedia.url} external>
-        <Icon name={socialMedia.title} />
+        <Icon as={SocialIcon} name={socialMedia.title} />
       </LinkButton>
     </li>
   ))
 
   return (
-    <SocialMediaWrapper>
+    <SocialMediaWrapper center={center}>
       <SocialList>
         {socialElements}
       </SocialList>
