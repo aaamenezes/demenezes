@@ -29,7 +29,6 @@ export default function Newsletter() {
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quos, culpa rerum odit eum labore asperiores voluptate delectus hic, nesciunt sint cumque suscipit, at vel aliquam magnam! Dolores, cum mollitia.</p>
         <input
           type='text'
-          value='name'
           placeholder='Insira seu nome'
           aria-label='Insira seu nome'
         />

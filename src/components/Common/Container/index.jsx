@@ -17,11 +17,6 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: max(${ getGutter(20) }, min(8vw, ${ getGutter(40) }));
-  /* border: 1px solid; */
-
-  /* &:not(:last-child) {
-    margin-bottom: max(${ getGutter(20) }, min(8vw, ${ getGutter(40) }));
-  } */
 `
 
 export default Container
