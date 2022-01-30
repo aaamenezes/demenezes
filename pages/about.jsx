@@ -7,6 +7,7 @@ import Story from '../src/components/AboutPage/Story'
 import SocialMedia from '../src/components/Common/SocialMedia'
 import Contact from '../src/components/AboutPage/Contact'
 import Container from '../src/components/Common/Container'
+import Hobbies from '../src/components/AboutPage/Hobbies'
 
 function About() {
   return (
@@ -14,13 +15,8 @@ function About() {
       <Greeting />
       <Categories />
       <Story />
-      <Container as='section'>
-        <h2>Hobbies</h2>
-        <p>Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game.</p>
-      </Container>
-      <Container as='section'>
-        <SocialMedia center />
-      </Container>
+      <Hobbies />
+      <SocialMedia center />
       <Contact />
       <Container as='section'>
         <p>Muito prazer!</p>

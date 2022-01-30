@@ -41,7 +41,7 @@ export default function Categories() {
   const content = [
     {
       icon: 'code',
-      title: 'Linguagens',
+      title: 'Front-end',
       text: 'HTML, CSS e Javascript. Componentes, construção, código e mão na massa'
     },
     {
@@ -71,14 +71,14 @@ export default function Categories() {
     }
   ]
 
-  const CategoryItems = content.map(({ icon, title, text }) => (
+  const CategoryItems = content.map(({ icon, title }) => (
     <CategoryItem key={title}>
       <h3>
         <Icon name={icon} color='black' inline />
         {' '}
         { title }
       </h3>
-      <p>{ text }</p>
+      {/* <p>{ text }</p> */}
     </CategoryItem>
   ))
 

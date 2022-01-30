@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import { SOCIAL_MEDIA } from '../../../settings'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
+import Container from '../Container'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'
 
@@ -35,10 +36,10 @@ export default function SocialMedia({ center }) {
   ))
 
   return (
-    <SocialMediaWrapper center={center}>
+    <Container as={SocialMediaWrapper}>
       <SocialList>
         {socialElements}
       </SocialList>
-    </SocialMediaWrapper>
+    </Container>
   )
 }
