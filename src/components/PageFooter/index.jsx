@@ -13,6 +13,7 @@ const FooterWrapper = styled.footer`
       flex-direction: column;
       align-items: center;
       padding: ${ getGutter(10) };
+      margin-top: auto;
       margin-bottom: 0;
       background-color: ${ ({ theme }) => theme.color.blackAlt };
 
@@ -34,7 +35,7 @@ const FooterWrapper = styled.footer`
 
 export default function PageFooter() {
   return (
-    <Container as={FooterWrapper}>
+    <Container as={FooterWrapper} width='xxxl'>
       <SocialMedia />
       <LogoWrapper />
     </Container>

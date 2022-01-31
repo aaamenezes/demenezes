@@ -34,9 +34,11 @@ export const GlobalStyle = createGlobalStyle`
   }) }
   }
 
-  /* #__next {
+  #__next {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-  } */
+  }
 
   nav {
     font-size: ${ ({ theme }) => theme.fontSize.text }

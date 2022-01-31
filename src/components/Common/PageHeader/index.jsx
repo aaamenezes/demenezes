@@ -61,6 +61,7 @@ export default function PageHeader() {
   return (
     <Container
       as={HeaderWrapper}
+      width='xxxl'
       CURRENT_PAGE={CURRENT_PAGE}
       headerColor={headerColor}
       openHeader={openHeader}

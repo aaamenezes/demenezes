@@ -5,9 +5,9 @@ import Categories from '../src/components/AboutPage/Categories'
 import pageWrapper from '../src/components/Wrappers/pageWrapper'
 import Story from '../src/components/AboutPage/Story'
 import SocialMedia from '../src/components/Common/SocialMedia'
-import Contact from '../src/components/AboutPage/Contact'
 import Container from '../src/components/Common/Container'
 import Hobbies from '../src/components/AboutPage/Hobbies'
+import ContactForm from '../src/components/AboutPage/ContactForm'
 
 function About() {
   return (
@@ -19,7 +19,7 @@ function About() {
       <Container width='sm'>
         <SocialMedia center />
       </Container>
-      <Contact />
+      <ContactForm />
       <Container as='section' width='md'>
         <p>Muito prazer!</p>
       </Container>

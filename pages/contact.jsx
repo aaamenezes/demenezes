@@ -1,12 +1,11 @@
-// Referência de conteúdo pro texto
-// https://emersonbroga.com/e/sobre/
-
 import React from 'react'
-import PageHeader from '../src/components/Common/PageHeader'
+import ContactForm from '../src/components/AboutPage/ContactForm'
 import pageWrapper from '../src/components/Wrappers/pageWrapper'
 
 function Contact() {
-  return <PageHeader />
+  return (
+    <ContactForm />
+  )
 }
 
 export default pageWrapper(Contact)
