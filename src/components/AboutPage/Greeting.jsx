@@ -6,6 +6,7 @@ import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import CropedImage from '../Common/CropedImage'
 import HiddenA11Y from '../Common/HiddenA11Y'
+import Title from '../Common/Title'
 
 const StyledGreeting = styled.section`
   ${ getBreakpoints({
@@ -13,7 +14,6 @@ const StyledGreeting = styled.section`
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: ${ getGutter(10) } 0;
-      max-width: ${ ({ theme }) => `${ theme.breakpoints.lg }px` };
       padding-top: ${ getGutter(30) };
     `,
     md: css`
@@ -33,7 +33,7 @@ const ImageWrapper = styled.div`
 
 export default function Greeting() {
   return (
-    <Container as={StyledGreeting}>
+    <Container as={StyledGreeting} width='lg'>
       <ImageWrapper>
         <CropedImage
           src='https://pbs.twimg.com/profile_images/1452832195173826561/b6Pd2RHx_400x400.jpg'
@@ -42,7 +42,7 @@ export default function Greeting() {
         />
       </ImageWrapper>
       <HiddenA11Y tag='h1'>Página sobre</HiddenA11Y>
-      <h2>Que bom que vc está aqui!</h2>
+      <Title>Que bom que vc está aqui!</Title>
       <p>Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise.</p>
     </Container>
   )

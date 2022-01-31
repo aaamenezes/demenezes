@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Container, { containerPadding } from '../Container'
+import Container from '../Container'
 import CropedImage from '../CropedImage'
 import LinkButton from '../LinkButton'
 import PostCardInfos from './PostCardInfos'
@@ -18,8 +18,6 @@ const PostCardWrapper = styled.article`
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };
       justify-content: space-between;
-      padding-right: ${ ({ isCompact }) => !isCompact && containerPadding };
-      padding-left: ${ ({ isCompact }) => !isCompact && containerPadding };
     `
   }) }
 `

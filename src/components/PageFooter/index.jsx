@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
+import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import LogoWrapper from '../Common/LogoWrapper'
 import SocialMedia from '../Common/SocialMedia'
@@ -9,35 +10,33 @@ const FooterWrapper = styled.footer`
   ${ getBreakpoints({
     xs: css`
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      padding: ${ getGutter(10) };
       margin-bottom: 0;
       background-color: ${ ({ theme }) => theme.color.blackAlt };
-    `,
-    md: css`
-      justify-content: space-between;
-    `
-  }) }
-`
 
-const FooterLogoWrapper = styled.div`
-  ${ getBreakpoints({
-    xs: css`
-      display: none;
+      > *:not(:last-child) {
+        margin-bottom: ${ getGutter(5) };
+      }
     `,
-    md: css`
-      display: initial;
+    sm: css`
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      > *:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: ${ getGutter(5) };
+      }
     `
   }) }
 `
 
 export default function PageFooter() {
   return (
-    <Container as={FooterWrapper} fullWidth>
-      <FooterLogoWrapper>
-        <LogoWrapper />
-      </FooterLogoWrapper>
+    <Container as={FooterWrapper}>
       <SocialMedia />
+      <LogoWrapper />
     </Container>
   )
 }

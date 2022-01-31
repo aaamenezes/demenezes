@@ -53,17 +53,20 @@ export const GlobalStyle = createGlobalStyle`
 
   h1 {
     margin-bottom: ${ getGutter(10) };
+    text-align: center;
     font-size: ${ ({ theme }) => theme.fontSize.pageTitle };
     font-family: ${ ({ theme }) => theme.fontFamily.title };
   }
 
   h2 {
     margin-bottom: ${ getGutter(10) };
+    text-align: left;
     font-size: ${ ({ theme }) => theme.fontSize.sectionTitle };
     font-family: ${ ({ theme }) => theme.fontFamily.title };
   }
 
   h3 {
+    text-align: left;
     font-size: ${ ({ theme }) => theme.fontSize.articleTitle };
     font-family: ${ ({ theme }) => theme.fontFamily.title };
   }

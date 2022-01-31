@@ -9,7 +9,6 @@ const Bar = styled.div`
   left: 0;
   width: ${ ({ width }) => `${ width }%` };
   height: ${ getGutter(1) };
-  transition: ${ ({ theme }) => theme.transition.slow };
   background-color: ${ ({ theme }) => theme.color.red };
 `
 
@@ -17,12 +16,16 @@ export default function ProgressBar() {
   const [ barWidth, setBarWidth ] = useState(0)
 
   function updateBarWidth() {
-    const postHeight = document.querySelector(
-      '[class*="PostPage"]'
-    ).offsetHeight
-    const YPosition = window.scrollY
-    const heightPercent = (YPosition * 100) / postHeight
-    return heightPercent
+    const postElement = document.querySelector('[class*="PostPage"]')
+
+    if (postElement) {
+      const postHeight = postElement.offsetHeight
+      const YPosition = window.scrollY
+      const heightPercent = (YPosition * 100) / postHeight
+      return heightPercent
+    }
+
+    return 0
   }
 
   useEffect(() => {

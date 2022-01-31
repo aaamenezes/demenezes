@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container, { containerPadding } from '../Common/Container'
+import { getGutter } from '../../utils/getGutter'
+import Container from '../Common/Container'
 
 const TextWrapper = styled.div`
-  padding: ${ containerPadding };
   background-image: ${ ({ theme }) => (
     `linear-gradient(
       179deg,
@@ -16,14 +16,16 @@ const TextWrapper = styled.div`
 `
 
 const Text = styled.p`
+  padding-top: ${ getGutter(20) };
+  padding-bottom: ${ getGutter(20) };
   margin-bottom: 0;
   color: ${ ({ theme }) => theme.color.gray };
 `
 
 export default function HighlightText({ children }) {
   return (
-    <Container as={TextWrapper} fullWidth>
-      <Container as={Text}>
+    <Container as={TextWrapper} width='xxxl'>
+      <Container as={Text} width='md'>
         {children}
       </Container>
     </Container>

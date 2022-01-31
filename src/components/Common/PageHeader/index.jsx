@@ -64,7 +64,6 @@ export default function PageHeader() {
       CURRENT_PAGE={CURRENT_PAGE}
       headerColor={headerColor}
       openHeader={openHeader}
-      fullWidth
     >
       <Logowrapper />
       <ToggleModalButton

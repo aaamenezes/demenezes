@@ -16,9 +16,11 @@ function About() {
       <Categories />
       <Story />
       <Hobbies />
-      <SocialMedia center />
+      <Container width='sm'>
+        <SocialMedia center />
+      </Container>
       <Contact />
-      <Container as='section'>
+      <Container as='section' width='md'>
         <p>Muito prazer!</p>
       </Container>
     </>

@@ -23,7 +23,7 @@ const NewsletterForm = styled.form`
 
 export default function Newsletter() {
   return (
-    <Container as={NewsletterWrapper} fullWidth>
+    <Container as={NewsletterWrapper} width='full'>
       <NewsletterForm>
         {/* eslint-disable-next-line max-len */}
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quos, culpa rerum odit eum labore asperiores voluptate delectus hic, nesciunt sint cumque suscipit, at vel aliquam magnam! Dolores, cum mollitia.</p>
