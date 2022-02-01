@@ -14,8 +14,9 @@ export const GlobalStyle = createGlobalStyle`
     ${ getBreakpoints({
     xs: css`
       font-size: ${ ({ theme }) => theme.fontSize.base.xs };
+      font-weight: ${ ({ theme }) => theme.fontWeight.text };
       font-family: ${ ({ theme }) => theme.fontFamily.text };
-      line-height: 1.2;
+      line-height: 1.7;
       color: ${ ({ theme }) => theme.color.black };
       background-color: ${ ({ theme }) => theme.color.white };
     `,
@@ -56,35 +57,39 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     margin-bottom: ${ getGutter(10) };
     text-align: center;
-    font-size: ${ ({ theme }) => theme.fontSize.pageTitle };
-    font-family: ${ ({ theme }) => theme.fontFamily.title };
+    font-size: ${ ({ theme }) => theme.fontSize.h1 };
+    font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
+    font-family: ${ ({ theme }) => theme.fontFamily.h1 };
   }
 
   h2 {
     margin-bottom: ${ getGutter(10) };
-    text-align: left;
-    font-size: ${ ({ theme }) => theme.fontSize.sectionTitle };
-    font-family: ${ ({ theme }) => theme.fontFamily.title };
+    text-align: center;
+    font-size: ${ ({ theme }) => theme.fontSize.h2 };
+    font-weight: ${ ({ theme }) => theme.fontWeight.h2 };
+    font-family: ${ ({ theme }) => theme.fontFamily.h2 };
   }
 
   h3 {
     text-align: left;
-    font-size: ${ ({ theme }) => theme.fontSize.articleTitle };
-    font-family: ${ ({ theme }) => theme.fontFamily.title };
+    font-size: ${ ({ theme }) => theme.fontSize.h3 };
+    font-weight: ${ ({ theme }) => theme.fontWeight.h3 };
+    font-family: ${ ({ theme }) => theme.fontFamily.h3 };
   }
 
-  p {
-    font-size: ${ ({ theme }) => theme.fontSize.text };
-  }
-
-  span {
-    font-size: ${ ({ theme }) => theme.fontSize.text };
+  h4 {
+    text-align: left;
+    font-size: ${ ({ theme }) => theme.fontSize.h4 };
+    font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
+    font-family: ${ ({ theme }) => theme.fontFamily.h4 };
   }
 
   a {
-    font-size: ${ ({ theme }) => theme.fontSize.text };;
-    text-decoration: none;
     color: currentColor;
+  }
+
+  strong {
+    font-weight: ${ ({ theme }) => theme.fontWeight.text };
   }
 
   i {
@@ -100,6 +105,6 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     outline: none;
-    background: transparent;
+    background-color: transparent;
   }
 `

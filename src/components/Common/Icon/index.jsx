@@ -11,8 +11,6 @@ const StyledIcon = styled.i`
       transition: ${ ({ theme }) => theme.transition.fast };
     `,
     md: css`
-      color: ${ ({ color }) => color || 'currentColor' };
-
       &:hover {
         transform: scale(1.5);
         color: ${ ({ color }) => color };

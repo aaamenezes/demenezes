@@ -125,9 +125,9 @@ export default function Categories() {
   return (
     <Container as='section'>
       <header>
-        <h2>
+        <Title>
           Categorias: o que tem por aqui
-        </h2>
+        </Title>
       </header>
 
       <CategoriesList>

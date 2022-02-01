@@ -47,7 +47,10 @@ const color = {
 }
 
 const fontFamily = {
-  title: 'Ubuntu, sans-serif',
+  h1: 'Ubuntu, sans-serif',
+  h2: 'Ubuntu, sans-serif',
+  h3: 'Ubuntu, sans-serif',
+  h4: 'Ubuntu, sans-serif',
   text: '"Montserrat", sans-serif',
   code: 'Ubuntu Mono, sans-serif'
   // Fontes reservas caso dê ruim
@@ -64,26 +67,35 @@ const fontFamily = {
 // https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
 
 const fontSize = {
-  pageTitle: '3.375em', // h1
-  sectionTitle: '2.25em', // h2
-  articleTitle: '1.5em', // h3, button
+  h1: '4.209rem', // pageTitle
+  h2: '3.157rem', // sectionTitle
+  // No meio ficou '2.369rem' sobrando
+  h3: '1.777rem', // articleTitle
+  h4: '1.333rem', // articleSubtitle
+  button: '1.333rem', // articleTitle
   text: '1em', // p, a, span
-  small: '.667em',
-  tiny: '.444em',
+  small: '0.75rem',
   base: {
-    xs: '16px',
-    sm: '17px',
-    md: '18px',
+    xs: '18px',
+    sm: '18px',
+    md: '19px',
     lg: '19px',
     xl: '20px'
-    // xxl: '?'
   }
 }
 
 const fontWeight = {
-  regular: '400', // text
-  semiBold: '600', // h2, h3, button
-  bold: '700' // h1
+  // thin: '100',
+  // extraLight: '200',
+  // light: '300',
+  text: '400', // regular
+  // medium: '500',
+  h2: '600', // semiBold
+  h3: '600', // semiBold
+  button: '600', // semiBold
+  h1: '700' // bold
+  // extraBold: '800',
+  // black: '900'
 }
 
 const letterSpacing = {

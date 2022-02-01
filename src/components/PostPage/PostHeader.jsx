@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { convertDate } from '../../utils/convertDate'
 import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
+import Title from '../Common/Title'
 
 const StyledPostHeader = styled.header`
   padding-top: ${ getGutter(30) };
@@ -17,7 +18,9 @@ const StyledPostHeader = styled.header`
   ) };
 `
 
-const PostTitle = styled.h1`
+const Lead = styled.strong`
+  display: block;
+  font-size: ${ ({ theme }) => theme.fontSize.h3 };
   text-align: center;
 `
 
@@ -37,8 +40,8 @@ export default function PostHeader({
 
   return (
     <Container as={StyledPostHeader} width='full'>
-      <PostTitle>{title}</PostTitle>
-      <h2>{description}</h2>
+      <Title tag='h1'>{title}</Title>
+      <Lead>{description}</Lead>
       <PostHeaderFooter>
         <p>{footerContent}</p>
       </PostHeaderFooter>
