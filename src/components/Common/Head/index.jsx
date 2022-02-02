@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react'
 import NextHead from 'next/head'
 import { getPaginationInfos } from '../../../utils/getPaginationInfos'
