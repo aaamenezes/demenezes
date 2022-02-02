@@ -2,10 +2,10 @@ import React from 'react'
 import NextLink from 'next/link'
 import styled from 'styled-components'
 import Icon from '../Icon'
-import { theme } from '../../../theme'
 
 const StyledLinkButton = styled.a`
-  font-size: ${ ({ inline }) => (
+  line-height: ${ ({ theme }) => theme.lineHeight.button };
+  font-size: ${ ({ theme, inline }) => (
     inline ? theme.fontSize.text : theme.fontSize.button
   ) };
   text-decoration: ${ ({ inline }) => !inline && 'none' };

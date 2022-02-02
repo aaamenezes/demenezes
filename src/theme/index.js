@@ -67,19 +67,17 @@ const fontFamily = {
 // https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
 
 const fontSize = {
-  h1: '4.209rem', // pageTitle
-  h2: '3.157rem', // sectionTitle
-  // No meio ficou '2.369rem' sobrando
+  // O tamanho maior sobrou '4.209rem'
+  h1: '3.157rem', // pageTitle
+  h2: '2.369rem', // sectionTitle
   h3: '1.777rem', // articleTitle
   h4: '1.333rem', // articleSubtitle
   button: '1.333rem', // articleTitle
-  text: '1em', // p, a, span
+  text: '1rem', // p, a, span
   small: '0.75rem',
-  base: {
-    xs: '18px',
-    sm: '18px',
-    md: '19px',
-    lg: '19px',
+  html: {
+    xs: '16px',
+    md: '18px',
     xl: '20px'
   }
 }
@@ -105,15 +103,20 @@ const letterSpacing = {
 }
 
 const lineHeight = {
-  title: 1.7,
-  text: 1.2
-  /**
-   * Ouvi dizer que o modo abaixo se adapta a tudo
-   * Testar:
-   * line-height: calc(0.25rem + 1em);
-   * Pode testar mais nesse site aqui
-   * https://hihayk.github.io/doppler/
-   */
+  h1: 1.3, // pageTitle
+  h2: 1.3, // sectionTitle
+  h3: 1.5, // articleTitle
+  h4: 1.7, // articleSubtitle
+  button: 1,
+  text: 2 // p, a, span
+  // small: '0.75rem',
+  // base: {
+  //   xs: '18px',
+  //   sm: '18px',
+  //   md: '19px',
+  //   lg: '19px',
+  //   xl: '20px'
+  // }
 }
 
 const opacity = {

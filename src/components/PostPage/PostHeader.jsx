@@ -20,13 +20,15 @@ const StyledPostHeader = styled.header`
 
 const Lead = styled.strong`
   display: block;
-  font-size: ${ ({ theme }) => theme.fontSize.h3 };
+  line-height: ${ ({ theme }) => theme.lineHeight.h4 };
+  font-size: ${ ({ theme }) => theme.fontSize.h4 };
   text-align: center;
 `
 
 const PostHeaderFooter = styled.footer`
   margin-bottom: ${ getGutter(10) };
   text-align: right;
+  font-size: ${ ({ theme }) => theme.fontSize.text };
 `
 
 export default function PostHeader({
