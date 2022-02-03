@@ -10,12 +10,12 @@ const boxShadow = {
 
 const breakpoints = {
   xs: 0,
-  sm: 576,
+  sm: 425, // No Bootstrap era 576 mas achei próximo do MD
   md: 768,
   lg: 992,
   xl: 1200,
-  xxl: 1400,
-  xxxl: 1600
+  xxl: 1600,
+  xxxl: 2000
 }
 
 const color = {

@@ -35,7 +35,7 @@ const FooterWrapper = styled.footer`
 
 export default function PageFooter() {
   return (
-    <Container as={FooterWrapper} width='xxxl'>
+    <Container as={FooterWrapper} width='xxxl' fluid>
       <SocialMedia />
       <LogoWrapper />
     </Container>

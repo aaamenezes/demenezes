@@ -38,7 +38,7 @@ export default function Story() {
         A empolgação foi tanta que no outro dia resolvi retomar uns conceitos de HTML, CSS, me arriquei no Javascript, e confesso que foi apenas uma porta de entrada para drogas mais fortes. Hoje em dia preciso iterar uma array dia sim dia não pelo menos.
       </HighlightText>
       <Container width='md'>
-        <p>Conforme percebi uma evolução nos estudos (que sempre foram online) e que eu gostei de criar coisas e colocar ideias em prática, decidi mudar de carreira. Minha primeira vaga veio no ano seguinte, 2020.</p>
+        <p>Conforme percebi que gostava de criar coisas, colocar ideias em prática, e principalmente que eu estava evoluindo nos estudos, decidi mudar de carreira. Minha primeira vaga veio no ano seguinte, 2020.</p>
         <p>Desde então sempre foquei no front-end, criei esse blog usando 3 tecnologias que gosto muito (React, Next e Styled Componentes) com o objetivo de praticar e registrar aqui o que eu estiver aprendendo.</p>
       </Container>
     </>

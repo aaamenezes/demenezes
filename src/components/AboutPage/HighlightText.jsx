@@ -8,8 +8,8 @@ const TextWrapper = styled.div`
     `linear-gradient(
       179deg,
       ${ theme.color.white } 29px,
-      ${ theme.color.blackAlt } 30px,
-      ${ theme.color.blackAlt } calc(100% - 30px),
+      ${ theme.color.redAlt5 } 30px,
+      ${ theme.color.redAlt5 } calc(100% - 30px),
       ${ theme.color.white } calc(100% - 29px)
     )`
   ) };
@@ -19,7 +19,7 @@ const Text = styled.p`
   padding-top: ${ getGutter(20) };
   padding-bottom: ${ getGutter(20) };
   margin-bottom: 0;
-  color: ${ ({ theme }) => theme.color.gray };
+  color: ${ ({ theme }) => theme.color.white };
 `
 
 export default function HighlightText({ children }) {
