@@ -17,7 +17,7 @@ const NewsletterWrapper = styled.section`
 
 export default function Newsletter() {
   return (
-    <Container as={NewsletterWrapper} width='xxxl'>
+    <Container as={NewsletterWrapper} width='full'>
       <Container width='xl'>
         {/* eslint-disable-next-line max-len */}
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quos, culpa rerum odit eum labore asperiores voluptate delectus hic, nesciunt sint cumque suscipit, at vel aliquam magnam! Dolores, cum mollitia.</p>

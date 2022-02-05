@@ -7,7 +7,7 @@ const StyledRelatedPosts = styled.section``
 
 export default function RelatedPosts({ postCategory, relatedPosts }) {
   return (
-    <Container as={StyledRelatedPosts}>
+    <Container as={StyledRelatedPosts} width='xl'>
       <header>
         <h2>{`Outros posts sobre ${ postCategory }`}</h2>
       </header>

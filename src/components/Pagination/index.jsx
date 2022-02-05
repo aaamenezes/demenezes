@@ -74,7 +74,7 @@ export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
   const nextLink = `/page/${ +CURRENT_PAGINATION + 1 }`
 
   return (
-    <Container as={PaginationWrapper}>
+    <Container as={PaginationWrapper} width='lg'>
       {
         CURRENT_PAGINATION > 1 && (
           <LinkButton

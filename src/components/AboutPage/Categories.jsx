@@ -123,7 +123,7 @@ export default function Categories() {
   ))
 
   return (
-    <Container as='section'>
+    <Container as='section' width='xl'>
       <header>
         <Title>
           Categorias: o que tem por aqui

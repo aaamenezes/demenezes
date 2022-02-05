@@ -64,7 +64,7 @@ export default function SearchWrapper() {
         as={ToggleSearchModal}
         aria-labelledby='Abrir busca do blog'
       />
-      <Container as={SearchContent} openSearch={openSearch}>
+      <Container as={SearchContent} width='xl' openSearch={openSearch}>
         <ToggleModalButton
           onClick={toggleSearch}
           icon='close'

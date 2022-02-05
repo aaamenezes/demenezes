@@ -93,7 +93,7 @@ const Container = styled.div`
   /* max-width */
   margin-right: auto;
   margin-left: auto;
-  ${ ({ theme, width, fluid }) => getContainerPadding(theme, fluid) };
+  ${ ({ theme, fluid }) => getContainerPadding(theme, fluid) };
   /* padding-right + padding-left */
 `
 

@@ -24,7 +24,7 @@ const Text = styled.p`
 
 export default function HighlightText({ children }) {
   return (
-    <Container as={TextWrapper} width='xxxl'>
+    <Container as={TextWrapper} width='full'>
       <Container as={Text} width='md'>
         {children}
       </Container>

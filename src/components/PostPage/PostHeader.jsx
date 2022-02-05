@@ -41,7 +41,7 @@ export default function PostHeader({
   const footerContent = `${ convertDate(date) } - ${ category }`
 
   return (
-    <Container as={StyledPostHeader} width='xxxl'>
+    <Container as={StyledPostHeader} width='xxxl' fluid>
       <Title tag='h1'>{title}</Title>
       <Lead>{description}</Lead>
       <PostHeaderFooter>

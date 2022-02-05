@@ -36,7 +36,7 @@ export default function HeroPostCard({ post }) {
     <Container
       as={HeroWrapper}
       image={post.coverImage}
-      width='xxxl'
+      width='xxl'
     >
       <PostCardInfos
         post={post}

@@ -63,7 +63,7 @@ export default function PostCard({ post, imageRatio, isCompact }) {
   const { title, slug, coverImage, category } = post
 
   return (
-    <Container as={PostCardWrapper} isCompact={isCompact}>
+    <Container as={PostCardWrapper} width='xl' isCompact={isCompact}>
       <PostCardImage isCompact={isCompact}>
         <LinkButton href={`/posts/${ slug }`}>
           <CropedImage

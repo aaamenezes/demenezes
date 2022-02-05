@@ -5,7 +5,7 @@ import Title from '../Common/Title'
 
 export default function Hobbies() {
   return (
-    <Container as='section'>
+    <Container as='section' width='md'>
       <Title>Hobbies</Title>
       <p>Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game.</p>
     </Container>
