@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { convertDate } from '../../utils/convertDate'
 import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
-import Title from '../Common/Title'
 
 const StyledPostHeader = styled.header`
   padding-top: ${ getGutter(30) };
@@ -43,7 +42,7 @@ export default function PostHeader({
 
   return (
     <Container as={StyledPostHeader} width='xxxl' fluid>
-      <Title tag='h1'>{title}</Title>
+      <h1>{title}</h1>
       <Lead>{description}</Lead>
       <PostHeaderFooter>
         <p>{footerContent}</p>

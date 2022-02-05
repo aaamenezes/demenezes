@@ -3,7 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
-import Title from '../Common/Title'
 
 const StyledContactForm = styled.section`
   &:first-of-type {
@@ -14,7 +13,7 @@ const StyledContactForm = styled.section`
 export default function ContactForm() {
   return (
     <Container as={StyledContactForm} width='md'>
-      <Title>Fala comigo</Title>
+      <h2>Fala comigo</h2>
       <p>Quer falar sobre algum projeto, carreira, mercado de trabalho, ou apenas conversar sobre como é prazeroso usar `display: grid;`?</p>
       <p>Me deixa uma mensagem aí:</p>
       <div>[FORMULÁRIO]</div>

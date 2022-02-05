@@ -6,7 +6,6 @@ import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import CropedImage from '../Common/CropedImage'
 import HiddenA11Y from '../Common/HiddenA11Y'
-import Title from '../Common/Title'
 
 const StyledGreeting = styled.section`
   ${ getBreakpoints({
@@ -42,7 +41,7 @@ export default function Greeting() {
         />
       </ImageWrapper>
       <HiddenA11Y tag='h1'>Página sobre</HiddenA11Y>
-      <Title>Que bom que vc está aqui!</Title>
+      <h2>Que bom que vc está aqui!</h2>
       <p>Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise.</p>
     </Container>
   )

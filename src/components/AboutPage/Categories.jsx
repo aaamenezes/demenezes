@@ -5,7 +5,6 @@ import getBreakpoints from '../../utils/getBreakpoints'
 import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import Icon from '../Common/Icon'
-import Title from '../Common/Title'
 
 const CategoriesList = styled.ul`
   ${ getBreakpoints({
@@ -112,11 +111,11 @@ export default function Categories() {
   const CategoryItems = content.map(({ icon, title, text }) => (
     <CategoryItem key={title}>
       <CategoryItemHeader>
-        <Title tag='h3' align='center'>
+        <h3>
           <Icon name={icon} color='black' inline />
           {' '}
           <span>{title}</span>
-        </Title>
+        </h3>
       </CategoryItemHeader>
       <CategoryText>{ text }</CategoryText>
     </CategoryItem>
@@ -125,9 +124,9 @@ export default function Categories() {
   return (
     <Container as='section' width='xl'>
       <header>
-        <Title>
+        <h2>
           Categorias: o que tem por aqui
-        </Title>
+        </h2>
       </header>
 
       <CategoriesList>
