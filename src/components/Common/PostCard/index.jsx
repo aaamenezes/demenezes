@@ -11,8 +11,6 @@ const PostCardWrapper = styled.article`
     xs: css`
       display: flex;
       flex-direction: column;
-      padding-right: 0;
-      padding-left: 0;
     `,
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };

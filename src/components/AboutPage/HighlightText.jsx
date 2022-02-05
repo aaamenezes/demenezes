@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Container from '../Common/Container'
 
-const TextWrapper = styled.div`
+const StyledHighlightText = styled.div`
   background-image: ${ ({ theme }) => (
     `linear-gradient(
       179deg,
@@ -14,7 +14,7 @@ const TextWrapper = styled.div`
   ) };
 `
 
-const Text = styled.p`
+const TextWrapper = styled.div`
   padding-top: 4.4rem;
   padding-bottom: 4.4rem;
   margin-bottom: 0;
@@ -23,9 +23,11 @@ const Text = styled.p`
 
 export default function HighlightText({ children }) {
   return (
-    <Container as={TextWrapper} width='full'>
-      <Container as={Text} width='md'>
-        {children}
+    <Container as={StyledHighlightText} width='xxxl' fluid>
+      <Container as={TextWrapper} width='md' fluid>
+        <p>
+          {children}
+        </p>
       </Container>
     </Container>
   )
