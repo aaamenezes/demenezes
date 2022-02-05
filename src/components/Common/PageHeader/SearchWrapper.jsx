@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 import Container from '../Container'
 import ToggleModalButton from './ToggleModalButton'
 import getBreakpoints from '../../../utils/getBreakpoints'
-import { getGutter } from '../../../utils/getGutter'
 
 const ToggleSearchModal = styled.button`
   ${ getBreakpoints({
@@ -44,7 +43,7 @@ const SearchContent = styled.div`
 
 const CloseSearchButton = styled.button`
   position: absolute;
-  top: ${ getGutter(3) };
+  top: 0.66rem;
   right: 5%;
 `
 

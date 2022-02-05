@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
-import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import LogoWrapper from '../Common/LogoWrapper'
 import SocialMedia from '../Common/SocialMedia'
@@ -12,13 +11,13 @@ const FooterWrapper = styled.footer`
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: ${ getGutter(10) };
+      padding: 2.2rem;
       margin-top: auto;
       margin-bottom: 0;
       background-color: ${ ({ theme }) => theme.color.blackAlt };
 
       > *:not(:last-child) {
-        margin-bottom: ${ getGutter(5) };
+        margin-bottom: 1.1rem;
       }
     `,
     sm: css`
@@ -27,7 +26,7 @@ const FooterWrapper = styled.footer`
 
       > *:not(:last-child) {
         margin-bottom: 0;
-        margin-right: ${ getGutter(5) };
+        margin-right: 1.1rem;
       }
     `
   }) }

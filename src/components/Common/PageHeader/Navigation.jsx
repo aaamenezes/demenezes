@@ -2,7 +2,6 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import styled, { css } from 'styled-components'
 import LinkButton from '../LinkButton'
-import { getGutter } from '../../../utils/getGutter'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import ToggleModalButton from './ToggleModalButton'
 import { NAVIGATION_MENU } from '../../../settings'
@@ -56,7 +55,7 @@ const NavItem = styled.li`
 
   &:first-child {
     ${ getBreakpoints({
-    xs: css`margin-top: ${ getGutter(17) };`,
+    xs: css`margin-top: 3.74rem;`,
     md: css`margin-top: 0;`
   }) };
   }
@@ -66,7 +65,7 @@ const NavLink = styled.a`
   ${ getBreakpoints({
     xs: css`
       display: block;
-      padding: ${ getGutter(5, '5%') };
+      padding: 1.1rem 5%;
       color: ${ ({ theme, isCurrentPage }) => (
     isCurrentPage ? theme.color.white : theme.color.black
   ) };
@@ -75,7 +74,7 @@ const NavLink = styled.a`
   ) };
     `,
     md: css`
-      padding: ${ getGutter(4) };
+      padding: 0.88rem;
       color: ${ ({ theme, color }) => theme.color[color] };
       background-color: transparent;
     `
@@ -101,8 +100,8 @@ const CloseMenuMobileButton = styled.button`
   ${ getBreakpoints({
     xs: css`
       position: absolute;
-      top: ${ getGutter(3) };
-      right: ${ getGutter(3) };
+      top: 0.66rem;
+      right: 0.66rem;
     `,
     md: css`
       display: none;

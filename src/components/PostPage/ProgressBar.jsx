@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { getGutter } from '../../utils/getGutter'
 
 const Bar = styled.div`
   position: fixed;
@@ -8,7 +7,7 @@ const Bar = styled.div`
   top: 0;
   left: 0;
   width: ${ ({ width }) => `${ width }%` };
-  height: ${ getGutter(1) };
+  height: 4px;
   background-color: ${ ({ theme }) => theme.color.red };
 `
 

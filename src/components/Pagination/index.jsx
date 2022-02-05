@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { POSTS_PER_PAGE } from '../../settings'
 import getBreakpoints from '../../utils/getBreakpoints'
-import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import LinkButton from '../Common/LinkButton'
 
@@ -28,9 +27,8 @@ const PaginationButton = styled.a`
       justify-content: center;
       align-items: center;
       width: 100%;
-      max-width: ${ getGutter(75) };
       text-align: center;
-      padding: ${ getGutter(3) };
+      padding: 0.66rem;
       border-radius: ${ ({ theme }) => theme.borderRadius };
       border: 2px solid ${ ({ theme }) => theme.color.black };
       transition: ${ ({ theme }) => theme.transition.fast };
@@ -55,12 +53,14 @@ const PaginationButton = styled.a`
       }
 
       &:nth-child(2) {
-        margin: ${ getGutter(10, 0, 0) };
+        margin: 2.2rem 0 0;
       }
     `,
     md: css`
+      width: initial;
+
       &:nth-child(2) {
-        margin: ${ getGutter(0) };
+        margin: 0;
         margin-left: auto;
       }
     `

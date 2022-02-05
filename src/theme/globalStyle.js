@@ -1,6 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components'
 import getBreakpoints from '../utils/getBreakpoints'
-import { getGutter } from '../utils/getGutter'
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -46,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    margin-bottom: ${ getGutter(10) };
+    margin-bottom: 2.2rem;
     text-align: center;
     line-height: ${ ({ theme }) => theme.lineHeight.h1 };
     font-size: ${ ({ theme }) => theme.fontSize.h1 };
@@ -56,7 +55,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    margin-bottom: ${ getGutter(10) };
+    margin-bottom: 2.2rem;
     text-align: center;
     line-height: ${ ({ theme }) => theme.lineHeight.h2 };
     font-size: ${ ({ theme }) => theme.fontSize.h2 };

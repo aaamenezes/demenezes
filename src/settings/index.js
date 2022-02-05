@@ -63,9 +63,3 @@ export const PAGES = [
     headerTemplate: 'secondary'
   }
 ]
-
-/**
- * LAYOUT
- */
-
-export const gutterMultiplier = 4

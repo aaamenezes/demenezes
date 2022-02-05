@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 
 const TextWrapper = styled.div`
@@ -16,8 +15,8 @@ const TextWrapper = styled.div`
 `
 
 const Text = styled.p`
-  padding-top: ${ getGutter(20) };
-  padding-bottom: ${ getGutter(20) };
+  padding-top: 4.4rem;
+  padding-bottom: 4.4rem;
   margin-bottom: 0;
   color: ${ ({ theme }) => theme.color.white };
 `

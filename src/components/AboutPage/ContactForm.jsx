@@ -1,12 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react'
 import styled from 'styled-components'
-import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 
 const StyledContactForm = styled.section`
   &:first-of-type {
-    padding-top: ${ getGutter(30) };
+    padding-top: 6.6rem;
   }
 `
 

@@ -1,12 +1,11 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
-import { getGutter } from '../../../utils/getGutter'
 
 const StyledIcon = styled.i`
   ${ getBreakpoints({
     xs: css`
-      padding: ${ getGutter(3, 4) };
+      padding: 0.66rem 0.88rem;
       color: ${ ({ color }) => color || 'currentColor' };
       transition: ${ ({ theme }) => theme.transition.fast };
     `,

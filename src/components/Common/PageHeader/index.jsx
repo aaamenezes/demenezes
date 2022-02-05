@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 import Navigation from './Navigation'
-import { getGutter } from '../../../utils/getGutter'
 import ToggleModalButton from './ToggleModalButton'
 import Container from '../Container'
 import Logowrapper from '../LogoWrapper'
@@ -19,8 +18,8 @@ const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: ${ getGutter(3) };
-  padding-bottom: ${ getGutter(3) };
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
   color: ${ ({ theme, headerColor }) => theme.color[headerColor] };
   background-color: ${ ({ theme, CURRENT_PAGE }) => (
     (CURRENT_PAGE === 'listing' || CURRENT_PAGE === 'post') && (

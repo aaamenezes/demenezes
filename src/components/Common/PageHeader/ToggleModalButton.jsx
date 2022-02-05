@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { getGutter } from '../../../utils/getGutter'
 import Icon from '../Icon'
 
 const Button = styled.button`
@@ -9,7 +8,7 @@ const Button = styled.button`
   align-items: center;
   width: 45px;
   height: 45px;
-  padding: ${ getGutter(3) };
+  padding: 0.66rem;
   border: 0;
   color: ${ ({ theme, color }) => theme.color[color] || 'currentColor' };
   background-color: transparent;

@@ -2,15 +2,14 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { convertDate } from '../../../utils/convertDate'
 import getBreakpoints from '../../../utils/getBreakpoints'
-import { getGutter } from '../../../utils/getGutter'
 
 const PostCardFooterWrapper = styled.footer`
   ${ getBreakpoints({
     xs: css`
-      margin-top: ${ getGutter(2) };
+      margin-top: 0.44rem;
     `,
     md: css`
-      margin-top: ${ ({ isCompact }) => isCompact ? getGutter(2) : 0 };
+      margin-top: ${ ({ isCompact }) => isCompact ? '0.44rem' : 0 };
     `
   }) }
 `

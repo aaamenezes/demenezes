@@ -2,7 +2,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
-import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import CropedImage from '../Common/CropedImage'
 import HiddenA11Y from '../Common/HiddenA11Y'
@@ -12,12 +11,12 @@ const StyledGreeting = styled.section`
     xs: css`
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: ${ getGutter(10) } 0;
-      padding-top: ${ getGutter(30) };
+      grid-gap: 2.2rem 0;
+      padding-top: 6.6rem;
     `,
     md: css`
       grid-template-columns: 1fr 1fr;
-      grid-gap: 0 ${ getGutter(10) };
+      grid-gap: 0 22rem;
     `
   }) }
 `

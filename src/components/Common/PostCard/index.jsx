@@ -5,7 +5,6 @@ import CropedImage from '../CropedImage'
 import LinkButton from '../LinkButton'
 import PostCardInfos from './PostCardInfos'
 import getBreakpoints from '../../../utils/getBreakpoints'
-import { getGutter } from '../../../utils/getGutter'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
@@ -27,7 +26,7 @@ const PostCardImage = styled.div`
     xs: css`
       position: relative;
       width: 100%;
-      margin-bottom: ${ getGutter(3) };
+      margin-bottom: 0.66rem;
     `,
     md: css`
       width: ${ ({ isCompact }) => isCompact ? '100%' : '35%' };
@@ -43,7 +42,7 @@ const PostCardStripe = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  padding: ${ getGutter(2, 3) };
+  padding: 0.44rem 0.66rem;
   color: ${ ({ theme }) => theme.color.white };
   background-color: ${ ({ theme }) => theme.color.red };
 `
@@ -53,7 +52,7 @@ const PostCardLabel = styled.div`
   z-index: ${ ({ theme }) => theme.zIndex.absolute };
   top: 0;
   right: 0;
-  padding: ${ getGutter(2, 3) };
+  padding: 0.44rem 0.66rem;
   color: ${ ({ theme }) => theme.color.white };
   background-color: ${ ({ theme }) => theme.color.red };
   font-size: ${ ({ theme }) => theme.fontSize.small };

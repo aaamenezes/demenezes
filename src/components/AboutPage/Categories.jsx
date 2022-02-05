@@ -2,7 +2,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
-import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 import Icon from '../Common/Icon'
 
@@ -11,12 +10,12 @@ const CategoriesList = styled.ul`
     xs: css`
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: ${ getGutter(12) };
+      grid-gap: 2.64rem;
       text-align: center;
     `,
     sm: css`
       grid-template-columns: 1fr 1fr;
-      grid-gap: ${ getGutter(15) };
+      grid-gap: 3.3rem;
     `,
     xl: css`
       grid-template-columns: 1fr 1fr 1fr;
@@ -31,7 +30,7 @@ const CategoryItem = styled.li`
       flex-direction: column;
       justify-content: space-evenly;
       width: 100%;
-      padding: ${ getGutter(4) };
+      padding: 0.88rem;
       margin: 0 auto;
       box-shadow: ${ ({ theme }) => theme.boxShadow.low };
       transition: ${ ({ theme }) => theme.transition.fast };
@@ -54,7 +53,7 @@ const CategoryItem = styled.li`
 const CategoryItemHeader = styled.header`
   ${ getBreakpoints({
     xs: css`
-      margin-bottom: ${ getGutter(2) };
+      margin-bottom: 0.44rem;
     `,
     md: css`
       margin-bottom: 0;

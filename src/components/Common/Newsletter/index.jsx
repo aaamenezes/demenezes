@@ -1,14 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
-import { getGutter } from '../../../utils/getGutter'
 import Container from '../Container'
 
 const NewsletterForm = styled.form`
   ${ getBreakpoints({
     xs: css`
-      padding-top: ${ getGutter(5) };
-      padding-bottom: ${ getGutter(5) };
+      padding-top: 1.1rem;
+      padding-bottom: 1.1rem;
       color: ${ ({ theme }) => theme.color.white };
       background-color: ${ ({ theme }) => theme.color.gray };
     `

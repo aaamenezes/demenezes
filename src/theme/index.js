@@ -1,6 +1,4 @@
-import { getGutter } from '../utils/getGutter'
-
-const borderRadius = getGutter(1)
+const borderRadius = '4px'
 
 const boxShadow = {
   low: '0 0 40px -30px black',
@@ -76,7 +74,9 @@ const fontSize = {
   small: '0.75rem',
   html: {
     xs: '16px',
+    sm: '17px',
     md: '18px',
+    lg: '19px',
     xl: '20px'
   }
 }

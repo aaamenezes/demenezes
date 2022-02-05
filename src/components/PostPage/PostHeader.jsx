@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { convertDate } from '../../utils/convertDate'
-import { getGutter } from '../../utils/getGutter'
 import Container from '../Common/Container'
 
 const StyledPostHeader = styled.header`
-  padding-top: ${ getGutter(30) };
+  padding-top: 6.6rem;
   margin-bottom: 10%;
   color: ${ ({ theme }) => theme.color.white };
   background-image: ${ ({ theme }) => (
@@ -26,7 +25,7 @@ const Lead = styled.strong`
 `
 
 const PostHeaderFooter = styled.footer`
-  margin-bottom: ${ getGutter(10) };
+  margin-bottom: 2.2rem;
   text-align: right;
   font-size: ${ ({ theme }) => theme.fontSize.text };
 `
