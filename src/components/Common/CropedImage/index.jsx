@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Crop = styled.div`
   position: relative;
+  display: contents;
   height: 0;
   padding-top: ${ ({ aspectRatio }) => aspectRatio };
   overflow: hidden;

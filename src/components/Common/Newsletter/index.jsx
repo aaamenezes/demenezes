@@ -4,7 +4,7 @@ import getBreakpoints from '../../../utils/getBreakpoints'
 import { getGutter } from '../../../utils/getGutter'
 import Container from '../Container'
 
-const NewsletterWrapper = styled.section`
+const NewsletterForm = styled.form`
   ${ getBreakpoints({
     xs: css`
       padding-top: ${ getGutter(5) };
@@ -17,8 +17,8 @@ const NewsletterWrapper = styled.section`
 
 export default function Newsletter() {
   return (
-    <Container as={NewsletterWrapper} width='full'>
-      <Container width='xl'>
+    <Container width='full'>
+      <Container as={NewsletterForm} width='xxxl'>
         {/* eslint-disable-next-line max-len */}
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quos, culpa rerum odit eum labore asperiores voluptate delectus hic, nesciunt sint cumque suscipit, at vel aliquam magnam! Dolores, cum mollitia.</p>
         <input
