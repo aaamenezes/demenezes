@@ -44,46 +44,32 @@ function getContainerMaxWidth(theme, width, fluid) {
   return css`max-width: 100%;`
 }
 
-function getContainerPadding(theme, fluid) {
-  const { breakpoints } = theme
-  const paddingPercent = 0.05
+function getPadding(breakpoints, breakpoint, paddingPercent) {
+  return css`
+    padding-left: ${ breakpoints[breakpoint] * paddingPercent }px;
+    padding-right: ${ breakpoints[breakpoint] * paddingPercent }px;
+  `
+}
 
-  if (fluid) {
+function getContainerPadding(theme, width) {
+  if (!width || width === 'full') {
     return css`
       padding-left: 0;
       padding-right: 0;
     `
   }
 
+  const { breakpoints } = theme
+  const paddingPercent = 0.05
+
   return getBreakpoints({
-    xs: css`
-      padding-left: 5%;
-      padding-right: 5%;
-    `,
-    sm: css`
-      padding-left: ${ breakpoints.sm * paddingPercent }px;
-      padding-right: ${ breakpoints.sm * paddingPercent }px;
-    `,
-    md: css`
-      padding-left: ${ breakpoints.md * paddingPercent }px;
-      padding-right: ${ breakpoints.md * paddingPercent }px;
-    `,
-    lg: css`
-      padding-left: ${ breakpoints.lg * paddingPercent }px;
-      padding-right: ${ breakpoints.lg * paddingPercent }px;
-    `,
-    xl: css`
-      padding-left: ${ breakpoints.xl * paddingPercent }px;
-      padding-right: ${ breakpoints.xl * paddingPercent }px;
-    `,
-    xxl: css`
-      padding-left: ${ breakpoints.xxl * paddingPercent }px;
-      padding-right: ${ breakpoints.xxl * paddingPercent }px;
-    `,
-    xxxl: css`
-      padding-left: ${ breakpoints.xxxl * paddingPercent }px;
-      padding-right: ${ breakpoints.xxxl * paddingPercent }px;
-    `
+    xs: getPadding(breakpoints, 'xs', paddingPercent),
+    sm: getPadding(breakpoints, 'sm', paddingPercent),
+    md: getPadding(breakpoints, 'md', paddingPercent),
+    lg: getPadding(breakpoints, 'lg', paddingPercent),
+    xl: getPadding(breakpoints, 'xl', paddingPercent),
+    xxl: getPadding(breakpoints, 'xxl', paddingPercent),
+    xxxl: getPadding(breakpoints, 'xxxl', paddingPercent)
   })
 }
 
@@ -93,7 +79,7 @@ const Container = styled.div`
   /* max-width */
   margin-right: auto;
   margin-left: auto;
-  ${ ({ theme, fluid }) => getContainerPadding(theme, fluid) };
+  ${ ({ theme, width }) => getContainerPadding(theme, width) };
   /* padding-right + padding-left */
 `
 
