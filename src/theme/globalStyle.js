@@ -36,6 +36,11 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
   }
 
+  nav {
+    line-height: ${ ({ theme }) => theme.lineHeight.button };
+    font-size: ${ ({ theme }) => theme.fontSize.small };
+  }
+
   li {
     list-style: none;
   }
@@ -82,6 +87,12 @@ export const GlobalStyle = createGlobalStyle`
     color: currentColor;
   }
 
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
   strong {
     font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
   }
@@ -90,11 +101,5 @@ export const GlobalStyle = createGlobalStyle`
     display: block;
     max-width: 100%;
     margin: 0 auto;
-  }
-
-  button {
-    border: none;
-    outline: none;
-    background-color: transparent;
   }
 `

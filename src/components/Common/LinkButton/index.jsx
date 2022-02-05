@@ -4,13 +4,10 @@ import styled from 'styled-components'
 import Icon from '../Icon'
 
 const StyledLinkButton = styled.a`
-  line-height: ${ ({ theme }) => theme.lineHeight.button };
-  font-size: ${ ({ theme, inline }) => (
-    inline ? theme.fontSize.text : theme.fontSize.small
-  ) };
+  display: ${ ({ inline }) => inline ? 'inline' : 'inline-block' };
   font-weight: ${ ({ theme }) => theme.fontWeight.button };
   letter-spacing: ${ ({ theme, inline }) => (
-    inline ? theme.letterSpacing.text : theme.letterSpacing.button
+    !inline && theme.letterSpacing.button
   ) };
   text-decoration: ${ ({ inline }) => !inline && 'none' };
   color: currentColor;
