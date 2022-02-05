@@ -72,7 +72,6 @@ const fontSize = {
   h2: '2.369rem', // sectionTitle
   h3: '1.777rem', // articleTitle
   h4: '1.333rem', // articleSubtitle
-  button: '1.333rem', // articleTitle
   text: '1rem', // p, a, span
   small: '0.75rem',
   html: {
@@ -83,23 +82,27 @@ const fontSize = {
 }
 
 const fontWeight = {
-  // thin: '100',
-  // extraLight: '200',
-  // light: '300',
-  text: '400', // regular
-  // medium: '500',
+  // black: '900'
+  // extraBold: '800',
+  h1: '700', // bold
   h2: '600', // semiBold
   h3: '600', // semiBold
+  h4: '500', // medium
   button: '600', // semiBold
-  h1: '700' // bold
-  // extraBold: '800',
-  // black: '900'
+  text: '400' // regular
+  // light: '300',
+  // extraLight: '200',
+  // thin: '100',
 }
 
 const letterSpacing = {
-  // ainda não sei quais são os valores
-  // title: ,
-  // text:
+  h1: '-1px', // pageTitle
+  h2: '-0.5px', // sectionTitle
+  h3: '-0.5px', // articleTitle
+  h4: '0', // articleSubtitle
+  button: '1.5px', // articleTitle
+  text: '0', // p, a, span
+  small: '1.5px'
 }
 
 const lineHeight = {

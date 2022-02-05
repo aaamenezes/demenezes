@@ -22,8 +22,10 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     line-height: ${ ({ theme }) => theme.lineHeight.text };
+    font-size: ${ ({ theme }) => theme.fontSize.text };
     font-weight: ${ ({ theme }) => theme.fontWeight.text };
     font-family: ${ ({ theme }) => theme.fontFamily.text };
+    letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
     color: ${ ({ theme }) => theme.color.black };
     background-color: ${ ({ theme }) => theme.color.white };
   }
@@ -34,17 +36,8 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
   }
 
-  nav {
-    font-size: ${ ({ theme }) => theme.fontSize.text }
-  }
-
-  ul {
-    font-size: ${ ({ theme }) => theme.fontSize.text };
-    list-style: none;
-  }
-
   li {
-    font-size: ${ ({ theme }) => theme.fontSize.text };
+    list-style: none;
   }
 
   h1 {
@@ -54,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${ ({ theme }) => theme.fontSize.h1 };
     font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
     font-family: ${ ({ theme }) => theme.fontFamily.h1 };
+    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h1 };
   }
 
   h2 {
@@ -63,6 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${ ({ theme }) => theme.fontSize.h2 };
     font-weight: ${ ({ theme }) => theme.fontWeight.h2 };
     font-family: ${ ({ theme }) => theme.fontFamily.h2 };
+    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h2 };
   }
 
   h3 {
@@ -71,6 +66,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${ ({ theme }) => theme.fontSize.h3 };
     font-weight: ${ ({ theme }) => theme.fontWeight.h3 };
     font-family: ${ ({ theme }) => theme.fontFamily.h3 };
+    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
   }
 
   h4 {
@@ -79,6 +75,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${ ({ theme }) => theme.fontSize.h4 };
     font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
     font-family: ${ ({ theme }) => theme.fontFamily.h4 };
+    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
   }
 
   a {
@@ -86,11 +83,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   strong {
-    font-weight: ${ ({ theme }) => theme.fontWeight.text };
-  }
-
-  i {
-    font-size: ${ ({ theme }) => theme.fontSize.text };
+    font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
   }
 
   img {

@@ -22,6 +22,7 @@ const Lead = styled.strong`
   display: block;
   line-height: ${ ({ theme }) => theme.lineHeight.h4 };
   font-size: ${ ({ theme }) => theme.fontSize.h4 };
+  font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
   text-align: center;
 `
 

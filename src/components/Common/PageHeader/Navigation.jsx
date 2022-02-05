@@ -67,7 +67,6 @@ const NavLink = styled.a`
     xs: css`
       display: block;
       padding: ${ getGutter(5, '5%') };
-      font-size: ${ ({ theme }) => theme.fontSize.small };
       color: ${ ({ theme, isCurrentPage }) => (
     isCurrentPage ? theme.color.white : theme.color.black
   ) };

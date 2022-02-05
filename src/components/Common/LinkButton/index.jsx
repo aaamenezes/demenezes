@@ -6,7 +6,11 @@ import Icon from '../Icon'
 const StyledLinkButton = styled.a`
   line-height: ${ ({ theme }) => theme.lineHeight.button };
   font-size: ${ ({ theme, inline }) => (
-    inline ? theme.fontSize.text : theme.fontSize.button
+    inline ? theme.fontSize.text : theme.fontSize.small
+  ) };
+  font-weight: ${ ({ theme }) => theme.fontWeight.button };
+  letter-spacing: ${ ({ theme, inline }) => (
+    inline ? theme.letterSpacing.text : theme.letterSpacing.button
   ) };
   text-decoration: ${ ({ inline }) => !inline && 'none' };
   color: currentColor;

@@ -57,6 +57,7 @@ const PostCardLabel = styled.div`
   color: ${ ({ theme }) => theme.color.white };
   background-color: ${ ({ theme }) => theme.color.red };
   font-size: ${ ({ theme }) => theme.fontSize.small };
+    letter-spacing: ${ ({ theme }) => theme.letterSpacing.small };
 `
 
 export default function PostCard({ post, imageRatio, isCompact }) {
