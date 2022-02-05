@@ -11,12 +11,12 @@ const StyledGreeting = styled.section`
     xs: css`
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: 2.2rem 0;
+      grid-gap: 2rem 0;
       padding-top: 6.6rem;
     `,
     md: css`
       grid-template-columns: 1fr 1fr;
-      grid-gap: 0 22rem;
+      grid-gap: 0 2rem;
     `
   }) }
 `

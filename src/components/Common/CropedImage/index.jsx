@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const Crop = styled.div`
   position: relative;
-  display: contents;
   height: 0;
   padding-top: ${ ({ aspectRatio }) => aspectRatio };
   overflow: hidden;
@@ -21,7 +20,7 @@ const Image = styled.img`
 `
 
 export default function CropedImage({ src, alt, ratio, highLight }) {
-  const [ width, height ] = ratio.indexOf('x') > -1
+  const [ width, height ] = ratio.includes('x')
     ? ratio.split('x')
     : [ '1', '1' ]
 

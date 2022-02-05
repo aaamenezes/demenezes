@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Icon from '../Icon'
 
 const StyledLinkButton = styled.a`
-  display: ${ ({ inline }) => inline ? 'inline' : 'inline-block' };
+  display: ${ ({ inline }) => inline ? 'inline' : 'block' };
   font-weight: ${ ({ theme }) => theme.fontWeight.button };
   letter-spacing: ${ ({ theme, inline }) => (
     !inline && theme.letterSpacing.button
