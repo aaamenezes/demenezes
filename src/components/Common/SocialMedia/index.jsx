@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SOCIAL_MEDIA } from '../../../settings'
+import HiddenA11Y from '../HiddenA11Y'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'
 
@@ -18,6 +19,11 @@ export default function SocialMedia({ center }) {
     <li key={socialMedia.title}>
       <LinkButton href={socialMedia.url} external>
         <Icon name={socialMedia.title} />
+        <HiddenA11Y>
+          Link para a rede social
+          {' '}
+          {socialMedia.title}
+        </HiddenA11Y>
       </LinkButton>
     </li>
   ))
