@@ -7,7 +7,7 @@ import PostCardInfos from '../../Common/PostCard/PostCardInfos'
 const HeroWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
-      height: 100vh;
+      /* height: 100vh; */
       padding-top: 6.6rem;
       padding-bottom: 2.2rem;
       background-image: ${ ({ theme, image }) => css`linear-gradient(
