@@ -1,9 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../utils/getBreakpoints'
-import Container from '../Common/Container'
-import LogoWrapper from '../Common/LogoWrapper'
-import SocialMedia from '../Common/SocialMedia'
+import getBreakpoints from '../../../utils/getBreakpoints'
+import Container from '../Container'
+import LogoWrapper from '../LogoWrapper'
+import SocialMedia from '../SocialMedia'
 
 const FooterWrapper = styled.footer`
   ${ getBreakpoints({
