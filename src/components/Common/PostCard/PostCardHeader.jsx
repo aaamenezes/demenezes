@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import LinkButton from '../LinkButton'
 
+const CategoryText = styled.p`
+  font-size: ${ ({ theme }) => theme.fontSize.small };
+`
+
 const PostCardTitle = styled.h3`
   display: inline-block;
   background-image: ${ ({ theme }) => (
@@ -29,9 +33,9 @@ export default function PostCardHeader({ post, hero }) {
     <header>
       {
         hero && (
-          <p>
+          <CategoryText>
             {category}
-          </p>
+          </CategoryText>
         )
       }
       <PostCardTitle tag='h3' hero={hero}>

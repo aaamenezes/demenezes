@@ -108,7 +108,7 @@ const letterSpacing = {
 const lineHeight = {
   h1: 1.3, // pageTitle
   h2: 1.3, // sectionTitle
-  h3: 1.5, // articleTitle
+  h3: 1.3, // articleTitle
   h4: 1.7, // articleSubtitle
   button: 1,
   text: 2 // p, a, span
@@ -120,6 +120,14 @@ const lineHeight = {
   //   lg: '19px',
   //   xl: '20px'
   // }
+}
+
+const spacing = {
+  h1: 3,
+  h2: 2.5,
+  h3: 2,
+  h4: 1,
+  text: 1
 }
 
 const opacity = {
@@ -167,6 +175,7 @@ export const theme = {
   letterSpacing,
   lineHeight,
   opacity,
+  spacing,
   transition,
   zIndex
 }

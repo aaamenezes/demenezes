@@ -16,16 +16,23 @@ const StyledPostHeader = styled.header`
   ) };
 `
 
-const Lead = styled.strong`
-  display: block;
+const PostTitle = styled.h1`
+  margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+`
+
+const LeadText = styled.p`
+  margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
   line-height: ${ ({ theme }) => theme.lineHeight.h4 };
   font-size: ${ ({ theme }) => theme.fontSize.h4 };
-  font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
   text-align: center;
+
+  strong {
+    font-weight: ${ ({ theme }) => theme.fontWeight.text };
+  }
 `
 
 const PostHeaderFooter = styled.footer`
-  margin-bottom: 2.2rem;
+  margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
   text-align: right;
   font-size: ${ ({ theme }) => theme.fontSize.text };
 `
@@ -41,8 +48,12 @@ export default function PostHeader({
 
   return (
     <Container as={StyledPostHeader} width='xxxl' fluid>
-      <h1>{title}</h1>
-      <Lead>{description}</Lead>
+      <PostTitle>{title}</PostTitle>
+      <LeadText>
+        <strong>
+          {description}
+        </strong>
+      </LeadText>
       <PostHeaderFooter>
         <p>{footerContent}</p>
       </PostHeaderFooter>
