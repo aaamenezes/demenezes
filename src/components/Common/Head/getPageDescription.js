@@ -1,20 +1,22 @@
-import { BLOG_DESCRIPTION_BASE } from '../../../settings'
+import settings from '../../../settings.json'
 
 export function getPageDescription(page, pagination, postDescription = '') {
+  const { DESCRIPTION_BASE } = settings.BLOG_INFOS
+
   switch (page) {
   case 'listing':
-    return `Página ${ pagination } de posts do blog deMenezes | `
-      .concat(BLOG_DESCRIPTION_BASE)
+    return `Pág. ${ pagination } | deMenezes | `
+      .concat(DESCRIPTION_BASE)
   case 'post':
     return `${ postDescription } | `
-      .concat(BLOG_DESCRIPTION_BASE)
+      .concat(DESCRIPTION_BASE)
   case 'about':
     return 'Página Sobre do blog deMenezes | '
-      .concat(BLOG_DESCRIPTION_BASE)
+      .concat(DESCRIPTION_BASE)
   case 'contact':
     return 'Página Contato do blog deMenezes | '
-      .concat(BLOG_DESCRIPTION_BASE)
+      .concat(DESCRIPTION_BASE)
   default: // home
-    return BLOG_DESCRIPTION_BASE
+    return DESCRIPTION_BASE
   }
 }

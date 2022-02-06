@@ -1,24 +1,26 @@
-import { BLOG_KEYWORDS_BASE } from '../../../settings'
+import settings from '../../../settings.json'
 
 export function getPageKeywords(page, pagination, postKeywords = []) {
+  const { KEYWORDS_BASE } = settings.BLOG_INFOS
+
   switch (page) {
   case 'listing':
-    return BLOG_KEYWORDS_BASE
+    return KEYWORDS_BASE
       .join(', ')
       .concat(`, página ${ pagination }`)
   case 'post':
-    return BLOG_KEYWORDS_BASE
+    return KEYWORDS_BASE
       .join(', ')
       .concat(`, ${ postKeywords.join(', ') }`)
   case 'about':
-    return BLOG_KEYWORDS_BASE
+    return KEYWORDS_BASE
       .join(', ')
       .concat(', Sobre, Sobre o blog deMenezes, Sobre o blog, Página Sobre')
   case 'contact':
-    return BLOG_KEYWORDS_BASE
+    return KEYWORDS_BASE
       .join(', ')
       .concat(', Contato, Contato André de Menezes, Página Contato')
   default: // home
-    return BLOG_KEYWORDS_BASE.join(', ')
+    return KEYWORDS_BASE.join(', ')
   }
 }

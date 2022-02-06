@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { POSTS_PER_PAGE } from '../../settings'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import LinkButton from '../Common/LinkButton'
@@ -80,7 +79,6 @@ export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
           <LinkButton
             as={PaginationButton}
             href={previousLink}
-            aria-labelledby={`Ver os ${ POSTS_PER_PAGE } posts mais recentes`}
             label='previous'
           >
             Posts mais recentes
@@ -93,7 +91,6 @@ export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
             <LinkButton
               as={PaginationButton}
               href={nextLink}
-              aria-labelledby={`Ver os ${ POSTS_PER_PAGE } posts mais antigos`}
               label='next'
             >
               Próxima página

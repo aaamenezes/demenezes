@@ -1,6 +1,6 @@
 import React from 'react'
 import { getAllPosts } from '../../lib/api'
-import { POSTS_PER_PAGE } from '../../src/settings'
+import settings from '../../src/settings.json'
 import HomeScreen from '../../src/components/Screens/HomeScreen'
 import { getPaginationInfos } from '../../src/utils/getPaginationInfos'
 import pageWrapper from '../../src/components/Wrappers/pageWrapper'
@@ -49,6 +49,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
+  const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
   const allPosts = getAllPosts([ 'slug' ])
   const TOTAL_POSTS = allPosts.length
   const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)

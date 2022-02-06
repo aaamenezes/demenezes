@@ -1,9 +1,10 @@
-import { POSTS_PER_PAGE } from '../settings'
+import settings from '../settings.json'
 
 export function getPaginationInfos(allPosts, params) {
   if (!allPosts) return {}
 
   const CURRENT_PAGINATION = params ? params.page : 1
+  const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
 
   const CURRENT_POSTS = allPosts.slice(
     (CURRENT_PAGINATION - 1) * POSTS_PER_PAGE,

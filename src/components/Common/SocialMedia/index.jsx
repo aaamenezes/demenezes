@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SOCIAL_MEDIA } from '../../../settings'
+import settings from '../../../settings.json'
 import HiddenA11Y from '../HiddenA11Y'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'
@@ -15,7 +15,7 @@ const SocialList = styled.ul`
 `
 
 export default function SocialMedia({ center }) {
-  const socialElements = SOCIAL_MEDIA.map(socialMedia => (
+  const socialElements = settings.SOCIAL_MEDIA.map(socialMedia => (
     <li key={socialMedia.title}>
       <LinkButton href={socialMedia.url} external>
         <Icon name={socialMedia.title} />

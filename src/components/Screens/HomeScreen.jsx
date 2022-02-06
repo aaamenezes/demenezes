@@ -1,5 +1,5 @@
 import React from 'react'
-import { POSTS_PER_PAGE } from '../../settings'
+import settings from '../../settings.json'
 import PostsWrapper from '../HomePage/PostsWrapper'
 import Pagination from '../Pagination'
 
@@ -9,6 +9,8 @@ export default function HomeScreen({
   CURRENT_PAGINATION,
   IS_LAST_PAGINATION
 }) {
+  const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
+
   return (
     <>
       <PostsWrapper postsList={CURRENT_POSTS} />

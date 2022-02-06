@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import LinkButton from '../LinkButton'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import ToggleModalButton from './ToggleModalButton'
-import { NAVIGATION_MENU } from '../../../settings'
+import settings from '../../../settings.json'
 import { getPageInfos } from '../../../utils/getPageInfos'
 
 const NavWrapper = styled.nav`
@@ -113,7 +113,7 @@ export default function Navigation({ openMenu, toggleMenu }) {
   const router = useRouter()
   const { CURRENT_PAGE, HEADER_TEMPLATE } = getPageInfos()
 
-  const navigationElements = NAVIGATION_MENU.map(menu => {
+  const navigationElements = settings.NAVIGATION_MENU.map(menu => {
     const isCurrentPage = (
       router.pathname === menu.url
       || (CURRENT_PAGE === 'listing' && menu.title === 'Home')

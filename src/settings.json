@@ -1,0 +1,80 @@
+{
+  "BLOG_INFOS": {
+    "TITLE_BASE": "deMenezes: Front-end, carreira e css-life-style",
+    "DESCRIPTION_BASE": "Um blog sobre isso, isso e isso",
+    "KEYWORDS_BASE": [
+      "front-end",
+      "programação",
+      "carreira",
+      "blog pessoal",
+      "mercado de trabalho"
+    ]
+  },
+  "PAGINATION_CONFIG": {
+    "POSTS_PER_PAGE": 5
+  },
+  "NAVIGATION_MENU": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Sobre",
+      "url": "/about"
+    },
+    {
+      "title": "Contato",
+      "url": "/contact"
+    }
+  ],
+  "SOCIAL_MEDIA": [
+    {
+      "title": "github",
+      "url": "https://github.com/aaamenezes"
+    },
+    {
+      "title": "linkedin",
+      "url": "https://www.linkedin.com/in/aaamenezes"
+    },
+    {
+      "title": "twitter",
+      "url": "https://twitter.com/aaamenezes"
+    },
+    {
+      "title": "instagram",
+      "url": "https://instagram.com/aaamenezes"
+    }
+  ],
+  "PAGES": [
+    {
+      "name": "home",
+      "pageTitle": "Home",
+      "url": "/",
+      "headerTemplate": "primary"
+    },
+    {
+      "name": "listing",
+      "pageTitle": "Home",
+      "url": "/page/[page]",
+      "headerTemplate": "primary"
+    },
+    {
+      "name": "post",
+      "pageTitle": "Artigo",
+      "url": "/posts/[slug]",
+      "headerTemplate": "primary"
+    },
+    {
+      "name": "about",
+      "pageTitle": "Sobre",
+      "url": "/about",
+      "headerTemplate": "secondary"
+    },
+    {
+      "name": "contact",
+      "pageTitle": "Contato",
+      "url": "/contact",
+      "headerTemplate": "secondary"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { BLOG_TITLE_BASE } from '../../../settings'
+import settings from '../../../settings.json'
 
 export function getPageTitle(
   page,
@@ -6,16 +6,18 @@ export function getPageTitle(
   postTitle = '',
   postDescription = ''
 ) {
+  const { TITLE_BASE } = settings.BLOG_INFOS
+
   switch (page) {
   case 'listing':
-    return `Página ${ pagination } | ${ BLOG_TITLE_BASE }`
+    return `Página ${ pagination } | ${ TITLE_BASE }`
   case 'post':
-    return `${ postTitle } | ${ postDescription } | ${ BLOG_TITLE_BASE }`
+    return `${ postTitle } | ${ postDescription } | ${ TITLE_BASE }`
   case 'about':
-    return `Sobre | ${ BLOG_TITLE_BASE }`
+    return `Sobre | ${ TITLE_BASE }`
   case 'contact':
-    return `Contato | ${ BLOG_TITLE_BASE }`
+    return `Contato | ${ TITLE_BASE }`
   default: // home
-    return BLOG_TITLE_BASE
+    return TITLE_BASE
   }
 }
