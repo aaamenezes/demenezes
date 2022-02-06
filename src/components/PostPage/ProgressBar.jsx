@@ -6,7 +6,6 @@ const Bar = styled.div`
   z-index: ${ ({ theme }) => theme.zIndex.fixed };
   top: 0;
   left: 0;
-  width: ${ ({ width }) => `${ width }%` };
   height: 4px;
   background-color: ${ ({ theme }) => theme.color.red };
 `
@@ -31,5 +30,5 @@ export default function ProgressBar() {
     document.addEventListener('scroll', () => setBarWidth(updateBarWidth()))
   }, [])
 
-  return <Bar width={barWidth} />
+  return <Bar style={{ width: `${ barWidth }%` }} />
 }
