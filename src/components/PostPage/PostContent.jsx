@@ -38,7 +38,8 @@ export default function PostContent({ content }) {
   return (
     <Container
       as={StyledPostContent}
-      width='md'
+      width='lg'
+      spacing='0'
       dangerouslySetInnerHTML={{ __html: content }}
     />
   )

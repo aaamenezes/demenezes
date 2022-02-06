@@ -5,7 +5,7 @@ import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import LinkButton from '../Common/LinkButton'
 
-const PaginationWrapper = styled.section`
+const PaginationWrapper = styled.div`
   ${ getBreakpoints({
     xs: css`
       display: flex;
@@ -74,7 +74,7 @@ export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
   const nextLink = `/page/${ +CURRENT_PAGINATION + 1 }`
 
   return (
-    <Container as={PaginationWrapper} width='lg'>
+    <Container as={PaginationWrapper} width='xxl' spacing='2'>
       {
         CURRENT_PAGINATION > 1 && (
           <LinkButton

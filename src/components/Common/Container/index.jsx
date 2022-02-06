@@ -63,7 +63,10 @@ function getContainerPadding(theme, width) {
   const paddingPercent = 0.05
 
   return getBreakpoints({
-    xs: getPadding(breakpoints, 'xs', paddingPercent),
+    xs: css`
+      padding-right: 5%;
+      padding-left: 5%;
+    `,
     sm: getPadding(breakpoints, 'sm', paddingPercent),
     md: getPadding(breakpoints, 'md', paddingPercent),
     lg: getPadding(breakpoints, 'lg', paddingPercent),
@@ -76,55 +79,12 @@ function getContainerPadding(theme, width) {
 const Container = styled.div`
   width: 100%;
   ${ ({ theme, width, fluid }) => getContainerMaxWidth(theme, width, fluid) };
-  /* max-width */
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: ${ ({ spacing }) => spacing ? `${ spacing }rem` : '7rem' };
+  padding-right: 5%;
+  padding-left: 5%;
   ${ ({ theme, width }) => getContainerPadding(theme, width) };
-  /* padding-right + padding-left */
 `
 
 export default Container
-
-/**
- * PROPS
- * width: {string} required*
- * - algum breakpoint
- * - full
- * fluid: {boolean}
- */
-
-/**
- * width === 'full' || !width
- * !fluid || !!fluid
- * ===
- * max-width: 100%;
- * ==
- * HighlightText
- * Exemplo default
- * Se width === 'full' (ou se width não for informado) não precisa fazer nada
- * Pois o container já é iniciado com max-width: 100%;
- */
-
-/**
- * width: 'lg'
- * fluid: true
- * ===
- * max-width: 'lg';
- * ===
- * Header Footer
- */
-
-/**
- * width: 'lg'
- * fluid: false
- * ===
- * XS: max-width: 100%;
- * SM: max-width: 'sm';
- * MD: max-width: 'md';
- * LG: max-width: 'lg';
- * XL: max-width: 'lg';
- * XXL: max-width: 'lg';
- * XXXL: max-width: 'lg';
- * ===
- * PostContent
- */

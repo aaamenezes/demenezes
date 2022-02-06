@@ -8,7 +8,6 @@ const NewsletterForm = styled.form`
     xs: css`
       padding-top: 1.1rem;
       padding-bottom: 1.1rem;
-      color: ${ ({ theme }) => theme.color.white };
       background-color: ${ ({ theme }) => theme.color.gray };
     `
   }) }
@@ -16,8 +15,8 @@ const NewsletterForm = styled.form`
 
 export default function Newsletter() {
   return (
-    <Container width='full'>
-      <Container as={NewsletterForm} width='xxxl' fluid>
+    <Container as={NewsletterForm} width='xxxl' fluid>
+      <Container width='md' spacing='0'>
         {/* eslint-disable-next-line max-len */}
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quos, culpa rerum odit eum labore asperiores voluptate delectus hic, nesciunt sint cumque suscipit, at vel aliquam magnam! Dolores, cum mollitia.</p>
         <input
