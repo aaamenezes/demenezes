@@ -10,6 +10,10 @@
       "mercado de trabalho"
     ]
   },
+  "SRC": {
+    "FONT": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+    "ICONS": "https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+  },
   "PAGINATION_CONFIG": {
     "POSTS_PER_PAGE": 5
   },
@@ -45,36 +49,41 @@
       "url": "https://instagram.com/aaamenezes"
     }
   ],
-  "PAGES": [
-    {
-      "name": "home",
+  "PAGES": {
+    "home": {
       "pageTitle": "Home",
       "url": "/",
+      "keywords": ["pagina inicial", "home"],
+      "description": "",
       "headerTemplate": "primary"
     },
-    {
-      "name": "listing",
+    "listing": {
       "pageTitle": "Home",
       "url": "/page/[page]",
+      "keywords": ["pagina inicial", "home"],
+      "description": "",
       "headerTemplate": "primary"
     },
-    {
-      "name": "post",
+    "post": {
       "pageTitle": "Artigo",
       "url": "/posts/[slug]",
+      "keywords": ["pagina de posts"],
+      "description": "",
       "headerTemplate": "primary"
     },
-    {
-      "name": "about",
+    "about": {
       "pageTitle": "Sobre",
       "url": "/about",
+      "keywords": [ "sobre mim", "sobre o blog", "sobre o blog deMenezes", "página sobre" ],
+      "description": "Sobre o blog deMenezes",
       "headerTemplate": "secondary"
     },
-    {
-      "name": "contact",
+    "contact": {
       "pageTitle": "Contato",
       "url": "/contact",
+      "keywords": ["contato", "contato André de Menezes", "contato deMenezes", "página contato"],
+      "description": "Contato deMenezes",
       "headerTemplate": "secondary"
     }
-  ]
+  }
 }

@@ -1,39 +1,37 @@
-/* eslint-disable max-len */
 import React from 'react'
 import NextHead from 'next/head'
-import { getPaginationInfos } from '../../../utils/getPaginationInfos'
 import { getPageInfos } from '../../../utils/getPageInfos'
-import { getPageTitle } from './getPageTitle'
-import { getPageDescription } from './getPageDescription'
-import { getPageKeywords } from './getPageKeyWords'
+import settings from '../../../settings.json'
 
 export default function Head({ componentProps }) {
-  const { CURRENT_POSTS } = componentProps
-  const { CURRENT_PAGINATION } = getPaginationInfos(CURRENT_POSTS)
   const { CURRENT_PAGE } = getPageInfos()
 
-  const { title } = componentProps.post || ''
-  const { description } = componentProps.post || ''
-  const { keywords } = componentProps.post || ''
+  const isPostPage = !!componentProps.post
 
-  const pageTitle = getPageTitle(
-    CURRENT_PAGE,
-    CURRENT_PAGINATION,
-    title,
-    description
-  )
+  const { BLOG_INFOS, PAGES, SRC } = settings
+  const { TITLE_BASE, DESCRIPTION_BASE, KEYWORDS_BASE } = BLOG_INFOS
 
-  const pageDescription = getPageDescription(
-    CURRENT_PAGE,
-    CURRENT_PAGINATION,
-    description
-  )
+  const pageTitleFirstPart = isPostPage
+    ? componentProps.post.title
+    : PAGES[CURRENT_PAGE].pageTitle
 
-  const pageKeywords = getPageKeywords(
-    CURRENT_PAGE,
-    CURRENT_PAGINATION,
-    keywords
-  )
+  const pageTitle = `${ pageTitleFirstPart } | ${ TITLE_BASE }`
+
+  const pageDescriptionFirstPart = isPostPage
+    ? componentProps.post.description
+    : PAGES[CURRENT_PAGE].description
+
+  const pageDescription = PAGES[CURRENT_PAGE].pageTitle !== 'Home'
+    ? `${ pageDescriptionFirstPart } | ${ DESCRIPTION_BASE }`
+    : `${ DESCRIPTION_BASE }`
+
+  const pageKeywords = PAGES[CURRENT_PAGE].keywords
+    .join(', ')
+    .concat(', ')
+    .concat(isPostPage ? componentProps.post.keywords.join(', ') : '')
+    .concat(', ')
+    .concat(KEYWORDS_BASE.join(', '))
+    .replace(', , ', ', ')
 
   return (
     <NextHead>
@@ -50,11 +48,8 @@ export default function Head({ componentProps }) {
         href='https://fonts.gstatic.com'
         crossOrigin='anonymous'
       />
-      <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' />
-      <link
-        rel='stylesheet'
-        href='https://use.fontawesome.com/releases/v5.15.2/css/all.css'
-      />
+      <link rel='stylesheet' href={SRC.FONT} />
+      <link rel='stylesheet' href={SRC.ICONS} />
     </NextHead>
   )
 }
