@@ -99,4 +99,10 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     margin: 0 auto;
   }
+
+  iframe {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 `
