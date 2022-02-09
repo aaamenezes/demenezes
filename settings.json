@@ -1,5 +1,5 @@
 {
-  "BLOG_INFOS": {
+  "METADATA": {
     "TITLE_BASE": "deMenezes: Front-end, carreira e css-life-style",
     "DESCRIPTION_BASE": "Um blog sobre isso, isso e isso",
     "KEYWORDS_BASE": [
@@ -10,6 +10,38 @@
       "mercado de trabalho"
     ]
   },
+  "CATEGORIES": [
+    {
+      "icon": "code",
+      "title": "Front-end",
+      "description": "HTML, CSS e Javascript. Componentes, construção, código e mão na massa"
+    },
+    {
+      "icon": "job",
+      "title": "Carreira",
+      "description": "Mercado de trabalho"
+    },
+    {
+      "icon": "people",
+      "title": "Pessoas",
+      "description": "Comunidade e eventos"
+    },
+    {
+      "icon": "balance",
+      "title": "Produtividade",
+      "description": "Dicas, truques, "
+    },
+    {
+      "icon": "terminal",
+      "title": "Ferramentas",
+      "description": "Libs, plugins, pacotes, Git, NPM, Yarn, Bash"
+    },
+    {
+      "icon": "tool",
+      "title": "Equipamentos",
+      "description": "Periféricos, acessórios, etc"
+    }
+  ],
   "SRC": {
     "FONT": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
     "ICONS": "https://use.fontawesome.com/releases/v5.15.2/css/all.css"

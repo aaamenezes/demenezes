@@ -1,7 +1,7 @@
 import React from 'react'
-import settings from '../../settings.json'
 import PostsWrapper from '../HomePage/PostsWrapper'
 import Pagination from '../Pagination'
+import settings from '../../../settings.json'
 
 export default function HomeScreen({
   CURRENT_POSTS,

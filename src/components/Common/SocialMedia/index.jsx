@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import settings from '../../../settings.json'
+import settings from '../../../../settings.json'
 import HiddenA11Y from '../HiddenA11Y'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'

@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import Icon from '../Common/Icon'
+import settings from '../../../settings.json'
 
 const CategoriesList = styled.ul`
   ${ getBreakpoints({
@@ -74,40 +75,8 @@ const CategoryText = styled.p`
 `
 
 export default function Categories() {
-  const content = [
-    {
-      icon: 'code',
-      title: 'Front-end',
-      text: 'HTML, CSS e Javascript. Componentes, construção, código e mão na massa'
-    },
-    {
-      icon: 'job',
-      title: 'Carreira',
-      text: 'Mercado de trabalho'
-    },
-    {
-      icon: 'people',
-      title: 'Pessoas',
-      text: 'Comunidade e eventos'
-    },
-    {
-      icon: 'balance',
-      title: 'Produtividade',
-      text: 'Dicas, truques, '
-    },
-    {
-      icon: 'terminal',
-      title: 'Ferramentas',
-      text: 'Libs, plugins, pacotes, Git, NPM, Yarn, Bash'
-    },
-    {
-      icon: 'tool',
-      title: 'Equipamentos',
-      text: 'Periféricos, acessórios, etc'
-    }
-  ]
-
-  const CategoryItems = content.map(({ icon, title, text }) => (
+  const { CATEGORIES } = settings
+  const CategoryItems = CATEGORIES.map(({ icon, title, description }) => (
     <CategoryItem key={title}>
       <CategoryItemHeader>
         <h3>
@@ -116,7 +85,7 @@ export default function Categories() {
           <span>{title}</span>
         </h3>
       </CategoryItemHeader>
-      <CategoryText>{ text }</CategoryText>
+      <CategoryText>{ description }</CategoryText>
     </CategoryItem>
   ))
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import NextHead from 'next/head'
 import { getPageInfos } from '../../../utils/getPageInfos'
-import settings from '../../../settings.json'
+import settings from '../../../../settings.json'
 
 export default function Head({ componentProps }) {
   const { CURRENT_PAGE } = getPageInfos()
 
   const isPostPage = !!componentProps.post
 
-  const { BLOG_INFOS, PAGES, SRC } = settings
-  const { TITLE_BASE, DESCRIPTION_BASE, KEYWORDS_BASE } = BLOG_INFOS
+  const { METADATA, PAGES, SRC } = settings
+  const { TITLE_BASE, DESCRIPTION_BASE, KEYWORDS_BASE } = METADATA
 
   const pageTitleFirstPart = isPostPage
     ? componentProps.post.title

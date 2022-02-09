@@ -1,4 +1,4 @@
-import settings from '../settings.json'
+import settings from '../../settings.json'
 
 export function getPaginationInfos(allPosts, params) {
   if (!allPosts) return {}
