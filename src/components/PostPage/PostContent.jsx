@@ -20,9 +20,14 @@ const StyledPostContent = styled.div`
 
   // Aqui tbm vai a classe do componente de código do Github Gist e vídeos
   p:not(:first-child):not(:last-child),
-  ul:not(:first-child):not(:last-child),
+  ul:not(:first-child):not(:last-child) {
+    margin-top: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+  }
+
   img:not(:first-child):not(:last-child) {
-    margin: ${ ({ theme }) => `${ theme.spacing.text }rem` } 0;
+    margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
   }
 
   ul {
