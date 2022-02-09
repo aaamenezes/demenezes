@@ -23,7 +23,11 @@ Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel
 
 Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus.
 
+<script src="https://gist.github.com/aaamenezes/47da65102d8a82b907b373f9724d2632.js"></script>
+
 Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat.
+
+<script src="https://gist.github.com/aaamenezes/d1bd59f6b4f5ae8f94240de440235610.js"></script>
 
 Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
 
@@ -56,3 +60,5 @@ Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec 
 Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo.
 
 Arcu non odio euismod lacinia at quis risus sed vulputate.
+
+<script src="https://gist.github.com/aaamenezes/d1bd59f6b4f5ae8f94240de440235610.js"></script>

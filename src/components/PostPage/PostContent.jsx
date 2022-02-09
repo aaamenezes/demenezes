@@ -25,12 +25,9 @@ const StyledPostContent = styled.div`
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
   }
 
-  iframe:not(:first-child):not(:last-child) {
-    margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
-    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
-  }
-
-  img:not(:first-child):not(:last-child) {
+  img:not(:first-child):not(:last-child),
+  iframe:not(:first-child):not(:last-child),
+  .gist .gist-file {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
   }
