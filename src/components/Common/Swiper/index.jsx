@@ -22,35 +22,52 @@ export default function Swiper({ slides }) {
   function getSlidesPerView() {
     const { breakpoints } = theme
     const breakpointsEntries = Object.entries(breakpoints)
-    const currentBreakpoint = breakpointsEntries
-      .reverse()
-      .find(breakpoint => breakpoint[1] < screenWidth)
+    const currentBreakpoint = breakpointsEntries.find(
+      breakpoint => breakpoint[1] >= screenWidth
+    )
 
-    const slidesPerView = breakpointsEntries
-      .reverse()
-      .indexOf(currentBreakpoint) || 1
+    const slidesPerView = breakpointsEntries.indexOf(currentBreakpoint) || 1
 
-    const fraction = 0.3
+    const fraction = 0.15
 
     return slidesPerView < 4 ? slidesPerView + fraction : 4 + fraction
   }
 
   const postsList = slides.map(slide => (
     <SwiperSlide key={slide.title} tag='li'>
-      <PostCard post={slide} imageRatio='4x3' isCompact />
+      <PostCard
+        post={slide}
+        imageRatio='4x3'
+        width='full'
+        spacing='0'
+        isCompact
+      />
     </SwiperSlide>
   ))
 
   return (
-    <SwiperContainer
-      spaceBetween={getSlidesPerView() * 10}
-      slidesPerView={getSlidesPerView()}
-      wrapperTag='ul'
-      pagination
-    >
-      {postsList}
-      {/* <ArrowButton direction='prev' />
+    <>
+      <SwiperContainer
+        spaceBetween={getSlidesPerView() * 5}
+        slidesPerView={getSlidesPerView()}
+        wrapperTag='ul'
+        pagination={{ clickable: true }}
+      >
+        {postsList}
+        {/* <ArrowButton direction='prev' />
       <ArrowButton direction='next' /> */}
-    </SwiperContainer>
+      </SwiperContainer>
+      <style>
+        {`
+          .swiper-container {
+            padding-bottom: 3rem;
+          }
+
+          .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: ${ theme.color.red };
+          }
+        `}
+      </style>
+    </>
   )
 }

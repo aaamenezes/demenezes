@@ -8,6 +8,7 @@ const CategoryText = styled.p`
 
 const PostCardTitle = styled.h3`
   display: inline-block;
+  font-size: ${ ({ theme, isCompact }) => isCompact && theme.fontSize.text };
   background-image: ${ ({ theme }) => (
     `linear-gradient(
       120deg,
@@ -26,7 +27,7 @@ const PostCardTitle = styled.h3`
   }
 `
 
-export default function PostCardHeader({ post, hero }) {
+export default function PostCardHeader({ post, hero, isCompact }) {
   const { category, slug, title } = post
 
   return (
@@ -38,7 +39,7 @@ export default function PostCardHeader({ post, hero }) {
           </CategoryText>
         )
       }
-      <PostCardTitle tag='h3' hero={hero}>
+      <PostCardTitle hero={hero} isCompact={isCompact}>
         <LinkButton href={`/posts/${ slug }`}>
           {title}
         </LinkButton>

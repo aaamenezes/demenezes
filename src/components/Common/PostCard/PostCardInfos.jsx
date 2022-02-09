@@ -39,7 +39,7 @@ export default function PostCardInfos({ post, hero, isCompact }) {
       isCompact={isCompact}
       wrapperWidth={getWrapperWidth(hero, isCompact)}
     >
-      <PostCardHeader post={post} hero={hero} />
+      <PostCardHeader post={post} hero={hero} isCompact={isCompact} />
       <PostCardDescription
         description={description}
         hero={hero}

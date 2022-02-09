@@ -54,14 +54,25 @@ const PostCardLabel = styled.div`
   color: ${ ({ theme }) => theme.color.white };
   background-color: ${ ({ theme }) => theme.color.red };
   font-size: ${ ({ theme }) => theme.fontSize.small };
-    letter-spacing: ${ ({ theme }) => theme.letterSpacing.small };
+  letter-spacing: ${ ({ theme }) => theme.letterSpacing.small };
 `
 
-export default function PostCard({ post, imageRatio, isCompact }) {
+export default function PostCard({
+  post,
+  imageRatio,
+  width,
+  isCompact,
+  spacing
+}) {
   const { title, slug, coverImage, category } = post
 
   return (
-    <Container as={PostCardWrapper} width='xl' isCompact={isCompact}>
+    <Container
+      as={PostCardWrapper}
+      width={width || 'xl'}
+      spacing={spacing || '7'}
+      isCompact={isCompact}
+    >
       <PostCardImage isCompact={isCompact}>
         <LinkButton href={`/posts/${ slug }`}>
           <CropedImage
