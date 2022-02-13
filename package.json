@@ -9,11 +9,14 @@
     "lint-bkp": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.0.0",
+    "@next/mdx": "^12.0.10",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
     "gray-matter": "4.0.2",
     "install": "^0.13.0",
     "next": "latest",
+    "next-mdx-remote": "^3.0.8",
     "npm": "^7.20.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

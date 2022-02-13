@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { serialize } from 'next-mdx-remote/serialize'
 import pageWrapper from '../../src/components/Wrappers/pageWrapper'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/markdownToHtml'
@@ -8,12 +9,15 @@ import PostContent from '../../src/components/PostPage/PostContent'
 import PostComments from '../../src/components/PostPage/PostComments'
 import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 import ProgressBar from '../../src/components/PostPage/ProgressBar'
+import Image from '../../src/components/Common/Image'
+
+const components = { Image }
 
 const PostPage = styled.main`
   margin-bottom: 10%;
 `
 
-function Post({ post }) {
+function Post({ post, mdxContent }) {
   return (
     <>
       <PostPage>
@@ -25,7 +29,11 @@ function Post({ post }) {
           keywords={post.keywords}
           coverImage={post.coverImage}
         />
-        <PostContent content={post.content} />
+        <PostContent
+          content={post.content} // remover esse no futuro
+          mdxContent={mdxContent}
+          components={components}
+        />
       </PostPage>
       <PostComments />
       <RelatedPosts
@@ -61,13 +69,16 @@ export async function getStaticProps({ params }) {
     currentPost => currentPost.category === post.category
   )
 
+  const mdxContent = await serialize(content)
+
   return {
     props: {
       post: {
         ...post,
         content,
         relatedPosts
-      }
+      },
+      mdxContent
     }
   }
 }

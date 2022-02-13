@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { MDXRemote } from 'next-mdx-remote'
 import Container from '../Common/Container'
 
 const StyledPostContent = styled.div`
@@ -41,13 +42,16 @@ const StyledPostContent = styled.div`
   }
 `
 
-export default function PostContent({ content }) {
+export default function PostContent({ content, mdxContent, components }) {
   return (
     <Container
       as={StyledPostContent}
       width='lg'
       spacing='0'
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
+      // dangerouslySetInnerHTML={{ __html: content }}
+      // remover esse no futuro
+    >
+      <MDXRemote {...mdxContent} components={components} />
+    </Container>
   )
 }
