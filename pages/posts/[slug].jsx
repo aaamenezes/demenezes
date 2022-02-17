@@ -75,7 +75,6 @@ export async function getStaticProps({ params }) {
     props: {
       post: {
         ...post,
-        content,
         relatedPosts
       },
       mdxContent

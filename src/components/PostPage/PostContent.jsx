@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import Prism from 'prismjs'
 import { MDXRemote } from 'next-mdx-remote'
 import Container from '../Common/Container'
 
@@ -19,16 +20,15 @@ const StyledPostContent = styled.div`
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
   }
 
-  // Aqui tbm vai a classe do componente de código do Github Gist e vídeos
   p:not(:first-child):not(:last-child),
-  ul:not(:first-child):not(:last-child) {
+  ul:not(:first-child):not(:last-child),
+  pre:not(:first-child):not(:last-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.text }rem` };
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
   }
 
   img:not(:first-child):not(:last-child),
-  iframe:not(:first-child):not(:last-child),
-  .gist .gist-file {
+  iframe:not(:first-child):not(:last-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
   }
@@ -42,7 +42,13 @@ const StyledPostContent = styled.div`
   }
 `
 
-export default function PostContent({ content, mdxContent, components }) {
+// export default function PostContent({ content, mdxContent, components }) {
+// remover esse no futuro
+export default function PostContent({ mdxContent, components }) {
+  useEffect(() => {
+    Prism.highlightAll()
+  }, [ mdxContent ])
+
   return (
     <Container
       as={StyledPostContent}
