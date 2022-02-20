@@ -1,0 +1,120 @@
+/**
+ * Dracula Theme originally by Zeno Rocha [@zenorocha]
+ * https://draculatheme.com/
+ *
+ * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: #f8f8f2 !important;
+   background: none !important;
+   text-shadow: 0 1px rgba(0, 0, 0, 0.3) !important;
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+   text-align: left !important;
+   white-space: pre !important;
+   word-spacing: normal !important;
+   word-break: normal !important;
+   word-wrap: normal !important;
+   line-height: 1.5 !important;
+   -moz-tab-size: 2 !important;
+   -o-tab-size: 2 !important;
+   tab-size: 2 !important;
+   -webkit-hyphens: none !important;
+   -moz-hyphens: none !important;
+   -ms-hyphens: none !important;
+   hyphens: none !important;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   overflow: auto !important;
+   border-radius: 0.3em !important;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #282a36 !important;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em !important;
+   border-radius: .3em !important;
+   white-space: normal !important;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: #6272a4 !important;
+ }
+ 
+ .token.punctuation {
+   color: #f8f8f2 !important;
+ }
+ 
+ .namespace {
+   opacity: .7 !important;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+   color: #ff79c6 !important;
+ }
+ 
+ .token.boolean,
+ .token.number {
+   color: #bd93f9 !important;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+   color: #50fa7b !important;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+   color: #f8f8f2 !important;
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.function,
+ .token.class-name {
+   color: #f1fa8c !important;
+ }
+ 
+ .token.keyword {
+   color: #8be9fd !important;
+ }
+ 
+ .token.regex,
+ .token.important {
+   color: #ffb86c !important;
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold !important;
+ }
+ 
+ .token.italic {
+   font-style: italic !important;
+ }
+ 
+ .token.entity {
+   cursor: help !important;
+ }

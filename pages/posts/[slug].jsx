@@ -30,7 +30,7 @@ function Post({ post, mdxContent }) {
           coverImage={post.coverImage}
         />
         <PostContent
-          content={post.content} // remover esse no futuro
+          // content={post.content} // remover esse no futuro
           mdxContent={mdxContent}
           components={components}
         />

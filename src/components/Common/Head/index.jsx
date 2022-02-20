@@ -50,6 +50,7 @@ export default function Head({ componentProps }) {
       />
       <link rel='stylesheet' href={SRC.FONT} />
       <link rel='stylesheet' href={SRC.ICONS} />
+      <link rel='stylesheet' href={SRC.CODE_THEME_VS_CODE} />
     </NextHead>
   )
 }
