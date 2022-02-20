@@ -14,7 +14,13 @@ function getSourceTag(entry, src, breakpoints) {
   const imageWidth = breakpoints[nextBreakpointKey]
   const srcSet = insertSizeInPath(src, imageWidth)
 
-  return <source media={`(min-width:${ value }px)`} srcSet={srcSet} />
+  return (
+    <source
+      key={value}
+      media={`(min-width:${ value }px)`}
+      srcSet={srcSet}
+    />
+  )
 }
 
 export default function Image({ src, alt }) {
