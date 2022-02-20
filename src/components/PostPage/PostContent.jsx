@@ -21,16 +21,26 @@ const StyledPostContent = styled.div`
   }
 
   p:not(:first-child):not(:last-child),
-  ul:not(:first-child):not(:last-child),
-  pre:not(:first-child):not(:last-child) {
+  ul:not(:first-child):not(:last-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.text }rem` };
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
   }
 
   img:not(:first-child):not(:last-child),
-  iframe:not(:first-child):not(:last-child) {
+  iframe:not(:first-child):not(:last-child),
+  pre[class*="language-"]:not(:first-child):not(:last-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+  }
+
+  pre[class*="language-"] {
+    padding: 2rem;
+  }
+
+  code {
+    padding: 0.3rem;
+    color: ${ ({ theme }) => theme.color.white };
+    background-color: rgb(30, 30, 30);
   }
 
   ul {
@@ -42,8 +52,6 @@ const StyledPostContent = styled.div`
   }
 `
 
-// export default function PostContent({ content, mdxContent, components }) {
-// remover esse no futuro
 export default function PostContent({ mdxContent, components }) {
   useEffect(() => {
     Prism.highlightAll()
@@ -55,7 +63,6 @@ export default function PostContent({ mdxContent, components }) {
       width='lg'
       spacing='0'
       // dangerouslySetInnerHTML={{ __html: content }}
-      // remover esse no futuro
     >
       <MDXRemote {...mdxContent} components={components} />
     </Container>

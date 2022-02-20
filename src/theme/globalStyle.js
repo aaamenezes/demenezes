@@ -80,6 +80,11 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
   }
 
+  pre {
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
   a {
     color: currentColor;
   }
