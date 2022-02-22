@@ -1,6 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { convertDate } from '../../utils/convertDate'
+import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 
 const StyledPostHeader = styled.header`
@@ -33,8 +34,48 @@ const LeadText = styled.p`
 `
 
 const PostHeaderFooter = styled.footer`
-  text-align: right;
-  font-size: ${ ({ theme }) => theme.fontSize.text };
+  ${ getBreakpoints({
+    xs: css`
+      text-align: center;
+      font-size: ${ ({ theme }) => theme.fontSize.text };
+    `,
+    md: css`
+      text-align: right;
+    `
+  }) }
+`
+
+const PostDate = styled.p`
+  margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+`
+
+const KeywordsList = styled.ul`
+  ${ getBreakpoints({
+    xs: css`
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      > * {
+        margin-bottom: 0.5rem;
+      }
+
+      > :not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    `,
+    md: css`
+      justify-content: flex-end;
+    `
+  }) }
+`
+
+const KeywordItem = styled.li`
+  padding: 0.3rem 0.5rem;
+  line-height: ${ ({ theme }) => theme.lineHeight.button };
+  font-size: ${ ({ theme }) => theme.fontSize.small };
+  color: ${ ({ theme }) => theme.color.white };
+  background-color: ${ ({ theme }) => theme.color.redAlt9 };
 `
 
 export default function PostHeader({
@@ -42,9 +83,14 @@ export default function PostHeader({
   description,
   date,
   category,
+  keywords,
   coverImage
 }) {
   const footerContent = `${ convertDate(date) } - ${ category }`
+
+  const keywordsList = keywords.map(keyword => (
+    <KeywordItem key={keyword}>{ keyword }</KeywordItem>
+  ))
 
   return (
     <Container as={StyledPostHeader} width='xxxl' bgImage={coverImage} fluid>
@@ -55,7 +101,8 @@ export default function PostHeader({
         </strong>
       </LeadText>
       <PostHeaderFooter>
-        <p>{footerContent}</p>
+        <PostDate>{footerContent}</PostDate>
+        <KeywordsList>{keywordsList}</KeywordsList>
       </PostHeaderFooter>
     </Container>
   )
