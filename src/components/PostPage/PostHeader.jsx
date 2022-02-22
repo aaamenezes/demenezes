@@ -5,15 +5,16 @@ import Container from '../Common/Container'
 
 const StyledPostHeader = styled.header`
   padding-top: 6.6rem;
+  padding-bottom: 3rem;
   margin-bottom: 10%;
   color: ${ ({ theme }) => theme.color.white };
-  background-image: ${ ({ theme }) => (
-    `linear-gradient(
-      to bottom,
-      ${ theme.color.blackAlt + theme.opacity.hard.hex } calc(100% - 12vw),
-      transparent calc(100% - 10vw)
-    )`
-  ) };
+  background-image: ${ ({ theme, bgImage }) => (`
+    linear-gradient(
+      ${ theme.color.redAlt9 + theme.opacity.medium.hex } 100%,
+      ${ theme.color.redAlt9 + theme.opacity.medium.hex } 100%
+    ),
+    url(${ bgImage })
+  `) };
 `
 
 const PostTitle = styled.h1`
@@ -32,7 +33,6 @@ const LeadText = styled.p`
 `
 
 const PostHeaderFooter = styled.footer`
-  margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
   text-align: right;
   font-size: ${ ({ theme }) => theme.fontSize.text };
 `
@@ -47,7 +47,7 @@ export default function PostHeader({
   const footerContent = `${ convertDate(date) } - ${ category }`
 
   return (
-    <Container as={StyledPostHeader} width='xxxl' fluid>
+    <Container as={StyledPostHeader} width='xxxl' bgImage={coverImage} fluid>
       <PostTitle>{title}</PostTitle>
       <LeadText>
         <strong>
@@ -57,7 +57,6 @@ export default function PostHeader({
       <PostHeaderFooter>
         <p>{footerContent}</p>
       </PostHeaderFooter>
-      <img src={coverImage} alt={`imagem de capa do post ${ title }`} />
     </Container>
   )
 }
