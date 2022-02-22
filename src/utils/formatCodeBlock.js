@@ -3,11 +3,11 @@ function formatSpaces(line) {
   const firstNonSpace = lineArray.find(item => item !== ' ')
   const spaceQuantity = lineArray.indexOf(firstNonSpace)
 
-  if (spaceQuantity === 0) {
+  if (spaceQuantity > 0) {
     let spaces = ''
 
     for (let i = 0; i < spaceQuantity; i++) {
-      spaces += '{" "}'
+      spaces += '.'
     }
 
     return `${ spaces }${ line.trim() }`
@@ -18,20 +18,11 @@ function formatSpaces(line) {
 
 function formatLine(line) {
   let newLine = line
-    .split(/ {/g) // troca ' {'
-    .join('{" {"}') // por '{" {"}'
-    .split(/ }/g) // troca ' }'
-    .join('{" }"}') // por '{" }"}'
+    .replace(/ {/g, '{" {"}')
+    .replace(/ }/g, '{" }"}')
 
   newLine = formatSpaces(newLine)
   return newLine
-
-  // .split(/^\s{2}/g) // troca '  '
-  // .join('{" "}{" "}') // por '{" "}{" "}' em começo linha
-  // .split(/"}\s{2}/g) // o mesmo que de cima
-  // .join('"}{" "}') // mas após chaves
-  // .split(/\n/g) // corrige as
-  // .join("{'\n'}") // quebras de linha
 }
 
 function formatPart(part) {
@@ -49,6 +40,7 @@ export function formatCodeBlock(markdown) {
         || part.startsWith('javascript')
         || part.startsWith('jsx')
         || part.startsWith('css')
+        || part.startsWith('html')
       ) {
         return formatPart(part)
       }
