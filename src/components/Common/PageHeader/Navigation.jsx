@@ -39,16 +39,16 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   ${ getBreakpoints({
     xs: css`
-      border-bottom: 1px solid ${ ({ theme }) => theme.color.gray };
+      border-bottom: 2px solid ${ ({ theme }) => theme.color.gray };
     `,
     md: css`
-      border-bottom: 1px solid ${ ({ theme, isCurrentPage, color }) => (
+      border-bottom: 2px solid ${ ({ theme, isCurrentPage, color }) => (
     isCurrentPage ? theme.color[color] : 'transparent'
   ) };
       transition: ${ ({ theme }) => theme.transition.fast };
 
       &:hover {
-        border-bottom: 1px solid ${ ({ theme, color }) => theme.color[color] };
+        border-bottom: 2px solid ${ ({ theme, color }) => theme.color[color] };
       }
     `
   }) }
