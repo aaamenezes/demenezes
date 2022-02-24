@@ -2,7 +2,6 @@ import { createGlobalStyle, css } from 'styled-components'
 import getBreakpoints from '../utils/getBreakpoints'
 
 export const GlobalStyle = createGlobalStyle`
-
   * {
     padding: 0;
     margin: 0;

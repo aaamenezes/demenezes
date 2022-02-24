@@ -8,10 +8,11 @@ import SocialMedia from '../src/components/Common/SocialMedia'
 import Container from '../src/components/Common/Container'
 import Hobbies from '../src/components/AboutPage/Hobbies'
 import ContactForm from '../src/components/AboutPage/ContactForm'
+import StyledTextBody from '../src/components/Common/StyledTextBody'
 
 function About() {
   return (
-    <>
+    <StyledTextBody>
       <Greeting />
       <Categories />
       <Story />
@@ -23,7 +24,7 @@ function About() {
       <Container as='section' width='md'>
         <p>Muito prazer!</p>
       </Container>
-    </>
+    </StyledTextBody>
   )
 }
 
