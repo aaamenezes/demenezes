@@ -2,8 +2,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Container from '../Common/Container'
+import StyledTextBody from '../Common/StyledTextBody'
 
-const StyledContactForm = styled.section`
+const StyledContactForm = styled(StyledTextBody)`
   &:first-of-type {
     padding-top: 6.6rem;
   }
