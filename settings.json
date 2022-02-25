@@ -1,20 +1,9 @@
 {
-  "METADATA": {
-    "TITLE_BASE": "deMenezes: Front-end, carreira e css-life-style",
-    "DESCRIPTION_BASE": "Um blog sobre isso, isso e isso",
-    "KEYWORDS_BASE": [
-      "front-end",
-      "programação",
-      "carreira",
-      "blog pessoal",
-      "mercado de trabalho"
-    ]
-  },
   "CATEGORIES": [
     {
       "icon": "code",
       "title": "Front-end",
-      "description": "HTML, CSS e Javascript. Componentes, construção, código e mão na massa"
+      "description": "HTML, CSS, Javascript e mão na massa"
     },
     {
       "icon": "job",
@@ -42,14 +31,20 @@
       "description": "Periféricos, acessórios, etc"
     }
   ],
-  "SRC": {
-    "FONT": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
-    "ICONS": "https://use.fontawesome.com/releases/v5.15.2/css/all.css",
-    "CODE_THEME_VS_CODE": "/style/prism/vs-code.css",
-    "CODE_THEME_DRACULA": "/style/prism/dracula.css"
+  "HOBBIES": {
+    "TITLE": "Hobbies",
+    "TEXT": "Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game."
   },
-  "PAGINATION_CONFIG": {
-    "POSTS_PER_PAGE": 5
+  "METADATA": {
+    "TITLE_BASE": "deMenezes: Front-end, carreira e css-life-style",
+    "DESCRIPTION_BASE": "Um blog sobre isso, isso e isso",
+    "KEYWORDS_BASE": [
+      "front-end",
+      "programação",
+      "carreira",
+      "blog pessoal",
+      "mercado de trabalho"
+    ]
   },
   "NAVIGATION_MENU": [
     {
@@ -63,24 +58,6 @@
     {
       "title": "Contato",
       "url": "/contact"
-    }
-  ],
-  "SOCIAL_MEDIA": [
-    {
-      "title": "github",
-      "url": "https://github.com/aaamenezes"
-    },
-    {
-      "title": "linkedin",
-      "url": "https://www.linkedin.com/in/aaamenezes"
-    },
-    {
-      "title": "twitter",
-      "url": "https://twitter.com/aaamenezes"
-    },
-    {
-      "title": "instagram",
-      "url": "https://instagram.com/aaamenezes"
     }
   ],
   "PAGES": {
@@ -119,5 +96,45 @@
       "description": "Contato deMenezes",
       "headerTemplate": "secondary"
     }
+  },
+  "PAGINATION_CONFIG": {
+    "POSTS_PER_PAGE": 5
+  },
+  "SOCIAL_MEDIA": [
+    {
+      "title": "github",
+      "url": "https://github.com/aaamenezes"
+    },
+    {
+      "title": "linkedin",
+      "url": "https://www.linkedin.com/in/aaamenezes"
+    },
+    {
+      "title": "twitter",
+      "url": "https://twitter.com/aaamenezes"
+    },
+    {
+      "title": "instagram",
+      "url": "https://instagram.com/aaamenezes"
+    }
+  ],
+  "SRC": {
+    "FONT": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+    "ICONS": "https://use.fontawesome.com/releases/v5.15.2/css/all.css",
+    "CODE_THEME_VS_CODE": "/style/prism/vs-code.css",
+    "CODE_THEME_DRACULA": "/style/prism/dracula.css"
+  },
+  "STORY": {
+    "TITLE": "Como tudo começou...",
+    "BODY": [
+      "A primeira vez que \"programei\" na vida foi durante o técnico em Redes de Computadores que fiz no Senai. Digo \"programei\", porque foi em HTML e CSS, e tem uma galera que faz treta se chamar elas de linguagem de programação. Mas sempre foi algo por hobbie mesmo, até porque eu achava muito difícil (e é).",
+      "Nas duas primeiras empresas que trabalhei como suporte eu fiz questão de criar uma intranet pra documentar os manuais do setor. Fiz isso subindo um servidorzinho com o famigerado Xampp (Apache, MySQL e PHP), mas entendia muito pouco de PHP. Isso tudo foi por volta de 2011 ~ 2013.",
+      "Dessa época até 2019 deixei a programação um pouco de lado, o máximo que fiz foi criar algumas planilhas (low code? No code? Fica o questionamento) e edição de vídeo. Vejo muitas coisas em comum entre programação e edição de vídeo, Premiere e VS Code foram amor à primeira vista.",
+      "Então foi nesse ano que eu caí de verdade no mundo da programação, num evento do Google em Porto Alegre, chamado \"Cresça com o Google. A intenção era apenas registrar as palestras para escrever um post de blog, eu trabalhava com marketing digital na época.",
+      "Assiti ao painel que falou sobre a carreira dos desenvolvedores, e fiquei encantado com a empolgação dos magníficos Bruno Souza (o Javaman) e Yara Senger.",
+      "A empolgação foi tanta que no outro dia resolvi retomar uns conceitos de HTML, CSS, me arriquei no Javascript, e confesso que foi apenas uma porta de entrada para drogas mais fortes. Hoje em dia preciso iterar uma array dia sim dia não pelo menos.",
+      "Conforme percebi que gostava de criar coisas, colocar ideias em prática, e principalmente que eu estava evoluindo nos estudos, decidi mudar de carreira.",
+      "Minha primeira vaga veio no ano seguinte, 2020. Desde então sempre foquei no front-end, criei esse blog usando 3 tecnologias que gosto muito (React, Next e Styled Componentes) com o objetivo de praticar e registrar aqui o que eu estiver aprendendo."
+    ]
   }
 }
