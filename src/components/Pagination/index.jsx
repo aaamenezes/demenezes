@@ -30,7 +30,7 @@ const PaginationButton = styled.a`
       line-height: ${ ({ theme }) => theme.lineHeight.button };
       padding: 0.66rem;
       border-radius: ${ ({ theme }) => theme.borderRadius };
-      border: 2px solid ${ ({ theme }) => theme.color.black };
+      border: 2px solid ${ ({ theme }) => theme.color.neutral_900 };
       transition: ${ ({ theme }) => theme.transition.fast };
 
       &::after {
@@ -40,13 +40,13 @@ const PaginationButton = styled.a`
         ${ ({ label }) => label === 'previous' ? 'right: 0;' : 'left: 0;' }
         height: 100%;
         width: 0;
-        background-color: ${ ({ theme }) => theme.color.red5 };
+        background-color: ${ ({ theme }) => theme.color.red_500 };
         transition: ${ ({ theme }) => theme.transition.fast };
       }
 
       &:hover {
-        color: ${ ({ theme }) => theme.color.white };
-        border-color: ${ ({ theme }) => theme.color.red5 };
+        color: ${ ({ theme }) => theme.color.neutral_50 };
+        border-color: ${ ({ theme }) => theme.color.red_500 };
         &::after {
           width: 100%;
         }

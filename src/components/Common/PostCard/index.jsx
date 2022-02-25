@@ -41,8 +41,8 @@ const PostCardStripe = styled.div`
   left: 0;
   width: 100%;
   padding: 0.44rem 0.66rem;
-  color: ${ ({ theme }) => theme.color.white };
-  background-color: ${ ({ theme }) => theme.color.red };
+  color: ${ ({ theme }) => theme.color.neutral_100 };
+  background-color: ${ ({ theme }) => theme.color.red_700 };
 `
 
 const PostCardLabel = styled.div`
@@ -51,8 +51,8 @@ const PostCardLabel = styled.div`
   top: 0;
   right: 0;
   padding: 0.44rem 0.66rem;
-  color: ${ ({ theme }) => theme.color.white };
-  background-color: ${ ({ theme }) => theme.color.red };
+  color: ${ ({ theme }) => theme.color.neutral_100 };
+  background-color: ${ ({ theme }) => theme.color.red_700 };
   font-size: ${ ({ theme }) => theme.fontSize.small };
   letter-spacing: ${ ({ theme }) => theme.letterSpacing.small };
 `

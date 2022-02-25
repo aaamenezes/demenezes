@@ -8,11 +8,11 @@ const StyledPostHeader = styled.header`
   padding-top: 6.6rem;
   padding-bottom: 3rem;
   margin-bottom: 10%;
-  color: ${ ({ theme }) => theme.color.white };
+  color: ${ ({ theme }) => theme.color.neutral_100 };
   background-image: ${ ({ theme, bgImage }) => (`
     linear-gradient(
-      ${ theme.color.redAlt9 + theme.opacity.medium.hex } 100%,
-      ${ theme.color.redAlt9 + theme.opacity.medium.hex } 100%
+      ${ theme.color.red_700 + theme.opacity.hard.hex } 100%,
+      ${ theme.color.red_700 + theme.opacity.hard.hex } 100%
     ),
     url(${ bgImage })
   `) };
@@ -56,6 +56,7 @@ const KeywordsList = styled.ul`
       flex-wrap: wrap;
       justify-content: center;
       list-style: none;
+      margin: 0;
 
       > * {
         margin-bottom: 0.5rem;
@@ -75,8 +76,8 @@ const KeywordItem = styled.li`
   padding: 0.3rem 0.5rem;
   line-height: ${ ({ theme }) => theme.lineHeight.button };
   font-size: ${ ({ theme }) => theme.fontSize.small };
-  color: ${ ({ theme }) => theme.color.white };
-  background-color: ${ ({ theme }) => theme.color.redAlt9 };
+  color: ${ ({ theme }) => theme.color.neutral_100 };
+  background-color: ${ ({ theme }) => theme.color.red_900 };
 `
 
 export default function PostHeader({

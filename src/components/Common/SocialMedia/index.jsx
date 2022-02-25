@@ -13,6 +13,7 @@ const SocialList = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none;
+  margin: 0;
   font-size: ${ ({ theme }) => theme.fontSize.text };
 `
 

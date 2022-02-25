@@ -10,7 +10,9 @@ const StyledLinkButton = styled.a`
     !inline && theme.letterSpacing.button
   ) };
   text-decoration: ${ ({ inline }) => !inline && 'none' };
-  color: ${ ({ theme, inline }) => inline ? theme.color.red : 'currentColor' };
+  color: ${ ({ theme, inline }) => (
+    inline ? theme.color.red_700 : 'currentColor'
+  ) };
 `
 
 export default function LinkButton({

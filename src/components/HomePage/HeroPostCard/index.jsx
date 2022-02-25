@@ -12,8 +12,8 @@ const HeroWrapper = styled.article`
       padding-bottom: 2.2rem;
       background-image: ${ ({ theme, image }) => css`linear-gradient(
         270deg,
-        ${ theme.color.black + theme.opacity.medium.hex },
-        ${ theme.color.black + theme.opacity.medium.hex }
+        ${ theme.color.neutral_900 + theme.opacity.medium.hex },
+        ${ theme.color.neutral_900 + theme.opacity.medium.hex }
       ), url('${ image }') ` };
       background-repeat: no-repeat;
       background-position: center;
@@ -23,8 +23,8 @@ const HeroWrapper = styled.article`
     md: css`
       background-image: ${ ({ theme, image }) => css`linear-gradient(
         270deg,
-        ${ theme.color.black + theme.opacity.hard.hex } 50%,
-        ${ theme.color.black + theme.opacity.medium.hex }
+        ${ theme.color.neutral_900 + theme.opacity.hard.hex } 55%,
+        ${ theme.color.neutral_600 + theme.opacity.medium.hex } 100%
       ), url('${ image }')` };
     `
   }) }

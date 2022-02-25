@@ -12,9 +12,7 @@ const PostCardInfosWrapper = styled.div`
       flex-direction: column;
       justify-content: space-between;
       height: ${ ({ hero }) => hero && '100%' };
-      color: ${ ({ theme, hero }) => (
-    hero ? theme.color.gray : theme.color.black
-  ) };
+      color: ${ ({ theme, hero }) => hero && theme.color.neutral_100 };
     `,
     md: css`
       width: ${ ({ wrapperWidth }) => wrapperWidth };

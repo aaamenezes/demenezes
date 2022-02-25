@@ -8,7 +8,7 @@ const boxShadow = {
 
 const breakpoints = {
   xs: 0,
-  sm: 425, // No Bootstrap era 576 mas achei próximo do MD
+  sm: 425, // No Bootstrap era 576 mas achei mto próximo do MD
   md: 768,
   lg: 992,
   xl: 1200,
@@ -17,31 +17,26 @@ const breakpoints = {
 }
 
 const color = {
-  red: '#D10015',
-  red2: '#C40014',
-  red3: '#AB0011',
-  red4: '#91000F',
-  red5: '#85000D',
-  redAlt1: '#fc1f0f',
-  redAlt2: '#d11a0d',
-  redAlt3: '#c4170b',
-  redAlt4: '#bd170b',
-  redAlt5: '#b0140a',
-  redAlt6: '#ab150a',
-  redAlt7: '#961209',
-  redAlt8: '#911209',
-  redAlt9: '#7d0f07',
-  white: '#FFFFFF',
-  gray1: '#FAFAFA',
-  gray: '#EEEEEE',
-  gray3: '#DDDDDD',
-  gray4: '#D4D4D4',
-  gray5: '#D0D0D0',
-  gray6: '#CCCCCC',
-  gray7: '#BBBBBB',
-  gray8: '#AAAAAA',
-  black: '#121212',
-  blackAlt: '#333333'
+  red_50: '#fdeaed',
+  red_100: '#fbcacf',
+  red_200: '#e89695',
+  red_300: '#db6d6c',
+  red_400: '#e34d48',
+  red_500: '#e63c2e',
+  red_600: '#d8322d',
+  red_700: '#c62827',
+  red_800: '#b92121',
+  red_900: '#aa1515',
+  neutral_50: '#ffffff', // white
+  neutral_100: '#fafafa', // white
+  neutral_200: '#f5f5f5', // gray
+  neutral_300: '#f0f0f0', // gray
+  neutral_400: '#dedede', // gray
+  neutral_500: '#c2c2c2', // gray
+  neutral_600: '#979797', // gray
+  neutral_700: '#555555', // gray
+  neutral_800: '#323232', // black
+  neutral_900: '#121212' // black
 }
 
 const fontFamily = {
@@ -126,8 +121,8 @@ const spacing = {
   h1: 3,
   h2: 2.5,
   h3: 2,
-  h4: 1,
-  text: 1
+  h4: 1.5,
+  text: 1.5
 }
 
 const opacity = {

@@ -9,12 +9,12 @@ const CategoryText = styled.p`
 const PostCardTitle = styled.h3`
   display: inline-block;
   margin: ${ ({ theme, hero }) => hero ? `${ theme.spacing.h3 }rem 0` : 0 };
-  font-size: ${ ({ theme, isCompact }) => isCompact && theme.fontSize.text };
+  font-size: ${ ({ theme, isCompact }) => isCompact && theme.fontSize.h4 };
   background-image: ${ ({ theme }) => (
     `linear-gradient(
       120deg,
-      ${ theme.color.red } 0%,
-      ${ theme.color.red5 } 100%
+      ${ theme.color.red_900 } 0%,
+      ${ theme.color.red_200 } 100%
     )`
   ) };
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@ const PostCardTitle = styled.h3`
   transition: ${ ({ theme }) => theme.transition.fast };
 
   &:hover {
-    color: ${ ({ theme }) => theme.color.white };
+    color: ${ ({ theme }) => theme.color.neutral_100 };
     background-size: 100% 108%;
   }
 `

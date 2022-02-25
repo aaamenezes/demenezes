@@ -8,7 +8,7 @@ const NewsletterForm = styled.form`
     xs: css`
       padding-top: 1.1rem;
       padding-bottom: 1.1rem;
-      background-color: ${ ({ theme }) => theme.color.gray };
+      background-color: ${ ({ theme }) => theme.color.neutral_200 };
     `
   }) }
 `

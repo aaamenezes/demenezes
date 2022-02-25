@@ -6,8 +6,8 @@ const Bar = styled.div`
   z-index: ${ ({ theme }) => theme.zIndex.fixed };
   top: 0;
   left: 0;
-  height: 4px;
-  background-color: ${ ({ theme }) => theme.color.red };
+  height: 0.2rem;
+  background-color: ${ ({ theme }) => theme.color.red_700 };
 `
 
 export default function ProgressBar() {

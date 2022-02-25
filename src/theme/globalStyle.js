@@ -24,8 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: ${ ({ theme }) => theme.fontWeight.text };
     font-family: ${ ({ theme }) => theme.fontFamily.text };
     letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
-    color: ${ ({ theme }) => theme.color.black };
-    background-color: ${ ({ theme }) => theme.color.white };
+    color: ${ ({ theme }) => theme.color.neutral_800 };
+    background-color: ${ ({ theme }) => theme.color.neutral_50 };
   }
 
   /* Já pode tirar essa coisa daqui? */

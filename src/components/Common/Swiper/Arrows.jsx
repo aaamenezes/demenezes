@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ArrowButtonStyled = styled.button`
-  color: ${ ({ theme }) => theme.color.white };
+  color: ${ ({ theme }) => theme.color.red_700 };
   pointer-events: none;
 `
 

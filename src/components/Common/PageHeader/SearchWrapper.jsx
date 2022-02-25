@@ -32,7 +32,7 @@ const SearchContent = styled.div`
       width: 100vw;
       height: 100vh;
       background-color: ${ ({ theme }) => (
-    theme.color.black + theme.opacity.hard.hex
+    theme.color.neutral_900 + theme.opacity.hard.hex
   ) };
       opacity: ${ ({ openSearch }) => openSearch ? '1' : '0' };
       transition: ${ ({ theme }) => theme.transition.medium };

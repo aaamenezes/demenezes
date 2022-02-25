@@ -17,7 +17,7 @@ const NavWrapper = styled.nav`
       width: 100vw;
       max-width: ${ ({ theme }) => `${ theme.breakpoints.sm }px` };
       height: 100vh;
-      background-color: ${ ({ theme }) => theme.color.white };
+      background-color: ${ ({ theme }) => theme.color.neutral_300 };
       transition: ${ ({ theme }) => theme.transition.medium };
     `,
     md: css`
@@ -45,7 +45,7 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   ${ getBreakpoints({
     xs: css`
-      border-bottom: 2px solid ${ ({ theme }) => theme.color.gray };
+      border-bottom: 1px solid ${ ({ theme }) => theme.color.neutral_300 };
     `,
     md: css`
       border-bottom: 2px solid ${ ({ theme, isCurrentPage, color }) => (
@@ -73,10 +73,10 @@ const NavLink = styled.a`
       display: block;
       padding: 1.1rem 5%;
       color: ${ ({ theme, isCurrentPage }) => (
-    isCurrentPage ? theme.color.white : theme.color.black
+    isCurrentPage ? theme.color.neutral_100 : theme.color.neutral_800
   ) };
       background-color: ${ ({ theme, isCurrentPage }) => (
-    isCurrentPage ? theme.color.red : theme.color.white
+    isCurrentPage ? theme.color.red_700 : theme.color.neutral_100
   ) };
     `,
     md: css`
@@ -95,7 +95,7 @@ const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: ${ ({ theme }) => (
-    theme.color.black + theme.opacity.medium.hex
+    theme.color.neutral_900 + theme.opacity.medium.hex
   ) };
   opacity: ${ ({ openMenu }) => openMenu ? '1' : '0' };
   transition: ${ ({ theme }) => theme.transition.medium };
@@ -125,7 +125,7 @@ export default function Navigation({ openMenu, toggleMenu }) {
       || (CURRENT_PAGE === 'listing' && menu.title === 'Home')
     )
 
-    const color = HEADER_TEMPLATE === 'primary' ? 'white' : 'black'
+    const color = HEADER_TEMPLATE === 'primary' ? 'neutral_100' : 'neutral_900'
 
     return (
       <NavItem key={menu.title} isCurrentPage={isCurrentPage} color={color}>
@@ -151,7 +151,7 @@ export default function Navigation({ openMenu, toggleMenu }) {
         <ToggleModalButton
           onClick={toggleMenu}
           icon='close'
-          color='blackAlt'
+          color='neutral_800'
           as={CloseMenuMobileButton}
         />
       </NavWrapper>

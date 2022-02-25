@@ -6,10 +6,10 @@ const StyledHighlightText = styled.div`
   background-image: ${ ({ theme }) => (
     `linear-gradient(
       179deg,
-      ${ theme.color.white } 29px,
-      ${ theme.color.redAlt5 } 30px,
-      ${ theme.color.redAlt5 } calc(100% - 30px),
-      ${ theme.color.white } calc(100% - 29px)
+      ${ theme.color.neutral_50 } 29px,
+      ${ theme.color.red_600 } 30px,
+      ${ theme.color.red_600 } calc(100% - 30px),
+      ${ theme.color.neutral_50 } calc(100% - 29px)
     )`
   ) };
 `
@@ -18,7 +18,7 @@ const TextWrapper = styled.div`
   padding-top: 4.4rem;
   padding-bottom: 4.4rem;
   margin-bottom: 0;
-  color: ${ ({ theme }) => theme.color.white };
+  color: ${ ({ theme }) => theme.color.neutral_50 };
 `
 
 export default function HighlightText({ children }) {

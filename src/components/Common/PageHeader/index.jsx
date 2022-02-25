@@ -23,7 +23,7 @@ const HeaderWrapper = styled.header`
   color: ${ ({ theme, headerColor }) => theme.color[headerColor] };
   background-color: ${ ({ theme, CURRENT_PAGE }) => (
     (CURRENT_PAGE === 'listing' || CURRENT_PAGE === 'post') && (
-      theme.color.black + theme.opacity.hard.hex
+      theme.color.neutral_900 + theme.opacity.hard.hex
     )
   ) };
   transition: ${ ({ theme }) => theme.transition.medium };
@@ -54,8 +54,8 @@ export default function PageHeader() {
 
   const headerColor = (HEADER_TEMPLATE === 'primary' && openHeader)
   || (CURRENT_PAGE === 'listing' && !openHeader)
-    ? 'white'
-    : 'black'
+    ? 'neutral_50'
+    : 'neutral_900'
 
   return (
     <Container

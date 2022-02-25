@@ -64,11 +64,12 @@ export default function Swiper({ slides }) {
           }
 
           ul.swiper-wrapper {
+            margin: 0;
             list-style: none;
           }
 
           .swiper-pagination-bullet.swiper-pagination-bullet-active {
-            background-color: ${ theme.color.red };
+            background-color: ${ theme.color.red_700 };
           }
         `}
       </style>
