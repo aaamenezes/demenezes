@@ -8,6 +8,7 @@ const CategoryText = styled.p`
 
 const PostCardTitle = styled.h3`
   display: inline-block;
+  margin: ${ ({ theme, hero }) => hero ? `${ theme.spacing.h3 }rem 0` : 0 };
   font-size: ${ ({ theme, isCompact }) => isCompact && theme.fontSize.text };
   background-image: ${ ({ theme }) => (
     `linear-gradient(
