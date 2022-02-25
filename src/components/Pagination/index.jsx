@@ -27,6 +27,7 @@ const PaginationButton = styled.a`
       align-items: center;
       width: 100%;
       text-align: center;
+      line-height: ${ ({ theme }) => theme.lineHeight.button };
       padding: 0.66rem;
       border-radius: ${ ({ theme }) => theme.borderRadius };
       border: 2px solid ${ ({ theme }) => theme.color.black };
