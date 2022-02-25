@@ -54,13 +54,17 @@ export default function Swiper({ slides }) {
         pagination={{ clickable: true }}
       >
         {postsList}
-        {/* <ArrowButton direction='prev' />
-      <ArrowButton direction='next' /> */}
+        {/* <ArrowButton direction='prev' /> */}
+        {/* <ArrowButton direction='next' /> */}
       </SwiperContainer>
       <style>
         {`
           .swiper-container {
             padding-bottom: 3rem;
+          }
+
+          ul.swiper-wrapper {
+            list-style: none;
           }
 
           .swiper-pagination-bullet.swiper-pagination-bullet-active {
