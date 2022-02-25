@@ -10,8 +10,9 @@ import PostComments from '../../src/components/PostPage/PostComments'
 import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 import ProgressBar from '../../src/components/PostPage/ProgressBar'
 import Image from '../../src/components/Common/Image'
+import LinkButton from '../../src/components/Common/LinkButton'
 
-const components = { Image }
+const components = { Image, LinkButton }
 
 const PostPage = styled.main`
   margin-bottom: 10%;

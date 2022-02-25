@@ -5,12 +5,12 @@ import Icon from '../Icon'
 
 const StyledLinkButton = styled.a`
   display: ${ ({ inline }) => inline ? 'inline' : 'block' };
-  font-weight: ${ ({ theme }) => theme.fontWeight.button };
+  font-weight: ${ ({ theme, inline }) => !inline && theme.fontWeight.button };
   letter-spacing: ${ ({ theme, inline }) => (
     !inline && theme.letterSpacing.button
   ) };
   text-decoration: ${ ({ inline }) => !inline && 'none' };
-  color: currentColor;
+  color: ${ ({ theme, inline }) => inline ? theme.color.red : 'currentColor' };
 `
 
 export default function LinkButton({
@@ -28,12 +28,11 @@ export default function LinkButton({
       <NextLink href={href} passHref>
         <StyledLinkButton
           target={external ? '_blank' : '_self'}
-          rel={external ? 'noopener external' : 'same'}
+          rel={external ? 'noopener noreferrer external' : 'same'}
           inline={inline}
           {...props}
         >
           {children}
-          {' '}
           {external && inline && <Icon name='external' inline />}
         </StyledLinkButton>
       </NextLink>

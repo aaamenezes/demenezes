@@ -5,13 +5,14 @@ import getBreakpoints from '../../../utils/getBreakpoints'
 const StyledIcon = styled.i`
   ${ getBreakpoints({
     xs: css`
-      padding: 0.66rem 0.88rem;
+      padding: ${ ({ external }) => !external && '0.66rem 0.88rem' };
+      font-size: ${ ({ external }) => external && '0.7rem' };
       color: ${ ({ color }) => color || 'currentColor' };
       transition: ${ ({ theme }) => theme.transition.fast };
     `,
     md: css`
       &:hover {
-        transform: scale(1.5);
+        transform: ${ ({ external }) => !external && 'scale(1.5)' };
         color: ${ ({ color }) => color };
       }
     `
@@ -78,11 +79,15 @@ export default function Icon({ name, inline }) {
     )
   case 'external':
     return (
-      <StyledIcon
-        className='fas fa-external-link-alt'
-        name={name}
-        inline={inline}
-      />
+      <>
+        {' '}
+        <StyledIcon
+          className='fas fa-external-link-alt'
+          name={name}
+          inline={inline}
+          external
+        />
+      </>
     )
   case 'close':
     return (
