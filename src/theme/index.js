@@ -1,4 +1,4 @@
-const borderRadius = '4px'
+const borderRadius = '0.5rem'
 
 const boxShadow = {
   low: '0 0 40px -30px black',

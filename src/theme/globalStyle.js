@@ -28,19 +28,17 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${ ({ theme }) => theme.color.white };
   }
 
+  /* Já pode tirar essa coisa daqui? */
   #__next {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
+  /* */
 
   nav {
     line-height: ${ ({ theme }) => theme.lineHeight.button };
     font-size: ${ ({ theme }) => theme.fontSize.small };
-  }
-
-  li {
-    list-style: none;
   }
 
   h1 {
@@ -53,6 +51,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
+    margin-top: ${ ({ theme }) => `${ theme.spacing.h2 * 3 }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
     text-align: center;
     line-height: ${ ({ theme }) => theme.lineHeight.h2 };
     font-size: ${ ({ theme }) => theme.fontSize.h2 };
@@ -62,6 +62,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
+    margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 3 }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
     text-align: left;
     line-height: ${ ({ theme }) => theme.lineHeight.h3 };
     font-size: ${ ({ theme }) => theme.fontSize.h3 };
@@ -71,6 +73,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h4 {
+    margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
     text-align: left;
     line-height: ${ ({ theme }) => theme.lineHeight.h4 };
     font-size: ${ ({ theme }) => theme.fontSize.h4 };
@@ -79,29 +83,51 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
   }
 
-  pre {
-    border: none !important;
-    border-radius: 0 !important;
+  ul {
+    margin-left: 2rem;
   }
 
+  p:not(:first-child):not(:last-child),
+  ul:not(:first-child):not(:last-child) {
+    margin-top: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+  }
+  
   a {
     color: currentColor;
   }
-
+  
   button {
     border: none;
     outline: none;
     background-color: transparent;
   }
-
+  
   strong {
     font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
   }
-
+  
   img {
     display: block;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  pre[class*="language-"] {
+    padding: 2rem;
+    border: none;
+    border-radius: ${ ({ theme }) => theme.borderRadius };
+  }
+
+  code[class*="language-"] {
+    padding: 0.3rem;
+  }
+  
+  img:not(:first-child):not(:last-child),
+  iframe:not(:first-child):not(:last-child),
+  pre[class*="language-"]:not(:first-child):not(:last-child) {
+    margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
   }
 
   iframe {

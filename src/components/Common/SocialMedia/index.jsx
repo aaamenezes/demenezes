@@ -12,6 +12,8 @@ const SocialMediaWrapper = styled.nav`
 const SocialList = styled.ul`
   display: flex;
   justify-content: space-around;
+  list-style: none;
+  font-size: ${ ({ theme }) => theme.fontSize.text };
 `
 
 export default function SocialMedia({ center }) {

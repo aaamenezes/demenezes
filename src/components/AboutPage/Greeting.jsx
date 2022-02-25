@@ -29,6 +29,10 @@ const ImageWrapper = styled.div`
   }) }
 `
 
+const GreetingTitle = styled.h2`
+  margin-top: 0;
+`
+
 export default function Greeting() {
   return (
     <Container as={StyledGreeting} width='lg'>
@@ -40,7 +44,7 @@ export default function Greeting() {
         />
       </ImageWrapper>
       <HiddenA11Y tag='h1'>Página sobre</HiddenA11Y>
-      <h2>Que bom que vc está aqui!</h2>
+      <GreetingTitle>Que bom que vc está aqui!</GreetingTitle>
       <p>Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise.</p>
     </Container>
   )

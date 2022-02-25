@@ -6,12 +6,17 @@ import Container from '../Common/Container'
 import Icon from '../Common/Icon'
 import settings from '../../../settings.json'
 
+const CategoriesTitle = styled.h2`
+  margin-top: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+`
+
 const CategoriesList = styled.ul`
   ${ getBreakpoints({
     xs: css`
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 2.64rem;
+      margin: 0;
       text-align: center;
     `,
     sm: css`
@@ -33,7 +38,7 @@ const CategoryItem = styled.li`
       width: 100%;
       padding: 0.88rem;
       margin: 0 auto;
-      box-shadow: ${ ({ theme }) => theme.boxShadow.low };
+      box-shadow: none;
       transition: ${ ({ theme }) => theme.transition.fast };
       
       &:hover {
@@ -62,6 +67,14 @@ const CategoryItemHeader = styled.header`
   }) }
 `
 
+const CategoryItemTitle = styled.h3`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
+`
+
 const CategoryText = styled.p`
   ${ getBreakpoints({
     md: css`
@@ -79,11 +92,14 @@ export default function Categories() {
   const CategoryItems = CATEGORIES.map(({ icon, title, description }) => (
     <CategoryItem key={title}>
       <CategoryItemHeader>
-        <h3>
-          <Icon name={icon} color='black' inline />
-          {' '}
+        <CategoryItemTitle>
+          <Icon
+            name={icon}
+            color='black'
+            inline
+          />
           <span>{title}</span>
-        </h3>
+        </CategoryItemTitle>
       </CategoryItemHeader>
       <CategoryText>{ description }</CategoryText>
     </CategoryItem>
@@ -92,9 +108,9 @@ export default function Categories() {
   return (
     <Container as='section' width='xl'>
       <header>
-        <h2>
+        <CategoriesTitle>
           Categorias: o que tem por aqui
-        </h2>
+        </CategoriesTitle>
       </header>
 
       <CategoriesList>
