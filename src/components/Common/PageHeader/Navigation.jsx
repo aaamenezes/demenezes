@@ -31,8 +31,14 @@ const NavWrapper = styled.nav`
 
 const NavList = styled.ul`
   ${ getBreakpoints({
-    xs: css`display: block;`,
-    md: css`display: flex;`
+    xs: css`
+      display: block;
+      margin: 0;
+      list-style: none;
+    `,
+    md: css`
+      display: flex;
+    `
   }) };
 `
 
