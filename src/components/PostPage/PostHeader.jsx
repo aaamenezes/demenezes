@@ -55,6 +55,7 @@ const KeywordsList = styled.ul`
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      list-style: none;
 
       > * {
         margin-bottom: 0.5rem;
