@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react'
 import Prism from 'prismjs'
 import { MDXRemote } from 'next-mdx-remote'
+import styled from 'styled-components'
 import Container from '../Common/Container'
-import StyledTextBody from '../Common/StyledTextBody'
+
+const StyledPostContent = styled.div`
+  overflow: hidden;
+`
 
 export default function PostContent({ mdxContent, components }) {
   useEffect(() => {
@@ -11,7 +15,7 @@ export default function PostContent({ mdxContent, components }) {
 
   return (
     <Container
-      as={StyledTextBody}
+      as={StyledPostContent}
       width='lg'
       spacing='0'
       // dangerouslySetInnerHTML={{ __html: content }}
