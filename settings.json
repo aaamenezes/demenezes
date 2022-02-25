@@ -31,6 +31,16 @@
       "description": "Periféricos, acessórios, etc"
     }
   ],
+  "GREETING": {
+    "IMAGE": {
+      "SRC": "https://pbs.twimg.com/profile_images/1452832195173826561/b6Pd2RHx_400x400.jpg",
+      "ALT": "Foto de perfil",
+      "RATIO": "4x3"
+    },
+    "TITLE": "Página sobre",
+    "SUBTITLE": "Que bom que vc está aqui!",
+    "TEXT": "Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise."
+  },
   "HOBBIES": {
     "TITLE": "Hobbies",
     "TEXT": "Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game."

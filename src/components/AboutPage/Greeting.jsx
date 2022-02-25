@@ -5,6 +5,7 @@ import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import CropedImage from '../Common/CropedImage'
 import HiddenA11Y from '../Common/HiddenA11Y'
+import settings from '../../../settings.json'
 
 const StyledGreeting = styled.section`
   ${ getBreakpoints({
@@ -33,19 +34,28 @@ const GreetingTitle = styled.h2`
   margin-top: 0;
 `
 
+const GreetingText = styled.p`
+  ${ getBreakpoints({
+    xs: css`text-align: center;`,
+    md: css`text-align: left;`
+  }) }
+`
+
 export default function Greeting() {
+  const { GREETING } = settings
+
   return (
     <Container as={StyledGreeting} width='lg'>
       <ImageWrapper>
         <CropedImage
-          src='https://pbs.twimg.com/profile_images/1452832195173826561/b6Pd2RHx_400x400.jpg'
-          alt='Foto de perfil'
-          ratio='4x3'
+          src={GREETING.IMAGE.SRC}
+          alt={GREETING.IMAGE.ALT}
+          ratio={GREETING.IMAGE.RATIO}
         />
       </ImageWrapper>
-      <HiddenA11Y tag='h1'>Página sobre</HiddenA11Y>
-      <GreetingTitle>Que bom que vc está aqui!</GreetingTitle>
-      <p>Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise.</p>
+      <HiddenA11Y tag='h1'>{GREETING.TITLE}</HiddenA11Y>
+      <GreetingTitle>{GREETING.SUBTITLE}</GreetingTitle>
+      <GreetingText>{GREETING.TEXT}</GreetingText>
     </Container>
   )
 }
