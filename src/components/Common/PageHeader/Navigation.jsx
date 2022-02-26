@@ -48,16 +48,34 @@ const NavItem = styled.li`
       border-bottom: 1px solid ${ ({ theme }) => theme.color.neutral_300 };
     `,
     md: css`
-      border-bottom: 2px solid ${ ({ theme, isCurrentPage }) => (
-    isCurrentPage ? theme.color.neutral_50 : 'transparent'
-  ) };
-      transition: ${ ({ theme }) => theme.transition.fast };
-
-      &:hover {
-        border-bottom: 2px solid ${ ({ theme }) => theme.color.neutral_50 };
-      }
+      position: relative;
+      border: none;
     `
   }) }
+
+  &::after {
+    ${ getBreakpoints({
+    md: css`
+      content: '';
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+      width: ${ ({ isCurrentPage }) => isCurrentPage ? '100%' : '0' };
+      height: 2px;
+      background-color: ${ ({ theme }) => theme.color.neutral_100 };
+      transition: ${ ({ theme }) => theme.transition.fast };
+    `
+  }) }
+  }
+
+  &:hover::after {
+    ${ getBreakpoints({
+    md: css`
+      width: 100%;
+    `
+  }) }
+  }
 
   &:first-child {
     ${ getBreakpoints({
