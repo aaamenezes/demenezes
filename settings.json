@@ -75,36 +75,31 @@
       "pageTitle": "Home",
       "url": "/",
       "keywords": ["pagina inicial", "home"],
-      "description": "",
-      "headerTemplate": "primary"
+      "description": ""
     },
     "listing": {
       "pageTitle": "Home",
       "url": "/page/[page]",
       "keywords": ["pagina inicial", "home"],
-      "description": "",
-      "headerTemplate": "primary"
+      "description": ""
     },
     "post": {
       "pageTitle": "Artigo",
       "url": "/posts/[slug]",
       "keywords": ["pagina de posts"],
-      "description": "",
-      "headerTemplate": "primary"
+      "description": ""
     },
     "about": {
       "pageTitle": "Sobre",
       "url": "/about",
       "keywords": [ "sobre mim", "sobre o blog", "sobre o blog deMenezes", "página sobre" ],
-      "description": "Sobre o blog deMenezes",
-      "headerTemplate": "secondary"
+      "description": "Sobre o blog deMenezes"
     },
     "contact": {
       "pageTitle": "Contato",
       "url": "/contact",
       "keywords": ["contato", "contato André de Menezes", "contato deMenezes", "página contato"],
-      "description": "Contato deMenezes",
-      "headerTemplate": "secondary"
+      "description": "Contato deMenezes"
     }
   },
   "PAGINATION_CONFIG": {

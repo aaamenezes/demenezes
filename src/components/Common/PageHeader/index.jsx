@@ -20,11 +20,9 @@ const HeaderWrapper = styled.header`
   align-items: center;
   padding-top: 0.66rem;
   padding-bottom: 0.66rem;
-  color: ${ ({ theme, headerColor }) => theme.color[headerColor] };
-  background-color: ${ ({ theme, CURRENT_PAGE }) => (
-    (CURRENT_PAGE === 'listing' || CURRENT_PAGE === 'post') && (
-      theme.color.neutral_900 + theme.opacity.hard.hex
-    )
+  color: ${ ({ theme }) => theme.color.neutral_100 };
+  background-color: ${ ({ theme, currentPage }) => (
+    currentPage === 'home' ? 'transparent' : theme.color.neutral_900
   ) };
   transition: ${ ({ theme }) => theme.transition.medium };
 `
@@ -40,11 +38,13 @@ const ToggleMenuButton = styled.button`
 export default function PageHeader() {
   const [ openMenu, setOpenMenu ] = useState(false)
   const [ openHeader, setOpenHeader ] = useState(true)
-  const { CURRENT_PAGE, HEADER_TEMPLATE } = getPageInfos()
+  const { CURRENT_PAGE } = getPageInfos()
 
   function toggleMenu() {
     setOpenMenu(!openMenu)
   }
+
+  console.log('CURRENT_PAGE:', CURRENT_PAGE)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -52,19 +52,13 @@ export default function PageHeader() {
     })
   }, [])
 
-  const headerColor = (HEADER_TEMPLATE === 'primary' && openHeader)
-  || (CURRENT_PAGE === 'listing' && !openHeader)
-    ? 'neutral_50'
-    : 'neutral_900'
-
   return (
     <Container
       as={HeaderWrapper}
       width='xxxl'
       fluid
-      CURRENT_PAGE={CURRENT_PAGE}
-      headerColor={headerColor}
       openHeader={openHeader}
+      currentPage={CURRENT_PAGE}
     >
       <Logowrapper />
       <ToggleModalButton

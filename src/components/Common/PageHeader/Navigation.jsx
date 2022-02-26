@@ -48,13 +48,13 @@ const NavItem = styled.li`
       border-bottom: 1px solid ${ ({ theme }) => theme.color.neutral_300 };
     `,
     md: css`
-      border-bottom: 2px solid ${ ({ theme, isCurrentPage, color }) => (
-    isCurrentPage ? theme.color[color] : 'transparent'
+      border-bottom: 2px solid ${ ({ theme, isCurrentPage }) => (
+    isCurrentPage ? theme.color.neutral_50 : 'transparent'
   ) };
       transition: ${ ({ theme }) => theme.transition.fast };
 
       &:hover {
-        border-bottom: 2px solid ${ ({ theme, color }) => theme.color[color] };
+        border-bottom: 2px solid ${ ({ theme }) => theme.color.neutral_50 };
       }
     `
   }) }
@@ -81,7 +81,7 @@ const NavLink = styled.a`
     `,
     md: css`
       padding: 0.88rem;
-      color: ${ ({ theme, color }) => theme.color[color] };
+      color: ${ ({ theme }) => theme.color.neutral_50 };
       background-color: transparent;
     `
   }) }
@@ -117,7 +117,7 @@ const CloseMenuMobileButton = styled.button`
 
 export default function Navigation({ openMenu, toggleMenu }) {
   const router = useRouter()
-  const { CURRENT_PAGE, HEADER_TEMPLATE } = getPageInfos()
+  const { CURRENT_PAGE } = getPageInfos()
 
   const navigationElements = settings.NAVIGATION_MENU.map(menu => {
     const isCurrentPage = (
@@ -125,16 +125,9 @@ export default function Navigation({ openMenu, toggleMenu }) {
       || (CURRENT_PAGE === 'listing' && menu.title === 'Home')
     )
 
-    const color = HEADER_TEMPLATE === 'primary' ? 'neutral_100' : 'neutral_900'
-
     return (
-      <NavItem key={menu.title} isCurrentPage={isCurrentPage} color={color}>
-        <LinkButton
-          href={menu.url}
-          as={NavLink}
-          color={color}
-          isCurrentPage={isCurrentPage}
-        >
+      <NavItem key={menu.title} isCurrentPage={isCurrentPage}>
+        <LinkButton as={NavLink} href={menu.url} isCurrentPage={isCurrentPage}>
           {menu.title}
         </LinkButton>
       </NavItem>

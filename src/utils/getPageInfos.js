@@ -7,9 +7,6 @@ export function getPageInfos() {
   const CURRENT_PAGE = Object.entries(PAGES).find(
     entry => entry[1].url === router.pathname
   )[0]
-  const HEADER_TEMPLATE = Object.entries(PAGES).find(
-    entry => entry[0] === CURRENT_PAGE
-  )[1].headerTemplate
 
-  return { CURRENT_PAGE, HEADER_TEMPLATE }
+  return { CURRENT_PAGE }
 }
