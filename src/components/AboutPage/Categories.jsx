@@ -15,16 +15,17 @@ const CategoriesList = styled.ul`
     xs: css`
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: 2.64rem;
+      grid-gap: 1rem;
       margin: 0;
       text-align: center;
     `,
-    sm: css`
+    md: css`
       grid-template-columns: 1fr 1fr;
-      grid-gap: 3.3rem;
+      grid-gap: 2rem;
     `,
     xl: css`
       grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3rem;
     `
   }) }
 `
@@ -34,13 +35,13 @@ const CategoryItem = styled.li`
     xs: css`
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 100%;
-      padding: 0.88rem;
+      padding: 2rem;
       margin: 0 auto;
       box-shadow: none;
       transition: ${ ({ theme }) => theme.transition.fast };
-      
+
       &:hover {
         box-shadow: ${ ({ theme }) => theme.boxShadow.high };
 
@@ -56,29 +57,23 @@ const CategoryItem = styled.li`
   }) }
 `
 
-const CategoryItemHeader = styled.header`
-  ${ getBreakpoints({
-    xs: css`
-      margin-bottom: 0.44rem;
-    `,
-    md: css`
-      margin-bottom: 0;
-    `
-  }) }
-`
-
 const CategoryItemTitle = styled.h3`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
+  margin-top: 0;
+  margin-bottom: 1rem;
 `
 
 const CategoryText = styled.p`
   ${ getBreakpoints({
     md: css`
-      margin: auto;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
       transition: ${ ({ theme }) => theme.transition.fast };
     `,
     xl: css`
@@ -91,16 +86,14 @@ export default function Categories() {
   const { CATEGORIES } = settings
   const CategoryItems = CATEGORIES.map(({ icon, title, description }) => (
     <CategoryItem key={title}>
-      <CategoryItemHeader>
-        <CategoryItemTitle>
-          <Icon
-            name={icon}
-            color='black'
-            inline
-          />
-          <span>{title}</span>
-        </CategoryItemTitle>
-      </CategoryItemHeader>
+      <CategoryItemTitle>
+        <Icon
+          name={icon}
+          color='black'
+          inline
+        />
+        <span>{title}</span>
+      </CategoryItemTitle>
       <CategoryText>{ description }</CategoryText>
     </CategoryItem>
   ))
