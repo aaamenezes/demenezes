@@ -3,11 +3,24 @@ import styled from 'styled-components'
 import LinkButton from '../LinkButton'
 
 const LogoLink = styled.a`
+  position: relative;
   display: block;
   transition: ${ ({ theme }) => theme.transition.fast };
 
-  &:hover {
-    transform: scale(1.5);
+  &::after {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: ${ ({ theme }) => theme.color.neutral_100 };
+    transition: ${ ({ theme }) => theme.transition.fast };
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 `
 
