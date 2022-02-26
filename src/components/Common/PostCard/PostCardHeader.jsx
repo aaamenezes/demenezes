@@ -14,7 +14,7 @@ const PostCardTitle = styled.h3`
     `linear-gradient(
       120deg,
       ${ theme.color.red_900 } 0%,
-      ${ theme.color.red_200 } 100%
+      ${ theme.color.red_500 } 100%
     )`
   ) };
   background-repeat: no-repeat;
