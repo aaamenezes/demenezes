@@ -100,7 +100,24 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     outline: none;
+    font-size: ${ ({ theme }) => theme.fontSize.small };
     background-color: transparent;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-top: ${ ({ theme }) => `${ theme.spacing.small }rem` };
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.small }rem` };
+    border: none;
+    font-family: ${ ({ theme }) => theme.fontFamily.text };
+    font-size: ${ ({ theme }) => theme.fontSize.small };
+    color: ${ ({ theme }) => theme.color.neutral_800 };
+    background-color: ${ ({ theme }) => theme.color.neutral_50 };
+
+    &:focus {
+      outline: none;
+    }
   }
   
   strong {

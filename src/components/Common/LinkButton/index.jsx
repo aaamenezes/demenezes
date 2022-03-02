@@ -10,9 +10,8 @@ const StyledLinkButton = styled.a`
     !inline && theme.letterSpacing.button
   ) };
   text-decoration: ${ ({ inline }) => !inline && 'none' };
-  color: ${ ({ theme, inline }) => (
-    inline ? theme.color.red_700 : 'currentColor'
-  ) };
+  color: ${ ({ theme, inline }) => inline && theme.color.red_700 };
+  cursor: pointer;
 `
 
 export default function LinkButton({
@@ -47,6 +46,7 @@ export default function LinkButton({
       as='button'
       disabled={disabled}
       onClick={handleClick && (() => handleClick())}
+      {...props}
     >
       {children}
     </StyledLinkButton>

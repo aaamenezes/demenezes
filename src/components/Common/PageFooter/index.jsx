@@ -14,6 +14,7 @@ const FooterWrapper = styled.footer`
       padding: 2.2rem;
       margin-top: auto;
       margin-bottom: 0;
+      color: ${ ({ theme }) => theme.color.neutral_100 };
       background-color: ${ ({ theme }) => theme.color.neutral_900 };
 
       > *:not(:last-child) {

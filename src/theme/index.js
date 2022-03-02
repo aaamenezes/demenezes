@@ -107,14 +107,6 @@ const lineHeight = {
   h4: 1.7, // articleSubtitle
   button: 1,
   text: 2 // p, a, span
-  // small: '0.75rem',
-  // base: {
-  //   xs: '18px',
-  //   sm: '18px',
-  //   md: '19px',
-  //   lg: '19px',
-  //   xl: '20px'
-  // }
 }
 
 const spacing = {
@@ -122,7 +114,8 @@ const spacing = {
   h2: 2.5,
   h3: 2,
   h4: 1.5,
-  text: 1.5
+  text: 1.5,
+  small: 1
 }
 
 const opacity = {

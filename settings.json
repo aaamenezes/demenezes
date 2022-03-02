@@ -31,6 +31,18 @@
       "description": "Periféricos, acessórios, etc"
     }
   ],
+  "FORM": {
+    "CONTACT": {
+      "TITLE": "Fala comigo",
+      "TEXT_1": "Quer falar sobre algum projeto, carreira, mercado de trabalho, ou apenas conversar sobre como é prazeroso usar `display: grid;`?",
+      "TEXT_2": "Me deixa uma mensagem aí:",
+      "MAILCHIMP_IFRAME_SRC": "https://us14.list-manage.com/contact-form?u=931f7d0fb92503537ca06456d&form_id=6cf26ac7ffbdc6a1ed1d3d68e38faf59"
+    },
+    "SIGNUP": {
+      "TITLE": "Inscreva-se para receber as novidades do blog por email:",
+      "MAILCHIMP_FORM_ACTION": "https://dedv.us14.list-manage.com/subscribe/post?u=931f7d0fb92503537ca06456d&amp;id=4b0ff01e85"
+    }
+  },
   "GREETING": {
     "IMAGE": {
       "SRC": "https://pbs.twimg.com/profile_images/1452832195173826561/b6Pd2RHx_400x400.jpg",
