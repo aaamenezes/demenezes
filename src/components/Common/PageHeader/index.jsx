@@ -44,8 +44,6 @@ export default function PageHeader() {
     setOpenMenu(!openMenu)
   }
 
-  console.log('CURRENT_PAGE:', CURRENT_PAGE)
-
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setOpenHeader(window.scrollY < window.innerHeight)
