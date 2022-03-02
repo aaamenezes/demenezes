@@ -34,7 +34,6 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     min-height: 100vh;
   }
-  /* */
 
   nav {
     line-height: ${ ({ theme }) => theme.lineHeight.button };
@@ -134,6 +133,21 @@ export const GlobalStyle = createGlobalStyle`
     padding: 2rem;
     border: none;
     border-radius: ${ ({ theme }) => theme.borderRadius };
+  }
+
+  code:not([class*="language-"]) {
+    ${ getBreakpoints({
+    xs: css`
+      display: inline-block;
+      padding: 0.5rem 0.5rem;
+      border-radius: ${ ({ theme }) => theme.borderRadius };
+      color: ${ ({ theme }) => theme.color.neutral_100 };
+      background-color: ${ ({ theme }) => theme.color.neutral_800 };
+    `,
+    md: css`
+      line-height: 1;
+    `
+  }) }
   }
 
   code[class*="language-"] {

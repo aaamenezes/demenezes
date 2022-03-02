@@ -1,4 +1,4 @@
-const borderRadius = '0.5rem'
+const borderRadius = '0.3rem'
 
 const boxShadow = {
   low: '0 0 40px -30px black',
@@ -96,8 +96,7 @@ const letterSpacing = {
   h3: '-0.5px', // articleTitle
   h4: '0', // articleSubtitle
   button: '1.5px', // articleTitle
-  text: '0', // p, a, span
-  small: '1.5px'
+  text: '0' // p, a, span
 }
 
 const lineHeight = {
