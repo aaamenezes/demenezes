@@ -9,7 +9,15 @@ const CategoryText = styled.p`
 const PostCardTitle = styled.h3`
   display: inline-block;
   margin: ${ ({ theme, hero }) => hero ? `${ theme.spacing.h3 }rem 0` : 0 };
-  font-size: ${ ({ theme, isCompact }) => isCompact && theme.fontSize.h4 };
+  font-size: ${ ({ theme, isCompact }) => (
+    isCompact ? theme.fontSize.h4 : theme.fontSize.h3
+  ) };
+  line-height: ${ ({ theme, isCompact }) => (
+    isCompact ? theme.lineHeight.h4 : theme.lineHeight.h3
+  ) };
+  letter-spacing: ${ ({ theme, isCompact }) => (
+    isCompact ? theme.letterSpacing.h4 : theme.letterSpacing.h3
+  ) };
   background-image: ${ ({ theme }) => (
     `linear-gradient(
       120deg,

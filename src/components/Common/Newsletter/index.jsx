@@ -8,6 +8,9 @@ import LinkButton from '../LinkButton'
 import settings from '../../../../settings.json'
 
 const NewsletterTitle = styled.h3`
+  font-size: ${ ({ theme }) => theme.fontSize.h3 };
+  line-height: ${ ({ theme }) => theme.lineHeight.h3 };
+  letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
   margin-top: 0;
   text-align: center;
 `

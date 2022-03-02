@@ -23,14 +23,24 @@ const PostTitle = styled.h1`
 `
 
 const LeadText = styled.p`
-  margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
-  line-height: ${ ({ theme }) => theme.lineHeight.h4 };
-  font-size: ${ ({ theme }) => theme.fontSize.h4 };
-  text-align: center;
+  ${ getBreakpoints({
+    xs: css`
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+      line-height: ${ ({ theme }) => theme.lineHeight.text };
+      font-size: ${ ({ theme }) => theme.fontSize.text };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
+      text-align: center;
 
-  strong {
-    font-weight: ${ ({ theme }) => theme.fontWeight.text };
-  }
+      strong {
+        font-weight: ${ ({ theme }) => theme.fontWeight.text };
+      }
+    `,
+    md: css`
+      line-height: ${ ({ theme }) => theme.lineHeight.h4 };
+      font-size: ${ ({ theme }) => theme.fontSize.h4 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
+    `
+  }) }
 `
 
 const PostHeaderFooter = styled.footer`

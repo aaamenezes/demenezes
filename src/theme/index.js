@@ -40,13 +40,20 @@ const color = {
 }
 
 const fontFamily = {
-  h1: 'Ubuntu, sans-serif',
-  h2: 'Ubuntu, sans-serif',
-  h3: 'Ubuntu, sans-serif',
-  h4: 'Ubuntu, sans-serif',
+  title: 'Ubuntu, sans-serif',
   text: '"Montserrat", sans-serif',
-  code: 'Ubuntu Mono, sans-serif'
-  // Fontes reservas caso dê ruim
+
+  /**
+   * Fonte para código no post
+   * Mas foi substituído pelo estilo do PrismJS
+   */
+
+  // code: 'Ubuntu Mono, sans-serif'
+
+  /**
+   * Fontes reservas caso dê ruim
+   */
+
   // fontFamily: 'Raleway, sans-serif',
   // fontFamily: 'Open Sans, sans-serif',
 }

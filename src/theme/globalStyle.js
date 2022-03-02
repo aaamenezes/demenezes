@@ -40,46 +40,112 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${ ({ theme }) => theme.fontSize.small };
   }
 
+  h1, h2, h3, h4 {
+    font-family: ${ ({ theme }) => theme.fontFamily.title };
+  }
+
   h1 {
-    text-align: center;
-    line-height: ${ ({ theme }) => theme.lineHeight.h1 };
-    font-size: ${ ({ theme }) => theme.fontSize.h1 };
-    font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
-    font-family: ${ ({ theme }) => theme.fontFamily.h1 };
-    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h1 };
+    ${ getBreakpoints({
+    xs: css`
+      text-align: center;
+      line-height: ${ ({ theme }) => theme.lineHeight.h3 };
+      font-size: ${ ({ theme }) => theme.fontSize.h3 };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h3 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
+    `,
+    sm: css`
+      line-height: ${ ({ theme }) => theme.lineHeight.h2 };
+      font-size: ${ ({ theme }) => theme.fontSize.h2 };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h2 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h2 };
+    `,
+    md: css`
+      line-height: ${ ({ theme }) => theme.lineHeight.h1 };
+      font-size: ${ ({ theme }) => theme.fontSize.h1 };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h1 };
+    `
+  }) }
   }
 
   h2 {
-    margin-top: ${ ({ theme }) => `${ theme.spacing.h2 * 3 }rem` };
-    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
-    text-align: center;
-    line-height: ${ ({ theme }) => theme.lineHeight.h2 };
-    font-size: ${ ({ theme }) => theme.fontSize.h2 };
-    font-weight: ${ ({ theme }) => theme.fontWeight.h2 };
-    font-family: ${ ({ theme }) => theme.fontFamily.h2 };
-    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h2 };
+    ${ getBreakpoints({
+    xs: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
+      text-align: center;
+      line-height: ${ ({ theme }) => theme.lineHeight.h4 };
+      font-size: ${ ({ theme }) => theme.fontSize.h4 };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
+    `,
+    sm: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
+      line-height: ${ ({ theme }) => theme.lineHeight.h3 };
+      font-size: ${ ({ theme }) => theme.fontSize.h3 };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h3 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
+    `,
+    md: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h2 * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+      line-height: ${ ({ theme }) => theme.lineHeight.h2 };
+      font-size: ${ ({ theme }) => theme.fontSize.h2 };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h2 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h2 };
+    `
+  }) }
   }
 
   h3 {
-    margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 3 }rem` };
-    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
-    text-align: left;
-    line-height: ${ ({ theme }) => theme.lineHeight.h3 };
-    font-size: ${ ({ theme }) => theme.fontSize.h3 };
-    font-weight: ${ ({ theme }) => theme.fontWeight.h3 };
-    font-family: ${ ({ theme }) => theme.fontFamily.h3 };
-    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
+    ${ getBreakpoints({
+    xs: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.text * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+      text-align: left;
+      line-height: ${ ({ theme }) => theme.lineHeight.text };
+      font-size: ${ ({ theme }) => theme.fontSize.text };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h2 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
+    `,
+    sm: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
+      line-height: ${ ({ theme }) => theme.lineHeight.h4 };
+      font-size: ${ ({ theme }) => theme.fontSize.h4 };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h3 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
+    `,
+    md: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
+      line-height: ${ ({ theme }) => theme.lineHeight.h3 };
+      font-size: ${ ({ theme }) => theme.fontSize.h3 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
+    `
+  }) }
   }
 
   h4 {
-    margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
-    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
-    text-align: left;
-    line-height: ${ ({ theme }) => theme.lineHeight.h4 };
-    font-size: ${ ({ theme }) => theme.fontSize.h4 };
-    font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
-    font-family: ${ ({ theme }) => theme.fontFamily.h4 };
-    letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
+    ${ getBreakpoints({
+    xs: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.text * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+      text-align: left;
+      line-height: ${ ({ theme }) => theme.lineHeight.text };
+      font-size: ${ ({ theme }) => theme.fontSize.text };
+      font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
+    `,
+    md: css`
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
+      line-height: ${ ({ theme }) => theme.lineHeight.h4 };
+      font-size: ${ ({ theme }) => theme.fontSize.h4 };
+      letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
+    `
+  }) }
   }
 
   ul {
@@ -139,12 +205,13 @@ export const GlobalStyle = createGlobalStyle`
     ${ getBreakpoints({
     xs: css`
       display: inline-block;
-      padding: 0.5rem 0.5rem;
+      padding: 0.2rem 0.5rem;
       border-radius: ${ ({ theme }) => theme.borderRadius };
       color: ${ ({ theme }) => theme.color.neutral_100 };
       background-color: ${ ({ theme }) => theme.color.neutral_800 };
     `,
     md: css`
+      padding: 0.5rem;
       line-height: 1;
     `
   }) }

@@ -16,7 +16,7 @@ const PostCardFooterWrapper = styled.footer`
 
 const PostCardDate = styled.p`
   font-size: ${ ({ theme }) => theme.fontSize.small };
-  letter-spacing: ${ ({ theme }) => theme.letterSpacing.small };
+  letter-spacing: ${ ({ theme }) => theme.letterSpacing.button };
   color: ${ ({ theme }) => theme.color.neutral_600 };
 `
 

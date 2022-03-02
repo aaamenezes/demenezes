@@ -43,7 +43,7 @@ const PostCardLabel = styled.div`
   padding: 0.44rem 0.66rem;
   line-height: ${ ({ theme }) => theme.lineHeight.button };
   font-size: ${ ({ theme }) => theme.fontSize.small };
-  letter-spacing: ${ ({ theme }) => theme.letterSpacing.small };
+  letter-spacing: ${ ({ theme }) => theme.letterSpacing.button };
   color: ${ ({ theme }) => theme.color.neutral_100 };
   background-color: ${ ({ theme }) => theme.color.red_700 };
 `
