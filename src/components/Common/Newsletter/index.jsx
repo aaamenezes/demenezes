@@ -110,17 +110,14 @@ export default function Newsletter() {
                   style={{ display: 'none' }}
                 />
               </div>
-              <div
-                style={{ position: 'absolute', left: '-5000px' }}
-                aria-hidden='true'
-              >
+              <HiddenA11Y aria-hidden='true'>
                 <input
                   type='text'
                   name='b_931f7d0fb92503537ca06456d_4b0ff01e85'
                   tabIndex='-1'
                   value=''
                 />
-              </div>
+              </HiddenA11Y>
               <div className='optionalParent'>
                 <div className='clear foot'>
                   <LinkButton
