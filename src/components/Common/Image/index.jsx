@@ -9,16 +9,13 @@ function insertSizeInPath(src, imageWidth) {
 
 function getSourceTag(entry, src, breakpoints) {
   const [ key, value ] = entry
-  const breakpointKeys = Object.keys(breakpoints)
-  const nextBreakpointIndex = breakpointKeys.indexOf(key) + 1
-  const nextBreakpointKey = breakpointKeys[nextBreakpointIndex]
-  const imageWidth = breakpoints[nextBreakpointKey]
+  const imageWidth = breakpoints[key]
   const srcSet = insertSizeInPath(src, imageWidth)
 
   return (
     <source
       key={value}
-      media={`(min-width:${ value }px)`}
+      media={`(max-width:${ value }px)`}
       srcSet={srcSet}
     />
   )
@@ -37,9 +34,8 @@ const Img = styled.img`
 export default function Image({ src, alt }) {
   const { breakpoints } = theme
   const sources = Object.entries(breakpoints)
+    .slice(1, 4)
     .map(entry => getSourceTag(entry, src, breakpoints))
-    .slice(0, 4)
-    .reverse()
 
   return (
     <Picture>
