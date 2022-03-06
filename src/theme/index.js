@@ -41,7 +41,7 @@ const color = {
 
 const fontFamily = {
   title: 'Ubuntu, sans-serif',
-  text: '"Montserrat", sans-serif',
+  text: '"Montserrat", sans-serif'
 
   /**
    * Fonte para código no post
