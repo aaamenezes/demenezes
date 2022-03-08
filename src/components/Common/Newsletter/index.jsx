@@ -116,6 +116,7 @@ export default function Newsletter() {
                   name='b_931f7d0fb92503537ca06456d_4b0ff01e85'
                   tabIndex='-1'
                   value=''
+                  onChange={() => {}}
                 />
               </HiddenA11Y>
               <div className='optionalParent'>
