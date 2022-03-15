@@ -19,7 +19,7 @@ const StyledIcon = styled.i`
   }) }
 `
 
-export default function Icon({ name, inline }) {
+export default function Icon({ name, inline, color }) {
   switch (name) {
   case 'github':
     return (
@@ -160,6 +160,15 @@ export default function Icon({ name, inline }) {
         className='fas fa-balance-scale'
         name={name}
         inline={inline}
+      />
+    )
+  case 'link':
+    return (
+      <StyledIcon
+        className='fas fa-solid fa-link'
+        name={name}
+        inline={inline}
+        color={color}
       />
     )
   default:
