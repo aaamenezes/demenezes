@@ -148,14 +148,36 @@ export const GlobalStyle = createGlobalStyle`
   }) }
   }
 
-  ul {
+  ul, ol {
     margin-left: 2rem;
   }
 
   p:not(:first-child):not(:last-child),
-  ul:not(:first-child):not(:last-child) {
+  ul:not(:first-child):not(:last-child),
+  ol:not(:first-child):not(:last-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.text }rem` };
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+  }
+
+  table {
+    width: 100%;
+
+    td {
+      padding: 0 0.5rem;
+    }
+
+    thead tr {
+      color: ${ ({ theme }) => theme.color.neutral_50 };
+      background-color: ${ ({ theme }) => theme.color.neutral_600 }
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: ${ ({ theme }) => theme.color.neutral_200 };
+    }
+
+    tfoot td {
+      background-color: ${ ({ theme }) => theme.color.neutral_400 }
+    }
   }
   
   a {
@@ -215,10 +237,6 @@ export const GlobalStyle = createGlobalStyle`
       line-height: 1;
     `
   }) }
-  }
-
-  code[class*="language-"] {
-    padding: 0.3rem;
   }
   
   img:not(:first-child):not(:last-child),
