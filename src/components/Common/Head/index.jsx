@@ -12,13 +12,13 @@ export default function Head({ componentProps }) {
   const { TITLE_BASE, DESCRIPTION_BASE, KEYWORDS_BASE } = METADATA
 
   const pageTitleFirstPart = isPostPage
-    ? componentProps.post.title
+    ? componentProps.post.data.post.title
     : PAGES[CURRENT_PAGE].pageTitle
 
   const pageTitle = `${ pageTitleFirstPart } | ${ TITLE_BASE }`
 
   const pageDescriptionFirstPart = isPostPage
-    ? componentProps.post.description
+    ? componentProps.post.data.post.metaDescription
     : PAGES[CURRENT_PAGE].description
 
   const pageDescription = PAGES[CURRENT_PAGE].pageTitle !== 'Home'
@@ -28,7 +28,7 @@ export default function Head({ componentProps }) {
   const pageKeywords = PAGES[CURRENT_PAGE].keywords
     .join(', ')
     .concat(', ')
-    .concat(isPostPage ? componentProps.post.keywords.join(', ') : '')
+    .concat(isPostPage ? componentProps.post.data.post.keywords.join(', ') : '')
     .concat(', ')
     .concat(KEYWORDS_BASE.join(', '))
     .replace(', , ', ', ')
