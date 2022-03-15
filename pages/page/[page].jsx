@@ -1,9 +1,9 @@
 import React from 'react'
-import { getAllPosts } from '../../lib/api'
 import settings from '../../settings.json'
 import HomeScreen from '../../src/components/Screens/HomeScreen'
 import { getPaginationInfos } from '../../src/utils/getPaginationInfos'
 import pageWrapper from '../../src/components/Wrappers/pageWrapper'
+import { getContent } from '../../src/external/datoCMS'
 
 function Home({
   CURRENT_POSTS,
@@ -24,15 +24,7 @@ function Home({
 export default pageWrapper(Home)
 
 export async function getStaticProps({ params }) {
-  const allPosts = getAllPosts([
-    'title',
-    'description',
-    'date',
-    'category',
-    'slug',
-    'keywords',
-    'coverImage'
-  ])
+  const allPosts = await getContent('allPosts', {})
 
   const {
     CURRENT_POSTS, TOTAL_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION
@@ -50,20 +42,28 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
-  const allPosts = getAllPosts([ 'slug' ])
+  const allPosts = await getContent('routes', {})
   const TOTAL_POSTS = allPosts.length
   const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
 
-  function createDynamicPaths(pageNumber, array = []) {
-    return pageNumber > 0
-      ? createDynamicPaths(
-        pageNumber - 1,
-        [ ...array, { params: { page: pageNumber.toString() } } ]
-      )
-      : [ ...array ].reverse()
-  }
+  // function createDynamicPaths(pageNumber, array = []) {
+  //   return pageNumber > 0
+  //     ? createDynamicPaths(
+  //       pageNumber - 1,
+  //       [ ...array, { params: { page: pageNumber.toString() } } ]
+  //     )
+  //     : [ ...array ].reverse()
+  // }
 
-  const dynamicPaths = createDynamicPaths(totalPages)
+  // const dynamicPaths = createDynamicPaths(totalPages)
+
+  const dynamicPaths = []
+  let counter = 1
+
+  while (counter <= totalPages) {
+    dynamicPaths.push({ params: { page: counter } })
+    counter++
+  }
 
   return {
     paths: dynamicPaths,

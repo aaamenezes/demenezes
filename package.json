@@ -9,23 +9,17 @@
     "lint-bkp": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@mdx-js/loader": "^2.0.0",
-    "@next/mdx": "^12.0.10",
     "babel-plugin-prismjs": "^2.1.0",
-    "classnames": "2.2.6",
     "date-fns": "2.16.1",
-    "gray-matter": "4.0.2",
+    "datocms-structured-text-utils": "^2.0.1",
     "install": "^0.13.0",
     "next": "latest",
-    "next-mdx-remote": "^3.0.8",
     "npm": "^7.20.6",
     "prismjs": "^1.26.0",
     "react": "^17.0.2",
+    "react-datocms": "^3.0.11",
     "react-dom": "^17.0.2",
-    "remark": "13.0.0",
-    "remark-html": "13.0.1",
     "styled-components": "^5.3.0",
-    "styled-normalize": "^8.0.7",
     "swiper": "^6.5.9"
   },
   "devDependencies": {
@@ -36,8 +30,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "postcss": "^8.2.4"
+    "eslint-plugin-react-hooks": "^4.2.0"
   },
   "license": "MIT"
 }

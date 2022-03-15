@@ -1,45 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
-import { serialize } from 'next-mdx-remote/serialize'
+import { getContent } from '../../src/external/datoCMS'
 import pageWrapper from '../../src/components/Wrappers/pageWrapper'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import markdownToHtml from '../../lib/markdownToHtml'
 import PostHeader from '../../src/components/PostPage/PostHeader'
 import PostContent from '../../src/components/PostPage/PostContent'
 import PostComments from '../../src/components/PostPage/PostComments'
 import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 import ProgressBar from '../../src/components/PostPage/ProgressBar'
-import Image from '../../src/components/Common/Image'
-import LinkButton from '../../src/components/Common/LinkButton'
-
-const components = { Image, LinkButton }
 
 const PostPage = styled.main`
   margin-bottom: 10%;
 `
 
-function Post({ post, mdxContent }) {
+function Post({ post, relatedPosts }) {
+  const {
+    title,
+    metaDescription,
+    _firstPublishedAt,
+    category,
+    keywords,
+    thumbnail
+  } = post.data.post
+
   return (
     <>
       <PostPage>
         <PostHeader
-          title={post.title}
-          description={post.description}
-          date={post.date}
-          category={post.category}
-          keywords={post.keywords}
-          coverImage={post.coverImage}
+          title={title}
+          description={metaDescription}
+          date={_firstPublishedAt}
+          category={category}
+          keywords={keywords}
+          coverImage={thumbnail.url}
         />
-        <PostContent
-          // content={post.content} // remover esse no futuro
-          mdxContent={mdxContent}
-          components={components}
-        />
+        <PostContent post={post} />
       </PostPage>
       <PostComments />
       <RelatedPosts
-        postCategory={post.category}
-        relatedPosts={post.relatedPosts}
+        postCategory={category}
+        relatedPosts={relatedPosts.data.allPosts}
       />
       <ProgressBar />
     </>
@@ -49,45 +48,22 @@ function Post({ post, mdxContent }) {
 export default pageWrapper(Post)
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'description',
-    'date',
-    'category',
-    'keywords',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage'
-  ])
-
-  const content = await markdownToHtml(post.content || '')
-
-  const relatedPosts = getAllPosts([
-    'category', 'title', 'coverImage', 'slug'
-  ]).filter(
-    currentPost => currentPost.category === post.category
+  const post = await getContent('post', { slug: params.slug })
+  const relatedPosts = await getContent(
+    'relatedPosts',
+    { category: post.data.post.category }
   )
 
-  const mdxContent = await serialize(content)
-
   return {
-    props: {
-      post: {
-        ...post,
-        relatedPosts
-      },
-      mdxContent
-    }
+    props: { post, relatedPosts }
   }
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts([ 'slug' ])
+  const routes = await getContent('routes', {})
 
   return {
-    paths: posts.map(post => ({
+    paths: routes.data.allPosts.map(post => ({
       params: {
         slug: post.slug
       }
