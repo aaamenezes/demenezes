@@ -85,6 +85,7 @@ export default function PostContent({ post }) {
   }
 
   function handleBlock({ record }) {
+    // eslint-disable-next-line no-underscore-dangle
     switch (record.__typename) {
     case 'ImageRecord':
       return (

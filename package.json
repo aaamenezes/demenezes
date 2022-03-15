@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint './pages/**' './src/**' './lib/**'",
+    "lint": "eslint './pages/**' './src/**'",
     "lint-bkp": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
