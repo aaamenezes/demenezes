@@ -2,21 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { theme } from '../../../theme'
 
-function insertSizeInPath(src, imageWidth) {
-  const [ filePathName, fileExtension ] = src.split('.')
-  return `${ filePathName }-${ imageWidth }.${ fileExtension }`
-}
-
-function getSourceTag(entry, src, breakpoints) {
+function getSourceTag(entry, url) {
   const [ key, value ] = entry
-  const imageWidth = breakpoints[key]
-  const srcSet = insertSizeInPath(src, imageWidth)
-
   return (
     <source
-      key={value}
+      key={key}
       media={`(max-width:${ value }px)`}
-      srcSet={srcSet}
+      srcSet={url}
     />
   )
 }
@@ -31,16 +23,24 @@ const Img = styled.img`
   margin: 0 -6%;
 `
 
-export default function Image({ src, alt }) {
+export default function Image({ src, alt, srcSet }) {
+  const urlList = srcSet
+    .split(',')
+    .map(size => size.split(' ')[0])
+
   const { breakpoints } = theme
   const sources = Object.entries(breakpoints)
     .slice(1, 4)
-    .map(entry => getSourceTag(entry, src, breakpoints))
+    .map((entry, index) => getSourceTag(entry, urlList[index]))
 
   return (
     <Picture>
       {sources}
-      <Img src={insertSizeInPath(src, '1200')} alt={alt} loading='lazy' />
+      <Img
+        src={src || urlList[urlList.length - 1]}
+        alt={alt}
+        loading='lazy'
+      />
     </Picture>
   )
 }

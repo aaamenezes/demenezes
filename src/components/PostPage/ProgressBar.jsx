@@ -6,7 +6,7 @@ const Bar = styled.div`
   z-index: ${ ({ theme }) => theme.zIndex.fixed };
   top: 0;
   left: 0;
-  height: 0.2rem;
+  height: 0.1rem;
   background-color: ${ ({ theme }) => theme.color.red_700 };
 `
 
