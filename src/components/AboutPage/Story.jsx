@@ -23,8 +23,8 @@ export default function Story() {
   const { TITLE, BODY } = settings.STORY
   const firstParagraph = BODY[0]
   const remainingText = BODY.slice(1).map((text, index) => index % 2 === 0
-    ? <HighlightText key={text.id}>{text}</HighlightText>
-    : <Container width='md' key={text.id}><p>{text}</p></Container>)
+    ? <HighlightText key={text}>{text}</HighlightText>
+    : <Container width='md' key={text}><p>{text}</p></Container>)
 
   return (
     <>
