@@ -1,11 +1,9 @@
-/* eslint-disable max-len */
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import CropedImage from '../Common/CropedImage'
 import HiddenA11Y from '../Common/HiddenA11Y'
-import settings from '../../../settings.json'
 
 const StyledGreeting = styled.section`
   ${ getBreakpoints({
@@ -41,21 +39,24 @@ const GreetingText = styled.p`
   }) }
 `
 
-export default function Greeting() {
-  const { GREETING } = settings
-
+export default function Greeting({
+  greetingTitle,
+  greetingSubtitle,
+  greetingDescription,
+  profileImage
+}) {
   return (
     <Container as={StyledGreeting} width='lg'>
       <ImageWrapper>
         <CropedImage
-          src={GREETING.IMAGE.SRC}
-          alt={GREETING.IMAGE.ALT}
-          ratio={GREETING.IMAGE.RATIO}
+          src={profileImage.srcSet}
+          alt={profileImage.alt}
+          ratio='4x3'
         />
       </ImageWrapper>
-      <HiddenA11Y tag='h1'>{GREETING.TITLE}</HiddenA11Y>
-      <GreetingTitle>{GREETING.SUBTITLE}</GreetingTitle>
-      <GreetingText>{GREETING.TEXT}</GreetingText>
+      <HiddenA11Y tag='h1'>{greetingTitle}</HiddenA11Y>
+      <GreetingTitle>{greetingSubtitle}</GreetingTitle>
+      <GreetingText>{greetingDescription}</GreetingText>
     </Container>
   )
 }

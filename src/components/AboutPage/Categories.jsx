@@ -1,10 +1,8 @@
-/* eslint-disable max-len */
 import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import Icon from '../Common/Icon'
-import settings from '../../../settings.json'
 
 const CategoriesTitle = styled.h2`
   margin-top: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
@@ -82,27 +80,28 @@ const CategoryText = styled.p`
   }) }
 `
 
-export default function Categories() {
-  const { CATEGORIES } = settings
-  const CategoryItems = CATEGORIES.map(({ icon, title, description }) => (
-    <CategoryItem key={title}>
-      <CategoryItemTitle>
-        <Icon
-          name={icon}
-          color='black'
-          inline
-        />
-        <span>{title}</span>
-      </CategoryItemTitle>
-      <CategoryText>{ description }</CategoryText>
-    </CategoryItem>
-  ))
+export default function Categories({ categoriesTitle, categoryItems }) {
+  const CategoryItems = categoryItems.map(
+    ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => (
+      <CategoryItem key={categoryItemTitle}>
+        <CategoryItemTitle>
+          <Icon
+            name={categoryItemIcon}
+            color='black'
+            inline
+          />
+          <span>{categoryItemTitle}</span>
+        </CategoryItemTitle>
+        <CategoryText>{categoryItemDescription}</CategoryText>
+      </CategoryItem>
+    )
+  )
 
   return (
     <Container as='section' width='xl'>
       <header>
         <CategoriesTitle>
-          Categorias: o que tem por aqui
+          {categoriesTitle}
         </CategoriesTitle>
       </header>
 

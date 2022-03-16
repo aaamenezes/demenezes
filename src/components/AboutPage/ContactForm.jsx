@@ -19,14 +19,15 @@ const MailchimpContactForm = styled.iframe`
   min-height: 1000px;
 `
 
-export default function ContactForm() {
-  const { TITLE, TEXT_1, TEXT_2, MAILCHIMP_IFRAME_SRC } = settings.FORM.CONTACT
+export default function ContactForm({ contactTitle, contactText }) {
+  const { MAILCHIMP_IFRAME_SRC } = settings.FORM.CONTACT
+
+  const textElements = contactText.split('\n').map(text => <p>{text}</p>)
 
   return (
     <Container as={StyledContactForm} width='md'>
-      <ContactTitle>{TITLE}</ContactTitle>
-      <p>{TEXT_1}</p>
-      <p>{TEXT_2}</p>
+      <ContactTitle>{contactTitle}</ContactTitle>
+      {textElements}
       <MailchimpContactForm
         title='Formulário de contato'
         src={MAILCHIMP_IFRAME_SRC}

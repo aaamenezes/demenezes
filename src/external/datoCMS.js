@@ -2,88 +2,107 @@ const datoCMSURL = 'https://graphql.datocms.com/'
 
 function getQueryOptions(queryType, { slug, category }) {
   const queryMap = {
-    allPosts: {
-      query: `{
-        allPosts {
-          title
-          slug
-          metaDescription
-          _firstPublishedAt
-          category
-          keywords
-          thumbnail {
-            alt
-            url
+    aboutPage: `{
+      aboutPage {
+        greetingTitle
+        greetingSubtitle
+        greetingDescription
+        profileImage {
+          alt
+          responsiveImage {
+            srcSet
           }
         }
-      }`
-    },
-    post: {
-      query: `{
-        post(filter: { slug: { eq: "${ slug }" } }) {
-          title
-          metaDescription
-          _firstPublishedAt
-          category
-          keywords
-          thumbnail {
-            alt
-            url
-          }
-          content {
-            value
-            blocks {
-              __typename
-              ... on ImageRecord {
-                id
-                image {
-                  alt
-                  responsiveImage(imgixParams: {auto: format}) {
-                    srcSet
-                  }
+        categoriesTitle
+        categoryItemModule {
+          categoryItemTitle
+          categoryItemDescription
+          categoryItemIcon
+        }
+        historyTitle
+        historyText
+        hobbiesTitle
+        hobbiesText
+      }
+      contactSection {
+        contactTitle
+        contactText
+      }
+    }`,
+    allPosts: `{
+      allPosts {
+        title
+        slug
+        metaDescription
+        _firstPublishedAt
+        category
+        keywords
+        thumbnail {
+          alt
+          url
+        }
+      }
+    }`,
+    post: `{
+      post(filter: { slug: { eq: "${ slug }" } }) {
+        title
+        metaDescription
+        _firstPublishedAt
+        category
+        keywords
+        thumbnail {
+          alt
+          url
+        }
+        content {
+          value
+          blocks {
+            __typename
+            ... on ImageRecord {
+              id
+              image {
+                alt
+                responsiveImage(imgixParams: {auto: format}) {
+                  srcSet
                 }
               }
-              ... on VideoRecord {
-                id
-                video {
-                  title
-                  providerUid
-                }
+            }
+            ... on VideoRecord {
+              id
+              video {
+                title
+                providerUid
               }
-              ... on TableRecord {
-                id
-                table
-                firstColumnHighlight
-              }
+            }
+            ... on TableRecord {
+              id
+              table
+              firstColumnHighlight
             }
           }
         }
-      }`
-    },
-    relatedPosts: {
-      query: `{
-        allPosts(filter: { category: { eq: "${ category }" } }) {
-          title
-          slug
-          metaDescription
-          _updatedAt
-          _firstPublishedAt
-          category
-          keywords
-          thumbnail {
-            alt
-            url
-          }
+      }
+    }`,
+    relatedPosts: `{
+      allPosts(filter: { category: { eq: "${ category }" } }) {
+        title
+        slug
+        metaDescription
+        _updatedAt
+        _firstPublishedAt
+        category
+        keywords
+        thumbnail {
+          alt
+          url
         }
-      }`
-    },
-    routes: {
-      query: `{
-        allPosts {
-          slug
-        }
-      }`
-    }
+      }
+    }`,
+    routes: `{
+      allPosts {
+        slug
+      }
+    }`
   }
 
   return {
@@ -93,7 +112,7 @@ function getQueryOptions(queryType, { slug, category }) {
       Accept: 'application/json',
       Authorization: `Bearer ${ process.env.DATOCMS_TOKEN }`
     },
-    body: JSON.stringify(queryMap[queryType])
+    body: JSON.stringify({ query: queryMap[queryType] })
   }
 }
 
