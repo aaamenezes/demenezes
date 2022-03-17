@@ -43,6 +43,12 @@ function getQueryOptions(queryType, { slug, category }) {
         }
       }
     }`,
+    contactSection: `{
+      contactSection {
+        contactTitle
+        contactText
+      }
+    }`,
     post: `{
       post(filter: { slug: { eq: "${ slug }" } }) {
         title

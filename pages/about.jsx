@@ -10,7 +10,7 @@ import Hobbies from '../src/components/AboutPage/Hobbies'
 import ContactForm from '../src/components/AboutPage/ContactForm'
 import { getContent } from '../src/external/datoCMS'
 
-function About({ aboutPageContent }) {
+function About({ aboutPageContent, contactContent }) {
   const {
     greetingTitle,
     greetingSubtitle,
@@ -23,8 +23,6 @@ function About({ aboutPageContent }) {
     hobbiesTitle,
     hobbiesText
   } = aboutPageContent.data.aboutPage
-
-  const { contactTitle, contactText } = aboutPageContent.data.contactSection
 
   return (
     <main>
@@ -49,7 +47,7 @@ function About({ aboutPageContent }) {
       <Container as='section' width='sm'>
         <SocialMedia center />
       </Container>
-      <ContactForm contactTitle={contactTitle} contactText={contactText} />
+      <ContactForm contactContent={contactContent} />
       <Container as='section' width='md'>
         <p>Muito prazer!</p>
       </Container>
@@ -61,8 +59,9 @@ export default pageWrapper(About)
 
 export async function getStaticProps() {
   const aboutPageContent = await getContent('aboutPage', {})
+  const contactContent = await getContent('contactSection', {})
 
   return {
-    props: { aboutPageContent }
+    props: { aboutPageContent, contactContent }
   }
 }
