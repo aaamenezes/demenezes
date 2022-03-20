@@ -28,7 +28,7 @@ export async function getStaticProps({ params }) {
 
   const {
     CURRENT_POSTS, TOTAL_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION
-  } = getPaginationInfos(allPosts, params)
+  } = getPaginationInfos(allPosts.data.allPosts, params)
 
   return {
     props: {
@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
   const allPosts = await getContent('routes', {})
-  const TOTAL_POSTS = allPosts.length
+  const TOTAL_POSTS = allPosts.data.allPosts.length
   const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
 
   // function createDynamicPaths(pageNumber, array = []) {
