@@ -3,16 +3,18 @@ const datoCMSURL = 'https://graphql.datocms.com/'
 function getQueryOptions(queryType, { slug, category }) {
   const queryMap = {
     aboutPage: `{
-      aboutPage {
-        greetingTitle
-        greetingSubtitle
-        greetingDescription
+      profileImage {
         profileImage {
           alt
           responsiveImage {
             srcSet
           }
         }
+      }
+      aboutPage {
+        greetingTitle
+        greetingSubtitle
+        greetingDescription
         categoriesTitle
         categoryItemModule {
           categoryItemTitle
@@ -44,8 +46,9 @@ function getQueryOptions(queryType, { slug, category }) {
         contactTitle
         contactText
       }
-      aboutPage {
+      profileImage {
         profileImage {
+          alt
           responsiveImage {
             srcSet
           }

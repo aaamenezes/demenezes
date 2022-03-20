@@ -45,11 +45,15 @@ export default function Greeting({
   greetingDescription,
   profileImage
 }) {
+  const src = profileImage.responsiveImage.srcSet
+    .split(',')[0]
+    .split(' ')[0]
+
   return (
     <Container as={StyledGreeting} width='lg'>
       <ImageWrapper>
         <CropedImage
-          src={profileImage.srcSet}
+          src={src}
           alt={profileImage.alt}
           ratio='4x3'
         />

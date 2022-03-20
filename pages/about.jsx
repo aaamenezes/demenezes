@@ -15,7 +15,6 @@ function About({ aboutPageContent, contactContent }) {
     greetingTitle,
     greetingSubtitle,
     greetingDescription,
-    profileImage,
     categoriesTitle,
     categoryItemModule,
     historyTitle,
@@ -30,7 +29,7 @@ function About({ aboutPageContent, contactContent }) {
         greetingTitle={greetingTitle}
         greetingSubtitle={greetingSubtitle}
         greetingDescription={greetingDescription}
-        profileImage={profileImage}
+        profileImage={aboutPageContent.data.profileImage.profileImage}
       />
       <Categories
         categoriesTitle={categoriesTitle}

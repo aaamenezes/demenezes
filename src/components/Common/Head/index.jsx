@@ -36,13 +36,13 @@ export default function Head({ componentProps }) {
     case 'post':
       return componentProps.post.data.post.thumbnail.url
     case 'about':
-      return componentProps.aboutPageContent.data.aboutPage.profileImage
+      return componentProps.aboutPageContent.data.profileImage.profileImage
         .responsiveImage
         .srcSet
         .split(',')[3]
         .split(' ')[0]
     case 'contact':
-      return componentProps.contactContent.data.aboutPage.profileImage
+      return componentProps.contactContent.data.profileImage.profileImage
         .responsiveImage
         .srcSet
         .split(',')[3]
