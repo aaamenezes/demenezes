@@ -26,13 +26,20 @@ const PostCardTitle = styled.h3`
     )`
   ) };
   background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 108%;
+  background-size: 100% 0.2rem;
+  background-position: 0 100%;
   transition: ${ ({ theme }) => theme.transition.fast };
 
+  a {
+    transition: ${ ({ theme }) => theme.transition.fast };
+  }
+
   &:hover {
-    color: ${ ({ theme }) => theme.color.neutral_100 };
     background-size: 100% 108%;
+
+    a {
+      color: ${ ({ theme }) => theme.color.neutral_100 };
+    }
   }
 `
 
