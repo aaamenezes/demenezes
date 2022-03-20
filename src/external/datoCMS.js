@@ -24,10 +24,6 @@ function getQueryOptions(queryType, { slug, category }) {
         hobbiesTitle
         hobbiesText
       }
-      contactSection {
-        contactTitle
-        contactText
-      }
     }`,
     allPosts: `{
       allPosts {
@@ -48,11 +44,19 @@ function getQueryOptions(queryType, { slug, category }) {
         contactTitle
         contactText
       }
+      aboutPage {
+        profileImage {
+          responsiveImage {
+            srcSet
+          }
+        }
+      }
     }`,
     post: `{
       post(filter: { slug: { eq: "${ slug }" } }) {
         title
         metaDescription
+        _updatedAt
         _firstPublishedAt
         category
         keywords
@@ -100,7 +104,6 @@ function getQueryOptions(queryType, { slug, category }) {
         title
         slug
         metaDescription
-        _updatedAt
         _firstPublishedAt
         category
         keywords

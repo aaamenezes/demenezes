@@ -55,8 +55,26 @@ const PostHeaderFooter = styled.footer`
   }) }
 `
 
-const PostDate = styled.p`
-  margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+const PostDate = styled.span`
+  ${ getBreakpoints({
+    xs: css`
+      display: block;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      font-size: ${ ({ theme }) => theme.fontSize.small };
+    `,
+    md: css`
+      display: inline-block;
+
+      &:not(:last-of-type) {
+        margin-right: 0.3rem;
+
+        &&:after {
+          content: ' - ';
+        }
+      }
+    `
+  }) }
 `
 
 const KeywordsList = styled.ul`
@@ -66,7 +84,7 @@ const KeywordsList = styled.ul`
       flex-wrap: wrap;
       justify-content: center;
       list-style: none;
-      margin: 0;
+      margin: 0.5rem 0 0;
 
       > * {
         margin-bottom: 0.5rem;
@@ -94,12 +112,11 @@ export default function PostHeader({
   title,
   description,
   date,
+  update,
   category,
   keywords,
   coverImage
 }) {
-  const footerContent = `${ convertDate(date) } - ${ category }`
-
   const keywordsList = keywords.map(keyword => (
     <KeywordItem key={keyword}>{ keyword }</KeywordItem>
   ))
@@ -113,7 +130,13 @@ export default function PostHeader({
         </strong>
       </LeadText>
       <PostHeaderFooter>
-        <PostDate>{footerContent}</PostDate>
+        <PostDate>
+          {(update && 'Publicado em ') + convertDate(date)}
+        </PostDate>
+        {update && (
+          <PostDate>{`Atualizado em ${ convertDate(update) }`}</PostDate>
+        )}
+        <PostDate>{ category }</PostDate>
         <KeywordsList>{keywordsList}</KeywordsList>
       </PostHeaderFooter>
     </Container>

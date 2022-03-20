@@ -16,6 +16,7 @@ function Post({ post, relatedPosts }) {
   const {
     title,
     metaDescription,
+    _updatedAt,
     _firstPublishedAt,
     category,
     keywords,
@@ -29,6 +30,7 @@ function Post({ post, relatedPosts }) {
           title={title}
           description={metaDescription}
           date={_firstPublishedAt}
+          update={_updatedAt}
           category={category}
           keywords={keywords}
           coverImage={thumbnail.url}
