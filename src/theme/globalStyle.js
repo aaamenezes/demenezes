@@ -152,10 +152,15 @@ export const GlobalStyle = createGlobalStyle`
     margin-left: 2rem;
   }
 
-  p:not(:first-child):not(:last-child),
-  ul:not(:first-child):not(:last-child),
-  ol:not(:first-child):not(:last-child) {
+  p:not(:first-child),
+  ul:not(:first-child),
+  ol:not(:first-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+  }
+
+  p:not(:last-child),
+  ul:not(:last-child),
+  ol:not(:last-child) {
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
   }
 
@@ -264,11 +269,18 @@ export const GlobalStyle = createGlobalStyle`
   }) }
   }
   
-  img:not(:first-child):not(:last-child),
-  table:not(:first-child):not(:last-child),
-  iframe:not(:first-child):not(:last-child),
-  pre[class*="language-"]:not(:first-child):not(:last-child) {
+  img:not(:first-child),
+  table:not(:first-child),
+  iframe:not(:first-child),
+  pre[class*="language-"]:not(:first-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+  }
+
+
+  img:not(:last-child),
+  table:not(:last-child),
+  iframe:not(:last-child),
+  pre[class*="language-"]:not(:last-child) {
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
   }
 
