@@ -162,21 +162,46 @@ export const GlobalStyle = createGlobalStyle`
   table {
     width: 100%;
 
-    td {
+    caption {
+      caption-side: bottom;
+      font-size: ${ ({ theme }) => theme.fontSize.small };
+      text-align: right;
+    }
+
+    td, th {
       padding: 0 0.5rem;
+      text-align: center;
     }
 
     thead tr {
+      font-weight: ${ ({ theme }) => theme.fontWeight.button };
       color: ${ ({ theme }) => theme.color.neutral_50 };
-      background-color: ${ ({ theme }) => theme.color.neutral_600 }
+      background-color: ${ ({ theme }) => theme.color.neutral_700 };
+
+      &:hover {
+        color: ${ ({ theme }) => theme.color.neutral_100 };
+        background-color: ${ ({ theme }) => theme.color.red_500 };
+      }
     }
 
-    tbody tr:nth-child(even) {
-      background-color: ${ ({ theme }) => theme.color.neutral_200 };
+    tbody tr {
+      &:nth-child(even) {
+        background-color: ${ ({ theme }) => theme.color.neutral_200 };
+      }
+
+      &:hover {
+        color: ${ ({ theme }) => theme.color.neutral_50 };
+        background-color: ${ ({ theme }) => theme.color.red_300 };
+      }
     }
 
-    tfoot td {
-      background-color: ${ ({ theme }) => theme.color.neutral_400 }
+    tfoot tr {
+      background-color: ${ ({ theme }) => theme.color.neutral_400 };
+
+      &:hover {
+        color: ${ ({ theme }) => theme.color.neutral_50 };
+        background-color: ${ ({ theme }) => theme.color.red_400 };
+      }
     }
   }
   
@@ -240,6 +265,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   img:not(:first-child):not(:last-child),
+  table:not(:first-child):not(:last-child),
   iframe:not(:first-child):not(:last-child),
   pre[class*="language-"]:not(:first-child):not(:last-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };

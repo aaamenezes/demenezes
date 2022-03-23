@@ -89,8 +89,9 @@ function getQueryOptions(queryType, { slug, category }) {
             }
             ... on TableRecord {
               id
+              tableTitle
+              tableSummary
               table
-              firstColumnHighlight
             }
             ... on TextBoxRecord {
               id

@@ -101,8 +101,9 @@ export default function StructuredTextDatoCMS({ data }) {
     case 'TableRecord':
       return (
         <Table
-          data={record.table}
-          firstColumnHighlight={record.firstColumnHighlight}
+          tableTitle={record.tableTitle}
+          tableSummary={record.tableSummary}
+          tableContent={record.table}
         />
       )
     case 'TextBoxRecord':
