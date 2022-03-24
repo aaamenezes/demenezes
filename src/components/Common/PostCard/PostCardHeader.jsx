@@ -16,6 +16,9 @@ const PostCardTitle = styled.h3`
       font-size: ${ ({ theme, isCompact }) => (
     isCompact ? theme.fontSize.h4 : theme.fontSize.h3
   ) };
+      font-weight: ${ ({ theme, isCompact }) => (
+    isCompact ? theme.fontWeight.h4 : theme.fontWeight.h3
+  ) };
       line-height: ${ ({ theme, isCompact }) => (
     isCompact ? theme.lineHeight.h4 : theme.lineHeight.h3
   ) };
@@ -35,6 +38,10 @@ const PostCardTitle = styled.h3`
       transition: ${ ({ theme }) => theme.transition.fast };
 
       a {
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
         transition: ${ ({ theme }) => theme.transition.fast };
       }
 

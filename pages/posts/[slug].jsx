@@ -40,7 +40,7 @@ function Post({ post, relatedPosts }) {
       <PostComments />
       <RelatedPosts
         postCategory={category}
-        relatedPosts={relatedPosts.data.allPosts}
+        relatedPosts={relatedPosts}
       />
       <ProgressBar />
     </>
@@ -51,10 +51,13 @@ export default pageWrapper(Post)
 
 export async function getStaticProps({ params }) {
   const post = await getContent('post', { slug: params.slug })
+
   const relatedPosts = await getContent(
     'relatedPosts',
     { category: post.data.post.category }
-  )
+  ).then(data => data.data.allPosts.filter(
+    currentPost => currentPost.title !== post.data.post.title
+  ))
 
   return {
     props: { post, relatedPosts }

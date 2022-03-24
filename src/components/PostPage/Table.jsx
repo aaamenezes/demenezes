@@ -11,8 +11,6 @@ export default function Table({ tableTitle, tableSummary, tableContent }) {
     .replace('>>', '>')
     .replace('</table>', '')
 
-  console.log('formatedTable:', formatedTable)
-
   return (
     <table
       summary={tableSummary}

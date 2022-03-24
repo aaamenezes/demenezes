@@ -107,10 +107,6 @@ function getQueryOptions(queryType, { slug, category }) {
       allPosts(filter: { category: { eq: "${ category }" } }) {
         title
         slug
-        metaDescription
-        _firstPublishedAt
-        category
-        keywords
         thumbnail {
           alt
           url

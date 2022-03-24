@@ -28,7 +28,7 @@ export default function Swiper({ slides }) {
 
     const slidesPerView = breakpointsEntries.indexOf(currentBreakpoint) || 1
 
-    const fraction = 0.15
+    const fraction = slides.length === 1 ? 0 : 0.15
 
     return slidesPerView < 4 ? slidesPerView + fraction : 4 + fraction
   }

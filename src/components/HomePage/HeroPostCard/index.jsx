@@ -31,7 +31,6 @@ const HeroWrapper = styled.article`
 `
 
 export default function HeroPostCard({ post }) {
-  console.log('post:', post)
   return (
     <Container
       as={HeroWrapper}
