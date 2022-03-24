@@ -31,10 +31,11 @@ const HeroWrapper = styled.article`
 `
 
 export default function HeroPostCard({ post }) {
+  console.log('post:', post)
   return (
     <Container
       as={HeroWrapper}
-      image={post.coverImage}
+      image={post.thumbnail.url}
       width='xxxl'
       fluid
     >
