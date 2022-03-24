@@ -5,12 +5,9 @@ import getBreakpoints from '../../../utils/getBreakpoints'
 const PostCardDescriptionWrapper = styled.p`
   ${ getBreakpoints({
     xs: css`
-      display: ${ ({ hero }) => hero ? 'block' : 'none' };
+      display: ${ ({ isCompact }) => isCompact ? 'none' : 'block' };
       padding: 0.5rem;
       margin: 1.1rem 0;
-    `,
-    md: css`
-      display: ${ ({ isCompact }) => isCompact ? 'none' : 'block' };
     `
   }) }
 `
