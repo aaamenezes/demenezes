@@ -37,7 +37,9 @@ function getQueryOptions(queryType, { slug, category }) {
         keywords
         thumbnail {
           alt
-          url
+          responsiveImage {
+            srcSet
+          }
         }
       }
     }`,

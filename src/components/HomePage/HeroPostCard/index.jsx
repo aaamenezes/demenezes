@@ -10,31 +10,49 @@ const HeroWrapper = styled.article`
       /* height: 100vh; */
       padding-top: 6.6rem;
       padding-bottom: 2.2rem;
-      background-image: ${ ({ theme, image }) => css`linear-gradient(
+      background-image: ${ ({ theme, imageSrcList }) => css`linear-gradient(
         270deg,
         ${ theme.color.neutral_900 + theme.opacity.medium.hex },
         ${ theme.color.neutral_900 + theme.opacity.medium.hex }
-      ), url('${ image }') ` };
+      ), url('${ imageSrcList[0] }') ` };
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
       background-attachment: fixed;
     `,
+    sm: css`
+      background-image: ${ ({ theme, imageSrcList }) => css`linear-gradient(
+        270deg,
+        ${ theme.color.neutral_900 + theme.opacity.medium.hex },
+        ${ theme.color.neutral_900 + theme.opacity.medium.hex }
+      ), url('${ imageSrcList[1] }') ` };
+    `,
     md: css`
-      background-image: ${ ({ theme, image }) => css`linear-gradient(
+      background-image: ${ ({ theme, imageSrcList }) => css`linear-gradient(
         270deg,
         ${ theme.color.neutral_900 + theme.opacity.hard.hex } 55%,
         ${ theme.color.neutral_600 + theme.opacity.medium.hex } 100%
-      ), url('${ image }')` };
+      ), url('${ imageSrcList[2] }')` };
+    `,
+    lg: css`
+      background-image: ${ ({ theme, imageSrcList }) => css`linear-gradient(
+        270deg,
+        ${ theme.color.neutral_900 + theme.opacity.hard.hex } 55%,
+        ${ theme.color.neutral_600 + theme.opacity.medium.hex } 100%
+      ), url('${ imageSrcList[3] }')` };
     `
   }) }
 `
 
 export default function HeroPostCard({ post }) {
+  const imageSrcList = post.thumbnail.responsiveImage.srcSet
+    .split(',')
+    .map(size => size.split(' ')[0])
+
   return (
     <Container
       as={HeroWrapper}
-      image={post.thumbnail.url}
+      imageSrcList={imageSrcList}
       width='xxxl'
       fluid
     >

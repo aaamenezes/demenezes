@@ -70,6 +70,9 @@ export default function PostCard({
   spacing
 }) {
   const { title, slug, thumbnail, category } = post
+  const imageSrc = thumbnail.responsiveImage.srcSet
+    .split(',')[0]
+    .split(' ')[0]
 
   return (
     <Container
@@ -81,7 +84,7 @@ export default function PostCard({
       <PostCardImage isCompact={isCompact}>
         <LinkButton href={`/posts/${ slug }`}>
           <CropedImage
-            src={thumbnail.url}
+            src={imageSrc}
             alt={`Imagem de capa do post: ${ title }`}
             ratio={imageRatio}
           />
