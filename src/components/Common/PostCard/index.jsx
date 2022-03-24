@@ -14,7 +14,6 @@ const PostCardWrapper = styled.article`
     `,
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };
-      align-items: flex-start;
       justify-content: space-between;
     `
   }) }

@@ -7,19 +7,21 @@ import getBreakpoints from '../../utils/getBreakpoints'
 const StyledTextBox = styled.div`
   ${ getBreakpoints({
     xs: css`
-      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
-      padding: 2rem;
-      background-color: ${ ({ theme }) => theme.color.red_50 };
+      padding: 1rem;
       margin-top: 0;
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
+      background-color: ${ ({ theme }) => theme.color.red_50 };
 
       > *:first-child {
         margin-top: 0;
       }
     `,
     sm: css`
+      padding: 1.5rem;
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
     `,
     md: css`
+      padding: 2rem;
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
     `
   }) }

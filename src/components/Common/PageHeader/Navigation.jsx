@@ -33,7 +33,7 @@ const NavList = styled.ul`
   ${ getBreakpoints({
     xs: css`
       display: block;
-      margin: 0;
+      margin: 0 !important;
       list-style: none;
     `,
     md: css`
