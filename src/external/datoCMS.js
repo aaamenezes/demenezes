@@ -111,7 +111,9 @@ function getQueryOptions(queryType, { slug, category }) {
         slug
         thumbnail {
           alt
-          url
+          responsiveImage {
+            srcSet
+          }
         }
       }
     }`,
