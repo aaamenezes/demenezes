@@ -89,6 +89,7 @@ export default function StructuredTextDatoCMS({ data }) {
         <Image
           srcSet={record.image.responsiveImage.srcSet}
           alt={record.image.alt}
+          title={record.image.title}
         />
       )
     case 'VideoRecord':
