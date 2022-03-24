@@ -7,6 +7,7 @@ const PostCardFooterWrapper = styled.footer`
   ${ getBreakpoints({
     xs: css`
       margin-top: 0.44rem;
+      padding: 0.5rem;
     `,
     md: css`
       margin-top: ${ ({ isCompact }) => isCompact ? '0.44rem' : 0 };
@@ -21,15 +22,13 @@ const PostCardDate = styled.p`
 `
 
 export default function PostCardFooter({ date, isCompact }) {
+  if (!date) return null
+
   return (
-    date
-      ? (
-        <PostCardFooterWrapper isCompact={isCompact}>
-          <PostCardDate>
-            {convertDate(date)}
-          </PostCardDate>
-        </PostCardFooterWrapper>
-      )
-      : <></>
+    <PostCardFooterWrapper isCompact={isCompact}>
+      <PostCardDate>
+        {convertDate(date)}
+      </PostCardDate>
+    </PostCardFooterWrapper>
   )
 }
