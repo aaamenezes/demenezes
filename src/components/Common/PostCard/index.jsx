@@ -11,17 +11,17 @@ const PostCardWrapper = styled.article`
     xs: css`
       display: flex;
       flex-direction: column;
-      padding: 1rem;
+      padding: ${ ({ isCompact }) => isCompact ? '1rem' : '1rem' };
       transition: box-shadow ${ ({ theme }) => theme.transition.fast };
       box-shadow: 0 0 2rem -1rem ${ ({ theme }) => theme.color.neutral_800 };
     `,
     sm: css`
-      padding: 2rem;
+      padding: ${ ({ isCompact }) => isCompact ? '1rem' : '2rem' };
     `,
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };
       justify-content: space-between;
-      padding: 3rem;
+      padding: ${ ({ isCompact }) => isCompact ? '1rem' : '3rem' };
       box-shadow: none;
 
       &:hover {
@@ -29,7 +29,7 @@ const PostCardWrapper = styled.article`
       }
     `,
     lg: css`
-      padding: 4rem;
+      padding: ${ ({ isCompact }) => isCompact ? '1rem' : '4rem' };
     `
   }) }
 `
