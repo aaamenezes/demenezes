@@ -117,7 +117,7 @@ export default function PostHeader({
   keywords,
   coverImage
 }) {
-  const keywordsList = keywords.map(keyword => (
+  const keywordsList = keywords.split(',').map(keyword => (
     <KeywordItem key={keyword}>{ keyword }</KeywordItem>
   ))
 

@@ -57,7 +57,7 @@ export default function Head({ componentProps }) {
   const pageKeywords = PAGES[CURRENT_PAGE].keywords
     .join(', ')
     .concat(', ')
-    .concat(isPostPage ? componentProps.post.data.post.keywords.join(', ') : '')
+    .concat(isPostPage ? componentProps.post.data.post.keywords : '')
     .concat(', ')
     .concat(KEYWORDS_BASE.join(', '))
     .replace(', , ', ', ')
