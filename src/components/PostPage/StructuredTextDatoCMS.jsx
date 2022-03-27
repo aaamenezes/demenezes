@@ -70,7 +70,7 @@ export default function StructuredTextDatoCMS({ data }) {
   function handleHeading({ node }) {
     const id = simplifyString(node.children[0].value)
     return (
-      <Title as={`h${ node.level }`} id={id}>
+      <Title key={node.children[0].value} as={`h${ node.level }`} id={id}>
         <TitleLink href={`#${ id }`}>
           <span>{node.children[0].value}</span>
           <TitleIcon>
@@ -87,6 +87,7 @@ export default function StructuredTextDatoCMS({ data }) {
     case 'ImageRecord':
       return (
         <Image
+          key={record.image.alt}
           srcSet={record.image.responsiveImage.srcSet}
           alt={record.image.alt}
           title={record.image.title}
@@ -95,6 +96,7 @@ export default function StructuredTextDatoCMS({ data }) {
     case 'VideoRecord':
       return (
         <Iframe
+          key={record.video.title}
           title={record.video.title}
           videoID={record.video.providerUid}
         />
@@ -102,6 +104,7 @@ export default function StructuredTextDatoCMS({ data }) {
     case 'TableRecord':
       return (
         <Table
+          key={record.tableTitle}
           tableTitle={record.tableTitle}
           tableSummary={record.tableSummary}
           tableContent={record.table}
@@ -109,7 +112,10 @@ export default function StructuredTextDatoCMS({ data }) {
       )
     case 'TextBoxRecord':
       return (
-        <TextBox content={record.textBoxContent} />
+        <TextBox
+          key={record.textBoxContent}
+          content={record.textBoxContent}
+        />
       )
     default:
       return null

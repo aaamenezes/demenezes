@@ -22,7 +22,9 @@ const MailchimpContactForm = styled.iframe`
 export default function ContactForm({ contactContent }) {
   const { MAILCHIMP_IFRAME_SRC } = settings.FORM.CONTACT
   const { contactTitle, contactText } = contactContent.data.contactSection
-  const textElements = contactText.split('\n').map(text => <p>{text}</p>)
+  const textElements = contactText.split('\n').map(text => (
+    <p key={text}>{text}</p>
+  ))
 
   return (
     <Container as={StyledContactForm} width='md'>
