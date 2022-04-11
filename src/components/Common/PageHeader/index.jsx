@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import Navigation from './Navigation'
 import ToggleModalButton from './ToggleModalButton'
 import Container from '../Container'
-import Logowrapper from '../LogoWrapper'
+import LogoWrapper from '../LogoWrapper'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import { getPageInfos } from '../../../utils/getPageInfos'
 
@@ -35,7 +35,7 @@ const ToggleMenuButton = styled.button`
   }) }
 `
 
-export default function PageHeader() {
+export default function PageHeader({ preview }) {
   const [ openMenu, setOpenMenu ] = useState(false)
   const [ openHeader, setOpenHeader ] = useState(true)
   const { CURRENT_PAGE } = getPageInfos()
@@ -58,7 +58,7 @@ export default function PageHeader() {
       openHeader={openHeader}
       currentPage={CURRENT_PAGE}
     >
-      <Logowrapper />
+      <LogoWrapper preview={preview} />
       <ToggleModalButton
         onClick={toggleMenu}
         icon='bars'

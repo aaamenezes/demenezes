@@ -30,10 +30,10 @@ const Logo = styled.strong`
   font-size: ${ ({ theme }) => theme.fontSize.h4 };
 `
 
-export default function LogoWrapper() {
+export default function LogoWrapper({ preview }) {
   return (
     <LinkButton href='/' as={LogoLink}>
-      <Logo>deMenezes</Logo>
+      <Logo>{preview ? 'Preview' : 'deMenezes'}</Logo>
     </LinkButton>
   )
 }
