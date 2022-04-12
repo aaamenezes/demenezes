@@ -8,7 +8,8 @@ function Home({
   CURRENT_POSTS,
   TOTAL_POSTS,
   CURRENT_PAGINATION,
-  IS_LAST_PAGINATION
+  IS_LAST_PAGINATION,
+  PREVIEW
 }) {
   return (
     <HomeScreen
@@ -16,17 +17,22 @@ function Home({
       TOTAL_POSTS={TOTAL_POSTS}
       CURRENT_PAGINATION={CURRENT_PAGINATION}
       IS_LAST_PAGINATION={IS_LAST_PAGINATION}
+      PREVIEW={PREVIEW}
     />
   )
 }
 
 export default pageWrapper(Home)
 
-export async function getStaticProps({ params }) {
-  const allPosts = await getContent('allPosts', {})
+export async function getStaticProps(context) {
+  const { params, preview } = context
+  const allPosts = await getContent('allPosts', {}, preview)
 
   const {
-    CURRENT_POSTS, TOTAL_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION
+    CURRENT_POSTS,
+    TOTAL_POSTS,
+    CURRENT_PAGINATION,
+    IS_LAST_PAGINATION
   } = getPaginationInfos(allPosts.data.allPosts, params)
 
   return {
@@ -34,7 +40,8 @@ export async function getStaticProps({ params }) {
       CURRENT_POSTS,
       TOTAL_POSTS,
       CURRENT_PAGINATION,
-      IS_LAST_PAGINATION
+      IS_LAST_PAGINATION,
+      PREVIEW: preview !== undefined
     }
   }
 }
