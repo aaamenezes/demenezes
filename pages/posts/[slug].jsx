@@ -12,7 +12,7 @@ const PostPage = styled.main`
   margin-bottom: 10%;
 `
 
-function Post({ post, relatedPosts }) {
+function Post({ post, relatedPosts, PREVIEW }) {
   const {
     title,
     metaDescription,
@@ -34,6 +34,7 @@ function Post({ post, relatedPosts }) {
           category={category}
           keywords={keywords}
           coverImage={thumbnail.url}
+          preview={PREVIEW}
         />
         <PostContent post={post} />
       </PostPage>
@@ -49,18 +50,24 @@ function Post({ post, relatedPosts }) {
 
 export default pageWrapper(Post)
 
-export async function getStaticProps({ params }) {
-  const post = await getContent('post', { slug: params.slug })
+export async function getStaticProps(context) {
+  const { params, preview } = context
+  const post = await getContent('post', { slug: params.slug }, preview)
 
   const relatedPosts = await getContent(
     'relatedPosts',
-    { category: post.data.post.category }
+    { category: post.data.post.category },
+    preview
   ).then(data => data.data.allPosts.filter(
     currentPost => currentPost.title !== post.data.post.title
   ))
 
   return {
-    props: { post, relatedPosts }
+    props: {
+      post,
+      relatedPosts,
+      PREVIEW: preview !== undefined
+    }
   }
 }
 

@@ -121,6 +121,8 @@ export default function PostHeader({
     <KeywordItem key={keyword}>{ keyword }</KeywordItem>
   ))
 
+  console.log('date:', date)
+
   return (
     <Container as={StyledPostHeader} width='xxxl' bgImage={coverImage} fluid>
       <PostTitle>{title}</PostTitle>
@@ -131,11 +133,17 @@ export default function PostHeader({
       </LeadText>
       <PostHeaderFooter>
         <PostDate>
-          {(update && 'Publicado em ') + convertDate(date)}
+          {
+            update && date
+              ? `Publicado em ${ convertDate(date) }`
+              : 'Não publicado'
+          }
         </PostDate>
-        {update && (
-          <PostDate>{`Atualizado em ${ convertDate(update) }`}</PostDate>
-        )}
+        {
+          update && date && (
+            <PostDate>{`Atualizado em ${ convertDate(update) }`}</PostDate>
+          )
+        }
         <PostDate>{ category }</PostDate>
         <KeywordsList>{keywordsList}</KeywordsList>
       </PostHeaderFooter>

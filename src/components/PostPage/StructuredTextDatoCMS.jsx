@@ -61,7 +61,7 @@ export default function StructuredTextDatoCMS({ data }) {
 
   function handleCode({ node }) {
     return (
-      <CodeBlock key={node.code} language={node.language}>
+      <CodeBlock key={node.code + Math.random()} language={node.language}>
         {node.code}
       </CodeBlock>
     )
@@ -70,7 +70,11 @@ export default function StructuredTextDatoCMS({ data }) {
   function handleHeading({ node }) {
     const id = simplifyString(node.children[0].value)
     return (
-      <Title key={node.children[0].value} as={`h${ node.level }`} id={id}>
+      <Title
+        key={node.children[0].value + Math.random()}
+        as={`h${ node.level }`}
+        id={id}
+      >
         <TitleLink href={`#${ id }`}>
           <span>{node.children[0].value}</span>
           <TitleIcon>
