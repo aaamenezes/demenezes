@@ -60,7 +60,8 @@ export default function Image({ src, alt, title, srcSet }) {
           loading='lazy'
         />
       </Picture>
-      {title && <Figcaption>{title}</Figcaption>}
+      {/* {title && <Figcaption>{title}</Figcaption>} */}
+      <Figcaption>{title || alt}</Figcaption>
     </figure>
   )
 }
