@@ -121,8 +121,6 @@ export default function PostHeader({
     <KeywordItem key={keyword}>{ keyword }</KeywordItem>
   ))
 
-  console.log('date:', date)
-
   return (
     <Container as={StyledPostHeader} width='xxxl' bgImage={coverImage} fluid>
       <PostTitle>{title}</PostTitle>
