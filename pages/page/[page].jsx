@@ -46,24 +46,24 @@ export async function getStaticPaths() {
   const TOTAL_POSTS = allPosts.data.allPosts.length
   const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
 
-  // function createDynamicPaths(pageNumber, array = []) {
-  //   return pageNumber > 0
-  //     ? createDynamicPaths(
-  //       pageNumber - 1,
-  //       [ ...array, { params: { page: pageNumber.toString() } } ]
-  //     )
-  //     : [ ...array ].reverse()
-  // }
-
-  // const dynamicPaths = createDynamicPaths(totalPages)
-
-  const dynamicPaths = []
-  let counter = 1
-
-  while (counter <= totalPages) {
-    dynamicPaths.push({ params: { page: counter } })
-    counter++
+  function createDynamicPaths(pageNumber, array = []) {
+    return pageNumber > 0
+      ? createDynamicPaths(
+        pageNumber - 1,
+        [ ...array, { params: { page: pageNumber.toString() } } ]
+      )
+      : [ ...array ].reverse()
   }
+
+  const dynamicPaths = createDynamicPaths(totalPages)
+
+  // const dynamicPaths = []
+  // let counter = 1
+
+  // while (counter <= totalPages) {
+  //   dynamicPaths.push({ params: { page: counter } })
+  //   counter++
+  // }
 
   return {
     paths: dynamicPaths,
