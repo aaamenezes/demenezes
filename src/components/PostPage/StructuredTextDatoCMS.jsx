@@ -16,16 +16,20 @@ const Title = styled.h2`
   position: relative;
 
   &:hover {
-    span {
-      display: block;
+    span:nth-child(2) {
+      color: ${ ({ theme }) => theme.color.neutral_500 };
     }
   }
 
   a {
     text-decoration: none;
+    text-decoration-color: ${ ({ theme }) => theme.color.neutral_50 };
+    transition: ${ ({ theme }) => theme.transition.fast };
 
     &:hover {
       text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: ${ ({ theme }) => theme.color.neutral_500 };
     }
   }
 `
@@ -36,13 +40,9 @@ const TitleLink = styled.a`
 `
 
 const TitleIcon = styled.span`
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  right: 100%;
-  display: none;
+  vertical-align: middle;
   font-size: ${ ({ theme }) => theme.fontSize.h4 };
-  color: ${ ({ theme }) => theme.color.neutral_500 };
+  color: transparent;
 `
 
 export default function StructuredTextDatoCMS({ data }) {
