@@ -257,13 +257,12 @@ export const GlobalStyle = createGlobalStyle`
     ${ getBreakpoints({
     xs: css`
       display: inline-block;
-      padding: 0.2rem 0.5rem;
+      padding: 0 0.4rem;
       border-radius: ${ ({ theme }) => theme.borderRadius };
-      color: ${ ({ theme }) => theme.color.neutral_100 };
-      background-color: ${ ({ theme }) => theme.color.neutral_800 };
+      background-color: ${ ({ theme }) => theme.color.neutral_300 };
     `,
     md: css`
-      padding: 0.5rem;
+      padding: 0.3rem;
       line-height: 1;
     `
   }) }

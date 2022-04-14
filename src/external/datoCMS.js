@@ -1,5 +1,3 @@
-const datoCMSURL = 'https://graphql.datocms.com/'
-
 function getQueryOptions(queryType, { slug, category }) {
   const queryMap = {
     aboutPage: `{
@@ -136,7 +134,11 @@ function getQueryOptions(queryType, { slug, category }) {
   }
 }
 
-export async function getContent(queryType, { slug, category }) {
+export async function getContent(queryType, { slug, category }, preview) {
+  const datoCMSURL = preview
+    ? 'https://graphql.datocms.com/preview'
+    : 'https://graphql.datocms.com/'
+
   const options = getQueryOptions(queryType, { slug, category })
   const response = await fetch(datoCMSURL, options)
   return response.json()
