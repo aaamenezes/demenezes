@@ -8,24 +8,27 @@ const StyledPostHeader = styled.header`
   padding-top: 6.6rem;
   padding-bottom: 3rem;
   margin-bottom: 10%;
-  color: ${ ({ theme }) => theme.color.neutral_100 };
-  background-image: ${ ({ theme, bgImage }) => (`
+  /* color: ${ ({ theme }) => theme.color.neutral_100 }; */
+  background-image: ${ ({ theme, bgImage }) => (css`
     linear-gradient(
-      ${ theme.color.red_700 + theme.opacity.hard.hex } 100%,
-      ${ theme.color.red_700 + theme.opacity.hard.hex } 100%
+      ${ theme.color.neutral_400 + theme.opacity.hard.hex } 100%,
+      ${ theme.color.neutral_400 + theme.opacity.hard.hex } 100%
     ),
     url(${ bgImage })
   `) };
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 `
 
 const PostTitle = styled.h1`
-  margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+  margin-bottom: ${ ({ theme }) => css`${ theme.spacing.h1 }rem` };
 `
 
 const LeadText = styled.p`
   ${ getBreakpoints({
     xs: css`
-      margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+      margin-bottom: ${ ({ theme }) => css`${ theme.spacing.text }rem` };
       line-height: ${ ({ theme }) => theme.lineHeight.text };
       font-size: ${ ({ theme }) => theme.fontSize.text };
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
@@ -69,7 +72,7 @@ const PostDate = styled.span`
       &:not(:last-of-type) {
         margin-right: 0.3rem;
 
-        &&:after {
+        &::after {
           content: ' - ';
         }
       }
