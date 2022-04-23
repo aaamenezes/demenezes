@@ -209,6 +209,12 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   }
+
+  hr {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid ${ ({ theme }) => theme.color.neutral_400 };
+  }
   
   a {
     color: currentColor;
@@ -271,6 +277,7 @@ export const GlobalStyle = createGlobalStyle`
   img:not(:first-child),
   table:not(:first-child),
   iframe:not(:first-child),
+  hr:not(:first-child),
   pre[class*="language-"]:not(:first-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
   }
@@ -279,6 +286,7 @@ export const GlobalStyle = createGlobalStyle`
   img:not(:last-child),
   table:not(:last-child),
   iframe:not(:last-child),
+  hr:not(:last-child),
   pre[class*="language-"]:not(:last-child) {
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
   }
