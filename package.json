@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "babel-plugin-prismjs": "^2.1.0",
+    "critters": "0.0.7",
     "date-fns": "2.16.1",
     "datocms-structured-text-utils": "^2.0.1",
     "install": "^0.13.0",
