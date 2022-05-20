@@ -274,7 +274,7 @@ export const GlobalStyle = createGlobalStyle`
   }) }
   }
   
-  img:not(:first-child),
+  figure:not(:first-child),
   table:not(:first-child),
   iframe:not(:first-child),
   hr:not(:first-child),
@@ -283,7 +283,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
-  img:not(:last-child),
+  figure:not(:last-child),
   table:not(:last-child),
   iframe:not(:last-child),
   hr:not(:last-child),

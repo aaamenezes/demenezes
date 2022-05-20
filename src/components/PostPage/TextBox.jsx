@@ -8,9 +8,15 @@ const StyledTextBox = styled.div`
   ${ getBreakpoints({
     xs: css`
       padding: 1rem;
-      margin-top: 0;
-      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
       background-color: ${ ({ theme }) => theme.color.red_50 };
+
+      &:not(:first-child) {
+        margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
+      }
+
+      &:not(:last-child) {
+        margin-top: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
+      }
 
       > *:first-child {
         margin-top: 0;
@@ -18,11 +24,26 @@ const StyledTextBox = styled.div`
     `,
     sm: css`
       padding: 1.5rem;
-      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+
+      &:not(:first-child) {
+        margin-bottom: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+      }
+
+      &:not(:last-child) {
+        margin-top: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+      }
+
     `,
     md: css`
       padding: 2rem;
-      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+
+      &:not(:first-child) {
+        margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+      }
+
+      &:not(:last-child) {
+        margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+      }
     `
   }) }
 `
