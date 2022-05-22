@@ -35,7 +35,8 @@ function getQueryOptions(queryType, { slug, category }) {
         keywords
         thumbnail {
           alt
-          responsiveImage {
+          responsiveImage(imgixParams: {auto: format}) {
+            src
             srcSet
           }
         }

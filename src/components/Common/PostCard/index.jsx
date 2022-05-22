@@ -49,6 +49,10 @@ const PostCardImage = styled.div`
   }) }
 `
 
+const PostCardImageLink = styled.a`
+  position: relative;
+`
+
 const PostCardLabel = styled.div`
   position: absolute;
   z-index: ${ ({ theme }) => theme.zIndex.absolute };
@@ -70,9 +74,7 @@ export default function PostCard({
   spacing
 }) {
   const { title, slug, thumbnail, category } = post
-  const imageSrc = thumbnail.responsiveImage.srcSet
-    .split(',')[0]
-    .split(' ')[0]
+  const { src } = thumbnail.responsiveImage
 
   return (
     <Container
@@ -82,9 +84,9 @@ export default function PostCard({
       isCompact={isCompact}
     >
       <PostCardImage isCompact={isCompact}>
-        <LinkButton href={`/posts/${ slug }`}>
+        <LinkButton href={`/posts/${ slug }`} as={PostCardImageLink}>
           <CropedImage
-            src={imageSrc}
+            src={`${ src }&w=364`}
             alt={`Imagem de capa do post: ${ title }`}
             ratio={imageRatio}
           />

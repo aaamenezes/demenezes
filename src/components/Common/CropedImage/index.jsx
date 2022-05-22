@@ -28,7 +28,7 @@ export default function CropedImage({ src, alt, ratio, highLight }) {
 
   return (
     <Crop aspectRatio={aspectRatio}>
-      <Image src={src} alt={alt} highLight={highLight} width='382' />
+      <Image src={src} alt={alt} highLight={highLight} width='364' />
     </Crop>
   )
 }
