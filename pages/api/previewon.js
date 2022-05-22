@@ -6,7 +6,7 @@ export default async function previewOn(request, response) {
   // }
 
   response.setPreviewData(null, {
-    maxAge: 60 * 30 // 60sec * 30 = 30min
+    maxAge: 60 * 30 // 60sec (1min) * 60 = 60min
   })
 
   response.redirect('/')
