@@ -92,7 +92,7 @@ export default function StructuredTextDatoCMS({ data }) {
       return (
         <Image
           key={record.image.alt}
-          srcSet={record.image.responsiveImage.srcSet}
+          src={record.image.responsiveImage.src}
           alt={record.image.alt}
           title={record.image.title}
         />

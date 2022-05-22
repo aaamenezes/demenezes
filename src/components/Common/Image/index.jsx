@@ -3,17 +3,6 @@ import styled, { css } from 'styled-components'
 import { theme } from '../../../theme'
 import getBreakpoints from '../../../utils/getBreakpoints'
 
-function getSourceTag(entry, url) {
-  const [ key, value ] = entry
-  return (
-    <source
-      key={key}
-      media={`(max-width:${ value }px)`}
-      srcSet={url}
-    />
-  )
-}
-
 const Picture = styled.picture`
   display: flex;
   justify-content: center;
@@ -40,25 +29,14 @@ const Figcaption = styled.figcaption`
   }) }
 `
 
-export default function Image({ src, alt, title, srcSet }) {
-  const urlList = srcSet
-    .split(',')
-    .map(size => size.split(' ')[0])
-
-  const { breakpoints } = theme
-  const sources = Object.entries(breakpoints)
-    .slice(1, 4)
-    .map((entry, index) => getSourceTag(entry, urlList[index]))
-
+export default function Image({ src, alt, title }) {
   return (
     <figure>
       <Picture>
-        {sources}
-        <Img
-          src={src || urlList[urlList.length - 1]}
-          alt={alt}
-          loading='lazy'
-        />
+        <source media='(max-width: 425px)' srcSet={`${ src }&w=425`} />
+        <source media='(max-width: 768px)' srcSet={`${ src }&w=860`} />
+        <source media='(max-width: 992px)' srcSet={`${ src }&w=1111`} />
+        <Img src={src} alt={alt} loading='lazy' />
       </Picture>
       {/* {title && <Figcaption>{title}</Figcaption>} */}
       <Figcaption>{title || alt}</Figcaption>
