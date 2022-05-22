@@ -76,6 +76,7 @@ function getQueryOptions(queryType, { slug, category }) {
               image {
                 alt
                 title
+                width
                 responsiveImage(imgixParams: {auto: format}) {
                   src
                 }

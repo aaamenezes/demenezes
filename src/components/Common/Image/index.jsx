@@ -29,13 +29,19 @@ const Figcaption = styled.figcaption`
   }) }
 `
 
-export default function Image({ src, alt, title }) {
+export default function Image({ src, width, alt, title }) {
   return (
     <figure>
       <Picture>
-        <source media='(max-width: 425px)' srcSet={`${ src }&w=425`} />
-        <source media='(max-width: 768px)' srcSet={`${ src }&w=860`} />
-        <source media='(max-width: 992px)' srcSet={`${ src }&w=1111`} />
+        {width >= 425 && (
+          <source media='(max-width: 425px)' srcSet={`${ src }&w=425`} />
+        )}
+        {width >= 860 && (
+          <source media='(max-width: 768px)' srcSet={`${ src }&w=860`} />
+        )}
+        {width >= 1111 && (
+          <source media='(max-width: 992px)' srcSet={`${ src }&w=1111`} />
+        )}
         <Img src={src} alt={alt} loading='lazy' />
       </Picture>
       {/* {title && <Figcaption>{title}</Figcaption>} */}
