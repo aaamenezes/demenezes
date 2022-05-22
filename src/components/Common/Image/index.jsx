@@ -16,10 +16,10 @@ const Img = styled.img`
 const Figcaption = styled.figcaption`
   ${ getBreakpoints({
     xs: css`
-      max-width: 112%;
+      width: fit-content;
       padding: 1rem 1rem;
-      margin: 0 -6%;
-      line-height: ${ theme.lineHeight.button };
+      margin: 1rem auto 0;
+      line-height: ${ theme.lineHeight.h4 };
       font-size: ${ theme.fontSize.small };
       background-color: ${ theme.color.neutral_300 };
     `,
