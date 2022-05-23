@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    scroll-behavior: smooth;
+
     ${ getBreakpoints({
     xs: css`font-size: ${ ({ theme }) => theme.fontSize.html.xs };`,
     sm: css`font-size: ${ ({ theme }) => theme.fontSize.html.sm };`,
@@ -167,15 +169,21 @@ export const GlobalStyle = createGlobalStyle`
   table {
     width: 100%;
 
-    caption {
-      caption-side: bottom;
-      font-size: ${ ({ theme }) => theme.fontSize.small };
-      text-align: right;
+    caption { /* visually hidden */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      white-space: nowrap;
+      clip: rect(1px, 1px, 1px, 1px);
     }
 
     td, th {
-      padding: 0 0.5rem;
+      padding: 0.5rem;
       text-align: center;
+      line-height: ${ ({ theme }) => theme.lineHeight.h4 };
     }
 
     thead tr {

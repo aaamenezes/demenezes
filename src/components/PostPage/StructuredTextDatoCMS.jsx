@@ -14,6 +14,7 @@ import TextBox from './TextBox'
 
 const Title = styled.h2`
   position: relative;
+  padding-top: 2rem;
 
   &:hover {
     span:nth-child(2) {
