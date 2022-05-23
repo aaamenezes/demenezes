@@ -26,7 +26,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     allPosts: `{
-      allPosts {
+      allPosts(orderBy: _firstPublishedAt_ASC) {
         title
         slug
         metaDescription
