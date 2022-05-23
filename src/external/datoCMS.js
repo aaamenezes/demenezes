@@ -109,10 +109,11 @@ function getQueryOptions(queryType, { slug, category }) {
       allPosts(filter: { category: { eq: "${ category }" } }) {
         title
         slug
+        category
         thumbnail {
           alt
-          responsiveImage {
-            srcSet
+          responsiveImage(imgixParams: {auto: format}) {
+            src
           }
         }
       }
