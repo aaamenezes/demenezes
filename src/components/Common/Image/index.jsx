@@ -44,8 +44,7 @@ export default function Image({ src, width, alt, title }) {
         )}
         <Img src={src} alt={alt} loading='lazy' />
       </Picture>
-      {/* {title && <Figcaption>{title}</Figcaption>} */}
-      <Figcaption>{title || alt}</Figcaption>
+      {title && <Figcaption>{title}</Figcaption>}
     </figure>
   )
 }

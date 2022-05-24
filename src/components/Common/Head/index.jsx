@@ -38,9 +38,7 @@ export default function Head({ componentProps }) {
     case 'about':
       return componentProps.aboutPageContent.data.profileImage.profileImage
         .responsiveImage
-        .srcSet
-        .split(',')[3]
-        .split(' ')[0]
+        .src
     case 'contact':
       return componentProps.contactContent.data.profileImage.profileImage
         .responsiveImage

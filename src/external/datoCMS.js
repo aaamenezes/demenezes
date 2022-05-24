@@ -4,8 +4,8 @@ function getQueryOptions(queryType, { slug, category }) {
       profileImage {
         profileImage {
           alt
-          responsiveImage {
-            srcSet
+          responsiveImage(imgixParams: {auto: format}) {
+            src
           }
         }
       }

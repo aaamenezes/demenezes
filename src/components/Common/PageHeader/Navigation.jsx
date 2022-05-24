@@ -18,7 +18,7 @@ const NavWrapper = styled.nav`
       max-width: ${ ({ theme }) => `${ theme.breakpoints.sm }px` };
       height: 100vh;
       background-color: ${ ({ theme }) => theme.color.neutral_300 };
-      transition: ${ ({ theme }) => theme.transition.medium };
+      transition: ${ ({ theme }) => theme.transition.fast };
     `,
     md: css`
       position: initial;

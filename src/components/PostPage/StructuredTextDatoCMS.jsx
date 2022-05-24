@@ -69,7 +69,9 @@ export default function StructuredTextDatoCMS({ data }) {
   }
 
   function handleHeading({ node }) {
-    const id = simplifyString(node.children[0].value)
+    const randomValue = (Math.random() * 1000).toFixed(0)
+    const id = `${ simplifyString(node.children[0].value) }-${ randomValue }`
+
     return (
       <Title
         key={node.children[0].value + Math.random()}

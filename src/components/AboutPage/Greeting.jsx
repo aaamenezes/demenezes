@@ -2,8 +2,8 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
-import CropedImage from '../Common/CropedImage'
 import HiddenA11Y from '../Common/HiddenA11Y'
+import Image from '../Common/Image'
 
 const StyledGreeting = styled.section`
   ${ getBreakpoints({
@@ -45,18 +45,13 @@ export default function Greeting({
   greetingDescription,
   profileImage
 }) {
-  const src = profileImage.responsiveImage.srcSet
-    .split(',')[0]
-    .split(' ')[0]
+  const { src } = profileImage.responsiveImage
+  const { alt } = profileImage
 
   return (
     <Container as={StyledGreeting} width='lg'>
       <ImageWrapper>
-        <CropedImage
-          src={src}
-          alt={profileImage.alt}
-          ratio='4x3'
-        />
+        <Image src={`${ src }&w=375`} width='375' alt={alt} />
       </ImageWrapper>
       <HiddenA11Y tag='h1'>{greetingTitle}</HiddenA11Y>
       <GreetingTitle>{greetingSubtitle}</GreetingTitle>

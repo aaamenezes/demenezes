@@ -28,6 +28,8 @@ export function simplifyString(string) {
     .join('-')
     .split(',')
     .join('-')
+    .split(':')
+    .join('-')
     .split('/')
     .join('-')
     .split('(')
