@@ -6,7 +6,7 @@ const StyledIcon = styled.i`
   ${ getBreakpoints({
     xs: css`
       padding: ${ ({ external }) => !external && '0.66rem 0.88rem' };
-      font-size: ${ ({ external }) => external && '0.7rem' };
+      font-size: ${ ({ external }) => external ? '0.7rem' : '1.2rem' };
       color: ${ ({ color }) => color || 'currentColor' };
       transition: ${ ({ theme }) => theme.transition.fast };
     `,
