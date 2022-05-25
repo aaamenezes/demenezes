@@ -77,7 +77,7 @@ export const GlobalStyle = createGlobalStyle`
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
       text-align: center;
       line-height: ${ ({ theme }) => theme.lineHeight.h4 };
-      font-size: ${ ({ theme }) => theme.fontSize.h4 };
+      font-size: ${ ({ theme }) => theme.fontSize.h3 };
       font-weight: ${ ({ theme }) => theme.fontWeight.h4 };
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
     `,
@@ -107,7 +107,7 @@ export const GlobalStyle = createGlobalStyle`
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
       text-align: left;
       line-height: ${ ({ theme }) => theme.lineHeight.text };
-      font-size: ${ ({ theme }) => theme.fontSize.text };
+      font-size: ${ ({ theme }) => theme.fontSize.h4 };
       font-weight: ${ ({ theme }) => theme.fontWeight.h2 };
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
     `,
