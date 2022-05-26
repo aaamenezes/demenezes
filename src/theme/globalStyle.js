@@ -218,6 +218,25 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  blockquote {
+    border-left: 10px solid ${ ({ theme }) => theme.color.red_100 };
+    padding: 1rem 1rem 1rem 1.5rem;
+    
+    p {
+      font-style: italic;
+
+      &::before { content: '“ ';}
+      &::after { content: ' ”';}
+    }
+
+    footer {
+      &::before {
+        content: '—';
+        margin-right: 1rem;
+      }
+    }
+  }
+
   hr {
     width: 60%;
     margin: 0 auto;
@@ -285,6 +304,7 @@ export const GlobalStyle = createGlobalStyle`
   figure:not(:first-child),
   table:not(:first-child),
   iframe:not(:first-child),
+  blockquote:not(:first-child),
   hr:not(:first-child),
   pre[class*="language-"]:not(:first-child) {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
@@ -294,6 +314,7 @@ export const GlobalStyle = createGlobalStyle`
   figure:not(:last-child),
   table:not(:last-child),
   iframe:not(:last-child),
+  blockquote:not(:last-child),
   hr:not(:last-child),
   pre[class*="language-"]:not(:last-child) {
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
