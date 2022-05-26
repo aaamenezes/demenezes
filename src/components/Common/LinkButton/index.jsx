@@ -9,9 +9,13 @@ const StyledLinkButton = styled.a`
   letter-spacing: ${ ({ theme, inline }) => (
     !inline && theme.letterSpacing.button
   ) };
-  text-decoration: ${ ({ inline }) => !inline && 'none' };
+  text-decoration: none;
   color: ${ ({ theme, inline }) => inline && theme.color.red_700 };
   cursor: pointer;
+`
+
+const LinkText = styled.span`
+  text-decoration: ${ ({ inline }) => inline && 'underline' };
 `
 
 export default function LinkButton({
@@ -33,7 +37,9 @@ export default function LinkButton({
           inline={inline}
           {...props}
         >
-          {children}
+          <LinkText inline={inline}>
+            {children}
+          </LinkText>
           {external && inline && <Icon name='external' inline />}
         </StyledLinkButton>
       </NextLink>
