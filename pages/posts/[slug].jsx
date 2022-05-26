@@ -67,7 +67,12 @@ export async function getStaticProps(context) {
       post,
       relatedPosts,
       PREVIEW: preview !== undefined
-    }
+    },
+    revalidate: 3600
+    /**
+     * In secods:
+     * 60sec * 60 = 1hour = 3600sec
+     */
   }
 }
 
