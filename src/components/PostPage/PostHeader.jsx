@@ -141,7 +141,7 @@ export default function PostHeader({
           }
         </PostDate>
         {
-          update && date && (
+          update > date && (
             <PostDate>{`Atualizado em ${ convertDate(update) }`}</PostDate>
           )
         }
