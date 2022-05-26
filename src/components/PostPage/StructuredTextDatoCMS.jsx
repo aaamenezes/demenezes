@@ -69,8 +69,7 @@ export default function StructuredTextDatoCMS({ data }) {
   }
 
   function handleHeading({ node }) {
-    const randomValue = (Math.random() * 1000).toFixed(0)
-    const id = `${ simplifyString(node.children[0].value) }-${ randomValue }`
+    const id = simplifyString(node.children[0].value)
 
     return (
       <Title
@@ -121,7 +120,7 @@ export default function StructuredTextDatoCMS({ data }) {
     case 'TextBoxRecord':
       return (
         <TextBox
-          key={record.textBoxContent}
+          key={Math.random()}
           content={record.textBoxContent}
         />
       )
