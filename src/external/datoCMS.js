@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 function getQueryOptions(queryType, { slug, category }) {
   const queryMap = {
     aboutPage: `{
@@ -26,7 +27,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     allPosts: `{
-      allPosts(orderBy: _firstPublishedAt_ASC) {
+      allPosts(orderBy: _firstPublishedAt_DESC) {
         title
         slug
         metaDescription
@@ -106,7 +107,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     relatedPosts: `{
-      allPosts(filter: { category: { eq: "${ category }" } }) {
+      allPosts(filter: {category: {eq: "Front-end"}}, orderBy: _firstPublishedAt_DESC) {
         title
         slug
         category
