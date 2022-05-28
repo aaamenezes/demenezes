@@ -42,6 +42,7 @@ const Title = styled.h2`
 const TitleLink = styled.a`
   position: relative;
   display: inline-block;
+  text-underline-offset: 0.3rem;
 `
 
 const TitleIcon = styled.span`
