@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { StructuredText, renderNodeRule } from 'react-datocms'
 import { isCode, isLink, isHeading } from 'datocms-structured-text-utils'
 import LinkButton from '../Common/LinkButton'
@@ -11,10 +11,14 @@ import Iframe from './Iframe'
 import Table from './Table'
 // eslint-disable-next-line import/no-cycle
 import TextBox from './TextBox'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const Title = styled.h2`
-  position: relative;
-  padding-top: 2rem;
+  ${ getBreakpoints({
+    xs: css`scroll-margin-top: 1.5rem;`,
+    sm: css`scroll-margin-top: 2rem;`,
+    md: css`scroll-margin-top: 2.5rem;`
+  }) }
 
   &:hover {
     span:nth-child(2) {
