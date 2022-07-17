@@ -103,6 +103,14 @@ function getQueryOptions(queryType, { slug, category }) {
                 value
               }
             }
+            ... on BlockquoteRecord {
+              id
+              quoteContent {
+                value
+              }
+              author
+              source
+            }
           }
         }
       }

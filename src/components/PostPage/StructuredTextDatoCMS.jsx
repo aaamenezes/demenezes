@@ -129,6 +129,13 @@ export default function StructuredTextDatoCMS({ data }) {
           content={record.textBoxContent}
         />
       )
+    case 'BlockquoteRecord':
+      return (
+        <blockquote cite={record.source}>
+          <StructuredTextDatoCMS data={record.quoteContent} />
+          <footer>{record.author}</footer>
+        </blockquote>
+      )
     default:
       return null
     }
