@@ -3,6 +3,8 @@ import Container from '../Common/Container'
 import Swiper from '../Common/Swiper'
 
 export default function RelatedPosts({ postCategory, relatedPosts }) {
+  if (relatedPosts.length === 0) return false
+
   return (
     <Container as='section' width='xl'>
       <header>
