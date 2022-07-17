@@ -59,6 +59,7 @@ function getQueryOptions(queryType, { slug, category }) {
     post: `{
       post(filter: { slug: { eq: "${ slug }" } }) {
         title
+        seoTitle
         metaDescription
         _updatedAt
         _firstPublishedAt

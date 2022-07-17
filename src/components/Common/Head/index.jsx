@@ -20,6 +20,10 @@ export default function Head({ componentProps }) {
 
   const pageTitle = `${ pageTitleFirstPart } | ${ TITLE_BASE }`
 
+  const seoTitle = isPostPage
+    ? componentProps.post.data.post.seoTitle
+    : pageTitle
+
   const pageDescriptionFirstPart = isPostPage
     ? componentProps.post.data.post.metaDescription
     : PAGES[CURRENT_PAGE].description
@@ -64,8 +68,8 @@ export default function Head({ componentProps }) {
     <NextHead>
       {/* TITLE */}
       <title>{pageTitle}</title>
-      <meta property='og:title' content={pageTitle} />
-      <meta name='twitter:title' content={pageTitle} />
+      <meta property='og:title' content={seoTitle} />
+      <meta name='twitter:title' content={seoTitle} />
 
       {/* DESCRIPTION */}
       <meta name='description' content={pageDescription} />
