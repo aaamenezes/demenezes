@@ -1,86 +1,20 @@
 import React from 'react'
-import NextHead from 'next/head'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { getPageInfos } from '../../../utils/getPageInfos'
 import settings from '../../../../settings.json'
+import { getPageInfos } from '../../../utils/getPageInfos'
 
-export default function Head({ componentProps }) {
-  const { CURRENT_PAGE } = getPageInfos()
+export default function GlobalHead() {
   const router = useRouter()
-  const isPostPage = CURRENT_PAGE === 'post'
+  const { CURRENT_PAGE } = getPageInfos()
+
   const { METADATA, PAGES, SRC } = settings
-  const {
-    BASE_TITLE,
-    BASE_DESCRIPTION,
-    BASE_KEYWORDS,
-    BASE_URL
-  } = METADATA
+  const { BASE_TITLE, BASE_URL } = METADATA
 
-  const pageTitleFirstPart = isPostPage
-    ? componentProps.post.data.post.title
-    : PAGES[CURRENT_PAGE].pageTitle
-
-  const pageTitle = `${ pageTitleFirstPart } | ${ BASE_TITLE }`
-
-  const pageDescriptionFirstPart = isPostPage
-    ? componentProps.post.data.post.metaDescription
-    : PAGES[CURRENT_PAGE].description
-
-  const pageDescription = PAGES[CURRENT_PAGE].pageTitle !== 'Home'
-    ? `${ pageDescriptionFirstPart } | ${ BASE_DESCRIPTION }`
-    : `${ BASE_DESCRIPTION }`
-
-  function getImageMetaTag() {
-    switch (CURRENT_PAGE) {
-    case 'home':
-    case 'listing':
-      return componentProps.CURRENT_POSTS[0].thumbnail.url
-    case 'post':
-      return componentProps.post.data.post.thumbnail.url
-    case 'about':
-      return componentProps.aboutPageContent.data.profileImage.profileImage
-        .responsiveImage
-        .src
-    case 'contact':
-      return componentProps.contactContent.data.profileImage.profileImage
-        .responsiveImage
-        .srcSet
-        .split(',')[3]
-        .split(' ')[0]
-    default:
-      return ''
-    }
-  }
-
-  const imageMetaTag = getImageMetaTag()
-
-  const pageKeywords = PAGES[CURRENT_PAGE].keywords
-    .join(', ')
-    .concat(', ')
-    .concat(isPostPage ? componentProps.post.data.post.keywords : '')
-    .concat(', ')
-    .concat(BASE_KEYWORDS.join(', '))
-    .replace(', , ', ', ')
+  const pageTitle = `${ PAGES[CURRENT_PAGE].pageTitle } | ${ BASE_TITLE }`
 
   return (
-    <NextHead>
-      {/* TITLE */}
-      <title>{pageTitle}</title>
-      <meta property='og:title' content={pageTitle} />
-      <meta name='twitter:title' content={pageTitle} />
-
-      {/* DESCRIPTION */}
-      <meta name='description' content={pageDescription} />
-      <meta property='og:description' content={pageDescription} />
-      <meta name='twitter:description' content={pageDescription} />
-
-      {/* IMAGE */}
-      <meta property='og:image' content={imageMetaTag} />
-      <meta name='twitter:image' content={imageMetaTag} />
-
-      {/* KEYWORDS */}
-      <meta name='keywords' content={pageKeywords} />
-
+    <Head>
       {/* RESPONSIVITY */}
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
@@ -97,7 +31,6 @@ export default function Head({ componentProps }) {
       />
       <link rel='stylesheet' href={SRC.FONT} />
       <link rel='stylesheet' href={SRC.ICONS} />
-      <link rel='stylesheet' href={SRC.CODE_THEME_VS_CODE} />
 
       {/* FAVICON */}
       <link
@@ -188,31 +121,6 @@ export default function Head({ componentProps }) {
       <meta property='og:locale' content='pt_BR' />
       <meta name='theme-color' content='#ffffff' />
       <meta name='twitter:card' content='summary' />
-      {
-        componentProps.post
-        // eslint-disable-next-line no-underscore-dangle
-        && componentProps.post.data.post._firstPublishedAt
-        && (
-          <meta
-            property='article:published_time'
-            // eslint-disable-next-line no-underscore-dangle
-            content={componentProps.post.data.post._firstPublishedAt}
-          />
-        )
-      }
-
-      {
-        componentProps.post
-        // eslint-disable-next-line no-underscore-dangle
-        && componentProps.post.data.post._updatedAt
-        && (
-          <meta
-            property='article:modified_time'
-            // eslint-disable-next-line no-underscore-dangle
-            content={componentProps.post.data.post._updatedAt}
-          />
-        )
-      }
-    </NextHead>
+    </Head>
   )
 }

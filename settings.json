@@ -58,15 +58,16 @@
     "TEXT": "Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game."
   },
   "METADATA": {
-    "TITLE_BASE": "deMenezes: Front-end, carreira e css-life-style",
-    "DESCRIPTION_BASE": "Um blog sobre isso, isso e isso",
-    "KEYWORDS_BASE": [
+    "BASE_TITLE": "deMenezes: Front-end, carreira e css-life-style",
+    "BASE_DESCRIPTION": "Um blog sobre isso, isso e isso",
+    "BASE_KEYWORDS": [
       "front-end",
       "programação",
       "carreira",
       "blog pessoal",
       "mercado de trabalho"
-    ]
+    ],
+    "BASE_URL": "https://demenezes.dev"
   },
   "NAVIGATION_MENU": [
     {
