@@ -107,7 +107,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     relatedPosts: `{
-      allPosts(filter: {category: {eq: "Front-end"}}, orderBy: _firstPublishedAt_DESC) {
+      allPosts(filter: {category: {eq: "${ category }"}}, orderBy: _firstPublishedAt_DESC) {
         title
         slug
         category
