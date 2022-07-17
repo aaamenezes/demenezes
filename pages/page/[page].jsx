@@ -70,6 +70,12 @@ export async function getStaticPaths() {
   //   counter++
   // }
 
+  // function createDynamicPaths(totalPages) {
+  //   return Array(totalPages)
+  //     .fill(0)
+  //     .map((page, index) => page + index + 1)
+  // }
+
   return {
     paths: dynamicPaths,
     fallback: false // or true
