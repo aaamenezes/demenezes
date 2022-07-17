@@ -11,7 +11,7 @@ export default function pageWrapper(PageComponent) {
     const { PREVIEW } = componentProps
     return (
       <ThemeProvider theme={theme}>
-        <Head componentProps={componentProps} />
+        {/* <Head componentProps={componentProps} /> */}
         <GlobalStyle />
         <PageHeader preview={PREVIEW} />
         <PageComponent {...componentProps} />

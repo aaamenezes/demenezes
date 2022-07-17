@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeHead from '../src/components/Common/Head/Home'
 import HomeScreen from '../src/components/Screens/HomeScreen'
 import pageWrapper from '../src/components/Wrappers/pageWrapper'
 import { getContent } from '../src/external/datoCMS'
@@ -12,13 +13,18 @@ function Home({
   PREVIEW
 }) {
   return (
-    <HomeScreen
-      CURRENT_POSTS={CURRENT_POSTS}
-      TOTAL_POSTS={TOTAL_POSTS}
-      CURRENT_PAGINATION={CURRENT_PAGINATION}
-      IS_LAST_PAGINATION={IS_LAST_PAGINATION}
-      PREVIEW={PREVIEW}
-    />
+    <>
+      <HomeHead
+        firstPostImage={CURRENT_POSTS[0].thumbnail.url}
+      />
+      <HomeScreen
+        CURRENT_POSTS={CURRENT_POSTS}
+        TOTAL_POSTS={TOTAL_POSTS}
+        CURRENT_PAGINATION={CURRENT_PAGINATION}
+        IS_LAST_PAGINATION={IS_LAST_PAGINATION}
+        PREVIEW={PREVIEW}
+      />
+    </>
   )
 }
 
