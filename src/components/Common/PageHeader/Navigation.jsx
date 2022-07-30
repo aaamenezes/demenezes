@@ -43,6 +43,8 @@ const NavList = styled.ul`
 `
 
 const NavItem = styled.li`
+  margin-bottom: 0;
+
   ${ getBreakpoints({
     xs: css`
       border-bottom: 1px solid ${ ({ theme }) => theme.color.neutral_300 };

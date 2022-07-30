@@ -88,14 +88,6 @@ const KeywordsList = styled.ul`
       justify-content: center;
       list-style: none;
       margin: 0.5rem 0 0;
-
-      > * {
-        margin-bottom: 0.5rem;
-      }
-
-      > :not(:last-child) {
-        margin-right: 0.5rem;
-      }
     `,
     md: css`
       justify-content: flex-end;
@@ -105,10 +97,15 @@ const KeywordsList = styled.ul`
 
 const KeywordItem = styled.li`
   padding: 0.3rem 0.5rem;
+  margin-bottom: 0.5rem;
   line-height: ${ ({ theme }) => theme.lineHeight.button };
   font-size: ${ ({ theme }) => theme.fontSize.small };
   color: ${ ({ theme }) => theme.color.neutral_100 };
   background-color: ${ ({ theme }) => theme.color.red_900 };
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 `
 
 export default function PostHeader({

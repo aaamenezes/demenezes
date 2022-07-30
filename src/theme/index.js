@@ -40,7 +40,8 @@ const color = {
 }
 
 const fontFamily = {
-  title: 'Ubuntu, sans-serif',
+  // title: 'Ubuntu, sans-serif',
+  title: '"Montserrat", sans-serif',
   text: '"Montserrat", sans-serif'
 
   /**
@@ -112,7 +113,7 @@ const lineHeight = {
   h3: 1.3, // articleTitle
   h4: 1.7, // articleSubtitle
   button: 1,
-  text: 2 // p, a, span
+  text: 1.7 // p, a, span
 }
 
 const spacing = {

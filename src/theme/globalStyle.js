@@ -32,9 +32,9 @@ export const GlobalStyle = createGlobalStyle`
 
   /* Já pode tirar essa coisa daqui? */
   #__next {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; */
   }
 
   nav {
@@ -154,6 +154,10 @@ export const GlobalStyle = createGlobalStyle`
     margin-left: 2rem;
   }
 
+  li {
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.small }rem` };
+  }
+
   p:not(:first-child),
   ul:not(:first-child),
   ol:not(:first-child) {
@@ -246,7 +250,7 @@ export const GlobalStyle = createGlobalStyle`
   a {
     color: currentColor;
   }
-  
+
   button {
     border: none;
     outline: none;
