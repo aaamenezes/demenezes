@@ -42,11 +42,6 @@ export async function getStaticProps(context) {
       CURRENT_PAGINATION,
       IS_LAST_PAGINATION,
       PREVIEW: preview !== undefined
-    },
-    revalidate: 3600
-    /**
-     * In secods:
-     * 60sec * 60 = 1hour = 3600sec
-     */
+    }
   }
 }
