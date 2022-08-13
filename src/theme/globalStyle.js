@@ -288,6 +288,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 2rem;
     border: none;
     border-radius: ${ ({ theme }) => theme.borderRadius };
+    box-shadow: none;
   }
 
   code:not([class*="language-"]) {
