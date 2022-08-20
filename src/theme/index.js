@@ -122,7 +122,7 @@ const spacing = {
   h3: 2,
   h4: 1.5,
   text: 1.5,
-  small: 1
+  small: 0.5
 }
 
 const opacity = {
