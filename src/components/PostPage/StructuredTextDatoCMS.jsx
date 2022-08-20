@@ -137,7 +137,9 @@ export default function StructuredTextDatoCMS({ data }) {
       return (
         <blockquote cite={record.source}>
           <StructuredTextDatoCMS data={record.quoteContent} />
-          <footer>{record.author}</footer>
+          {record.author && (
+            <footer>{record.author}</footer>
+          )}
         </blockquote>
       )
     default:
