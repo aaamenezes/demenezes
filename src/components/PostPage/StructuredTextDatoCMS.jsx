@@ -46,7 +46,11 @@ const TitleLink = styled.a`
 `
 
 const TitleIcon = styled.span`
-  vertical-align: middle;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-100%, -50%);
+  top: 50%;
+  left: 0;
   font-size: ${ ({ theme }) => theme.fontSize.h4 };
   color: transparent;
 `
