@@ -61,8 +61,11 @@ export async function getStaticProps() {
   const contactContent = await getContent('contactSection', {})
 
   return {
-    props: {
-      aboutPageContent, contactContent
-    }
+    props: { aboutPageContent, contactContent },
+    revalidate: 3600
+    /**
+     * In secods:
+     * 60sec * 60 = 1hour = 3600sec
+     */
   }
 }

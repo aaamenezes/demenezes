@@ -36,7 +36,12 @@ export async function getStaticProps({ params }) {
       TOTAL_POSTS,
       CURRENT_PAGINATION,
       IS_LAST_PAGINATION
-    }
+    },
+    revalidate: 3600
+    /**
+     * In secods:
+     * 60sec * 60 = 1hour = 3600sec
+     */
   }
 }
 
@@ -73,6 +78,6 @@ export async function getStaticPaths() {
 
   return {
     paths: dynamicPaths,
-    fallback: false // or true
+    fallback: 'blocking'
   }
 }
