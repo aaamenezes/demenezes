@@ -6,7 +6,6 @@ import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
 function Home({
   CURRENT_POSTS,
-  TOTAL_POSTS,
   CURRENT_PAGINATION,
   IS_LAST_PAGINATION,
   PREVIEW
@@ -14,7 +13,6 @@ function Home({
   return (
     <HomeScreen
       CURRENT_POSTS={CURRENT_POSTS}
-      TOTAL_POSTS={TOTAL_POSTS}
       CURRENT_PAGINATION={CURRENT_PAGINATION}
       IS_LAST_PAGINATION={IS_LAST_PAGINATION}
       PREVIEW={PREVIEW}
@@ -30,7 +28,6 @@ export async function getStaticProps(context) {
 
   const {
     CURRENT_POSTS,
-    TOTAL_POSTS,
     CURRENT_PAGINATION,
     IS_LAST_PAGINATION
   } = getPaginationInfos(allPosts.data.allPosts, params)
@@ -38,7 +35,6 @@ export async function getStaticProps(context) {
   return {
     props: {
       CURRENT_POSTS,
-      TOTAL_POSTS,
       CURRENT_PAGINATION,
       IS_LAST_PAGINATION,
       PREVIEW: preview !== undefined

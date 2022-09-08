@@ -7,14 +7,12 @@ import { getContent } from '../../src/external/datoCMS'
 
 function Home({
   CURRENT_POSTS,
-  TOTAL_POSTS,
   CURRENT_PAGINATION,
   IS_LAST_PAGINATION
 }) {
   return (
     <HomeScreen
       CURRENT_POSTS={CURRENT_POSTS}
-      TOTAL_POSTS={TOTAL_POSTS}
       CURRENT_PAGINATION={CURRENT_PAGINATION}
       IS_LAST_PAGINATION={IS_LAST_PAGINATION}
     />
@@ -27,13 +25,14 @@ export async function getStaticProps({ params }) {
   const allPosts = await getContent('allPosts', {})
 
   const {
-    CURRENT_POSTS, TOTAL_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION
+    CURRENT_POSTS,
+    CURRENT_PAGINATION,
+    IS_LAST_PAGINATION
   } = getPaginationInfos(allPosts.data.allPosts, params)
 
   return {
     props: {
       CURRENT_POSTS,
-      TOTAL_POSTS,
       CURRENT_PAGINATION,
       IS_LAST_PAGINATION
     },
@@ -48,8 +47,8 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
   const allPosts = await getContent('routes', {})
-  const TOTAL_POSTS = allPosts.data.allPosts.length
-  const totalPages = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
+  const totalPosts = allPosts.data.allPosts.length
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE)
 
   function createDynamicPaths(pageNumber, array = []) {
     return pageNumber > 0

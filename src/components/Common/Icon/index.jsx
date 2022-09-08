@@ -42,7 +42,7 @@ export default function Icon({ name, inline, color }) {
       <StyledIcon
         className='fab fa-medium'
         name={name}
-        color='#11100E'
+        color='#9BA5AA'
       />
     )
   case 'linkedin':
@@ -58,8 +58,16 @@ export default function Icon({ name, inline, color }) {
       <StyledIcon
         className='fab fa-instagram'
         name={name}
-        inline={inline}
         color='#F02002'
+      />
+    )
+  case 'dev.to':
+    return (
+      <StyledIcon
+        className='fas fa-code'
+        // 'fa-brands fa-dev'
+        name={name}
+        color='#9BA5AA'
       />
     )
   case 'bars':

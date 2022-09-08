@@ -16,5 +16,5 @@ export function getPaginationInfos(allPosts, params) {
   const lastPage = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
   const IS_LAST_PAGINATION = +CURRENT_PAGINATION === +lastPage
 
-  return { CURRENT_POSTS, TOTAL_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION }
+  return { CURRENT_POSTS, CURRENT_PAGINATION, IS_LAST_PAGINATION }
 }
