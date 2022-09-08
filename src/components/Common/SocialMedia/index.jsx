@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import settings from '../../../../settings.json'
-import HiddenA11Y from '../HiddenA11Y'
+import getBreakpoints from '../../../utils/getBreakpoints'
 import Icon from '../Icon'
 import LinkButton from '../LinkButton'
 
@@ -10,25 +10,60 @@ const SocialMediaWrapper = styled.nav`
 `
 
 const SocialList = styled.ul`
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  margin: 0;
-  font-size: ${ ({ theme }) => theme.fontSize.text };
+  ${ getBreakpoints({
+    xs: css`
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      list-style: none;
+      margin: 0;
+      font-size: ${ ({ theme }) => theme.fontSize.text };
+      margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+    `,
+    md: css`
+      flex-direction: row;
+      margin-bottom: 0;
+    `
+  }) }
+`
+
+const SocialItem = styled.li`
+  ${ getBreakpoints({
+    xs: css`
+      &:not(:last-child) {
+        margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+      }
+    `,
+    md: css`
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+      }
+    `
+  }) }
+`
+
+const SocialLabel = styled.span`
+  display: block;
+  margin-top: 0;
+  font-size: ${ ({ theme }) => theme.fontSize.small };
+  color: ${ ({ theme }) => theme.color.neutral_500 };
 `
 
 export default function SocialMedia({ center }) {
   const socialElements = settings.SOCIAL_MEDIA.map(socialMedia => (
-    <li key={socialMedia.title}>
-      <LinkButton href={socialMedia.url} external>
+    <SocialItem key={socialMedia.title}>
+      <LinkButton
+        href={socialMedia.url}
+        aria-label={`Acessar o ${ socialMedia.title } do autor do blog`}
+        external
+      >
         <Icon name={socialMedia.title} />
-        <HiddenA11Y>
-          Link para a rede social
-          {' '}
+        <SocialLabel>
           {socialMedia.title}
-        </HiddenA11Y>
+        </SocialLabel>
       </LinkButton>
-    </li>
+    </SocialItem>
   ))
 
   return (

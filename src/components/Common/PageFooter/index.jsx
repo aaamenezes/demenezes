@@ -21,7 +21,7 @@ const FooterWrapper = styled.footer`
         margin-bottom: 1.1rem;
       }
     `,
-    sm: css`
+    md: css`
       flex-direction: row-reverse;
       justify-content: space-between;
 
