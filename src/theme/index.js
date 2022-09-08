@@ -77,10 +77,10 @@ const fontSize = {
   small: '0.75rem',
   html: {
     xs: '16px',
-    sm: '17px',
-    md: '18px',
-    lg: '19px',
-    xl: '20px'
+    // sm: '16px',
+    md: '17px',
+    // lg: '17px',
+    xl: '18px'
   }
 }
 
