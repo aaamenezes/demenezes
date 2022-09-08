@@ -20,7 +20,9 @@ const PostCardWrapper = styled.article`
     `,
     md: css`
       flex-direction: ${ ({ isCompact }) => isCompact ? 'column' : 'row' };
-      justify-content: space-between;
+      justify-content: ${ ({ isCompact }) => (
+    isCompact ? 'flex-start' : 'space-between'
+  ) };
       padding: ${ ({ isCompact }) => isCompact ? '1rem' : '3rem' };
       box-shadow: none;
 
@@ -39,11 +41,11 @@ const PostCardImage = styled.div`
     xs: css`
       position: relative;
       width: 100%;
-      margin-bottom: 0.66rem;
+      margin-bottom: 1rem;
     `,
     md: css`
       width: ${ ({ isCompact }) => isCompact ? '100%' : '35%' };
-      margin-bottom: 0;
+      margin-bottom: ${ ({ isCompact }) => isCompact ? '1rem' : '0' };
       overflow: hidden;
     `
   }) }
@@ -80,7 +82,7 @@ export default function PostCard({
     <Container
       as={PostCardWrapper}
       width={width || 'xl'}
-      spacing={spacing || '7'}
+      spacing={typeof spacing === 'number' ? spacing : '7'}
       isCompact={isCompact}
     >
       <PostCardImage isCompact={isCompact}>

@@ -81,7 +81,9 @@ const Container = styled.div`
   ${ ({ theme, width, fluid }) => getContainerMaxWidth(theme, width, fluid) };
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: ${ ({ spacing }) => spacing ? `${ spacing }rem` : '7rem' };
+  margin-bottom: ${ ({ spacing }) => (
+    typeof spacing === 'number' ? `${ spacing }rem` : '7rem'
+  ) };
   padding-right: 5%;
   padding-left: 5%;
   ${ ({ theme, width }) => getContainerPadding(theme, width) };

@@ -14,7 +14,7 @@ const PostCardTitle = styled.h3`
       padding: 0.5rem;
       margin: ${ ({ theme, hero }) => hero ? `${ theme.spacing.h3 }rem 0` : 0 };
       font-size: ${ ({ theme, isCompact }) => (
-    isCompact ? theme.fontSize.h4 : theme.fontSize.h3
+    isCompact ? theme.fontSize.text : theme.fontSize.h3
   ) };
       font-weight: ${ ({ theme, isCompact }) => (
     isCompact ? theme.fontWeight.h4 : theme.fontWeight.h3
