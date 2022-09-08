@@ -59,7 +59,7 @@
   },
   "METADATA": {
     "TITLE_BASE": "deMenezes: Front-end, carreira e css-life-style",
-    "DESCRIPTION_BASE": "Um blog sobre isso, isso e isso",
+    "DESCRIPTION_BASE": "Um blog sobre front-end, HTML, CSS, Javascript, carreira e mercado de trabalho, ferramentas, Git, e mais",
     "KEYWORDS_BASE": [
       "front-end",
       "programação",
@@ -115,7 +115,7 @@
     }
   },
   "PAGINATION_CONFIG": {
-    "POSTS_PER_PAGE": 5
+    "POSTS_PER_PAGE": 10
   },
   "SOCIAL_MEDIA": [
     {
@@ -129,6 +129,14 @@
     {
       "title": "twitter",
       "url": "https://twitter.com/aaamenezes"
+    },
+    {
+      "title": "medium",
+      "url": "https://medium.com/@demenezes"
+    },
+    {
+      "title": "dev.to",
+      "url": "https://dev.to/demenezes"
     }
   ],
   "SRC": {
