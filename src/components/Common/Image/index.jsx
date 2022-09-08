@@ -42,7 +42,11 @@ export default function Image({ src, width, alt, title }) {
         {width >= 1111 && (
           <source media='(max-width: 992px)' srcSet={`${ src }&w=1111`} />
         )}
-        <Img src={src} alt={alt} loading='lazy' />
+        {
+          alt
+            ? <Img src={src} alt={alt} loading='lazy' />
+            : <Img src={src} role='presentation' loading='lazy' />
+        }
       </Picture>
       {title && <Figcaption>{title}</Figcaption>}
     </figure>
