@@ -15,6 +15,7 @@ export default function RelatedPosts({ postCategory, relatedPosts }) {
   const relatedPostsElements = relatedPosts.map(
     post => (
       <PostCard
+        key={post.title}
         post={post}
         imageRatio='4x3'
         isCompact
