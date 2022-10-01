@@ -311,23 +311,31 @@ export const GlobalStyle = createGlobalStyle`
   iframe:not(:first-child),
   blockquote:not(:first-child),
   hr:not(:first-child),
-  pre[class*="language-"]:not(:first-child) {
-    margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+  pre[class*="language-"]:not(:first-child),
+  .twitter-tweet {
+    margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` } !important;
+    /**
+     * O !important serve para sobrescrever o CSS inline do Twitter
+     */
   }
-
 
   figure:not(:last-child),
   table:not(:last-child),
   iframe:not(:last-child),
   blockquote:not(:last-child),
   hr:not(:last-child),
-  pre[class*="language-"]:not(:last-child) {
-    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+  pre[class*="language-"]:not(:last-child),
+  .twitter-tweet {
+    margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` } !important;
   }
 
   iframe {
     display: block;
     max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .twitter-tweet {
     margin: 0 auto;
   }
 `

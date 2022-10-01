@@ -142,6 +142,14 @@ export default function StructuredTextDatoCMS({ data }) {
           )}
         </blockquote>
       )
+    case 'TweetRecord':
+      return (
+        <div>
+          <div
+            dangerouslySetInnerHTML={{ __html: record.tweetEmbedCodeblock }}
+          />
+        </div>
+      )
     default:
       return null
     }

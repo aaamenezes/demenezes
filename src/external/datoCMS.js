@@ -111,6 +111,10 @@ function getQueryOptions(queryType, { slug, category }) {
               author
               source
             }
+            ... on TweetRecord {
+              id
+              tweetEmbedCodeblock
+            }
           }
         }
       }
