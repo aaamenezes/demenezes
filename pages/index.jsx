@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeScreen from '../src/components/Screens/HomeScreen'
-import pageWrapper from '../src/components/Wrappers/pageWrapper'
+import pageWrapper from '../src/components/PageWrapper'
 import { getContent } from '../src/external/datoCMS'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
