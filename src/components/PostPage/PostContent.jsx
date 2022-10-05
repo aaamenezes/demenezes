@@ -14,7 +14,7 @@ export default function PostContent({ post }) {
   }, [ post ])
 
   return (
-    <Container as={StyledPostContent} width='xl' spacing='0'>
+    <Container as={StyledPostContent} width='lg' spacing='0'>
       <StructuredTextDatoCMS data={post.data.post.content} />
     </Container>
   )
