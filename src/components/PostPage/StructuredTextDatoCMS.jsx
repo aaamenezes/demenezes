@@ -19,40 +19,33 @@ const Title = styled.h2`
     sm: css`scroll-margin-top: 2rem;`,
     md: css`scroll-margin-top: 2.5rem;`
   }) }
-
-  &:hover {
-    span:nth-child(2) {
-      color: ${ ({ theme }) => theme.color.neutral_500 };
-    }
-  }
-
-  a {
-    text-decoration: none;
-    text-decoration-color: ${ ({ theme }) => theme.color.neutral_50 };
-    transition: ${ ({ theme }) => theme.transition.fast };
-
-    &:hover {
-      text-decoration: underline;
-      text-decoration-style: dotted;
-      text-decoration-color: ${ ({ theme }) => theme.color.neutral_500 };
-    }
-  }
 `
 
 const TitleLink = styled.a`
-  position: relative;
-  display: inline-block;
-  text-underline-offset: 0.3rem;
-`
+  display: block;
+  text-decoration-color: ${ ({ theme }) => theme.color.transparent };
+  text-underline-offset: ${ ({ theme }) => `${ theme.spacing.small }rem` };
+  text-decoration-style: dotted;
+  transition: ${ ({ theme }) => theme.transition.fast };
 
-const TitleIcon = styled.span`
-  position: absolute;
-  z-index: 1;
-  transform: translate(-100%, -50%);
-  top: 50%;
-  left: 0;
-  font-size: ${ ({ theme }) => theme.fontSize.h4 };
-  color: transparent;
+  &::before {
+    content: '#';
+    display: inline-block;
+    margin-right: ${ ({ theme }) => `${ theme.spacing.small }rem` };
+    font-size: ${ ({ theme }) => theme.fontSize.h4 };
+    text-decoration: none;
+    color: ${ ({ theme }) => theme.color.neutral_500 };
+    opacity: 0;
+    transition: ${ ({ theme }) => theme.transition.fast };
+  }
+
+  &:hover {
+    text-decoration-color: ${ ({ theme }) => theme.color.neutral_500 };
+
+    &::before {
+      opacity: 1;
+    }
+  }
 `
 
 export default function StructuredTextDatoCMS({ data }) {
@@ -87,10 +80,11 @@ export default function StructuredTextDatoCMS({ data }) {
         id={id}
       >
         <TitleLink href={`#${ id }`}>
-          <span>{node.children[0].value}</span>
+          {node.children[0].value}
+          {/* <span>{node.children[0].value}</span>
           <TitleIcon>
             <Icon name='link' />
-          </TitleIcon>
+          </TitleIcon> */}
         </TitleLink>
       </Title>
     )

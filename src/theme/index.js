@@ -36,7 +36,8 @@ const color = {
   neutral_600: '#979797', // gray
   neutral_700: '#555555', // gray
   neutral_800: '#323232', // black
-  neutral_900: '#121212' // black
+  neutral_900: '#121212', // black
+  transparent: 'rgba(0,0,0,0)' // Obrigado Safari
 }
 
 const fontFamily = {
@@ -77,10 +78,10 @@ const fontSize = {
   small: '0.75rem',
   html: {
     xs: '16px',
-    // sm: '16px',
-    md: '17px',
-    // lg: '17px',
-    xl: '18px'
+    sm: '17px',
+    md: '18px',
+    lg: '19px',
+    xl: '20px'
   }
 }
 
