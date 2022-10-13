@@ -278,7 +278,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
   }
   
-  img {
+  img, video {
     display: block;
     max-width: 100%;
     margin: 0 auto;
@@ -312,7 +312,8 @@ export const GlobalStyle = createGlobalStyle`
   blockquote:not(:first-child),
   hr:not(:first-child),
   pre[class*="language-"]:not(:first-child),
-  .twitter-tweet {
+  .twitter-tweet:not(:first-child),
+  video {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` } !important;
     /**
      * O !important serve para sobrescrever o CSS inline do Twitter
@@ -325,8 +326,12 @@ export const GlobalStyle = createGlobalStyle`
   blockquote:not(:last-child),
   hr:not(:last-child),
   pre[class*="language-"]:not(:last-child),
-  .twitter-tweet {
+  .twitter-tweet:not(:last-child),
+  video {
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` } !important;
+    /**
+     * O !important serve para sobrescrever o CSS inline do Twitter
+     */
   }
 
   iframe {

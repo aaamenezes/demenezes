@@ -84,11 +84,18 @@ function getQueryOptions(queryType, { slug, category }) {
                 }
               }
             }
-            ... on VideoRecord {
+            ... on ExternalVideoRecord {
               id
               video {
                 title
                 providerUid
+              }
+            }
+            ... on VideoRecord {
+              id
+              video {
+                url
+                alt
               }
             }
             ... on TableRecord {
@@ -151,10 +158,7 @@ function getQueryOptions(queryType, { slug, category }) {
 }
 
 export async function getContent(queryType, { slug, category }, preview) {
-  const datoCMSURL = preview
-    ? 'https://graphql.datocms.com/preview'
-    : 'https://graphql.datocms.com/'
-
+  const datoCMSURL = `https://graphql.datocms.com/${ preview ? 'preview' : '' }`
   const options = getQueryOptions(queryType, { slug, category })
   const response = await fetch(datoCMSURL, options)
   return response.json()

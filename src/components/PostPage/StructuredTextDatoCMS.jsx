@@ -5,13 +5,13 @@ import { isCode, isLink, isHeading } from 'datocms-structured-text-utils'
 import LinkButton from '../Common/LinkButton'
 import CodeBlock from './CodeBlock'
 import { simplifyString } from '../../utils/simplifyString'
-import Icon from '../Common/Icon'
 import Image from '../Common/Image'
 import Iframe from './Iframe'
 import Table from './Table'
 // eslint-disable-next-line import/no-cycle
 import TextBox from './TextBox'
 import getBreakpoints from '../../utils/getBreakpoints'
+import Video from './Video'
 
 const Title = styled.h2`
   ${ getBreakpoints({
@@ -81,40 +81,45 @@ export default function StructuredTextDatoCMS({ data }) {
       >
         <TitleLink href={`#${ id }`}>
           {node.children[0].value}
-          {/* <span>{node.children[0].value}</span>
-          <TitleIcon>
-            <Icon name='link' />
-          </TitleIcon> */}
         </TitleLink>
       </Title>
     )
   }
 
   function handleBlock({ record }) {
-    // eslint-disable-next-line no-underscore-dangle
-    switch (record.__typename) {
+    const { __typename } = record
+    switch (__typename) {
     case 'ImageRecord':
       return (
         <Image
-          key={record.image.alt}
+          key={record.id}
           src={record.image.responsiveImage.src}
           width={record.image.width}
           alt={record.image.alt}
           title={record.image.title}
         />
       )
-    case 'VideoRecord':
+    case 'ExternalVideoRecord':
       return (
         <Iframe
-          key={record.video.title}
+          key={record.id}
           title={record.video.title}
           videoID={record.video.providerUid}
+        />
+      )
+    case 'VideoRecord':
+      return (
+        // <div></div>
+        <Video
+          key={record.id}
+          url={record.video.url}
+          alt={record.video.alt}
         />
       )
     case 'TableRecord':
       return (
         <Table
-          key={record.tableTitle}
+          key={record.id}
           tableTitle={record.tableTitle}
           tableSummary={record.tableSummary}
           tableContent={record.table}
