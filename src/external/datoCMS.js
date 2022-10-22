@@ -27,11 +27,12 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     allPosts: `{
-      allPosts(orderBy: _firstPublishedAt_DESC) {
+      allPosts(orderBy: _updatedAt_DESC) {
         title
         slug
         metaDescription
         _firstPublishedAt
+        _updatedAt
         category
         keywords
         thumbnail {
@@ -127,7 +128,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     relatedPosts: `{
-      allPosts(filter: {category: {eq: "${ category }"}}, orderBy: _firstPublishedAt_DESC) {
+      allPosts(filter: {category: {eq: "${ category }"}}, orderBy: _updatedAt_DESC) {
         title
         slug
         category
