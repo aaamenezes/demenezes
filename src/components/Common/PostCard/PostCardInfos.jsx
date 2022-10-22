@@ -23,7 +23,7 @@ const PostCardInfosWrapper = styled.div`
 `
 
 export default function PostCardInfos({ post, hero, isCompact }) {
-  const { _firstPublishedAt, metaDescription } = post
+  const { _firstPublishedAt, metaDescription, _updatedAt } = post
 
   function getWrapperWidth(isHero, compact) {
     if (compact) { return '100%' }
@@ -43,7 +43,11 @@ export default function PostCardInfos({ post, hero, isCompact }) {
         hero={hero}
         isCompact={isCompact}
       />
-      <PostCardFooter date={_firstPublishedAt} isCompact={isCompact} />
+      <PostCardFooter
+        date={_firstPublishedAt}
+        update={_updatedAt}
+        isCompact={isCompact}
+      />
     </PostCardInfosWrapper>
   )
 }

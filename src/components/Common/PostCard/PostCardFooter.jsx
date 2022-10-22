@@ -16,19 +16,32 @@ const PostCardFooterWrapper = styled.footer`
 `
 
 const PostCardDate = styled.p`
+  margin: 0 !important;
+  text-align: right;
   font-size: ${ ({ theme }) => theme.fontSize.small };
   letter-spacing: ${ ({ theme }) => theme.letterSpacing.button };
   color: ${ ({ theme }) => theme.color.neutral_600 };
 `
 
-export default function PostCardFooter({ date, isCompact }) {
+export default function PostCardFooter({ date, update, isCompact }) {
   if (!date) return null
 
   return (
     <PostCardFooterWrapper isCompact={isCompact}>
       <PostCardDate>
-        {convertDate(date)}
+        {
+          update && date
+            ? `${ update > date ? 'Publicado em ' : '' }${ convertDate(date) }`
+            : 'Não publicado'
+        }
       </PostCardDate>
+      {
+        update > date && (
+          <PostCardDate>
+            {`Atualizado em ${ convertDate(update) }`}
+          </PostCardDate>
+        )
+      }
     </PostCardFooterWrapper>
   )
 }
