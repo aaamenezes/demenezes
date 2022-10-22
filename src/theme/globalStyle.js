@@ -30,13 +30,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${ ({ theme }) => theme.color.neutral_50 };
   }
 
-  /* Já pode tirar essa coisa daqui? */
-  #__next {
-    /* display: flex;
-    flex-direction: column;
-    min-height: 100vh; */
-  }
-
   nav {
     line-height: ${ ({ theme }) => theme.lineHeight.button };
     font-size: ${ ({ theme }) => theme.fontSize.small };

@@ -3,11 +3,12 @@ import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import Container from '../../Common/Container'
 import PostCardInfos from '../../Common/PostCard/PostCardInfos'
+import PostLabel from '../../Common/PostLabel'
 
 const HeroWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
-      /* height: 100vh; */
+      position: relative;
       padding-top: 6.6rem;
       padding-bottom: 2.2rem;
       background-image: ${ ({ theme, src }) => css`linear-gradient(
@@ -72,6 +73,9 @@ export default function HeroPostCard({ post }) {
         post={post}
         hero
       />
+      <PostLabel>
+        {post.category}
+      </PostLabel>
     </Container>
   )
 }

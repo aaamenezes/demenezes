@@ -3,8 +3,10 @@ import styled, { css } from 'styled-components'
 import { convertDate } from '../../utils/convertDate'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
+import PostLabel from '../Common/PostLabel'
 
 const StyledPostHeader = styled.header`
+  position: relative;
   padding-top: 6.6rem;
   padding-bottom: 3rem;
   margin-bottom: 10%;
@@ -142,9 +144,9 @@ export default function PostHeader({
             <PostDate>{`Atualizado em ${ convertDate(update) }`}</PostDate>
           )
         }
-        <PostDate>{ category }</PostDate>
         <KeywordsList>{keywordsList}</KeywordsList>
       </PostHeaderFooter>
+      <PostLabel>{ category }</PostLabel>
     </Container>
   )
 }

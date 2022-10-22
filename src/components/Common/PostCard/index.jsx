@@ -5,6 +5,7 @@ import CropedImage from '../CropedImage'
 import LinkButton from '../LinkButton'
 import PostCardInfos from './PostCardInfos'
 import getBreakpoints from '../../../utils/getBreakpoints'
+import PostLabel from '../PostLabel'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
@@ -55,19 +56,6 @@ const PostCardImageLink = styled.a`
   position: relative;
 `
 
-const PostCardLabel = styled.div`
-  position: absolute;
-  z-index: ${ ({ theme }) => theme.zIndex.absolute };
-  top: 70%;
-  left: 0;
-  padding: 0.44rem 0.66rem;
-  line-height: ${ ({ theme }) => theme.lineHeight.button };
-  font-size: ${ ({ theme }) => theme.fontSize.small };
-  letter-spacing: ${ ({ theme }) => theme.letterSpacing.button };
-  color: ${ ({ theme }) => theme.color.neutral_100 };
-  background-color: ${ ({ theme }) => theme.color.red_700 };
-`
-
 export default function PostCard({
   post,
   imageRatio,
@@ -92,9 +80,9 @@ export default function PostCard({
             alt={`Imagem de capa do post: ${ title }`}
             ratio={imageRatio}
           />
-          <PostCardLabel>
+          <PostLabel>
             {category}
-          </PostCardLabel>
+          </PostLabel>
         </LinkButton>
       </PostCardImage>
       <PostCardInfos post={post} isCompact={isCompact} />
