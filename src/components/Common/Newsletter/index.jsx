@@ -50,8 +50,8 @@ export default function Newsletter() {
   const { TITLE, MAILCHIMP_FORM_ACTION } = settings.FORM.SIGNUP
 
   return (
-    <Container as={NewsletterForm} width='xxxl' fluid>
-      <Container width='md' spacing='0'>
+    <Container as={NewsletterForm} width='full' fluid>
+      <Container width='md' spacing={0}>
         <NewsletterTitle>{TITLE}</NewsletterTitle>
 
         {/* Begin Mailchimp Signup Form */}

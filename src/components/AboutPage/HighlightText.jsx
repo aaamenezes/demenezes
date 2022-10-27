@@ -23,7 +23,7 @@ const TextWrapper = styled.div`
 
 export default function HighlightText({ children }) {
   return (
-    <Container as={StyledHighlightText} width='xxxl' fluid>
+    <Container as={StyledHighlightText} width='full' fluid>
       <Container as={TextWrapper} width='md' fluid>
         <p>
           {children}

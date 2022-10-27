@@ -5,11 +5,9 @@ import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import PostLabel from '../Common/PostLabel'
 
-const StyledPostHeader = styled.header`
-  position: relative;
+const PostHeaderWrapper = styled.header`
   padding-top: 6.6rem;
   padding-bottom: 3rem;
-  margin-bottom: 10%;
   /* color: ${ ({ theme }) => theme.color.neutral_100 }; */
   background-image: ${ ({ theme, bgImage }) => (css`
     linear-gradient(
@@ -21,6 +19,10 @@ const StyledPostHeader = styled.header`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+`
+
+const PostHeaderInner = styled.div`
+  position: relative;
 `
 
 const PostTitle = styled.h1`
@@ -124,29 +126,31 @@ export default function PostHeader({
   ))
 
   return (
-    <Container as={StyledPostHeader} width='xxxl' bgImage={coverImage} fluid>
-      <PostTitle>{title}</PostTitle>
-      <LeadText>
-        <strong>
-          {description}
-        </strong>
-      </LeadText>
-      <PostHeaderFooter>
-        <PostDate>
+    <Container as={PostHeaderWrapper} width='full' fluid bgImage={coverImage}>
+      <Container as={PostHeaderInner} width='xxxl' spacing={0}>
+        <PostTitle>{title}</PostTitle>
+        <LeadText>
+          <strong>
+            {description}
+          </strong>
+        </LeadText>
+        <PostHeaderFooter>
+          <PostDate>
+            {
+              update && date
+                ? `Publicado em ${ convertDate(date) }`
+                : 'Não publicado'
+            }
+          </PostDate>
           {
-            update && date
-              ? `Publicado em ${ convertDate(date) }`
-              : 'Não publicado'
+            update > date && (
+              <PostDate>{`Atualizado em ${ convertDate(update) }`}</PostDate>
+            )
           }
-        </PostDate>
-        {
-          update > date && (
-            <PostDate>{`Atualizado em ${ convertDate(update) }`}</PostDate>
-          )
-        }
-        <KeywordsList>{keywordsList}</KeywordsList>
-      </PostHeaderFooter>
-      <PostLabel>{ category }</PostLabel>
+          <KeywordsList>{keywordsList}</KeywordsList>
+        </PostHeaderFooter>
+        <PostLabel>{ category }</PostLabel>
+      </Container>
     </Container>
   )
 }

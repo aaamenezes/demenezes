@@ -70,7 +70,7 @@ export default function PostCard({
     <Container
       as={PostCardWrapper}
       width={width || 'xl'}
-      spacing={typeof spacing === 'number' ? spacing : '7'}
+      spacing={typeof +spacing === 'number' ? +spacing : 7}
       isCompact={isCompact}
     >
       <PostCardImage isCompact={isCompact}>

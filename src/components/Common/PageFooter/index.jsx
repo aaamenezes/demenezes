@@ -6,15 +6,19 @@ import LogoWrapper from '../LogoWrapper'
 import SocialMedia from '../SocialMedia'
 
 const FooterWrapper = styled.footer`
+  padding: 2.2rem;
+  margin-top: auto;
+  margin-bottom: 0;
+  color: ${ ({ theme }) => theme.color.neutral_100 };
+  background-color: ${ ({ theme }) => theme.color.neutral_900 };
+`
+
+const FooterInner = styled.div`
   ${ getBreakpoints({
     xs: css`
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2.2rem;
-      margin-top: auto;
-      margin-bottom: 0;
-      color: ${ ({ theme }) => theme.color.neutral_100 };
       background-color: ${ ({ theme }) => theme.color.neutral_900 };
 
       > *:not(:last-child) {
@@ -35,9 +39,11 @@ const FooterWrapper = styled.footer`
 
 export default function PageFooter() {
   return (
-    <Container as={FooterWrapper} width='xxxl' fluid>
-      <SocialMedia />
-      <LogoWrapper />
+    <Container as={FooterWrapper} width='full' fluid>
+      <Container as={FooterInner} width='xxxl' spacing={0}>
+        <SocialMedia />
+        <LogoWrapper />
+      </Container>
     </Container>
   )
 }

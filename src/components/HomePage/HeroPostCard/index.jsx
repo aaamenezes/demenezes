@@ -8,7 +8,6 @@ import PostLabel from '../../Common/PostLabel'
 const HeroWrapper = styled.article`
   ${ getBreakpoints({
     xs: css`
-      position: relative;
       padding-top: 6.6rem;
       padding-bottom: 2.2rem;
       background-image: ${ ({ theme, src }) => css`linear-gradient(
@@ -59,23 +58,30 @@ const HeroWrapper = styled.article`
   }) }
 `
 
+const HeroInner = styled.div`
+  position: relative;
+`
+
 export default function HeroPostCard({ post }) {
   const { src } = post.thumbnail.responsiveImage
 
   return (
-    <Container
-      as={HeroWrapper}
-      src={src}
-      width='xxxl'
-      fluid
-    >
-      <PostCardInfos
-        post={post}
-        hero
-      />
-      <PostLabel>
-        {post.category}
-      </PostLabel>
+    <Container as={HeroWrapper} width='full'>
+      <Container
+        as={HeroInner}
+        src={src}
+        width='xxxl'
+        spacing={0}
+        fluid
+      >
+        <PostCardInfos
+          post={post}
+          hero
+        />
+        <PostLabel>
+          {post.category}
+        </PostLabel>
+      </Container>
     </Container>
   )
 }

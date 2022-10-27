@@ -15,9 +15,6 @@ const HeaderWrapper = styled.header`
   z-index: ${ ({ theme }) => theme.zIndex.fixed };
   top: 0;
   left: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 0.66rem;
   padding-bottom: 0.66rem;
   color: ${ ({ theme }) => theme.color.neutral_100 };
@@ -25,6 +22,12 @@ const HeaderWrapper = styled.header`
     currentPage === 'home' ? 'transparent' : theme.color.neutral_900
   ) };
   transition: ${ ({ theme }) => theme.transition.medium };
+`
+
+const HeaderInner = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const ToggleMenuButton = styled.button`
@@ -51,24 +54,26 @@ export default function PageHeader({ preview }) {
   }, [])
 
   return (
-    <Container
-      as={HeaderWrapper}
-      width='xxxl'
-      fluid
-      openHeader={openHeader}
-      currentPage={CURRENT_PAGE}
-    >
-      <LogoWrapper preview={preview} />
-      <ToggleModalButton
-        onClick={toggleMenu}
-        icon='bars'
-        as={ToggleMenuButton}
-      />
-      <Navigation
-        openMenu={openMenu}
-        toggleMenu={toggleMenu}
-      />
-      {/* <SearchWrapper /> */}
+    <Container width='full' as={HeaderWrapper} openHeader={openHeader}>
+      <Container
+        as={HeaderInner}
+        width='xxxl'
+        spacing={0}
+        currentPage={CURRENT_PAGE}
+        fluid
+      >
+        <LogoWrapper preview={preview} />
+        <ToggleModalButton
+          onClick={toggleMenu}
+          icon='bars'
+          as={ToggleMenuButton}
+        />
+        <Navigation
+          openMenu={openMenu}
+          toggleMenu={toggleMenu}
+        />
+        {/* <SearchWrapper /> */}
+      </Container>
     </Container>
   )
 }
