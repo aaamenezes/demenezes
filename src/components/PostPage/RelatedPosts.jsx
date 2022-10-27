@@ -1,12 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import PostCard from '../Common/PostCard'
 
 const RelatedPostsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+  ${ getBreakpoints({
+    xs: css`
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+    `,
+    md: css`
+      gap: 0;
+    `
+  })}
 `
 
 export default function RelatedPosts({ postCategory, relatedPosts }) {
