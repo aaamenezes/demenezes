@@ -11,7 +11,6 @@ const PostCardTitle = styled.h3`
   ${ getBreakpoints({
     xs: css`
       display: inline-block;
-      padding: 0.5rem;
       margin: ${ ({ theme, hero }) => hero ? `${ theme.spacing.h3 }rem 0` : 0 };
       font-size: ${ ({ theme, isCompact }) => (
     isCompact ? theme.fontSize.text : theme.fontSize.h3
@@ -59,6 +58,10 @@ const PostCardTitle = styled.h3`
   }) }
 `
 
+const PostCardTitleLink = styled.a`
+  padding: 0.5rem;
+`
+
 export default function PostCardHeader({ post, hero, isCompact }) {
   const { category, slug, title } = post
 
@@ -72,7 +75,7 @@ export default function PostCardHeader({ post, hero, isCompact }) {
         )
       }
       <PostCardTitle hero={hero} isCompact={isCompact}>
-        <LinkButton href={`/posts/${ slug }`}>
+        <LinkButton as={PostCardTitleLink} href={`/posts/${ slug }`}>
           {title}
         </LinkButton>
       </PostCardTitle>
