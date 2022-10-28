@@ -65,14 +65,8 @@ export default function HeroPostCard({ post }) {
   const { src } = post.thumbnail.responsiveImage
 
   return (
-    <Container as={HeroWrapper} width='full'>
-      <Container
-        as={HeroInner}
-        src={src}
-        width='xxxl'
-        spacing={0}
-        fluid
-      >
+    <Container as={HeroWrapper} width='full' src={src}>
+      <Container as={HeroInner} width='xxxl' spacing={0} fluid>
         <PostCardInfos post={post} hero />
       </Container>
     </Container>
