@@ -43,6 +43,12 @@ const SocialItem = styled.li`
   }) }
 `
 
+const SocialLink = styled.a`
+  &:focus {
+    outline: 4px dashed #9BA5AA;
+  }
+`
+
 const SocialLabel = styled.span`
   display: block;
   margin-top: 0;
@@ -54,6 +60,7 @@ export default function SocialMedia({ center }) {
   const socialElements = settings.SOCIAL_MEDIA.map(socialMedia => (
     <SocialItem key={socialMedia.title}>
       <LinkButton
+        as={SocialLink}
         href={socialMedia.url}
         aria-label={`Acessar o ${ socialMedia.title } do autor do blog`}
         external

@@ -71,7 +71,8 @@ const NavItem = styled.li`
   }) }
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus-within::after {
     ${ getBreakpoints({
     md: css`
       width: 100%;

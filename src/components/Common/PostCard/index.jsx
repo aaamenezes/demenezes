@@ -73,8 +73,12 @@ export default function PostCard({
       spacing={typeof +spacing === 'number' ? +spacing : 7}
       isCompact={isCompact}
     >
-      <PostCardImage isCompact={isCompact}>
-        <LinkButton href={`/posts/${ slug }`} as={PostCardImageLink}>
+      <PostCardImage isCompact={isCompact} aria-hidden='true'>
+        <LinkButton
+          href={`/posts/${ slug }`}
+          as={PostCardImageLink}
+          tabIndex='-1'
+        >
           <CropedImage
             src={`${ src }&w=364`}
             alt={`Imagem de capa do post: ${ title }`}

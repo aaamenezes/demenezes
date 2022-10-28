@@ -44,7 +44,8 @@ const PaginationButton = styled.a`
         transition: ${ ({ theme }) => theme.transition.fast };
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: ${ ({ theme }) => theme.color.neutral_50 };
         border-color: ${ ({ theme }) => theme.color.red_500 };
         &::after {

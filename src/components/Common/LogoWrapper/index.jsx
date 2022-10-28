@@ -19,7 +19,8 @@ const LogoLink = styled.a`
     transition: ${ ({ theme }) => theme.transition.fast };
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     width: 100%;
   }
 `

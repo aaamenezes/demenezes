@@ -44,7 +44,8 @@ const PostCardTitle = styled.h3`
         transition: ${ ({ theme }) => theme.transition.fast };
       }
 
-      &:hover {
+      &:hover,
+      &:focus-within {
         background-size: 100% 108%;
 
         a {

@@ -242,6 +242,10 @@ export const GlobalStyle = createGlobalStyle`
   
   a {
     color: currentColor;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   button {

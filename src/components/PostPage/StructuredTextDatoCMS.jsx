@@ -39,7 +39,8 @@ const TitleLink = styled.a`
     transition: ${ ({ theme }) => theme.transition.fast };
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration-color: ${ ({ theme }) => theme.color.neutral_500 };
 
     &::before {
@@ -48,10 +49,20 @@ const TitleLink = styled.a`
   }
 `
 
+const TextLink = styled.a`
+  text-decoration-line: underline;
+  
+  &:hover,
+  &:focus {
+    text-decoration-thickness: 4px;
+  }
+`
+
 export default function StructuredTextDatoCMS({ data }) {
   function handleLink({ node }) {
     return (
       <LinkButton
+        as={TextLink}
         key={`${ node.children[0].value } - ${ node.url }`}
         href={node.url}
         external={node.meta && node.meta[0].value === '_blank'}
