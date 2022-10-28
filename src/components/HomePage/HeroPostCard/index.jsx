@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 import getBreakpoints from '../../../utils/getBreakpoints'
 import Container from '../../Common/Container'
 import PostCardInfos from '../../Common/PostCard/PostCardInfos'
-import PostLabel from '../../Common/PostLabel'
 
 const HeroWrapper = styled.article`
   ${ getBreakpoints({
@@ -74,13 +73,7 @@ export default function HeroPostCard({ post }) {
         spacing={0}
         fluid
       >
-        <PostCardInfos
-          post={post}
-          hero
-        />
-        <PostLabel>
-          {post.category}
-        </PostLabel>
+        <PostCardInfos post={post} hero />
       </Container>
     </Container>
   )
