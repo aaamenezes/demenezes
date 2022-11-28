@@ -54,12 +54,16 @@ export default function PageHeader({ preview }) {
   }, [])
 
   return (
-    <Container width='full' as={HeaderWrapper} openHeader={openHeader}>
+    <Container
+      width='full'
+      as={HeaderWrapper}
+      openHeader={openHeader}
+      currentPage={CURRENT_PAGE}
+    >
       <Container
         as={HeaderInner}
         width='xxxl'
         spacing={0}
-        currentPage={CURRENT_PAGE}
         fluid
       >
         <LogoWrapper preview={preview} />
