@@ -11,12 +11,20 @@ export const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
 
-    ${ getBreakpoints({
+    /* ${ getBreakpoints({
     xs: css`font-size: ${ ({ theme }) => theme.fontSize.html.xs };`,
     sm: css`font-size: ${ ({ theme }) => theme.fontSize.html.sm };`,
     md: css`font-size: ${ ({ theme }) => theme.fontSize.html.md };`,
     lg: css`font-size: ${ ({ theme }) => theme.fontSize.html.lg };`,
     xl: css`font-size: ${ ({ theme }) => theme.fontSize.html.xl };`
+  }) } */
+
+  ${ getBreakpoints({
+    sm: css`font-size: ${ ({ theme }) => theme.fontSize.html.xs };`,
+    md: css`font-size: ${ ({ theme }) => theme.fontSize.html.sm };`,
+    lg: css`font-size: ${ ({ theme }) => theme.fontSize.html.md };`,
+    xl: css`font-size: ${ ({ theme }) => theme.fontSize.html.lg };`,
+    xxl: css`font-size: ${ ({ theme }) => theme.fontSize.html.xl };`
   }) }
   }
 
