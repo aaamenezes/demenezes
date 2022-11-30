@@ -14,7 +14,7 @@ const RelatedPostsGrid = styled.div`
     md: css`
       gap: 0;
     `
-  })}
+  }) }
 `
 
 export default function RelatedPosts({ postCategory, relatedPosts }) {

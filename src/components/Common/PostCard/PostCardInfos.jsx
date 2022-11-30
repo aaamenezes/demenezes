@@ -26,8 +26,8 @@ export default function PostCardInfos({ post, hero, isCompact }) {
   const { _firstPublishedAt, metaDescription, _updatedAt } = post
 
   function getWrapperWidth(isHero, compact) {
-    if (compact) { return '100%' }
-    if (isHero) { return '50%' }
+    if (compact) return '100%'
+    if (isHero) return '50%'
     return '62%'
   }
 
