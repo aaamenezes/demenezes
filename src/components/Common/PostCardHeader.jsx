@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../../utils/getBreakpoints'
-import LinkButton from '../LinkButton'
+import getBreakpoints from '../../utils/getBreakpoints'
+import LinkButton from './LinkButton'
 
 const CategoryText = styled.p`
   font-size: ${ ({ theme }) => theme.fontSize.small };

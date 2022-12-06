@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../utils/getBreakpoints'
-import Container from '../Common/Container'
-import LinkButton from '../Common/LinkButton'
+import getBreakpoints from '../utils/getBreakpoints'
+import Container from './Common/Container'
+import LinkButton from './Common/LinkButton'
 
 const PaginationWrapper = styled.div`
   ${ getBreakpoints({

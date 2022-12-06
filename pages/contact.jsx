@@ -1,6 +1,6 @@
 import React from 'react'
 import ContactForm from '../src/components/AboutPage/ContactForm'
-import pageWrapper from '../src/components/PageWrapper'
+import pageWrapper from '../src/components/pageWrapper'
 import { getContent } from '../src/external/datoCMS'
 
 function Contact({ contactContent }) {

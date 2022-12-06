@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 import Navigation from './Navigation'
 import ToggleModalButton from './ToggleModalButton'
-import Container from '../Container'
-import LogoWrapper from '../LogoWrapper'
-import getBreakpoints from '../../../utils/getBreakpoints'
-import { getPageInfos } from '../../../utils/getPageInfos'
+import Container from './Container'
+import LogoWrapper from './LogoWrapper'
+import getBreakpoints from '../../utils/getBreakpoints'
+import { getPageInfos } from '../../utils/getPageInfos'
 
 const HeaderWrapper = styled.header`
   position: fixed;

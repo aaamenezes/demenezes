@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../../utils/getBreakpoints'
-import Container from '../../Common/Container'
-import PostCardInfos from '../../Common/PostCard/PostCardInfos'
+import getBreakpoints from '../../utils/getBreakpoints'
+import Container from '../Common/Container'
+import PostCardInfos from '../Common/PostCardInfos'
 
 const HeroWrapper = styled.article`
   ${ getBreakpoints({

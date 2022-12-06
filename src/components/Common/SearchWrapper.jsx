@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
-import Container from '../Container'
+import Container from './Container'
 import ToggleModalButton from './ToggleModalButton'
-import getBreakpoints from '../../../utils/getBreakpoints'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const ToggleSearchModal = styled.button`
   ${ getBreakpoints({

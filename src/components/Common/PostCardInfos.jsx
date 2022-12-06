@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../../utils/getBreakpoints'
+import getBreakpoints from '../../utils/getBreakpoints'
 import PostCardFooter from './PostCardFooter'
 import PostCardHeader from './PostCardHeader'
 import PostCardDescription from './PostCardDescription'

@@ -1,11 +1,11 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Container from '../Container'
-import CropedImage from '../CropedImage'
-import LinkButton from '../LinkButton'
+import Container from './Container'
+import CropedImage from './CropedImage'
+import LinkButton from './LinkButton'
 import PostCardInfos from './PostCardInfos'
-import getBreakpoints from '../../../utils/getBreakpoints'
-import PostLabel from '../PostLabel'
+import getBreakpoints from '../../utils/getBreakpoints'
+import PostLabel from './PostLabel'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({

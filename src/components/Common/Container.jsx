@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../../utils/getBreakpoints'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 function getContainerMaxWidth(theme, width, fluid) {
   const { breakpoints } = theme

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { getContent } from '../../src/external/datoCMS'
-import pageWrapper from '../../src/components/PageWrapper'
+import pageWrapper from '../../src/components/pageWrapper'
 import PostHeader from '../../src/components/PostPage/PostHeader'
 import PostContent from '../../src/components/PostPage/PostContent'
 import PostComments from '../../src/components/PostPage/PostComments'

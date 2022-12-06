@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { convertDate } from '../../../utils/convertDate'
-import getBreakpoints from '../../../utils/getBreakpoints'
+import { convertDate } from '../../utils/convertDate'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const PostCardFooterWrapper = styled.footer`
   ${ getBreakpoints({

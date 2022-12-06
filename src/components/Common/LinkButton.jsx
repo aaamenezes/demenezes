@@ -1,7 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import styled from 'styled-components'
-import Icon from '../Icon'
+import Icon from './Icon'
 
 const StyledLinkButton = styled.a`
   display: ${ ({ inline }) => inline ? 'inline' : 'block' };

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { theme } from '../../../theme'
-import getBreakpoints from '../../../utils/getBreakpoints'
+import { theme } from '../../theme'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const Picture = styled.picture`
   display: flex;

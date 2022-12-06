@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeroPostCard from '../HeroPostCard'
-import PostCard from '../../Common/PostCard'
-import Newsletter from '../../Common/Newsletter'
-import { getPageInfos } from '../../../utils/getPageInfos'
+import HeroPostCard from './HeroPostCard'
+import PostCard from '../Common/PostCard'
+import Newsletter from '../Common/Newsletter'
+import { getPageInfos } from '../../utils/getPageInfos'
 
 const StyledPostsWrapper = styled.main`
   padding-top: ${ ({ isHome }) => !isHome && '6.6rem' };

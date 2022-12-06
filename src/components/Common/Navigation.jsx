@@ -1,11 +1,11 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import styled, { css } from 'styled-components'
-import LinkButton from '../LinkButton'
-import getBreakpoints from '../../../utils/getBreakpoints'
+import LinkButton from './LinkButton'
+import getBreakpoints from '../../utils/getBreakpoints'
 import ToggleModalButton from './ToggleModalButton'
-import { getPageInfos } from '../../../utils/getPageInfos'
-import settings from '../../../../settings.json'
+import { getPageInfos } from '../../utils/getPageInfos'
+import settings from '../../../settings.json'
 
 const NavWrapper = styled.nav`
   ${ getBreakpoints({
