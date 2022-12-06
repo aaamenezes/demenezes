@@ -8,11 +8,15 @@ const RelatedPostsGrid = styled.div`
   ${ getBreakpoints({
     xs: css`
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: ${ ({ theme }) => `${ theme.spacing.text }rem` };
+      grid-template-columns: repeat(1, 1fr);
+      gap: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
     `,
     md: css`
+      grid-template-columns: repeat(2, 1fr);
       gap: 0;
+    `,
+    lg: css`
+      grid-template-columns: repeat(3, 1fr);
     `
   }) }
 `
