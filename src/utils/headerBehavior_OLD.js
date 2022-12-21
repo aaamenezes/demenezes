@@ -8,17 +8,6 @@ export function headerBehavior() {
   const heroRef = useRef(null)
   const [ isMinimizeHeader, setIsMinimizeHeader ] = useState(false)
 
-  function handleIntersect(entries) {
-    const [ entry ] = entries
-    const heroBottom = entry.boundingClientRect.bottom
-    const isScrollOnTop = heroBottom < (window.innerHeight * 0.3)
-    if (isScrollOnTop) {
-      setIsMinimizeHeader(true)
-    } else {
-      setIsMinimizeHeader(false)
-    }
-  }
-
   const intersectOptions = {
     root: null,
     rootMargin: '0px',
@@ -26,6 +15,17 @@ export function headerBehavior() {
   }
 
   useEffect(() => {
+    function handleIntersect(entries) {
+      const [ entry ] = entries
+      const heroBottom = entry.boundingClientRect.bottom
+      const isScrollOnTop = heroBottom < (window.innerHeight * 0.3)
+      if (isScrollOnTop) {
+        setIsMinimizeHeader(true)
+      } else {
+        setIsMinimizeHeader(false)
+      }
+    }
+
     const observer = new IntersectionObserver(handleIntersect, intersectOptions)
     if (heroRef.current) observer.observe(heroRef.current)
   }, [])

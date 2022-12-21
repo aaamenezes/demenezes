@@ -30,7 +30,7 @@ export default function LinkButton({
 }) {
   if (href) {
     return (
-      <NextLink href={href} passHref>
+      <NextLink href={href} passHref legacyBehavior>
         <StyledLinkButton
           target={external ? '_blank' : '_self'}
           rel={external ? 'noopener noreferrer external' : 'same'}

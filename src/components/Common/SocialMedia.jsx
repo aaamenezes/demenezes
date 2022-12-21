@@ -62,7 +62,7 @@ export default function SocialMedia({ center }) {
       <LinkButton
         as={SocialLink}
         href={socialMedia.url}
-        aria-label={`Acessar o ${ socialMedia.title } do autor do blog`}
+        ariaLabel={`Acessar o ${ socialMedia.title } do autor do blog`}
         external
       >
         <Icon name={socialMedia.title} />

@@ -13,21 +13,19 @@ const Bar = styled.div`
 export default function ProgressBar() {
   const [ barWidth, setBarWidth ] = useState(0)
 
-  function updateBarWidth() {
-    const postElement = document.querySelector('[class*="PostPage"]')
+  useEffect(() => {
+    function getBarWidth() {
+      const postElement = document.querySelector('[class*="PostPage"]')
 
-    if (postElement) {
+      if (!postElement) return 0
+
       const postHeight = postElement.offsetHeight
       const YPosition = window.scrollY
       const heightPercent = (YPosition * 100) / postHeight
       return heightPercent
     }
 
-    return 0
-  }
-
-  useEffect(() => {
-    document.addEventListener('scroll', () => setBarWidth(updateBarWidth()))
+    document.addEventListener('scroll', () => setBarWidth(getBarWidth()))
   }, [])
 
   return <Bar style={{ width: `${ barWidth }%` }} />

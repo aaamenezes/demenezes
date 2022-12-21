@@ -81,7 +81,6 @@ export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
           <LinkButton
             as={PaginationButton}
             href={previousLink}
-            label='previous'
           >
             Posts mais recentes
           </LinkButton>
@@ -93,7 +92,6 @@ export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
             <LinkButton
               as={PaginationButton}
               href={nextLink}
-              label='next'
             >
               Próxima página
             </LinkButton>
@@ -102,8 +100,6 @@ export default function Pagination({ CURRENT_PAGINATION, IS_LAST_PAGINATION }) {
             <LinkButton
               as={PaginationButton}
               href='/'
-              aria-labelledby='Parabéns, você chegou ao início do blog :)'
-              label='next'
             >
               Parabéns, você chegou ao início do blog :)
             </LinkButton>
