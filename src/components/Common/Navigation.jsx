@@ -67,6 +67,7 @@ const NavItem = styled.li`
       height: 2px;
       background-color: ${ ({ theme }) => theme.color.neutral_100 };
       transition: ${ ({ theme }) => theme.transition.fast };
+      pointer-events: none;
     `
   }) }
   }
