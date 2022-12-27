@@ -18,13 +18,13 @@ export default function PostsWrapper({ postsList }) {
   const firstBlockEnd = postsList.length / 2
   const firstBlockPosts = postsList
     .slice(firstBlockStart, firstBlockEnd)
-    .map(post => <PostCard key={post.title} post={post} imageRatio='4x3' />)
+    .map(post => <PostCard key={post.title} post={post} />)
 
   const secondBlockStart = firstBlockEnd
   const secondBlockEnd = postsList.length
   const secondBlockPosts = postsList
     .slice(secondBlockStart, secondBlockEnd)
-    .map(post => <PostCard key={post.title} post={post} imageRatio='4x3' />)
+    .map(post => <PostCard key={post.title} post={post} />)
 
   return (
     <StyledPostsWrapper isHome={isHome}>

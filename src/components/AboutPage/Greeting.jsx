@@ -1,9 +1,9 @@
 import React from 'react'
+import NextImage from 'next/image'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import HiddenA11Y from '../Common/HiddenA11Y'
-import Image from '../Common/Image'
 
 const StyledGreeting = styled.section`
   ${ getBreakpoints({
@@ -46,12 +46,20 @@ export default function Greeting({
   profileImage
 }) {
   const { src } = profileImage.responsiveImage
-  const { alt } = profileImage
+  const { alt, width, height } = profileImage
 
   return (
     <Container as={StyledGreeting} width='lg'>
       <ImageWrapper>
-        <Image src={`${ src }&w=375`} width='375' alt={alt} />
+        <NextImage
+          src={src}
+          alt={alt}
+          sizes='(max-width: 767px) 100vw,
+                 (max-width: 1199px) 50vw,
+                                     33vw'
+          width={width}
+          height={height}
+        />
       </ImageWrapper>
       <HiddenA11Y tag='h1'>{greetingTitle}</HiddenA11Y>
       <GreetingTitle>{greetingSubtitle}</GreetingTitle>

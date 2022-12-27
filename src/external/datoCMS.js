@@ -5,6 +5,8 @@ function getQueryOptions(queryType, { slug, category }) {
       profileImage {
         profileImage {
           alt
+          width
+          height
           responsiveImage(imgixParams: {auto: format}) {
             src
           }
@@ -37,6 +39,8 @@ function getQueryOptions(queryType, { slug, category }) {
         keywords
         thumbnail {
           alt
+          width
+          height
           responsiveImage(imgixParams: {auto: format}) {
             src
           }
@@ -80,6 +84,7 @@ function getQueryOptions(queryType, { slug, category }) {
                 alt
                 title
                 width
+                height
                 responsiveImage(imgixParams: {auto: format}) {
                   src
                 }
@@ -134,6 +139,8 @@ function getQueryOptions(queryType, { slug, category }) {
         category
         thumbnail {
           alt
+          width
+          height
           responsiveImage(imgixParams: {auto: format}) {
             src
           }

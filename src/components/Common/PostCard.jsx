@@ -1,7 +1,7 @@
 import React from 'react'
+import NextImage from 'next/image'
 import styled, { css } from 'styled-components'
 import Container from './Container'
-import CropedImage from './CropedImage'
 import LinkButton from './LinkButton'
 import PostCardInfos from './PostCardInfos'
 import getBreakpoints from '../../utils/getBreakpoints'
@@ -37,7 +37,7 @@ const PostCardWrapper = styled.article`
   }) }
 `
 
-const PostCardImage = styled.div`
+const PostCardImageWrapper = styled.div`
   ${ getBreakpoints({
     xs: css`
       position: relative;
@@ -56,39 +56,40 @@ const PostCardImageLink = styled.a`
   position: relative;
 `
 
-export default function PostCard({
-  post,
-  imageRatio,
-  width,
-  isCompact,
-  spacing
-}) {
+export default function PostCard({ post, isCompact, spacing }) {
   const { title, slug, thumbnail, category } = post
+  const { width, height } = thumbnail
   const { src } = thumbnail.responsiveImage
 
   return (
     <Container
       as={PostCardWrapper}
-      width={width || 'xl'}
+      width='xl'
       spacing={typeof +spacing === 'number' ? +spacing : 7}
       isCompact={isCompact}
     >
-      <PostCardImage isCompact={isCompact} aria-hidden='true'>
+      <PostCardImageWrapper isCompact={isCompact} aria-hidden='true'>
         <LinkButton
           href={`/posts/${ slug }`}
           as={PostCardImageLink}
           tabIndex='-1'
         >
-          <CropedImage
-            src={`${ src }&w=364`}
+          <NextImage
+            src={src}
             alt={`Imagem de capa do post: ${ title }`}
-            ratio={imageRatio}
+            width={width}
+            height={height}
+            sizes='(max-width: 767px) 100vw, 30vw'
+            style={{
+              aspectRatio: '4 / 3',
+              objectFit: 'cover'
+            }}
           />
           <PostLabel>
             {category}
           </PostLabel>
         </LinkButton>
-      </PostCardImage>
+      </PostCardImageWrapper>
       <PostCardInfos post={post} isCompact={isCompact} />
     </Container>
   )

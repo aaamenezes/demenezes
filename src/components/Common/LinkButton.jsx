@@ -28,6 +28,17 @@ export default function LinkButton({
   disabled,
   ...props
 }) {
+  const linkInner = (external && inline)
+    ? (
+      <>
+        <LinkText inline={inline}>
+          {children}
+        </LinkText>
+        <Icon name='external' inline />
+      </>
+    )
+    : children
+
   if (href) {
     return (
       <NextLink href={href} passHref legacyBehavior>
@@ -37,10 +48,7 @@ export default function LinkButton({
           inline={inline}
           {...props}
         >
-          <LinkText inline={inline}>
-            {children}
-          </LinkText>
-          {external && inline && <Icon name='external' inline />}
+          {linkInner}
         </StyledLinkButton>
       </NextLink>
     )

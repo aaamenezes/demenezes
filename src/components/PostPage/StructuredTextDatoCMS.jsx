@@ -5,7 +5,7 @@ import { isCode, isLink, isHeading } from 'datocms-structured-text-utils'
 import LinkButton from '../Common/LinkButton'
 import CodeBlock from './CodeBlock'
 import { simplifyString } from '../../utils/simplifyString'
-import Image from '../Common/Image'
+import Figure from '../Common/Figure'
 import Iframe from './Iframe'
 import Table from './Table'
 // eslint-disable-next-line import/no-cycle
@@ -102,10 +102,11 @@ export default function StructuredTextDatoCMS({ data }) {
     switch (__typename) {
     case 'ImageRecord':
       return (
-        <Image
+        <Figure
           key={record.id}
           src={record.image.responsiveImage.src}
           width={record.image.width}
+          height={record.image.height}
           alt={record.image.alt}
           title={record.image.title}
         />
