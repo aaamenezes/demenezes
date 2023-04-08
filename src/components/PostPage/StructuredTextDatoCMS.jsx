@@ -28,10 +28,11 @@ const TitleLink = styled.a`
   text-decoration-style: dotted;
   transition: ${ ({ theme }) => theme.transition.fast };
 
-  &::before {
+  &::after {
     content: '#';
     display: inline-block;
-    margin-right: ${ ({ theme }) => `${ theme.spacing.small }rem` };
+    margin-left: ${ ({ theme }) => `${ theme.spacing.small }rem` };
+    vertical-align: middle;
     font-size: ${ ({ theme }) => theme.fontSize.h4 };
     text-decoration: none;
     color: ${ ({ theme }) => theme.color.neutral_500 };
@@ -43,7 +44,7 @@ const TitleLink = styled.a`
   &:focus {
     text-decoration-color: ${ ({ theme }) => theme.color.neutral_500 };
 
-    &::before {
+    &::after {
       opacity: 1;
     }
   }
@@ -54,7 +55,7 @@ const TextLink = styled.a`
   
   &:hover,
   &:focus {
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 3px;
   }
 `
 
