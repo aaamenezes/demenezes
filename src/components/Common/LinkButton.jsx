@@ -9,6 +9,9 @@ const StyledLinkButton = styled.a`
   letter-spacing: ${ ({ theme, inline }) => (
     !inline && theme.letterSpacing.button
   ) };
+  font-family: ${ ({ theme, inline }) => (
+    theme.fontFamily[inline ? 'text' : 'display']
+  ) };
   text-decoration: none;
   color: ${ ({ theme, inline }) => inline && theme.color.red_700 };
   cursor: pointer;

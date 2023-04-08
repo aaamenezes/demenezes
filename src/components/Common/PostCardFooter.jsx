@@ -19,6 +19,7 @@ const PostCardDate = styled.p`
   margin: 0 !important;
   text-align: right;
   font-size: ${ ({ theme }) => theme.fontSize.small };
+  font-family: ${ ({ theme }) => theme.fontFamily.display };
   letter-spacing: ${ ({ theme }) => theme.letterSpacing.button };
   color: ${ ({ theme }) => theme.color.neutral_600 };
 `

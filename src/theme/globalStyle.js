@@ -44,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4 {
-    font-family: ${ ({ theme }) => theme.fontFamily.title };
+    font-family: ${ ({ theme }) => theme.fontFamily.display };
   }
 
   h1 {
@@ -74,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
   h2 {
     ${ getBreakpoints({
     xs: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
       text-align: center;
       line-height: ${ ({ theme }) => theme.lineHeight.h4 };
@@ -83,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
     `,
     sm: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
       line-height: ${ ({ theme }) => theme.lineHeight.h3 };
       font-size: ${ ({ theme }) => theme.fontSize.h3 };
@@ -91,7 +91,7 @@ export const GlobalStyle = createGlobalStyle`
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
     `,
     md: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.h2 * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h2 * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
       line-height: ${ ({ theme }) => theme.lineHeight.h2 };
       font-size: ${ ({ theme }) => theme.fontSize.h2 };
@@ -104,7 +104,7 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     ${ getBreakpoints({
     xs: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.text * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.text * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
       text-align: left;
       line-height: ${ ({ theme }) => theme.lineHeight.text };
@@ -113,7 +113,7 @@ export const GlobalStyle = createGlobalStyle`
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
     `,
     sm: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
       line-height: ${ ({ theme }) => theme.lineHeight.h4 };
       font-size: ${ ({ theme }) => theme.fontSize.h4 };
@@ -121,7 +121,7 @@ export const GlobalStyle = createGlobalStyle`
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.h4 };
     `,
     md: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h3 * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h3 }rem` };
       line-height: ${ ({ theme }) => theme.lineHeight.h3 };
       font-size: ${ ({ theme }) => theme.fontSize.h3 };
@@ -133,7 +133,7 @@ export const GlobalStyle = createGlobalStyle`
   h4 {
     ${ getBreakpoints({
     xs: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.text * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.text * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.text }rem` };
       text-align: left;
       line-height: ${ ({ theme }) => theme.lineHeight.text };
@@ -142,7 +142,7 @@ export const GlobalStyle = createGlobalStyle`
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.text };
     `,
     md: css`
-      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 3 }rem` };
+      margin-top: ${ ({ theme }) => `${ theme.spacing.h4 * 2 }rem` };
       margin-bottom: ${ ({ theme }) => `${ theme.spacing.h4 }rem` };
       line-height: ${ ({ theme }) => theme.lineHeight.h4 };
       font-size: ${ ({ theme }) => theme.fontSize.h4 };
@@ -157,12 +157,6 @@ export const GlobalStyle = createGlobalStyle`
 
   li {
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.small }rem` };
-  }
-
-  p:not(:first-child),
-  ul:not(:first-child),
-  ol:not(:first-child) {
-    margin-top: ${ ({ theme }) => `${ theme.spacing.text }rem` };
   }
 
   p:not(:last-child),
@@ -269,7 +263,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-top: ${ ({ theme }) => `${ theme.spacing.small }rem` };
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.small }rem` };
     border: none;
-    font-family: ${ ({ theme }) => theme.fontFamily.text };
+    font-family: ${ ({ theme }) => theme.fontFamily.display };
     font-size: ${ ({ theme }) => theme.fontSize.small };
     color: ${ ({ theme }) => theme.color.neutral_800 };
     background-color: ${ ({ theme }) => theme.color.neutral_50 };
@@ -303,10 +297,11 @@ export const GlobalStyle = createGlobalStyle`
       display: inline-block;
       padding: 0 0.4rem;
       border-radius: ${ ({ theme }) => theme.borderRadius };
-      background-color: ${ ({ theme }) => theme.color.neutral_300 };
+      font-size: ${ ({ theme }) => theme.fontSize.small };
+      background-color: ${ ({ theme }) => theme.color.neutral_200 };
     `,
     md: css`
-      padding: 0.3rem;
+      padding: 0.1rem 0.3rem;
       line-height: 1;
     `
   }) }
@@ -318,12 +313,11 @@ export const GlobalStyle = createGlobalStyle`
   blockquote:not(:first-child),
   hr:not(:first-child),
   pre[class*="language-"]:not(:first-child),
+  [class*="TextBox"]:not(:first-child),
   .twitter-tweet:not(:first-child),
   video {
     margin-top: ${ ({ theme }) => `${ theme.spacing.h1 }rem` } !important;
-    /**
-     * O !important serve para sobrescrever o CSS inline do Twitter
-     */
+    /* O !important serve para sobrescrever o CSS inline do Twitter */
   }
 
   figure:not(:last-child),
@@ -332,6 +326,7 @@ export const GlobalStyle = createGlobalStyle`
   blockquote:not(:last-child),
   hr:not(:last-child),
   pre[class*="language-"]:not(:last-child),
+  [class*="TextBox"]:not(:last-child),
   .twitter-tweet:not(:last-child),
   video {
     margin-bottom: ${ ({ theme }) => `${ theme.spacing.h1 }rem` } !important;

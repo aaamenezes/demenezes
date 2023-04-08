@@ -42,22 +42,47 @@ const color = {
 
 const fontFamily = {
   // title: 'Ubuntu, sans-serif',
-  title: '"Montserrat", sans-serif',
-  text: '"Montserrat", sans-serif'
-
-  /**
-   * Fonte para código no post
-   * Mas foi substituído pelo estilo do PrismJS
-   */
+  display: '"Montserrat", sans-serif;',
+  text: '"Vollkorn", serif'
 
   // code: 'Ubuntu Mono, sans-serif'
-
-  /**
-   * Fontes reservas caso dê ruim
-   */
-
   // fontFamily: 'Raleway, sans-serif',
   // fontFamily: 'Open Sans, sans-serif',
+
+  /**
+   * Fontes já instaladas na maioria dos sistemas operacionais
+   * https://modernfontstacks.com/
+   */
+
+  // Vollkorn
+  // https://fonts.google.com/specimen/Vollkorn?query=Vollkorn
+
+  // Source Serif Pro
+  // https://fonts.google.com/specimen/Source+Serif+Pro?query=Source+Serif+Pro
+
+  // Baskerville
+  // https://fonts.google.com/specimen/Libre+Baskerville?query=Baskerville
+
+  // Noto Serif
+  // https://fonts.google.com/noto/specimen/Noto+Serif?query=Noto+Serif
+
+  // Merriweather
+  // https://fonts.google.com/specimen/Merriweather?query=Merriweather
+
+  // Lora
+  // https://fonts.google.com/specimen/Lora?query=Lora
+
+  // Unna
+  // https://fonts.google.com/specimen/Unna?query=Unna
+
+  // Cardo
+  // https://fonts.google.com/specimen/Cardo?query=Cardo
+
+  // Crimson Text
+  // https://fonts.google.com/specimen/Crimson+Text?query=Crimson+Text
+
+  // Playfair Display
+  // https://fonts.google.com/specimen/Playfair+Display?query=Playfair+Display
 }
 
 /**

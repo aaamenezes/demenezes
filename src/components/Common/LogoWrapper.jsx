@@ -29,6 +29,7 @@ const Logo = styled.strong`
   display: block;
   line-height: ${ ({ theme }) => theme.lineHeight.button };
   font-size: ${ ({ theme }) => theme.fontSize.h4 };
+  font-family: ${ ({ theme }) => theme.fontFamily.text };
 `
 
 export default function LogoWrapper({ preview }) {

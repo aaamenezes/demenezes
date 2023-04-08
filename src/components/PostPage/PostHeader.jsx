@@ -69,6 +69,7 @@ const PostDate = styled.span`
       margin-top: 0 !important;
       margin-bottom: 0 !important;
       font-size: ${ ({ theme }) => theme.fontSize.small };
+      font-family: ${ ({ theme }) => theme.fontFamily.display };
     `,
     md: css`
       display: inline-block;
@@ -104,6 +105,7 @@ const KeywordItem = styled.li`
   margin-bottom: 0.5rem;
   line-height: ${ ({ theme }) => theme.lineHeight.button };
   font-size: ${ ({ theme }) => theme.fontSize.small };
+  font-family: ${ ({ theme }) => theme.fontFamily.display };
   color: ${ ({ theme }) => theme.color.neutral_100 };
   background-color: ${ ({ theme }) => theme.color.red_900 };
 

@@ -5,6 +5,7 @@ import LinkButton from './LinkButton'
 
 const CategoryText = styled.p`
   font-size: ${ ({ theme }) => theme.fontSize.small };
+  font-family: ${ ({ theme }) => theme.fontFamily.display };
 `
 
 const PostCardTitle = styled.h3`

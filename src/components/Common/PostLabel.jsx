@@ -10,6 +10,7 @@ const PostLabel = styled.div`
       left: 0;
       padding: 0.44rem 0.66rem;
       line-height: ${ ({ theme }) => theme.lineHeight.button };
+      font-family: ${ ({ theme }) => theme.fontFamily.display };
       font-size: ${ ({ theme }) => theme.fontSize.small };
       letter-spacing: ${ ({ theme }) => theme.letterSpacing.button };
       color: ${ ({ theme }) => theme.color.neutral_100 };
