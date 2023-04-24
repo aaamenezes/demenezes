@@ -21,24 +21,20 @@ const Figcaption = styled.figcaption`
 `
 
 export default function Image({ src, width, height, alt, title }) {
-  if (title) {
-    return (
-      <figure>
-        <NextImage
-          src={src}
-          width={width}
-          height={height}
-          alt={alt}
-          sizes='(max-width: 1599px) 100vw, 50vw'
-          style={{
-            maxWidth: '112%',
-            margin: '0 -6%'
-          }}
-        />
-        <Figcaption>{title}</Figcaption>
-      </figure>
-    )
-  }
-
-  return <div>This figure doesnt have a title prop</div>
+  return (
+    <figure>
+      <NextImage
+        src={src}
+        width={width}
+        height={height}
+        alt={alt}
+        sizes='(max-width: 1599px) 100vw, 50vw'
+        style={{
+          maxWidth: '112%',
+          margin: '0 -6%'
+        }}
+      />
+      {title && <Figcaption>{title}</Figcaption>}
+    </figure>
+  )
 }
