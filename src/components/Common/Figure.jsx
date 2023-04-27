@@ -30,8 +30,8 @@ export default function Image({ src, width, height, alt, title }) {
         alt={alt}
         sizes='(max-width: 1599px) 100vw, 50vw'
         style={{
-          maxWidth: '112%',
-          margin: '0 -6%'
+          maxWidth: '100%',
+          margin: '0 auto'
         }}
       />
       {title && <Figcaption>{title}</Figcaption>}
