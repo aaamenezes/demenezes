@@ -57,6 +57,8 @@ module.exports = {
     // Ignorar propTypes
     'react/prop-types': [ 0 ],
     // Não exigir parênteses em if ternário
-    'no-confusing-arrow': 'off'
+    'no-confusing-arrow': 'off',
+    // Permitir underline antes de nome de variável
+    'no-underscore-dangle': 'off'
   }
 }
