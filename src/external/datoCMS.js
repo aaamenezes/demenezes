@@ -47,6 +47,12 @@ function getQueryOptions(queryType, { slug, category }) {
         }
       }
     }`,
+    allReferences: `{
+      allReferences {
+        url
+        referenceType
+      }
+    }`,
     contactSection: `{
       contactSection {
         contactTitle
