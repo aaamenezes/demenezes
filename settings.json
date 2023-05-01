@@ -80,6 +80,10 @@
     {
       "title": "Contato",
       "url": "/contact"
+    },
+    {
+      "title": "Referências",
+      "url": "/references"
     }
   ],
   "PAGES": {
@@ -112,6 +116,12 @@
       "url": "/contact",
       "keywords": ["contato", "contato André de Menezes", "contato deMenezes", "página contato"],
       "description": "Contato deMenezes"
+    },
+    "references": {
+      "pageTitle": "Referências",
+      "url": "/references",
+      "keywords": ["pessoas referências na área de programação", "página de referências"],
+      "description": "As referências que me fizeram chegar até aqui"
     }
   },
   "PAGINATION_CONFIG": {
