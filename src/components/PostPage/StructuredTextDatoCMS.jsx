@@ -12,6 +12,8 @@ import Table from './Table'
 import TextBox from './TextBox'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Video from './Video'
+// eslint-disable-next-line import/no-cycle
+import BlockQuote from '../Common/BlockQuote'
 
 const Title = styled.h2`
   ${ getBreakpoints({
@@ -147,12 +149,13 @@ export default function StructuredTextDatoCMS({ data }) {
       )
     case 'BlockquoteRecord':
       return (
-        <blockquote cite={record.source}>
-          <StructuredTextDatoCMS data={record.quoteContent} />
-          {record.author && (
-            <footer>{record.author}</footer>
-          )}
-        </blockquote>
+        <BlockQuote
+          source={record.source}
+          author={record.author}
+          isDatoCMS
+        >
+          {record.quoteContent}
+        </BlockQuote>
       )
     case 'TweetRecord':
       return (
