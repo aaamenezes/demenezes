@@ -29,7 +29,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     allPosts: `{
-      allPosts(orderBy: _updatedAt_DESC) {
+      allPosts(orderBy: _updatedAt_DESC, first: 100) {
         title
         slug
         metaDescription
@@ -48,7 +48,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     allReferences: `{
-      allReferences {
+      allReferences(first: 100) {
         url
         referenceType
       }
