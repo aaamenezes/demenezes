@@ -5,39 +5,109 @@ import pageWrapper from '../src/components/pageWrapper'
 import Container from '../src/components/Common/Container'
 import BlockQuote from '../src/components/Common/BlockQuote'
 import { getContent } from '../src/external/datoCMS'
+import Image from '../src/components/Common/Figure'
+import Label from '../src/components/Common/Label'
 
 const ReferencesContainer = styled.header`
   padding-top: 6.6rem;
 `
 
-function References({ referencesData }) {
+const ReferencesHeader = styled.header``
+
+const ReferencesList = styled.ul`
+  list-style-type: none;
+  margin-left: 0;
+`
+
+const ReferenceItem = styled.li`
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+  margin-bottom: 0;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: ${ ({ referenceImage }) => `url('${ referenceImage }')` };
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.25rem);
+  }
+`
+
+const ReferenceItemWrapper = styled.div`
+  position: relative;
+  padding: 0;
+`
+
+const ReferenceTitle = styled.h2`
+  margin: 0 0 ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+`
+
+const ReferenceLabel = styled.p`
+  position: initial;
+  width: fit-content;
+  margin-left: auto;
+`
+
+function References({ referencesMetaData }) {
+  const ReferencesItems = referencesMetaData.map(reference => {
+    const { url, image, title, referenceType, description } = reference
+
+    function validateImageURL(imageURL) {
+      const regexp = /^https?:\/\/[^\s/$.?#].[^\s]*$/
+      return regexp.test(imageURL)
+    }
+
+    /**
+     * TODOs:
+     * - Trocar <a> por <LinkButton />
+     * - Add target _blank
+     */
+
+    return (
+      <ReferenceItem key={url} referenceImage={image}>
+        <Container as={ReferenceItemWrapper} width='md' spacing={0}>
+          <ReferenceTitle>{title}</ReferenceTitle>
+          <Label as={ReferenceLabel}>
+            {referenceType}
+          </Label>
+          <p>{description}</p>
+          <a href={url}>
+            {validateImageURL(image)
+              ? (
+                <Image
+                  src={image}
+                  width={640}
+                  height={480}
+                  alt={`Imagem de capa do ${ referenceType }`}
+                />
+              )
+              : 'Acessar:'}
+          </a>
+        </Container>
+      </ReferenceItem>
+    )
+  })
+
   return (
-    <Container as={ReferencesContainer} width='lg'>
-      <h1>Minhas principais referências na área de programação</h1>
-      <BlockQuote>
-        <p>Na natureza nada se cria, tudo se copia.</p>
-      </BlockQuote>
-      <p>Essa página contém links para todas as referências...</p>
-      <ul>
-        {referencesData.map(reference => (
-          <li key={reference.url}>
-            <h2>{reference.title}</h2>
-            <p>{reference.description}</p>
-            <p>
-              <a href={reference.url}>Acessar</a>
-            </p>
-            <p>
-              <small>{reference.referenceType}</small>
-            </p>
-            <p>
-              <img
-                alt={`Imagem de capa do blog ${ reference.title }`}
-                src={reference.image}
-              />
-            </p>
-          </li>
-        ))}
-      </ul>
+    <Container as={ReferencesContainer}>
+      <Container as={ReferencesHeader} width='xxl'>
+        <h1>Minhas principais referências na área de programação</h1>
+        <BlockQuote>
+          <p>Na natureza nada se cria, tudo se copia.</p>
+        </BlockQuote>
+        <p>Essa página contém links para todas as referências... [continuar]</p>
+      </Container>
+      <ReferencesList role='list'>
+        {ReferencesItems}
+      </ReferencesList>
     </Container>
   )
 }
@@ -45,15 +115,20 @@ function References({ referencesData }) {
 export default pageWrapper(References)
 
 export async function getStaticProps() {
-  const referencesDatabase = await getContent('allReferences', {})
-  const { allReferences } = referencesDatabase.data
+  const referencesUrlAndType = await getContent('allReferences', {})
+  const { allReferences } = referencesUrlAndType.data
 
-  const promises = allReferences.map(
+  // const allReferences = [
+  //   { url: 'https://mariosouto.com/posts/', referenceType: 'blog' },
+  //   { url: 'https://tidyfirst.substack.com/', referenceType: 'podcast' }
+  // ]
+
+  const referencesPromises = allReferences.map(
     async reference => [ reference, await parser(reference.url) ]
   )
 
-  function getData(result) {
-    const [ firstPart, secondPart ] = result.value
+  function getRequireMetadata(reference) {
+    const [ firstPart, secondPart ] = reference.value
     const { og } = secondPart
     if (!og) return false
 
@@ -68,11 +143,11 @@ export async function getStaticProps() {
     }
   }
 
-  const referencesData = await Promise.allSettled(promises)
-    .then(results => results.map(getData))
+  const referencesMetaData = await Promise.allSettled(referencesPromises)
+    .then(allMetadata => allMetadata.map(getRequireMetadata))
 
   return {
-    props: { referencesData },
+    props: { referencesMetaData },
     revalidate: 86400
     /**
      * In secods:
