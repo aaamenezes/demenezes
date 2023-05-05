@@ -7,6 +7,7 @@ import BlockQuote from '../src/components/Common/BlockQuote'
 import { getContent } from '../src/external/datoCMS'
 import Image from '../src/components/Common/Figure'
 import Label from '../src/components/Common/Label'
+import LinkButton from '../src/components/Common/LinkButton'
 
 const ReferencesContainer = styled.header`
   padding-top: 6.6rem;
@@ -79,7 +80,11 @@ function References({ referencesMetaData }) {
             {referenceType}
           </Label>
           <p>{description}</p>
-          <a href={url}>
+          <LinkButton
+            href={url}
+            external
+            inline={!validateImageURL(image)}
+          >
             {validateImageURL(image)
               ? (
                 <Image
@@ -90,7 +95,7 @@ function References({ referencesMetaData }) {
                 />
               )
               : 'Acessar:'}
-          </a>
+          </LinkButton>
         </Container>
       </ReferenceItem>
     )
