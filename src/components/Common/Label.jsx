@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 
-const PostLabel = styled.div`
+const Label = styled.div`
   ${ getBreakpoints({
     xs: css`
       position: absolute;
@@ -22,4 +22,4 @@ const PostLabel = styled.div`
   }) }
 `
 
-export default PostLabel
+export default Label

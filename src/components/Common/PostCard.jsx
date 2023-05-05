@@ -5,7 +5,7 @@ import Container from './Container'
 import LinkButton from './LinkButton'
 import PostCardInfos from './PostCardInfos'
 import getBreakpoints from '../../utils/getBreakpoints'
-import PostLabel from './PostLabel'
+import Label from './Label'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({
@@ -85,9 +85,9 @@ export default function PostCard({ post, isCompact, spacing }) {
               objectFit: 'cover'
             }}
           />
-          <PostLabel>
+          <Label>
             {category}
-          </PostLabel>
+          </Label>
         </LinkButton>
       </PostCardImageWrapper>
       <PostCardInfos post={post} isCompact={isCompact} />

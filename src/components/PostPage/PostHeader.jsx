@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { convertDate } from '../../utils/convertDate'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
-import PostLabel from '../Common/PostLabel'
+import Label from '../Common/Label'
 
 const PostHeaderWrapper = styled.header`
   padding-top: 6.6rem;
@@ -151,7 +151,7 @@ export default function PostHeader({
           }
           <KeywordsList>{keywordsList}</KeywordsList>
         </PostHeaderFooter>
-        <PostLabel>{ category }</PostLabel>
+        <Label>{ category }</Label>
       </Container>
     </Container>
   )
