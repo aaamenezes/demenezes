@@ -253,7 +253,9 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     outline: none;
+    font-weight: ${ ({ theme }) => theme.fontWeight.h1 };
     font-size: ${ ({ theme }) => theme.fontSize.small };
+    font-family: ${ ({ theme }) => theme.fontFamily.display };
     background-color: transparent;
   }
 
