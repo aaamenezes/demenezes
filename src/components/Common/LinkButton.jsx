@@ -62,7 +62,7 @@ export default function LinkButton({
       type={type}
       as='button'
       disabled={disabled}
-      onClick={handleClick && (() => handleClick())}
+      onClick={handleClick || ''}
       {...props}
     >
       {children}

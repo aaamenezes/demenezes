@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { parser } from 'url-meta-scraper'
 import pageWrapper from '../src/components/pageWrapper'
@@ -8,6 +8,7 @@ import { getContent } from '../src/external/datoCMS'
 import Image from '../src/components/Common/Figure'
 import Label from '../src/components/Common/Label'
 import LinkButton from '../src/components/Common/LinkButton'
+import { PaginationButton } from '../src/components/PaginationButton'
 
 const ReferencesContainer = styled.header`
   padding-top: 6.6rem;
@@ -57,49 +58,72 @@ const ReferenceLabel = styled.p`
   margin-left: auto;
 `
 
+const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`
+
 function References({ referencesMetaData }) {
-  const ReferencesItems = referencesMetaData.map(reference => {
-    const { url, image, title, referenceType, description } = reference
+  const [ activeReferenceType, setActiveReferenceType ] = useState('Blog')
 
-    function validateImageURL(imageURL) {
-      const regexp = /^https?:\/\/[^\s/$.?#].[^\s]*$/
-      return regexp.test(imageURL)
-    }
+  const referenceTypes = [ 'Blog', 'Podcast', 'YouTube', 'Twitter' ]
 
-    /**
-     * TODOs:
-     * - Trocar <a> por <LinkButton />
-     * - Add target _blank
-     */
+  function changeReferenceType(type) {
+    setActiveReferenceType(type)
+  }
 
-    return (
-      <ReferenceItem key={url} referenceImage={image}>
-        <Container as={ReferenceItemWrapper} width='md' spacing={0}>
-          <ReferenceTitle>{title}</ReferenceTitle>
-          <Label as={ReferenceLabel}>
-            {referenceType}
-          </Label>
-          <p>{description}</p>
-          <LinkButton
-            href={url}
-            external
-            inline={!validateImageURL(image)}
-          >
-            {validateImageURL(image)
-              ? (
-                <Image
-                  src={image}
-                  width={640}
-                  height={480}
-                  alt={`Imagem de capa do ${ referenceType }`}
-                />
-              )
-              : 'Acessar:'}
-          </LinkButton>
-        </Container>
-      </ReferenceItem>
-    )
-  })
+  function validateImageURL(imageURL) {
+    const regexp = /^https?:\/\/[^\s/$.?#].[^\s]*$/
+    return regexp.test(imageURL)
+  }
+
+  const referencesItems = referencesMetaData
+    .filter(reference => reference.referenceType == activeReferenceType)
+    .map(reference => {
+      const { url, image, title, referenceType, description } = reference
+
+      return (
+        <ReferenceItem key={url} referenceImage={image}>
+          <Container as={ReferenceItemWrapper} width='md' spacing={0}>
+            <ReferenceTitle>{title}</ReferenceTitle>
+            <Label as={ReferenceLabel}>
+              {referenceType}
+            </Label>
+            <p>{description}</p>
+            <LinkButton
+              href={url}
+              external
+              inline={!validateImageURL(image)}
+            >
+              {validateImageURL(image)
+                ? (
+                  <Image
+                    src={image}
+                    width={640}
+                    height={480}
+                    alt={`Imagem de capa do ${ referenceType }`}
+                  />
+                )
+                : 'Acessar:'}
+            </LinkButton>
+          </Container>
+        </ReferenceItem>
+      )
+    })
+
+  const buttonsItems = referenceTypes.map(type => (
+    <PaginationButton
+      key={type}
+      as='button'
+      data-type={type}
+      onClick={event => {
+        changeReferenceType(event.currentTarget.dataset.type)
+      }}
+    >
+      {type}
+    </PaginationButton>
+  ))
 
   return (
     <Container as={ReferencesContainer}>
@@ -109,10 +133,9 @@ function References({ referencesMetaData }) {
           <p>Na natureza nada se cria, tudo se copia.</p>
         </BlockQuote>
         <p>Essa página contém links para todas as referências... [continuar]</p>
+        <ButtonsWrapper>{buttonsItems}</ButtonsWrapper>
       </Container>
-      <ReferencesList role='list'>
-        {ReferencesItems}
-      </ReferencesList>
+      <ReferencesList role='list'>{referencesItems}</ReferencesList>
     </Container>
   )
 }
@@ -121,12 +144,12 @@ export default pageWrapper(References)
 
 export async function getStaticProps() {
   const referencesUrlAndType = await getContent('allReferences', {})
-  const { allReferences } = referencesUrlAndType.data
+  // const { allReferences } = referencesUrlAndType.data
 
-  // const allReferences = [
-  //   { url: 'https://mariosouto.com/posts/', referenceType: 'blog' },
-  //   { url: 'https://tidyfirst.substack.com/', referenceType: 'podcast' }
-  // ]
+  const allReferences = [
+    { url: 'https://mariosouto.com/posts/', referenceType: 'Blog' },
+    { url: 'https://tidyfirst.substack.com/', referenceType: 'Podcast' }
+  ]
 
   const referencesPromises = allReferences.map(
     async reference => [ reference, await parser(reference.url) ]
