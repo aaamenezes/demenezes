@@ -79,7 +79,7 @@ function References({ referencesMetaData }) {
   }
 
   const referencesItems = referencesMetaData
-    .filter(reference => reference.referenceType == activeReferenceType)
+    .filter(reference => reference.referenceType === activeReferenceType)
     .map(reference => {
       const { url, image, title, referenceType, description } = reference
 
@@ -98,7 +98,7 @@ function References({ referencesMetaData }) {
             >
               {validateImageURL(image)
                 ? (
-                  <Image
+                  <img
                     src={image}
                     width={640}
                     height={480}
@@ -112,18 +112,18 @@ function References({ referencesMetaData }) {
       )
     })
 
-  const buttonsItems = referenceTypes.map(type => (
-    <PaginationButton
-      key={type}
-      as='button'
-      data-type={type}
-      onClick={event => {
-        changeReferenceType(event.currentTarget.dataset.type)
-      }}
-    >
-      {type}
-    </PaginationButton>
-  ))
+  // const buttonsItems = referenceTypes.map(type => (
+  //   <PaginationButton
+  //     key={type}
+  //     as='button'
+  //     data-type={type}
+  //     onClick={event => {
+  //       changeReferenceType(event.currentTarget.dataset.type)
+  //     }}
+  //   >
+  //     {type}
+  //   </PaginationButton>
+  // ))
 
   return (
     <Container as={ReferencesContainer}>
@@ -132,8 +132,8 @@ function References({ referencesMetaData }) {
         <BlockQuote>
           <p>Na natureza nada se cria, tudo se copia.</p>
         </BlockQuote>
-        <p>Essa página contém links para todas as referências... [continuar]</p>
-        <ButtonsWrapper>{buttonsItems}</ButtonsWrapper>
+        {/* <p>Essa página contém links para todas as referências... [continua]</p> */}
+        {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
       </Container>
       <ReferencesList role='list'>{referencesItems}</ReferencesList>
     </Container>
@@ -144,18 +144,20 @@ export default pageWrapper(References)
 
 export async function getStaticProps() {
   const referencesUrlAndType = await getContent('allReferences', {})
-  // const { allReferences } = referencesUrlAndType.data
+  const { allReferences } = referencesUrlAndType.data
 
-  const allReferences = [
-    { url: 'https://mariosouto.com/posts/', referenceType: 'Blog' },
-    { url: 'https://tidyfirst.substack.com/', referenceType: 'Podcast' }
-  ]
+  // const allReferences = [
+  //   { url: 'https://mariosouto.com/posts/', referenceType: 'Blog' },
+  //   { url: 'https://tidyfirst.substack.com/', referenceType: 'Podcast' }
+  // ]
 
   const referencesPromises = allReferences.map(
     async reference => [ reference, await parser(reference.url) ]
   )
 
   function getRequireMetadata(reference) {
+    if (reference.status === 'rejected') return false
+
     const [ firstPart, secondPart ] = reference.value
     const { og } = secondPart
     if (!og) return false
