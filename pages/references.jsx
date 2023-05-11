@@ -5,10 +5,9 @@ import pageWrapper from '../src/components/pageWrapper'
 import Container from '../src/components/Common/Container'
 import BlockQuote from '../src/components/Common/BlockQuote'
 import { getContent } from '../src/external/datoCMS'
-import Image from '../src/components/Common/Figure'
 import Label from '../src/components/Common/Label'
 import LinkButton from '../src/components/Common/LinkButton'
-import { PaginationButton } from '../src/components/PaginationButton'
+// import { PaginationButton } from '../src/components/PaginationButton'
 
 const ReferencesContainer = styled.header`
   padding-top: 6.6rem;
@@ -58,20 +57,20 @@ const ReferenceLabel = styled.p`
   margin-left: auto;
 `
 
-const ButtonsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-`
+// const ButtonsWrapper = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-evenly;
+// `
 
 function References({ referencesMetaData }) {
-  const [ activeReferenceType, setActiveReferenceType ] = useState('Blog')
+  const [ activeReferenceType /* setActiveReferenceType */ ] = useState('Blog')
 
-  const referenceTypes = [ 'Blog', 'Podcast', 'YouTube', 'Twitter' ]
+  // const referenceTypes = [ 'Blog', 'Podcast', 'YouTube', 'Twitter' ]
 
-  function changeReferenceType(type) {
-    setActiveReferenceType(type)
-  }
+  // function changeReferenceType(type) {
+  //   setActiveReferenceType(type)
+  // }
 
   function validateImageURL(imageURL) {
     const regexp = /^https?:\/\/[^\s/$.?#].[^\s]*$/
@@ -132,7 +131,7 @@ function References({ referencesMetaData }) {
         <BlockQuote>
           <p>Na natureza nada se cria, tudo se copia.</p>
         </BlockQuote>
-        {/* <p>Essa página contém links para todas as referências... [continua]</p> */}
+        {/* <p>Essa página</p> */}
         {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
       </Container>
       <ReferencesList role='list'>{referencesItems}</ReferencesList>
