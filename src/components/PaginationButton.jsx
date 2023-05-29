@@ -5,7 +5,7 @@ export const PaginationButton = styled.a`
   ${ getBreakpoints({
     xs: css`
       position: relative;
-      display: flex;
+      display: inline-flex;
       justify-content: center;
       align-items: center;
       width: 100%;
