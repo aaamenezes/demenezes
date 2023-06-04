@@ -134,6 +134,15 @@ function getQueryOptions(queryType, { slug, category }) {
               id
               tweetEmbedCodeblock
             }
+            ... on QuizRecord {
+              id
+              title
+              alternativeOne
+              alternativeTwo
+              alternativeThree
+              alternativeFour
+              correctAlternativeIndex
+            }
           }
         }
       }

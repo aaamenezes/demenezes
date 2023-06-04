@@ -14,6 +14,7 @@ import getBreakpoints from '../../utils/getBreakpoints'
 import Video from './Video'
 // eslint-disable-next-line import/no-cycle
 import BlockQuote from '../Common/BlockQuote'
+import Quiz from './Quiz'
 
 const Title = styled.h2`
   ${ getBreakpoints({
@@ -124,7 +125,6 @@ export default function StructuredTextDatoCMS({ data }) {
       )
     case 'VideoRecord':
       return (
-        // <div></div>
         <Video
           key={record.id}
           url={record.video.url}
@@ -164,6 +164,19 @@ export default function StructuredTextDatoCMS({ data }) {
             dangerouslySetInnerHTML={{ __html: record.tweetEmbedCodeblock }}
           />
         </div>
+      )
+    case 'QuizRecord':
+      return (
+        <Quiz
+          title={record.title}
+          alternatives={[
+            record.alternativeOne,
+            record.alternativeTwo,
+            record.alternativeThree,
+            record.alternativeFour
+          ]}
+          correctAlternativeIndex={record.correctAlternativeIndex}
+        />
       )
     default:
       return null

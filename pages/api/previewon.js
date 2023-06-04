@@ -1,3 +1,8 @@
+// export default function handler(req, res) {
+//   res.setDraftMode({ enable: true });
+//   res.end('Draft mode is enabled');
+// }
+
 export default async function previewOn(request, response) {
   // const password = 'algumacoisa'
 

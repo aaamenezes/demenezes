@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { PaginationButton } from '../PaginationButton'
+import { simplifyString } from '../../utils/simplifyString'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const StyledQuiz = styled.form`
   padding: 2rem;
   margin: 3rem auto;
-  border: 1px solid ${ ({ theme }) => theme.color.neutral_300 };
+  border: 1px solid ${ ({ theme }) => theme.color.neutral_600 };
   border-radius: ${ ({ theme }) => theme.borderRadius };
+  pointer-events: ${ ({ answeredQuiz }) => answeredQuiz ? 'none' : 'initial' };
 `
 
 const HeaderQuiz = styled.header`
@@ -29,69 +32,80 @@ const AlternativeInput = styled.input`
 
   &:checked + button,
   + button:hover {
-    background-color: ${ ({ theme, answeredQuiz }) => (
-    !answeredQuiz && theme.color.neutral_200
-  ) };
-  }
-
-  &:checked + button {
-    background-color: ${ ({ theme, answeredQuiz }) => (
-    answeredQuiz && theme.color.neutral_200
-  ) };
+    color: ${ ({ theme }) => theme.color.neutral_50 };
+    background-color: ${ ({ theme }) => theme.color.neutral_600 };
   }
 
   + button {
     width: 100%;
+    border: 1px solid ${ ({ theme, answeredQuiz, correctResponse }) => (
+    answeredQuiz && correctResponse
+      ? theme.color.red_600
+      : theme.color.neutral_600
+  ) };
+    border-radius: ${ ({ theme }) => theme.borderRadius };
+    text-align: left;
+    transition: ${ ({ theme }) => theme.transition.fast };
 
     label {
       display: block;
-      text-align: left;
       padding: 0.5rem;
-      border: 1px solid ${ ({ theme }) => theme.color.neutral_200 };
-      border-radius: ${ ({ theme }) => theme.borderRadius };
-      transition: ${ ({ theme }) => theme.transition.fast };
+      color: ${ ({ theme, answeredQuiz, correctResponse }) => (
+    answeredQuiz && correctResponse && theme.color.neutral_50
+  ) };
       background-color: ${ ({ theme, answeredQuiz, correctResponse }) => (
-    answeredQuiz && correctResponse && theme.color.red_100
+    answeredQuiz && correctResponse && theme.color.red_600
   ) };
       cursor: pointer;
     }
   }
 `
-/**
- * antes de respondeu
- *   hover ou checked: cinza
- * depois de responder
- *   certa: red
- *   errada e checked: cinza
- *   outros: nada
- */
 
-export default function Quiz() {
+const QuizFooter = styled.footer`
+  ${ getBreakpoints({
+    xs: css`
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      `,
+    md: css`
+      flex-direction: row;
+    `
+  }) }
+
+  p {
+    ${ getBreakpoints({
+    xs: css`
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      `,
+    md: css`
+      flex-direction: row;
+    `
+  }) }
+  }
+`
+
+export default function Quiz({ title, alternatives, correctAlternativeIndex }) {
   const [ answeredQuiz, setAnsweredQuiz ] = useState(false)
   const [ markedResponse, setMarkedResponse ] = useState(null)
   const [ responseIsCorrect, setResponseIsCorrect ] = useState(false)
 
-  const quiz = {
-    title: 'Qual é a cor do cavalo branco de Napoleão?',
-    alternatives: [ 'Azul', 'Branco', 'Laranja', 'Vermelho' ],
-    correctAlternativeIndex: 1
-  }
-
-  const { title, alternatives, correctAlternativeIndex } = quiz
-
   function handleSubmit(event) {
     event.preventDefault()
-    setResponseIsCorrect(markedResponse === correctAlternativeIndex)
+    setResponseIsCorrect(markedResponse === correctAlternativeIndex - 1)
     setAnsweredQuiz(true)
   }
 
   function handleMarkedResponse(event) {
-    const markedAlternativeIndex = +event.currentTarget.getAttribute('id')
+    const markedAlternativeIndex = +event.currentTarget.dataset.id
     setMarkedResponse(markedAlternativeIndex)
   }
 
   return (
-    <StyledQuiz onSubmit={handleSubmit}>
+    <StyledQuiz onSubmit={handleSubmit} answeredQuiz={answeredQuiz}>
       <HeaderQuiz>
         <p>
           <strong>
@@ -104,34 +118,54 @@ export default function Quiz() {
           <li key={alternative.id}>
             <AlternativeInput
               type='radio'
-              name='534ghj5g4j'
-              id={index}
+              name={simplifyString(title)}
+              id={`${ simplifyString(title) }-${ index }`}
               value={index}
               answeredQuiz={answeredQuiz}
-              correctResponse={index === correctAlternativeIndex}
+              correctResponse={index === correctAlternativeIndex - 1}
             />
-            <button onClick={handleMarkedResponse} type='button' id={index}>
-              <label htmlFor={index}>
+            <button
+              onClick={handleMarkedResponse}
+              type='button'
+              data-id={index}
+              disabled={answeredQuiz}
+              aria-disabled={answeredQuiz}
+            >
+              <label htmlFor={`${ simplifyString(title) }-${ index }`}>
                 {alternative}
               </label>
             </button>
           </li>
         ))}
       </AlternativesList>
-      <footer>
+      <QuizFooter>
         <PaginationButton
           as='button'
           type='submit'
           disabled={answeredQuiz}
+          aria-disabled={answeredQuiz}
         >
           Enviar
         </PaginationButton>
         {answeredQuiz && (
-          responseIsCorrect
-            ? <p>Resposta certa!</p>
-            : <p>Resposta Errada...</p>
+          <p>
+            <span>
+              {
+                responseIsCorrect
+                  ? 'Resposta certa!'
+                  : 'Resposta Errada...'
+              }
+            </span>
+            <span>
+              {
+                responseIsCorrect
+                  ? '😃🎉🎊🎯🥇🏳️‍⚧️💓💯🔟⬆️🔝'
+                  : '😥🤡☠️👎🏽💣❌☢️0️⃣'
+              }
+            </span>
+          </p>
         )}
-      </footer>
+      </QuizFooter>
     </StyledQuiz>
   )
 }

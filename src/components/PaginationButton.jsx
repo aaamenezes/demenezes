@@ -14,7 +14,9 @@ export const PaginationButton = styled.a`
       line-height: ${ ({ theme }) => theme.lineHeight.button };
       padding: 0.66rem;
       border-radius: ${ ({ theme }) => theme.borderRadius };
-      border: 1px solid ${ ({ theme }) => theme.color.neutral_900 };
+      border: 1px solid ${ ({ theme, disabled }) => (
+    theme.color.neutral_900 + (disabled ? theme.opacity.light.hex : '')
+  ) };
       transition: ${ ({ theme }) => theme.transition.fast };
       cursor: pointer;
 

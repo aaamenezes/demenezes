@@ -1,8 +1,9 @@
 export function simplifyString(string) {
-  return string.toLowerCase()
+  return string
+    .toLowerCase()
     .split('á')
     .join('a')
-    .split('á')
+    .split('à')
     .join('a')
     .split('ã')
     .join('a')
@@ -36,5 +37,7 @@ export function simplifyString(string) {
     .join('-')
     .split(')')
     .join('-')
+    .split('?')
+    .join('')
     .trim()
 }
