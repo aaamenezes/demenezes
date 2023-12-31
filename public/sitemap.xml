@@ -1,32 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://demenezes.dev/posts/como-adicionar-eventos-em-javascript</loc>
-    <lastmod>2023-06-04</lastmod>
+    <loc>https://demenezes.dev/posts/producao-de-conteudo-tecnologia-2023</loc>
+    <lastmod>2023-12-31</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/projetos-pessoais-melhorar-ou-abandonar</loc>
+    <lastmod>2023-12-12</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/reduce-array-javascript</loc>
+    <lastmod>2023-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/every-some-javascript-array</loc>
+    <lastmod>2023-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/find-javascript-array</loc>
+    <lastmod>2023-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/filter-javascript-array</loc>
+    <lastmod>2023-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/map-javascript-array</loc>
+    <lastmod>2023-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/codecon-summit-presencial-2023</loc>
+    <lastmod>2023-09-13</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/como-usar-foreach-javascript-exemplos</loc>
+    <lastmod>2023-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/diferenca-entre-array-htmlcollection-nodelist-domtokenlist-namednodemap</loc>
+    <lastmod>2023-08-19</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/front-in-sampa-2023</loc>
+    <lastmod>2023-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/iife-funcao-autoinvocada</loc>
+    <lastmod>2023-08-04</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/codecon-online-2023</loc>
+    <lastmod>2023-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/imagem-quadrada-redonda-css</loc>
+    <lastmod>2023-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/guia-eventos-em-javascript</loc>
+    <lastmod>2023-06-14</lastmod>
   </url>
   <url>
     <loc>https://demenezes.dev/posts/limite-de-caracteres-por-linha-codigo</loc>
-    <lastmod>2023-05-30</lastmod>
-  </url>
-  <url>
-    <loc>https://demenezes.dev/posts/centralizar-em-css</loc>
-    <lastmod>2023-05-04</lastmod>
+    <lastmod>2023-05-28</lastmod>
   </url>
   <url>
     <loc>https://demenezes.dev/posts/contenteditable-o-que-e-debugar-site</loc>
-    <lastmod>2023-05-02</lastmod>
+    <lastmod>2023-04-24</lastmod>
   </url>
   <url>
     <loc>https://demenezes.dev/posts/list-style-type-none-acessibilidade-listas</loc>
-    <lastmod>2023-04-27</lastmod>
-  </url>
-  <url>
-    <loc>https://demenezes.dev/posts/focus-em-elementos-html-css-javascript</loc>
-    <lastmod>2023-04-26</lastmod>
-  </url>
-  <url>
-    <loc>https://demenezes.dev/posts/css-box-model-elementos-tamanhos-inesperados</loc>
-    <lastmod>2023-03-21</lastmod>
+    <lastmod>2023-04-05</lastmod>
   </url>
   <url>
     <loc>https://demenezes.dev/posts/margin-collapsing-css</loc>
@@ -38,11 +82,7 @@
   </url>
   <url>
     <loc>https://demenezes.dev/posts/7-alternativas-a-queryselectorall-queryselector-getelementbyid</loc>
-    <lastmod>2023-02-01</lastmod>
-  </url>
-  <url>
-    <loc>https://demenezes.dev/posts/como-fazer-lazyload</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-01-26</lastmod>
   </url>
   <url>
     <loc>https://demenezes.dev/posts/eventos-tech-front-in-floripa-2022</loc>
@@ -57,8 +97,16 @@
     <lastmod>2022-10-14</lastmod>
   </url>
   <url>
+    <loc>https://demenezes.dev/posts/focus-em-elementos-html-css-javascript</loc>
+    <lastmod>2022-10-14</lastmod>
+  </url>
+  <url>
     <loc>https://demenezes.dev/posts/codecon-2022</loc>
     <lastmod>2022-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/como-fazer-lazyload</loc>
+    <lastmod>2022-09-21</lastmod>
   </url>
   <url>
     <loc>https://demenezes.dev/posts/atributo-loading-lazy</loc>
@@ -89,7 +137,15 @@
     <lastmod>2022-07-17</lastmod>
   </url>
   <url>
+    <loc>https://demenezes.dev/posts/css-box-model-elementos-tamanhos-inesperados</loc>
+    <lastmod>2022-07-17</lastmod>
+  </url>
+  <url>
     <loc>https://demenezes.dev/posts/referencias-front-end-marketing-digital</loc>
+    <lastmod>2022-07-17</lastmod>
+  </url>
+  <url>
+    <loc>https://demenezes.dev/posts/centralizar-em-css</loc>
     <lastmod>2022-07-17</lastmod>
   </url>
   <url>

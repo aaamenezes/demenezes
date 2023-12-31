@@ -1,4 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const TableWrapper = styled.div`
+  overflow: auto;
+`
 
 export default function Table({ tableTitle, tableSummary, tableContent }) {
   const formatedTable = '<caption>'
@@ -12,9 +17,11 @@ export default function Table({ tableTitle, tableSummary, tableContent }) {
     .replace('</table>', '')
 
   return (
-    <table
-      summary={tableSummary}
-      dangerouslySetInnerHTML={{ __html: formatedTable }}
-    />
+    <TableWrapper>
+      <table
+        summary={tableSummary}
+        dangerouslySetInnerHTML={{ __html: formatedTable }}
+      />
+    </TableWrapper>
   )
 }
