@@ -35,7 +35,7 @@ export async function getStaticProps(context) {
 
   const postsSitemapData = allPosts.data.allPosts.map(
     post => ({
-      slug: `posts/${ post.slug }`,
+      slug: `posts/${post.slug}`,
       _updatedAt: post._updatedAt.split('T')[0]
     })
   )

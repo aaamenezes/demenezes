@@ -68,7 +68,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     post: `{
-      post(filter: { slug: { eq: "${ slug }" } }) {
+      post(filter: { slug: { eq: "${slug}" } }) {
         title
         seoTitle
         metaDescription
@@ -148,7 +148,7 @@ function getQueryOptions(queryType, { slug, category }) {
       }
     }`,
     relatedPosts: `{
-      allPosts(filter: {category: {eq: "${ category }"}}, orderBy: _updatedAt_DESC) {
+      allPosts(filter: {category: {eq: "${category}"}}, orderBy: _updatedAt_DESC) {
         title
         slug
         category
@@ -174,14 +174,14 @@ function getQueryOptions(queryType, { slug, category }) {
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      Authorization: `Bearer ${ process.env.DATOCMS_TOKEN }`
+      Authorization: `Bearer ${process.env.DATOCMS_TOKEN}`
     },
     body: JSON.stringify({ query: queryMap[queryType] })
   }
 }
 
 export async function getContent(queryType, { slug, category }, preview) {
-  const datoCMSURL = `https://graphql.datocms.com/${ preview ? 'preview' : '' }`
+  const datoCMSURL = `https://graphql.datocms.com/${preview ? 'preview' : ''}`
   const options = getQueryOptions(queryType, { slug, category })
   const response = await fetch(datoCMSURL, options)
   return response.json()
