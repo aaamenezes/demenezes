@@ -9,6 +9,8 @@
     "lint-bkp": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.1",
     "babel-plugin-prismjs": "^2.1.0",
     "critters": "0.0.7",
     "date-fns": "2.16.1",
