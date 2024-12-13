@@ -6,13 +6,19 @@ import { generateSitemap } from '../src/scripts/generate-sitemap.mjs'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 import { PostSummary } from '../src/types'
 
+interface HomePageProps {
+  currentPosts: PostSummary[]
+  currentPagination: number
+  isLastPagination: boolean
+  preview: boolean
+}
+
 function Home({
   currentPosts,
   currentPagination,
   isLastPagination,
   preview
-}) {
-  console.log(`preview:`, preview);
+}: HomePageProps) {
   return (
     <HomeScreen
       currentPosts={currentPosts}
