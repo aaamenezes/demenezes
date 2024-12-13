@@ -1,10 +1,10 @@
 import type { GetStaticPropsContext } from 'next'
-import HomeScreen from '../src/components/Screens/HomeScreen'
 import pageWrapper from '../src/components/pageWrapper'
+import HomeScreen from '../src/components/Screens/HomeScreen'
 import { getContent } from '../src/external/datoCMS'
 import { generateSitemap } from '../src/scripts/generate-sitemap.mjs'
-import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 import { PostSummary } from '../src/types'
+import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
 interface HomePageProps {
   currentPosts: PostSummary[]
