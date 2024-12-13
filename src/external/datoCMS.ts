@@ -1,5 +1,13 @@
 /* eslint-disable max-len */
-function getQueryOptions(queryType, { slug, category }) {
+
+type QueryType = 'aboutPage' | 'allPosts' | 'allReferences' | 'post' | 'relatedPosts' | 'routes' | 'contactSection'
+
+interface PageData {
+  slug?: string
+  category?: string
+}
+
+function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
   const queryMap = {
     aboutPage: `{
       profileImage {
@@ -180,7 +188,11 @@ function getQueryOptions(queryType, { slug, category }) {
   }
 }
 
-export async function getContent(queryType, { slug, category }, preview) {
+export async function getContent(
+  queryType: QueryType,
+  { slug, category }: PageData,
+  preview: boolean
+) {
   const datoCMSURL = `https://graphql.datocms.com/${preview ? 'preview' : ''}`
   const options = getQueryOptions(queryType, { slug, category })
   const response = await fetch(datoCMSURL, options)

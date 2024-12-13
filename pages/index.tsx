@@ -24,7 +24,7 @@ function Home({
 export default pageWrapper(Home)
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const { params, preview } = context
+  const { params, preview = false } = context
   const allPosts = await getContent('allPosts', {}, preview)
 
   const {
