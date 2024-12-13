@@ -9,6 +9,7 @@ import Container from '../src/components/Common/Container'
 import Hobbies from '../src/components/AboutPage/Hobbies'
 import ContactForm from '../src/components/AboutPage/ContactForm'
 import { getContent } from '../src/external/datoCMS'
+import type { GetStaticProps } from 'next'
 
 function About({ aboutPageContent, contactContent }) {
   const {
@@ -56,7 +57,7 @@ function About({ aboutPageContent, contactContent }) {
 
 export default pageWrapper(About)
 
-export async function getStaticProps() {
+export async function getStaticProps(): GetStaticProps {
   const aboutPageContent = await getContent('aboutPage', {})
   const contactContent = await getContent('contactSection', {})
 

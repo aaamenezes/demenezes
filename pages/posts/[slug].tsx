@@ -7,6 +7,7 @@ import PostContent from '../../src/components/PostPage/PostContent'
 import PostComments from '../../src/components/PostPage/PostComments'
 import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
 import ProgressBar from '../../src/components/PostPage/ProgressBar'
+import type { GetStaticProps, GetStaticPaths } from 'next'
 
 const PostPage = styled.main`
   margin-bottom: 10%;
@@ -50,7 +51,7 @@ function Post({ post, relatedPosts, PREVIEW }) {
 
 export default pageWrapper(Post)
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context): GetStaticProps {
   const { params, preview } = context
   const post = await getContent('post', { slug: params.slug }, preview)
 
@@ -76,7 +77,7 @@ export async function getStaticProps(context) {
   }
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): GetStaticPaths {
   const routes = await getContent('routes', {})
 
   return {
@@ -88,3 +89,4 @@ export async function getStaticPaths() {
     fallback: 'blocking'
   }
 }
+

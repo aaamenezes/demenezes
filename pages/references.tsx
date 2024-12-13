@@ -8,6 +8,7 @@ import { getContent } from '../src/external/datoCMS'
 import Label from '../src/components/Common/Label'
 import LinkButton from '../src/components/Common/LinkButton'
 // import { PaginationButton } from '../src/components/PaginationButton'
+import type { GetStaticProps } from 'next'
 
 const ReferencesContainer = styled.header`
   padding-top: 6.6rem;
@@ -25,7 +26,7 @@ const ReferenceItem = styled.li`
   place-items: center;
   position: relative;
   min-height: 100vh;
-  padding: ${ ({ theme }) => `${ theme.spacing.h1 }rem` };
+  padding: ${({ theme }) => `${theme.spacing.h1}rem`};
   margin-bottom: 0;
 
   &::before {
@@ -35,7 +36,7 @@ const ReferenceItem = styled.li`
     width: 100%;
     height: 100%;
     opacity: 0.1;
-    background-image: ${ ({ referenceImage }) => `url('${ referenceImage }')` };
+    background-image: ${({ referenceImage }) => `url('${referenceImage}')`};
     background-size: cover;
     background-position: center;
     filter: blur(0.25rem);
@@ -48,7 +49,7 @@ const ReferenceItemWrapper = styled.div`
 `
 
 const ReferenceTitle = styled.h2`
-  margin: 0 0 ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+  margin: 0 0 ${({ theme }) => `${theme.spacing.h2}rem`};
 `
 
 const ReferenceLabel = styled.p`
@@ -64,7 +65,7 @@ const ReferenceLabel = styled.p`
 // `
 
 function References({ referencesMetaData }) {
-  const [ activeReferenceType /* setActiveReferenceType */ ] = useState('Blog')
+  const [activeReferenceType /* setActiveReferenceType */] = useState('Blog')
 
   // const referenceTypes = [ 'Blog', 'Podcast', 'YouTube', 'Twitter' ]
 
@@ -101,7 +102,7 @@ function References({ referencesMetaData }) {
                     src={image}
                     width={640}
                     height={480}
-                    alt={`Imagem de capa do ${ referenceType }`}
+                    alt={`Imagem de capa do ${referenceType}`}
                   />
                 )
                 : 'Acessar:'}
@@ -141,7 +142,7 @@ function References({ referencesMetaData }) {
 
 export default pageWrapper(References)
 
-export async function getStaticProps() {
+export async function getStaticProps(): GetStaticProps {
   const referencesUrlAndType = await getContent('allReferences', {})
   const { allReferences } = referencesUrlAndType.data
 
@@ -151,13 +152,13 @@ export async function getStaticProps() {
   // ]
 
   const referencesPromises = allReferences.map(
-    async reference => [ reference, await parser(reference.url) ]
+    async reference => [reference, await parser(reference.url)]
   )
 
   function getRequireMetadata(reference) {
     if (reference.status === 'rejected') return false
 
-    const [ firstPart, secondPart ] = reference.value
+    const [firstPart, secondPart] = reference.value
     const { og } = secondPart
     if (!og) return false
 

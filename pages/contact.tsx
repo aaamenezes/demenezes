@@ -2,6 +2,7 @@ import React from 'react'
 import ContactForm from '../src/components/AboutPage/ContactForm'
 import pageWrapper from '../src/components/pageWrapper'
 import { getContent } from '../src/external/datoCMS'
+import type { GetStaticProps } from 'next'
 
 function Contact({ contactContent }) {
   return (
@@ -11,7 +12,7 @@ function Contact({ contactContent }) {
 
 export default pageWrapper(Contact)
 
-export async function getStaticProps() {
+export async function getStaticProps(): GetStaticProps {
   const contactContent = await getContent('contactSection', {})
 
   return {

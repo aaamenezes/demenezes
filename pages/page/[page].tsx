@@ -4,6 +4,7 @@ import HomeScreen from '../../src/components/Screens/HomeScreen'
 import { getPaginationInfos } from '../../src/utils/getPaginationInfos'
 import pageWrapper from '../../src/components/pageWrapper'
 import { getContent } from '../../src/external/datoCMS'
+import type { GetStaticProps, GetStaticPaths } from 'next'
 
 function Home({
   CURRENT_POSTS,
@@ -21,7 +22,7 @@ function Home({
 
 export default pageWrapper(Home)
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }): GetStaticProps {
   const allPosts = await getContent('allPosts', {})
 
   const {
@@ -44,7 +45,7 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): GetStaticPaths {
   const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
   const allPosts = await getContent('routes', {})
   const totalPosts = allPosts.data.allPosts.length
@@ -54,9 +55,9 @@ export async function getStaticPaths() {
     return pageNumber > 0
       ? createDynamicPaths(
         pageNumber - 1,
-        [ ...array, { params: { page: pageNumber.toString() } } ]
+        [...array, { params: { page: pageNumber.toString() } }]
       )
-      : [ ...array ].reverse()
+      : [...array].reverse()
   }
 
   const dynamicPaths = createDynamicPaths(totalPages)

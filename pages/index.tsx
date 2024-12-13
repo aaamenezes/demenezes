@@ -1,9 +1,9 @@
-import React from 'react'
+import type { GetStaticPropsContext } from 'next'
 import HomeScreen from '../src/components/Screens/HomeScreen'
 import pageWrapper from '../src/components/pageWrapper'
 import { getContent } from '../src/external/datoCMS'
-import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 import { generateSitemap } from '../src/scripts/generate-sitemap.mjs'
+import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
 function Home({
   CURRENT_POSTS,
@@ -23,7 +23,7 @@ function Home({
 
 export default pageWrapper(Home)
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context: GetStaticPropsContext) {
   const { params, preview } = context
   const allPosts = await getContent('allPosts', {}, preview)
 
