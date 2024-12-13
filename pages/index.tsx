@@ -4,19 +4,20 @@ import pageWrapper from '../src/components/pageWrapper'
 import { getContent } from '../src/external/datoCMS'
 import { generateSitemap } from '../src/scripts/generate-sitemap.mjs'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
+import { PostSummary } from '../src/types'
 
 function Home({
-  CURRENT_POSTS,
-  CURRENT_PAGINATION,
-  IS_LAST_PAGINATION,
-  PREVIEW
+  currentPosts,
+  currentPagination,
+  isLastPagination,
+  preview
 }) {
+  console.log(`preview:`, preview);
   return (
     <HomeScreen
-      CURRENT_POSTS={CURRENT_POSTS}
-      CURRENT_PAGINATION={CURRENT_PAGINATION}
-      IS_LAST_PAGINATION={IS_LAST_PAGINATION}
-      PREVIEW={PREVIEW}
+      currentPosts={currentPosts}
+      currentPagination={currentPagination}
+      isLastPagination={isLastPagination}
     />
   )
 }
@@ -28,13 +29,13 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const allPosts = await getContent('allPosts', {}, preview)
 
   const {
-    CURRENT_POSTS,
-    CURRENT_PAGINATION,
-    IS_LAST_PAGINATION
+    currentPosts,
+    currentPagination,
+    isLastPagination
   } = getPaginationInfos(allPosts.data.allPosts, params)
 
   const postsSitemapData = allPosts.data.allPosts.map(
-    post => ({
+    (post: PostSummary) => ({
       slug: `posts/${post.slug}`,
       _updatedAt: post._updatedAt.split('T')[0]
     })
@@ -44,15 +45,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
   return {
     props: {
-      CURRENT_POSTS,
-      CURRENT_PAGINATION,
-      IS_LAST_PAGINATION,
-      PREVIEW: preview !== undefined
+      currentPosts,
+      currentPagination,
+      isLastPagination,
+      preview: preview !== undefined
     },
-    revalidate: 3600
-    /**
-     * In secods:
-     * 60sec * 60 = 1hour = 3600sec
-     */
   }
 }

@@ -9,19 +9,19 @@ import { getPageInfos } from '../../utils/getPageInfos'
 
 const HeaderWrapper = styled.header`
   position: fixed;
-  transform: ${ ({ openHeader }) => (
+  transform: ${({ openHeader }) => (
     openHeader ? 'translate(-50%, 0)' : 'translate(-50%, -110%)'
-  ) };
-  z-index: ${ ({ theme }) => theme.zIndex.fixed };
+  )};
+  z-index: ${({ theme }) => theme.zIndex.fixed};
   top: 0;
   left: 50%;
   padding-top: 0.66rem;
   padding-bottom: 0.66rem;
-  color: ${ ({ theme }) => theme.color.neutral_100 };
-  background-color: ${ ({ theme, currentPage }) => (
+  color: ${({ theme }) => theme.color.neutral_100};
+  background-color: ${({ theme, currentPage }) => (
     currentPage === 'home' ? 'transparent' : theme.color.neutral_900
-  ) };
-  transition: ${ ({ theme }) => theme.transition.medium };
+  )};
+  transition: ${({ theme }) => theme.transition.medium};
 `
 
 const HeaderInner = styled.div`
@@ -31,16 +31,16 @@ const HeaderInner = styled.div`
 `
 
 const ToggleMenuButton = styled.button`
-  ${ getBreakpoints({
-    md: css`
+  ${getBreakpoints({
+  md: css`
       display: none;
     `
-  }) }
+})}
 `
 
-export default function PageHeader({ preview }) {
-  const [ openMenu, setOpenMenu ] = useState(false)
-  const [ openHeader, setOpenHeader ] = useState(true)
+export default function PageHeader() {
+  const [openMenu, setOpenMenu] = useState(false)
+  const [openHeader, setOpenHeader] = useState(true)
   const { CURRENT_PAGE } = getPageInfos()
 
   function toggleMenu() {
@@ -66,7 +66,7 @@ export default function PageHeader({ preview }) {
         spacing={0}
         fluid
       >
-        <LogoWrapper preview={preview} />
+        <LogoWrapper />
         <ToggleModalButton
           onClick={toggleMenu}
           icon='bars'

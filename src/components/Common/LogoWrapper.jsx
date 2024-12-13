@@ -5,7 +5,7 @@ import LinkButton from './LinkButton'
 const LogoLink = styled.a`
   position: relative;
   display: block;
-  transition: ${ ({ theme }) => theme.transition.fast };
+  transition: ${({ theme }) => theme.transition.fast};
 
   &::after {
     content: '';
@@ -15,8 +15,8 @@ const LogoLink = styled.a`
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: ${ ({ theme }) => theme.color.neutral_100 };
-    transition: ${ ({ theme }) => theme.transition.fast };
+    background-color: ${({ theme }) => theme.color.neutral_100};
+    transition: ${({ theme }) => theme.transition.fast};
   }
 
   &:hover::after,
@@ -27,12 +27,13 @@ const LogoLink = styled.a`
 
 const Logo = styled.strong`
   display: block;
-  line-height: ${ ({ theme }) => theme.lineHeight.button };
-  font-size: ${ ({ theme }) => theme.fontSize.h4 };
-  font-family: ${ ({ theme }) => theme.fontFamily.text };
+  line-height: ${({ theme }) => theme.lineHeight.button};
+  font-size: ${({ theme }) => theme.fontSize.h4};
+  font-family: ${({ theme }) => theme.fontFamily.text};
 `
 
-export default function LogoWrapper({ preview }) {
+export default function LogoWrapper() {
+  const preview = false
   return (
     <LinkButton href='/' as={LogoLink}>
       <Logo>{preview ? 'Preview' : 'deMenezes'}</Logo>
