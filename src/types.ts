@@ -17,3 +17,11 @@ export interface PostSummary {
     }
   }
 }
+
+/**
+ * {
+ *   slug: string
+ *   _updatedAt?: string
+ * }
+ */
+export type SitemapItem = Pick<PostSummary, 'slug'> & Partial<Pick<PostSummary, '_updatedAt'>>
