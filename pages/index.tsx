@@ -8,7 +8,7 @@ import { getContent } from '../src/external/datoCMS'
 import { generateSitemap } from '../src/scripts/generate-sitemap'
 import { theme } from '../src/theme'
 import { GlobalStyle } from '../src/theme/globalStyle'
-import { PostSummary } from '../src/types'
+import type { PostSummary } from '../src/types'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
 interface HomePageProps {
