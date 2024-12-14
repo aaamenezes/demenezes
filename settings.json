@@ -1,5 +1,5 @@
 {
-  "CATEGORIES": [
+  "categories": [
     {
       "icon": "code",
       "title": "Front-end",
@@ -31,36 +31,36 @@
       "description": "Periféricos, acessórios, etc"
     }
   ],
-  "FORM": {
-    "CONTACT": {
-      "TITLE": "Fala comigo",
-      "TEXT_1": "Quer falar sobre algum projeto, carreira, mercado de trabalho, ou apenas conversar sobre como é prazeroso usar `display: grid;`?",
-      "TEXT_2": "Me deixa uma mensagem aí:",
-      "MAILCHIMP_IFRAME_SRC": "https://us14.list-manage.com/contact-form?u=931f7d0fb92503537ca06456d&form_id=6cf26ac7ffbdc6a1ed1d3d68e38faf59"
+  "form": {
+    "contact": {
+      "title": "Fala comigo",
+      "text1": "Quer falar sobre algum projeto, carreira, mercado de trabalho, ou apenas conversar sobre como é prazeroso usar `display: grid;`?",
+      "text2": "Me deixa uma mensagem aí:",
+      "mailchimpIframeSrc": "https://us14.list-manage.com/contact-form?u=931f7d0fb92503537ca06456d&form_id=6cf26ac7ffbdc6a1ed1d3d68e38faf59"
     },
-    "SIGNUP": {
-      "TITLE": "Inscreva-se para receber as novidades do blog por email:",
-      "MAILCHIMP_FORM_ACTION": "https://dedv.us14.list-manage.com/subscribe/post?u=931f7d0fb92503537ca06456d&amp;id=4b0ff01e85"
+    "signup": {
+      "TItitleTLE": "Inscreva-se para receber as novidades do blog por email:",
+      "mailchimpFormAction": "https://dedv.us14.list-manage.com/subscribe/post?u=931f7d0fb92503537ca06456d&amp;id=4b0ff01e85"
     }
   },
-  "GREETING": {
-    "IMAGE": {
-      "SRC": "https://pbs.twimg.com/profile_images/1452832195173826561/b6Pd2RHx_400x400.jpg",
-      "ALT": "Foto de perfil",
-      "RATIO": "4x3"
+  "greeting": {
+    "image": {
+      "src": "https://pbs.twimg.com/profile_images/1452832195173826561/b6Pd2RHx_400x400.jpg",
+      "alt": "Foto de perfil",
+      "ratio": "4x3"
     },
-    "TITLE": "Página sobre",
-    "SUBTITLE": "Que bom que vc está aqui!",
-    "TEXT": "Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise."
+    "title": "Página sobre",
+    "subtitle": "Que bom que vc está aqui!",
+    "text": "Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise."
   },
-  "HOBBIES": {
-    "TITLE": "Hobbies",
-    "TEXT": "Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game."
+  "hobbies": {
+    "title": "Hobbies",
+    "text": "Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game."
   },
-  "METADATA": {
-    "TITLE_BASE": "deMenezes: Front-end, carreira e css-life-style",
-    "DESCRIPTION_BASE": "Um blog sobre front-end, HTML, CSS, Javascript, carreira e mercado de trabalho, ferramentas, Git, e mais",
-    "KEYWORDS_BASE": [
+  "metadata": {
+    "titleBase": "deMenezes: Front-end, carreira e css-life-style",
+    "descriptionBase": "Um blog sobre front-end, HTML, CSS, Javascript, carreira e mercado de trabalho, ferramentas, Git, e mais",
+    "keywordsBase": [
       "front-end",
       "programação",
       "carreira",
@@ -68,7 +68,7 @@
       "mercado de trabalho"
     ]
   },
-  "NAVIGATION_MENU": [
+  "navigationMenu": [
     {
       "title": "Home",
       "url": "/"
@@ -86,48 +86,69 @@
       "url": "/references"
     }
   ],
-  "PAGES": {
+  "pages": {
     "home": {
       "pageTitle": "Home",
       "url": "/",
-      "keywords": ["pagina inicial", "home"],
+      "keywords": [
+        "pagina inicial",
+        "home"
+      ],
       "description": ""
     },
     "listing": {
       "pageTitle": "Home",
       "url": "/page/[page]",
-      "keywords": ["pagina inicial", "home"],
+      "keywords": [
+        "pagina inicial",
+        "home"
+      ],
       "description": ""
     },
     "post": {
       "pageTitle": "Artigo",
       "url": "/posts/[slug]",
-      "keywords": ["pagina de posts"],
+      "keywords": [
+        "pagina de posts"
+      ],
       "description": ""
     },
     "about": {
       "pageTitle": "Sobre",
       "url": "/about",
-      "keywords": [ "sobre mim", "sobre o blog", "sobre o blog deMenezes", "página sobre" ],
+      "keywords": [
+        "sobre mim",
+        "sobre o blog",
+        "sobre o blog deMenezes",
+        "página sobre"
+      ],
       "description": "Sobre o blog deMenezes"
     },
     "contact": {
       "pageTitle": "Contato",
       "url": "/contact",
-      "keywords": ["contato", "contato André de Menezes", "contato deMenezes", "página contato"],
+      "keywords": [
+        "contato",
+        "contato André de Menezes",
+        "contato deMenezes",
+        "página contato"
+      ],
       "description": "Contato deMenezes"
     },
     "references": {
       "pageTitle": "Referências",
       "url": "/references",
-      "keywords": ["pessoas referências na área de programação", "página de referências"],
+      "keywords": [
+        "pessoas referências na área de programação",
+        "página de referências"
+      ],
       "description": "As referências que me fizeram chegar até aqui"
     }
   },
-  "PAGINATION_CONFIG": {
-    "POSTS_PER_PAGE": 10
+  "paginationConfig": {
+    "postsPerPage": 10
   },
-  "SOCIAL_MEDIA": [
+  "socialMedia": [
     {
       "title": "github",
       "url": "https://github.com/aaamenezes"
@@ -149,15 +170,15 @@
       "url": "https://dev.to/demenezes"
     }
   ],
-  "SRC": {
-    "FONT": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap",
-    "ICONS": "https://use.fontawesome.com/releases/v5.15.2/css/all.css",
-    "CODE_THEME_VS_CODE": "/style/prism/vs-code.css",
-    "CODE_THEME_DRACULA": "/style/prism/dracula.css"
+  "src": {
+    "font": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+    "icon": "https://use.fontawesome.com/releases/v5.15.2/css/all.css",
+    "codeThemeVsCode": "/style/prism/vs-code.css",
+    "codeThemeVsDracula": "/style/prism/dracula.css"
   },
-  "STORY": {
-    "TITLE": "Como tudo começou...",
-    "BODY": [
+  "story": {
+    "title": "Como tudo começou...",
+    "body": [
       "A primeira vez que \"programei\" na vida foi durante o técnico em Redes de Computadores que fiz no Senai. Digo \"programei\", porque foi em HTML e CSS, e tem uma galera que faz treta se chamar elas de linguagem de programação. Mas sempre foi algo por hobbie mesmo, até porque eu achava muito difícil (e é).",
       "Nas duas primeiras empresas que trabalhei como suporte eu fiz questão de criar uma intranet pra documentar os manuais do setor. Fiz isso subindo um servidorzinho com o famigerado Xampp (Apache, MySQL e PHP), mas entendia muito pouco de PHP. Isso tudo foi por volta de 2011 ~ 2013.",
       "Dessa época até 2019 deixei a programação um pouco de lado, o máximo que fiz foi criar algumas planilhas (low code? No code? Fica o questionamento) e edição de vídeo. Vejo muitas coisas em comum entre programação e edição de vídeo, Premiere e VS Code foram amor à primeira vista.",

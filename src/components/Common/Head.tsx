@@ -3,22 +3,36 @@ import NextHead from 'next/head'
 import { useRouter } from 'next/router'
 import { getPageInfos } from '../../utils/getPageInfos'
 import settings from '../../../settings.json'
+import type { HomePageProps } from '../../../pages/index'
 
-export default function Head({ componentProps }) {
-  const { CURRENT_PAGE } = getPageInfos()
+/**
+ * O type abaixo HomePageProps só funciona pra home
+ * tem que ser genérico e aceitar props de qualquer página
+ * o ideal na verdade é criar um head para cada página e não esse centralizado
+ */
+export default function Head(
+  { componentProps }: { componentProps: HomePageProps}
+) {
+  console.log(`componentProps:`, componentProps);
+  const { currentPage } = getPageInfos()
   const router = useRouter()
   const baseURL = 'https://demenezes.dev'
 
-  const isPostPage = CURRENT_PAGE === 'post'
+  const isPostPage = currentPage === 'post'
 
-  const { METADATA, PAGES, SRC } = settings
-  const { TITLE_BASE, DESCRIPTION_BASE, KEYWORDS_BASE } = METADATA
+  const { metadata, pages, src } = settings
+  const { titleBase, descriptionBase, keywordsBase } = metadata
 
+  /**
+   * a linha abaixo
+   * componentProps.post
+   * está com erro pq só funciona em página de post
+   */
   const pageTitleFirstPart = isPostPage
-    ? componentProps.post.data.post.title
-    : PAGES[CURRENT_PAGE].pageTitle
+    ? /* componentProps.post.data.post.title */ 'Título fake do post'
+    : pages[currentPage].pageTitle
 
-  const pageTitle = `${ pageTitleFirstPart } | ${ TITLE_BASE }`
+  const pageTitle = `${pageTitleFirstPart} | ${titleBase}`
 
   const seoTitle = isPostPage
     ? componentProps.post.data.post.seoTitle
@@ -26,42 +40,42 @@ export default function Head({ componentProps }) {
 
   const pageDescriptionFirstPart = isPostPage
     ? componentProps.post.data.post.metaDescription
-    : PAGES[CURRENT_PAGE].description
+    : pages[currentPage].description
 
-  const pageDescription = PAGES[CURRENT_PAGE].pageTitle !== 'Home'
-    ? `${ pageDescriptionFirstPart } | ${ DESCRIPTION_BASE }`
-    : `${ DESCRIPTION_BASE }`
+  const pageDescription = pages[currentPage].pageTitle !== 'Home'
+    ? `${pageDescriptionFirstPart} | ${descriptionBase}`
+    : `${descriptionBase}`
 
   function getImageMetaTag() {
-    switch (CURRENT_PAGE) {
-    case 'home':
-    case 'listing':
-      return componentProps.CURRENT_POSTS[0].thumbnail.url
-    case 'post':
-      return componentProps.post.data.post.thumbnail.url
-    case 'about':
-      return componentProps.aboutPageContent.data.profileImage.profileImage
-        .responsiveImage
-        .src
-    case 'contact':
-      return componentProps.contactContent.data.profileImage.profileImage
-        .responsiveImage
-        .srcSet
-        .split(',')[3]
-        .split(' ')[0]
-    default:
-      return ''
+    switch (currentPage) {
+      case 'home':
+      case 'listing':
+        return componentProps.currentPosts[0].thumbnail.url
+      case 'post':
+        return componentProps.post.data.post.thumbnail.url
+      case 'about':
+        return componentProps.aboutPageContent.data.profileImage.profileImage
+          .responsiveImage
+          .src
+      case 'contact':
+        return componentProps.contactContent.data.profileImage.profileImage
+          .responsiveImage
+          .srcSet
+          .split(',')[3]
+          .split(' ')[0]
+      default:
+        return ''
     }
   }
 
   const imageMetaTag = getImageMetaTag()
 
-  const pageKeywords = PAGES[CURRENT_PAGE].keywords
+  const pageKeywords = pages[currentPage].keywords
     .join(', ')
     .concat(', ')
     .concat(isPostPage ? componentProps.post.data.post.keywords : '')
     .concat(', ')
-    .concat(KEYWORDS_BASE.join(', '))
+    .concat(keywordsBase.join(', '))
     .replace(', , ', ', ')
 
   return (
@@ -97,9 +111,9 @@ export default function Head({ componentProps }) {
         href='https://fonts.gstatic.com'
         crossOrigin='anonymous'
       />
-      <link rel='stylesheet' href={SRC.FONT} />
-      <link rel='stylesheet' href={SRC.ICONS} />
-      <link rel='stylesheet' href={SRC.CODE_THEME_VS_CODE} />
+      <link rel='stylesheet' href={src.font} />
+      <link rel='stylesheet' href={src.icon} />
+      <link rel='stylesheet' href={src.codeThemeVsCode} />
 
       {/* FAVICON */}
       <link
@@ -182,11 +196,11 @@ export default function Head({ componentProps }) {
       {/* OTHERS */}
       <meta charSet='UTF-8' />
       <meta property='og:type' content='article' />
-      <meta property='og:url' content={`${ baseURL }${ router.asPath }`} />
+      <meta property='og:url' content={`${baseURL}${router.asPath}`} />
       <meta name='author' content='André Menezes' />
       <meta name='twitter:creator' content='@aaamenezes' />
       <meta name='twitter:site' content='@aaamenezes' />
-      <meta property='og:site_name' content={TITLE_BASE} />
+      <meta property='og:site_name' content={titleBase} />
       <meta property='og:locale' content='pt_BR' />
       <meta name='theme-color' content='#ffffff' />
       <meta name='twitter:card' content='summary' />

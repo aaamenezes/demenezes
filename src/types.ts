@@ -25,3 +25,5 @@ export interface PostSummary {
  * }
  */
 export type SitemapItem = Pick<PostSummary, 'slug'> & Partial<Pick<PostSummary, '_updatedAt'>>
+
+export type Page = 'home' | 'listing' | 'post' | 'about' | 'contact' | 'references'
