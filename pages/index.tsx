@@ -1,8 +1,13 @@
 import type { GetStaticPropsContext } from 'next'
-import pageWrapper from '../src/components/pageWrapper'
+import { ThemeProvider } from 'styled-components'
+import Head from '../src/components/Common/Head'
+import PageFooter from '../src/components/Common/PageFooter'
+import PageHeader from '../src/components/Common/PageHeader'
 import HomeScreen from '../src/components/Screens/HomeScreen'
 import { getContent } from '../src/external/datoCMS'
 import { generateSitemap } from '../src/scripts/generate-sitemap.mjs'
+import { theme } from '../src/theme'
+import { GlobalStyle } from '../src/theme/globalStyle'
 import { PostSummary } from '../src/types'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
 
@@ -13,22 +18,33 @@ interface HomePageProps {
   preview: boolean
 }
 
-function Home({
+export default function Home({
   currentPosts,
   currentPagination,
   isLastPagination,
   preview
 }: HomePageProps) {
   return (
-    <HomeScreen
-      currentPosts={currentPosts}
-      currentPagination={currentPagination}
-      isLastPagination={isLastPagination}
-    />
+    <ThemeProvider theme={theme}>
+      <Head componentProps={{
+        currentPosts,
+        currentPagination,
+        isLastPagination,
+        preview
+      }} />
+      <GlobalStyle />
+      <PageHeader />
+      <HomeScreen
+        currentPosts={currentPosts}
+        currentPagination={currentPagination}
+        isLastPagination={isLastPagination}
+      />
+      <PageFooter />
+    </ThemeProvider>
   )
 }
 
-export default pageWrapper(Home)
+// export default pageWrapper<HomePageProps>(Home)
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const { params, preview = false } = context
