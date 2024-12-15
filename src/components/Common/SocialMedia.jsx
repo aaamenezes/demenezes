@@ -56,7 +56,7 @@ const SocialLabel = styled.span`
   color: ${({ theme }) => theme.color.neutral_500};
 `
 
-export default function SocialMedia({ center }) {
+export default function SocialMedia({ center = true }) {
   const socialElements = settings.socialMedia.map(socialMedia => (
     <SocialItem key={socialMedia.title}>
       <LinkButton
