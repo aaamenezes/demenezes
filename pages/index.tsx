@@ -1,5 +1,6 @@
 import type { GetStaticPropsContext } from 'next'
 import { ThemeProvider } from 'styled-components'
+import Head from '../src/components/Common/Head'
 import PageFooter from '../src/components/Common/PageFooter'
 import PageHeader from '../src/components/Common/PageHeader'
 import HomeScreen from '../src/components/Screens/HomeScreen'
@@ -9,7 +10,6 @@ import { theme } from '../src/theme'
 import { GlobalStyle } from '../src/theme/globalStyle'
 import type { PostSummary } from '../src/types'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
-import Head from '../src/components/Common/Head'
 
 export interface HomePageProps {
   currentPosts: PostSummary[]
@@ -26,7 +26,7 @@ export default function Home({
 }: HomePageProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Head componentProps={{
+      <Head<HomePageProps> componentProps={{
         currentPosts,
         currentPagination,
         isLastPagination,

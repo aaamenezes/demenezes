@@ -191,7 +191,7 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
 export async function getContent(
   queryType: QueryType,
   { slug, category }: PageData,
-  preview: boolean
+  preview = false
 ) {
   const datoCMSURL = `https://graphql.datocms.com/${preview ? 'preview' : ''}`
   const options = getQueryOptions(queryType, { slug, category })

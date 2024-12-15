@@ -1,19 +1,11 @@
-import React from 'react'
 import NextHead from 'next/head'
 import { useRouter } from 'next/router'
-import { getPageInfos } from '../../utils/getPageInfos'
 import settings from '../../../settings.json'
-import type { HomePageProps } from '../../../pages/index'
+import { getPageInfos } from '../../utils/getPageInfos'
 
-/**
- * O type abaixo HomePageProps só funciona pra home
- * tem que ser genérico e aceitar props de qualquer página
- * o ideal na verdade é criar um head para cada página e não esse centralizado
- */
-export default function Head(
-  { componentProps }: { componentProps: HomePageProps}
+export default function Head<PagePropsType>(
+  { componentProps }: { componentProps: PagePropsType}
 ) {
-  console.log(`componentProps:`, componentProps);
   const { currentPage } = getPageInfos()
   const router = useRouter()
   const baseURL = 'https://demenezes.dev'
@@ -23,13 +15,8 @@ export default function Head(
   const { metadata, pages, src } = settings
   const { titleBase, descriptionBase, keywordsBase } = metadata
 
-  /**
-   * a linha abaixo
-   * componentProps.post
-   * está com erro pq só funciona em página de post
-   */
   const pageTitleFirstPart = isPostPage
-    ? /* componentProps.post.data.post.title */ 'Título fake do post'
+    ? componentProps.post.data.post.title
     : pages[currentPage].pageTitle
 
   const pageTitle = `${pageTitleFirstPart} | ${titleBase}`

@@ -15,16 +15,16 @@ function getPageParam(params: ParsedUrlQuery | undefined) {
 
 export function getPaginationInfos(allPosts: PostSummary[], params: ParsedUrlQuery | undefined) {
   const currentPagination = getPageParam(params)
-  const { POSTS_PER_PAGE } = settings.PAGINATION_CONFIG
+  const { postsPerPage } = settings.paginationConfig
 
   const currentPosts = allPosts.slice(
-    (currentPagination - 1) * POSTS_PER_PAGE,
-    currentPagination * POSTS_PER_PAGE
+    (currentPagination - 1) * postsPerPage,
+    currentPagination * postsPerPage
   )
 
   const TOTAL_POSTS = allPosts.length
 
-  const lastPage = Math.ceil(TOTAL_POSTS / POSTS_PER_PAGE)
+  const lastPage = Math.ceil(TOTAL_POSTS / postsPerPage)
   const isLastPagination = +currentPagination === +lastPage
 
   return { currentPosts, currentPagination, isLastPagination }
