@@ -10,17 +10,22 @@ const Button = styled.button`
   height: 45px;
   padding: 0.66rem;
   border: 0;
-  color: ${ ({ theme, color }) => theme.color[color] || 'currentColor' };
+  color: ${({ theme, color }) => theme.color[color] || 'currentColor'};
   background-color: transparent;
-  border-radius: ${ ({ theme }) => theme.borderRadius };
+  border-radius: ${({ theme }) => theme.borderRadius};
   cursor: pointer;
 
   i {
-    font-size: ${ ({ theme }) => theme.fontSize.articleTitle };
+    font-size: ${({ theme }) => theme.fontSize.articleTitle};
   }
 `
 
-export default function ToggleModalButton({ onClick, icon, color, ...props }) {
+export default function ToggleModalButton({
+  onClick,
+  icon,
+  color = 'currentColor',
+  ...props
+}) {
   return (
     <Button onClick={onClick} color={color} {...props}>
       <Icon name={icon} />

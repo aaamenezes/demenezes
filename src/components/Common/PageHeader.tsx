@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
-import Navigation from './Navigation'
-import ToggleModalButton from './ToggleModalButton'
-import Container from './Container'
-import LogoWrapper from './LogoWrapper'
 import getBreakpoints from '../../utils/getBreakpoints'
 import { getPageInfos } from '../../utils/getPageInfos'
+import Container from './Container'
+import LogoWrapper from './LogoWrapper'
+import Navigation from './Navigation'
+import ToggleModalButton from './ToggleModalButton'
+import { PageName } from '../../types'
 
-const HeaderWrapper = styled.header`
+const HeaderWrapper = styled.header<{ openHeader: boolean, currentPage: PageName }>`
   position: fixed;
   transform: ${({ openHeader }) => (
     openHeader ? 'translate(-50%, 0)' : 'translate(-50%, -110%)'
@@ -41,7 +42,7 @@ const ToggleMenuButton = styled.button`
 export default function PageHeader() {
   const [openMenu, setOpenMenu] = useState(false)
   const [openHeader, setOpenHeader] = useState(true)
-  const { CURRENT_PAGE } = getPageInfos()
+  const { currentPage } = getPageInfos()
 
   function toggleMenu() {
     setOpenMenu(!openMenu)
@@ -58,7 +59,7 @@ export default function PageHeader() {
       width='full'
       as={HeaderWrapper}
       openHeader={openHeader}
-      currentPage={CURRENT_PAGE}
+      currentPage={currentPage}
     >
       <Container
         as={HeaderInner}
