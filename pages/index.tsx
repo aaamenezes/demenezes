@@ -8,15 +8,8 @@ import { getContent } from '../src/external/datoCMS'
 import { generateSitemap } from '../src/scripts/generate-sitemap'
 import { theme } from '../src/theme'
 import { GlobalStyle } from '../src/theme/globalStyle'
-import type { PostSummary } from '../src/types'
+import type { HomePageProps, PostSummary } from '../src/types'
 import { getPaginationInfos } from '../src/utils/getPaginationInfos'
-
-export interface HomePageProps {
-  currentPosts: PostSummary[]
-  currentPagination: number
-  isLastPagination: boolean
-  preview: boolean
-}
 
 export default function Home({
   currentPosts,

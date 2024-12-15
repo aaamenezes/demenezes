@@ -1,3 +1,16 @@
+/**
+ * está muito ruim HomePagePros ~ HomeScreenProps
+ * melhorar isso
+ */
+export interface HomePageProps {
+  currentPosts: PostSummary[]
+  currentPagination: number
+  isLastPagination: boolean
+  preview: boolean
+}
+
+export type HomeScreenProps = Pick<HomePageProps, 'currentPagination' | 'currentPosts' | 'isLastPagination'>
+
 export type Category = 'Front-end' | 'Carreira' | 'Pessoas' | 'Produtividade' | 'Ferramentas' | 'Equipamentos'
 
 export interface PostSummary {
