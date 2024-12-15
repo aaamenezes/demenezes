@@ -11,7 +11,7 @@ const StyledContactForm = styled.div`
 `
 
 const ContactTitle = styled.h2`
-  margin-top: ${ ({ theme }) => `${ theme.spacing.h2 }rem` };
+  margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
 `
 
 const MailchimpContactForm = styled.iframe`
@@ -20,7 +20,7 @@ const MailchimpContactForm = styled.iframe`
 `
 
 export default function ContactForm({ contactContent }) {
-  const { MAILCHIMP_IFRAME_SRC } = settings.FORM.CONTACT
+  const { mailchimpIframeSrc } = settings.form.contact
   const { contactTitle, contactText } = contactContent.data.contactSection
   const textElements = contactText.split('\n').map(text => (
     <p key={text}>{text}</p>
@@ -32,7 +32,7 @@ export default function ContactForm({ contactContent }) {
       {textElements}
       <MailchimpContactForm
         title='Formulário de contato'
-        src={MAILCHIMP_IFRAME_SRC}
+        src={mailchimpIframeSrc}
         frameBorder='0'
       />
     </Container>

@@ -1,12 +1,11 @@
-import React from 'react'
 import styled from 'styled-components'
-import HeroPostCard from './HeroPostCard'
-import PostCard from '../Common/PostCard'
-import Newsletter from '../Common/Newsletter'
 import { getPageInfos } from '../../utils/getPageInfos'
+import Newsletter from '../Common/Newsletter'
+import PostCard from '../Common/PostCard'
+import HeroPostCard from './HeroPostCard'
 
 const StyledPostsWrapper = styled.main`
-  padding-top: ${ ({ isHome }) => !isHome && '6.6rem' };
+  padding-top: ${({ isHome }) => !isHome && '6.6rem'};
 `
 
 export default function PostsWrapper({ postsList }) {
@@ -28,7 +27,7 @@ export default function PostsWrapper({ postsList }) {
 
   return (
     <StyledPostsWrapper isHome={isHome}>
-      { isHome && <HeroPostCard post={heroPost} /> }
+      {isHome && <HeroPostCard post={heroPost} />}
       {firstBlockPosts}
       <Newsletter />
       {secondBlockPosts}

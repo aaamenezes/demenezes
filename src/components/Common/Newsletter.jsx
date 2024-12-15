@@ -8,9 +8,9 @@ import LinkButton from './LinkButton'
 import settings from '../../../settings.json'
 
 const NewsletterTitle = styled.h3`
-  font-size: ${ ({ theme }) => theme.fontSize.h3 };
-  line-height: ${ ({ theme }) => theme.lineHeight.h3 };
-  letter-spacing: ${ ({ theme }) => theme.letterSpacing.h3 };
+  font-size: ${({ theme }) => theme.fontSize.h3};
+  line-height: ${({ theme }) => theme.lineHeight.h3};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
   margin-top: 0;
   text-align: center;
 `
@@ -18,46 +18,46 @@ const NewsletterTitle = styled.h3`
 const NewsletterForm = styled.article`
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: ${ ({ theme }) => theme.color.neutral_400 };
+  background-color: ${({ theme }) => theme.color.neutral_400};
 `
 
 const InputsWrapper = styled.div`
-  ${ getBreakpoints({
-    xs: css`
+  ${getBreakpoints({
+  xs: css`
       display: grid;
       grid-template-columns: 1fr;
       margin-bottom: 2rem;
     `,
-    md: css`
+  md: css`
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
     `
-  }) }
+})}
 `
 
 const SubmitButton = styled.button`
   padding: 0.5rem 1rem;
   margin: 0 auto;
-  color: ${ ({ theme }) => theme.color.neutral_100 };
-  background-color: ${ ({ theme }) => theme.color.red_700 };
+  color: ${({ theme }) => theme.color.neutral_100};
+  background-color: ${({ theme }) => theme.color.red_700};
 
   &:hover {
-    background-color: ${ ({ theme }) => theme.color.red_900 };
+    background-color: ${({ theme }) => theme.color.red_900};
   }
 `
 
 export default function Newsletter() {
-  const { TITLE, MAILCHIMP_FORM_ACTION } = settings.FORM.SIGNUP
+  const { title, mailchimpFormAction } = settings.form.signup
 
   return (
     <Container as={NewsletterForm} width='full' fluid>
       <Container width='md' spacing={0}>
-        <NewsletterTitle>{TITLE}</NewsletterTitle>
+        <NewsletterTitle>{title}</NewsletterTitle>
 
         {/* Begin Mailchimp Signup Form */}
         <div id='mc_embed_signup'>
           <form
-            action={MAILCHIMP_FORM_ACTION}
+            action={mailchimpFormAction}
             method='post'
             id='mc-embedded-subscribe-form'
             name='mc-embedded-subscribe-form'
@@ -116,7 +116,7 @@ export default function Newsletter() {
                   name='b_931f7d0fb92503537ca06456d_4b0ff01e85'
                   tabIndex='-1'
                   value=''
-                  onChange={() => {}}
+                  onChange={() => { }}
                 />
               </HiddenA11Y>
               <div className='optionalParent'>
