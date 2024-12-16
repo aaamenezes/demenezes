@@ -47,7 +47,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     currentPosts,
     currentPagination,
     isLastPagination
-  } = getPaginationInfos(allPosts.data.allPosts, params)
+  } = getPaginationInfos(allPosts.data.allPosts, params?.page)
 
   const postsSitemapData = allPosts.data.allPosts.map(
     (post: PostSummary) => ({

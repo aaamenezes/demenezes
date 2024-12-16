@@ -11,6 +11,17 @@ export interface HomePageProps {
 
 export type HomeScreenProps = Pick<HomePageProps, 'currentPagination' | 'currentPosts' | 'isLastPagination'>
 
+export interface PostPageProps {
+  /**
+   * remover any
+   * tava sem luz
+   * não tinha como ver o objeto pra tipar
+   */
+  post: any
+  relatedPosts: PostSummary[]
+  preview: boolean
+}
+
 export type Category = 'Front-end' | 'Carreira' | 'Pessoas' | 'Produtividade' | 'Ferramentas' | 'Equipamentos'
 
 export interface PostSummary {

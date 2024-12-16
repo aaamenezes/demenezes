@@ -1,19 +1,20 @@
-import React from 'react'
+import type { GetStaticPropsContext } from 'next'
 import styled from 'styled-components'
-import { getContent } from '../../src/external/datoCMS'
 import pageWrapper from '../../src/components/pageWrapper'
-import PostHeader from '../../src/components/PostPage/PostHeader'
-import PostContent from '../../src/components/PostPage/PostContent'
 import PostComments from '../../src/components/PostPage/PostComments'
-import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
+import PostContent from '../../src/components/PostPage/PostContent'
+import PostHeader from '../../src/components/PostPage/PostHeader'
 import ProgressBar from '../../src/components/PostPage/ProgressBar'
-import type { GetStaticProps, GetStaticPaths } from 'next'
+import RelatedPosts from '../../src/components/PostPage/RelatedPosts'
+import { getContent } from '../../src/external/datoCMS'
+import { PostPageProps } from '../../src/types'
+import { parseSlugParam } from '../../src/utils/parseParams'
 
 const PostPage = styled.main`
   margin-bottom: 10%;
 `
 
-function Post({ post, relatedPosts, PREVIEW }) {
+function Post({ post, relatedPosts, preview }: PostPageProps) {
   const {
     title,
     metaDescription,
@@ -35,7 +36,6 @@ function Post({ post, relatedPosts, PREVIEW }) {
           category={category}
           keywords={keywords}
           coverImage={thumbnail.url}
-          preview={PREVIEW}
         />
         <PostContent post={post} />
       </PostPage>
@@ -51,16 +51,20 @@ function Post({ post, relatedPosts, PREVIEW }) {
 
 export default pageWrapper(Post)
 
-export async function getStaticProps(context): GetStaticProps {
+export async function getStaticProps(context: GetStaticPropsContext) {
   const { params, preview } = context
-  const post = await getContent('post', { slug: params.slug }, preview)
+  const post = await getContent('post', { slug: parseSlugParam(params?.slug) }, preview)
 
+  /**
+   * remover o any abaixo
+   * tava sem luz
+   */
   const relatedPosts = await getContent(
     'relatedPosts',
     { category: post.data.post.category },
     preview
   ).then(data => data.data.allPosts.filter(
-    currentPost => currentPost.title !== post.data.post.title
+    (currentPost: any) => currentPost.title !== post.data.post.title
   ))
 
   return {
@@ -77,11 +81,15 @@ export async function getStaticProps(context): GetStaticProps {
   }
 }
 
-export async function getStaticPaths(): GetStaticPaths {
+export async function getStaticPaths() {
   const routes = await getContent('routes', {})
 
+  /**
+   * remover o any abaixo
+   * tava sem luz
+   */
   return {
-    paths: routes.data.allPosts.map(post => ({
+    paths: routes.data.allPosts.map((post: any) => ({
       params: {
         slug: post.slug
       }
