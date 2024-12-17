@@ -14,7 +14,7 @@ const PostPage = styled.main`
   margin-bottom: 10%;
 `
 
-function Post({ post, relatedPosts, preview }: PostPageProps) {
+function Post({ post, relatedPosts }: PostPageProps) {
   const {
     title,
     metaDescription,

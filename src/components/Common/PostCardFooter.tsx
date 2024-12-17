@@ -3,7 +3,9 @@ import styled, { css } from 'styled-components'
 import { convertDate } from '../../utils/convertDate'
 import getBreakpoints from '../../utils/getBreakpoints'
 
-const PostCardFooterWrapper = styled.footer`
+const PostCardFooterWrapper = styled.footer<{
+  isCompact: boolean
+}>`
   ${ getBreakpoints({
     xs: css`
       margin-top: 0.44rem;
@@ -24,7 +26,15 @@ const PostCardDate = styled.p`
   color: ${ ({ theme }) => theme.color.neutral_600 };
 `
 
-export default function PostCardFooter({ date, update, isCompact }) {
+export default function PostCardFooter({
+  date,
+  update,
+  isCompact
+}: {
+  date: string
+  update: string
+  isCompact: boolean
+}) {
   if (!date) return null
 
   return (

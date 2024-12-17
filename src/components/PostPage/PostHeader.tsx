@@ -5,7 +5,9 @@ import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import Label from '../Common/Label'
 
-const PostHeaderWrapper = styled.header`
+const PostHeaderWrapper = styled.header<{
+  bgImage: string
+}>`
   padding-top: 6.6rem;
   padding-bottom: 3rem;
   /* color: ${ ({ theme }) => theme.color.neutral_100 }; */
@@ -122,10 +124,23 @@ export default function PostHeader({
   category,
   keywords,
   coverImage
+}: {
+  title: string
+  description: string
+  date: string
+  update: string
+  category: string
+  keywords: string
+  coverImage: string
 }) {
-  const keywordsList = keywords.split(',').map(keyword => (
-    <KeywordItem key={keyword}>{ keyword }</KeywordItem>
-  ))
+  const keywordsList = keywords
+    .split(',')
+    .map(keyword => {
+      const clearKeyword = keyword.trim()
+      return <KeywordItem key={clearKeyword}>{ clearKeyword }</KeywordItem>
+    })
+
+  console.log("keywords:", keywords)
 
   return (
     <Container as={PostHeaderWrapper} width='full' fluid bgImage={coverImage}>

@@ -19,7 +19,6 @@ export interface PostPageProps {
    */
   post: any
   relatedPosts: PostSummary[]
-  preview: boolean
 }
 
 export type Category = 'Front-end' | 'Carreira' | 'Pessoas' | 'Produtividade' | 'Ferramentas' | 'Equipamentos'
