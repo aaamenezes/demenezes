@@ -10,11 +10,11 @@ import Iframe from './Iframe'
 import Table from './Table'
 // eslint-disable-next-line import/no-cycle
 import TextBox from './TextBox'
-import getBreakpoints from '../../utils/getBreakpoints'
 import Video from './Video'
 // eslint-disable-next-line import/no-cycle
 import BlockQuote from '../Common/BlockQuote'
 import Quiz from './Quiz'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const Title = styled.h2`
   ${ getBreakpoints({

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import settings from '../../../settings.json'
-import getBreakpoints from '../../utils/getBreakpoints'
 import Icon from './Icon'
 import LinkButton from './LinkButton'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const SocialMediaWrapper = styled.nav`
   margin: ${({ center }) => center ? '0 auto' : '0'};

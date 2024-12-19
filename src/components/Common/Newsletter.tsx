@@ -1,11 +1,10 @@
-import React from 'react'
 import styled, { css } from 'styled-components'
+import settings from '../../../settings.json'
 import getBreakpoints from '../../utils/getBreakpoints'
 import Container from './Container'
 import HiddenA11Y from './HiddenA11Y'
 import Input from './Input'
 import LinkButton from './LinkButton'
-import settings from '../../../settings.json'
 
 const NewsletterTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.h3};

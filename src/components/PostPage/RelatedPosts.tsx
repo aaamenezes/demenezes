@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import getBreakpoints from '../../utils/getBreakpoints'
 import Container from '../Common/Container'
 import PostCard from '../Common/PostCard'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const RelatedPostsGrid = styled.div`
   ${ getBreakpoints({

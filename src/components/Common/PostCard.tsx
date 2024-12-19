@@ -4,8 +4,8 @@ import styled, { css } from 'styled-components'
 import Container from './Container'
 import LinkButton from './LinkButton'
 import PostCardInfos from './PostCardInfos'
-import getBreakpoints from '../../utils/getBreakpoints'
 import Label from './Label'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const PostCardWrapper = styled.article`
   ${ getBreakpoints({

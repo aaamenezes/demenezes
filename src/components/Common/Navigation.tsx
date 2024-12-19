@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import styled, { css } from 'styled-components'
 import settings from '../../../settings.json'
-import getBreakpoints from '../../utils/getBreakpoints'
 import { getPageInfos } from '../../utils/getPageInfos'
 import LinkButton from './LinkButton'
 import ToggleModalButton from './ToggleModalButton'
+import getBreakpoints from '../../utils/getBreakpoints'
 
 const NavWrapper = styled.nav`
   ${getBreakpoints({

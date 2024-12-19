@@ -1,4 +1,3 @@
-import React from 'react'
 import NextImage from 'next/image'
 import styled, { css } from 'styled-components'
 import { theme } from '../../theme'

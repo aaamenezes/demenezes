@@ -20,7 +20,6 @@ export function getPageInfos(): { currentPage: PageName } {
       return (page as [PageName, PageProps])[1].url === pathname
     }
   )?.[0] || 'home'
-  console.log(`currentPage:`, currentPage);
 
   return { currentPage }
 }
