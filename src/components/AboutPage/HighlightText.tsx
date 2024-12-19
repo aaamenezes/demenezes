@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 import Container from '../Common/Container'
 
@@ -21,7 +21,7 @@ const TextWrapper = styled.div`
   color: ${ ({ theme }) => theme.color.neutral_50 };
 `
 
-export default function HighlightText({ children }) {
+export default function HighlightText({ children }: PropsWithChildren) {
   return (
     <Container as={StyledHighlightText} width='full' fluid>
       <Container as={TextWrapper} width='md' fluid>
