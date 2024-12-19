@@ -19,7 +19,26 @@ const MailchimpContactForm = styled.iframe`
   min-height: 1000px;
 `
 
-export default function ContactForm({ contactContent }) {
+export default function ContactForm({
+  contactContent
+}: {
+  contactContent: {
+    data: {
+      contactSection: {
+        contactTitle: string
+        contactText: string
+      },
+      profileImage: {
+        profileImage: {
+          alt: string
+          responsiveImage: {
+            srcSet: string
+          }
+        }
+      }
+    }
+  }
+}) {
   const { mailchimpIframeSrc } = settings.form.contact
   const { contactTitle, contactText } = contactContent.data.contactSection
   const textElements = contactText.split('\n').map(text => (
