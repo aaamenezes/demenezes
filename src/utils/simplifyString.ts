@@ -1,4 +1,4 @@
-export function simplifyString(string) {
+export function simplifyString(string: string) {
   return string
     .toLowerCase()
     .split('á')
