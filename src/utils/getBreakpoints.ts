@@ -4,6 +4,7 @@ import { theme } from '../theme'
 const { breakpoints } = theme
 
 export default function getBreakpoints(cssByBreakpoints) {
+  console.log("cssByBreakpoints:", cssByBreakpoints)
   const breakpointsNames = Object.keys(cssByBreakpoints)
 
   return breakpointsNames.map(breakpointName => css`
