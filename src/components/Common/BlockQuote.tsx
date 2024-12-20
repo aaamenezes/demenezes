@@ -1,8 +1,16 @@
-import React from 'react'
-// eslint-disable-next-line import/no-cycle
+import React, { PropsWithChildren } from 'react'
 import StructuredTextDatoCMS from '../PostPage/StructuredTextDatoCMS'
 
-export default function BlockQuote({ source, children, author, isDatoCMS }) {
+export default function BlockQuote({
+  source,
+  children,
+  author,
+  isDatoCMS
+}: PropsWithChildren<{
+  source?: string
+  author?: string
+  isDatoCMS?: boolean
+}>) {
   return (
     <blockquote cite={source || ''}>
       {isDatoCMS ? <StructuredTextDatoCMS data={children} /> : children }
