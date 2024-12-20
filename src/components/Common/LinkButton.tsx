@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import NextLink from 'next/link'
 import styled from 'styled-components'
 import Icon from './Icon'
 
-const StyledLinkButton = styled.a`
+const StyledLinkButton = styled.a<{ inline: boolean }>`
   display: ${ ({ inline }) => inline ? 'inline' : 'block' };
   font-weight: ${ ({ theme, inline }) => !inline && theme.fontWeight.button };
   letter-spacing: ${ ({ theme, inline }) => (
@@ -17,20 +17,27 @@ const StyledLinkButton = styled.a`
   cursor: pointer;
 `
 
-const LinkText = styled.span`
+const LinkText = styled.span<{ inline: boolean }>`
   text-decoration: ${ ({ inline }) => inline && 'underline' };
 `
 
 export default function LinkButton({
   href,
-  external,
-  inline,
+  external = false,
+  inline = false,
   children,
-  handleClick,
-  type,
-  disabled,
+  handleClick = () => {},
+  type = 'button',
+  disabled = false,
   ...props
-}) {
+}: PropsWithChildren<{
+  href?: string
+  external?: boolean
+  inline?: boolean
+  handleClick?: () => void
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
+}>) {
   const linkInner = (external && inline)
     ? (
       <>
@@ -62,7 +69,8 @@ export default function LinkButton({
       type={type}
       as='button'
       disabled={disabled}
-      onClick={handleClick || ''}
+      onClick={handleClick}
+      inline={inline}
       {...props}
     >
       {children}
