@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 
 const StyledHiddenA11Y = styled.div`
@@ -14,7 +14,13 @@ const StyledHiddenA11Y = styled.div`
   word-wrap: normal;
 `
 
-export default function HiddenA11Y({ tag, children }) {
+export default function HiddenA11Y({
+  tag,
+  children
+}: PropsWithChildren<{
+  tag: keyof HTMLElementTagNameMap
+}>)
+{
   return (
     <StyledHiddenA11Y as={tag}>
       {children}
