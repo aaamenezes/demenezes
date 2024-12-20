@@ -1,7 +1,12 @@
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
+import { theme } from '../../theme'
 
-function getContainerMaxWidth(theme, width, fluid) {
+const { breakpoints } = theme
+
+type Width = keyof typeof breakpoints & 'full'
+
+function getContainerMaxWidth(width: Width, fluid: boolean) {
   const { breakpoints } = theme
 
   if (width && width !== 'full' && fluid) {
@@ -40,18 +45,21 @@ function getContainerMaxWidth(theme, width, fluid) {
     })
   }
 
-  // if (width === 'full' || !width)
   return css`max-width: 100%;`
 }
 
-function getPadding(breakpoints, breakpoint, paddingPercent) {
+function getPadding(
+  breakpoints: typeof theme.breakpoints,
+  breakpoint: keyof typeof breakpoints,
+  paddingPercent: number
+) {
   return css`
     padding-left: ${ breakpoints[breakpoint] * paddingPercent }px;
     padding-right: ${ breakpoints[breakpoint] * paddingPercent }px;
   `
 }
 
-function getContainerPadding(theme, width) {
+function getContainerPadding(width: Width) {
   if (!width || width === 'full') {
     return css`
       padding-left: 0;
@@ -76,9 +84,13 @@ function getContainerPadding(theme, width) {
   })
 }
 
-const Container = styled.div`
+const Container = styled.div<{
+  width: Width,
+  fluid: boolean,
+  spacing?: number
+}>`
   width: 100%;
-  ${ ({ theme, width, fluid }) => getContainerMaxWidth(theme, width, fluid) };
+  ${ ({ theme, width, fluid }) => getContainerMaxWidth(width, fluid) };
   margin-right: auto;
   margin-left: auto;
   margin-bottom: ${ ({ spacing }) => (
@@ -86,7 +98,7 @@ const Container = styled.div`
   ) };
   padding-right: 5%;
   padding-left: 5%;
-  ${ ({ theme, width }) => getContainerPadding(theme, width) };
+  ${ ({ theme, width }) => getContainerPadding(width) };
 `
 
 export default Container

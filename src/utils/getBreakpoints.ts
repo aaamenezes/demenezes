@@ -1,9 +1,14 @@
-import { css } from 'styled-components'
+import { css, FlattenSimpleInterpolation } from 'styled-components'
 import { theme } from '../theme'
 
 const { breakpoints } = theme
 
-export default function getBreakpoints(cssByBreakpoints: Partial<Record<keyof typeof breakpoints, any[]>>) {
+/**
+ * FlattenSimpleInterpolation é o retorno de css``
+ */
+export default function getBreakpoints(
+  cssByBreakpoints: Partial<Record<keyof typeof breakpoints, FlattenSimpleInterpolation>>
+) {
   /**
    * o type assertion abaixo foi a solução menor pior
    * as [PageName, PageProps][]
