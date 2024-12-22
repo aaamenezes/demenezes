@@ -1,19 +1,16 @@
-/* eslint-disable react/no-this-in-sfc */
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
 import React, { useEffect } from 'react'
 import Container from '../Common/Container'
 
 export default function PostComments() {
   useEffect(() => {
-    function disqus_config() {
-      this.page.url = window.location.href
-      this.page.identifier = window.location.pathname
-    }
+    // function disqus_config() {
+    //   this.page.url = window.location.href
+    //   this.page.identifier = window.location.pathname
+    // }
 
     const script = document.createElement('script')
     script.src = 'https://demenezes.disqus.com/embed.js'
-    script.setAttribute('data-timestamp', +new Date());
+    script.setAttribute('data-timestamp', (+new Date()).toString());
     (document.head || document.body).appendChild(script)
   }, [])
 

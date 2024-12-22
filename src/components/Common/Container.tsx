@@ -4,7 +4,7 @@ import { theme } from '../../theme'
 
 const { breakpoints } = theme
 
-type Width = keyof typeof breakpoints & 'full'
+type Width = keyof typeof breakpoints | 'full'
 
 function getContainerMaxWidth(width: Width, fluid: boolean) {
   const { breakpoints } = theme
@@ -86,11 +86,11 @@ function getContainerPadding(width: Width) {
 
 const Container = styled.div<{
   width: Width,
-  fluid: boolean,
+  fluid?: boolean,
   spacing?: number
 }>`
   width: 100%;
-  ${ ({ theme, width, fluid }) => getContainerMaxWidth(width, fluid) };
+  ${ ({ width, fluid = false }) => getContainerMaxWidth(width, fluid) };
   margin-right: auto;
   margin-left: auto;
   margin-bottom: ${ ({ spacing }) => (
