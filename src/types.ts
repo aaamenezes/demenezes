@@ -23,23 +23,30 @@ export interface PostPageProps {
 
 export type Category = 'Front-end' | 'Carreira' | 'Pessoas' | 'Produtividade' | 'Ferramentas' | 'Equipamentos'
 
-export interface PostSummary {
-  title: string
-  slug: string
-  metaDescription: string
-  _firstPublishedAt: string
-  _updatedAt: string
-  category: Category
-  keywords: string
-  thumbnail: {
-    alt: string
-    width: number
-    height: number
-    responsiveImage: {
-      src: string
+export interface PostProps {
+  data: {
+    post: {
+      title: string
+      slug: string
+      content: any
+      metaDescription: string
+      _firstPublishedAt: string
+      _updatedAt: string
+      category: Category
+      keywords: string
+      thumbnail: {
+        alt: string
+        width: number
+        height: number
+        responsiveImage: {
+          src: string
+        }
+      }
     }
   }
 }
+
+export type PostSummary = Pick<PostProps['data']['post'], 'title' | 'slug' | 'metaDescription' | '_firstPublishedAt' | '_updatedAt' | 'category' | 'keywords' | 'thumbnail'>
 
 /**
  * {
