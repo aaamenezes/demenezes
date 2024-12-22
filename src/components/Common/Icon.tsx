@@ -2,30 +2,43 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import getBreakpoints from '../../utils/getBreakpoints'
 
-const StyledIcon = styled.i`
-  ${ getBreakpoints({
-    xs: css`
-      padding: ${ ({ external }) => !external && '0.66rem 0.88rem' };
-      font-size: ${ ({ external }) => external ? '0.7rem' : '1.2rem' };
-      color: ${ ({ color }) => color || 'currentColor' };
-      transition: ${ ({ theme }) => theme.transition.fast };
-    `,
-    md: css`
-      &:hover {
-        transform: ${ ({ external }) => !external && 'scale(1.5)' };
-        color: ${ ({ color }) => color };
-      }
-    `
-  }) }
+const StyledIcon = styled.i<{
+  external?: boolean
+  inline?: boolean
+}>`
+  ${({theme, external, color}) => {
+    return getBreakpoints({
+      xs: css`
+        padding: ${!external && '0.66rem 0.88rem' };
+        font-size: ${external ? '0.7rem' : '1.2rem' };
+        color: ${color || 'currentColor' };
+        transition: ${theme.transition.fast};
+      `,
+      md: css`
+        &:hover {
+          transform: ${!external && 'scale(1.5)' };
+          color: ${color};
+        }
+      `
+    })
+  }}
+
 `
 
-export default function Icon({ name, inline, color }) {
+export default function Icon({
+  name,
+  inline,
+  color
+}: {
+  name: string
+  inline?: boolean
+  color?: string
+}) {
   switch (name) {
   case 'github':
     return (
       <StyledIcon
         className='fab fa-github'
-        name={name}
         color='#9BA5AA'
       />
     )
@@ -33,7 +46,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fab fa-twitter'
-        name={name}
         color='#4EA6E9'
       />
     )
@@ -41,7 +53,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fab fa-medium'
-        name={name}
         color='#9BA5AA'
       />
     )
@@ -49,7 +60,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fab fa-linkedin'
-        name={name}
         color='#0073AF'
       />
     )
@@ -57,7 +67,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fab fa-instagram'
-        name={name}
         color='#F02002'
       />
     )
@@ -66,7 +75,6 @@ export default function Icon({ name, inline, color }) {
       <StyledIcon
         className='fas fa-code'
         // 'fa-brands fa-dev'
-        name={name}
         color='#9BA5AA'
       />
     )
@@ -74,14 +82,12 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-bars'
-        name={name}
       />
     )
   case 'search':
     return (
       <StyledIcon
         className='fas fa-search'
-        name={name}
         inline={inline}
       />
     )
@@ -91,7 +97,6 @@ export default function Icon({ name, inline, color }) {
         {' '}
         <StyledIcon
           className='fas fa-external-link-alt'
-          name={name}
           inline={inline}
           external
         />
@@ -102,7 +107,6 @@ export default function Icon({ name, inline, color }) {
       <StyledIcon
         className='fas fa-times-circle'
         // className='far fa-times-circle'
-        name={name}
         inline={inline}
       />
     )
@@ -110,7 +114,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-angle-left'
-        name={name}
         inline={inline}
       />
     )
@@ -118,7 +121,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-angle-right'
-        name={name}
         inline={inline}
       />
     )
@@ -126,7 +128,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-code'
-        name={name}
         inline={inline}
       />
     )
@@ -134,7 +135,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-terminal'
-        name={name}
         inline={inline}
       />
     )
@@ -142,7 +142,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-people-carry'
-        name={name}
         inline={inline}
       />
     )
@@ -150,7 +149,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='far fa-building'
-        name={name}
         inline={inline}
       />
     )
@@ -158,7 +156,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-hammer'
-        name={name}
         inline={inline}
       />
     )
@@ -166,7 +163,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-balance-scale'
-        name={name}
         inline={inline}
       />
     )
@@ -174,7 +170,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-solid fa-link'
-        name={name}
         inline={inline}
         color={color}
       />
@@ -183,7 +178,6 @@ export default function Icon({ name, inline, color }) {
     return (
       <StyledIcon
         className='fas fa-question-circle'
-        name={name}
       />
     )
   }
