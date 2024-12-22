@@ -15,7 +15,7 @@ export default function ProgressBar() {
 
   useEffect(() => {
     function getBarWidth() {
-      const postElement = document.querySelector('[class*="PostPage"]')
+      const postElement = document.querySelector('[class*="PostPage"]') as HTMLElement | null
 
       if (!postElement) return 0
 
