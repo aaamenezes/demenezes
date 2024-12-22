@@ -4,28 +4,41 @@ import PostCardFooter from './PostCardFooter'
 import PostCardHeader from './PostCardHeader'
 import PostCardDescription from './PostCardDescription'
 import getBreakpoints from '../../utils/getBreakpoints'
+import { PostSummary } from '../../types'
 
-const PostCardInfosWrapper = styled.div`
-  ${ getBreakpoints({
+const PostCardInfosWrapper = styled.div<{
+  hero: boolean
+  isCompact: boolean
+  wrapperWidth: string
+}>`
+  ${({ theme, hero, wrapperWidth, isCompact }) => getBreakpoints({
     xs: css`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: ${ ({ hero }) => hero && '100%' };
-      color: ${ ({ theme, hero }) => hero && theme.color.neutral_100 };
+      height: ${hero && '100%' };
+      color: ${hero && theme.color.neutral_100 };
     `,
     md: css`
-      width: ${ ({ wrapperWidth }) => wrapperWidth };
-      margin-left: ${ ({ isCompact }) => !isCompact && 'auto' };
+      width: ${wrapperWidth };
+      margin-left: ${!isCompact && 'auto' };
       margin-right: 0;
     `
-  }) }
+  })}
 `
 
-export default function PostCardInfos({ post, hero, isCompact }) {
+export default function PostCardInfos({
+  post,
+  hero = false,
+  isCompact
+}: {
+  post: PostSummary
+  hero?: boolean
+  isCompact: boolean
+}) {
   const { _firstPublishedAt, metaDescription, _updatedAt } = post
 
-  function getWrapperWidth(isHero, compact) {
+  function getWrapperWidth(isHero: boolean, compact: boolean) {
     if (compact) return '100%'
     if (isHero) return '50%'
     return '62%'

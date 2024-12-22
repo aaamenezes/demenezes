@@ -3,16 +3,19 @@ import { getPageInfos } from '../../utils/getPageInfos'
 import Newsletter from '../Common/Newsletter'
 import PostCard from '../Common/PostCard'
 import HeroPostCard from './HeroPostCard'
+import { PostSummary } from '../../types'
 
-const StyledPostsWrapper = styled.main`
+const StyledPostsWrapper = styled.main<{
+  isHome: boolean
+}>`
   padding-top: ${({ isHome }) => !isHome && '6.6rem'};
 `
 
-export default function PostsWrapper({ postsList }) {
-  const { CURRENT_PAGE } = getPageInfos()
+export default function PostsWrapper({ postsList }: { postsList: PostSummary[] }) {
+  const { currentPage } = getPageInfos()
   const heroPost = postsList[0]
 
-  const isHome = CURRENT_PAGE === 'home'
+  const isHome = currentPage === 'home'
   const firstBlockStart = isHome ? 1 : 0
   const firstBlockEnd = postsList.length / 2
   const firstBlockPosts = postsList

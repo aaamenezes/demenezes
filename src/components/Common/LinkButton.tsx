@@ -29,6 +29,7 @@ export default function LinkButton({
   handleClick = () => {},
   type = 'button',
   disabled = false,
+  as,
   ...props
 }: PropsWithChildren<{
   href?: string
@@ -37,6 +38,7 @@ export default function LinkButton({
   handleClick?: () => void
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
+  as: string
 }>) {
   const linkInner = (external && inline)
     ? (
