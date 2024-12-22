@@ -6,7 +6,7 @@ const StyledVideo = styled.video`
   margin: 0 -6%;
 `
 
-export default function Video({ url, alt }) {
+export default function Video({ url, alt }: { url: string, alt: string }) {
   return (
     <StyledVideo src={url} controls>
       <p>{alt}</p>
