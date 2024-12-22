@@ -22,23 +22,23 @@ const Search = styled.div`
   }) }
 `
 
-const SearchContent = styled.div`
-  ${ getBreakpoints({
+const SearchContent = styled.div<{
+  openSearch: boolean
+}>`
+  ${({ theme, openSearch }) => getBreakpoints({
     xs: css`
       position: fixed;
-      z-index: ${ ({ theme }) => theme.zIndex.fixed };
+      z-index: ${theme.zIndex.fixed};
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: ${ ({ theme }) => (
-    theme.color.neutral_900 + theme.opacity.hard.hex
-  ) };
-      opacity: ${ ({ openSearch }) => openSearch ? '1' : '0' };
-      transition: ${ ({ theme }) => theme.transition.medium };
-      pointer-events: ${ ({ openSearch }) => openSearch ? 'all' : 'none' };
+      background-color: ${theme.color.neutral_900 + theme.opacity.hard.hex};
+      opacity: ${openSearch ? '1' : '0'};
+      transition: ${theme.transition.medium};
+      pointer-events: ${openSearch ? 'all' : 'none'};
     `
-  }) }
+  })}
 `
 
 const CloseSearchButton = styled.button`
