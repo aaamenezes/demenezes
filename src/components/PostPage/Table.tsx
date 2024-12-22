@@ -5,7 +5,11 @@ const TableWrapper = styled.div`
   overflow: auto;
 `
 
-export default function Table({ tableTitle, tableSummary, tableContent }) {
+export default function Table({ tableTitle, tableSummary, tableContent }: {
+  tableTitle: string,
+  tableSummary: string,
+  tableContent: string
+}) {
   const formatedTable = '<caption>'
     .concat(tableTitle)
     .concat('</caption>')
