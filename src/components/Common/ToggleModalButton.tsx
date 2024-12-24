@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import Icon from './Icon'
+import React from 'react';
+import styled from 'styled-components';
+import Icon from './Icon';
 
 const Button = styled.button<{
-  color: string
+  color: string;
 }>`
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ const Button = styled.button<{
   i {
     font-size: ${({ theme }) => theme.fontSize.articleTitle};
   }
-`
+`;
 
 export default function ToggleModalButton({
   onClick = () => {},
@@ -28,13 +28,13 @@ export default function ToggleModalButton({
   color = 'currentColor',
   ...props
 }: {
-  onClick: () => void
-  icon: string
-  color?: string
+  onClick: () => void;
+  icon: string;
+  color?: string;
 }) {
   return (
     <Button onClick={onClick} color={color} {...props}>
       <Icon name={icon} />
     </Button>
-  )
+  );
 }

@@ -61,6 +61,8 @@ module.exports = {
     // Permitir underline antes de nome de variável
     'no-underscore-dangle': 'off',
     // Permite aninhar if ternário
-    'no-nested-ternary': 'off'
+    'no-nested-ternary': 'off',
+    // Não permitir variáveis não utilizadas
+    'no-unused-vars': 'error'
   }
 }

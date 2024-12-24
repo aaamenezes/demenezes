@@ -39,7 +39,7 @@
       "mailchimpIframeSrc": "https://us14.list-manage.com/contact-form?u=931f7d0fb92503537ca06456d&form_id=6cf26ac7ffbdc6a1ed1d3d68e38faf59"
     },
     "signup": {
-      "TItitleTLE": "Inscreva-se para receber as novidades do blog por email:",
+      "title": "Inscreva-se para receber as novidades do blog por email:",
       "mailchimpFormAction": "https://dedv.us14.list-manage.com/subscribe/post?u=931f7d0fb92503537ca06456d&amp;id=4b0ff01e85"
     }
   },

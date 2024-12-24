@@ -86,7 +86,9 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
         keywords
         thumbnail {
           alt
-          url
+          responsiveImage(imgixParams: {auto: format}) {
+            src
+          }
         }
         content {
           value

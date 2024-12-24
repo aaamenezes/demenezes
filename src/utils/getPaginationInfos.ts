@@ -1,9 +1,9 @@
 import { ParsedUrlQuery } from 'querystring'
 import settings from '../../settings.json'
-import { PostSummary } from '../types'
+import { PostSummaryProps } from '../types'
 import { parsePageParam } from './parseParams'
 
-export function getPaginationInfos(allPosts: PostSummary[], page: ParsedUrlQuery['page']) {
+export function getPaginationInfos(allPosts: PostSummaryProps[], page: ParsedUrlQuery['page']) {
   const currentPagination = parsePageParam(page)
   const { postsPerPage } = settings.paginationConfig
 
@@ -12,9 +12,9 @@ export function getPaginationInfos(allPosts: PostSummary[], page: ParsedUrlQuery
     currentPagination * postsPerPage
   )
 
-  const TOTAL_POSTS = allPosts.length
+  const totalPosts = allPosts.length
 
-  const lastPage = Math.ceil(TOTAL_POSTS / postsPerPage)
+  const lastPage = Math.ceil(totalPosts / postsPerPage)
   const isLastPagination = +currentPagination === +lastPage
 
   return { currentPosts, currentPagination, isLastPagination }

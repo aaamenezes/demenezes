@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import Container from '../Common/Container'
+import React, { useEffect } from 'react';
+import Container from '../Common/Container';
 
 export default function PostComments() {
   useEffect(() => {
@@ -8,18 +8,18 @@ export default function PostComments() {
     //   this.page.identifier = window.location.pathname
     // }
 
-    const script = document.createElement('script')
-    script.src = 'https://demenezes.disqus.com/embed.js'
+    const script = document.createElement('script');
+    script.src = 'https://demenezes.disqus.com/embed.js';
     script.setAttribute('data-timestamp', (+new Date()).toString());
-    (document.head || document.body).appendChild(script)
-  }, [])
+    (document.head || document.body).appendChild(script);
+  }, []);
 
   return (
-    <Container width='lg'>
-      <div id='disqus_thread' />
+    <Container width="lg">
+      <div id="disqus_thread" />
       <noscript>
         Please enable JavaScript to view the comments powered by Disqus.
       </noscript>
     </Container>
-  )
+  );
 }

@@ -3,22 +3,32 @@
  * melhorar isso
  */
 export interface HomePageProps {
-  currentPosts: PostSummary[]
+  currentPosts: PostSummaryProps[]
   currentPagination: number
   isLastPagination: boolean
   preview: boolean
 }
 
-export type HomeScreenProps = Pick<HomePageProps, 'currentPagination' | 'currentPosts' | 'isLastPagination'>
+export type HomeScreenProps = Pick<
+  HomePageProps,
+  'currentPagination' | 'currentPosts' | 'isLastPagination'
+>
 
-export interface PostPageProps {
-  /**
-   * remover any
-   * tava sem luz
-   * não tinha como ver o objeto pra tipar
-   */
-  post: any
-  relatedPosts: PostSummary[]
+export interface ContactPageProps {
+  data: {
+    contactSection: {
+      contactTitle: string
+      contactText: string
+    },
+    profileImage: {
+      profileImage: {
+        alt: string
+        responsiveImage: {
+          srcSet: string
+        }
+      }
+    }
+  }
 }
 
 export type Category = 'Front-end' | 'Carreira' | 'Pessoas' | 'Produtividade' | 'Ferramentas' | 'Equipamentos'
@@ -28,7 +38,13 @@ export interface PostProps {
     post: {
       title: string
       slug: string
-      content: any
+      content: {
+        /**
+         * Acho que daqui pra baixo não compensa tipar corretamente
+         */
+        blocks: any[]
+        value: any
+      }
       metaDescription: string
       _firstPublishedAt: string
       _updatedAt: string
@@ -46,7 +62,7 @@ export interface PostProps {
   }
 }
 
-export type PostSummary = Pick<PostProps['data']['post'], 'title' | 'slug' | 'metaDescription' | '_firstPublishedAt' | '_updatedAt' | 'category' | 'keywords' | 'thumbnail'>
+export type PostSummaryProps = Pick<PostProps['data']['post'], 'title' | 'slug' | 'metaDescription' | '_firstPublishedAt' | '_updatedAt' | 'category' | 'keywords' | 'thumbnail'>
 
 /**
  * {
@@ -54,7 +70,7 @@ export type PostSummary = Pick<PostProps['data']['post'], 'title' | 'slug' | 'me
  *   _updatedAt?: string
  * }
  */
-export type SitemapItem = Pick<PostSummary, 'slug'> & Partial<Pick<PostSummary, '_updatedAt'>>
+export type SitemapItem = Pick<PostSummaryProps, 'slug'> & Partial<Pick<PostSummaryProps, '_updatedAt'>>
 
 export type PageName = 'home' | 'listing' | 'post' | 'about' | 'contact' | 'references'
 export type PageUrl = '/' | '/page/[page]' | '/posts/[slug]' | '/about' | '/contact' | '/references'

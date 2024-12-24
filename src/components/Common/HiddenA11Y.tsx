@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from 'react'
-import styled from 'styled-components'
+import React, { PropsWithChildren } from 'react';
+import styled from 'styled-components';
 
 const StyledHiddenA11Y = styled.div`
   position: absolute;
@@ -12,18 +12,13 @@ const StyledHiddenA11Y = styled.div`
   clip: rect(0 0 0 0);
   overflow: hidden;
   word-wrap: normal;
-`
+`;
 
 export default function HiddenA11Y({
-  tag,
-  children
+  tag = 'span',
+  children,
 }: PropsWithChildren<{
-  tag: keyof HTMLElementTagNameMap
-}>)
-{
-  return (
-    <StyledHiddenA11Y as={tag}>
-      {children}
-    </StyledHiddenA11Y>
-  )
+  tag?: keyof HTMLElementTagNameMap;
+}>) {
+  return <StyledHiddenA11Y as={tag}>{children}</StyledHiddenA11Y>;
 }

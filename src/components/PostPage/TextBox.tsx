@@ -1,14 +1,14 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react';
+import styled, { css } from 'styled-components';
 // eslint-disable-next-line import/no-cycle
-import StructuredTextDatoCMS from './StructuredTextDatoCMS'
-import getBreakpoints from '../../utils/getBreakpoints'
+import StructuredTextDatoCMS from './StructuredTextDatoCMS';
+import getBreakpoints from '../../utils/getBreakpoints';
 
 const StyledTextBox = styled.div`
-  ${ getBreakpoints({
+  ${getBreakpoints({
     xs: css`
       padding: 1rem;
-      background-color: ${ ({ theme }) => theme.color.red_50 };
+      background-color: ${({ theme }) => theme.color.red_50};
 
       > *:first-child {
         margin-top: 0;
@@ -19,14 +19,14 @@ const StyledTextBox = styled.div`
     `,
     md: css`
       padding: 2rem;
-    `
-  }) }
-`
+    `,
+  })}
+`;
 
-export default function TextBox({ content }) {
+export default function TextBox({ content }: { content: any }) {
   return (
     <StyledTextBox>
       <StructuredTextDatoCMS data={content} />
     </StyledTextBox>
-  )
+  );
 }

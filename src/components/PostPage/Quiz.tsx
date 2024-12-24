@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
-import styled, { css } from 'styled-components'
-import { PaginationButton } from '../PaginationButton'
-import { simplifyString } from '../../utils/simplifyString'
-import getBreakpoints from '../../utils/getBreakpoints'
+import { FormEvent, MouseEvent, MouseEventHandler, useState } from 'react';
+import styled, { css } from 'styled-components';
+import getBreakpoints from '../../utils/getBreakpoints';
+import { simplifyString } from '../../utils/simplifyString';
+import { PaginationButton } from '../PaginationButton';
 
 const StyledQuiz = styled.form`
   padding: 2rem;
   margin: 3rem auto;
-  border: 1px solid ${ ({ theme }) => theme.color.neutral_600 };
-  border-radius: ${ ({ theme }) => theme.borderRadius };
-  pointer-events: ${ ({ answeredQuiz }) => answeredQuiz ? 'none' : 'initial' };
-`
+  border: 1px solid ${({ theme }) => theme.color.neutral_600};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  pointer-events: ${({ answeredQuiz }) => (answeredQuiz ? 'none' : 'initial')};
+`;
 
 const HeaderQuiz = styled.header`
   margin-bottom: 1rem;
-`
+`;
 
 const AlternativesList = styled.ul`
   margin: 0;
@@ -25,114 +25,120 @@ const AlternativesList = styled.ul`
     display: block;
     height: 0;
   }
-`
+`;
 
 const AlternativeInput = styled.input`
   display: none;
 
   &:checked + button,
   + button:hover {
-    color: ${ ({ theme }) => theme.color.neutral_50 };
-    background-color: ${ ({ theme }) => theme.color.neutral_600 };
+    color: ${({ theme }) => theme.color.neutral_50};
+    background-color: ${({ theme }) => theme.color.neutral_600};
   }
 
   + button {
     width: 100%;
-    border: 1px solid ${ ({ theme, answeredQuiz, correctResponse }) => (
-    answeredQuiz && correctResponse
-      ? theme.color.red_600
-      : theme.color.neutral_600
-  ) };
-    border-radius: ${ ({ theme }) => theme.borderRadius };
+    border: 1px solid
+      ${({ theme, answeredQuiz, correctResponse }) =>
+        answeredQuiz && correctResponse
+          ? theme.color.red_600
+          : theme.color.neutral_600};
+    border-radius: ${({ theme }) => theme.borderRadius};
     text-align: left;
-    transition: ${ ({ theme }) => theme.transition.fast };
+    transition: ${({ theme }) => theme.transition.fast};
 
     label {
       display: block;
       padding: 0.5rem;
-      color: ${ ({ theme, answeredQuiz, correctResponse }) => (
-    answeredQuiz && correctResponse && theme.color.neutral_50
-  ) };
-      background-color: ${ ({ theme, answeredQuiz, correctResponse }) => (
-    answeredQuiz && correctResponse && theme.color.red_600
-  ) };
+      color: ${({ theme, answeredQuiz, correctResponse }) =>
+        answeredQuiz && correctResponse && theme.color.neutral_50};
+      background-color: ${({ theme, answeredQuiz, correctResponse }) =>
+        answeredQuiz && correctResponse && theme.color.red_600};
       cursor: pointer;
     }
   }
-`
+`;
 
 const QuizFooter = styled.footer`
-  ${ getBreakpoints({
+  ${getBreakpoints({
     xs: css`
       display: flex;
       align-items: center;
       flex-direction: column;
       gap: 1rem;
-      `,
+    `,
     md: css`
       flex-direction: row;
-    `
-  }) }
+    `,
+  })}
 
   p {
-    ${ getBreakpoints({
-    xs: css`
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+    ${getBreakpoints({
+      xs: css`
+        display: flex;
+        flex-direction: column;
+        width: 100%;
       `,
-    md: css`
-      flex-direction: row;
-    `
-  }) }
+      md: css`
+        flex-direction: row;
+      `,
+    })}
   }
-`
+`;
 
-export default function Quiz({ title, alternatives, correctAlternativeIndex }) {
-  const [ answeredQuiz, setAnsweredQuiz ] = useState(false)
-  const [ markedResponse, setMarkedResponse ] = useState(null)
-  const [ responseIsCorrect, setResponseIsCorrect ] = useState(false)
+export default function Quiz({
+  title,
+  alternatives,
+  correctAlternativeIndex,
+}: {
+  title: string;
+  alternatives: Array<{ id: string; text: string }>;
+  correctAlternativeIndex: number;
+}) {
+  const [answeredQuiz, setAnsweredQuiz] = useState(false);
+  const [markedResponse, setMarkedResponse] = useState<number | null>(null);
+  const [responseIsCorrect, setResponseIsCorrect] = useState(false);
 
-  function handleSubmit(event) {
-    event.preventDefault()
-    setResponseIsCorrect(markedResponse === correctAlternativeIndex - 1)
-    setAnsweredQuiz(true)
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setResponseIsCorrect(markedResponse === correctAlternativeIndex - 1);
+    setAnsweredQuiz(true);
   }
 
-  function handleMarkedResponse(event) {
-    const markedAlternativeIndex = +event.currentTarget.dataset.id
-    setMarkedResponse(markedAlternativeIndex)
+  function handleMarkedResponse(event: MouseEvent<HTMLButtonElement>) {
+    // ou zero
+    const dataId = event.currentTarget.getAttribute('data-id');
+    const markedAlternativeIndex = dataId !== null ? Number(dataId) : 0;
+    setMarkedResponse(markedAlternativeIndex);
   }
 
   return (
     <StyledQuiz onSubmit={handleSubmit} answeredQuiz={answeredQuiz}>
       <HeaderQuiz>
         <p>
-          <strong>
-            {title}
-          </strong>
+          <strong>{title}</strong>
         </p>
       </HeaderQuiz>
       <AlternativesList>
         {alternatives.map((alternative, index) => (
           <li key={alternative.id}>
             <AlternativeInput
-              type='radio'
+              type="radio"
               name={simplifyString(title)}
-              id={`${ simplifyString(title) }-${ index }`}
+              id={`${simplifyString(title)}-${index}`}
               value={index}
               answeredQuiz={answeredQuiz}
               correctResponse={index === correctAlternativeIndex - 1}
             />
             <button
               onClick={handleMarkedResponse}
-              type='button'
+              type="button"
               data-id={index}
               disabled={answeredQuiz}
               aria-disabled={answeredQuiz}
             >
-              <label htmlFor={`${ simplifyString(title) }-${ index }`}>
-                {alternative}
+              <label htmlFor={`${simplifyString(title)}-${index}`}>
+                {alternative.text}
               </label>
             </button>
           </li>
@@ -140,8 +146,8 @@ export default function Quiz({ title, alternatives, correctAlternativeIndex }) {
       </AlternativesList>
       <QuizFooter>
         <PaginationButton
-          as='button'
-          type='submit'
+          as="button"
+          type="submit"
           disabled={answeredQuiz}
           aria-disabled={answeredQuiz}
         >
@@ -150,22 +156,16 @@ export default function Quiz({ title, alternatives, correctAlternativeIndex }) {
         {answeredQuiz && (
           <p>
             <span>
-              {
-                responseIsCorrect
-                  ? 'Resposta certa!'
-                  : 'Resposta Errada...'
-              }
+              {responseIsCorrect ? 'Resposta certa!' : 'Resposta Errada...'}
             </span>
             <span>
-              {
-                responseIsCorrect
-                  ? '😃🎉🎊🎯🥇🏳️‍⚧️💓💯🔟⬆️🔝'
-                  : '😥🤡☠️👎🏽💣❌☢️0️⃣'
-              }
+              {responseIsCorrect
+                ? '😃🎉🎊🎯🥇🏳️‍⚧️💓💯🔟⬆️🔝'
+                : '😥🤡☠️👎🏽💣❌☢️0️⃣'}
             </span>
           </p>
         )}
       </QuizFooter>
     </StyledQuiz>
-  )
+  );
 }
