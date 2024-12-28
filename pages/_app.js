@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { pageview } from '../src/components/Common/GoogleAnalytics/gtag'
-import GoogleAnalytics from '../src/components/Common/GoogleAnalytics'
+import { pageview } from '../src/components/Common/GoogleAnalytics/gtag.ts'
+import GoogleAnalytics from '../src/components/Common/GoogleAnalytics/index.tsx'
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [ router.events ])
+  }, [router.events])
 
   return (
     <>
