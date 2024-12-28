@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import LinkButton from './LinkButton'
+import React from 'react';
+import styled from 'styled-components';
+import LinkButton from './LinkButton';
 
-const LogoLink = styled.a`
+const LogoLink = styled(LinkButton)`
   position: relative;
   display: block;
   transition: ${({ theme }) => theme.transition.fast};
@@ -23,20 +23,20 @@ const LogoLink = styled.a`
   &:focus::after {
     width: 100%;
   }
-`
+`;
 
 const Logo = styled.strong`
   display: block;
   line-height: ${({ theme }) => theme.lineHeight.button};
   font-size: ${({ theme }) => theme.fontSize.h4};
   font-family: ${({ theme }) => theme.fontFamily.text};
-`
+`;
 
 export default function LogoWrapper() {
-  const preview = false
+  const preview = false;
   return (
-    <LinkButton href='/' as={LogoLink}>
+    <LogoLink href="/">
       <Logo>{preview ? 'Preview' : 'deMenezes'}</Logo>
-    </LinkButton>
-  )
+    </LogoLink>
+  );
 }

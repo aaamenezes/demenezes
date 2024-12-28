@@ -1,12 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import styled from 'styled-components';
-import { parser } from 'url-meta-scraper';
-import BlockQuote from '../src/components/Common/BlockQuote';
+// import { parser } from 'url-meta-scraper';
 import Container from '../src/components/Common/Container';
 import Label from '../src/components/Common/Label';
 import LinkButton from '../src/components/Common/LinkButton';
 import pageWrapper from '../src/components/pageWrapper';
-import { getContent } from '../src/external/datoCMS';
+// import { getContent } from '../src/external/datoCMS';
 // import { PaginationButton } from '../src/components/PaginationButton'
 
 const ReferencesContainer = styled.header`
@@ -59,37 +59,37 @@ const ReferenceLabel = styled.p`
   margin-left: auto;
 `;
 
-interface ReferenceProps {
-  data: {
-    allReferences: Array<{
-      type: 'Blog' | 'Podcast' | 'YouTube' | 'Twitter';
-      url: string;
-      image: string;
-      title: string;
-      description: string;
-      og: {
-        title: string;
-        url: string;
-        site_name: string;
-        description: string;
-        image: string;
-      };
-    }>;
-  };
-}
+// interface ReferenceProps {
+//   data: {
+//     allReferences: Array<{
+//       type: 'Blog' | 'Podcast' | 'YouTube' | 'Twitter';
+//       url: string;
+//       image: string;
+//       title: string;
+//       description: string;
+//       og: {
+//         title: string;
+//         url: string;
+//         site_name: string;
+//         description: string;
+//         image: string;
+//       };
+//     }>;
+//   };
+// }
 
-interface ReferenceUrlAndType {
-  data: {
-    allReferences: Array<
-      Pick<ReferenceProps['data']['allReferences']['0'], 'url' | 'type'>
-    >;
-  };
-}
+// interface ReferenceUrlAndType {
+//   data: {
+//     allReferences: Array<
+//       Pick<ReferenceProps['data']['allReferences']['0'], 'url' | 'type'>
+//     >;
+//   };
+// }
 
-interface ParseReturnProps {
-  status: 'fulfilled' | 'rejected';
-  value: any;
-}
+// interface ParseReturnProps {
+//   status: 'fulfilled' | 'rejected';
+//   value: any;
+// }
 
 function References({ referencesMetaData }: { referencesMetaData: any }) {
   const [activeType /* setActiveType */] = useState('Blog');
@@ -166,64 +166,64 @@ function References({ referencesMetaData }: { referencesMetaData: any }) {
 export default pageWrapper(References);
 
 export async function getStaticProps() {
-  const referencesUrlAndType: ReferenceUrlAndType = await getContent(
-    'allReferences',
-    {},
-  );
-  const { allReferences } = referencesUrlAndType.data;
+  // const referencesUrlAndType: ReferenceUrlAndType = await getContent(
+  //   'allReferences',
+  //   {}
+  // );
+  // const { allReferences } = referencesUrlAndType.data;
 
   // const allReferences = [
   //   { url: 'https://mariosouto.com/posts/', type: 'Blog' },
   //   { url: 'https://tidyfirst.substack.com/', type: 'Podcast' }
   // ]
 
-  const referencesPromises: Array<
-    Promise<
-      Array<[ReferenceProps['data']['allReferences']['0'], ParseReturnProps]>
-    >
-  > = allReferences.map(
-    async (reference: ReferenceProps['data']['allReferences']['0']) => [
-      reference,
-      await parser(reference.url),
-    ],
-  );
+  // const referencesPromises: Array<
+  //   Promise<
+  //     Array<[ReferenceProps['data']['allReferences']['0'], ParseReturnProps]>
+  //   >
+  // > = allReferences.map(
+  //   async (reference: ReferenceProps['data']['allReferences']['0']) => [
+  //     reference,
+  //     await parser(reference.url),
+  //   ]
+  // );
 
   /**
    * Não está claro pq existe firstPart e secondPart
    * Acho que é coisa do parser
    * Tentar fazer isso sem lib
    */
-  function formatMetadata(reference: {
-    status: 'fulfilled' | 'rejected';
-    value: [ReferenceProps['data']['allReferences']['0'], any];
-  }) {
-    if (reference.status === 'rejected') return {};
+  // function formatMetadata(reference: {
+  //   status: 'fulfilled' | 'rejected';
+  //   value: [ReferenceProps['data']['allReferences']['0'], any];
+  // }) {
+  //   if (reference.status === 'rejected') return {};
 
-    const [firstPart, secondPart] = reference.value;
-    const { og } = secondPart;
-    if (!og) return {};
+  //   const [firstPart, secondPart] = reference.value;
+  //   const { og } = secondPart;
+  //   if (!og) return {};
 
-    const { url, type } = firstPart;
+  //   const { url, type } = firstPart;
 
-    return {
-      title: og.title || null,
-      url,
-      description: og.description || null,
-      image: og.image || null,
-      type,
-    };
-  }
+  //   return {
+  //     title: og.title || null,
+  //     url,
+  //     description: og.description || null,
+  //     image: og.image || null,
+  //     type,
+  //   };
+  // }
 
-  const referencesMetaData = await Promise.allSettled(referencesPromises)
-    .then((allMetadata) =>
-      allMetadata.map((metadata) => {
-        return formatMetadata(metadata);
-      }),
-    )
-    .catch((error) => {
-      console.error(error);
-      return [];
-    });
+  // const referencesMetaData = await Promise.allSettled(referencesPromises)
+  //   .then(allMetadata =>
+  //     allMetadata.map(metadata => {
+  //       return formatMetadata(metadata);
+  //     })
+  //   )
+  //   .catch(error => {
+  //     console.error(error);
+  //     return [];
+  //   });
 
   return {
     props: { referencesMetaData: /* referencesMetaData || */ [] },

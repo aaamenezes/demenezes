@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { StructuredText, renderNodeRule } from 'react-datocms';
@@ -8,10 +9,8 @@ import { simplifyString } from '../../utils/simplifyString';
 import Figure from '../Common/Figure';
 import Iframe from './Iframe';
 import Table from './Table';
-// eslint-disable-next-line import/no-cycle
 import TextBox from './TextBox';
 import Video from './Video';
-// eslint-disable-next-line import/no-cycle
 import BlockQuote from '../Common/BlockQuote';
 import Quiz from './Quiz';
 import getBreakpoints from '../../utils/getBreakpoints';
@@ -28,7 +27,11 @@ const Title = styled.h2`
       scroll-margin-top: 2.5rem;
     `,
   })}
-`;
+` as React.FC<{
+  as: string;
+  children: React.ReactNode;
+  id: string;
+}>;
 
 const TitleLink = styled.a`
   display: block;
@@ -59,7 +62,7 @@ const TitleLink = styled.a`
   }
 `;
 
-const TextLink = styled.a`
+const TextLink = styled(LinkButton)`
   text-decoration-line: underline;
 
   &:hover,
@@ -68,10 +71,10 @@ const TextLink = styled.a`
   }
 `;
 
-export default function StructuredTextDatoCMS({ data }: any) {
+export default function StructuredTextDatoCMS({ data }: { data: any }) {
   function handleLink({ node }: any) {
     return (
-      <LinkButton
+      <TextLink
         as={TextLink}
         key={`${node.children[0].value} - ${node.url}`}
         href={node.url}
@@ -79,11 +82,11 @@ export default function StructuredTextDatoCMS({ data }: any) {
         inline
       >
         {node.children[0].value}
-      </LinkButton>
+      </TextLink>
     );
   }
 
-  function handleCode({ node }: any) {
+  function handleCode({ node }: { node: any }) {
     return (
       <CodeBlock key={node.code + Math.random()} language={node.language}>
         {node.code}
@@ -97,7 +100,7 @@ export default function StructuredTextDatoCMS({ data }: any) {
     return (
       <Title
         key={node.children[0].value + Math.random()}
-        as={`h${node.level}`}
+        as={`h${node?.level || 2}`}
         id={id}
       >
         <TitleLink href={`#${id}`}>{node.children[0].value}</TitleLink>

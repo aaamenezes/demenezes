@@ -1,10 +1,15 @@
-/* eslint-disable max-len */
-
-type QueryType = 'aboutPage' | 'allPosts' | 'allReferences' | 'post' | 'relatedPosts' | 'routes' | 'contactSection'
+type QueryType =
+  | 'aboutPage'
+  | 'allPosts'
+  | 'allReferences'
+  | 'post'
+  | 'relatedPosts'
+  | 'routes'
+  | 'contactSection';
 
 interface PageData {
-  slug?: string
-  category?: string
+  slug?: string;
+  category?: string;
 }
 
 function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
@@ -176,18 +181,18 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
       allPosts {
         slug
       }
-    }`
-  }
+    }`,
+  };
 
   return {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      Authorization: `Bearer ${process.env.DATOCMS_TOKEN}`
+      Authorization: `Bearer ${process.env.DATOCMS_TOKEN}`,
     },
-    body: JSON.stringify({ query: queryMap[queryType] })
-  }
+    body: JSON.stringify({ query: queryMap[queryType] }),
+  };
 }
 
 export async function getContent(
@@ -195,8 +200,8 @@ export async function getContent(
   { slug, category }: PageData,
   preview = false
 ) {
-  const datoCMSURL = `https://graphql.datocms.com/${preview ? 'preview' : ''}`
-  const options = getQueryOptions(queryType, { slug, category })
-  const response = await fetch(datoCMSURL, options)
-  return response.json()
+  const datoCMSURL = `https://graphql.datocms.com/${preview ? 'preview' : ''}`;
+  const options = getQueryOptions(queryType, { slug, category });
+  const response = await fetch(datoCMSURL, options);
+  return response.json();
 }

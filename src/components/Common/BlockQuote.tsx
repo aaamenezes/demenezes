@@ -1,20 +1,20 @@
-import React, { PropsWithChildren } from 'react'
-import StructuredTextDatoCMS from '../PostPage/StructuredTextDatoCMS'
+import { PropsWithChildren } from 'react';
+import StructuredTextDatoCMS from '../PostPage/StructuredTextDatoCMS';
 
 export default function BlockQuote({
   source,
   children,
   author,
-  isDatoCMS
+  isDatoCMS,
 }: PropsWithChildren<{
-  source?: string
-  author?: string
-  isDatoCMS?: boolean
+  source?: string;
+  author?: string;
+  isDatoCMS?: boolean;
 }>) {
   return (
     <blockquote cite={source || ''}>
-      {isDatoCMS ? <StructuredTextDatoCMS data={children} /> : children }
+      {isDatoCMS ? <StructuredTextDatoCMS data={children} /> : children}
       {author && <footer>{author}</footer>}
     </blockquote>
-  )
+  );
 }

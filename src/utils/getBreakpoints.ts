@@ -1,13 +1,15 @@
-import { css, FlattenSimpleInterpolation } from 'styled-components'
-import { theme } from '../theme'
+import {css, FlattenSimpleInterpolation} from 'styled-components';
+import {theme} from '../theme';
 
-const { breakpoints } = theme
+const {breakpoints} = theme;
 
 /**
  * FlattenSimpleInterpolation é o retorno de css``
  */
 export default function getBreakpoints(
-  cssByBreakpoints: Partial<Record<keyof typeof breakpoints, FlattenSimpleInterpolation>>
+  cssByBreakpoints: Partial<
+    Record<keyof typeof breakpoints, FlattenSimpleInterpolation>
+  >,
 ) {
   /**
    * o type assertion abaixo foi a solução menor pior
@@ -18,11 +20,15 @@ export default function getBreakpoints(
    * talvez se isso vir do cms e typar o retorno do request melhore
    * e assim possa remover esse type assertion
    */
-  const breakpointsNames = Object.keys(cssByBreakpoints) as (keyof typeof cssByBreakpoints)[]
+  const breakpointsNames = Object.keys(
+    cssByBreakpoints,
+  ) as (keyof typeof cssByBreakpoints)[];
 
-  return breakpointsNames.map(breakpointName => css`
-    @media screen and (min-width: ${breakpoints[breakpointName]}px) {
-      ${cssByBreakpoints[breakpointName]}
-    }
-  `)
+  return breakpointsNames.map(
+    breakpointName => css`
+      @media screen and (min-width: ${breakpoints[breakpointName]}px) {
+        ${cssByBreakpoints[breakpointName]}
+      }
+    `,
+  );
 }

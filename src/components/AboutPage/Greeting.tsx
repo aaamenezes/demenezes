@@ -52,6 +52,7 @@ export default function Greeting({
   greetingTitle: string;
   greetingSubtitle: string;
   greetingDescription: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   profileImage: any;
 }) {
   const { src } = profileImage.responsiveImage;

@@ -4,7 +4,7 @@ import Container from './Container';
 import ToggleModalButton from './ToggleModalButton';
 import getBreakpoints from '../../utils/getBreakpoints';
 
-const ToggleSearchModal = styled.button`
+const ToggleSearchModal = styled(ToggleModalButton)`
   ${getBreakpoints({
     xs: css`
       display: none;
@@ -46,7 +46,7 @@ const SearchContent = styled.div<{
     })}
 `;
 
-const CloseSearchButton = styled.button`
+const CloseSearchButton = styled(ToggleModalButton)`
   position: absolute;
   top: 0.66rem;
   right: 5%;
@@ -61,7 +61,7 @@ export default function SearchWrapper() {
 
   return (
     <Search>
-      <ToggleModalButton
+      <ToggleSearchModal
         onClick={toggleSearch}
         icon="search"
         color="gray"
@@ -69,11 +69,10 @@ export default function SearchWrapper() {
         aria-labelledby="Abrir busca do blog"
       />
       <Container as={SearchContent} width="xl" openSearch={openSearch}>
-        <ToggleModalButton
+        <CloseSearchButton
           onClick={toggleSearch}
           icon="close"
           color="gray"
-          as={CloseSearchButton}
           aria-labelledby="Fechar busca do blog"
         />
       </Container>

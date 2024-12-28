@@ -34,7 +34,7 @@ const InputsWrapper = styled.div`
   })}
 `;
 
-const SubmitButton = styled.button`
+const SubmitButton = styled(LinkButton)`
   padding: 0.5rem 1rem;
   margin: 0 auto;
   color: ${({ theme }) => theme.color.neutral_100};
@@ -111,22 +111,21 @@ export default function Newsletter() {
                 <input
                   type="text"
                   name="b_931f7d0fb92503537ca06456d_4b0ff01e85"
-                  tab-index="-1"
+                  tabIndex={-1}
                   value=""
                   onChange={() => {}}
                 />
               </HiddenA11Y>
               <div className="optionalParent">
                 <div className="clear foot">
-                  <LinkButton
-                    as={SubmitButton}
+                  <SubmitButton
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
                     className="button"
                   >
                     Quero receber
-                  </LinkButton>
+                  </SubmitButton>
                 </div>
               </div>
             </div>

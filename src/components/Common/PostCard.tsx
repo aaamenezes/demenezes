@@ -57,7 +57,7 @@ const PostCardImageWrapper = styled.div<{
     })}
 `;
 
-const PostCardImageLink = styled.a`
+const PostCardImageLink = styled(LinkButton)`
   position: relative;
 `;
 
@@ -82,11 +82,7 @@ export default function PostCard({
       isCompact={isCompact}
     >
       <PostCardImageWrapper isCompact={isCompact} aria-hidden="true">
-        <LinkButton
-          href={`/posts/${slug}`}
-          as={PostCardImageLink}
-          tab-index="-1"
-        >
+        <PostCardImageLink href={`/posts/${slug}`} tab-index="-1">
           <NextImage
             src={src}
             alt={`Imagem de capa do post: ${title}`}
@@ -99,7 +95,7 @@ export default function PostCard({
             }}
           />
           <Label>{category}</Label>
-        </LinkButton>
+        </PostCardImageLink>
       </PostCardImageWrapper>
       <PostCardInfos post={post} isCompact={isCompact} />
     </Container>

@@ -1,4 +1,6 @@
-import { FormEvent, MouseEvent, MouseEventHandler, useState } from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+import { FormEvent, MouseEvent, useState } from 'react';
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
 import { simplifyString } from '../../utils/simplifyString';

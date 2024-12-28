@@ -1,11 +1,11 @@
-import { HomeScreenProps } from '../../types'
-import PostsWrapper from '../HomePage/PostsWrapper'
-import Pagination from '../Pagination'
+import { HomeScreenProps } from '../../types';
+import PostsWrapper from '../HomePage/PostsWrapper';
+import Pagination from '../Pagination';
 
 export default function HomeScreen({
   currentPosts,
   currentPagination,
-  isLastPagination
+  isLastPagination,
 }: HomeScreenProps) {
   return (
     <>
@@ -15,5 +15,5 @@ export default function HomeScreen({
         isLastPagination={isLastPagination}
       />
     </>
-  )
+  );
 }

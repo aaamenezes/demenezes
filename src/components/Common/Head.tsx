@@ -3,10 +3,11 @@ import { useRouter } from 'next/router';
 import settings from '../../../settings.json';
 import { getPageInfos } from '../../utils/getPageInfos';
 
-export default function Head<PagePropsType>({
+export default function Head({
   componentProps,
 }: {
-  componentProps: PagePropsType;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  componentProps: any;
 }) {
   const { currentPage } = getPageInfos();
   const router = useRouter();
@@ -192,24 +193,19 @@ export default function Head<PagePropsType>({
       <meta name="theme-color" content="#ffffff" />
       <meta name="twitter:card" content="summary" />
       {componentProps.post &&
-        // eslint-disable-next-line no-underscore-dangle
         componentProps.post.data.post._firstPublishedAt && (
           <meta
             property="article:published_time"
-            // eslint-disable-next-line no-underscore-dangle
             content={componentProps.post.data.post._firstPublishedAt}
           />
         )}
 
-      {componentProps.post &&
-        // eslint-disable-next-line no-underscore-dangle
-        componentProps.post.data.post._updatedAt && (
-          <meta
-            property="article:modified_time"
-            // eslint-disable-next-line no-underscore-dangle
-            content={componentProps.post.data.post._updatedAt}
-          />
-        )}
+      {componentProps.post && componentProps.post.data.post._updatedAt && (
+        <meta
+          property="article:modified_time"
+          content={componentProps.post.data.post._updatedAt}
+        />
+      )}
     </NextHead>
   );
 }

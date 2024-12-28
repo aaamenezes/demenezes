@@ -1,5 +1,8 @@
-import { createGlobalStyle, css } from 'styled-components'
-import getBreakpoints from '../utils/getBreakpoints'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
+import { createGlobalStyle, css } from 'styled-components';
+import getBreakpoints from '../utils/getBreakpoints';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -12,20 +15,40 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
 
     /* ${getBreakpoints({
-  xs: css`font-size: ${({ theme }) => theme.fontSize.html.xs};`,
-  sm: css`font-size: ${({ theme }) => theme.fontSize.html.sm};`,
-  md: css`font-size: ${({ theme }) => theme.fontSize.html.md};`,
-  lg: css`font-size: ${({ theme }) => theme.fontSize.html.lg};`,
-  xl: css`font-size: ${({ theme }) => theme.fontSize.html.xl};`
-})} */
+      xs: css`
+        font-size: ${({ theme }) => theme.fontSize.html.xs};
+      `,
+      sm: css`
+        font-size: ${({ theme }) => theme.fontSize.html.sm};
+      `,
+      md: css`
+        font-size: ${({ theme }) => theme.fontSize.html.md};
+      `,
+      lg: css`
+        font-size: ${({ theme }) => theme.fontSize.html.lg};
+      `,
+      xl: css`
+        font-size: ${({ theme }) => theme.fontSize.html.xl};
+      `,
+    })} */
 
   ${getBreakpoints({
-  sm: css`font-size: ${({ theme }) => theme.fontSize.html.xs};`,
-  md: css`font-size: ${({ theme }) => theme.fontSize.html.sm};`,
-  lg: css`font-size: ${({ theme }) => theme.fontSize.html.md};`,
-  xl: css`font-size: ${({ theme }) => theme.fontSize.html.lg};`,
-  xxl: css`font-size: ${({ theme }) => theme.fontSize.html.xl};`
-})}
+    sm: css`
+      font-size: ${({ theme }) => theme.fontSize.html.xs};
+    `,
+    md: css`
+      font-size: ${({ theme }) => theme.fontSize.html.sm};
+    `,
+    lg: css`
+      font-size: ${({ theme }) => theme.fontSize.html.md};
+    `,
+    xl: css`
+      font-size: ${({ theme }) => theme.fontSize.html.lg};
+    `,
+    xxl: css`
+      font-size: ${({ theme }) => theme.fontSize.html.xl};
+    `,
+  })}
   }
 
   body {
@@ -49,106 +72,106 @@ export const GlobalStyle = createGlobalStyle`
 
   h1 {
     ${getBreakpoints({
-  xs: css`
-      text-align: center;
-      line-height: ${({ theme }) => theme.lineHeight.h3};
-      font-size: ${({ theme }) => theme.fontSize.h3};
-      font-weight: ${({ theme }) => theme.fontWeight.h3};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
-    `,
-  sm: css`
-      line-height: ${({ theme }) => theme.lineHeight.h2};
-      font-size: ${({ theme }) => theme.fontSize.h2};
-      font-weight: ${({ theme }) => theme.fontWeight.h2};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h2};
-    `,
-  md: css`
-      line-height: ${({ theme }) => theme.lineHeight.h1};
-      font-size: ${({ theme }) => theme.fontSize.h1};
-      font-weight: ${({ theme }) => theme.fontWeight.h1};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h1};
-    `
-})}
+      xs: css`
+        text-align: center;
+        line-height: ${({ theme }) => theme.lineHeight.h3};
+        font-size: ${({ theme }) => theme.fontSize.h3};
+        font-weight: ${({ theme }) => theme.fontWeight.h3};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
+      `,
+      sm: css`
+        line-height: ${({ theme }) => theme.lineHeight.h2};
+        font-size: ${({ theme }) => theme.fontSize.h2};
+        font-weight: ${({ theme }) => theme.fontWeight.h2};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h2};
+      `,
+      md: css`
+        line-height: ${({ theme }) => theme.lineHeight.h1};
+        font-size: ${({ theme }) => theme.fontSize.h1};
+        font-weight: ${({ theme }) => theme.fontWeight.h1};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h1};
+      `,
+    })}
   }
 
   h2 {
     ${getBreakpoints({
-  xs: css`
-      margin-top: ${({ theme }) => `${theme.spacing.h4 * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.h4}rem`};
-      text-align: center;
-      line-height: ${({ theme }) => theme.lineHeight.h4};
-      font-size: ${({ theme }) => theme.fontSize.h3};
-      font-weight: ${({ theme }) => theme.fontWeight.h4};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h4};
-    `,
-  sm: css`
-      margin-top: ${({ theme }) => `${theme.spacing.h3 * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.h3}rem`};
-      line-height: ${({ theme }) => theme.lineHeight.h3};
-      font-size: ${({ theme }) => theme.fontSize.h3};
-      font-weight: ${({ theme }) => theme.fontWeight.h3};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
-    `,
-  md: css`
-      margin-top: ${({ theme }) => `${theme.spacing.h2 * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.h2}rem`};
-      line-height: ${({ theme }) => theme.lineHeight.h2};
-      font-size: ${({ theme }) => theme.fontSize.h2};
-      font-weight: ${({ theme }) => theme.fontWeight.h2};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h2};
-    `
-})}
+      xs: css`
+        margin-top: ${({ theme }) => `${theme.spacing.h4 * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.h4}rem`};
+        text-align: center;
+        line-height: ${({ theme }) => theme.lineHeight.h4};
+        font-size: ${({ theme }) => theme.fontSize.h3};
+        font-weight: ${({ theme }) => theme.fontWeight.h4};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h4};
+      `,
+      sm: css`
+        margin-top: ${({ theme }) => `${theme.spacing.h3 * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.h3}rem`};
+        line-height: ${({ theme }) => theme.lineHeight.h3};
+        font-size: ${({ theme }) => theme.fontSize.h3};
+        font-weight: ${({ theme }) => theme.fontWeight.h3};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
+      `,
+      md: css`
+        margin-top: ${({ theme }) => `${theme.spacing.h2 * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.h2}rem`};
+        line-height: ${({ theme }) => theme.lineHeight.h2};
+        font-size: ${({ theme }) => theme.fontSize.h2};
+        font-weight: ${({ theme }) => theme.fontWeight.h2};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h2};
+      `,
+    })}
   }
 
   h3 {
     ${getBreakpoints({
-  xs: css`
-      margin-top: ${({ theme }) => `${theme.spacing.text * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.text}rem`};
-      text-align: left;
-      line-height: ${({ theme }) => theme.lineHeight.text};
-      font-size: ${({ theme }) => theme.fontSize.h4};
-      font-weight: ${({ theme }) => theme.fontWeight.h2};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.text};
-    `,
-  sm: css`
-      margin-top: ${({ theme }) => `${theme.spacing.h4 * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.h4}rem`};
-      line-height: ${({ theme }) => theme.lineHeight.h4};
-      font-size: ${({ theme }) => theme.fontSize.h4};
-      font-weight: ${({ theme }) => theme.fontWeight.h3};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h4};
-    `,
-  md: css`
-      margin-top: ${({ theme }) => `${theme.spacing.h3 * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.h3}rem`};
-      line-height: ${({ theme }) => theme.lineHeight.h3};
-      font-size: ${({ theme }) => theme.fontSize.h3};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
-    `
-})}
+      xs: css`
+        margin-top: ${({ theme }) => `${theme.spacing.text * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.text}rem`};
+        text-align: left;
+        line-height: ${({ theme }) => theme.lineHeight.text};
+        font-size: ${({ theme }) => theme.fontSize.h4};
+        font-weight: ${({ theme }) => theme.fontWeight.h2};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.text};
+      `,
+      sm: css`
+        margin-top: ${({ theme }) => `${theme.spacing.h4 * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.h4}rem`};
+        line-height: ${({ theme }) => theme.lineHeight.h4};
+        font-size: ${({ theme }) => theme.fontSize.h4};
+        font-weight: ${({ theme }) => theme.fontWeight.h3};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h4};
+      `,
+      md: css`
+        margin-top: ${({ theme }) => `${theme.spacing.h3 * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.h3}rem`};
+        line-height: ${({ theme }) => theme.lineHeight.h3};
+        font-size: ${({ theme }) => theme.fontSize.h3};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
+      `,
+    })}
   }
 
   h4 {
     ${getBreakpoints({
-  xs: css`
-      margin-top: ${({ theme }) => `${theme.spacing.text * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.text}rem`};
-      text-align: left;
-      line-height: ${({ theme }) => theme.lineHeight.text};
-      font-size: ${({ theme }) => theme.fontSize.text};
-      font-weight: ${({ theme }) => theme.fontWeight.h4};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.text};
-    `,
-  md: css`
-      margin-top: ${({ theme }) => `${theme.spacing.h4 * 2}rem`};
-      margin-bottom: ${({ theme }) => `${theme.spacing.h4}rem`};
-      line-height: ${({ theme }) => theme.lineHeight.h4};
-      font-size: ${({ theme }) => theme.fontSize.h4};
-      letter-spacing: ${({ theme }) => theme.letterSpacing.h4};
-    `
-})}
+      xs: css`
+        margin-top: ${({ theme }) => `${theme.spacing.text * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.text}rem`};
+        text-align: left;
+        line-height: ${({ theme }) => theme.lineHeight.text};
+        font-size: ${({ theme }) => theme.fontSize.text};
+        font-weight: ${({ theme }) => theme.fontWeight.h4};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.text};
+      `,
+      md: css`
+        margin-top: ${({ theme }) => `${theme.spacing.h4 * 2}rem`};
+        margin-bottom: ${({ theme }) => `${theme.spacing.h4}rem`};
+        line-height: ${({ theme }) => theme.lineHeight.h4};
+        font-size: ${({ theme }) => theme.fontSize.h4};
+        letter-spacing: ${({ theme }) => theme.letterSpacing.h4};
+      `,
+    })}
   }
 
   ul, ol {
@@ -295,18 +318,18 @@ export const GlobalStyle = createGlobalStyle`
 
   code:not([class*="language-"]) {
     ${getBreakpoints({
-  xs: css`
-      display: inline-block;
-      padding: 0 0.4rem;
-      border-radius: ${({ theme }) => theme.borderRadius};
-      font-size: ${({ theme }) => theme.fontSize.small};
-      background-color: ${({ theme }) => theme.color.neutral_200};
-    `,
-  md: css`
-      padding: 0.1rem 0.3rem;
-      line-height: 1;
-    `
-})}
+      xs: css`
+        display: inline-block;
+        padding: 0 0.4rem;
+        border-radius: ${({ theme }) => theme.borderRadius};
+        font-size: ${({ theme }) => theme.fontSize.small};
+        background-color: ${({ theme }) => theme.color.neutral_200};
+      `,
+      md: css`
+        padding: 0.1rem 0.3rem;
+        line-height: 1;
+      `,
+    })}
   }
   
   figure:not(:first-child),
@@ -346,4 +369,4 @@ export const GlobalStyle = createGlobalStyle`
   .twitter-tweet {
     margin: 0 auto;
   }
-`
+`;

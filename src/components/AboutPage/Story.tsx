@@ -4,7 +4,7 @@ import Container from '../Common/Container';
 import HighlightText from './HighlightText';
 
 const StoryTitle = styled.h2`
-  margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
+  margin-top: ${({theme}) => `${theme.spacing.h2}rem`};
 `;
 
 /**

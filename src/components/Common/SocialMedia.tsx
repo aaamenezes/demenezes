@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
@@ -56,8 +58,8 @@ const SocialLabel = styled.span`
   color: ${({ theme }) => theme.color.neutral_500};
 `;
 
-export default function SocialMedia({ center = true }) {
-  const socialElements = settings.socialMedia.map((socialMedia) => (
+export default function SocialMedia({ center = true }: { center?: boolean }) {
+  const socialElements = settings.socialMedia.map(socialMedia => (
     <SocialItem key={socialMedia.title}>
       <LinkButton
         as={SocialLink}

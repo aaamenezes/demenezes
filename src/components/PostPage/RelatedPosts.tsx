@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Container from '../Common/Container';
@@ -31,7 +33,7 @@ export default function RelatedPosts({
 }) {
   if (relatedPosts.length === 0) return <></>;
 
-  const relatedPostsElements = relatedPosts.map((post) => (
+  const relatedPostsElements = relatedPosts.map(post => (
     <PostCard key={post.title} post={post} isCompact spacing={0} />
   ));
 

@@ -1,10 +1,10 @@
-const borderRadius = '0.3rem'
+const borderRadius = '0.3rem';
 
 const boxShadow = {
   low: '0 0 40px -30px black',
   medium: '0 0 40px -20px black',
-  high: '0 0 40px -10px black'
-}
+  high: '0 0 40px -10px black',
+};
 
 const breakpoints = {
   xs: 0,
@@ -13,8 +13,8 @@ const breakpoints = {
   lg: 992,
   xl: 1200,
   xxl: 1600,
-  xxxl: 2000
-}
+  xxxl: 2000,
+};
 
 const color = {
   red_50: '#fdeaed',
@@ -37,13 +37,13 @@ const color = {
   neutral_700: '#555555', // gray
   neutral_800: '#323232', // black
   neutral_900: '#121212', // black
-  transparent: 'rgba(0,0,0,0)' // Obrigado Safari
-}
+  transparent: 'rgba(0,0,0,0)', // Obrigado Safari
+};
 
 const fontFamily = {
   // title: 'Ubuntu, sans-serif',
   display: '"Montserrat", sans-serif;',
-  text: '"Vollkorn", serif'
+  text: '"Vollkorn", serif',
 
   // code: 'Ubuntu Mono, sans-serif'
   // fontFamily: 'Raleway, sans-serif',
@@ -83,14 +83,13 @@ const fontFamily = {
 
   // Playfair Display
   // https://fonts.google.com/specimen/Playfair+Display?query=Playfair+Display
-}
+};
 
 /**
  * Fator de escala: 1500
  * Link do type-scale com a configuração atual
-*/
+ */
 
-// eslint-disable-next-line max-len
 // https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
 
 const fontSize = {
@@ -106,9 +105,9 @@ const fontSize = {
     sm: '17px',
     md: '18px',
     lg: '19px',
-    xl: '20px'
-  }
-}
+    xl: '20px',
+  },
+};
 
 const fontWeight = {
   // black: '900'
@@ -118,11 +117,11 @@ const fontWeight = {
   h3: '600', // semiBold
   h4: '500', // medium
   button: '600', // semiBold
-  text: '400' // regular
+  text: '400', // regular
   // light: '300',
   // extraLight: '200',
   // thin: '100',
-}
+};
 
 const letterSpacing = {
   h1: '-1px', // pageTitle
@@ -130,8 +129,8 @@ const letterSpacing = {
   h3: '-0.5px', // articleTitle
   h4: '0', // articleSubtitle
   button: '1.5px', // articleTitle
-  text: '0' // p, a, span
-}
+  text: '0', // p, a, span
+};
 
 const lineHeight = {
   h1: 1.3, // pageTitle
@@ -139,8 +138,8 @@ const lineHeight = {
   h3: 1.3, // articleTitle
   h4: 1.7, // articleSubtitle
   button: 1,
-  text: 1.7 // p, a, span
-}
+  text: 1.7, // p, a, span
+};
 
 const spacing = {
   h1: 3,
@@ -148,29 +147,29 @@ const spacing = {
   h3: 2,
   h4: 1.5,
   text: 1.5,
-  small: 0.5
-}
+  small: 0.5,
+};
 
 const opacity = {
   light: {
     rgb: '.3',
-    hex: '4D'
+    hex: '4D',
   },
   medium: {
     rgb: '.6',
-    hex: '99'
+    hex: '99',
   },
   hard: {
     rgb: '.9',
-    hex: 'E6'
-  }
-}
+    hex: 'E6',
+  },
+};
 
 const transition = {
   slow: '1.3s',
   medium: '.8s',
-  fast: '.3s'
-}
+  fast: '.3s',
+};
 
 const zIndex = {
   under: -1,
@@ -182,8 +181,8 @@ const zIndex = {
   modalBackdrop: 1040,
   modal: 1050,
   popover: 1060,
-  tooltip: 1070
-}
+  tooltip: 1070,
+};
 
 export const theme = {
   color,
@@ -198,5 +197,5 @@ export const theme = {
   opacity,
   spacing,
   transition,
-  zIndex
-}
+  zIndex,
+};

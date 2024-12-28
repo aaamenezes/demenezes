@@ -1,4 +1,5 @@
-/* eslint-disable max-len */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Categories from '../src/components/AboutPage/Categories';
 import ContactForm from '../src/components/AboutPage/ContactForm';
 import Greeting from '../src/components/AboutPage/Greeting';

@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router'
-import settings from '../../settings.json'
-import { PageName, PageProps } from '../types'
+import {useRouter} from 'next/router';
+import settings from '../../settings.json';
+import {PageName, PageProps} from '../types';
 
-export function getPageInfos(): { currentPage: PageName } {
-  const { pages } = settings
-  const { pathname } = useRouter()
+export function getPageInfos(): {currentPage: PageName} {
+  const {pages} = settings;
+  const {pathname} = useRouter();
 
   /**
    * o type assertion abaixo foi a solução menor pior
@@ -15,11 +15,10 @@ export function getPageInfos(): { currentPage: PageName } {
    * talvez se isso vir do cms e typar o retorno do request melhore
    * e assim possa remover esse type assertion
    */
-  const currentPage = (Object.entries(pages) as [PageName, PageProps][]).find(
-    (page) => {
-      return (page as [PageName, PageProps])[1].url === pathname
-    }
-  )?.[0] || 'home'
+  const currentPage =
+    (Object.entries(pages) as [PageName, PageProps][]).find(page => {
+      return (page as [PageName, PageProps])[1].url === pathname;
+    })?.[0] || 'home';
 
-  return { currentPage }
+  return {currentPage};
 }

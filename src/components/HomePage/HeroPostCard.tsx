@@ -1,15 +1,15 @@
-import React from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import styled, { css } from 'styled-components';
+import { PostSummaryProps } from '../../types';
+import getBreakpoints from '../../utils/getBreakpoints';
 import Container from '../Common/Container';
 import PostCardInfos from '../Common/PostCardInfos';
-import getBreakpoints from '../../utils/getBreakpoints';
-import { PostProps, PostSummaryProps } from '../../types';
 
 const HeroWrapper = styled.article`
   ${getBreakpoints({
     xs: css`
       padding-top: 6.6rem;
-      padding-bottom: 2.2rem;
       background-image: ${({ theme, src }) => css`linear-gradient(
         270deg,
         ${theme.color.neutral_900 + theme.opacity.medium.hex},

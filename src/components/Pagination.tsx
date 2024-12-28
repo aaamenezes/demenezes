@@ -1,9 +1,7 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
-import Container from './Common/Container';
-import LinkButton from './Common/LinkButton';
-import { PaginationButton } from './PaginationButton';
 import getBreakpoints from '../utils/getBreakpoints';
+import Container from './Common/Container';
+import { PaginationButton } from './PaginationButton';
 
 const PaginationWrapper = styled.div`
   ${getBreakpoints({
@@ -41,18 +39,16 @@ export default function Pagination({
   return (
     <Container as={PaginationWrapper} width="xxl" spacing={2}>
       {currentPagination > 1 && (
-        <LinkButton as={PaginationButton} href={previousLink}>
+        <PaginationButton href={previousLink}>
           Posts mais recentes
-        </LinkButton>
+        </PaginationButton>
       )}
       {!isLastPagination ? (
-        <LinkButton as={PaginationButton} href={nextLink}>
-          Próxima página
-        </LinkButton>
+        <PaginationButton href={nextLink}>Próxima página</PaginationButton>
       ) : (
-        <LinkButton as={PaginationButton} href="/">
+        <PaginationButton href="/">
           Parabéns, você chegou ao início do blog :)
-        </LinkButton>
+        </PaginationButton>
       )}
     </Container>
   );

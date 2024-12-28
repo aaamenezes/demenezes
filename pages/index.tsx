@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components';
 import Head from '../src/components/Common/Head';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';
-import pageWrapper from '../src/components/pageWrapper';
 import HomeScreen from '../src/components/Screens/HomeScreen';
 import { getContent } from '../src/external/datoCMS';
 import { generateSitemap } from '../src/scripts/generate-sitemap';
@@ -20,7 +19,7 @@ export default function Home({
 }: HomePageProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Head<HomePageProps>
+      <Head
         componentProps={{
           currentPosts,
           currentPagination,
@@ -40,8 +39,6 @@ export default function Home({
   );
 }
 
-// export default pageWrapper<HomePageProps>(Home);
-
 export async function getStaticProps(context: GetStaticPropsContext) {
   const { params, preview = false } = context;
   const allPosts = await getContent('allPosts', {}, preview);
@@ -53,7 +50,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     (post: PostSummaryProps) => ({
       slug: `posts/${post.slug}`,
       _updatedAt: post._updatedAt.split('T')[0],
-    }),
+    })
   );
 
   await generateSitemap(postsSitemapData);

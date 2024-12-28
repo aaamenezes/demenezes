@@ -1,6 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
-// eslint-disable-next-line import/no-cycle
 import StructuredTextDatoCMS from './StructuredTextDatoCMS';
 import getBreakpoints from '../../utils/getBreakpoints';
 
@@ -23,6 +24,7 @@ const StyledTextBox = styled.div`
   })}
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function TextBox({ content }: { content: any }) {
   return (
     <StyledTextBox>

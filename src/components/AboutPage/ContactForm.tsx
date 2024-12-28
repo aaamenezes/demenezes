@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../Common/Container';
@@ -29,7 +28,7 @@ export default function ContactForm({
   const { contactTitle, contactText } = contactContent.data.contactSection;
   const textElements = contactText
     .split('\n')
-    .map((text) => <p key={text}>{text}</p>);
+    .map(text => <p key={text}>{text}</p>);
 
   return (
     <Container as={StyledContactForm} width="md">

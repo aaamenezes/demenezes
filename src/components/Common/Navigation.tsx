@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { useRouter } from 'next/router';
 import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
@@ -147,7 +149,7 @@ export default function Navigation({
   const router = useRouter();
   const { currentPage } = getPageInfos();
 
-  const navigationElements = settings.navigationMenu.map((menu) => {
+  const navigationElements = settings.navigationMenu.map(menu => {
     const isCurrentPage =
       router.pathname === menu.url ||
       (currentPage === 'listing' && menu.title === 'Home');

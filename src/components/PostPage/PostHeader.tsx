@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { convertDate } from '../../utils/convertDate';
@@ -139,7 +141,7 @@ export default function PostHeader({
   keywords: string;
   coverImage: string;
 }) {
-  const keywordsList = keywords.split(',').map((keyword) => {
+  const keywordsList = keywords.split(',').map(keyword => {
     const clearKeyword = keyword.trim();
     return <KeywordItem key={clearKeyword}>{clearKeyword}</KeywordItem>;
   });

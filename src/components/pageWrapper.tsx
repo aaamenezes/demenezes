@@ -1,13 +1,14 @@
-import React, { ReactNode } from 'react'
-import { ThemeProvider } from 'styled-components'
-import { theme } from '../theme'
-import { GlobalStyle } from '../theme/globalStyle'
-import Head from './Common/Head'
-import PageFooter from './Common/PageFooter'
-import PageHeader from './Common/PageHeader'
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../theme';
+import { GlobalStyle } from '../theme/globalStyle';
+import Head from './Common/Head';
+import PageFooter from './Common/PageFooter';
+import PageHeader from './Common/PageHeader';
 
-export default function pageWrapper<PageProps>(PageComponent: (props: PageProps) => ReactNode) {
-  return (componentProps: PageProps) => (
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function pageWrapper(PageComponent: any) {
+  // eslint-disable-next-line react/display-name, @typescript-eslint/no-explicit-any
+  return (componentProps: any) => (
     <ThemeProvider theme={theme}>
       <Head componentProps={componentProps} />
       <GlobalStyle />
@@ -15,5 +16,5 @@ export default function pageWrapper<PageProps>(PageComponent: (props: PageProps)
       <PageComponent {...componentProps} />
       <PageFooter />
     </ThemeProvider>
-  )
+  );
 }

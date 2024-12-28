@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import styled from 'styled-components';
 import Icon from './Icon';
 
-const StyledLinkButton = styled.a<{ inline: boolean }>`
+const StyledLinkButton = styled.a<{ inline: boolean; name: string }>`
   display: ${({ inline }) => (inline ? 'inline' : 'block')};
   font-weight: ${({ theme, inline }) => !inline && theme.fontWeight.button};
   letter-spacing: ${({ theme, inline }) =>
@@ -27,7 +27,6 @@ export default function LinkButton({
   handleClick = () => {},
   type = 'button',
   disabled = false,
-  as,
   name = '',
   id = '',
   className = '',
@@ -42,7 +41,6 @@ export default function LinkButton({
   name?: string;
   id?: string;
   className?: string;
-  as?: string;
 }>) {
   const linkInner =
     external && inline ? (

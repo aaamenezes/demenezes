@@ -59,14 +59,11 @@ export async function getStaticPaths() {
     };
   }
 
-  function createDynamicPaths(
-    pageNumber: number,
-    array: PageParam[] = [],
-  ): PageParam[] {
-    return Array.from({ length: postsPerPage }, (_, index) => {
+  function createDynamicPaths(pageNumber: number): PageParam[] {
+    return Array.from({ length: pageNumber }, (item, index) => {
       return {
         params: {
-          page: (pageNumber * postsPerPage + index + 1).toString(),
+          page: (index + 1).toString(),
         },
       };
     });
