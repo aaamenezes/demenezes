@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 // import { parser } from 'url-meta-scraper';
 import Container from '../src/components/Common/Container';
+import Head from '../src/components/Common/Head';
 import Label from '../src/components/Common/Label';
 import LinkButton from '../src/components/Common/LinkButton';
-import pageWrapper from '../src/components/pageWrapper';
+import PageFooter from '../src/components/Common/PageFooter';
+import PageHeader from '../src/components/Common/PageHeader';
+import { theme } from '../src/theme';
+import { GlobalStyle } from '../src/theme/globalStyle';
 // import { getContent } from '../src/external/datoCMS';
 // import { PaginationButton } from '../src/components/PaginationButton'
 
@@ -91,7 +95,11 @@ const ReferenceLabel = styled.p`
 //   value: any;
 // }
 
-function References({ referencesMetaData }: { referencesMetaData: any }) {
+export default function References({
+  referencesMetaData,
+}: {
+  referencesMetaData: any;
+}) {
   const [activeType /* setActiveType */] = useState('Blog');
 
   // const Types = [ 'Blog', 'Podcast', 'YouTube', 'Twitter' ]
@@ -147,23 +155,27 @@ function References({ referencesMetaData }: { referencesMetaData: any }) {
   // ))
 
   return (
-    <Container as={ReferencesContainer}>
-      <Container as={ReferencesHeader} width="xxl">
-        <h1>Em construção...</h1>
-        {/* <h1>Minhas principais referências na área de programação</h1>
+    <ThemeProvider theme={theme}>
+      <Head componentProps={{}} />
+      <GlobalStyle />
+      <PageHeader />
+      <Container as={ReferencesContainer}>
+        <Container as={ReferencesHeader} width="xxl">
+          <h1>Em construção...</h1>
+          {/* <h1>Minhas principais referências na área de programação</h1>
         <BlockQuote>
           <p>Na natureza nada se cria, tudo se copia.</p>
         </BlockQuote>
          */}
-        {/* <p>Essa página</p> */}
-        {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
+          {/* <p>Essa página</p> */}
+          {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
+        </Container>
+        <ReferencesList role="list">{referencesItems}</ReferencesList>
       </Container>
-      <ReferencesList role="list">{referencesItems}</ReferencesList>
-    </Container>
+      <PageFooter />
+    </ThemeProvider>
   );
 }
-
-export default pageWrapper(References);
 
 export async function getStaticProps() {
   // const referencesUrlAndType: ReferenceUrlAndType = await getContent(

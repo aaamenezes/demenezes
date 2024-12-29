@@ -1,12 +1,15 @@
 import type { GetStaticPropsContext } from 'next';
-import styled from 'styled-components';
-import pageWrapper from '../../src/components/pageWrapper';
+import styled, { ThemeProvider } from 'styled-components';
+import PageFooter from '../../src/components/Common/PageFooter';
+import PageHeader from '../../src/components/Common/PageHeader';
 import PostComments from '../../src/components/PostPage/PostComments';
 import PostContent from '../../src/components/PostPage/PostContent';
 import PostHeader from '../../src/components/PostPage/PostHeader';
 import ProgressBar from '../../src/components/PostPage/ProgressBar';
 import RelatedPosts from '../../src/components/PostPage/RelatedPosts';
 import { getContent } from '../../src/external/datoCMS';
+import { theme } from '../../src/theme';
+import { GlobalStyle } from '../../src/theme/globalStyle';
 import { PostProps, PostSummaryProps } from '../../src/types';
 import { parseSlugParam } from '../../src/utils/parseParams';
 
@@ -14,7 +17,7 @@ const PostPage = styled.main`
   margin-bottom: 10%;
 `;
 
-function Post({
+export default function Post({
   post,
   relatedPosts,
 }: {
@@ -32,7 +35,9 @@ function Post({
   } = post.data.post;
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <PageHeader />
       <PostPage>
         <PostHeader
           title={title}
@@ -48,29 +53,28 @@ function Post({
       <PostComments />
       <RelatedPosts postCategory={category} relatedPosts={relatedPosts} />
       <ProgressBar />
-    </>
+      <PageFooter />
+    </ThemeProvider>
   );
 }
-
-export default pageWrapper(Post);
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const { params, preview } = context;
   const post = await getContent(
     'post',
     { slug: parseSlugParam(params?.slug) },
-    preview,
+    preview
   );
 
   const relatedPosts = await getContent(
     'relatedPosts',
     { category: post.data.post.category },
-    preview,
-  ).then((data) =>
+    preview
+  ).then(data =>
     data.data.allPosts.filter(
       (currentPost: PostProps['data']['post']) =>
-        currentPost.title !== post.data.post.title,
-    ),
+        currentPost.title !== post.data.post.title
+    )
   );
 
   return {

@@ -1,12 +1,17 @@
 import type { GetStaticPropsContext } from 'next';
+import { ThemeProvider } from 'styled-components';
 import settings from '../../settings.json';
-import pageWrapper from '../../src/components/pageWrapper';
+import Head from '../../src/components/Common/Head';
+import PageFooter from '../../src/components/Common/PageFooter';
+import PageHeader from '../../src/components/Common/PageHeader';
 import HomeScreen from '../../src/components/Screens/HomeScreen';
 import { getContent } from '../../src/external/datoCMS';
+import { theme } from '../../src/theme';
+import { GlobalStyle } from '../../src/theme/globalStyle';
 import { PostSummaryProps } from '../../src/types';
 import { getPaginationInfos } from '../../src/utils/getPaginationInfos';
 
-function Home({
+export default function Home({
   currentPosts,
   currentPagination,
   isLastPagination,
@@ -16,15 +21,25 @@ function Home({
   isLastPagination: boolean;
 }) {
   return (
-    <HomeScreen
-      currentPosts={currentPosts}
-      currentPagination={currentPagination}
-      isLastPagination={isLastPagination}
-    />
+    <ThemeProvider theme={theme}>
+      <Head
+        componentProps={{
+          currentPosts,
+          currentPagination,
+          isLastPagination,
+        }}
+      />
+      <GlobalStyle />
+      <PageHeader />
+      <HomeScreen
+        currentPosts={currentPosts}
+        currentPagination={currentPagination}
+        isLastPagination={isLastPagination}
+      />
+      <PageFooter />
+    </ThemeProvider>
   );
 }
-
-export default pageWrapper(Home);
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const { params } = context;

@@ -1,13 +1,26 @@
+import { ThemeProvider } from 'styled-components';
 import ContactForm from '../src/components/AboutPage/ContactForm';
-import pageWrapper from '../src/components/pageWrapper';
+import PageFooter from '../src/components/Common/PageFooter';
+import PageHeader from '../src/components/Common/PageHeader';
 import { getContent } from '../src/external/datoCMS';
+import { theme } from '../src/theme';
+import { GlobalStyle } from '../src/theme/globalStyle';
 import { ContactPageProps } from '../src/types';
 
-function Contact({ contactContent }: { contactContent: ContactPageProps }) {
-  return <ContactForm contactContent={contactContent} />;
+export default function Contact({
+  contactContent,
+}: {
+  contactContent: ContactPageProps;
+}) {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <PageHeader />
+      <ContactForm contactContent={contactContent} />
+      <PageFooter />
+    </ThemeProvider>
+  );
 }
-
-export default pageWrapper(Contact);
 
 export async function getStaticProps() {
   const contactContent = await getContent('contactSection', {});
