@@ -239,10 +239,5 @@ export async function getStaticProps() {
 
   return {
     props: { referencesMetaData: /* referencesMetaData || */ [] },
-    revalidate: 86400,
-    /**
-     * In secods:
-     * 60sec * 60 = 1hour * 24 = 86400sec = 1 day
-     */
   };
 }

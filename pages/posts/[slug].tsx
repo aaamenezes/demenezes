@@ -83,23 +83,19 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       relatedPosts,
       PREVIEW: preview !== undefined,
     },
-    revalidate: 3600,
-    /**
-     * In secods:
-     * 60sec * 60 = 1hour = 3600sec
-     */
   };
 }
 
 export async function getStaticPaths() {
   const routes = await getContent('routes', {});
+  const paths = routes.data.allPosts.map((post: PostProps['data']['post']) => ({
+    params: {
+      slug: post.slug,
+    },
+  }));
 
   return {
-    paths: routes.data.allPosts.map((post: PostProps['data']['post']) => ({
-      params: {
-        slug: post.slug,
-      },
-    })),
-    fallback: 'blocking',
+    paths,
+    fallback: false,
   };
 }

@@ -27,10 +27,5 @@ export async function getStaticProps() {
 
   return {
     props: { contactContent },
-    revalidate: 3600,
-    /**
-     * In secods:
-     * 60sec * 60 = 1hour = 3600sec
-     */
   };
 }
