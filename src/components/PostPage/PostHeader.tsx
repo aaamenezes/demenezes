@@ -146,8 +146,6 @@ export default function PostHeader({
     return <KeywordItem key={clearKeyword}>{clearKeyword}</KeywordItem>;
   });
 
-  console.log('keywords:', keywords);
-
   return (
     <Container as={PostHeaderWrapper} width="full" fluid bgImage={coverImage}>
       <Container as={PostHeaderInner} width="xxxl" spacing={0}>

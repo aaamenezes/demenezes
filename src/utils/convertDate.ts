@@ -1,10 +1,6 @@
-export function convertDate(rawDateTime: string) {
-  if (!rawDateTime.includes('T')) return ''
+export function convertDate(isoDate: string) {
+  const result = new Date(isoDate).toLocaleDateString('pt-BR');
 
-  const rawDate = rawDateTime.split('T')[0]
-
-  if (!rawDate.includes('-')) return ''
-
-  const [year = '', month = '', day = ''] = rawDate.split('-')
-  return `${day}/${month}/${year}`
+  if (result === 'Invalid Date') return '';
+  return result;
 }
