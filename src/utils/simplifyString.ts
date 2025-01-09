@@ -1,4 +1,5 @@
 export function simplifyString(string: string) {
+  /*
   return string
     .toLowerCase()
     .split('á')
@@ -40,4 +41,12 @@ export function simplifyString(string: string) {
     .split('?')
     .join('')
     .trim()
+  */
+
+  return string
+    .toLowerCase()
+    .normalize('NFD') // Trocar acentos pelo correspondente sem acento
+    .replace(/[^\w\s-]/g, '') // Remove caracteres especiais
+    .replace(/\s+/g, '-') // substitui espaços por hífen
+    .trim();
 }

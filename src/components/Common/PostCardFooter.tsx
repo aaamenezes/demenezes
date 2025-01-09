@@ -37,7 +37,7 @@ export default function PostCardFooter({
   update: string;
   isCompact: boolean;
 }) {
-  if (!date) return null;
+  if (!date) return <></>;
 
   return (
     <PostCardFooterWrapper isCompact={isCompact}>
