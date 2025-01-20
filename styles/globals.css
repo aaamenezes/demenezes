@@ -1,0 +1,142 @@
+:root {
+  --border-radius: 0.3rem;
+
+  --box-shadow-low: 0 0 40px -30px black;
+  --box-shadow-medium: 0 0 40px -20px black;
+  --box-shadow-high: 0 0 40px -10px black;
+
+  --color-red-50: #fdeaed;
+  --color-red-100: #fbcacf;
+  --color-red-200: #e89695;
+  --color-red-300: #db6d6c;
+  --color-red-400: #e34d48;
+  --color-red-500: #e63c2e;
+  --color-red-600: #d8322d;
+  --color-red-700: #c62827;
+  --color-red-800: #b92121;
+  --color-red-900: #aa1515;
+  --color-neutral-50: #ffffff; /* white */
+  --color-neutral-100: #fafafa; /* white */
+  --color-neutral-200: #f5f5f5; /* gray */
+  --color-neutral-300: #f0f0f0; /* gray */
+  --color-neutral-400: #dedede; /* gray */
+  --color-neutral-500: #c2c2c2; /* gray */
+  --color-neutral-600: #979797; /* gray */
+  --color-neutral-700: #555555; /* gray */
+  --color-neutral-800: #323232; /* black */
+  --color-neutral-900: #121212; /* black */
+  --color-transparent: rgba(0,0,0,0); /* Obrigado Safari */
+
+  /* title: 'Ubuntu, sans-serif' */
+  --font-family-display: 'Montserrat', sans-serif;
+  --font-family-text: 'Vollkorn', serif;
+
+  /*
+  Fontes já instaladas na maioria dos sistemas operacionais
+  https://modernfontstacks.com/
+
+  https://fonts.google.com/specimen/Vollkorn?query=Vollkorn
+  https://fonts.google.com/specimen/Source+Serif+Pro?query=Source+Serif+Pro
+  https://fonts.google.com/specimen/Libre+Baskerville?query=Baskerville
+  https://fonts.google.com/noto/specimen/Noto+Serif?query=Noto+Serif
+  https://fonts.google.com/specimen/Merriweather?query=Merriweather
+  https://fonts.google.com/specimen/Lora?query=Lora
+  https://fonts.google.com/specimen/Unna?query=Unna
+  https://fonts.google.com/specimen/Cardo?query=Cardo
+  https://fonts.google.com/specimen/Crimson+Text?query=Crimson+Text
+  https://fonts.google.com/specimen/Playfair+Display?query=Playfair+Display
+
+  Fator de escala: 1500
+  Link do type-scale com a configuração atual
+
+  https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
+  */
+
+  /* O tamanho maior sobrou '4.209rem' */
+  --font-size-h1: 3.157rem; /* page title */
+  --font-size-h2: 2.369rem; /* section title */
+  --font-size-h3: 1.777rem; /* article title */
+  --font-size-h4: 1.333rem; /* article subtitle */
+  --font-size-text: 1rem; /* p, a, span */
+  --font-size-small: 0.75rem;
+  --font-size-html-xs: 16px;
+  --font-size-html-sm: 17px;
+  --font-size-html-md: 18px;
+  --font-size-html-lg: 19px;
+  --font-size-html-xl: 20px;
+
+  /*  */
+
+  /* black: 900 */
+  /* extra bold: 800 */
+  --font-weight-h1: 700; /* bold */
+  --font-weight-h2: 600; /* semi bold */
+  --font-weight-h3: 600; /* semi bold */
+  --font-weight-h4: 500; /* medium */
+  --font-weight-button: 600; /* semi bold */
+  --font-weight-text: 400; /* regular */
+  /* light: 300 */
+  /* extra light: 200 */
+  /* thin: 100 */
+
+  --letter-spacing-h1: -1px; /* page title */
+  --letter-spacing-h2: -0.5px; /* section title */
+  --letter-spacing-h3: -0.5px; /* article title */
+  --letter-spacing-h4: 0; /* article subtitle */
+  --letter-spacing-button: 1.5px;
+  --letter-spacing-text: 0; /* p, a, span */
+
+  --line-height-h1: 1.3; /* page title */
+  --line-height-h2: 1.3; /* section title */
+  --line-height-h3: 1.3; /* article title */
+  --line-height-h4: 1.7; /* article subtitle */
+  --line-height-button: 1;
+  --line-height-text: 1.7; /* p, a, span */
+
+  --spacing-h1: 3rem;
+  --spacing-h2: 2.5rem;
+  --spacing-h3: 2rem;
+  --spacing-h4: 1.5rem;
+  --spacing-text: 1.5rem;
+  --spacing-small: 0.5rem;
+
+  --opacity-light-rgb: .3;
+  --opacity-light-hex: 4D;
+  --opacity-medium-rgb: .6;
+  --opacity-medium-hex: 99;
+  --opacity-hard-rgb: .9;
+  --opacity-hard-hex: E6;
+
+  --transition-slow: 1.3s;
+  --transition-medium: 0.8s;
+  --transition-fast: 0.3s;
+
+  --z-index-under: -1;
+  --z-index-relative: 900;
+  --z-index-dropdown: 1000;
+  --z-index-absolute: 1010;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modalBackdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+
+  --media-xs: 0px;
+  --media-sm: 425px;
+  --media-md: 768px;
+  --media-lg: 992px;
+  --media-xl: 1200px;
+  --media-xxl: 1600px;
+  --media-xxxl: 2000px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
