@@ -1,7 +1,7 @@
 import NextImage from 'next/image';
 import styled, { css } from 'styled-components';
-import { theme } from '../../theme';
-import getBreakpoints from '../../utils/getBreakpoints';
+import { theme } from '../../../theme';
+import getBreakpoints from '../../../utils/getBreakpoints';
 
 const Figcaption = styled.figcaption`
   ${getBreakpoints({

@@ -1,0 +1,17 @@
+.label {
+  position: absolute;
+  z-index: var(--z-index-absolute);
+  bottom: 0;
+  left: 0;
+  padding: 0.44rem 0.66rem;
+  line-height: var(--line-height-button);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-button);
+  color: var(--color-neutral-100);
+  background-color: var(--color-red-700);
+
+  @media screen and (min-width: 768px) {
+    bottom: 30%;
+  }
+}

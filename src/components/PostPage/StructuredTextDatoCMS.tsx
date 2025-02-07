@@ -6,7 +6,7 @@ import { isCode, isLink, isHeading } from 'datocms-structured-text-utils';
 import LinkButton from '../atoms/LinkButton';
 import CodeBlock from './CodeBlock';
 import { simplifyString } from '../../utils/simplifyString';
-import Figure from '../Common/Figure';
+import Figure from '../atoms/Image';
 import Iframe from './Iframe';
 import Table from './Table';
 import TextBox from './TextBox';
