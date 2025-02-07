@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon from './Icon';
+import Icon from '../atoms/Icon';
+import { IconName } from '../atoms/Icon/types';
 
 const Button = styled.button<{
   color: string;
@@ -29,7 +30,7 @@ export default function ToggleModalButton({
   ...props
 }: {
   onClick: () => void;
-  icon: string;
+  icon: IconName;
   color?: string;
 }) {
   return (

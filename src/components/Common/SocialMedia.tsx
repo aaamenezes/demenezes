@@ -3,7 +3,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
-import Icon from './Icon';
+import Icon from '../atoms/Icon';
 import LinkButton from '../atoms/LinkButton';
 import getBreakpoints from '../../utils/getBreakpoints';
 

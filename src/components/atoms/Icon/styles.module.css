@@ -1,0 +1,17 @@
+.icon {
+  padding: 0.66rem 0.88rem;
+  font-size: 1.2rem;
+  color: var(--icon-color);
+  transition: color var(--transition-fast)
+}
+
+.icon:hover {
+  @media screen and (min-width: 768px) {
+    transform: var(--icon-transform);
+  }
+}
+
+.icon.external {
+  padding: initial;
+  font-size: 0.7rem;
+}

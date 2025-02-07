@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 import { PropsWithChildren } from 'react';
-import Icon from '../../Common/Icon';
+import Icon from '../Icon';
 import S from './styles.module.css';
 
 export default function LinkButton({
@@ -30,7 +30,7 @@ export default function LinkButton({
     external && inline ? (
       <>
         <span className={inline ? S.text : ''}>{children}</span>
-        <Icon name="external" inline />
+        <Icon name="external" />
       </>
     ) : (
       children

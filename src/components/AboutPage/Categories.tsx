@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
 import Container from '../Common/Container';
-import Icon from '../Common/Icon';
+import Icon from '../atoms/Icon';
 
 const CategoriesTitle = styled.h2`
   margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
@@ -96,7 +96,7 @@ export default function Categories({
     ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => (
       <CategoryItem key={categoryItemTitle}>
         <CategoryItemTitle>
-          <Icon name={categoryItemIcon} color="black" inline />
+          <Icon name={categoryItemIcon} color="black" />
           <span>{categoryItemTitle}</span>
         </CategoryItemTitle>
         <CategoryText>{categoryItemDescription}</CategoryText>
