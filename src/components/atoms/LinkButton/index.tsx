@@ -1,23 +1,7 @@
-import React, { PropsWithChildren } from 'react';
 import NextLink from 'next/link';
-import styled from 'styled-components';
+import { PropsWithChildren } from 'react';
 import Icon from '../../Common/Icon';
-
-const StyledLinkButton = styled.a<{ inline: boolean; name: string }>`
-  display: ${({ inline }) => (inline ? 'inline' : 'block')};
-  font-weight: ${({ theme, inline }) => !inline && theme.fontWeight.button};
-  letter-spacing: ${({ theme, inline }) =>
-    !inline && theme.letterSpacing.button};
-  font-family: ${({ theme, inline }) =>
-    theme.fontFamily[inline ? 'text' : 'display']};
-  text-decoration: none;
-  color: ${({ theme, inline }) => inline && theme.color.red_700};
-  cursor: pointer;
-`;
-
-const LinkText = styled.span<{ inline: boolean }>`
-  text-decoration: ${({ inline }) => inline && 'underline'};
-`;
+import S from './styles.module.css';
 
 export default function LinkButton({
   href,
@@ -45,44 +29,44 @@ export default function LinkButton({
   const linkInner =
     external && inline ? (
       <>
-        <LinkText inline={inline}>{children}</LinkText>
+        <span className={inline ? S.text : ''}>{children}</span>
         <Icon name="external" inline />
       </>
     ) : (
       children
     );
 
+  const classes = S.linkButton
+    .concat(inline ? ` ${S.inline}` : '')
+    .concat(className ? ` ${className}` : '');
+
   if (href) {
     return (
       <NextLink href={href} passHref legacyBehavior>
-        <StyledLinkButton
+        <a
+          className={classes}
           target={external ? '_blank' : '_self'}
           rel={external ? 'noopener noreferrer external' : 'same'}
-          inline={inline}
-          name={name}
           id={id}
-          className={className}
           {...props}
         >
           {linkInner}
-        </StyledLinkButton>
+        </a>
       </NextLink>
     );
   }
 
   return (
-    <StyledLinkButton
+    <button
+      className={classes}
       type={type}
-      as="button"
       disabled={disabled}
       onClick={handleClick}
-      inline={inline}
       name={name}
       id={id}
-      className={className}
       {...props}
     >
       {children}
-    </StyledLinkButton>
+    </button>
   );
 }

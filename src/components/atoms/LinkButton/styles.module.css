@@ -1,11 +1,19 @@
-.LinkButton {
-  display: block; /* ${({ inline }) => (inline ? 'inline' : 'block')} */
-  font-weight: ${({ theme, inline }) => !inline && theme.fontWeight.button};
-  letter-spacing: ${({ theme, inline }) =>
-    !inline && theme.letterSpacing.button};
-  font-family: ${({ theme, inline }) =>
-    theme.fontFamily[inline ? 'text' : 'display']};
+.text {
+  text-decoration: underline;
+}
+
+.linkButton {
+  display: block;
+  letter-spacing: var(--letter-spacing-button);
+  font-family: var(--font-family-display);
   text-decoration: none;
-  color: ${({ theme, inline }) => inline && theme.color.red_700};
   cursor: pointer;
+}
+
+.linkButton.inline {
+  display: inline;
+  letter-spacing: initial;
+  font-weight: var(--font-weight-button);
+  font-family: var(--font-family-text);
+  color: var(--color-red-700);
 }
