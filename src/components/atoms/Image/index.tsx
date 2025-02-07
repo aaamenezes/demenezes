@@ -1,29 +1,5 @@
 import NextImage from 'next/image';
-import styled, { css } from 'styled-components';
-import { theme } from '../../../theme';
-import getBreakpoints from '../../../utils/getBreakpoints';
-
-const Figcaption = styled.figcaption`
-  ${getBreakpoints({
-    xs: css`
-      width: fit-content;
-      padding: 1rem 1rem;
-      margin: 1rem auto 0;
-      line-height: ${theme.lineHeight.h4};
-      font-size: ${theme.fontSize.small};
-      background-color: ${theme.color.neutral_300};
-    `,
-    sm: css`
-      padding: 1rem 1.5rem;
-    `,
-    md: css`
-      padding: 1rem 2rem;
-    `,
-    lg: css`
-      padding: 1rem 2.5rem;
-    `,
-  })}
-`;
+import S from './styles.module.css';
 
 export default function Image({
   src,
@@ -51,7 +27,7 @@ export default function Image({
           margin: '0 auto',
         }}
       />
-      {title && <Figcaption>{title}</Figcaption>}
+      {title && <figcaption className={S.figcaption}>{title}</figcaption>}
     </figure>
   );
 }
