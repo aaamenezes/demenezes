@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 export default function Input({
   type = 'text',
@@ -6,16 +6,16 @@ export default function Input({
   className,
   id,
   placeholder,
-  required = false
+  required = false,
 }: {
-  type?: string
-  name?: string
-  className?: string
-  id: string
-  placeholder?: string
-  required?: boolean
+  type?: string;
+  name?: string;
+  className?: string;
+  id: string;
+  placeholder?: string;
+  required?: boolean;
 }) {
-  const [ value, setValue ] = useState('')
+  const [value, setValue] = useState('');
 
   return (
     <input
@@ -28,5 +28,5 @@ export default function Input({
       placeholder={placeholder}
       required={required}
     />
-  )
+  );
 }

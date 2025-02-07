@@ -3,7 +3,7 @@ import settings from '../../../settings.json';
 import getBreakpoints from '../../utils/getBreakpoints';
 import Container from './Container';
 import HiddenA11Y from './HiddenA11Y';
-import Input from './Input';
+import Input from '../atoms/Input';
 import LinkButton from '../atoms/LinkButton';
 
 const NewsletterTitle = styled.h3`
