@@ -2,7 +2,7 @@ import React from 'react';
 import NextImage from 'next/image';
 import styled, { css } from 'styled-components';
 import Container from '../Common/Container';
-import HiddenA11Y from '../Common/HiddenA11Y';
+import HiddenA11Y from '../atoms/HiddenA11Y';
 import getBreakpoints from '../../utils/getBreakpoints';
 
 const StyledGreeting = styled.section`
@@ -71,7 +71,9 @@ export default function Greeting({
           height={height}
         />
       </ImageWrapper>
-      <HiddenA11Y tag="h1">{greetingTitle}</HiddenA11Y>
+      <h1>
+        <HiddenA11Y>{greetingTitle}</HiddenA11Y>
+      </h1>
       <GreetingTitle>{greetingSubtitle}</GreetingTitle>
       <GreetingText>{greetingDescription}</GreetingText>
     </Container>
