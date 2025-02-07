@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import styled, { css } from 'styled-components';
-import getBreakpoints from '../../utils/getBreakpoints';
+import getBreakpoints from '../../../utils/getBreakpoints';
 
 const Label = styled.div`
   ${getBreakpoints({

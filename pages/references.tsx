@@ -2,10 +2,10 @@
 import { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 // import { parser } from 'url-meta-scraper';
+import Label from '../src/components/atoms/Label';
+import LinkButton from '../src/components/atoms/LinkButton';
 import Container from '../src/components/Common/Container';
 import Head from '../src/components/Common/Head';
-import Label from '../src/components/Common/Label';
-import LinkButton from '../src/components/atoms/LinkButton';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';
 import { theme } from '../src/theme';

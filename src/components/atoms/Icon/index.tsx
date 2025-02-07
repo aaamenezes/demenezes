@@ -1,7 +1,7 @@
-import React, { CSSProperties } from 'react';
-import S from './styles.module.css';
+import { CSSProperties } from 'react';
 import { iconMap } from './iconMap';
-import { IconName } from './types';
+import S from './styles.module.css';
+import type { IconName } from './types';
 
 export default function Icon({
   name,

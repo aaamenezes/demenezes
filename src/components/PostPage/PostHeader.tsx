@@ -1,11 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React from 'react';
 import styled, { css } from 'styled-components';
 import { convertDate } from '../../utils/convertDate';
 import getBreakpoints from '../../utils/getBreakpoints';
 import Container from '../Common/Container';
-import Label from '../Common/Label';
+import Label from '../atoms/Label';
 
 const PostHeaderWrapper = styled.header<{
   bgImage: string;
