@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import { StructuredText, renderNodeRule } from 'react-datocms';
 import { isCode, isLink, isHeading } from 'datocms-structured-text-utils';
 import LinkButton from '../atoms/LinkButton';
-import CodeBlock from './CodeBlock';
+import CodeBlock from '../atoms/CodeSnippet';
 import { simplifyString } from '../../utils/simplifyString';
 import Figure from '../atoms/Image';
 import Iframe from './Iframe';
