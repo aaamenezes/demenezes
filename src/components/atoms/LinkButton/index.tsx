@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import NextLink from 'next/link';
 import styled from 'styled-components';
-import Icon from './Icon';
+import Icon from '../../Common/Icon';
 
 const StyledLinkButton = styled.a<{ inline: boolean; name: string }>`
   display: ${({ inline }) => (inline ? 'inline' : 'block')};

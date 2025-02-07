@@ -4,7 +4,7 @@ import getBreakpoints from '../../utils/getBreakpoints';
 import Container from './Container';
 import HiddenA11Y from './HiddenA11Y';
 import Input from './Input';
-import LinkButton from './LinkButton';
+import LinkButton from '../atoms/LinkButton';
 
 const NewsletterTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.h3};

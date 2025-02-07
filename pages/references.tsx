@@ -5,7 +5,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import Container from '../src/components/Common/Container';
 import Head from '../src/components/Common/Head';
 import Label from '../src/components/Common/Label';
-import LinkButton from '../src/components/Common/LinkButton';
+import LinkButton from '../src/components/atoms/LinkButton';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';
 import { theme } from '../src/theme';

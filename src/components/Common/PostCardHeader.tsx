@@ -2,7 +2,7 @@
 // @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
-import LinkButton from './LinkButton';
+import LinkButton from '../atoms/LinkButton';
 import getBreakpoints from '../../utils/getBreakpoints';
 import { PostSummaryProps } from '../../types';
 

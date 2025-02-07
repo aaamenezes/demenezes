@@ -2,7 +2,7 @@ import React from 'react';
 import NextImage from 'next/image';
 import styled, { css } from 'styled-components';
 import Container from './Container';
-import LinkButton from './LinkButton';
+import LinkButton from '../atoms/LinkButton';
 import PostCardInfos from './PostCardInfos';
 import Label from './Label';
 import getBreakpoints from '../../utils/getBreakpoints';

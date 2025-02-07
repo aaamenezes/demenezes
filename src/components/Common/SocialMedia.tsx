@@ -4,7 +4,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
 import Icon from './Icon';
-import LinkButton from './LinkButton';
+import LinkButton from '../atoms/LinkButton';
 import getBreakpoints from '../../utils/getBreakpoints';
 
 const SocialMediaWrapper = styled.nav`

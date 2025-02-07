@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import LinkButton from './LinkButton';
+import LinkButton from '../atoms/LinkButton';
 
 const LogoLink = styled(LinkButton)`
   position: relative;

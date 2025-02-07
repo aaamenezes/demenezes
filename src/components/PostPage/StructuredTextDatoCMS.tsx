@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { StructuredText, renderNodeRule } from 'react-datocms';
 import { isCode, isLink, isHeading } from 'datocms-structured-text-utils';
-import LinkButton from '../Common/LinkButton';
+import LinkButton from '../atoms/LinkButton';
 import CodeBlock from './CodeBlock';
 import { simplifyString } from '../../utils/simplifyString';
 import Figure from '../Common/Figure';
