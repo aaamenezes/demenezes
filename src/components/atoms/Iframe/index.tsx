@@ -1,9 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const StyledIframe = styled.iframe`
-  width: 100%;
-`;
+import S from './styles.module.css';
 
 export default function Iframe({
   title,
@@ -13,11 +8,12 @@ export default function Iframe({
   videoID: string;
 }) {
   return (
-    <StyledIframe
+    <iframe
+      className={S.iframe}
       title={title}
       height="480"
       src={`https://www.youtube.com/embed/${videoID}`}
-      frame-border="0"
+      frameBorder="0"
       allow="accelerometer;clipboard-write;encrypted-media;picture-in-picture"
       allowFullScreen
     />

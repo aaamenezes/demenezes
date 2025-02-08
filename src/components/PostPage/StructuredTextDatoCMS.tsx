@@ -7,7 +7,7 @@ import LinkButton from '../atoms/LinkButton';
 import CodeBlock from '../atoms/CodeSnippet';
 import { simplifyString } from '../../utils/simplifyString';
 import Figure from '../atoms/Image';
-import Iframe from './Iframe';
+import Iframe from '../atoms/Iframe';
 import Table from './Table';
 import TextBox from './TextBox';
 import Video from './Video';
