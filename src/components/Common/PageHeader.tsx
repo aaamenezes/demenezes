@@ -5,7 +5,7 @@ import { getPageInfos } from '../../utils/getPageInfos';
 import Container from './Container';
 import LogoWrapper from '../block/LogoWrapper';
 import Navigation from './Navigation';
-import ToggleModalButton from './ToggleModalButton';
+import ToggleModalButton from '../block/ToggleModalButton';
 import { PageName } from '../../types';
 
 const HeaderWrapper = styled.header<{

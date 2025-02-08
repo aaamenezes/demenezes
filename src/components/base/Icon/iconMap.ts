@@ -77,5 +77,5 @@ export const iconMap = {
   },
   // default: {
   //   className: 'fas fa-question-circle'
-  // }
+  //   color: ''}
 };

@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
 import { getPageInfos } from '../../utils/getPageInfos';
 import LinkButton from '../base/LinkButton';
-import ToggleModalButton from './ToggleModalButton';
+import ToggleModalButton from '../block/ToggleModalButton';
 import getBreakpoints from '../../utils/getBreakpoints';
 
 const NavWrapper = styled.nav`

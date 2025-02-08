@@ -1,23 +1,36 @@
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { iconMap } from './iconMap';
 import S from './styles.module.css';
 import type { IconName } from './types';
 
 export default function Icon({
   name,
-  color,
+  color: propIconColor = '',
+  className: propIconClassName = '',
 }: {
   name: IconName;
   color?: string;
+  className?: string;
 }) {
+  const { className: mapIconClass, color: mapIconColor } = iconMap[name];
+
+  const classes = S.icon
+    .concat(mapIconClass)
+    .concat(propIconClassName ? ` ${propIconClassName}` : '');
+
+  /**
+   * remover espaço vazio desse componente
+   * mover para a chamada do icon external
+   */
+
   return (
     <>
       {name === 'external' && ' '}
       <i
-        className={S.icon.concat(iconMap[name].className)}
+        className={classes}
         style={
           {
-            '--icon-color': color || iconMap[name].color || 'currentColor',
+            '--icon-color': propIconColor || mapIconColor || 'currentColor',
             '--icon-transform': name === 'external' ? 'scale(1)' : 'scale(1.5)',
           } as CSSProperties
         }
