@@ -11,7 +11,7 @@ import Iframe from '../atoms/Iframe';
 import Table from './Table';
 import TextBox from './TextBox';
 import Video from '../atoms/Video';
-import BlockQuote from '../Common/BlockQuote';
+import BlockQuote from '../molecules/BlockQuote';
 import Quiz from './Quiz';
 import getBreakpoints from '../../utils/getBreakpoints';
 

@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import StructuredTextDatoCMS from '../PostPage/StructuredTextDatoCMS';
+import StructuredTextDatoCMS from '../../PostPage/StructuredTextDatoCMS';
 
 export default function BlockQuote({
   source,
