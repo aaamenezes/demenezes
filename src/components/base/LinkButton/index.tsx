@@ -1,5 +1,6 @@
 import NextLink from 'next/link';
 import { PropsWithChildren } from 'react';
+import { clsx } from '../../../utils/clsx';
 import Icon from '../Icon';
 import S from './styles.module.css';
 
@@ -36,9 +37,7 @@ export default function LinkButton({
       children
     );
 
-  const classes = S.linkButton
-    .concat(inline ? ` ${S.inline}` : '')
-    .concat(className ? ` ${className}` : '');
+  const classes = clsx(S.linkButton, inline && S.inline, className);
 
   if (href) {
     return (

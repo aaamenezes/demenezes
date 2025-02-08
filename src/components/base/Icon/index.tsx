@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { clsx } from '../../../utils/clsx';
 import { iconMap } from './iconMap';
 import S from './styles.module.css';
 import type { IconName } from './types';
@@ -14,9 +15,7 @@ export default function Icon({
 }) {
   const { className: mapIconClass, color: mapIconColor } = iconMap[name];
 
-  const classes = S.icon
-    .concat(mapIconClass)
-    .concat(propIconClassName ? ` ${propIconClassName}` : '');
+  const classes = clsx(S.icon, mapIconClass, propIconClassName);
 
   /**
    * remover espaço vazio desse componente
