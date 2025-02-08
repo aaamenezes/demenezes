@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Bar = styled.div`
@@ -16,7 +16,7 @@ export default function ProgressBar() {
   useEffect(() => {
     function getBarWidth() {
       const postElement = document.querySelector(
-        '[class*="PostPage"]',
+        '[class*="PostPage"]'
       ) as HTMLElement | null;
 
       if (!postElement) return 0;
