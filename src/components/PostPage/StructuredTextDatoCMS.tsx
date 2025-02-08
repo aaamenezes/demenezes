@@ -10,7 +10,7 @@ import Figure from '../atoms/Image';
 import Iframe from '../atoms/Iframe';
 import Table from './Table';
 import TextBox from './TextBox';
-import Video from './Video';
+import Video from '../atoms/Video';
 import BlockQuote from '../Common/BlockQuote';
 import Quiz from './Quiz';
 import getBreakpoints from '../../utils/getBreakpoints';
