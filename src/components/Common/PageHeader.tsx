@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
 import { getPageInfos } from '../../utils/getPageInfos';
 import Container from './Container';
-import LogoWrapper from '../molecules/LogoWrapper';
+import LogoWrapper from '../block/LogoWrapper';
 import Navigation from './Navigation';
 import ToggleModalButton from './ToggleModalButton';
 import { PageName } from '../../types';

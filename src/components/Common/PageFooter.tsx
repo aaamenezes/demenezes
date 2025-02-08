@@ -4,7 +4,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
 import Container from './Container';
-import LogoWrapper from '../molecules/LogoWrapper';
+import LogoWrapper from '../block/LogoWrapper';
 import SocialMedia from './SocialMedia';
 
 const FooterWrapper = styled.footer`

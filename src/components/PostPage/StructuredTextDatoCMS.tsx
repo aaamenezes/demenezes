@@ -11,7 +11,7 @@ import Iframe from '../base/Iframe';
 import Table from './Table';
 import TextBox from './TextBox';
 import Video from '../base/Video';
-import BlockQuote from '../molecules/BlockQuote';
+import BlockQuote from '../block/BlockQuote';
 import Quiz from './Quiz';
 import getBreakpoints from '../../utils/getBreakpoints';
 
