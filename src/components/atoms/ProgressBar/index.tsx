@@ -1,20 +1,18 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-
-const Bar = styled.div`
-  position: fixed;
-  z-index: ${({ theme }) => theme.zIndex.fixed};
-  top: 0;
-  left: 0;
-  height: 0.1rem;
-  background-color: ${({ theme }) => theme.color.red_700};
-`;
+import type { CSSProperties } from 'styled-components';
+import S from './styles.module.css';
 
 export default function ProgressBar() {
   const [barWidth, setBarWidth] = useState(0);
 
   useEffect(() => {
-    function getBarWidth() {
+    /**
+     * colocar o queryselector fora da função setNewBarWidth
+     * o if tbm
+     * postheight tbm
+     * tentar transformar setNewBarWidth em useCallback
+     */
+    function setNewBarWidth() {
       const postElement = document.querySelector(
         '[class*="PostPage"]'
       ) as HTMLElement | null;
@@ -22,13 +20,21 @@ export default function ProgressBar() {
       if (!postElement) return 0;
 
       const postHeight = postElement.offsetHeight;
-      const YPosition = window.scrollY;
-      const heightPercent = (YPosition * 100) / postHeight;
-      return heightPercent;
+      const heightPercent = (window.scrollY * 100) / postHeight;
+      setBarWidth(heightPercent);
     }
 
-    document.addEventListener('scroll', () => setBarWidth(getBarWidth()));
+    document.addEventListener('scroll', setNewBarWidth);
+
+    return () => {
+      document.removeEventListener('scroll', setNewBarWidth);
+    };
   }, []);
 
-  return <Bar style={{ width: `${barWidth}%` }} />;
+  return (
+    <div
+      className={S.bar}
+      style={{ '--bar-width': `${barWidth}%` } as CSSProperties}
+    />
+  );
 }
