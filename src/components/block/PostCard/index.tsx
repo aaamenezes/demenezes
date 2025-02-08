@@ -1,11 +1,11 @@
 import NextImage from 'next/image';
 import styled, { css } from 'styled-components';
-import { PostSummaryProps } from '../../types';
-import getBreakpoints from '../../utils/getBreakpoints';
-import Label from '../base/Label';
-import LinkButton from '../base/LinkButton';
-import Container from './Container';
-import PostCardInfos from './PostCardInfos';
+import { PostSummaryProps } from '../../../types';
+import getBreakpoints from '../../../utils/getBreakpoints';
+import Label from '../../base/Label';
+import LinkButton from '../../base/LinkButton';
+import Container from '../../Common/Container';
+import PostCardInfos from '../../Common/PostCardInfos';
 
 const PostCardWrapper = styled.article<{
   isCompact: boolean;

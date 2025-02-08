@@ -3,7 +3,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Container from '../Common/Container';
-import PostCard from '../Common/PostCard';
+import PostCard from '../block/PostCard';
 import getBreakpoints from '../../utils/getBreakpoints';
 import { PostSummaryProps } from '../../types';
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { getPageInfos } from '../../utils/getPageInfos';
 import Newsletter from '../Common/Newsletter';
-import PostCard from '../Common/PostCard';
+import PostCard from '../block/PostCard';
 import HeroPostCard from './HeroPostCard';
 import { PostSummaryProps } from '../../types';
 
@@ -24,13 +24,13 @@ export default function PostsWrapper({
   const firstBlockEnd = postsList.length / 2;
   const firstBlockPosts = postsList
     .slice(firstBlockStart, firstBlockEnd)
-    .map((post) => <PostCard key={post.title} post={post} />);
+    .map(post => <PostCard key={post.title} post={post} />);
 
   const secondBlockStart = firstBlockEnd;
   const secondBlockEnd = postsList.length;
   const secondBlockPosts = postsList
     .slice(secondBlockStart, secondBlockEnd)
-    .map((post) => <PostCard key={post.title} post={post} />);
+    .map(post => <PostCard key={post.title} post={post} />);
 
   return (
     <StyledPostsWrapper isHome={isHome}>
