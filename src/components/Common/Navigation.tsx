@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
 import { getPageInfos } from '../../utils/getPageInfos';
-import LinkButton from '../atoms/LinkButton';
+import LinkButton from '../base/LinkButton';
 import ToggleModalButton from './ToggleModalButton';
 import getBreakpoints from '../../utils/getBreakpoints';
 

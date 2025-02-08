@@ -3,8 +3,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
-import Icon from '../atoms/Icon';
-import LinkButton from '../atoms/LinkButton';
+import Icon from '../base/Icon';
+import LinkButton from '../base/LinkButton';
 import getBreakpoints from '../../utils/getBreakpoints';
 
 const SocialMediaWrapper = styled.nav`

@@ -2,8 +2,8 @@ import NextImage from 'next/image';
 import styled, { css } from 'styled-components';
 import { PostSummaryProps } from '../../types';
 import getBreakpoints from '../../utils/getBreakpoints';
-import Label from '../atoms/Label';
-import LinkButton from '../atoms/LinkButton';
+import Label from '../base/Label';
+import LinkButton from '../base/LinkButton';
 import Container from './Container';
 import PostCardInfos from './PostCardInfos';
 

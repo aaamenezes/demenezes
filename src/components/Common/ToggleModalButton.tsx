@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon from '../atoms/Icon';
-import { IconName } from '../atoms/Icon/types';
+import Icon from '../base/Icon';
+import { IconName } from '../base/Icon/types';
 
 const Button = styled.button<{
   color: string;

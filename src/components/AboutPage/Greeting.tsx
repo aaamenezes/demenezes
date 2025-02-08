@@ -2,7 +2,7 @@ import React from 'react';
 import NextImage from 'next/image';
 import styled, { css } from 'styled-components';
 import Container from '../Common/Container';
-import HiddenA11Y from '../atoms/HiddenA11Y';
+import HiddenA11Y from '../base/HiddenA11Y';
 import getBreakpoints from '../../utils/getBreakpoints';
 
 const StyledGreeting = styled.section`

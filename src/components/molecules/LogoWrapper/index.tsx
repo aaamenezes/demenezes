@@ -1,4 +1,4 @@
-import LinkButton from '../../atoms/LinkButton';
+import LinkButton from '../../base/LinkButton';
 import S from './styles.module.css';
 
 export default function LogoWrapper() {

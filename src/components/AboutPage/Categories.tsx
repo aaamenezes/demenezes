@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
 import Container from '../Common/Container';
-import Icon from '../atoms/Icon';
+import Icon from '../base/Icon';
 
 const CategoriesTitle = styled.h2`
   margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};

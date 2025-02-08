@@ -2,7 +2,7 @@
 // @ts-nocheck
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../utils/getBreakpoints';
-import LinkButton from './atoms/LinkButton';
+import LinkButton from './base/LinkButton';
 
 export const PaginationButton = styled(LinkButton)`
   ${getBreakpoints({

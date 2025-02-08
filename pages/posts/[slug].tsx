@@ -5,7 +5,7 @@ import PageHeader from '../../src/components/Common/PageHeader';
 import PostComments from '../../src/components/PostPage/PostComments';
 import PostContent from '../../src/components/PostPage/PostContent';
 import PostHeader from '../../src/components/PostPage/PostHeader';
-import ProgressBar from '../../src/components/atoms/ProgressBar';
+import ProgressBar from '../../src/components/base/ProgressBar';
 import RelatedPosts from '../../src/components/PostPage/RelatedPosts';
 import { getContent } from '../../src/external/datoCMS';
 import { theme } from '../../src/theme';

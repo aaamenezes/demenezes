@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
 import getBreakpoints from '../../utils/getBreakpoints';
 import Container from './Container';
-import HiddenA11Y from '../atoms/HiddenA11Y';
-import Input from '../atoms/Input';
-import LinkButton from '../atoms/LinkButton';
+import HiddenA11Y from '../base/HiddenA11Y';
+import Input from '../base/Input';
+import LinkButton from '../base/LinkButton';
 
 const NewsletterTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.h3};
