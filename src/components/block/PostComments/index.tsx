@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import Container from '../Common/Container';
+import { useEffect } from 'react';
+import Container from '../../Common/Container';
 
 export default function PostComments() {
   useEffect(() => {
