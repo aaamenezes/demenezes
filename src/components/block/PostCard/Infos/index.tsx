@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import PostCardFooter from './PostCardFooter';
-import PostCardHeader from './PostCardHeader';
-import PostCardDescription from './PostCardDescription';
-import getBreakpoints from '../../utils/getBreakpoints';
-import { PostSummaryProps } from '../../types';
+import PostCardFooter from '../Footer';
+import PostCardHeader from '../Header';
+import PostCardDescription from '../Description';
+import getBreakpoints from '../../../../utils/getBreakpoints';
+import { PostSummaryProps } from '../../../../types';
 
 const PostCardInfosWrapper = styled.div<{
   hero: boolean;

@@ -4,7 +4,7 @@ import { clsx } from '../../../utils/clsx';
 import Label from '../../base/Label';
 import LinkButton from '../../base/LinkButton';
 import Container from '../../Common/Container';
-import PostCardInfos from '../../Common/PostCardInfos';
+import PostCardInfos from './Infos';
 import S from './styles.module.css';
 
 export default function PostCard({

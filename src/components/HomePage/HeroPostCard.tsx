@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import { PostSummaryProps } from '../../types';
 import getBreakpoints from '../../utils/getBreakpoints';
 import Container from '../Common/Container';
-import PostCardInfos from '../Common/PostCardInfos';
+import PostCardInfos from '../block/PostCard/Infos';
 
 const HeroWrapper = styled.article`
   ${getBreakpoints({

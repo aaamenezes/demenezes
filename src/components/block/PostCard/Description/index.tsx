@@ -2,7 +2,7 @@
 // @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
-import getBreakpoints from '../../utils/getBreakpoints';
+import getBreakpoints from '../../../utils/getBreakpoints';
 
 const PostCardDescriptionWrapper = styled.p`
   ${getBreakpoints({
