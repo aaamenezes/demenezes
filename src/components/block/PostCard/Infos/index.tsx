@@ -1,40 +1,18 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import { CSSProperties } from 'react';
+import { PostSummaryProps } from '../../../../types';
+import { clsx } from '../../../../utils/clsx';
+import PostCardDescription from '../Description';
 import PostCardFooter from '../Footer';
 import PostCardHeader from '../Header';
-import PostCardDescription from '../Description';
-import getBreakpoints from '../../../../utils/getBreakpoints';
-import { PostSummaryProps } from '../../../../types';
-
-const PostCardInfosWrapper = styled.div<{
-  hero: boolean;
-  isCompact: boolean;
-  wrapperWidth: string;
-}>`
-  ${({ theme, hero, wrapperWidth, isCompact }) =>
-    getBreakpoints({
-      xs: css`
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: ${hero && '100%'};
-        color: ${hero && theme.color.neutral_100};
-      `,
-      md: css`
-        width: ${wrapperWidth};
-        margin-left: ${!isCompact && 'auto'};
-        margin-right: 0;
-      `,
-    })}
-`;
+import S from './styles.module.css';
 
 export default function PostCardInfos({
   post,
-  hero = false,
+  isHero = false,
   isCompact = false,
 }: {
   post: PostSummaryProps;
-  hero?: boolean;
+  isHero?: boolean;
   isCompact?: boolean;
 }) {
   const { _firstPublishedAt, metaDescription, _updatedAt } = post;
@@ -46,15 +24,21 @@ export default function PostCardInfos({
   }
 
   return (
-    <PostCardInfosWrapper
-      hero={hero}
-      isCompact={isCompact}
-      wrapperWidth={getWrapperWidth(hero, isCompact)}
+    <div
+      className={clsx(
+        S.postCardInfosWrapper,
+        isHero && S.isHero,
+        isCompact && S.isCompact
+      )}
+      style={
+        {
+          '--post-card-infos-width': getWrapperWidth(isHero, isCompact),
+        } as CSSProperties
+      }
     >
-      <PostCardHeader post={post} hero={hero} isCompact={isCompact} />
+      <PostCardHeader post={post} isHero={isHero} isCompact={isCompact} />
       <PostCardDescription
         description={metaDescription}
-        hero={hero}
         isCompact={isCompact}
       />
       <PostCardFooter
@@ -62,6 +46,6 @@ export default function PostCardInfos({
         update={_updatedAt}
         isCompact={isCompact}
       />
-    </PostCardInfosWrapper>
+    </div>
   );
 }
