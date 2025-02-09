@@ -1,64 +1,11 @@
 import NextImage from 'next/image';
-import styled, { css } from 'styled-components';
 import { PostSummaryProps } from '../../../types';
-import getBreakpoints from '../../../utils/getBreakpoints';
+import { clsx } from '../../../utils/clsx';
 import Label from '../../base/Label';
 import LinkButton from '../../base/LinkButton';
 import Container from '../../Common/Container';
 import PostCardInfos from '../../Common/PostCardInfos';
-
-const PostCardWrapper = styled.article<{
-  isCompact: boolean;
-}>`
-  ${({ theme, isCompact }) =>
-    getBreakpoints({
-      xs: css`
-        display: flex;
-        flex-direction: column;
-        padding: ${isCompact ? '1rem' : '1rem'};
-        transition: box-shadow ${theme.transition.fast};
-        box-shadow: 0 0 2rem -1rem ${theme.color.neutral_800};
-      `,
-      sm: css`
-        padding: ${isCompact ? '1rem' : '2rem'};
-      `,
-      md: css`
-        flex-direction: ${isCompact ? 'column' : 'row'};
-        justify-content: ${isCompact ? 'flex-start' : 'space-between'};
-        padding: ${isCompact ? '1rem' : '3rem'};
-        box-shadow: none;
-
-        &:hover {
-          box-shadow: 0 0 2rem -1rem ${theme.color.neutral_800};
-        }
-      `,
-      lg: css`
-        padding: ${isCompact ? '1rem' : '4rem'};
-      `,
-    })}
-`;
-
-const PostCardImageWrapper = styled.div<{
-  isCompact: boolean;
-}>`
-  ${({ isCompact }) =>
-    getBreakpoints({
-      xs: css`
-        position: relative;
-        width: 100%;
-        margin-bottom: 1rem;
-      `,
-      md: css`
-        width: ${isCompact ? '100%' : '35%'};
-        margin-bottom: ${isCompact ? '1rem' : '0'};
-        overflow: hidden;
-      `,
-    })}
-`;
-
-const PostCardImageLink = styled(LinkButton)`
-  position: relative;
-`;
+import S from './styles.module.css';
 
 export default function PostCard({
   post,
@@ -75,13 +22,19 @@ export default function PostCard({
 
   return (
     <Container
-      as={PostCardWrapper}
+      className={clsx(S.postCardWrapper, isCompact && S.isCompact)}
       width="xl"
       spacing={spacing || 7}
-      isCompact={isCompact}
     >
-      <PostCardImageWrapper isCompact={isCompact} aria-hidden="true">
-        <PostCardImageLink href={`/posts/${slug}`} tab-index="-1">
+      <div
+        className={clsx(S.postCardImageWrapper, isCompact && S.isCompact)}
+        aria-hidden="true"
+      >
+        <LinkButton
+          className={S.postCardImageLink}
+          href={`/posts/${slug}`}
+          tab-index="-1"
+        >
           <NextImage
             src={src}
             alt={`Imagem de capa do post: ${title}`}
@@ -94,8 +47,8 @@ export default function PostCard({
             }}
           />
           <Label>{category}</Label>
-        </PostCardImageLink>
-      </PostCardImageWrapper>
+        </LinkButton>
+      </div>
       <PostCardInfos post={post} isCompact={isCompact} />
     </Container>
   );

@@ -122,8 +122,9 @@
   --z-index-popover: 1060;
   --z-index-tooltip: 1070;
 
+  /* Ainda não funciona, mas só pra salvar */
   --media-xs: 0px;
-  --media-sm: 425px;
+  --media-sm: 425px; /* No Bootstrap era 576 mas achei mto próximo do MD */
   --media-md: 768px;
   --media-lg: 992px;
   --media-xl: 1200px;
