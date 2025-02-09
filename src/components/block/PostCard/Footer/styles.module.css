@@ -1,0 +1,19 @@
+.postCardFooterWrapper {
+  margin-top: 0.44rem;
+  padding: 0.5rem;
+}
+
+.postCardFooterWrapper.isCompact {
+  @media screen and (min-width: 768px) {
+    margin-top: 0.44rem;
+  }
+}
+
+.postCardDate {
+  margin: 0 !important;
+  text-align: right;
+  font-size: var(--font-size-small);
+  font-family: var(--font-family-display);
+  letter-spacing: var(--letter-spacing-button);
+  color: var(--color-neutral-600);
+}
