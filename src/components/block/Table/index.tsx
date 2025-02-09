@@ -1,9 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const TableWrapper = styled.div`
-  overflow: auto;
-`;
+import S from './styles.module.css';
 
 export default function Table({
   tableTitle,
@@ -19,17 +14,17 @@ export default function Table({
     .concat('</caption>')
     .concat(tableContent)
     .split('>')
-    .map((part) => (part.includes('<table') ? '' : part.trim()))
+    .map(part => (part.includes('<table') ? '' : part.trim()))
     .join('>')
     .replace('>>', '>')
     .replace('</table>', '');
 
   return (
-    <TableWrapper>
+    <div className={S.tableWrapper}>
       <table
         summary={tableSummary}
         dangerouslySetInnerHTML={{ __html: formatedTable }}
       />
-    </TableWrapper>
+    </div>
   );
 }

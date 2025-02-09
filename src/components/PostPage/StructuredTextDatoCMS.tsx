@@ -8,7 +8,7 @@ import CodeBlock from '../base/CodeSnippet';
 import { simplifyString } from '../../utils/simplifyString';
 import Figure from '../base/Image';
 import Iframe from '../base/Iframe';
-import Table from './Table';
+import Table from '../block/Table';
 import TextBox from './TextBox';
 import Video from '../base/Video';
 import BlockQuote from '../block/BlockQuote';
