@@ -1,9 +1,9 @@
 import React from 'react';
 import NextImage from 'next/image';
 import styled, { css } from 'styled-components';
-import Container from '../Common/Container';
 import HiddenA11Y from '../base/HiddenA11Y';
 import getBreakpoints from '../../utils/getBreakpoints';
+import Wrapper from '../container/Wrapper';
 
 const StyledGreeting = styled.section`
   ${getBreakpoints({
@@ -59,7 +59,7 @@ export default function Greeting({
   const { alt, width, height } = profileImage;
 
   return (
-    <Container as={StyledGreeting} width="lg">
+    <Wrapper as={StyledGreeting} width="lg">
       <ImageWrapper>
         <NextImage
           src={src}
@@ -76,6 +76,6 @@ export default function Greeting({
       </h1>
       <GreetingTitle>{greetingSubtitle}</GreetingTitle>
       <GreetingText>{greetingDescription}</GreetingText>
-    </Container>
+    </Wrapper>
   );
 }

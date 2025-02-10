@@ -4,12 +4,12 @@ import styled, { ThemeProvider } from 'styled-components';
 // import { parser } from 'url-meta-scraper';
 import Label from '../src/components/base/Label';
 import LinkButton from '../src/components/base/LinkButton';
-import Container from '../src/components/Common/Container';
 import Head from '../src/components/Common/Head';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';
 import { theme } from '../src/theme';
 import { GlobalStyle } from '../src/theme/globalStyle';
+import Wrapper from '../src/components/container/Wrapper';
 // import { getContent } from '../src/external/datoCMS';
 // import { PaginationButton } from '../src/components/PaginationButton'
 
@@ -120,7 +120,7 @@ export default function References({
 
       return (
         <ReferenceItem key={url} referenceImage={image}>
-          <Container as={ReferenceItemWrapper} width="md" spacing={0}>
+          <Wrapper as={ReferenceItemWrapper} width="md" spacing={0}>
             <ReferenceTitle>{title}</ReferenceTitle>
             <Label as={ReferenceLabel}>{type}</Label>
             <p>{description}</p>
@@ -136,7 +136,7 @@ export default function References({
                 'Acessar:'
               )}
             </LinkButton>
-          </Container>
+          </Wrapper>
         </ReferenceItem>
       );
     });
@@ -159,8 +159,8 @@ export default function References({
       <Head componentProps={{}} />
       <GlobalStyle />
       <PageHeader />
-      <Container as={ReferencesContainer}>
-        <Container as={ReferencesHeader} width="xxl">
+      <Wrapper as={ReferencesContainer}>
+        <Wrapper as={ReferencesHeader} width="xxl">
           <h1>Em construção...</h1>
           {/* <h1>Minhas principais referências na área de programação</h1>
         <BlockQuote>
@@ -169,9 +169,9 @@ export default function References({
          */}
           {/* <p>Essa página</p> */}
           {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
-        </Container>
+        </Wrapper>
         <ReferencesList role="list">{referencesItems}</ReferencesList>
-      </Container>
+      </Wrapper>
       <PageFooter />
     </ThemeProvider>
   );

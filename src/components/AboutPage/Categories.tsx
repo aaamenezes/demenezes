@@ -2,8 +2,8 @@
 // @ts-nocheck
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
-import Container from '../Common/Container';
 import Icon from '../base/Icon';
+import Wrapper from '../container/Wrapper';
 
 const CategoriesTitle = styled.h2`
   margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
@@ -105,12 +105,12 @@ export default function Categories({
   );
 
   return (
-    <Container as="section" width="xl">
+    <Wrapper as="section" width="xl">
       <header>
         <CategoriesTitle>{categoriesTitle}</CategoriesTitle>
       </header>
 
       <CategoriesList>{CategoryItems}</CategoriesList>
-    </Container>
+    </Wrapper>
   );
 }

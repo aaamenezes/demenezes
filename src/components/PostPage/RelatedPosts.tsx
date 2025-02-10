@@ -2,10 +2,10 @@
 // @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Container from '../Common/Container';
 import PostCard from '../block/PostCard';
 import getBreakpoints from '../../utils/getBreakpoints';
 import { PostSummaryProps } from '../../types';
+import Wrapper from '../container/Wrapper';
 
 const RelatedPostsGrid = styled.div`
   ${getBreakpoints({
@@ -38,11 +38,11 @@ export default function RelatedPosts({
   ));
 
   return (
-    <Container as="section" width="xl">
+    <Wrapper as="section" width="xl">
       <header>
         <h2>{`Veja outros posts sobre ${postCategory}`}</h2>
       </header>
       <RelatedPostsGrid>{relatedPostsElements}</RelatedPostsGrid>
-    </Container>
+    </Wrapper>
   );
 }

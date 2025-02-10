@@ -3,8 +3,8 @@
 import styled, { css } from 'styled-components';
 import { PostSummaryProps } from '../../types';
 import getBreakpoints from '../../utils/getBreakpoints';
-import Container from '../Common/Container';
 import PostCardInfos from '../block/PostCard/Infos';
+import Wrapper from '../container/Wrapper';
 
 const HeroWrapper = styled.article`
   ${getBreakpoints({
@@ -66,10 +66,10 @@ export default function HeroPostCard({ post }: { post: PostSummaryProps }) {
   const { src } = post.thumbnail.responsiveImage;
 
   return (
-    <Container as={HeroWrapper} width="full" src={src}>
-      <Container as={HeroInner} width="xxxl" spacing={0} fluid>
+    <Wrapper as={HeroWrapper} width="full" src={src}>
+      <Wrapper as={HeroInner} width="xxxl" spacing={0} fluid>
         <PostCardInfos post={post} hero />
-      </Container>
-    </Container>
+      </Wrapper>
+    </Wrapper>
   );
 }

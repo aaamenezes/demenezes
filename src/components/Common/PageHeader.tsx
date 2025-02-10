@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
 import { getPageInfos } from '../../utils/getPageInfos';
-import Container from './Container';
 import LogoWrapper from '../block/LogoWrapper';
-import Navigation from './Navigation';
 import ToggleModalButton from '../block/ToggleModalButton';
 import { PageName } from '../../types';
+import Wrapper from '../container/Wrapper';
+import Navigation from '../container/Navigation';
 
 const HeaderWrapper = styled.header<{
   openHeader: boolean;
@@ -56,18 +56,18 @@ export default function PageHeader() {
   }, []);
 
   return (
-    <Container
+    <Wrapper
       width="full"
       as={HeaderWrapper}
       openHeader={openHeader}
       currentPage={currentPage}
     >
-      <Container as={HeaderInner} width="xxxl" spacing={0} fluid>
+      <Wrapper as={HeaderInner} width="xxxl" spacing={0} fluid>
         <LogoWrapper />
         <ToggleMenuButton onClick={toggleMenu} icon="bars" />
         <Navigation openMenu={openMenu} toggleMenu={toggleMenu} />
         {/* <SearchWrapper /> */}
-      </Container>
-    </Container>
+      </Wrapper>
+    </Wrapper>
   );
 }

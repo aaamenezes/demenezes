@@ -2,8 +2,8 @@
 // @ts-nocheck
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../utils/getBreakpoints';
-import Container from './Common/Container';
 import LinkButton from './base/LinkButton';
+import Wrapper from './container/Wrapper';
 
 const PaginationWrapper = styled.div`
   ${getBreakpoints({
@@ -87,7 +87,7 @@ export default function Pagination({
   const nextLink = `/page/${+currentPagination + 1}`;
 
   return (
-    <Container as={PaginationWrapper} width="xxl" spacing={2}>
+    <Wrapper as={PaginationWrapper} width="xxl" spacing={2}>
       {currentPagination > 1 && (
         <PaginationButton href={previousLink} label="previous">
           Posts mais recentes
@@ -102,6 +102,6 @@ export default function Pagination({
           Parabéns, você chegou ao início do blog :)
         </PaginationButton>
       )}
-    </Container>
+    </Wrapper>
   );
 }

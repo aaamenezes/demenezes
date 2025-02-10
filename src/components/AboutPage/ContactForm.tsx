@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from '../Common/Container';
 import settings from '../../../settings.json';
 import { ContactPageProps } from '../../types';
+import Wrapper from '../container/Wrapper';
 
 const StyledContactForm = styled.div`
   &:first-of-type {
@@ -31,7 +31,7 @@ export default function ContactForm({
     .map(text => <p key={text}>{text}</p>);
 
   return (
-    <Container as={StyledContactForm} width="md">
+    <Wrapper as={StyledContactForm} width="md">
       <ContactTitle>{contactTitle}</ContactTitle>
       {textElements}
       <MailchimpContactForm
@@ -39,6 +39,6 @@ export default function ContactForm({
         src={mailchimpIframeSrc}
         frameBorder="0"
       />
-    </Container>
+    </Wrapper>
   );
 }

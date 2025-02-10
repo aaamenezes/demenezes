@@ -3,9 +3,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
-import Container from './Container';
 import LogoWrapper from '../block/LogoWrapper';
 import SocialMedia from './SocialMedia';
+import Wrapper from '../container/Wrapper';
 
 const FooterWrapper = styled.footer`
   padding: 2.2rem;
@@ -41,11 +41,11 @@ const FooterInner = styled.div`
 
 export default function PageFooter() {
   return (
-    <Container as={FooterWrapper} width="full" fluid>
-      <Container as={FooterInner} width="xxxl" spacing={0}>
+    <Wrapper as={FooterWrapper} width="full" fluid>
+      <Wrapper as={FooterInner} width="xxxl" spacing={0}>
         <SocialMedia />
         <LogoWrapper />
-      </Container>
-    </Container>
+      </Wrapper>
+    </Wrapper>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Container from '../../Common/Container';
+import Wrapper from '../../container/Wrapper';
 
 export default function PostComments() {
   useEffect(() => {
@@ -15,11 +15,11 @@ export default function PostComments() {
   }, []);
 
   return (
-    <Container width="lg">
+    <Wrapper width="lg">
       <div id="disqus_thread" />
       <noscript>
         Please enable JavaScript to view the comments powered by Disqus.
       </noscript>
-    </Container>
+    </Wrapper>
   );
 }

@@ -3,8 +3,8 @@
 import styled, { css } from 'styled-components';
 import { convertDate } from '../../utils/convertDate';
 import getBreakpoints from '../../utils/getBreakpoints';
-import Container from '../Common/Container';
 import Label from '../base/Label';
+import Wrapper from '../container/Wrapper';
 
 const PostHeaderWrapper = styled.header<{
   bgImage: string;
@@ -146,8 +146,8 @@ export default function PostHeader({
   });
 
   return (
-    <Container as={PostHeaderWrapper} width="full" fluid bgImage={coverImage}>
-      <Container as={PostHeaderInner} width="xxxl" spacing={0}>
+    <Wrapper as={PostHeaderWrapper} width="full" fluid bgImage={coverImage}>
+      <Wrapper as={PostHeaderInner} width="xxxl" spacing={0}>
         <PostTitle>{title}</PostTitle>
         <LeadText>
           <strong>{description}</strong>
@@ -164,7 +164,7 @@ export default function PostHeader({
           <KeywordsList>{keywordsList}</KeywordsList>
         </PostHeaderFooter>
         <Label>{category}</Label>
-      </Container>
-    </Container>
+      </Wrapper>
+    </Wrapper>
   );
 }

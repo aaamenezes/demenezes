@@ -1,109 +1,76 @@
-import styled, { css } from 'styled-components';
+import type { CSSProperties, PropsWithChildren } from 'react';
 import { theme } from '../../../theme';
-import getBreakpoints from '../../../utils/getBreakpoints';
+import S from './styles.module.css';
 
-type Width = keyof typeof theme.breakpoints | 'full';
+type Breakpoint = keyof typeof theme.breakpoints;
+type Width = Breakpoint | 'full';
 
-function getWrapperMaxWidth(width: Width, fluid: boolean) {
+function getWrapperMaxWidth(
+  width: Width,
+  breakpoint: Breakpoint,
+  isFluid: boolean
+) {
   const { breakpoints } = theme;
 
-  if (width && width !== 'full' && fluid) {
-    return css`
-      max-width: ${breakpoints[width]}px;
-    `;
+  if (width && width !== 'full' && isFluid) {
+    return `${breakpoints[width]}px`;
   }
 
-  if (width && width !== 'full' && !fluid) {
-    return getBreakpoints({
-      xs: css`
-        max-width: 100%;
-      `,
-      sm: css`
-        max-width: ${breakpoints.sm}px;
-      `,
-      md: css`
-        max-width: ${breakpoints.md < breakpoints[width]
-          ? `${breakpoints.md}px`
-          : `${breakpoints[width]}px`};
-      `,
-      lg: css`
-        max-width: ${breakpoints.lg < breakpoints[width]
-          ? `${breakpoints.lg}px`
-          : `${breakpoints[width]}px`};
-      `,
-      xl: css`
-        max-width: ${breakpoints.xl < breakpoints[width]
-          ? `${breakpoints.xl}px`
-          : `${breakpoints[width]}px`};
-      `,
-      xxl: css`
-        max-width: ${breakpoints.xxl < breakpoints[width]
-          ? `${breakpoints.xxl}px`
-          : `${breakpoints[width]}px`};
-      `,
-      xxxl: css`
-        max-width: ${breakpoints.xxxl < breakpoints[width]
-          ? `${breakpoints.xxxl}px`
-          : `${breakpoints[width]}px`};
-      `,
-    });
+  if (width && width !== 'full' && !isFluid) {
+    if (breakpoint === 'xs') return '100%';
+    if (breakpoint === 'sm') return `${breakpoints.sm}px`;
+
+    return breakpoints[breakpoint] < breakpoints[width]
+      ? breakpoints[breakpoint] + 'px'
+      : breakpoints[width] + 'px';
   }
 
-  return css`
-    max-width: 100%;
-  `;
+  return '100%';
 }
 
-function getPadding(
-  breakpoints: typeof theme.breakpoints,
-  breakpoint: keyof typeof breakpoints,
-  paddingPercent: number
-) {
-  return css`
-    padding-left: ${breakpoints[breakpoint] * paddingPercent}px;
-    padding-right: ${breakpoints[breakpoint] * paddingPercent}px;
-  `;
-}
-
-function getWrapperPadding(width: Width) {
-  if (!width || width === 'full') {
-    return css`
-      padding-left: 0;
-      padding-right: 0;
-    `;
-  }
+function getWrapperPadding(width: Width, breakpoint: Breakpoint) {
+  if (!width || width === 'full') return '0';
 
   const { breakpoints } = theme;
   const paddingPercent = 0.05;
 
-  return getBreakpoints({
-    xs: css`
-      padding-right: 5%;
-      padding-left: 5%;
-    `,
-    sm: getPadding(breakpoints, 'sm', paddingPercent),
-    md: getPadding(breakpoints, 'md', paddingPercent),
-    lg: getPadding(breakpoints, 'lg', paddingPercent),
-    xl: getPadding(breakpoints, 'xl', paddingPercent),
-    xxl: getPadding(breakpoints, 'xxl', paddingPercent),
-    xxxl: getPadding(breakpoints, 'xxxl', paddingPercent),
-  });
+  return breakpoints[breakpoint] * paddingPercent + 'px';
 }
 
-const Wrapper = styled.div<{
+export default function Wrapper({
+  width,
+  isFluid = false,
+  spacing,
+  children,
+}: PropsWithChildren<{
   width: Width;
-  fluid?: boolean;
+  isFluid?: boolean;
   spacing?: number;
-}>`
-  width: 100%;
-  ${({ width, fluid = false }) => getWrapperMaxWidth(width, fluid)};
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: ${({ spacing }) =>
-    typeof spacing === 'number' ? `${spacing}rem` : '7rem'};
-  padding-right: 5%;
-  padding-left: 5%;
-  ${({ width }) => getWrapperPadding(width)};
-`;
-
-export default Wrapper;
+}>) {
+  return (
+    <div
+      className={S.container}
+      style={
+        {
+          '--margin-bottom': `${spacing}rem`,
+          '--max-width-xs': getWrapperMaxWidth(width, 'xs', isFluid),
+          '--max-width-sm': getWrapperMaxWidth(width, 'sm', isFluid),
+          '--max-width-md': getWrapperMaxWidth(width, 'md', isFluid),
+          '--max-width-lg': getWrapperMaxWidth(width, 'lg', isFluid),
+          '--max-width-xl': getWrapperMaxWidth(width, 'xl', isFluid),
+          '--max-width-xxl': getWrapperMaxWidth(width, 'xxl', isFluid),
+          '--max-width-xxxl': getWrapperMaxWidth(width, 'xxxl', isFluid),
+          '--padding-xs': getWrapperPadding(width, 'xs'),
+          '--padding-sm': getWrapperPadding(width, 'sm'),
+          '--padding-md': getWrapperPadding(width, 'md'),
+          '--padding-lg': getWrapperPadding(width, 'lg'),
+          '--padding-xl': getWrapperPadding(width, 'xl'),
+          '--padding-xxl': getWrapperPadding(width, 'xxl'),
+          '--padding-xxxl': getWrapperPadding(width, 'xxxl'),
+        } as CSSProperties
+      }
+    >
+      {children}
+    </div>
+  );
+}
