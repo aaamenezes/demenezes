@@ -2,7 +2,7 @@ import type { GetStaticPropsContext } from 'next';
 import styled, { ThemeProvider } from 'styled-components';
 import PageFooter from '../../src/components/Common/PageFooter';
 import PageHeader from '../../src/components/Common/PageHeader';
-import PostComments from '../../src/components/block/PostComments';
+import PostComments from '../../src/components/section/PostComments';
 import PostContent from '../../src/components/PostPage/PostContent';
 import PostHeader from '../../src/components/PostPage/PostHeader';
 import ProgressBar from '../../src/components/base/ProgressBar';
