@@ -2,7 +2,7 @@ import Prism from 'prismjs';
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import { PostProps } from '../../types';
-import Container from '../Common/Container';
+import Wrapper from '../container/Wrapper';
 import StructuredTextDatoCMS from './StructuredTextDatoCMS';
 
 const StyledPostContent = styled.article`
@@ -15,8 +15,8 @@ export default function PostContent({ post }: { post: PostProps }) {
   }, [post]);
 
   return (
-    <Container as={StyledPostContent} width="lg" spacing={0}>
+    <Wrapper as={StyledPostContent} width="lg" spacing={0}>
       <StructuredTextDatoCMS data={post.data.post.content} />
-    </Container>
+    </Wrapper>
   );
 }

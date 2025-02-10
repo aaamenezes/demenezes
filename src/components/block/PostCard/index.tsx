@@ -3,7 +3,7 @@ import { PostSummaryProps } from '../../../types';
 import { clsx } from '../../../utils/clsx';
 import Label from '../../base/Label';
 import LinkButton from '../../base/LinkButton';
-import Container from '../../Common/Container';
+import Wrapper from '../../container/Wrapper';
 import PostCardInfos from './Infos';
 import S from './styles.module.css';
 
@@ -21,7 +21,7 @@ export default function PostCard({
   const { src } = thumbnail.responsiveImage;
 
   return (
-    <Container
+    <Wrapper
       className={clsx(S.postCardWrapper, isCompact && S.isCompact)}
       width="xl"
       spacing={spacing || 7}
@@ -50,6 +50,6 @@ export default function PostCard({
         </LinkButton>
       </div>
       <PostCardInfos post={post} isCompact={isCompact} />
-    </Container>
+    </Wrapper>
   );
 }

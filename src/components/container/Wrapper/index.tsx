@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
-import getBreakpoints from '../../utils/getBreakpoints';
-import { theme } from '../../theme';
+import { theme } from '../../../theme';
+import getBreakpoints from '../../../utils/getBreakpoints';
 
 type Width = keyof typeof theme.breakpoints | 'full';
 
-function getContainerMaxWidth(width: Width, fluid: boolean) {
+function getWrapperMaxWidth(width: Width, fluid: boolean) {
   const { breakpoints } = theme;
 
   if (width && width !== 'full' && fluid) {
@@ -65,7 +65,7 @@ function getPadding(
   `;
 }
 
-function getContainerPadding(width: Width) {
+function getWrapperPadding(width: Width) {
   if (!width || width === 'full') {
     return css`
       padding-left: 0;
@@ -90,20 +90,20 @@ function getContainerPadding(width: Width) {
   });
 }
 
-const Container = styled.div<{
+const Wrapper = styled.div<{
   width: Width;
   fluid?: boolean;
   spacing?: number;
 }>`
   width: 100%;
-  ${({ width, fluid = false }) => getContainerMaxWidth(width, fluid)};
+  ${({ width, fluid = false }) => getWrapperMaxWidth(width, fluid)};
   margin-right: auto;
   margin-left: auto;
   margin-bottom: ${({ spacing }) =>
     typeof spacing === 'number' ? `${spacing}rem` : '7rem'};
   padding-right: 5%;
   padding-left: 5%;
-  ${({ width }) => getContainerPadding(width)};
+  ${({ width }) => getWrapperPadding(width)};
 `;
 
-export default Container;
+export default Wrapper;

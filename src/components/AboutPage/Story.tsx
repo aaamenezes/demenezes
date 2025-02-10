@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from '../Common/Container';
 import HighlightText from './HighlightText';
+import Wrapper from '../container/Wrapper';
 
 const StoryTitle = styled.h2`
-  margin-top: ${({theme}) => `${theme.spacing.h2}rem`};
+  margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
 `;
 
 /**
@@ -33,18 +33,18 @@ export default function Story({
       index % 2 === 0 ? (
         <HighlightText key={text}>{text}</HighlightText>
       ) : (
-        <Container width="md" key={text}>
+        <Wrapper width="md" key={text}>
           <p>{text}</p>
-        </Container>
-      ),
+        </Wrapper>
+      )
     );
 
   return (
     <>
-      <Container width="md">
+      <Wrapper width="md">
         <StoryTitle>{historyTitle}</StoryTitle>
         <p>{firstParagraph}</p>
-      </Container>
+      </Wrapper>
       {remainingText}
     </>
   );

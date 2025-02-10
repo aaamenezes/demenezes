@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
-import Container from './Container';
-import ToggleModalButton from '../block/ToggleModalButton';
 import getBreakpoints from '../../utils/getBreakpoints';
+import ToggleModalButton from '../block/ToggleModalButton';
+import Wrapper from '../container/Wrapper';
 
 const ToggleSearchModal = styled(ToggleModalButton)`
   ${getBreakpoints({
@@ -68,14 +68,14 @@ export default function SearchWrapper() {
         as={ToggleSearchModal}
         aria-labelledby="Abrir busca do blog"
       />
-      <Container as={SearchContent} width="xl" openSearch={openSearch}>
+      <Wrapper as={SearchContent} width="xl" openSearch={openSearch}>
         <CloseSearchButton
           onClick={toggleSearch}
           icon="close"
           color="gray"
           aria-labelledby="Fechar busca do blog"
         />
-      </Container>
+      </Wrapper>
     </Search>
   );
 }

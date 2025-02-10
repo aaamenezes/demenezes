@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 import settings from '../../../settings.json';
 import getBreakpoints from '../../utils/getBreakpoints';
-import Container from './Container';
 import HiddenA11Y from '../base/HiddenA11Y';
 import Input from '../base/Input';
 import LinkButton from '../base/LinkButton';
+import Wrapper from '../container/Wrapper';
 
 const NewsletterTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.h3};
@@ -49,8 +49,8 @@ export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
 
   return (
-    <Container as={NewsletterForm} width="full" fluid>
-      <Container width="md" spacing={0}>
+    <Wrapper as={NewsletterForm} width="full" fluid>
+      <Wrapper width="md" spacing={0}>
         <NewsletterTitle>{title}</NewsletterTitle>
 
         {/* Begin Mailchimp Signup Form */}
@@ -132,7 +132,7 @@ export default function Newsletter() {
           </form>
         </div>
         {/* End mc_embed_signup */}
-      </Container>
-    </Container>
+      </Wrapper>
+    </Wrapper>
   );
 }
