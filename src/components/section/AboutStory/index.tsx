@@ -1,11 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Wrapper from '../container/Wrapper';
-import HighlightText from '../section/AboutHighlightText';
-
-const StoryTitle = styled.h2`
-  margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
-`;
+import Wrapper from '../../container/Wrapper';
+import HighlightText from '../AboutHighlightText';
+import S from './styles.module.css';
 
 /**
  * Evento do google
@@ -42,7 +37,7 @@ export default function Story({
   return (
     <>
       <Wrapper width="md">
-        <StoryTitle>{historyTitle}</StoryTitle>
+        <h2 className={S.StoryTitle}>{historyTitle}</h2>
         <p>{firstParagraph}</p>
       </Wrapper>
       {remainingText}

@@ -3,9 +3,7 @@
 import { ThemeProvider } from 'styled-components';
 import AboutCategories from '../src/components/section/AboutCategories';
 import ContactForm from '../src/components/section/AboutContactForm';
-import Greeting from '../src/components/AboutPage/Greeting';
 import Hobbies from '../src/components/section/AboutHobbies';
-import Story from '../src/components/AboutPage/Story';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';
 import SocialMedia from '../src/components/container/SocialMedia';
@@ -13,6 +11,8 @@ import Wrapper from '../src/components/container/Wrapper';
 import { getContent } from '../src/external/datoCMS';
 import { theme } from '../src/theme';
 import { GlobalStyle } from '../src/theme/globalStyle';
+import Greeting from '../src/components/section/AboutGreeting';
+import Story from '../src/components/section/AboutStory';
 
 export default function About({
   aboutPageContent,
