@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import AboutCategories from '../src/components/section/AboutCategories';
 import ContactForm from '../src/components/section/AboutContactForm';
 import Greeting from '../src/components/AboutPage/Greeting';
-import Hobbies from '../src/components/AboutPage/Hobbies';
+import Hobbies from '../src/components/section/AboutHobbies';
 import Story from '../src/components/AboutPage/Story';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';

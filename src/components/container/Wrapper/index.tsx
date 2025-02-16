@@ -43,11 +43,13 @@ export default function Wrapper({
   isFluid = false,
   spacing = 0,
   className = '',
+  as = 'div',
   children,
 }: PropsWithChildren<{
   width: Width;
   isFluid?: boolean;
   spacing?: number;
+  as?: keyof HTMLElementTagNameMap;
   className?: string;
 }>) {
   return (
