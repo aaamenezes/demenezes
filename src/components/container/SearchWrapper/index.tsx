@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
-import getBreakpoints from '../../utils/getBreakpoints';
-import ToggleModalButton from '../block/ToggleModalButton';
-import Wrapper from '../container/Wrapper';
+import getBreakpoints from '../../../utils/getBreakpoints';
+import ToggleModalButton from '../../block/ToggleModalButton';
+import Wrapper from '../../container/Wrapper';
 
 const ToggleSearchModal = styled(ToggleModalButton)`
   ${getBreakpoints({
