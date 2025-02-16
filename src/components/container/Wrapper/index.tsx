@@ -1,6 +1,7 @@
 import type { CSSProperties, PropsWithChildren } from 'react';
 import { theme } from '../../../theme';
 import S from './styles.module.css';
+import { clsx } from '../../../utils/clsx';
 
 type Breakpoint = keyof typeof theme.breakpoints;
 type Width = Breakpoint | 'full';
@@ -40,16 +41,18 @@ function getWrapperPadding(width: Width, breakpoint: Breakpoint) {
 export default function Wrapper({
   width,
   isFluid = false,
-  spacing,
+  spacing = 0,
+  className = '',
   children,
 }: PropsWithChildren<{
   width: Width;
   isFluid?: boolean;
   spacing?: number;
+  className?: string;
 }>) {
   return (
     <div
-      className={S.container}
+      className={clsx(S.container, className)}
       style={
         {
           '--margin-bottom': `${spacing}rem`,
