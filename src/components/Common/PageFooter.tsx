@@ -1,10 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React from 'react';
 import styled, { css } from 'styled-components';
 import getBreakpoints from '../../utils/getBreakpoints';
 import LogoWrapper from '../block/LogoWrapper';
-import SocialMedia from './SocialMedia';
+import SocialMedia from '../container/SocialMedia';
 import Wrapper from '../container/Wrapper';
 
 const FooterWrapper = styled.footer`

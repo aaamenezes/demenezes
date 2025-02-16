@@ -8,11 +8,11 @@ import Hobbies from '../src/components/AboutPage/Hobbies';
 import Story from '../src/components/AboutPage/Story';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';
-import SocialMedia from '../src/components/Common/SocialMedia';
+import SocialMedia from '../src/components/container/SocialMedia';
+import Wrapper from '../src/components/container/Wrapper';
 import { getContent } from '../src/external/datoCMS';
 import { theme } from '../src/theme';
 import { GlobalStyle } from '../src/theme/globalStyle';
-import Wrapper from '../src/components/container/Wrapper';
 
 export default function About({
   aboutPageContent,
