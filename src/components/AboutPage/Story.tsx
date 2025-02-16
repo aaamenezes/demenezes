@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import HighlightText from './HighlightText';
 import Wrapper from '../container/Wrapper';
+import HighlightText from '../section/AboutHighlightText';
 
 const StoryTitle = styled.h2`
   margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
