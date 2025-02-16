@@ -1,9 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import styled, { css } from 'styled-components';
-import getBreakpoints from '../../utils/getBreakpoints';
-import Icon from '../base/Icon';
-import Wrapper from '../container/Wrapper';
+import getBreakpoints from '../../../utils/getBreakpoints';
+import Icon from '../../base/Icon';
+import Wrapper from '../../container/Wrapper';
 
 const CategoriesTitle = styled.h2`
   margin-top: ${({ theme }) => `${theme.spacing.h2}rem`};
@@ -81,7 +81,7 @@ const CategoryText = styled.p`
   })}
 `;
 
-export default function Categories({
+export default function AboutCategories({
   categoriesTitle,
   categoryItems,
 }: {

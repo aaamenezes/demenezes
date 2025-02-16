@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { ThemeProvider } from 'styled-components';
-import Categories from '../src/components/AboutPage/Categories';
+import AboutCategories from '../src/components/section/AboutCategories';
 import ContactForm from '../src/components/AboutPage/ContactForm';
 import Greeting from '../src/components/AboutPage/Greeting';
 import Hobbies from '../src/components/AboutPage/Hobbies';
@@ -44,7 +44,7 @@ export default function About({
           greetingDescription={greetingDescription}
           profileImage={aboutPageContent.data.profileImage.profileImage}
         />
-        <Categories
+        <AboutCategories
           categoriesTitle={categoriesTitle}
           categoryItems={categoryItemModule}
         />
