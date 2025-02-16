@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import ContactForm from '../src/components/AboutPage/ContactForm';
+import ContactForm from '../src/components/section/AboutContactForm';
 import PageFooter from '../src/components/Common/PageFooter';
 import PageHeader from '../src/components/Common/PageHeader';
 import { getContent } from '../src/external/datoCMS';

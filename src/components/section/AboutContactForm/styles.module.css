@@ -1,0 +1,12 @@
+.contactForm:first-of-type {
+  padding-top: 6.6rem;
+}
+
+.contactTitle {
+  margin-top: var(--spacing-h2);
+}
+
+.mailchimpContactForm {
+  width: 100%;
+  min-height: 1000px;
+}

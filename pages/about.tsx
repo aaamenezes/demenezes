@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from 'styled-components';
 import AboutCategories from '../src/components/section/AboutCategories';
-import ContactForm from '../src/components/AboutPage/ContactForm';
+import ContactForm from '../src/components/section/AboutContactForm';
 import Greeting from '../src/components/AboutPage/Greeting';
 import Hobbies from '../src/components/AboutPage/Hobbies';
 import Story from '../src/components/AboutPage/Story';
@@ -51,7 +51,7 @@ export default function About({
         <Story historyTitle={historyTitle} historyText={historyText} />
         <Hobbies hobbiesTitle={hobbiesTitle} hobbiesText={hobbiesText} />
         <Wrapper as="section" width="sm">
-          <SocialMedia center />
+          <SocialMedia isCenter />
         </Wrapper>
         <ContactForm contactContent={contactContent} />
         <Wrapper as="section" width="md">
