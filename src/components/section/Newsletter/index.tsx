@@ -1,57 +1,18 @@
-import styled, { css } from 'styled-components';
 import settings from '../../../../settings.json';
-import getBreakpoints from '../../../utils/getBreakpoints';
+import { clsx } from '../../../utils/clsx';
 import HiddenA11Y from '../../base/HiddenA11Y';
 import Input from '../../base/Input';
 import LinkButton from '../../base/LinkButton';
 import Wrapper from '../../container/Wrapper';
-
-const NewsletterTitle = styled.h3`
-  font-size: ${({ theme }) => theme.fontSize.h3};
-  line-height: ${({ theme }) => theme.lineHeight.h3};
-  letter-spacing: ${({ theme }) => theme.letterSpacing.h3};
-  margin-top: 0;
-  text-align: center;
-`;
-
-const NewsletterForm = styled.article`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  background-color: ${({ theme }) => theme.color.neutral_400};
-`;
-
-const InputsWrapper = styled.div`
-  ${getBreakpoints({
-    xs: css`
-      display: grid;
-      grid-template-columns: 1fr;
-      margin-bottom: 2rem;
-    `,
-    md: css`
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 1rem;
-    `,
-  })}
-`;
-
-const SubmitButton = styled(LinkButton)`
-  padding: 0.5rem 1rem;
-  margin: 0 auto;
-  color: ${({ theme }) => theme.color.neutral_100};
-  background-color: ${({ theme }) => theme.color.red_700};
-
-  &:hover {
-    background-color: ${({ theme }) => theme.color.red_900};
-  }
-`;
+import S from './styles.module.css';
 
 export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
 
   return (
-    <Wrapper as={NewsletterForm} width="full" fluid>
+    <Wrapper className={S.newsletterForm} width="full" isFluid>
       <Wrapper width="md" spacing={0}>
-        <NewsletterTitle>{title}</NewsletterTitle>
+        <h3 className={S.newsletterTitle}>{title}</h3>
 
         {/* Begin Mailchimp Signup Form */}
         <div id="mc_embed_signup">
@@ -65,7 +26,7 @@ export default function Newsletter() {
             noValidate
           >
             <div id="mc_embed_signup_scroll">
-              <InputsWrapper>
+              <div className={S.inputsWrapper}>
                 <div className="mc-field-group">
                   <HiddenA11Y>
                     <label htmlFor="mce-FNAME">Informe seu nome</label>
@@ -94,7 +55,7 @@ export default function Newsletter() {
                     required
                   />
                 </div>
-              </InputsWrapper>
+              </div>
               <div id="mce-responses" className="clear foot">
                 <div
                   className="response"
@@ -118,14 +79,14 @@ export default function Newsletter() {
               </HiddenA11Y>
               <div className="optionalParent">
                 <div className="clear foot">
-                  <SubmitButton
+                  <LinkButton
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    className="button"
+                    className={clsx(S.submitButton, 'button')}
                   >
                     Quero receber
-                  </SubmitButton>
+                  </LinkButton>
                 </div>
               </div>
             </div>
