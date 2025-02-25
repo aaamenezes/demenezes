@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { getPageInfos } from '../../utils/getPageInfos';
-import Newsletter from '../Common/Newsletter';
+import Newsletter from '../section/Newsletter';
 import PostCard from '../block/PostCard';
 import HeroPostCard from './HeroPostCard';
 import { PostSummaryProps } from '../../types';

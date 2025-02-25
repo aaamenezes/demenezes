@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
-import settings from '../../../settings.json';
-import getBreakpoints from '../../utils/getBreakpoints';
-import HiddenA11Y from '../base/HiddenA11Y';
-import Input from '../base/Input';
-import LinkButton from '../base/LinkButton';
-import Wrapper from '../container/Wrapper';
+import settings from '../../../../settings.json';
+import getBreakpoints from '../../../utils/getBreakpoints';
+import HiddenA11Y from '../../base/HiddenA11Y';
+import Input from '../../base/Input';
+import LinkButton from '../../base/LinkButton';
+import Wrapper from '../../container/Wrapper';
 
 const NewsletterTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSize.h3};
