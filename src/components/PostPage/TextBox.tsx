@@ -2,7 +2,7 @@
 // @ts-nocheck
 import React from 'react';
 import styled, { css } from 'styled-components';
-import StructuredTextDatoCMS from './StructuredTextDatoCMS';
+import StructuredTextDatoCMS from '../container/StructuredTextDatoCMS';
 import getBreakpoints from '../../utils/getBreakpoints';
 
 const StyledTextBox = styled.div`

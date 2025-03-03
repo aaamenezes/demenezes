@@ -1,8 +1,8 @@
 import type { GetStaticPropsContext } from 'next';
 import { ThemeProvider } from 'styled-components';
 import Head from '../src/components/Common/Head';
-import PageFooter from '../src/components/Common/PageFooter';
-import PageHeader from '../src/components/Common/PageHeader';
+import PageFooter from '../src/components/section/PageFooter';
+import PageHeader from '../src/components/section/PageHeader';
 import HomeScreen from '../src/components/template/Home';
 import { getContent } from '../src/external/datoCMS';
 import { generateSitemap } from '../src/scripts/generate-sitemap';

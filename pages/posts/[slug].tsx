@@ -1,7 +1,5 @@
 import type { GetStaticPropsContext } from 'next';
 import styled, { ThemeProvider } from 'styled-components';
-import PageFooter from '../../src/components/Common/PageFooter';
-import PageHeader from '../../src/components/Common/PageHeader';
 import PostComments from '../../src/components/section/PostComments';
 import PostContent from '../../src/components/PostPage/PostContent';
 import PostHeader from '../../src/components/PostPage/PostHeader';
@@ -12,6 +10,8 @@ import { theme } from '../../src/theme';
 import { GlobalStyle } from '../../src/theme/globalStyle';
 import { PostProps, PostSummaryProps } from '../../src/types';
 import { parseSlugParam } from '../../src/utils/parseParams';
+import PageHeader from '../../src/components/section/PageHeader';
+import PageFooter from '../../src/components/section/PageFooter';
 
 const PostPage = styled.main`
   margin-bottom: 10%;

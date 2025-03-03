@@ -15,7 +15,6 @@ export default function LinkButton({
   name = '',
   id = '',
   className = '',
-  ...props
 }: PropsWithChildren<{
   href?: string;
   external?: boolean;
@@ -47,7 +46,6 @@ export default function LinkButton({
           target={external ? '_blank' : '_self'}
           rel={external ? 'noopener noreferrer external' : 'same'}
           id={id}
-          {...props}
         >
           {linkInner}
         </a>
@@ -63,7 +61,6 @@ export default function LinkButton({
       onClick={handleClick}
       name={name}
       id={id}
-      {...props}
     >
       {children}
     </button>
