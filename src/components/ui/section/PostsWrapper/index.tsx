@@ -1,15 +1,10 @@
-import styled from 'styled-components';
-import { getPageInfos } from '../../utils/getPageInfos';
-import Newsletter from '../ui/section/Newsletter';
-import PostCard from '../ui/block/PostCard';
-import HeroPostCard from './HeroPostCard';
-import { PostSummaryProps } from '../../types';
-
-const StyledPostsWrapper = styled.main<{
-  isHome: boolean;
-}>`
-  padding-top: ${({ isHome }) => !isHome && '6.6rem'};
-`;
+import { PostSummaryProps } from '../../../../types';
+import { clsx } from '../../../../utils/clsx';
+import { getPageInfos } from '../../../../utils/getPageInfos';
+import PostCard from '../../block/PostCard';
+import HeroPostCard from '../HeroPostCard';
+import Newsletter from '../Newsletter';
+import S from './styles.module.css';
 
 export default function PostsWrapper({
   postsList,
@@ -33,11 +28,11 @@ export default function PostsWrapper({
     .map(post => <PostCard key={post.title} post={post} />);
 
   return (
-    <StyledPostsWrapper isHome={isHome}>
+    <main className={clsx(S.postsWrapper, isHome && S.isHome)}>
       {isHome && <HeroPostCard post={heroPost} />}
       {firstBlockPosts}
       <Newsletter />
       {secondBlockPosts}
-    </StyledPostsWrapper>
+    </main>
   );
 }

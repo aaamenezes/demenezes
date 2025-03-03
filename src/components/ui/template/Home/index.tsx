@@ -1,5 +1,5 @@
 import { HomeScreenProps } from '../../../../types';
-import PostsWrapper from '../../../HomePage/PostsWrapper';
+import PostsWrapper from '../../section/PostsWrapper';
 import Pagination from '../../section/Pagination';
 
 export default function HomeScreen({
