@@ -1,0 +1,62 @@
+.heroWrapper {
+  padding-top: 6.6rem;
+  background-image:
+    linear-gradient(270deg,
+      var(--color-neutral-900) var(--opacity-medium-hex),
+      var(--color-neutral-900) var(--opacity-medium-hex),
+    ),
+    url('var(--background-image)&w=425');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media screen and (min-width: 425px) {
+    background-image:
+      linear-gradient(270deg,
+        var(--color-neutral-900) var(--opacity-medium-hex),
+        var(--color-neutral-900) var(--opacity-medium-hex),
+      ),
+      url('var(--background-image)&w=768');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image:
+      linear-gradient(270deg,
+        var(--color-neutral-900) var(--opacity-medium-hex) 55%,
+        var(--color-neutral-600) var(--opacity-medium-hex) 100%,
+      ),
+      url('var(--background-image)&w=992');
+  }
+
+  @media screen and (min-width: 992px) {
+    background-image:
+      linear-gradient(270deg,
+        var(--color-neutral-900) var(--opacity-hard-hex) 55%,
+        var(--color-neutral-600) var(--opacity-medium-hex) 100%,
+      ),
+      url('var(--background-image)&w=1200');
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image:
+      linear-gradient(270deg,
+        var(--color-neutral-900) var(--opacity-hard-hex) 55%,
+        var(--color-neutral-600) var(--opacity-medium-hex) 100%,
+      ),
+      url('var(--background-image)&w=1600');
+  }
+
+  @media screen and (min-width: 1600px) {
+    background-image:
+      linear-gradient(270deg,
+        var(--color-neutral-900) var(--opacity-hard-hex) 55%,
+        var(--color-neutral-600) var(--opacity-medium-hex) 100%,
+      ),
+      url('var(--background-image)&w=2600');
+  }
+}
+
+.heroInner {
+  position: relative;
+}
