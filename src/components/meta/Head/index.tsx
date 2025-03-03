@@ -1,7 +1,7 @@
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
-import settings from '../../../settings.json';
-import { getPageInfos } from '../../utils/getPageInfos';
+import settings from '../../../../settings.json';
+import { getPageInfos } from '../../../utils/getPageInfos';
 
 export default function Head({
   componentProps,
