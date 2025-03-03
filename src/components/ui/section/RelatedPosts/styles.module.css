@@ -1,0 +1,14 @@
+.relatedPostsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-h3);
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
