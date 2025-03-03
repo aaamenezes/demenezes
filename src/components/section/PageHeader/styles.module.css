@@ -1,0 +1,32 @@
+.headerWrapper {
+  position: fixed;
+  transform: translate(-50%, -110%);
+  z-index: var(--z-index-fixed);
+  top: 0;
+  left: 50%;
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-900);
+  transition: var(--transition-medium);
+}
+
+.header.isOpenHeader {
+  transform: translate(-50%, 0);
+}
+
+.header.isHome {
+  background-color: var(--color-transparent);
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggleMenuButton {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
