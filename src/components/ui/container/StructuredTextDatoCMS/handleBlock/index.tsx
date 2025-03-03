@@ -4,8 +4,8 @@ import Image from '../../../base/Image';
 import Video from '../../../base/Video';
 import BlockQuote from '../../../block/BlockQuote';
 import Table from '../../../block/Table';
-import Quiz from '../../../../PostPage/Quiz';
-import TextBox from '../../../../PostPage/TextBox';
+import Quiz from '../../../../post/Quiz';
+import TextBox from '../../../../post/TextBox';
 
 export function handleBlock({
   record,
