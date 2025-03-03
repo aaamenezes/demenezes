@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import Quiz from '../../../../post/Quiz';
+import TextBox from '../../../../post/TextBox';
 import Iframe from '../../../base/Iframe';
 import Image from '../../../base/Image';
 import Video from '../../../base/Video';
 import BlockQuote from '../../../block/BlockQuote';
 import Table from '../../../block/Table';
-import Quiz from '../../../../post/Quiz';
-import TextBox from '../../../../post/TextBox';
 
 export function handleBlock({
   record,
