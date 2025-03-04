@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .postCardInfosWrapper {
     width: var(--post-card-infos-width);
     margin-right: 0;
   }
@@ -14,8 +16,8 @@
   color: var(--color-neutral-100);
 }
 
-.postCardInfosWrapper.isCompact {
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .postCardInfosWrapper.isCompact {
     margin-left: auto;
   }
 }

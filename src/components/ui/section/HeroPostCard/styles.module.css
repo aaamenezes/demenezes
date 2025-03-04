@@ -5,55 +5,65 @@
       var(--color-neutral-900) var(--opacity-medium-hex),
       var(--color-neutral-900) var(--opacity-medium-hex),
     ),
-    url('var(--background-image)&w=425');
+    var(--background-image-xs);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
 
-  @media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) {
+  .heroWrapper {
     background-image:
       linear-gradient(270deg,
         var(--color-neutral-900) var(--opacity-medium-hex),
         var(--color-neutral-900) var(--opacity-medium-hex),
       ),
-      url('var(--background-image)&w=768');
+      var(--background-image-sm);
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .heroWrapper {
     background-image:
       linear-gradient(270deg,
         var(--color-neutral-900) var(--opacity-medium-hex) 55%,
         var(--color-neutral-600) var(--opacity-medium-hex) 100%,
       ),
-      url('var(--background-image)&w=992');
+      var(--background-image-md);
   }
+}
 
-  @media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
+  .heroWrapper {
     background-image:
       linear-gradient(270deg,
         var(--color-neutral-900) var(--opacity-hard-hex) 55%,
         var(--color-neutral-600) var(--opacity-medium-hex) 100%,
       ),
-      url('var(--background-image)&w=1200');
+      var(--background-image-lg);
   }
+}
 
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .heroWrapper {
     background-image:
       linear-gradient(270deg,
         var(--color-neutral-900) var(--opacity-hard-hex) 55%,
         var(--color-neutral-600) var(--opacity-medium-hex) 100%,
       ),
-      url('var(--background-image)&w=1600');
+      var(--background-image-xl);
   }
+}
 
-  @media screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) {
+  .heroWrapper {
     background-image:
       linear-gradient(270deg,
         var(--color-neutral-900) var(--opacity-hard-hex) 55%,
         var(--color-neutral-600) var(--opacity-medium-hex) 100%,
       ),
-      url('var(--background-image)&w=2600');
+      var(--background-image-xxl);
   }
 }
 

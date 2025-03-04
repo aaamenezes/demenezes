@@ -2,9 +2,7 @@ import type { GetStaticPropsContext } from 'next';
 import styled, { ThemeProvider } from 'styled-components';
 import PostComments from '../../src/components/ui/section/PostComments';
 import PostContent from '../../src/components/ui/section/PostContent';
-import PostHeader from '../../src/components/post/PostHeader';
 import ProgressBar from '../../src/components/ui/block/ProgressBar';
-import RelatedPosts from '../../src/components/post/RelatedPosts';
 import { getContent } from '../../src/external/datoCMS';
 import { theme } from '../../src/theme';
 import { GlobalStyle } from '../../src/theme/globalStyle';
@@ -12,6 +10,8 @@ import { PostProps, PostSummaryProps } from '../../src/types';
 import { parseSlugParam } from '../../src/utils/parseParams';
 import PageHeader from '../../src/components/ui/section/PageHeader';
 import PageFooter from '../../src/components/ui/section/PageFooter';
+import PostHeader from '../../src/components/ui/section/PostHeader';
+import RelatedPosts from '../../src/components/ui/section/RelatedPosts';
 
 const PostPage = styled.main`
   margin-bottom: 10%;

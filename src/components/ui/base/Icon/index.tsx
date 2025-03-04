@@ -1,8 +1,8 @@
 import type { CSSProperties } from 'react';
-import { clsx } from '../../../utils/clsx';
 import { iconMap } from './iconMap';
 import S from './styles.module.css';
 import type { IconName } from './types';
+import { clsx } from '../../../../utils/clsx';
 
 export default function Icon({
   name,

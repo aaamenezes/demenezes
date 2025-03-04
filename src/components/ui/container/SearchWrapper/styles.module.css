@@ -1,15 +1,19 @@
 .toggleSearchModal {
   display: none;
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .toggleSearchModal {
     display: flex;
   }
 }
 
 .search {
   display: none;
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .search {
     display: block;
   }
 }

@@ -1,11 +1,15 @@
 .title {
   scroll-margin-top: 1.5rem;
+}
 
-  @media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) {
+  .title {
     scroll-margin-top: 2rem;
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .title {
     scroll-margin-top: 2.5rem;
   }
 }

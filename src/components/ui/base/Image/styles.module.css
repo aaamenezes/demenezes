@@ -5,16 +5,22 @@
   line-height: var(--line-height-h4);
   font-size: var(--font-size-small);
   background-color: var(--color-neutral-300);
+}
 
-  @media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) {
+  .figcaption {
     padding: 1rem 1.5rem;
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .figcaption {
     padding: 1rem 2rem;
   }
+}
 
-  @media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
+  .figcaption {
     padding: 1rem 2.5rem;
   }
 }

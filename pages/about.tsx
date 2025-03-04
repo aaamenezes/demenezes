@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { ThemeProvider } from 'styled-components';
-import AboutCategories from '../src/components/section/AboutCategories';
-import ContactForm from '../src/components/section/AboutContactForm';
-import Hobbies from '../src/components/section/AboutHobbies';
-import PageFooter from '../src/components/Common/PageFooter';
-import PageHeader from '../src/components/Common/PageHeader';
-import SocialMedia from '../src/components/container/SocialMedia';
-import Wrapper from '../src/components/container/Wrapper';
-import { getContent } from '../src/external/datoCMS';
 import { theme } from '../src/theme';
 import { GlobalStyle } from '../src/theme/globalStyle';
-import Greeting from '../src/components/section/AboutGreeting';
-import Story from '../src/components/section/AboutStory';
+import PageHeader from '../src/components/ui/section/PageHeader';
+import Greeting from '../src/components/ui/section/AboutGreeting';
+import AboutCategories from '../src/components/ui/section/AboutCategories';
+import Story from '../src/components/ui/section/AboutStory';
+import Hobbies from '../src/components/ui/section/AboutHobbies';
+import Wrapper from '../src/components/ui/container/Wrapper';
+import SocialMedia from '../src/components/ui/container/SocialMedia';
+import ContactForm from '../src/components/ui/section/AboutContactForm';
+import PageFooter from '../src/components/ui/section/PageFooter';
+import { getContent } from '../src/external/datoCMS';
 
 export default function About({
   aboutPageContent,

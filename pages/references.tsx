@@ -2,22 +2,22 @@
 import { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 // import { parser } from 'url-meta-scraper';
-import Label from '../src/components/base/Label';
-import LinkButton from '../src/components/base/LinkButton';
-import Head from '../src/components/Common/Head';
-import PageFooter from '../src/components/Common/PageFooter';
-import PageHeader from '../src/components/Common/PageHeader';
+import Head from '../src/components/meta/Head';
+import Label from '../src/components/ui/base/Label';
+import LinkButton from '../src/components/ui/base/LinkButton';
+import Wrapper from '../src/components/ui/container/Wrapper';
+import PageFooter from '../src/components/ui/section/PageFooter';
+import PageHeader from '../src/components/ui/section/PageHeader';
 import { theme } from '../src/theme';
 import { GlobalStyle } from '../src/theme/globalStyle';
-import Wrapper from '../src/components/container/Wrapper';
 // import { getContent } from '../src/external/datoCMS';
 // import { PaginationButton } from '../src/components/PaginationButton'
 
-const ReferencesContainer = styled.header`
-  padding-top: 6.6rem;
-`;
+// const ReferencesContainer = styled.header`
+//   padding-top: 6.6rem;
+// `;
 
-const ReferencesHeader = styled.header``;
+// const ReferencesHeader = styled.header``;
 
 const ReferencesList = styled.ul`
   list-style-type: none;
@@ -48,20 +48,20 @@ const ReferenceItem = styled.li<{
   }
 `;
 
-const ReferenceItemWrapper = styled.div`
-  position: relative;
-  padding: 0;
-`;
+// const ReferenceItemWrapper = styled.div`
+//   position: relative;
+//   padding: 0;
+// `;
 
 const ReferenceTitle = styled.h2`
   margin: 0 0 ${({ theme }) => `${theme.spacing.h2}rem`};
 `;
 
-const ReferenceLabel = styled.p`
-  position: initial;
-  width: fit-content;
-  margin-left: auto;
-`;
+// const ReferenceLabel = styled.p`
+//   position: initial;
+//   width: fit-content;
+//   margin-left: auto;
+// `;
 
 // interface ReferenceProps {
 //   data: {
@@ -120,9 +120,9 @@ export default function References({
 
       return (
         <ReferenceItem key={url} referenceImage={image}>
-          <Wrapper as={ReferenceItemWrapper} width="md" spacing={0}>
+          <Wrapper /* as={ReferenceItemWrapper} */ width="md" spacing={0}>
             <ReferenceTitle>{title}</ReferenceTitle>
-            <Label as={ReferenceLabel}>{type}</Label>
+            <Label /* as={ReferenceLabel} */>{type}</Label>
             <p>{description}</p>
             <LinkButton href={url} external inline={!validateImageURL(image)}>
               {validateImageURL(image) ? (
@@ -159,8 +159,8 @@ export default function References({
       <Head componentProps={{}} />
       <GlobalStyle />
       <PageHeader />
-      <Wrapper as={ReferencesContainer}>
-        <Wrapper as={ReferencesHeader} width="xxl">
+      <Wrapper /* as={ReferencesContainer} */ width="full">
+        <Wrapper /* as={ReferencesHeader} */ width="xxl">
           <h1>Em construção...</h1>
           {/* <h1>Minhas principais referências na área de programação</h1>
         <BlockQuote>

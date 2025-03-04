@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .paginationWrapper {
     flex-direction: row;
     justify-content: flex-end;
   }
@@ -11,8 +13,10 @@
 
 .paginationWrapper>a:nth-child(2) {
   margin: 2.2rem 0 0;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .paginationWrapper>a:nth-child(2) {
     margin: 0;
     margin-left: 2.2rem;
   }
@@ -32,11 +36,10 @@
   border: 1px solid var(--color-neutral-900);
   transition: var(--transition-fast);
   cursor: pointer;
+}
 
-  &:hover,
-  &:focus {}
-
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .paginationButton {
     width: initial;
   }
 }

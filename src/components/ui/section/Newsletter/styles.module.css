@@ -16,8 +16,10 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 2rem;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .inputsWrapper {
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
   }

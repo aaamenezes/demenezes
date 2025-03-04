@@ -1,6 +1,6 @@
 import type { GetStaticPropsContext } from 'next';
 import { ThemeProvider } from 'styled-components';
-import Head from '../src/components/Common/Head';
+import Head from '../src/components/meta/Head';
 import PageFooter from '../src/components/ui/section/PageFooter';
 import PageHeader from '../src/components/ui/section/PageHeader';
 import HomeScreen from '../src/components/ui/template/Home';

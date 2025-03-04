@@ -2,8 +2,10 @@
   position: absolute;
   top: 0.66rem;
   right: 0.66rem;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .closeMenuMobileButton {
     display: none;
   }
 }
@@ -31,8 +33,10 @@
   padding: 1.1rem 5%;
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-100);
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navLink {
     padding: 0.88rem;
     color: var(--color-neutral-50);
     background-color: var(--color-transparent);
@@ -48,8 +52,10 @@
   display: block;
   margin: 0 !important;
   list-style: none;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navList {
     display: flex;
   }
 }
@@ -64,8 +70,10 @@
   height: 100vh;
   background-color: var(--color-neutral-300);
   transition: var(--transition-fast);
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navWrapper {
     position: initial;
     width: auto;
     height: auto;
@@ -80,15 +88,17 @@
 .navItem {
   margin-bottom: 0;
   border-bottom: 1px solid var(--color-neutral-300);
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navItem {
     position: relative;
     border: none;
   }
 }
 
-.navItem::after {
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navItem::after {
     content: '';
     position: absolute;
     transform: translateX(-50%);
@@ -102,23 +112,26 @@
   }
 }
 
-.navItem.isCurrentPage::after {
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navItem.isCurrentPage::after {
     width: 100%;
   }
 }
 
-.navItem:hover::after,
-.navItem:focus-within::after {
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+
+  .navItem:hover::after,
+  .navItem:focus-within::after {
     width: 100%;
   }
 }
 
 .navItem:first-child {
   margin-top: 3.74rem;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navItem:first-child {
     margin-top: 0;
   }
 }

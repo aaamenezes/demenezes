@@ -35,7 +35,7 @@ export default function PostHeader({
   return (
     <div
       className={S.postHeaderWrapper}
-      style={{ '--background-image': coverImage } as CSSProperties}
+      style={{ '--background-image': `url(${coverImage})` } as CSSProperties}
     >
       <Wrapper width="full" isFluid>
         <Wrapper className={S.postHeaderInner} width="xxxl" spacing={0}>

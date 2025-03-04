@@ -1,12 +1,16 @@
 .textBox {
   padding: 1rem;
   background-color: var(--color-red-50);
+}
 
-  @media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) {
+  .textBox {
     padding: 1.5rem;
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .textBox {
     padding: 2rem;
   }
 }

@@ -5,8 +5,8 @@
   transition: color var(--transition-fast)
 }
 
-.icon:hover {
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .icon:hover {
     transform: var(--icon-transform);
   }
 }

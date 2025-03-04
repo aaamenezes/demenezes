@@ -3,8 +3,8 @@
   padding: 0.5rem;
 }
 
-.postCardFooterWrapper.isCompact {
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .postCardFooterWrapper.isCompact {
     margin-top: 0.44rem;
   }
 }
