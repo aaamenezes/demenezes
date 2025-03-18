@@ -11,11 +11,11 @@
   transition: var(--transition-medium);
 }
 
-.header.isOpenHeader {
+.headerWrapper.isOpenHeader {
   transform: translate(-50%, 0);
 }
 
-.header.isHome {
+.headerWrapper.isHome {
   background-color: var(--color-transparent);
 }
 

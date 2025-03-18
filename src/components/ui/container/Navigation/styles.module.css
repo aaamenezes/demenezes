@@ -48,6 +48,12 @@
   background-color: var(--color-red-700);
 }
 
+@media screen and (min-width: 768px) {
+  .navLink.isCurrentPage {
+    background-color: var(--color-transparent);
+  }
+}
+
 .navList {
   display: block;
   margin: 0 !important;

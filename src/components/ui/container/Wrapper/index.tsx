@@ -1,9 +1,18 @@
 import type { CSSProperties, PropsWithChildren } from 'react';
-import { theme } from '../../../../theme';
 import S from './styles.module.css';
 import { clsx } from '../../../../utils/clsx';
 
-type Breakpoint = keyof typeof theme.breakpoints;
+const breakpoints = {
+  xs: 0,
+  sm: 425, // No Bootstrap era 576 mas achei mto próximo do MD
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1600,
+  xxxl: 2000,
+};
+
+type Breakpoint = keyof typeof breakpoints;
 type Width = Breakpoint | 'full';
 
 function getWrapperMaxWidth(
@@ -11,8 +20,6 @@ function getWrapperMaxWidth(
   breakpoint: Breakpoint,
   isFluid: boolean
 ) {
-  const { breakpoints } = theme;
-
   if (width && width !== 'full' && isFluid) {
     return `${breakpoints[width]}px`;
   }
@@ -32,7 +39,6 @@ function getWrapperMaxWidth(
 function getWrapperPadding(width: Width, breakpoint: Breakpoint) {
   if (!width || width === 'full') return '0';
 
-  const { breakpoints } = theme;
   const paddingPercent = 0.05;
 
   return breakpoints[breakpoint] * paddingPercent + 'px';

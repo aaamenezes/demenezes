@@ -1,17 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { ThemeProvider } from 'styled-components';
-import { theme } from '../src/theme';
-import { GlobalStyle } from '../src/theme/globalStyle';
-import PageHeader from '../src/components/ui/section/PageHeader';
-import Greeting from '../src/components/ui/section/AboutGreeting';
-import AboutCategories from '../src/components/ui/section/AboutCategories';
-import Story from '../src/components/ui/section/AboutStory';
-import Hobbies from '../src/components/ui/section/AboutHobbies';
-import Wrapper from '../src/components/ui/container/Wrapper';
 import SocialMedia from '../src/components/ui/container/SocialMedia';
+import Wrapper from '../src/components/ui/container/Wrapper';
+import AboutCategories from '../src/components/ui/section/AboutCategories';
 import ContactForm from '../src/components/ui/section/AboutContactForm';
+import Greeting from '../src/components/ui/section/AboutGreeting';
+import Hobbies from '../src/components/ui/section/AboutHobbies';
+import Story from '../src/components/ui/section/AboutStory';
 import PageFooter from '../src/components/ui/section/PageFooter';
+import PageHeader from '../src/components/ui/section/PageHeader';
 import { getContent } from '../src/external/datoCMS';
 
 export default function About({
@@ -34,8 +31,7 @@ export default function About({
   } = aboutPageContent.data.aboutPage;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <>
       <PageHeader />
       <main>
         <Greeting
@@ -59,7 +55,7 @@ export default function About({
         </Wrapper>
       </main>
       <PageFooter />
-    </ThemeProvider>
+    </>
   );
 }
 

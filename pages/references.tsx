@@ -1,15 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
 // import { parser } from 'url-meta-scraper';
-import Head from '../src/components/meta/Head';
-import Label from '../src/components/ui/base/Label';
-import LinkButton from '../src/components/ui/base/LinkButton';
-import Wrapper from '../src/components/ui/container/Wrapper';
-import PageFooter from '../src/components/ui/section/PageFooter';
-import PageHeader from '../src/components/ui/section/PageHeader';
-import { theme } from '../src/theme';
-import { GlobalStyle } from '../src/theme/globalStyle';
 // import { getContent } from '../src/external/datoCMS';
 // import { PaginationButton } from '../src/components/PaginationButton'
 
@@ -19,43 +9,43 @@ import { GlobalStyle } from '../src/theme/globalStyle';
 
 // const ReferencesHeader = styled.header``;
 
-const ReferencesList = styled.ul`
-  list-style-type: none;
-  margin-left: 0;
-`;
+// const ReferencesList = styled.ul`
+//   list-style-type: none;
+//   margin-left: 0;
+// `;
 
-const ReferenceItem = styled.li<{
-  referenceImage: string;
-}>`
-  display: grid;
-  place-items: center;
-  position: relative;
-  min-height: 100vh;
-  padding: ${({ theme }) => `${theme.spacing.h1}rem`};
-  margin-bottom: 0;
+// const ReferenceItem = styled.li<{
+//   referenceImage: string;
+// }>`
+//   display: grid;
+//   place-items: center;
+//   position: relative;
+//   min-height: 100vh;
+//   padding: ${({ theme }) => `${theme.spacing.h1}rem`};
+//   margin-bottom: 0;
 
-  &::before {
-    content: ' ';
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    background-image: ${({ referenceImage }) => `url('${referenceImage}')`};
-    background-size: cover;
-    background-position: center;
-    filter: blur(0.25rem);
-  }
-`;
+//   &::before {
+//     content: ' ';
+//     position: absolute;
+//     z-index: -1;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0.1;
+//     background-image: ${({ referenceImage }) => `url('${referenceImage}')`};
+//     background-size: cover;
+//     background-position: center;
+//     filter: blur(0.25rem);
+//   }
+// `;
 
 // const ReferenceItemWrapper = styled.div`
 //   position: relative;
 //   padding: 0;
 // `;
 
-const ReferenceTitle = styled.h2`
-  margin: 0 0 ${({ theme }) => `${theme.spacing.h2}rem`};
-`;
+// const ReferenceTitle = styled.h2`
+//   margin: 0 0 ${({ theme }) => `${theme.spacing.h2}rem`};
+// `;
 
 // const ReferenceLabel = styled.p`
 //   position: initial;
@@ -100,7 +90,8 @@ export default function References({
 }: {
   referencesMetaData: any;
 }) {
-  const [activeType /* setActiveType */] = useState('Blog');
+  alert(referencesMetaData);
+  // const [activeType, setActiveType] = useState('Blog');
 
   // const Types = [ 'Blog', 'Podcast', 'YouTube', 'Twitter' ]
 
@@ -108,38 +99,39 @@ export default function References({
   //   setActiveType(type)
   // }
 
-  function validateImageURL(imageURL: string) {
-    const regexp = /^https?:\/\/[^\s/$.?#].[^\s]*$/;
-    return regexp.test(imageURL);
-  }
+  // function validateImageURL(imageURL: string) {
+  //   const regexp = /^https?:\/\/[^\s/$.?#].[^\s]*$/;
+  //   return regexp.test(imageURL);
+  // }
 
-  const referencesItems = referencesMetaData
-    .filter((reference: any) => reference.type === activeType)
-    .map((reference: any) => {
-      const { url, image, title, type, description } = reference;
+  // const referencesItems = referencesMetaData
+  //   .filter((reference: any) => reference.type === activeType)
+  //   .map((reference: any ) => {
+  //     return <div key={index}></div>
+  //     const { url, image, title, type, description } = reference;
 
-      return (
-        <ReferenceItem key={url} referenceImage={image}>
-          <Wrapper /* as={ReferenceItemWrapper} */ width="md" spacing={0}>
-            <ReferenceTitle>{title}</ReferenceTitle>
-            <Label /* as={ReferenceLabel} */>{type}</Label>
-            <p>{description}</p>
-            <LinkButton href={url} external inline={!validateImageURL(image)}>
-              {validateImageURL(image) ? (
-                <img
-                  src={image}
-                  width={640}
-                  height={480}
-                  alt={`Imagem de capa do ${type}`}
-                />
-              ) : (
-                'Acessar:'
-              )}
-            </LinkButton>
-          </Wrapper>
-        </ReferenceItem>
-      );
-    });
+  //     return (
+  //       <ReferenceItem key={url} referenceImage={image}>
+  //         <Wrapper /* as={ReferenceItemWrapper} */ width="md" spacing={0}>
+  //           <ReferenceTitle>{title}</ReferenceTitle>
+  //           <Label /* as={ReferenceLabel} */>{type}</Label>
+  //           <p>{description}</p>
+  //           <LinkButton href={url} external inline={!validateImageURL(image)}>
+  //             {validateImageURL(image) ? (
+  //               <img
+  //                 src={image}
+  //                 width={640}
+  //                 height={480}
+  //                 alt={`Imagem de capa do ${type}`}
+  //               />
+  //             ) : (
+  //               'Acessar:'
+  //             )}
+  //           </LinkButton>
+  //         </Wrapper>
+  //       </ReferenceItem>
+  //     );
+  //   });
 
   // const buttonsItems = types.map(type => (
   //   <PaginationButton
@@ -155,25 +147,25 @@ export default function References({
   // ))
 
   return (
-    <ThemeProvider theme={theme}>
-      <Head componentProps={{}} />
-      <GlobalStyle />
-      <PageHeader />
-      <Wrapper /* as={ReferencesContainer} */ width="full">
-        <Wrapper /* as={ReferencesHeader} */ width="xxl">
-          <h1>Em construção...</h1>
-          {/* <h1>Minhas principais referências na área de programação</h1>
-        <BlockQuote>
-          <p>Na natureza nada se cria, tudo se copia.</p>
-        </BlockQuote>
-         */}
-          {/* <p>Essa página</p> */}
-          {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
-        </Wrapper>
-        <ReferencesList role="list">{referencesItems}</ReferencesList>
-      </Wrapper>
-      <PageFooter />
-    </ThemeProvider>
+    <div></div>
+    // <ThemeProvider theme={theme}>
+    //   <Head componentProps={{}} />
+    //   <PageHeader />
+    //   <Wrapper /* as={ReferencesContainer} */ width="full">
+    //     <Wrapper /* as={ReferencesHeader} */ width="xxl">
+    //       <h1>Em construção...</h1>
+    //       {/* <h1>Minhas principais referências na área de programação</h1>
+    //     <BlockQuote>
+    //       <p>Na natureza nada se cria, tudo se copia.</p>
+    //     </BlockQuote>
+    //      */}
+    //       {/* <p>Essa página</p> */}
+    //       {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
+    //     </Wrapper>
+    //     <ReferencesList role="list">{referencesItems}</ReferencesList>
+    //   </Wrapper>
+    //   <PageFooter />
+    // </ThemeProvider>
   );
 }
 

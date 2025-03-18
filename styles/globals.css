@@ -15,17 +15,131 @@
   --color-red-700: #c62827;
   --color-red-800: #b92121;
   --color-red-900: #aa1515;
-  --color-neutral-50: #ffffff; /* white */
-  --color-neutral-100: #fafafa; /* white */
-  --color-neutral-200: #f5f5f5; /* gray */
-  --color-neutral-300: #f0f0f0; /* gray */
-  --color-neutral-400: #dedede; /* gray */
-  --color-neutral-500: #c2c2c2; /* gray */
-  --color-neutral-600: #979797; /* gray */
-  --color-neutral-700: #555555; /* gray */
-  --color-neutral-800: #323232; /* black */
-  --color-neutral-900: #121212; /* black */
-  --color-transparent: rgba(0,0,0,0); /* Obrigado Safari */
+  --color-neutral-50: #ffffff;
+  /* white */
+  --color-neutral-100: #fafafa;
+  /* white */
+  --color-neutral-200: #f5f5f5;
+  /* gray */
+  --color-neutral-300: #f0f0f0;
+  /* gray */
+  --color-neutral-400: #dedede;
+  /* gray */
+  --color-neutral-500: #c2c2c2;
+  /* gray */
+  --color-neutral-600: #979797;
+  /* gray */
+  --color-neutral-700: #555555;
+  /* gray */
+  --color-neutral-800: #323232;
+  /* black */
+  --color-neutral-900: #121212;
+  /* black */
+  --color-transparent: rgba(0, 0, 0, 0);
+  /* Obrigado Safari */
+
+  --color-red-50-opacity-light: #fdeaed4D;
+  --color-red-100-opacity-light: #fbcacf4D;
+  --color-red-200-opacity-light: #e896954D;
+  --color-red-300-opacity-light: #db6d6c4D;
+  --color-red-400-opacity-light: #e34d484D;
+  --color-red-500-opacity-light: #e63c2e4D;
+  --color-red-600-opacity-light: #d8322d4D;
+  --color-red-700-opacity-light: #c628274D;
+  --color-red-800-opacity-light: #b921214D;
+  --color-red-900-opacity-light: #aa15154D;
+  --color-neutral-50-opacity-light: #ffffff4D;
+  /* white */
+  --color-neutral-100-opacity-light: #fafafa4D;
+  /* white */
+  --color-neutral-200-opacity-light: #f5f5f54D;
+  /* gray */
+  --color-neutral-300-opacity-light: #f0f0f04D;
+  /* gray */
+  --color-neutral-400-opacity-light: #dedede4D;
+  /* gray */
+  --color-neutral-500-opacity-light: #c2c2c24D;
+  /* gray */
+  --color-neutral-600-opacity-light: #9797974D;
+  /* gray */
+  --color-neutral-700-opacity-light: #5555554D;
+  /* gray */
+  --color-neutral-800-opacity-light: #3232324D;
+  /* black */
+  --color-neutral-900-opacity-light: #1212124D;
+  /* black */
+
+  --color-red-50-opacity-medium: #fdeaed99;
+  --color-red-100-opacity-medium: #fbcacf99;
+  --color-red-200-opacity-medium: #e8969599;
+  --color-red-300-opacity-medium: #db6d6c99;
+  --color-red-400-opacity-medium: #e34d4899;
+  --color-red-500-opacity-medium: #e63c2e99;
+  --color-red-600-opacity-medium: #d8322d99;
+  --color-red-700-opacity-medium: #c6282799;
+  --color-red-800-opacity-medium: #b9212199;
+  --color-red-900-opacity-medium: #aa151599;
+  --color-neutral-50-opacity-medium: #ffffff99;
+  /* white */
+  --color-neutral-100-opacity-medium: #fafafa99;
+  /* white */
+  --color-neutral-200-opacity-medium: #f5f5f599;
+  /* gray */
+  --color-neutral-300-opacity-medium: #f0f0f099;
+  /* gray */
+  --color-neutral-400-opacity-medium: #dedede99;
+  /* gray */
+  --color-neutral-500-opacity-medium: #c2c2c299;
+  /* gray */
+  --color-neutral-600-opacity-medium: #97979799;
+  /* gray */
+  --color-neutral-700-opacity-medium: #55555599;
+  /* gray */
+  --color-neutral-800-opacity-medium: #32323299;
+  /* black */
+  --color-neutral-900-opacity-medium: #12121299;
+  /* black */
+
+  --color-red-50-opacity-hard: #fdeaedE6;
+  --color-red-100-opacity-hard: #fbcacfE6;
+  --color-red-200-opacity-hard: #e89695E6;
+  --color-red-300-opacity-hard: #db6d6cE6;
+  --color-red-400-opacity-hard: #e34d48E6;
+  --color-red-500-opacity-hard: #e63c2eE6;
+  --color-red-600-opacity-hard: #d8322dE6;
+  --color-red-700-opacity-hard: #c62827E6;
+  --color-red-800-opacity-hard: #b92121E6;
+  --color-red-900-opacity-hard: #aa1515E6;
+  --color-neutral-50-opacity-hard: #ffffffE6;
+  /* white */
+  --color-neutral-100-opacity-hard: #fafafaE6;
+  /* white */
+  --color-neutral-200-opacity-hard: #f5f5f5E6;
+  /* gray */
+  --color-neutral-300-opacity-hard: #f0f0f0E6;
+  /* gray */
+  --color-neutral-400-opacity-hard: #dededeE6;
+  /* gray */
+  --color-neutral-500-opacity-hard: #c2c2c2E6;
+  /* gray */
+  --color-neutral-600-opacity-hard: #979797E6;
+  /* gray */
+  --color-neutral-700-opacity-hard: #555555E6;
+  /* gray */
+  --color-neutral-800-opacity-hard: #323232E6;
+  /* black */
+  --color-neutral-900-opacity-hard: #121212E6;
+  /* black */
+
+  --color-transparent: rgba(0, 0, 0, 0);
+  /* Obrigado Safari */
+
+  --opacity-light-rgb: .3;
+  --opacity-light-hex: 4D;
+  --opacity-medium-rgb: .6;
+  --opacity-medium-hex: 99;
+  --opacity-hard-rgb: .9;
+  --opacity-hard-hex: E6;
 
   /* title: 'Ubuntu, sans-serif' */
   --font-family-display: 'Montserrat', sans-serif;
@@ -53,11 +167,16 @@
   */
 
   /* O tamanho maior sobrou '4.209rem' */
-  --font-size-h1: 3.157rem; /* page title */
-  --font-size-h2: 2.369rem; /* section title */
-  --font-size-h3: 1.777rem; /* article title */
-  --font-size-h4: 1.333rem; /* article subtitle */
-  --font-size-text: 1rem; /* p, a, span */
+  --font-size-h1: 3.157rem;
+  /* page title */
+  --font-size-h2: 2.369rem;
+  /* section title */
+  --font-size-h3: 1.777rem;
+  /* article title */
+  --font-size-h4: 1.333rem;
+  /* article subtitle */
+  --font-size-text: 1rem;
+  /* p, a, span */
   --font-size-small: 0.75rem;
   --font-size-html-xs: 16px;
   --font-size-html-sm: 17px;
@@ -69,29 +188,45 @@
 
   /* black: 900 */
   /* extra bold: 800 */
-  --font-weight-h1: 700; /* bold */
-  --font-weight-h2: 600; /* semi bold */
-  --font-weight-h3: 600; /* semi bold */
-  --font-weight-h4: 500; /* medium */
-  --font-weight-button: 600; /* semi bold */
-  --font-weight-text: 400; /* regular */
+  --font-weight-h1: 700;
+  /* bold */
+  --font-weight-h2: 600;
+  /* semi bold */
+  --font-weight-h3: 600;
+  /* semi bold */
+  --font-weight-h4: 500;
+  /* medium */
+  --font-weight-button: 600;
+  /* semi bold */
+  --font-weight-text: 400;
+  /* regular */
   /* light: 300 */
   /* extra light: 200 */
   /* thin: 100 */
 
-  --letter-spacing-h1: -1px; /* page title */
-  --letter-spacing-h2: -0.5px; /* section title */
-  --letter-spacing-h3: -0.5px; /* article title */
-  --letter-spacing-h4: 0; /* article subtitle */
+  --letter-spacing-h1: -1px;
+  /* page title */
+  --letter-spacing-h2: -0.5px;
+  /* section title */
+  --letter-spacing-h3: -0.5px;
+  /* article title */
+  --letter-spacing-h4: 0;
+  /* article subtitle */
   --letter-spacing-button: 1.5px;
-  --letter-spacing-text: 0; /* p, a, span */
+  --letter-spacing-text: 0;
+  /* p, a, span */
 
-  --line-height-h1: 1.3; /* page title */
-  --line-height-h2: 1.3; /* section title */
-  --line-height-h3: 1.3; /* article title */
-  --line-height-h4: 1.7; /* article subtitle */
+  --line-height-h1: 1.3;
+  /* page title */
+  --line-height-h2: 1.3;
+  /* section title */
+  --line-height-h3: 1.3;
+  /* article title */
+  --line-height-h4: 1.7;
+  /* article subtitle */
   --line-height-button: 1;
-  --line-height-text: 1.7; /* p, a, span */
+  --line-height-text: 1.7;
+  /* p, a, span */
 
   --spacing-h1: 3rem;
   --spacing-h2: 2.5rem;
@@ -99,13 +234,6 @@
   --spacing-h4: 1.5rem;
   --spacing-text: 1.5rem;
   --spacing-small: 0.5rem;
-
-  --opacity-light-rgb: .3;
-  --opacity-light-hex: 4D;
-  --opacity-medium-rgb: .6;
-  --opacity-medium-hex: 99;
-  --opacity-hard-rgb: .9;
-  --opacity-hard-hex: E6;
 
   --transition-slow: 1.3s;
   --transition-medium: 0.8s;
@@ -124,7 +252,8 @@
 
   /* Ainda não funciona, mas só pra salvar */
   --media-xs: 0px;
-  --media-sm: 425px; /* No Bootstrap era 576 mas achei mto próximo do MD */
+  --media-sm: 425px;
+  /* No Bootstrap era 576 mas achei mto próximo do MD */
   --media-md: 768px;
   --media-lg: 992px;
   --media-xl: 1200px;
@@ -139,5 +268,364 @@
 }
 
 html {
+  font-size: var(--font-size-html-xs);
   scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 425px) {
+  html {
+    font-size: var(--font-size-html-xs);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: var(--font-size-html-sm);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: var(--font-size-html-md);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: var(--font-size-html-lg);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: var(--font-size-html-xl);
+  }
+}
+
+body {
+  line-height: var(--line-height-text);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-text);
+  font-family: var(--font-family-text);
+  letter-spacing: var(--letter-spacing-text);
+  color: var(--color-neutral-800);
+  background-color: var(--color-neutral-50);
+}
+
+nav {
+  line-height: var(--line-height-button);
+  font-size: var(--font-size-small);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-display);
+}
+
+h1 {
+  text-align: center;
+  line-height: var(--line-height-h3);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  letter-spacing: var(--letter-spacing-h3);
+}
+
+@media screen and (min-width: 425px) {
+  h1 {
+    line-height: var(--line-height-h2);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-h2);
+    letter-spacing: var(--letter-spacing-h2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    line-height: var(--line-height-h1);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-h1);
+    letter-spacing: var(--letter-spacing-h1);
+  }
+}
+
+h2 {
+  margin-top: calc(var(--spacing-h4) * 2);
+  margin-bottom: var(--spacing-h4);
+  text-align: center;
+  line-height: var(--line-height-h4);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h4);
+  letter-spacing: var(--letter-spacing-h4);
+}
+
+@media screen and (min-width: 425px) {
+  h2 {
+    margin-top: calc(var(--spacing-h3) * 2);
+    margin-bottom: var(--spacing-h3);
+    line-height: var(--line-height-h3);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-h3);
+    letter-spacing: var(--letter-spacing-h3);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    margin-top: calc(var(--spacing-h2) * 2);
+    margin-bottom: var(--spacing-h2);
+    line-height: var(--line-height-h2);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-h2);
+    letter-spacing: var(--letter-spacing-h2);
+  }
+}
+
+h3 {
+  margin-top: calc(var(--spacing-text) * 2);
+  margin-bottom: var(--spacing-text);
+  text-align: left;
+  line-height: var(--line-height-text);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-h2);
+  letter-spacing: var(--letter-spacing-text);
+}
+
+@media screen and (min-width: 425px) {
+  h3 {
+    margin-top: calc(var(--spacing-h4) * 2);
+    margin-bottom: var(--spacing-h4);
+    line-height: var(--line-height-h4);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-h3);
+    letter-spacing: var(--letter-spacing-h4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h3 {
+    margin-top: calc(var(--spacing-h3) * 2);
+    margin-bottom: var(--spacing-h3);
+    line-height: var(--line-height-h3);
+    font-size: var(--font-size-h3);
+    letter-spacing: var(--letter-spacing-h3);
+  }
+}
+
+h4 {
+  margin-top: calc(var(--spacing-text) * 2);
+  margin-bottom: var(--spacing-text);
+  text-align: left;
+  line-height: var(--line-height-text);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-h4);
+  letter-spacing: var(--letter-spacing-text);
+}
+
+@media screen and (min-width: 768px) {
+  h4 {
+    margin-top: calc(var(--spacing-h4) * 2);
+    margin-bottom: var(--spacing-h4);
+    line-height: var(--line-height-h4);
+    font-size: var(--font-size-h4);
+    letter-spacing: var(--letter-spacing-h4);
+  }
+}
+
+ul, ol {
+  margin-left: 2rem;
+}
+
+li {
+  margin-bottom: var(--spacing-small);
+}
+
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child) {
+  margin-bottom: var(--spacing-text);
+}
+
+table {
+  width: 100%;
+}
+
+table caption { /* visually hidden */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+table td,
+table th {
+  padding: 0.5rem;
+  text-align: center;
+  line-height: var(--line-height-h3);
+}
+
+table thead tr {
+  font-weight: var(--font-weight-button);
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-700);
+}
+
+table thead tr:hover {
+  color: var(--color-neutral-100);
+  background-color: var(--color-red-500);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--color-neutral-200);
+}
+
+table tbody tr:hover {
+  color: var(--color-neutral-50);
+  background-color: var(--color-red-300);
+}
+
+table tfoot tr {
+  background-color: var(--color-neutral-400);
+}
+
+table tfoot tr:hover {
+  color: var(--color-neutral-50);
+  background-color: var(--color-red-400);
+}
+
+blockquote {
+  border-left: 10px solid var(--color-red-100);
+  padding: 1rem 1rem 1rem 1.5rem;
+}
+
+blockquote p {
+  font-style: italic;
+}
+
+blockquote p::before {
+  content: '" ';
+}
+
+blockquote p::after {
+  content: ' "';
+}
+
+blockquote footer::before {
+  content: '—';
+  margin-right: 1rem;
+}
+
+hr {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid var(--color-neutral-400);
+}
+
+a {
+  color: currentColor;
+}
+
+a:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-weight: var(--font-weight-h1);
+  font-size: var(--font-size-small);
+  font-family: var(--font-family-display);
+  background-color: transparent;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
+  border: none;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-small);
+  color: var(--color-neutral-800);
+  background-color: var(--color-neutral-50);
+}
+
+input:focus {
+  outline: none;
+}
+
+strong {
+  font-weight: var(--font-weight-h1);
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+pre[class*="language-"] {
+  padding: 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: none;
+}
+
+code:not([class*="language-"]) {
+  display: inline-block;
+  padding: 0 0.4rem;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-small);
+  background-color: var(--color-neutral-200);
+}
+
+@media (min-width: 768px) {
+  code:not([class*="language-"]) {
+    padding: 0.1rem 0.3rem;
+    line-height: 1;
+  }
+}
+
+figure:not(:first-child),
+table:not(:first-child),
+iframe:not(:first-child),
+blockquote:not(:first-child),
+hr:not(:first-child),
+pre[class*="language-"]:not(:first-child),
+[class*="TextBox"]:not(:first-child),
+.twitter-tweet:not(:first-child),
+video {
+  margin-top: var(--spacing-h1) !important;
+  /* O !important serve para sobrescrever o CSS inline do Twitter */
+}
+
+figure:not(:last-child),
+table:not(:last-child),
+iframe:not(:last-child),
+blockquote:not(:last-child),
+hr:not(:last-child),
+pre[class*="language-"]:not(:last-child),
+[class*="TextBox"]:not(:last-child),
+.twitter-tweet:not(:last-child),
+video {
+  margin-bottom: var(--spacing-h1) !important;
+  /**
+   * O !important serve para sobrescrever o CSS inline do Twitter
+   */
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.twitter-tweet {
+  margin: 0 auto;
 }

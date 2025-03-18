@@ -1,17 +1,15 @@
 import type { GetStaticPropsContext } from 'next';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
+import ProgressBar from '../../src/components/ui/block/ProgressBar';
+import PageFooter from '../../src/components/ui/section/PageFooter';
+import PageHeader from '../../src/components/ui/section/PageHeader';
 import PostComments from '../../src/components/ui/section/PostComments';
 import PostContent from '../../src/components/ui/section/PostContent';
-import ProgressBar from '../../src/components/ui/block/ProgressBar';
-import { getContent } from '../../src/external/datoCMS';
-import { theme } from '../../src/theme';
-import { GlobalStyle } from '../../src/theme/globalStyle';
-import { PostProps, PostSummaryProps } from '../../src/types';
-import { parseSlugParam } from '../../src/utils/parseParams';
-import PageHeader from '../../src/components/ui/section/PageHeader';
-import PageFooter from '../../src/components/ui/section/PageFooter';
 import PostHeader from '../../src/components/ui/section/PostHeader';
 import RelatedPosts from '../../src/components/ui/section/RelatedPosts';
+import { getContent } from '../../src/external/datoCMS';
+import { PostProps, PostSummaryProps } from '../../src/types';
+import { parseSlugParam } from '../../src/utils/parseParams';
 
 const PostPage = styled.main`
   margin-bottom: 10%;
@@ -35,8 +33,7 @@ export default function Post({
   } = post.data.post;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <>
       <PageHeader />
       <PostPage>
         <PostHeader
@@ -54,7 +51,7 @@ export default function Post({
       <RelatedPosts postCategory={category} relatedPosts={relatedPosts} />
       <ProgressBar />
       <PageFooter />
-    </ThemeProvider>
+    </>
   );
 }
 
