@@ -2,8 +2,8 @@
   padding-top: 6.6rem;
   padding-bottom: 3rem;
   background-image:
-    linear-gradient(var(--color-neutral-400) var(--opacity-hard-hex) 100%,
-      var(--color-neutral-400) var(--opacity-hard-hex) 100%),
+    linear-gradient(var(--color-neutral-400-opacity-hard) 100%,
+      var(--color-neutral-400-opacity-hard) 100%),
     var(--background-image);
   background-position: center;
   background-size: cover;

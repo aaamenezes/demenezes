@@ -1,5 +1,4 @@
 import settings from '../../../../../settings.json';
-import { clsx } from '../../../../utils/clsx';
 import HiddenA11Y from '../../base/HiddenA11Y';
 import Input from '../../base/Input';
 import LinkButton from '../../base/LinkButton';
@@ -83,7 +82,7 @@ export default function Newsletter() {
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    className={clsx(S.submitButton, 'button')}
+                    className={S.submitButton}
                   >
                     Quero receber
                   </LinkButton>

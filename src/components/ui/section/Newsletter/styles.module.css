@@ -9,6 +9,7 @@
 .newsletterForm {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  margin-bottom: 7rem;
   background-color: var(--color-neutral-400);
 }
 

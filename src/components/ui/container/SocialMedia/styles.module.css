@@ -10,6 +10,7 @@
   display: block;
   margin-top: 0;
   font-size: var(--font-size-small);
+  font-weight: var(--font-weight-button);
   color: var(--color-neutral-500);
 }
 

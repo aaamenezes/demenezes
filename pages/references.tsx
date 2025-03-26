@@ -3,6 +3,11 @@
 // import { getContent } from '../src/external/datoCMS';
 // import { PaginationButton } from '../src/components/PaginationButton'
 
+import Head from '../src/components/meta/Head';
+import Wrapper from '../src/components/ui/container/Wrapper';
+import PageFooter from '../src/components/ui/section/PageFooter';
+import PageHeader from '../src/components/ui/section/PageHeader';
+
 // const ReferencesContainer = styled.header`
 //   padding-top: 6.6rem;
 // `;
@@ -90,7 +95,6 @@ export default function References({
 }: {
   referencesMetaData: any;
 }) {
-  alert(referencesMetaData);
   // const [activeType, setActiveType] = useState('Blog');
 
   // const Types = [ 'Blog', 'Podcast', 'YouTube', 'Twitter' ]
@@ -147,25 +151,26 @@ export default function References({
   // ))
 
   return (
-    <div></div>
-    // <ThemeProvider theme={theme}>
-    //   <Head componentProps={{}} />
-    //   <PageHeader />
-    //   <Wrapper /* as={ReferencesContainer} */ width="full">
-    //     <Wrapper /* as={ReferencesHeader} */ width="xxl">
-    //       <h1>Em construção...</h1>
-    //       {/* <h1>Minhas principais referências na área de programação</h1>
-    //     <BlockQuote>
-    //       <p>Na natureza nada se cria, tudo se copia.</p>
-    //     </BlockQuote>
-    //      */}
-    //       {/* <p>Essa página</p> */}
-    //       {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
-    //     </Wrapper>
-    //     <ReferencesList role="list">{referencesItems}</ReferencesList>
-    //   </Wrapper>
-    //   <PageFooter />
-    // </ThemeProvider>
+    <>
+      <Head componentProps={{}} />
+      <PageHeader />
+      <Wrapper width="full">
+        <Wrapper width="xxl">
+          <h1>Em construção...</h1>
+          <div>
+            <pre>{JSON.stringify(referencesMetaData, null, 2)}</pre>
+          </div>
+          {/* <h1>Minhas principais referências na área de programação</h1>
+            <BlockQuote>
+              <p>Na natureza nada se cria, tudo se copia.</p>
+            </BlockQuote>
+          */}
+          {/* <p>Essa página</p> */}
+          {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
+        </Wrapper>
+      </Wrapper>
+      <PageFooter />
+    </>
   );
 }
 

@@ -405,7 +405,7 @@ h3 {
 
 @media screen and (min-width: 768px) {
   h3 {
-    margin-top: calc(var(--spacing-h3) * 2);
+    margin-top: var(--spacing-h3);
     margin-bottom: var(--spacing-h3);
     line-height: var(--line-height-h3);
     font-size: var(--font-size-h3);
@@ -433,7 +433,8 @@ h4 {
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 2rem;
 }
 
@@ -451,7 +452,8 @@ table {
   width: 100%;
 }
 
-table caption { /* visually hidden */
+table caption {
+  /* visually hidden */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -563,7 +565,8 @@ strong {
   font-weight: var(--font-weight-h1);
 }
 
-img, video {
+img,
+video {
   display: block;
   max-width: 100%;
   height: auto;
@@ -585,7 +588,7 @@ code:not([class*="language-"]) {
   background-color: var(--color-neutral-200);
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   code:not([class*="language-"]) {
     padding: 0.1rem 0.3rem;
     line-height: 1;

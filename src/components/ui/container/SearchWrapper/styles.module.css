@@ -25,7 +25,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-neutral-900) var(--opacity-hard-hex);
+  background-color: var(--color-neutral-900-opacity-hard);
   opacity: 0;
   transition: var(--transition-medium);
   pointer-events: none;

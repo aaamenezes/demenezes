@@ -1,5 +1,4 @@
 import type { GetStaticPropsContext } from 'next';
-import styled from 'styled-components';
 import ProgressBar from '../../src/components/ui/block/ProgressBar';
 import PageFooter from '../../src/components/ui/section/PageFooter';
 import PageHeader from '../../src/components/ui/section/PageHeader';
@@ -10,10 +9,6 @@ import RelatedPosts from '../../src/components/ui/section/RelatedPosts';
 import { getContent } from '../../src/external/datoCMS';
 import { PostProps, PostSummaryProps } from '../../src/types';
 import { parseSlugParam } from '../../src/utils/parseParams';
-
-const PostPage = styled.main`
-  margin-bottom: 10%;
-`;
 
 export default function Post({
   post,
@@ -35,7 +30,7 @@ export default function Post({
   return (
     <>
       <PageHeader />
-      <PostPage>
+      <main style={{ marginBottom: '10%' }}>
         <PostHeader
           title={title}
           description={metaDescription}
@@ -46,7 +41,7 @@ export default function Post({
           coverImage={thumbnail.responsiveImage.src}
         />
         <PostContent post={post} />
-      </PostPage>
+      </main>
       <PostComments />
       <RelatedPosts postCategory={category} relatedPosts={relatedPosts} />
       <ProgressBar />

@@ -28,10 +28,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: var(--line-height-button);
   padding: 0.66rem;
+  line-height: var(--line-height-button);
+  font-weight: var(--font-weight-button);
+  text-transform: uppercase;
+  text-align: center;
   border-radius: var(--border-radius);
   border: 1px solid var(--color-neutral-900);
   transition: var(--transition-fast);
@@ -45,7 +46,7 @@
 }
 
 .paginationButton.disabled {
-  border: 1px solid var(--color-neutral-900) var(--opacity-light-hex);
+  border: 1px solid var(--color-neutral-900-opacity-light);
 }
 
 .pagination:hover,

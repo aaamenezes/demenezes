@@ -17,7 +17,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-neutral-900) var(--opacity-medium-hex);
+  background-color: var(--color-neutral-900-opacity-medium);
   opacity: 0;
   transition: var(--transition-medium);
   pointer-events: none;
@@ -31,6 +31,7 @@
 .navLink {
   display: block;
   padding: 1.1rem 5%;
+  font-weight: var(--font-weight-button);
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-100);
 }

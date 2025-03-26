@@ -1,5 +1,6 @@
 .heroWrapper {
   padding-top: 6.6rem;
+  margin-bottom: 7rem;
   background-image:
     linear-gradient(270deg,
       var(--color-neutral-900-opacity-medium),

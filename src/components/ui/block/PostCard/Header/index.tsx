@@ -20,8 +20,8 @@ export default function PostCardHeader({
       <h3
         className={clsx(
           S.postCardTitle,
-          isHero && 'isHero',
-          isCompact && 'isCompact'
+          isHero && S.isHero,
+          isCompact && S.isCompact
         )}
       >
         <LinkButton className={S.postCardTitleLink} href={`/posts/${slug}`}>
