@@ -163,7 +163,7 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
       }
     }`,
     relatedPosts: `{
-      allPosts(filter: {category: {eq: "${category}"}}, orderBy: _updatedAt_DESC) {
+      allPosts(filter: {category: {eq: "${category}"}}, orderBy: _updatedAt_DESC, first: 100) {
         title
         slug
         category
@@ -178,7 +178,7 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
       }
     }`,
     routes: `{
-      allPosts {
+      allPosts(first: 100) {
         slug
       }
     }`,
