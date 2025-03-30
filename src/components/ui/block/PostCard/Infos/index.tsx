@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, useCallback } from 'react';
 import { PostSummaryProps } from '../../../../../types';
 import { clsx } from '../../../../../utils/clsx';
 import PostCardDescription from '../Description';
@@ -17,11 +17,11 @@ export default function PostCardInfos({
 }) {
   const { _firstPublishedAt, metaDescription, _updatedAt } = post;
 
-  function getWrapperWidth(isHero: boolean, compact: boolean) {
+  const getWrapperWidth = useCallback((isHero: boolean, compact: boolean) => {
     if (compact) return '100%';
     if (isHero) return '50%';
     return '62%';
-  }
+  }, []);
 
   return (
     <div

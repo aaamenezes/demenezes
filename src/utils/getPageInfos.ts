@@ -1,10 +1,10 @@
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import settings from '../../settings.json';
-import {PageName, PageProps} from '../types';
+import { PageName, PageProps } from '../types';
 
-export function getPageInfos(): {currentPage: PageName} {
-  const {pages} = settings;
-  const {pathname} = useRouter();
+export function getPageInfos(): { currentPage: PageName } {
+  const { pages } = settings;
+  const { pathname } = useRouter();
 
   /**
    * o type assertion abaixo foi a solução menor pior
@@ -20,5 +20,5 @@ export function getPageInfos(): {currentPage: PageName} {
       return (page as [PageName, PageProps])[1].url === pathname;
     })?.[0] || 'home';
 
-  return {currentPage};
+  return { currentPage };
 }

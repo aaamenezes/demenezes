@@ -45,8 +45,8 @@ export function simplifyString(string: string) {
 
   return string
     .toLowerCase()
-    .normalize('NFD') // Trocar acentos pelo correspondente sem acento
-    .replace(/[^\w\s-]/g, '') // Remove caracteres especiais
+    .normalize('NFD') // troca acentos pelo correspondente sem acento
+    .replace(/[^\w\s-]/g, '') // remove caracteres especiais
     .replace(/\s+/g, '-') // substitui espaços por hífen
     .trim();
 }

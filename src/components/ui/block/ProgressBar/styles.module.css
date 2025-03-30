@@ -4,6 +4,6 @@
   top: 0;
   left: 0;
   width: var(--bar-width);
-  height: 0.1rem;
+  height: 2px;
   background-color: var(--color-red-700);
 }

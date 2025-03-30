@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { clsx } from '../../../../utils/clsx';
 import ToggleModalButton from '../../block/ToggleModalButton';
 import Wrapper from '../../container/Wrapper';
@@ -7,9 +7,9 @@ import S from './styles.module.css';
 export default function SearchWrapper() {
   const [isOpenSearch, setIsOpenSearch] = useState(false);
 
-  function toggleSearch() {
-    setIsOpenSearch(!isOpenSearch);
-  }
+  const toggleSearch = useCallback(() => {
+    setIsOpenSearch(currentState => !currentState);
+  }, []);
 
   return (
     <div className={S.search}>

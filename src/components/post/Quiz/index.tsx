@@ -1,4 +1,4 @@
-import { FormEvent, MouseEvent, useState } from 'react';
+import { FormEvent, MouseEvent, useCallback, useState } from 'react';
 import { clsx } from '../../../utils/clsx';
 import { simplifyString } from '../../../utils/simplifyString';
 import LinkButton from '../../ui/base/LinkButton';
@@ -20,18 +20,21 @@ export default function Quiz({
   const [markedResponse, setMarkedResponse] = useState<number | null>(null);
   const [responseIsCorrect, setResponseIsCorrect] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const handleSubmit = useCallback((event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResponseIsCorrect(markedResponse === correctAlternativeIndex - 1);
     setIsAnswered(true);
-  }
+  }, []);
 
-  function handleMarkedResponse(event: MouseEvent<HTMLButtonElement>) {
-    // ou zero
-    const dataId = event.currentTarget.getAttribute('data-id');
-    const markedAlternativeIndex = dataId !== null ? Number(dataId) : 0;
-    setMarkedResponse(markedAlternativeIndex);
-  }
+  const handleMarkedResponse = useCallback(
+    (event: MouseEvent<HTMLButtonElement>) => {
+      // ou zero
+      const dataId = event.currentTarget.getAttribute('data-id');
+      const markedAlternativeIndex = dataId !== null ? Number(dataId) : 0;
+      setMarkedResponse(markedAlternativeIndex);
+    },
+    []
+  );
 
   return (
     <form

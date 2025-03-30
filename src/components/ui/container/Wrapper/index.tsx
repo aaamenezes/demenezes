@@ -1,4 +1,4 @@
-import type { CSSProperties, PropsWithChildren } from 'react';
+import { useCallback, type CSSProperties, type PropsWithChildren } from 'react';
 import S from './styles.module.css';
 import { clsx } from '../../../../utils/clsx';
 
@@ -15,35 +15,6 @@ const breakpoints = {
 type Breakpoint = keyof typeof breakpoints;
 type Width = Breakpoint | 'full';
 
-function getWrapperMaxWidth(
-  width: Width,
-  breakpoint: Breakpoint,
-  isFluid: boolean
-) {
-  if (width && width !== 'full' && isFluid) {
-    return `${breakpoints[width]}px`;
-  }
-
-  if (width && width !== 'full' && !isFluid) {
-    if (breakpoint === 'xs') return '100%';
-    if (breakpoint === 'sm') return `${breakpoints.sm}px`;
-
-    return breakpoints[breakpoint] < breakpoints[width]
-      ? breakpoints[breakpoint] + 'px'
-      : breakpoints[width] + 'px';
-  }
-
-  return '100%';
-}
-
-function getWrapperPadding(width: Width, breakpoint: Breakpoint) {
-  if (!width || width === 'full') return '0';
-
-  const paddingPercent = 0.05;
-
-  return breakpoints[breakpoint] * paddingPercent + 'px';
-}
-
 export default function Wrapper({
   width,
   isFluid = false,
@@ -57,6 +28,37 @@ export default function Wrapper({
   as?: keyof HTMLElementTagNameMap;
   className?: string;
 }>) {
+  const getWrapperMaxWidth = useCallback(
+    (width: Width, breakpoint: Breakpoint, isFluid: boolean) => {
+      if (width && width !== 'full' && isFluid) {
+        return `${breakpoints[width]}px`;
+      }
+
+      if (width && width !== 'full' && !isFluid) {
+        if (breakpoint === 'xs') return '100%';
+        if (breakpoint === 'sm') return `${breakpoints.sm}px`;
+
+        return breakpoints[breakpoint] < breakpoints[width]
+          ? breakpoints[breakpoint] + 'px'
+          : breakpoints[width] + 'px';
+      }
+
+      return '100%';
+    },
+    []
+  );
+
+  const getWrapperPadding = useCallback(
+    (width: Width, breakpoint: Breakpoint) => {
+      if (!width || width === 'full') return '0';
+
+      const paddingPercent = 0.05;
+
+      return breakpoints[breakpoint] * paddingPercent + 'px';
+    },
+    []
+  );
+
   return (
     <div
       className={clsx(S.container, className)}

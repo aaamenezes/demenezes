@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { clsx } from '../../../../utils/clsx';
 import { getPageInfos } from '../../../../utils/getPageInfos';
 import LogoWrapper from '../../block/LogoWrapper';
@@ -12,9 +12,9 @@ export default function PageHeader() {
   const [isOpenHeader, setIsOpenHeader] = useState(true);
   const { currentPage } = getPageInfos();
 
-  function toggleMenu() {
-    setIsOpenMenu(!isOpenMenu);
-  }
+  const toggleMenu = useCallback(() => {
+    setIsOpenMenu(currentState => !currentState);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
