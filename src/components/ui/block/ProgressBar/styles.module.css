@@ -1,0 +1,9 @@
+.bar {
+  position: fixed;
+  z-index: var(--z-index-fixed);
+  top: 0;
+  left: 0;
+  width: var(--bar-width);
+  height: 0.1rem;
+  background-color: var(--color-red-700);
+}

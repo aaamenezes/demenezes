@@ -1,21 +1,14 @@
 import type { GetStaticPropsContext } from 'next';
-import styled, { ThemeProvider } from 'styled-components';
-import PageFooter from '../../src/components/Common/PageFooter';
-import PageHeader from '../../src/components/Common/PageHeader';
-import PostComments from '../../src/components/PostPage/PostComments';
-import PostContent from '../../src/components/PostPage/PostContent';
-import PostHeader from '../../src/components/PostPage/PostHeader';
-import ProgressBar from '../../src/components/PostPage/ProgressBar';
-import RelatedPosts from '../../src/components/PostPage/RelatedPosts';
+import ProgressBar from '../../src/components/ui/block/ProgressBar';
+import PageFooter from '../../src/components/ui/section/PageFooter';
+import PageHeader from '../../src/components/ui/section/PageHeader';
+import PostComments from '../../src/components/ui/section/PostComments';
+import PostContent from '../../src/components/ui/section/PostContent';
+import PostHeader from '../../src/components/ui/section/PostHeader';
+import RelatedPosts from '../../src/components/ui/section/RelatedPosts';
 import { getContent } from '../../src/external/datoCMS';
-import { theme } from '../../src/theme';
-import { GlobalStyle } from '../../src/theme/globalStyle';
 import { PostProps, PostSummaryProps } from '../../src/types';
 import { parseSlugParam } from '../../src/utils/parseParams';
-
-const PostPage = styled.main`
-  margin-bottom: 10%;
-`;
 
 export default function Post({
   post,
@@ -35,10 +28,9 @@ export default function Post({
   } = post.data.post;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <>
       <PageHeader />
-      <PostPage>
+      <main style={{ marginBottom: '10%' }}>
         <PostHeader
           title={title}
           description={metaDescription}
@@ -49,12 +41,12 @@ export default function Post({
           coverImage={thumbnail.responsiveImage.src}
         />
         <PostContent post={post} />
-      </PostPage>
+      </main>
       <PostComments />
       <RelatedPosts postCategory={category} relatedPosts={relatedPosts} />
       <ProgressBar />
       <PageFooter />
-    </ThemeProvider>
+    </>
   );
 }
 

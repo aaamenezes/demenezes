@@ -1,0 +1,29 @@
+.logoLink {
+  position: relative;
+  display: block;
+  transition: var(--transition-fast);
+}
+
+.logoLink:hover::after,
+.logoLink:focus::after {
+  width: 100%;
+}
+
+.logoLink::after {
+  content: '';
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-neutral-100);
+  transition: var(--transition-fast);
+}
+
+.logo {
+  display: block;
+  line-height: var(--line-height-button);
+  font-size: var(--font-size-h4);
+  font-family: var(--font-family-text);
+}

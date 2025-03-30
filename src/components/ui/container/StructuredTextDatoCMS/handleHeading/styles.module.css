@@ -1,0 +1,44 @@
+.title {
+  scroll-margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 425px) {
+  .title {
+    scroll-margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    scroll-margin-top: 2.5rem;
+  }
+}
+
+.titleLink {
+  display: block;
+  text-decoration-color: var(--color-transparent);
+  text-underline-offset: var(--spacing-small);
+  text-decoration-style: dotted;
+  transition: var(--transition-fast);
+}
+
+.titleLink::after {
+  content: '#';
+  display: inline-block;
+  margin-left: var(--spacing-small);
+  vertical-align: middle;
+  font-size: var(--font-size-h4);
+  text-decoration: none;
+  color: var(--color-neutral-500);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.titleLink:hover,
+.titleLink:focus {
+  text-decoration-color: var(--color-neutral-500);
+}
+
+.titleLink:hover::after {
+  opacity: 1;
+}

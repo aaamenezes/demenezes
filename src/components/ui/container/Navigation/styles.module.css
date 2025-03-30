@@ -1,0 +1,144 @@
+.closeMenuMobileButton {
+  position: absolute;
+  top: 0.66rem;
+  right: 0.66rem;
+}
+
+@media screen and (min-width: 768px) {
+  .closeMenuMobileButton {
+    display: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: var(--z-index-under);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-neutral-900-opacity-medium);
+  opacity: 0;
+  transition: var(--transition-medium);
+  pointer-events: none;
+}
+
+.overlay.isOpenMenu {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navLink {
+  display: block;
+  padding: 1.1rem 5%;
+  font-weight: var(--font-weight-button);
+  color: var(--color-neutral-800);
+  background-color: var(--color-neutral-100);
+}
+
+@media screen and (min-width: 768px) {
+  .navLink {
+    padding: 0.88rem;
+    color: var(--color-neutral-50);
+    background-color: var(--color-transparent);
+  }
+}
+
+.navLink.isCurrentPage {
+  color: var(--color-neutral-100);
+  background-color: var(--color-red-700);
+}
+
+@media screen and (min-width: 768px) {
+  .navLink.isCurrentPage {
+    background-color: var(--color-transparent);
+  }
+}
+
+.navList {
+  display: block;
+  margin: 0 !important;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navList {
+    display: flex;
+  }
+}
+
+.navWrapper {
+  position: fixed;
+  z-index: var(--z-index-fixed);
+  top: 0;
+  right: -100%;
+  width: 100vw;
+  max-width: var(--media-sm);
+  height: 100vh;
+  background-color: var(--color-neutral-300);
+  transition: var(--transition-fast);
+}
+
+@media screen and (min-width: 768px) {
+  .navWrapper {
+    position: initial;
+    width: auto;
+    height: auto;
+    background-color: var(--color-transparent);
+  }
+}
+
+.navWrapper.isOpenMenu {
+  right: 0;
+}
+
+.navItem {
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--color-neutral-300);
+}
+
+@media screen and (min-width: 768px) {
+  .navItem {
+    position: relative;
+    border: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navItem::after {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-neutral-100);
+    transition: var(--transition-fast);
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navItem.isCurrentPage::after {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .navItem:hover::after,
+  .navItem:focus-within::after {
+    width: 100%;
+  }
+}
+
+.navItem:first-child {
+  margin-top: 3.74rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navItem:first-child {
+    margin-top: 0;
+  }
+}

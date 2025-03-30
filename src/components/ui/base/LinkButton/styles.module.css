@@ -1,0 +1,19 @@
+.text {
+  text-decoration: underline;
+}
+
+.linkButton {
+  display: block;
+  letter-spacing: var(--letter-spacing-button);
+  font-family: var(--font-family-display);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.linkButton.inline {
+  display: inline;
+  letter-spacing: initial;
+  font-weight: var(--font-weight-button);
+  font-family: var(--font-family-text);
+  color: var(--color-red-700);
+}

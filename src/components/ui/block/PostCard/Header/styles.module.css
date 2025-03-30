@@ -1,0 +1,59 @@
+.categoryText {
+  font-size: var(--font-size-small);
+  font-family: var(--font-family-display);
+}
+
+.postCardTitle {
+  display: inline-block;
+  margin: 0;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
+  background-image: linear-gradient(120deg,
+      var(--color-red-900) 0%,
+      var(--color-red-500) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  background-position: 0 100%;
+  transition: var(--transition-fast);
+}
+
+@media screen and (min-width: 768px) {
+  .postCardTitle {
+    background-size: 100% 0.2rem;
+  }
+}
+
+.postCardTitle:hover,
+.postCardTitle:focus-within {
+  background-size: 100% 108%;
+}
+
+.postCardTitle:hover a,
+.postCardTitle:focus-within a {
+  color: var(--color-neutral-100);
+}
+
+.postCardTitle.isHero {
+  margin: var(--spacing-h3);
+}
+
+.postCardTitle.isCompact {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-h4);
+  line-height: var(--line-height-h4);
+  letter-spacing: var(--letter-spacing-h4);
+}
+
+.postCardTitle a {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  transition: var(--transition-fast);
+}
+
+.postCardTitleLink {
+  padding: 0.5rem;
+}

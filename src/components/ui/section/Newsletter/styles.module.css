@@ -1,0 +1,38 @@
+.newsletterTitle {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
+  margin-top: 0;
+  text-align: center;
+}
+
+.newsletterForm {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 7rem;
+  background-color: var(--color-neutral-400);
+}
+
+.inputsWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .inputsWrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+.submitButton {
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  color: var(--color-neutral-100);
+  background-color: var(--color-red-700);
+}
+
+.submitButton:hover {
+  background-color: var(--color-red-900);
+}

@@ -1,10 +1,7 @@
-import { ThemeProvider } from 'styled-components';
-import ContactForm from '../src/components/AboutPage/ContactForm';
-import PageFooter from '../src/components/Common/PageFooter';
-import PageHeader from '../src/components/Common/PageHeader';
+import ContactForm from '../src/components/ui/section/AboutContactForm';
+import PageFooter from '../src/components/ui/section/PageFooter';
+import PageHeader from '../src/components/ui/section/PageHeader';
 import { getContent } from '../src/external/datoCMS';
-import { theme } from '../src/theme';
-import { GlobalStyle } from '../src/theme/globalStyle';
 import { ContactPageProps } from '../src/types';
 
 export default function Contact({
@@ -13,12 +10,11 @@ export default function Contact({
   contactContent: ContactPageProps;
 }) {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <>
       <PageHeader />
       <ContactForm contactContent={contactContent} />
       <PageFooter />
-    </ThemeProvider>
+    </>
   );
 }
 

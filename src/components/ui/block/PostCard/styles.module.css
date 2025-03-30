@@ -1,0 +1,79 @@
+.postCardWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: box-shadow var(--transition-fast);
+  box-shadow: 0 0 2rem -1rem var(--color-neutral-800);
+}
+
+@media screen and (min-width: 425px) {
+  .postCardWrapper {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .postCardWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .postCardWrapper {
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .postCardWrapper:hover {
+    box-shadow: 0 0 2rem -1rem var(--color-neutral-800);
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .postCardWrapper.isCompact {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .postCardWrapper.isCompact {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .postCardWrapper.isCompact {
+    padding: 1rem;
+  }
+}
+
+.postCardImageWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .postCardImageWrapper {
+    width: 35%;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .postCardImageWrapper.isCompact {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.postCardImageLink {
+  position: relative;
+}

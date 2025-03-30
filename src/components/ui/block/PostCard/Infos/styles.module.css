@@ -1,0 +1,27 @@
+.postCardInfosWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .postCardInfosWrapper {
+    width: var(--post-card-infos-width);
+    margin-right: 0;
+  }
+}
+
+.postCardInfosWrapper.isHero {
+  height: 100%;
+  color: var(--color-neutral-100);
+}
+
+@media screen and (min-width: 768px) {
+  .postCardInfosWrapper {
+    margin-left: auto;
+  }
+
+  .postCardInfosWrapper.isCompact {
+    margin-left: initial;
+  }
+}

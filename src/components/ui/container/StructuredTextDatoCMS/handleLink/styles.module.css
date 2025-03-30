@@ -1,0 +1,8 @@
+.textLink {
+  text-decoration-line: underline;
+}
+
+.textLink:hover,
+.textLink:focus {
+  text-decoration-thickness: 3px;
+}

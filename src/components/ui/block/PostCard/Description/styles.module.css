@@ -1,0 +1,8 @@
+.postCardDescriptionWrapper {
+  padding: 0.5rem;
+  margin: 1.1rem 0;
+}
+
+.postCardDescriptionWrapper.isCompact {
+  display: none;
+}

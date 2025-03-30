@@ -1,18 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { ThemeProvider } from 'styled-components';
-import Categories from '../src/components/AboutPage/Categories';
-import ContactForm from '../src/components/AboutPage/ContactForm';
-import Greeting from '../src/components/AboutPage/Greeting';
-import Hobbies from '../src/components/AboutPage/Hobbies';
-import Story from '../src/components/AboutPage/Story';
-import Container from '../src/components/Common/Container';
-import PageFooter from '../src/components/Common/PageFooter';
-import PageHeader from '../src/components/Common/PageHeader';
-import SocialMedia from '../src/components/Common/SocialMedia';
+import SocialMedia from '../src/components/ui/container/SocialMedia';
+import Wrapper from '../src/components/ui/container/Wrapper';
+import AboutCategories from '../src/components/ui/section/AboutCategories';
+import ContactForm from '../src/components/ui/section/AboutContactForm';
+import Greeting from '../src/components/ui/section/AboutGreeting';
+import Hobbies from '../src/components/ui/section/AboutHobbies';
+import Story from '../src/components/ui/section/AboutStory';
+import PageFooter from '../src/components/ui/section/PageFooter';
+import PageHeader from '../src/components/ui/section/PageHeader';
 import { getContent } from '../src/external/datoCMS';
-import { theme } from '../src/theme';
-import { GlobalStyle } from '../src/theme/globalStyle';
 
 export default function About({
   aboutPageContent,
@@ -34,8 +31,7 @@ export default function About({
   } = aboutPageContent.data.aboutPage;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <>
       <PageHeader />
       <main>
         <Greeting
@@ -44,22 +40,22 @@ export default function About({
           greetingDescription={greetingDescription}
           profileImage={aboutPageContent.data.profileImage.profileImage}
         />
-        <Categories
+        <AboutCategories
           categoriesTitle={categoriesTitle}
           categoryItems={categoryItemModule}
         />
         <Story historyTitle={historyTitle} historyText={historyText} />
         <Hobbies hobbiesTitle={hobbiesTitle} hobbiesText={hobbiesText} />
-        <Container as="section" width="sm">
-          <SocialMedia center />
-        </Container>
+        <Wrapper as="section" width="sm">
+          <SocialMedia isCenter />
+        </Wrapper>
         <ContactForm contactContent={contactContent} />
-        <Container as="section" width="md">
+        <Wrapper as="section" width="md">
           <p>Muito prazer!</p>
-        </Container>
+        </Wrapper>
       </main>
       <PageFooter />
-    </ThemeProvider>
+    </>
   );
 }
 

@@ -1,0 +1,43 @@
+.toggleSearchModal {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .toggleSearchModal {
+    display: flex;
+  }
+}
+
+.search {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    display: block;
+  }
+}
+
+.searchContent {
+  position: fixed;
+  z-index: var(--z-index-fixed);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-neutral-900-opacity-hard);
+  opacity: 0;
+  transition: var(--transition-medium);
+  pointer-events: none;
+}
+
+.searchContent.isOpenSearch {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.closeSearchButton {
+  position: absolute;
+  top: 0.66rem;
+  right: 5%;
+}

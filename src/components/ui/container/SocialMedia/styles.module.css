@@ -1,0 +1,43 @@
+.socialMediaWrapper.isCenter {
+  margin: 0 auto;
+}
+
+.socialLink:focus {
+  outline: 4px dashed #9ba5aa;
+}
+
+.socialLabel {
+  display: block;
+  margin-top: 0;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-button);
+  color: var(--color-neutral-500);
+}
+
+.socialItem:not(:last-child) {
+  margin-bottom: var(--spacing-text);
+}
+
+@media screen and (min-width: 768px) {
+  .socialItem:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: var(--spacing-text);
+  }
+}
+
+.socialList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  font-size: var(--font-size-text);
+  margin-bottom: var(--spacing-h1);
+}
+
+@media screen and (min-width: 768px) {
+  .socialList {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}
