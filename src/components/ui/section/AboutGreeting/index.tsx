@@ -12,11 +12,21 @@ export default function Greeting({
   greetingTitle: string;
   greetingSubtitle: string;
   greetingDescription: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  profileImage: any;
+  profileImage: {
+    alt: string;
+    responsiveImage: {
+      src: string;
+    };
+    width: number;
+    height: number;
+  };
 }) {
-  const { src } = profileImage.responsiveImage;
-  const { alt, width, height } = profileImage;
+  const {
+    alt,
+    width,
+    height,
+    responsiveImage: { src },
+  } = profileImage;
 
   return (
     <Wrapper className={S.greeting} width="lg">

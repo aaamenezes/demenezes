@@ -75,7 +75,8 @@ export const iconMap = {
     className: 'fas fa-solid fa-link',
     color: '',
   },
-  // default: {
-  //   className: 'fas fa-question-circle'
-  //   color: ''}
+  default: {
+    className: 'fas fa-question-circle',
+    color: '',
+  },
 };

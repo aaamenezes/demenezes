@@ -32,7 +32,7 @@ export default function PageHeader() {
       )}
     >
       <Wrapper className={S.headerInner} width="xxxl" spacing={0} isFluid>
-        <LogoWrapper />
+        <LogoWrapper isHeader />
         <ToggleModalButton
           className={S.toggleMenuButton}
           onClick={toggleMenu}

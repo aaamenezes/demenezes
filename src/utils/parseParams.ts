@@ -14,10 +14,10 @@ export function parseSlugParam(slug: ParsedUrlQuery['slug']) {
 
 // export function parseParam<ParamType, FallbackType>(
 //   param: ParamType,
-//   index: number,
-//   fallback: FallbackType
+//   fallback: FallbackType,
+//   index: number = 0
 // ): ParamType | FallbackType {
-//   if (!param) return fallback;
 //   if (Array.isArray(param)) return param[index];
-//   return param;
+//   if (param) return param;
+//   return fallback;
 // }

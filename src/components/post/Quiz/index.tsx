@@ -2,9 +2,6 @@ import { FormEvent, MouseEvent, useCallback, useState } from 'react';
 import { clsx } from '../../../utils/clsx';
 import { simplifyString } from '../../../utils/simplifyString';
 import LinkButton from '../../ui/base/LinkButton';
-// Resolver esse style vindo de outro lugar aqui
-import ButtonStyle from '../../ui/section/Pagination/styles.module.css';
-// Resolver esse style vindo de outro lugar aqui
 import S from './styles.module.css';
 
 export default function Quiz({
@@ -28,7 +25,6 @@ export default function Quiz({
 
   const handleMarkedResponse = useCallback(
     (event: MouseEvent<HTMLButtonElement>) => {
-      // ou zero
       const dataId = event.currentTarget.getAttribute('data-id');
       const markedAlternativeIndex = dataId !== null ? Number(dataId) : 0;
       setMarkedResponse(markedAlternativeIndex);
@@ -76,7 +72,7 @@ export default function Quiz({
       </ul>
       <footer className={S.footer}>
         <LinkButton
-          className={ButtonStyle.paginationButton}
+          className={S.submitButton}
           type="submit"
           disabled={isAnswered}
           aria-disabled={isAnswered}
