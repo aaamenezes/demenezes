@@ -19,7 +19,6 @@ export default function Button({
   id?: string;
 }>) {
   /**
-   * aria-disabled
    * tab-index
    */
   return (

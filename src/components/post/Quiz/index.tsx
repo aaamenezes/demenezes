@@ -1,4 +1,4 @@
-import { FormEvent, MouseEvent, useCallback, useState } from 'react';
+import { FormEvent, useCallback, useState } from 'react';
 import { clsx } from '../../../utils/clsx';
 import { simplifyString } from '../../../utils/simplifyString';
 import Button from '../../ui/base/Button';
@@ -10,7 +10,7 @@ export default function Quiz({
   correctAlternativeIndex,
 }: {
   title: string;
-  alternatives: Array<{ id: string; text: string }>;
+  alternatives: string[];
   correctAlternativeIndex: number;
 }) {
   const [isAnswered, setIsAnswered] = useState(false);
@@ -23,15 +23,6 @@ export default function Quiz({
     setIsAnswered(true);
   }, []);
 
-  const handleMarkedResponse = useCallback(
-    (event: MouseEvent<HTMLButtonElement>) => {
-      const dataId = event.currentTarget.getAttribute('data-id');
-      const markedAlternativeIndex = dataId !== null ? Number(dataId) : 0;
-      setMarkedResponse(markedAlternativeIndex);
-    },
-    []
-  );
-
   return (
     <form
       className={clsx(S.quizForm, isAnswered && S.isAnswered)}
@@ -43,52 +34,50 @@ export default function Quiz({
         </p>
       </header>
       <ul className={S.alternativesList}>
-        {alternatives.map((alternative, index) => (
-          <li key={alternative.id}>
-            <input
-              className={clsx(
-                S.alternativeInput,
-                isAnswered && S.isAnswered,
-                index === correctAlternativeIndex - 1 && S.isCorrectResponse
-              )}
-              type="radio"
-              name={simplifyString(title)}
-              id={`${simplifyString(title)}-${index}`}
-              value={index}
-            />
-            <button
-              onClick={handleMarkedResponse}
-              type="button"
-              data-id={index}
-              disabled={isAnswered}
-              aria-disabled={isAnswered}
-            >
-              <label htmlFor={`${simplifyString(title)}-${index}`}>
-                {alternative.text}
-              </label>
-            </button>
-          </li>
-        ))}
+        {alternatives.map((alternative, index) => {
+          const currentId = `${simplifyString(title)}-${index}`;
+
+          return (
+            <li key={simplifyString(alternative)}>
+              <input
+                className={clsx(
+                  S.alternativeInput,
+                  isAnswered && S.isAnswered,
+                  index === correctAlternativeIndex - 1 && S.isCorrectResponse
+                )}
+                type="radio"
+                name={simplifyString(title)}
+                id={currentId}
+                value={index}
+              />
+              <button
+                onClick={() => setMarkedResponse(index)}
+                type="button"
+                disabled={isAnswered}
+              >
+                <label htmlFor={currentId}>{alternative}</label>
+              </button>
+            </li>
+          );
+        })}
       </ul>
       <footer className={S.footer}>
-        <Button
-          className={S.submitButton}
-          type="submit"
-          disabled={isAnswered}
-          aria-disabled={isAnswered}
-        >
-          Enviar
+        <Button className={S.submitButton} type="submit" disabled={isAnswered}>
+          Responder
         </Button>
         {isAnswered && (
           <p>
-            <span>
-              {responseIsCorrect ? 'Resposta certa!' : 'Resposta Errada...'}
-            </span>
-            <span>
-              {responseIsCorrect
-                ? '😃🎉🎊🎯🥇🏳️‍⚧️💓💯🔟⬆️🔝'
-                : '😥🤡☠️👎🏽💣❌☢️0️⃣'}
-            </span>
+            {responseIsCorrect ? (
+              <>
+                <span>Resposta certa!</span>
+                <span>😃🎉🎊🎯🥇🏳️‍⚧️💓💯🔟⬆️🔝</span>
+              </>
+            ) : (
+              <>
+                <span>Resposta Errada...</span>
+                <span>😥🤡☠️👎🏽💣❌☢️0️⃣</span>
+              </>
+            )}
           </p>
         )}
       </footer>
