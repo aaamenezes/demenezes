@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint './pages/**' './src/**'",
-    "lint:fix": "eslint './pages/**' './src/**' --fix"
+    "lint:fix": "eslint './pages/**' './src/**' --fix",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "babel-plugin-prismjs": "^2.1.0",
@@ -14,7 +16,7 @@
     "date-fns": "2.16.1",
     "datocms-structured-text-utils": "^2.0.1",
     "install": "^0.13.0",
-    "next": "^13.0.6",
+    "next": "^13.5.7",
     "npm": "^7.20.6",
     "prismjs": "^1.26.0",
     "react": "^18.2.0",
@@ -23,7 +25,15 @@
     "url-meta-scraper": "^1.0.3"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.6",
     "@eslint/js": "^9.17.0",
+    "@storybook/addon-essentials": "^8.6.11",
+    "@storybook/addon-onboarding": "^8.6.11",
+    "@storybook/blocks": "^8.6.11",
+    "@storybook/experimental-addon-test": "^8.6.11",
+    "@storybook/nextjs": "^8.6.11",
+    "@storybook/react": "^8.6.11",
+    "@storybook/test": "^8.6.11",
     "@types/node": "^22.10.1",
     "@types/prismjs": "^1.26.5",
     "@types/react": "^19.0.1",
@@ -31,10 +41,17 @@
     "cheerio": "^1.0.0-rc.12",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-storybook": "^0.12.0",
     "globals": "^15.14.0",
+    "storybook": "^8.6.11",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2",
     "typescript-plugin-css-modules": "^5.1.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
 }

@@ -6,7 +6,7 @@ import { clsx } from '../../../../utils/clsx';
 
 export default function Icon({
   name,
-  color: propIconColor = '',
+  color: propIconColor = 'black',
   className: propIconClassName = '',
 }: {
   name: IconName;

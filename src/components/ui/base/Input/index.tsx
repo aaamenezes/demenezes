@@ -1,18 +1,20 @@
 import { useState } from 'react';
+import S from './styles.module.css';
+import { clsx } from '../../../../utils/clsx';
 
 export default function Input({
-  type = 'text',
   name,
-  className,
   id,
   placeholder,
-  required = false,
+  type = 'text',
+  className = '',
+  required = true,
 }: {
-  type?: string;
-  name?: string;
-  className?: string;
+  name: string;
   id: string;
-  placeholder?: string;
+  placeholder: string;
+  type?: string;
+  className?: string;
   required?: boolean;
 }) {
   const [value, setValue] = useState('');
@@ -23,7 +25,7 @@ export default function Input({
       onChange={event => setValue(event.target.value)}
       type={type}
       name={name}
-      className={className}
+      className={clsx(S.input, className)}
       id={id}
       placeholder={placeholder}
       required={required}
