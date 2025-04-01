@@ -1,5 +1,5 @@
 import { clsx } from '../../../../utils/clsx';
-import LinkButton from '../../base/LinkButton';
+import Link from '../../base/Link';
 import Wrapper from '../../container/Wrapper';
 import S from './styles.module.css';
 
@@ -16,21 +16,21 @@ export default function Pagination({
   return (
     <Wrapper className={S.paginationWrapper} width="xxl" spacing={2}>
       {currentPagination > 1 && (
-        <LinkButton
+        <Link
           className={clsx(S.paginationButton, S.isPrevious)}
           href={previousLink}
         >
           Posts mais recentes
-        </LinkButton>
+        </Link>
       )}
       {!isLastPagination ? (
-        <LinkButton className={S.paginationButton} href={nextLink}>
+        <Link className={S.paginationButton} href={nextLink}>
           Próxima página
-        </LinkButton>
+        </Link>
       ) : (
-        <LinkButton className={S.paginationButton} href="/" disabled>
+        <Link className={S.paginationButton} href="/">
           Parabéns, você chegou ao início do blog :)
-        </LinkButton>
+        </Link>
       )}
     </Wrapper>
   );

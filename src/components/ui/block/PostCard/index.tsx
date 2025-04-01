@@ -2,7 +2,7 @@ import NextImage from 'next/image';
 import { PostSummaryProps } from '../../../../types';
 import { clsx } from '../../../../utils/clsx';
 import Label from '../../base/Label';
-import LinkButton from '../../base/LinkButton';
+import Link from '../../base/Link';
 import Wrapper from '../../container/Wrapper';
 import PostCardInfos from './Infos';
 import S from './styles.module.css';
@@ -30,7 +30,7 @@ export default function PostCard({
         className={clsx(S.postCardImageWrapper, isCompact && S.isCompact)}
         aria-hidden="true"
       >
-        <LinkButton
+        <Link
           className={S.postCardImageLink}
           href={`/posts/${slug}`}
           tab-index="-1"
@@ -47,7 +47,7 @@ export default function PostCard({
             }}
           />
           <Label>{category}</Label>
-        </LinkButton>
+        </Link>
       </div>
       <PostCardInfos post={post} isCompact={isCompact} />
     </Wrapper>

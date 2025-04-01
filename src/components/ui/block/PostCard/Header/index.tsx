@@ -1,6 +1,6 @@
 import { PostSummaryProps } from '../../../../../types';
 import { clsx } from '../../../../../utils/clsx';
-import LinkButton from '../../../base/LinkButton';
+import Link from '../../../base/Link';
 import S from './styles.module.css';
 
 export default function PostCardHeader({
@@ -24,9 +24,9 @@ export default function PostCardHeader({
           isCompact && S.isCompact
         )}
       >
-        <LinkButton className={S.postCardTitleLink} href={`/posts/${slug}`}>
+        <Link className={S.postCardTitleLink} href={`/posts/${slug}`}>
           {title}
-        </LinkButton>
+        </Link>
       </h3>
     </header>
   );

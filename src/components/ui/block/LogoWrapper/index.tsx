@@ -1,4 +1,4 @@
-import LinkButton from '../../base/LinkButton';
+import Link from '../../base/Link';
 import S from './styles.module.css';
 
 export default function LogoWrapper({ isHeader }: { isHeader?: boolean }) {
@@ -6,12 +6,12 @@ export default function LogoWrapper({ isHeader }: { isHeader?: boolean }) {
   const preview = false;
 
   return (
-    <LinkButton className={S.logoLink} href="/">
+    <Link className={S.logoLink} href="/">
       {isHeader ? (
         <h1 className={S.logo}>{preview ? 'Preview' : 'deMenezes'}</h1>
       ) : (
         <strong className={S.logo}>{preview ? 'Preview' : 'deMenezes'}</strong>
       )}
-    </LinkButton>
+    </Link>
   );
 }

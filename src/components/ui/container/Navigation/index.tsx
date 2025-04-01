@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import settings from '../../../../../settings.json';
 import { clsx } from '../../../../utils/clsx';
 import { getPageInfos } from '../../../../utils/getPageInfos';
-import LinkButton from '../../base/LinkButton';
+import Link from '../../base/Link';
 import ToggleModalButton from '../../block/ToggleModalButton';
 import S from './styles.module.css';
 
@@ -26,12 +26,12 @@ export default function Navigation({
         className={clsx(S.navItem, isCurrentPage && S.isCurrentPage)}
         key={menu.title}
       >
-        <LinkButton
+        <Link
           className={clsx(S.navLink, isCurrentPage && S.isCurrentPage)}
           href={menu.url}
         >
           {menu.title}
-        </LinkButton>
+        </Link>
       </li>
     );
   });

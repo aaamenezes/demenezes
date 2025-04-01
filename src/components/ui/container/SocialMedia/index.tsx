@@ -2,7 +2,7 @@ import settings from '../../../../../settings.json';
 import { clsx } from '../../../../utils/clsx';
 import Icon from '../../base/Icon';
 import { IconName } from '../../base/Icon/types';
-import LinkButton from '../../base/LinkButton';
+import Link from '../../base/Link';
 import S from './styles.module.css';
 
 export default function SocialMedia({
@@ -12,16 +12,16 @@ export default function SocialMedia({
 }) {
   const socialElements = settings.socialMedia.map(socialMedia => (
     <li className={S.socialItem} key={socialMedia.title}>
-      <LinkButton
+      <Link
         className={S.socialLink}
         href={socialMedia.url}
         aria-label={`Acessar o ${socialMedia.title} do autor do blog`}
-        external
+        isExternal
       >
         {/* não gostei desse "as IconName", corrigir isso */}
         <Icon name={socialMedia.title as IconName} />
         <span className={S.socialLabel}>{socialMedia.title}</span>
-      </LinkButton>
+      </Link>
     </li>
   ));
 

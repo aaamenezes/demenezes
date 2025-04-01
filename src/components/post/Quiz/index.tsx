@@ -1,7 +1,7 @@
 import { FormEvent, MouseEvent, useCallback, useState } from 'react';
 import { clsx } from '../../../utils/clsx';
 import { simplifyString } from '../../../utils/simplifyString';
-import LinkButton from '../../ui/base/LinkButton';
+import Button from '../../ui/base/Button';
 import S from './styles.module.css';
 
 export default function Quiz({
@@ -71,14 +71,14 @@ export default function Quiz({
         ))}
       </ul>
       <footer className={S.footer}>
-        <LinkButton
+        <Button
           className={S.submitButton}
           type="submit"
           disabled={isAnswered}
           aria-disabled={isAnswered}
         >
           Enviar
-        </LinkButton>
+        </Button>
         {isAnswered && (
           <p>
             <span>

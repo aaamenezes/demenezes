@@ -1,7 +1,7 @@
 import settings from '../../../../../settings.json';
+import Button from '../../base/Button';
 import HiddenA11Y from '../../base/HiddenA11Y';
 import Input from '../../base/Input';
-import LinkButton from '../../base/LinkButton';
 import Wrapper from '../../container/Wrapper';
 import S from './styles.module.css';
 
@@ -78,14 +78,14 @@ export default function Newsletter() {
               </HiddenA11Y>
               <div className="optionalParent">
                 <div className="clear foot">
-                  <LinkButton
+                  <Button
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
                     className={S.submitButton}
                   >
                     Quero receber
-                  </LinkButton>
+                  </Button>
                 </div>
               </div>
             </div>
