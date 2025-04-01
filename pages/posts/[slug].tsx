@@ -8,7 +8,7 @@ import PostHeader from '../../src/components/ui/section/PostHeader';
 import RelatedPosts from '../../src/components/ui/section/RelatedPosts';
 import { getContent } from '../../src/external/datoCMS';
 import { PostProps, PostSummaryProps } from '../../src/types';
-import { parseSlugParam } from '../../src/utils/parseParams';
+import { parseParam } from '../../src/utils/parseParam';
 
 export default function Post({
   post,
@@ -54,7 +54,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const { params, preview } = context;
   const post = await getContent(
     'post',
-    { slug: parseSlugParam(params?.slug) },
+    { slug: parseParam(params?.slug, '/') },
     preview
   );
 

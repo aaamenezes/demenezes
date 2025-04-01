@@ -1,13 +1,20 @@
 import { ParsedUrlQuery } from 'querystring';
 import settings from '../../settings.json';
 import { PostSummaryProps } from '../types';
-import { parsePageParam } from './parseParams';
+import { parseParam } from './parseParam';
 
 export function getPaginationInfos(
   allPosts: PostSummaryProps[],
   page: ParsedUrlQuery['page']
 ) {
-  const currentPagination = parsePageParam(page);
+  const currentPagination = Number(parseParam(page, '1'));
+  if (Number.isNaN(currentPagination)) {
+    return {
+      currentPosts: [],
+      currentPagination: 1,
+      isLastPagination: true,
+    };
+  }
   const { postsPerPage } = settings.paginationConfig;
 
   const currentPosts = allPosts.slice(
