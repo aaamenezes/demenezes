@@ -9,6 +9,7 @@ import RelatedPosts from '../../src/components/ui/section/RelatedPosts';
 import { getContent } from '../../src/external/datoCMS';
 import { PostProps, PostSummaryProps } from '../../src/types';
 import { parseParam } from '../../src/utils/parseParam';
+import Head from '../../src/components/meta/Head';
 
 export default function Post({
   post,
@@ -29,6 +30,7 @@ export default function Post({
 
   return (
     <>
+      <Head componentProps={{ post }} />
       <PageHeader />
       <main style={{ marginBottom: '10%' }}>
         <PostHeader
