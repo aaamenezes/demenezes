@@ -1,0 +1,175 @@
+html {
+  line-height: 1;
+  tab-size: 4;
+  font-family: "";
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-family-monospace);
+}
+
+:where(select:is([multiple], [size])) optgroup {
+  font-weight: bolder;
+}
+
+:where(select:is([multiple], [size])) optgroup option {
+  padding-inline-start: 20px;
+}
+
+hr {
+  /* Add the correct height in Firefox */
+  height: 0;
+  /* Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655) */
+  color: inherit;
+  /* Reset the default border style to a 1px solid border */
+  border-top-width: 1px;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+summary {
+  display: list-item;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+/* Prevent `sub` and `sup` elements from affecting the line height in all browsers */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para os links âncora nos subtítulos */
+.anchor {
+  @apply relative block text-inherit no-underline;
+}
+
+.anchor::before {
+  content: "#";
+  @apply absolute -left-6 text-primary opacity-0 transition-opacity duration-300;
+}
+
+.anchor:hover::before {
+  @apply opacity-70;
+}
+
+.anchor:hover {
+  @apply underline decoration-primary decoration-2 underline-offset-4;
+}
+
+.grid-background {
+  @apply relative min-h-screen w-full overflow-hidden;
+  perspective: 1000px;
+}
+
+.grid-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.2;
+  background-image: linear-gradient(to bottom, transparent 95%, hsl(var(--grid-color))),
+    linear-gradient(to right, transparent 95%, hsl(var(--grid-color)));
+  background-size: 4rem 4rem;
+  transform: rotateX(60deg) translateZ(-10rem) translateY(10rem);
+  backface-visibility: hidden;
+}
+
+.dark .grid-background::before {
+  opacity: 0.3;
+}
+
+.sun-element {
+  position: fixed;
+  z-index: -2;
+  width: 30rem;
+  height: 30rem;
+  top: -15rem;
+  right: -5rem;
+  border-radius: 9999px;
+  opacity: 0.3;
+  filter: blur(3rem);
+  background: radial-gradient(circle, hsl(var(--sun-primary)), hsl(var(--sun-secondary)));
+}
+
+.dark .sun-element {
+  opacity: 0.2;
+}
+
+.container {
+  @apply mx-auto w-full max-w-7xl px-4 md:px-6;
+}
+
+.hero-post {
+  @apply relative overflow-hidden border-b bg-card shadow-lg transition-all;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+}
+
+.post-card {
+  @apply relative overflow-hidden rounded-lg border bg-card shadow-md transition-all hover:shadow-lg;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(5px);
+}
+
+.palm-tree {
+  position: absolute;
+  z-index: -1;
+  height: 10rem;
+  width: 10rem;
+  opacity: 0.1;
+  background-image: url("/palm-tree.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dark .palm-tree {
+  opacity: 0.2;
+}
+
+.pagination-button {
+  @apply h-10 w-10 rounded-md flex items-center justify-center text-sm font-medium transition-colors;
+}

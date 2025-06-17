@@ -47,6 +47,11 @@ ul {
   padding: 0;
 }
 
+ol > li::before,
+ul > li::before {
+  content: "\200B";
+}
+
 img,
 svg,
 video,

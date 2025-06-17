@@ -1,19 +1,24 @@
-.text {
-  text-decoration: underline;
-}
-
 .button {
-  display: block;
-  letter-spacing: var(--letter-spacing-button);
-  font-family: var(--font-family-display);
-  text-decoration: none;
-  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-weight: var(--font-weight-medium);
+  box-shadow: 0 0 0 0 var(--background);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: var(--transition-timing-function-default);
+  transition-duration: var(--transition-duration-default);
 }
 
-.button.inline {
-  display: inline;
-  letter-spacing: initial;
-  font-weight: var(--font-weight-button);
-  font-family: var(--font-family-text);
-  color: var(--color-red-700);
+.button:focus-visible {
+  outline-style: none;
+  box-shadow: 0 0 0 2px var(--ring), 0 0 0 2px var(--background);
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: 50;
 }
