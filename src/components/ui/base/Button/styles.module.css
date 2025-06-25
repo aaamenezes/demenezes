@@ -22,3 +22,69 @@
   pointer-events: none;
   opacity: 50;
 }
+
+/* ************************************************************************** */
+/* variants */
+
+.button.default {
+  color: var(--primary-foreground);
+  background-color: var(--primary);
+}
+
+.button.default:hover {
+  background-color: var(--primary-90);
+}
+
+.button.destructive {
+  color: var(--destructive-foreground);
+  background-color: var(--destructive);
+}
+
+.button.destructive:hover {
+  background-color: var(--destructive-90);
+}
+
+.button.outline {
+  border-width: 1px;
+  border-color: var(--input);
+  background-color: var(--background);
+}
+
+.button.outline:hover {
+  color: var(--accent-foreground);
+  background-color: var(--accent);
+}
+
+.button.secondary {
+  color: var(--secondary-foreground);
+  background-color: var(--secondary);
+}
+
+.button.secondary:hover {
+  background-color: var(--secondary-90);
+}
+
+.button.ghost:hover {
+  color: var(--accent-foreground);
+  background-color: var(--accent);
+}
+
+.button.link {
+  color: var(--primary);
+  text-underline-offset: 4px;
+}
+
+.button.link:hover {
+  text-decoration-line: underline;
+}
+
+.button.glow {
+  position: relative;
+  color: var(--primary-foreground);
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.button.glow:hover {
+  background-color: var(--primary-90);
+}
