@@ -26,65 +26,91 @@
 /* ************************************************************************** */
 /* variants */
 
-.button.default {
+.variant-default {
   color: var(--primary-foreground);
   background-color: var(--primary);
 }
 
-.button.default:hover {
+.variant-default:hover {
   background-color: var(--primary-90);
 }
 
-.button.destructive {
+.variant-destructive {
   color: var(--destructive-foreground);
   background-color: var(--destructive);
 }
 
-.button.destructive:hover {
+.variant-destructive:hover {
   background-color: var(--destructive-90);
 }
 
-.button.outline {
+.variant-outline {
   border-width: 1px;
   border-color: var(--input);
   background-color: var(--background);
 }
 
-.button.outline:hover {
+.variant-outline:hover {
   color: var(--accent-foreground);
   background-color: var(--accent);
 }
 
-.button.secondary {
+.variant-secondary {
   color: var(--secondary-foreground);
   background-color: var(--secondary);
 }
 
-.button.secondary:hover {
+.variant-secondary:hover {
   background-color: var(--secondary-90);
 }
 
-.button.ghost:hover {
+.variant-ghost:hover {
   color: var(--accent-foreground);
   background-color: var(--accent);
 }
 
-.button.link {
+.variant-link {
   color: var(--primary);
   text-underline-offset: 4px;
 }
 
-.button.link:hover {
+.variant-link:hover {
   text-decoration-line: underline;
 }
 
-.button.glow {
+.variant-glow {
   position: relative;
   color: var(--primary-foreground);
   background-color: var(--primary);
   overflow: hidden;
 }
 
-.button.glow:hover {
+.variant-glow:hover {
   background-color: var(--primary-90);
+}
+
+/* ************************************************************************** */
+/* sizes */
+
+.size-default {
+  height: calc(var(--spacing) * 10);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+}
+
+.size-sm {
+  height: calc(var(--spacing) * 9);
+  border-radius: var(--border-radius-md);
+  padding-inline: calc(var(--spacing) * 3);
+}
+
+.size-lg {
+  height: calc(var(--spacing) * 11);
+  border-radius: var(--border-radius-md);
+  padding-inline: calc(var(--spacing) * 8);
+}
+
+.size-icon {
+  height: calc(var(--spacing) * 10);
+  width: calc(var(--spacing) * 10);
 }
