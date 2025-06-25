@@ -2,35 +2,45 @@ import { PropsWithChildren } from 'react';
 import { clsx } from '../../../../utils/clsx';
 import S from './styles.module.css';
 
-export default function Button({
-  children,
+function Button({
+  variant = 'default',
+  size = 'default',
   handleClick = () => {},
   type = 'button',
   disabled = false,
-  name = '',
+  children,
   className = '',
-  id = '',
 }: PropsWithChildren<{
-  handleClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  variant?:
+    | 'default'
+    | 'destructive'
+    | 'outline'
+    | 'secondary'
+    | 'ghost'
+    | 'link'
+    | 'glow';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
   disabled?: boolean;
-  name?: string;
+  type?: 'button' | 'submit' | 'reset';
+  handleClick?: () => void;
   className?: string;
-  id?: string;
 }>) {
-  /**
-   * tab-index
-   */
   return (
     <button
       onClick={handleClick}
-      className={clsx(S.button, className)}
+      className={clsx(
+        S.button,
+        S[`variant-${variant}`],
+        S[`size-${size}`],
+        className
+      )}
       type={type}
       disabled={disabled}
-      name={name}
-      id={id}
     >
       {children}
     </button>
   );
 }
+
+Button.displayName = 'Button';
+export default Button;
