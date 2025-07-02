@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { pageview } from '../src/external/GoogleAnalytics/gtag.ts'
 import GoogleAnalytics from '../src/external/GoogleAnalytics/index.tsx'
-import '../styles/globals.css'
+import '../styles/variables.css'
+import '../styles/reset.css'
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter()
