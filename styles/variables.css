@@ -1,5 +1,27 @@
 :root {
   --font-family-monospace: 'Ubuntu Mono', monospace;
+
+  /* ************************************************************************ */
+  /* SPACINGS */
+  
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+
+  /* ************************************************************************ */
+  /* COLORS */
+
+  --primary: rgb(180, 71, 235);
+  --primary-90: rgba(180, 71, 235, 0.9);
+
+  /* ************************************************************************ */
+  /* FONT SIZE */
+  --font-size-xs: 14px;
+  --font-size-sm: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 14px;
+  --font-size-xl: 14px;
 }
 
 .dark {
