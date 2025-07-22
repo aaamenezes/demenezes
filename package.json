@@ -36,5 +36,8 @@
     "typescript-eslint": "^8.18.2",
     "typescript-plugin-css-modules": "^5.1.0"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "license": "MIT"
 }

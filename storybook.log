@@ -1,0 +1,21 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR! 
+npm ERR! While resolving: blog-starter@1.0.0
+npm ERR! Found: next@13.5.11
+npm ERR! node_modules/next
+npm ERR!   next@"^13.5.7" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer next@"^14.1.0 || ^15.0.0" from @storybook/experimental-nextjs-vite@8.6.11
+npm ERR! node_modules/@storybook/experimental-nextjs-vite
+npm ERR!   dev @storybook/experimental-nextjs-vite@"^8.6.11" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /Users/andremenezes/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/andremenezes/.npm/_logs/2025-04-01T03_12_21_685Z-debug.log
