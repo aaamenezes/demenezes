@@ -9,6 +9,7 @@ export default function Head({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   componentProps: any;
 }) {
+  console.log(`sim`);
   const { currentPage } = getPageInfos();
   const router = useRouter();
   const baseURL = 'https://demenezes.dev';
@@ -206,6 +207,10 @@ export default function Head({
           content={componentProps.post.data.post._updatedAt}
         />
       )}
+      <meta
+        name="google-adsense-account"
+        content="ca-pub-8067715093735707"
+      ></meta>
     </NextHead>
   );
 }
