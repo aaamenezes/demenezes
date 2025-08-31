@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import Head from '../src/components/meta/Head';
 import SocialMedia from '../src/components/ui/container/SocialMedia';
 import Wrapper from '../src/components/ui/container/Wrapper';
 import AboutCategories from '../src/components/ui/section/AboutCategories';
@@ -32,6 +33,11 @@ export default function About({
 
   return (
     <>
+      <Head
+        componentProps={{
+          aboutPageContent,
+        }}
+      />
       <PageHeader />
       <main>
         <Greeting
