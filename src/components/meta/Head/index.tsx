@@ -211,6 +211,11 @@ export default function Head({
         name="google-adsense-account"
         content="ca-pub-8067715093735707"
       ></meta>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8067715093735707"
+        crossOrigin="anonymous"
+      ></script>
     </NextHead>
   );
 }
