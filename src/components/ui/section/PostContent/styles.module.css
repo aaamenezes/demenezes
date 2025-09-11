@@ -1,3 +1,4 @@
 .postContent {
+  padding-top: var(--spacing-h1);
   overflow: hidden;
 }
