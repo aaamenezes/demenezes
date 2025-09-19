@@ -26,7 +26,7 @@ export default function Link({
         {isExternal && inline ? (
           <>
             <span className={inline ? S.text : ''}>{children}</span>
-            <Icon name="external" />
+            <Icon name="external" inline={inline} />
           </>
         ) : (
           children

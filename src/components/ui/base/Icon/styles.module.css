@@ -11,7 +11,12 @@
   }
 }
 
-.icon.external {
+.external {
   padding: initial;
   font-size: 0.7rem;
+}
+
+.inline {
+  padding: 0;
+  padding-inline: 0.5rem;
 }

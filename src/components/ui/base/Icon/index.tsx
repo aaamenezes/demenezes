@@ -7,15 +7,22 @@ import { clsx } from '../../../../utils/clsx';
 export default function Icon({
   name,
   color: propIconColor = '',
+  inline = false,
   className: propIconClassName = '',
 }: {
   name: IconName;
   color?: string;
+  inline?: boolean;
   className?: string;
 }) {
   const { className: mapIconClass, color: mapIconColor } = iconMap[name];
 
-  const classes = clsx(S.icon, mapIconClass, propIconClassName);
+  const classes = clsx(
+    S.icon,
+    mapIconClass,
+    propIconClassName,
+    inline && S.inline
+  );
 
   /**
    * remover espaço vazio desse componente
