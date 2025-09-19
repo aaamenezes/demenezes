@@ -23,7 +23,7 @@ export default function Link({
         target={isExternal ? '_blank' : '_self'}
         rel="noreferrer"
       >
-        {isExternal ? (
+        {isExternal && inline ? (
           <>
             <span className={inline ? S.text : ''}>{children}</span>
             <Icon name="external" />

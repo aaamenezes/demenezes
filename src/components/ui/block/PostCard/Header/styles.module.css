@@ -34,7 +34,7 @@
 .postCardTitle:focus-within a {
   color: var(--color-neutral-100);
 }
-
+ 
 .postCardTitle.isHero {
   margin: var(--spacing-h3) 0;
 }
