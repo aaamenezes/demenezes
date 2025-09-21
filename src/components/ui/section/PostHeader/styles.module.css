@@ -19,6 +19,7 @@
 }
 
 .leadText {
+  font-family: var(--font-family-display);
   margin-bottom: var(--spacing-text);
   line-height: var(--line-height-text);
   font-size: var(--font-size-text);
