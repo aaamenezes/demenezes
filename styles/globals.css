@@ -137,16 +137,15 @@
   --color-neutral-900-opacity-lg: #121212E6; /* black */
 
   /* ************************************************************************ */
-  /* Color transparent */
+  /* Color transparent, obrigado Safari */
 
-  --color-transparent: rgba(0, 0, 0, 0); /* Obrigado Safari */
+  --color-transparent: rgba(0, 0, 0, 0);
 
   /* ************************************************************************ */
   /* Font family */
 
   /* title: 'Ubuntu, sans-serif' */
   --font-family-heading: 'Montserrat', sans-serif;
-  --font-family-lead: '';
   --font-family-body: 'Vollkorn', serif;
 
   /*
