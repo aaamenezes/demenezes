@@ -173,24 +173,27 @@
   /* ************************************************************************ */
   /* Font size */
 
-  /* O tamanho maior sobrou '4.209rem' */
-  --font-size-h1: 3.157rem;
-  /* page title */
-  --font-size-h2: 2.369rem;
-  /* section title */
-  --font-size-h3: 1.777rem;
-  /* article title */
-  --font-size-h4: 1.333rem;
-  /* article subtitle */
-  --font-size-text: 1rem;
-  /* p, a, span */
-  --font-size-small: 0.75rem;
-  --font-size-html-xs: 16px;
-  --font-size-html-sm: 17px;
-  --font-size-html-md: 18px;
-  --font-size-html-lg: 19px;
-  --font-size-html-xl: 20px;
-  
+  /* HTML */
+  --font-size-mobile-base: 18px;
+  --font-size-tablet-base: 19px;
+  --font-size-desktop-base: 20px;
+
+  /* Scale ratio */
+  --font-size-scale-ratio: 1.2;
+
+  /* Base font size */
+  --font-size-base: var(--font-size-mobile-base);
+
+  --font-size-xxxs: calc(var(--font-size-base) / pow(var(--font-size-scale-ratio), 2));
+  --font-size-xxs:  calc(var(--font-size-base) / pow(var(--font-size-scale-ratio), 1));
+  --font-size-xs:        var(--font-size-base);
+  --font-size-sm:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 1));
+  --font-size-md:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 2));
+  --font-size-lg:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 3));
+  --font-size-xl:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 4));
+  --font-size-xxl:  calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 5));
+  --font-size-xxxl: calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 6));
+
   /* ************************************************************************ */
   /* Font weight */
   
