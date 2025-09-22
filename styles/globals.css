@@ -243,12 +243,15 @@
   /* ************************************************************************ */
   /* Spacing */
 
-  --spacing-h1: 3rem;
-  --spacing-h2: 2.5rem;
-  --spacing-h3: 2rem;
-  --spacing-h4: 1.5rem;
-  --spacing-text: 1.5rem;
-  --spacing-small: 0.5rem;
+  --spacing-xxxs: 1px;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+  --spacing-xxxl: 64px;
 
   /* ************************************************************************ */
   /* Transition */
