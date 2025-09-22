@@ -210,8 +210,6 @@
   /* ************************************************************************ */
   /* Letter spacing */
 
-  --letter-spacing-base: 0;
-
   --letter-spacing-xxxs: 0.05em;
   --letter-spacing-xxs: 0.03em;
   --letter-spacing-xs: 0em;
