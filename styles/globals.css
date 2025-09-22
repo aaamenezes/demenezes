@@ -180,23 +180,15 @@
   /* ************************************************************************ */
   /* Font weight */
   
-  /* black: 900 */
-  /* extra bold: 800 */
-  --font-weight-h1: 700;
-  /* bold */
-  --font-weight-h2: 600;
-  /* semi bold */
-  --font-weight-h3: 600;
-  /* semi bold */
-  --font-weight-h4: 500;
-  /* medium */
-  --font-weight-button: 600;
-  /* semi bold */
-  --font-weight-text: 400;
-  /* regular */
-  /* light: 300 */
-  /* extra light: 200 */
-  /* thin: 100 */
+  --font-weight-black:      900;
+  --font-weight-extrabold:  800;
+  --font-weight-bold:       700;
+  --font-weight-semibold:   600;
+  --font-weight-medium:     500;
+  --font-weight-regular:    400;
+  --font-weight-light:      300;
+  --font-weight-extralight: 200;
+  --font-weight-thin:       100;
 
   /* ************************************************************************ */
   /* Letter spacing */
