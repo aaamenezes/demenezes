@@ -211,19 +211,19 @@
 
   /* ************************************************************************ */
   /* Letter spacing */
-  
-  --letter-spacing-h1: -1px;
-  /* page title */
-  --letter-spacing-h2: -0.5px;
-  /* section title */
-  --letter-spacing-h3: -0.5px;
-  /* article title */
-  --letter-spacing-h4: 0;
-  /* article subtitle */
-  --letter-spacing-button: 1.5px;
-  --letter-spacing-text: 0;
-  /* p, a, span */
-  
+
+  --letter-spacing-base: 0;
+
+  --letter-spacing-xxxs: 0.05em;
+  --letter-spacing-xxs: 0.03em;
+  --letter-spacing-xs: 0em;
+  --letter-spacing-sm: 0em;
+  --letter-spacing-md: -0.01em;
+  --letter-spacing-lg: -0.01em;
+  --letter-spacing-xl: -0.02em;
+  --letter-spacing-xxl: -0.02em;
+  --letter-spacing-xxxl: -0.03em;
+
   /* ************************************************************************ */
   /* Line height */
   
