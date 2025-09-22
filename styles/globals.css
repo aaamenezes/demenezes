@@ -190,6 +190,25 @@
   --font-weight-extralight: 200;
   --font-weight-thin:       100;
 
+  /*
+  Legendas, textos pequenos e corpo
+  xxxs: 100 - 400
+  xxs:  100 - 400
+  xs:   100 - 400
+  
+  Subtítulos
+  sm:   400 - 500
+  md:   400 - 500
+
+  Títulos de seção
+  lg:   500 - 600
+  xl:   500 - 600
+
+  H1, destaques e heros
+  xxl:  600 - 700
+  xxxl: 600 - 900
+  */
+
   /* ************************************************************************ */
   /* Letter spacing */
   
