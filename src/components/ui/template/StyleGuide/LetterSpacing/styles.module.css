@@ -1,0 +1,62 @@
+.letterSpacingXxxs {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-xxxs);
+  line-height: 1;
+}
+
+.letterSpacingXxs {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-xxs);
+  line-height: 1;
+}
+
+.letterSpacingXs {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: 1;
+}
+
+.letterSpacingSm {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: 1;
+}
+
+.letterSpacingMd {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: 1;
+}
+
+.letterSpacingLg {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-lg);
+  line-height: 1;
+}
+
+.letterSpacingXl {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-xl);
+  line-height: 1;
+}
+
+.letterSpacingXxl {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-xxl);
+  line-height: 1;
+}
+
+.letterSpacingXxxl {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-xxxl);
+  line-height: 1;
+}
