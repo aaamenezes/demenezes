@@ -1,35 +1,62 @@
 .fontSizeXxxs {
   font-size: var(--font-size-xxxs);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeXxs {
   font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeXs {
   font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeSm {
   font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeMd {
   font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeLg {
   font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeXl {
   font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeXxl {
   font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .fontSizeXxxl {
   font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
 }
