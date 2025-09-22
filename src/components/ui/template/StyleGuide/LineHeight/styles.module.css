@@ -1,0 +1,35 @@
+.lineHeightXxxs {
+  line-height: var(--line-height-xxxs);
+}
+
+.lineHeightXxs {
+  line-height: var(--line-height-xxs);
+}
+
+.lineHeightXs {
+  line-height: var(--line-height-xs);
+}
+
+.lineHeightSm {
+  line-height: var(--line-height-sm);
+}
+
+.lineHeightMd {
+  line-height: var(--line-height-md);
+}
+
+.lineHeightLg {
+  line-height: var(--line-height-lg);
+}
+
+.lineHeightXl {
+  line-height: var(--line-height-xl);
+}
+
+.lineHeightXxl {
+  line-height: var(--line-height-xxl);
+}
+
+.lineHeightXxxl {
+  line-height: var(--line-height-xxxl);
+}
