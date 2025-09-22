@@ -1,5 +1,6 @@
 import Wrapper from '../../container/Wrapper';
 import FontSize from './FontSize';
+import FontWeight from './FontWeight';
 import LineHeight from './LineHeight';
 import styles from './base/styles.module.css';
 
@@ -9,7 +10,7 @@ export default function StyleGuideScreen() {
       <h1 className={styles.heading}>Style Guide</h1>
       <FontSize />
       <hr />
-      fontweight
+      <FontWeight />
       <hr />
       letterspacing
       <hr />

@@ -1,0 +1,62 @@
+.fontWeightThin {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-thin);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightExtralight {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-extralight);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightLight {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightRegular {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightMedium {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightSemibold {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightBold {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightExtrabold {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontWeightBlack {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-black);
+  letter-spacing: 0;
+  line-height: 1;
+}
