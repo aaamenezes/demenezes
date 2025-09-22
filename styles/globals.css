@@ -14,10 +14,8 @@
   /* ************************************************************************ */
   /* Breakpoints */
 
-  /* Ainda não funciona, mas só pra salvar */
   --media-xs: 0px;
   --media-sm: 425px;
-  /* No Bootstrap era 576 mas achei mto próximo do MD */
   --media-md: 768px;
   --media-lg: 992px;
   --media-xl: 1200px;
@@ -226,18 +224,16 @@
 
   /* ************************************************************************ */
   /* Line height */
-  
-  --line-height-h1: 1.3;
-  /* page title */
-  --line-height-h2: 1.3;
-  /* section title */
-  --line-height-h3: 1.3;
-  /* article title */
-  --line-height-h4: 1.7;
-  /* article subtitle */
-  --line-height-button: 1;
-  --line-height-text: 1.7;
-  /* p, a, span */
+
+  --line-height-xxxs: 1.3;
+  --line-height-xxs: 1.4;
+  --line-height-xs: 1.5;
+  --line-height-sm: 1.5;
+  --line-height-md: 1.4;
+  --line-height-lg: 1.3;
+  --line-height-xl: 1.2;
+  --line-height-xxl: 1.2;
+  --line-height-xxxl: 1.1;
 
   /* ************************************************************************ */
   /* Opacity */
