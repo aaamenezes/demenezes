@@ -9,9 +9,11 @@ export default function StyleGuideScreen() {
       <h1 className={styles.heading}>Style Guide</h1>
       <FontSize />
       <hr />
-      <LineHeight />
+      fontweight
       <hr />
-      fontweight letterspacing
+      letterspacing
+      <hr />
+      <LineHeight />
     </Wrapper>
   );
 }

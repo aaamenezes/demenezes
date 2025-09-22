@@ -1,35 +1,62 @@
 .lineHeightXxxs {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-xxxs);
 }
 
 .lineHeightXxs {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-xxs);
 }
 
 .lineHeightXs {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-xs);
 }
 
 .lineHeightSm {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-sm);
 }
 
 .lineHeightMd {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-md);
 }
 
 .lineHeightLg {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-lg);
 }
 
 .lineHeightXl {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-xl);
 }
 
 .lineHeightXxl {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-xxl);
 }
 
 .lineHeightXxxl {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
   line-height: var(--line-height-xxxl);
 }
