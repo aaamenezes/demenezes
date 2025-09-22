@@ -90,27 +90,19 @@
     "home": {
       "pageTitle": "Home",
       "url": "/",
-      "keywords": [
-        "pagina inicial",
-        "home"
-      ],
+      "keywords": ["pagina inicial", "home"],
       "description": ""
     },
     "listing": {
       "pageTitle": "Home",
       "url": "/page/[page]",
-      "keywords": [
-        "pagina inicial",
-        "home"
-      ],
+      "keywords": ["pagina inicial", "home"],
       "description": ""
     },
     "post": {
       "pageTitle": "Artigo",
       "url": "/posts/[slug]",
-      "keywords": [
-        "pagina de posts"
-      ],
+      "keywords": ["pagina de posts"],
       "description": ""
     },
     "about": {
@@ -143,6 +135,12 @@
         "página de referências"
       ],
       "description": "As referências que me fizeram chegar até aqui"
+    },
+    "style-guide": {
+      "pageTitle": "Guia de estilos",
+      "url": "/style-guide",
+      "keywords": ["guia de estilos", "style guide", "design system"],
+      "description": "Guia de estilos do blog deMenezes"
     }
   },
   "paginationConfig": {
