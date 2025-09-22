@@ -28,7 +28,7 @@ export default function FontWeight() {
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>fontWeightRegular</SubSubHeading>
+      <SubSubHeading>fontWeightRegular (base)</SubSubHeading>
       <p className={styles.fontWeightRegular}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
@@ -49,7 +49,7 @@ export default function FontWeight() {
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>fontWeightBold (base)</SubSubHeading>
+      <SubSubHeading>fontWeightBold</SubSubHeading>
       <p className={styles.fontWeightBold}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
