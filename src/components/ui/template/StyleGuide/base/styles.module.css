@@ -4,7 +4,6 @@
 }
 
 .subHeading {
-  text-align: left;
   font-size: var(--font-size-xxl);
   color: var(--color-primary-500);
 }
