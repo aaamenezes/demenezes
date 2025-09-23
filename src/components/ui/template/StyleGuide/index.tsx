@@ -5,10 +5,19 @@ import FontWeight from './FontStyle/FontWeight';
 import LetterSpacing from './FontStyle/LetterSpacing';
 import LineHeight from './FontStyle/LineHeight';
 import Heading from './base/Heading';
+import Header from './parts/Header';
 
 export default function StyleGuideScreen() {
   return (
     <Wrapper width="lg">
+      <details>
+        <summary>
+          <Heading>Casos de uso</Heading>
+        </summary>
+        <Wrapper width="full">
+          <Header />
+        </Wrapper>
+      </details>
       <details>
         <summary>
           <Heading>Style Guide</Heading>
