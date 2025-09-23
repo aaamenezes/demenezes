@@ -183,15 +183,15 @@
   /* ************************************************************************ */
   /* Font weight */
   
-  --font-weight-black:      900;
-  --font-weight-extrabold:  800;
-  --font-weight-bold:       700;
-  --font-weight-semibold:   600;
-  --font-weight-medium:     500;
-  --font-weight-regular:    400;
-  --font-weight-light:      300;
-  --font-weight-extralight: 200;
-  --font-weight-thin:       100;
+  --font-weight-900: 900; /* black      */
+  --font-weight-800: 800; /* extrabold  */
+  --font-weight-700: 700; /* bold       */
+  --font-weight-600: 600; /* semibold   */
+  --font-weight-500: 500; /* medium     */
+  --font-weight-400: 400; /* regular    */
+  --font-weight-300: 300; /* light      */
+  --font-weight-200: 200; /* extralight */
+  --font-weight-100: 100; /* thin       */
 
   /*
   Legendas, textos pequenos e corpo
