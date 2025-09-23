@@ -1,4 +1,5 @@
 .letterSpacingXxxs {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-xxxs);
@@ -6,6 +7,7 @@
 }
 
 .letterSpacingXxs {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-xxs);
@@ -13,6 +15,7 @@
 }
 
 .letterSpacingXs {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-xs);
@@ -20,6 +23,7 @@
 }
 
 .letterSpacingSm {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-sm);
@@ -27,6 +31,7 @@
 }
 
 .letterSpacingMd {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-md);
@@ -34,6 +39,7 @@
 }
 
 .letterSpacingLg {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-lg);
@@ -41,6 +47,7 @@
 }
 
 .letterSpacingXl {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-xl);
@@ -48,6 +55,7 @@
 }
 
 .letterSpacingXxl {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-xxl);
@@ -55,6 +63,7 @@
 }
 
 .letterSpacingXxxl {
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-xxxl);
