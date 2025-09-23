@@ -142,9 +142,14 @@
   /* ************************************************************************ */
   /* Font family */
 
+  /* 100 - ... - 900; normal e italic */
   --font-family-heading: 'Montserrat', sans-serif;
+
+  /* 400 - ... - 900; normal e italic */
   --font-family-body: 'Vollkorn', serif;
-  --font-family-mono: 'Ubuntu, sans-serif';
+
+  /* 400 e 700; normal e italic */
+  --font-family-mono: 'Ubuntu Mono', sans-serif;
 
   /*
   Fontes já instaladas na maioria dos sistemas operacionais
