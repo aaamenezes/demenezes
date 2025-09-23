@@ -1,19 +1,19 @@
 import Wrapper from '../../container/Wrapper';
-import FontFamily from './FontFamily';
-import FontSize from './FontSize';
-import FontWeight from './FontWeight';
-import LetterSpacing from './LetterSpacing';
-import LineHeight from './LineHeight';
+import FontFamily from './FontStyle/FontFamily';
+import FontSize from './FontStyle/FontSize';
+import FontWeight from './FontStyle/FontWeight';
+import LetterSpacing from './FontStyle/LetterSpacing';
+import LineHeight from './FontStyle/LineHeight';
 import Heading from './base/Heading';
 
 export default function StyleGuideScreen() {
   return (
     <Wrapper width="lg">
       <details>
-        <summary>How to use this page</summary>
-        <Wrapper width="full">
+        <summary>
           <Heading>Style Guide</Heading>
-          <hr />
+        </summary>
+        <Wrapper width="full">
           <FontFamily />
           <hr />
           <FontSize />

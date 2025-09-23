@@ -1,6 +1,6 @@
-import Wrapper from '../../../container/Wrapper';
-import SubHeading from '../base/SubHeading';
-import SubSubHeading from '../base/SubSubHeading';
+import Wrapper from '../../../../container/Wrapper';
+import SubHeading from '../../base/SubHeading';
+import SubSubHeading from '../../base/SubSubHeading';
 import styles from './styles.module.css';
 
 export default function FontFamily() {

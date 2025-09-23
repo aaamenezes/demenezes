@@ -1,70 +1,103 @@
-import Wrapper from '../../../container/Wrapper';
-import SubHeading from '../base/SubHeading';
-import SubSubHeading from '../base/SubSubHeading';
+import Wrapper from '../../../../container/Wrapper';
+import SubHeading from '../../base/SubHeading';
+import SubSubHeading from '../../base/SubSubHeading';
 import styles from './styles.module.css';
 
-export default function LineHeight() {
+export default function FontWeight({
+  heading,
+  family,
+}: {
+  heading: string;
+  family: string;
+}) {
   return (
     <Wrapper width="full">
-      <SubHeading>Line-height</SubHeading>
-      <SubSubHeading>lineHeightXxxs</SubSubHeading>
-      <p className={styles.lineHeightXxxs}>
+      <SubHeading>{heading}</SubHeading>
+      <SubSubHeading>fontWeightThin</SubSubHeading>
+      <p
+        className={styles.fontWeightThin}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightXxs</SubSubHeading>
-      <p className={styles.lineHeightXxs}>
+      <SubSubHeading>fontWeightExtralight</SubSubHeading>
+      <p
+        className={styles.fontWeightExtralight}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightXs (base)</SubSubHeading>
-      <p className={styles.lineHeightXs}>
+      <SubSubHeading>fontWeightLight</SubSubHeading>
+      <p
+        className={styles.fontWeightLight}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightSm</SubSubHeading>
-      <p className={styles.lineHeightSm}>
+      <SubSubHeading>fontWeightRegular (base)</SubSubHeading>
+      <p
+        className={styles.fontWeightRegular}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightMd</SubSubHeading>
-      <p className={styles.lineHeightMd}>
+      <SubSubHeading>fontWeightMedium</SubSubHeading>
+      <p
+        className={styles.fontWeightMedium}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightLg</SubSubHeading>
-      <p className={styles.lineHeightLg}>
+      <SubSubHeading>fontWeightSemibold</SubSubHeading>
+      <p
+        className={styles.fontWeightSemibold}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightXl</SubSubHeading>
-      <p className={styles.lineHeightXl}>
+      <SubSubHeading>fontWeightBold</SubSubHeading>
+      <p
+        className={styles.fontWeightBold}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightXxl</SubSubHeading>
-      <p className={styles.lineHeightXxl}>
+      <SubSubHeading>fontWeightExtrabold</SubSubHeading>
+      <p
+        className={styles.fontWeightExtrabold}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
         laudantium.
       </p>
-      <SubSubHeading>lineHeightXxxl</SubSubHeading>
-      <p className={styles.lineHeightXxxl}>
+      <SubSubHeading>fontWeightBlack</SubSubHeading>
+      <p
+        className={styles.fontWeightBlack}
+        style={{ '--font-family': `var(${family})` } as React.CSSProperties}
+      >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
         eum adipisci totam ut, natus at, saepe earum consequatur doloremque,
         dicta doloribus nam explicabo iste nostrum reprehenderit non modi eius
