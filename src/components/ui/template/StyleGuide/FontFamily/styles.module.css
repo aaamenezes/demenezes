@@ -1,0 +1,20 @@
+.fontFamilyBody {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontFamilyHeading {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.fontFamilyMono {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  line-height: 1;
+}
