@@ -15,7 +15,15 @@ export default function StyleGuideScreen() {
       <hr />
       <FontSize />
       <hr />
-      <FontWeight />
+      <FontWeight
+        heading="Font-weight Family body"
+        family="--font-family-body"
+      />
+      <hr />
+      <FontWeight
+        heading="Font-weight Family heading"
+        family="--font-family-heading"
+      />
       <hr />
       <LetterSpacing />
       <hr />

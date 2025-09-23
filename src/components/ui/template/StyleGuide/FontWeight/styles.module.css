@@ -1,5 +1,5 @@
 .fontWeightThin {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-thin);
   letter-spacing: 0;
@@ -7,7 +7,7 @@
 }
 
 .fontWeightExtralight {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-extralight);
   letter-spacing: 0;
@@ -15,7 +15,7 @@
 }
 
 .fontWeightLight {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-light);
   letter-spacing: 0;
@@ -23,7 +23,7 @@
 }
 
 .fontWeightRegular {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   letter-spacing: 0;
@@ -31,7 +31,7 @@
 }
 
 .fontWeightMedium {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0;
@@ -39,7 +39,7 @@
 }
 
 .fontWeightSemibold {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0;
@@ -47,7 +47,7 @@
 }
 
 .fontWeightBold {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0;
@@ -55,7 +55,7 @@
 }
 
 .fontWeightExtrabold {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-extrabold);
   letter-spacing: 0;
@@ -63,7 +63,7 @@
 }
 
 .fontWeightBlack {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-black);
   letter-spacing: 0;
