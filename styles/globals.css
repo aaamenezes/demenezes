@@ -215,15 +215,15 @@
   /* ************************************************************************ */
   /* Letter spacing */
 
-  --letter-spacing-xxxs: 0.05em;
-  --letter-spacing-xxs: 0.03em;
+  --letter-spacing-xxxs: -0.05em;
+  --letter-spacing-xxs: -0.025em;
   --letter-spacing-xs: 0em;
-  --letter-spacing-sm: 0em;
-  --letter-spacing-md: -0.01em;
-  --letter-spacing-lg: -0.01em;
-  --letter-spacing-xl: -0.02em;
-  --letter-spacing-xxl: -0.02em;
-  --letter-spacing-xxxl: -0.03em;
+  --letter-spacing-sm: 0.025em;
+  --letter-spacing-md: 0.05em;
+  --letter-spacing-lg: 0.075em;
+  --letter-spacing-xl: 0.1em;
+  --letter-spacing-xxl: 0.125em;
+  --letter-spacing-xxxl: 0.15em;
 
   /* ************************************************************************ */
   /* Line height */

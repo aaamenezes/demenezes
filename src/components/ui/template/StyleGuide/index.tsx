@@ -4,12 +4,12 @@ import FontSize from './FontSize';
 import FontWeight from './FontWeight';
 import LetterSpacing from './LetterSpacing';
 import LineHeight from './LineHeight';
-import styles from './base/styles.module.css';
+import Heading from './base/Heading';
 
 export default function StyleGuideScreen() {
   return (
     <Wrapper width="lg">
-      <h1 className={styles.heading}>Style Guide</h1>
+      <Heading>Style Guide</Heading>
       <hr />
       <FontFamily />
       <hr />
