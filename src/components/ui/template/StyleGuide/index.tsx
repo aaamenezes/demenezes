@@ -25,6 +25,11 @@ export default function StyleGuideScreen() {
         family="--font-family-heading"
       />
       <hr />
+      <FontWeight
+        heading="Font-weight Family mono"
+        family="--font-family-mono"
+      />
+      <hr />
       <LetterSpacing />
       <hr />
       <LineHeight />
