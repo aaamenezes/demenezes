@@ -1,0 +1,7 @@
+.logo {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-600);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-xs);
+}

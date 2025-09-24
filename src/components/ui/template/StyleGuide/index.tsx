@@ -10,7 +10,7 @@ import Header from './parts/Header';
 export default function StyleGuideScreen() {
   return (
     <Wrapper width="lg">
-      <details>
+      <details open>
         <summary>
           <Heading>Casos de uso</Heading>
         </summary>
@@ -18,6 +18,7 @@ export default function StyleGuideScreen() {
           <Header />
         </Wrapper>
       </details>
+
       <details>
         <summary>
           <Heading>Style Guide</Heading>
