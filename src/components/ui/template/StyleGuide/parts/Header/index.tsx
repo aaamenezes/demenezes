@@ -1,4 +1,4 @@
-import SubHeading from '../base/SubHeading';
+import SubHeading from '../../base/SubHeading';
 import styles from './styles.module.css';
 
 export default function Header() {
