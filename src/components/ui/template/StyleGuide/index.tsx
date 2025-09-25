@@ -7,6 +7,7 @@ import LineHeight from './FontStyle/LineHeight';
 import Heading from './base/Heading';
 import Footer from './parts/Footer';
 import Header from './parts/Header';
+import Home from './parts/Home';
 
 export default function StyleGuideScreen() {
   return (
@@ -18,6 +19,7 @@ export default function StyleGuideScreen() {
         <Wrapper width="full">
           <Header />
           <Footer />
+          <Home />
         </Wrapper>
       </details>
 
