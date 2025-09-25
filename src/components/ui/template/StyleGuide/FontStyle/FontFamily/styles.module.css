@@ -1,7 +1,7 @@
 .fontFamilyBody {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -9,7 +9,7 @@
 .fontFamilyHeading {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -17,7 +17,7 @@
 .fontFamilyMono {
   font-family: var(--font-family-mono);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }

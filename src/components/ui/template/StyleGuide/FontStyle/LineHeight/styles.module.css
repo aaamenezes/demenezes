@@ -1,7 +1,7 @@
 .lineHeightXxxs {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-xxxs);
 }
@@ -9,7 +9,7 @@
 .lineHeightXxs {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-xxs);
 }
@@ -17,7 +17,7 @@
 .lineHeightXs {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-xs);
 }
@@ -25,7 +25,7 @@
 .lineHeightSm {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-sm);
 }
@@ -33,7 +33,7 @@
 .lineHeightMd {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-md);
 }
@@ -41,7 +41,7 @@
 .lineHeightLg {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-lg);
 }
@@ -49,7 +49,7 @@
 .lineHeightXl {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-xl);
 }
@@ -57,7 +57,7 @@
 .lineHeightXxl {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-xxl);
 }
@@ -65,7 +65,7 @@
 .lineHeightXxxl {
   font-family: var(--font-family-body);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: var(--line-height-xxxl);
 }

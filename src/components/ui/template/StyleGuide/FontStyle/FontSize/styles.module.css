@@ -1,7 +1,7 @@
 .fontSizeXxxs {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xxxs);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -9,7 +9,7 @@
 .fontSizeXxs {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -17,7 +17,7 @@
 .fontSizeXs {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -25,7 +25,7 @@
 .fontSizeSm {
   font-family: var(--font-family-body);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -33,7 +33,7 @@
 .fontSizeMd {
   font-family: var(--font-family-body);
   font-size: var(--font-size-md);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -41,7 +41,7 @@
 .fontSizeLg {
   font-family: var(--font-family-body);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -49,7 +49,7 @@
 .fontSizeXl {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -57,7 +57,7 @@
 .fontSizeXxl {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xxl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
@@ -65,7 +65,7 @@
 .fontSizeXxxl {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xxxl);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-400);
   letter-spacing: 0;
   line-height: 1;
 }
