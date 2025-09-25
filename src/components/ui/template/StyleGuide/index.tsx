@@ -5,6 +5,7 @@ import FontWeight from './FontStyle/FontWeight';
 import LetterSpacing from './FontStyle/LetterSpacing';
 import LineHeight from './FontStyle/LineHeight';
 import Heading from './base/Heading';
+import Footer from './parts/Footer';
 import Header from './parts/Header';
 
 export default function StyleGuideScreen() {
@@ -16,6 +17,7 @@ export default function StyleGuideScreen() {
         </summary>
         <Wrapper width="full">
           <Header />
+          <Footer />
         </Wrapper>
       </details>
 
