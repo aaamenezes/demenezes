@@ -8,6 +8,7 @@ import Heading from './base/Heading';
 import Footer from './parts/Footer';
 import Header from './parts/Header';
 import Home from './parts/Home';
+import Post from './parts/Post';
 
 export default function StyleGuideScreen() {
   return (
@@ -20,6 +21,7 @@ export default function StyleGuideScreen() {
           <Header />
           <Footer />
           <Home />
+          <Post />
         </Wrapper>
       </details>
 

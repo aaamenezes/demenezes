@@ -5,12 +5,12 @@ import styles from './styles.module.css';
 export default function Home() {
   return (
     <>
-      <SubHeading>Home</SubHeading>
+      <SubHeading>Home/Listing</SubHeading>
       <SubSubHeading>Post card label</SubSubHeading>
       <p className={styles.postCardLabel}>Front-end</p>
       <SubSubHeading>Post card header</SubSubHeading>
-      <p className={styles.postCardHeader}>Como fazer lazyload</p>
-      <SubSubHeading>Como fazer lazyload performático</SubSubHeading>
+      <p className={styles.postCardHeader}>Como fazer lazyload performático</p>
+      <SubSubHeading>Post card description</SubSubHeading>
       <p className={styles.postCardDescription}>
         Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
         performance do seu site e a experiência do usuário. Aprenda como fazer

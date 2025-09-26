@@ -1,0 +1,18 @@
+.postTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-sm);
+}
+
+.postBody {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
+
+  /* */
+  margin-bottom: 0 !important;
+}
