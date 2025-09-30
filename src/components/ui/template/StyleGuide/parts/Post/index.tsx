@@ -9,6 +9,12 @@ export default function Post() {
       <SubSubHeading>Post title</SubSubHeading>
       <p className={styles.postTitle}>Como fazer lazyload performático</p>
       <SubSubHeading>Post description</SubSubHeading>
+      <p className={styles.postDescription}>
+        Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
+        performance do seu site e a experiência do usuário. Aprenda como fazer
+        lazyload de forma rápida e fácil para melhorar a performance do seu site
+        e a experiência do usuário.
+      </p>
       <SubSubHeading>Post date</SubSubHeading>
       <SubSubHeading>Post label</SubSubHeading>
       <SubSubHeading>Post tag</SubSubHeading>
