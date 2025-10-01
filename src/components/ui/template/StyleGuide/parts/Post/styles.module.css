@@ -48,3 +48,11 @@
   /* */
   margin-bottom: 0 !important;
 }
+
+.postH2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-sm);
+}

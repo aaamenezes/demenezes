@@ -34,6 +34,8 @@ export default function Post() {
         Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
         performance do seu site e a experiência do usuário.
       </p>
+      <SubSubHeading>Post h2</SubSubHeading>
+      <p className={styles.postH2}>Como fazer tal coisa</p>
     </>
   );
 }
