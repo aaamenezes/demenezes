@@ -20,6 +20,7 @@ export default function Post() {
       <SubSubHeading>Post label</SubSubHeading>
       <p className={styles.postLabel}>Front-end</p>
       <SubSubHeading>Post tag</SubSubHeading>
+      <p className={styles.postTag}>#javascript</p>
       <SubSubHeading>Post body</SubSubHeading>
       <p className={styles.postBody}>
         Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
