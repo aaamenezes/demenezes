@@ -35,7 +35,13 @@ export default function Post() {
         performance do seu site e a experiência do usuário.
       </p>
       <SubSubHeading>Post h2</SubSubHeading>
-      <p className={styles.postH2}>Como fazer tal coisa</p>
+      <p className={styles.postH2}>
+        Como fazer tal coisa como fazer tal coisa como fazer tal coisa
+      </p>
+      <SubSubHeading>Post h3</SubSubHeading>
+      <p className={styles.postH3}>
+        Como fazer tal coisa como fazer tal coisa como fazer tal coisa
+      </p>
     </>
   );
 }
