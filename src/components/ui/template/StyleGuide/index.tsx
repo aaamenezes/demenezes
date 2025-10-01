@@ -25,6 +25,13 @@ export default function StyleGuideScreen() {
         </Wrapper>
       </details>
 
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
       <details>
         <summary>
           <Heading>Style Guide</Heading>
