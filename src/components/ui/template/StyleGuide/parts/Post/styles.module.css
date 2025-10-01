@@ -22,6 +22,14 @@
   line-height: var(--line-height-xs);
 }
 
+.postLabel {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
+}
+
 .postBody {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xs);

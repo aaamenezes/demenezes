@@ -18,6 +18,7 @@ export default function Post() {
       <SubSubHeading>Post date</SubSubHeading>
       <p className={styles.postDate}>01/01/2023</p>
       <SubSubHeading>Post label</SubSubHeading>
+      <p className={styles.postLabel}>Front-end</p>
       <SubSubHeading>Post tag</SubSubHeading>
       <SubSubHeading>Post body</SubSubHeading>
       <p className={styles.postBody}>
