@@ -16,6 +16,7 @@ export default function Post() {
         e a experiência do usuário.
       </p>
       <SubSubHeading>Post date</SubSubHeading>
+      <p className={styles.postDate}>01/01/2023</p>
       <SubSubHeading>Post label</SubSubHeading>
       <SubSubHeading>Post tag</SubSubHeading>
       <SubSubHeading>Post body</SubSubHeading>
