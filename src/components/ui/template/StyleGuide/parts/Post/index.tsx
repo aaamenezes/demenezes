@@ -42,6 +42,18 @@ export default function Post() {
       <p className={styles.postH3}>
         Como fazer tal coisa como fazer tal coisa como fazer tal coisa
       </p>
+      <SubSubHeading>Post h4</SubSubHeading>
+      <p className={styles.postH4}>
+        Como fazer tal coisa como fazer tal coisa como fazer tal coisa
+      </p>
+      <SubSubHeading>Post h5</SubSubHeading>
+      <p className={styles.postH5}>
+        Como fazer tal coisa como fazer tal coisa como fazer tal coisa
+      </p>
+      <SubSubHeading>Post h6</SubSubHeading>
+      <p className={styles.postH6}>
+        Como fazer tal coisa como fazer tal coisa como fazer tal coisa
+      </p>
     </>
   );
 }

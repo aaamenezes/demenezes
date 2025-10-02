@@ -53,7 +53,7 @@
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-700);
-  letter-spacing: var(--letter-spacing-sm);
+  letter-spacing: var(--letter-spacing-xs);
   line-height: var(--line-height-sm);
 }
 
@@ -61,6 +61,30 @@
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-xxs);
+  line-height: var(--line-height-sm);
+}
+
+.postH4 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-700);
   letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-sm);
+}
+
+.postH5 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-sm);
+}
+
+.postH6 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-sm);
   line-height: var(--line-height-sm);
 }
