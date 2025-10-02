@@ -21,19 +21,6 @@ export default function Post() {
       <p className={styles.postLabel}>Front-end</p>
       <SubSubHeading>Post tag</SubSubHeading>
       <p className={styles.postTag}>#javascript</p>
-      <SubSubHeading>Post body</SubSubHeading>
-      <p className={styles.postBody}>
-        Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
-        performance do seu site e a experiência do usuário.
-      </p>
-      <p className={styles.postBody}>
-        Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
-        performance do seu site e a experiência do usuário.
-      </p>
-      <p className={styles.postBody}>
-        Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
-        performance do seu site e a experiência do usuário.
-      </p>
       <SubSubHeading>Post h2</SubSubHeading>
       <p className={styles.postH2}>
         Como fazer tal coisa como fazer tal coisa como fazer tal coisa
@@ -53,6 +40,19 @@ export default function Post() {
       <SubSubHeading>Post h6</SubSubHeading>
       <p className={styles.postH6}>
         Como fazer tal coisa como fazer tal coisa como fazer tal coisa
+      </p>
+      <SubSubHeading>Post body</SubSubHeading>
+      <p className={styles.postBody}>
+        Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
+        performance do seu site e a experiência do usuário.
+      </p>
+      <p className={styles.postBody}>
+        Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
+        performance do seu site e a experiência do usuário.
+      </p>
+      <p className={styles.postBody}>
+        Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
+        performance do seu site e a experiência do usuário.
       </p>
     </>
   );
