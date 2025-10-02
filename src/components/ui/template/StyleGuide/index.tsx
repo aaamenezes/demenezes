@@ -28,10 +28,6 @@ export default function StyleGuideScreen() {
       <hr />
       <hr />
       <hr />
-      <hr />
-      <hr />
-      <hr />
-      <hr />
       <details>
         <summary>
           <Heading>Style Guide</Heading>
