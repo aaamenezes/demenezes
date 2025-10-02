@@ -88,3 +88,15 @@
   /* */
   margin-bottom: 0 !important;
 }
+
+.postCode {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-400);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md) !important;
+
+  /* */
+  display: block;
+  padding: 1rem !important;
+}

@@ -54,6 +54,20 @@ export default function Post() {
         Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
         performance do seu site e a experiência do usuário.
       </p>
+      <SubSubHeading>Post code</SubSubHeading>
+      <pre>
+        <code className={styles.postCode}>
+          {`const divs = document.getElementsByTagName('div');
+// ou...
+const divs = document.querySelector('div');
+
+for (const div of divs) {
+  console.log(div);
+}
+
+// todas as divs do site serão jogadas no console uma a uma`}
+        </code>
+      </pre>
     </>
   );
 }
