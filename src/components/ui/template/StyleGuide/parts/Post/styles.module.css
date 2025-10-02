@@ -100,3 +100,22 @@
   display: block;
   padding: 1rem !important;
 }
+
+.postQuoteCite {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
+
+  /* */
+  margin-bottom: 0 !important;
+}
+
+.postQuoteAuthor {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
+}

@@ -68,6 +68,21 @@ for (const div of divs) {
 // todas as divs do site serão jogadas no console uma a uma`}
         </code>
       </pre>
+      <SubSubHeading>Post quote cite</SubSubHeading>
+      <p className={styles.postQuoteCite}>
+        {`"Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
+        performance do seu site e a experiência do usuário."`}
+      </p>
+      <p className={styles.postQuoteCite}>
+        {`"Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
+        performance do seu site e a experiência do usuário."`}
+      </p>
+      <p className={styles.postQuoteCite}>
+        {`"Aprenda como fazer lazyload de forma rápida e fácil para melhorar a
+        performance do seu site e a experiência do usuário."`}
+      </p>
+      <SubSubHeading>Post quote author</SubSubHeading>
+      <p className={styles.postQuoteAuthor}>Fulano de tal</p>
     </>
   );
 }
