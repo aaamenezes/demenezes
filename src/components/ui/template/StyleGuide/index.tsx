@@ -9,11 +9,25 @@ import Footer from './parts/Footer';
 import Header from './parts/Header';
 import Home from './parts/Home';
 import Post from './parts/Post';
+import Spacing from './spacing';
 
 export default function StyleGuideScreen() {
   return (
     <Wrapper width="lg">
       <details open>
+        <summary>
+          <Heading>Spacing</Heading>
+        </summary>
+        <Wrapper width="full">
+          <Spacing />
+        </Wrapper>
+      </details>
+
+      <hr />
+      <hr />
+      <hr />
+
+      <details>
         <summary>
           <Heading>Casos de uso</Heading>
         </summary>
@@ -28,6 +42,7 @@ export default function StyleGuideScreen() {
       <hr />
       <hr />
       <hr />
+
       <details>
         <summary>
           <Heading>Style Guide</Heading>
