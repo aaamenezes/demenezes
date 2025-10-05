@@ -31,7 +31,6 @@
 .navLink {
   display: block;
   padding: 1.1rem 5%;
-  font-weight: var(--font-weight-button);
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-100);
 }

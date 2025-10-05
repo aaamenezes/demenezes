@@ -27,7 +27,11 @@ export default function Navigation({
         key={menu.title}
       >
         <Link
-          className={clsx(S.navLink, isCurrentPage && S.isCurrentPage)}
+          className={clsx(
+            S.navLink,
+            'menuLink',
+            isCurrentPage && S.isCurrentPage
+          )}
           href={menu.url}
         >
           {menu.title}
