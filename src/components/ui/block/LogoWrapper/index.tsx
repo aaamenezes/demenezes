@@ -10,7 +10,7 @@ export default function LogoWrapper({ isHeader }: { isHeader?: boolean }) {
 
   return (
     <Link className={S.logoLink} href="/">
-      <LogoTag className={S.logo}>{logoText}</LogoTag>
+      <LogoTag className={S.logoText}>{logoText}</LogoTag>
     </Link>
   );
 }

@@ -21,9 +21,6 @@
   transition: var(--transition-fast);
 }
 
-.logo {
+.logoText {
   display: block;
-  line-height: var(--line-height-button);
-  font-size: var(--font-size-h4);
-  font-family: var(--font-family-text);
 }
