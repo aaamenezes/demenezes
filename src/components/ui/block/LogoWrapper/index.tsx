@@ -5,13 +5,12 @@ export default function LogoWrapper({ isHeader }: { isHeader?: boolean }) {
   // quando reativer o preview, resolver isso
   const preview = false;
 
+  const LogoTag = isHeader ? 'h1' : 'strong';
+  const logoText = preview ? 'Preview' : 'deMenezes';
+
   return (
     <Link className={S.logoLink} href="/">
-      {isHeader ? (
-        <h1 className={S.logo}>{preview ? 'Preview' : 'deMenezes'}</h1>
-      ) : (
-        <strong className={S.logo}>{preview ? 'Preview' : 'deMenezes'}</strong>
-      )}
+      <LogoTag className={S.logo}>{logoText}</LogoTag>
     </Link>
   );
 }
