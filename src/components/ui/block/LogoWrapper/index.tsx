@@ -1,3 +1,4 @@
+import { clsx } from '../../../../utils/clsx';
 import Link from '../../base/Link';
 import S from './styles.module.css';
 
@@ -10,7 +11,7 @@ export default function LogoWrapper({ isHeader }: { isHeader?: boolean }) {
 
   return (
     <Link className={S.logoLink} href="/">
-      <LogoTag className={S.logoText}>{logoText}</LogoTag>
+      <LogoTag className={clsx(S.logoText, 'logoText')}>{logoText}</LogoTag>
     </Link>
   );
 }
