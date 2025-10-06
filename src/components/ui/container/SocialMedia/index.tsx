@@ -20,7 +20,9 @@ export default function SocialMedia({
       >
         {/* não gostei desse "as IconName", corrigir isso */}
         <Icon name={socialMedia.title as IconName} />
-        <span className={S.socialLabel}>{socialMedia.title}</span>
+        <span className={clsx(S.socialLabel, 'socialMediaLabel')}>
+          {socialMedia.title}
+        </span>
       </Link>
     </li>
   ));

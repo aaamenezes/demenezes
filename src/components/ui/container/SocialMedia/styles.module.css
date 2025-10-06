@@ -9,8 +9,6 @@
 .socialLabel {
   display: block;
   margin-top: 0;
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-button);
   color: var(--color-neutral-500);
 }
 
@@ -31,7 +29,6 @@
   justify-content: space-around;
   list-style: none;
   margin: 0;
-  font-size: var(--font-size-text);
   margin-bottom: var(--spacing-h1);
 }
 
