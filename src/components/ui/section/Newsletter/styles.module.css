@@ -1,7 +1,4 @@
 .newsletterTitle {
-  font-size: var(--font-size-h3);
-  line-height: var(--line-height-h3);
-  letter-spacing: var(--letter-spacing-h3);
   margin-top: 0;
   text-align: center;
 }

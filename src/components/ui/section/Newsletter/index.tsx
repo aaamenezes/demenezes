@@ -1,4 +1,5 @@
 import settings from '../../../../../settings.json';
+import { clsx } from '../../../../utils/clsx';
 import Button from '../../base/Button';
 import HiddenA11Y from '../../base/HiddenA11Y';
 import Input from '../../base/Input';
@@ -11,7 +12,9 @@ export default function Newsletter() {
   return (
     <Wrapper className={S.newsletterForm} width="full" isFluid>
       <Wrapper width="md" spacing={0}>
-        <h3 className={S.newsletterTitle}>{title}</h3>
+        <h3 className={clsx(S.newsletterTitle, 'newsletterFormTitle')}>
+          {title}
+        </h3>
 
         {/* Begin Mailchimp Signup Form */}
         <div id="mc_embed_signup">
@@ -33,7 +36,7 @@ export default function Newsletter() {
                   <Input
                     type="text"
                     name="FNAME"
-                    className=""
+                    className="newsletterFormInput"
                     id="mce-FNAME"
                     placeholder="Nome"
                     required
@@ -48,7 +51,7 @@ export default function Newsletter() {
                   <Input
                     type="email"
                     name="EMAIL"
-                    className="required email"
+                    className="newsletterFormInput required email"
                     id="mce-EMAIL"
                     placeholder="Email"
                     required
@@ -67,15 +70,14 @@ export default function Newsletter() {
                   style={{ display: 'none' }}
                 />
               </div>
-              <HiddenA11Y aria-hidden="true">
-                <input
-                  type="text"
-                  name="b_931f7d0fb92503537ca06456d_4b0ff01e85"
-                  tabIndex={-1}
-                  value=""
-                  onChange={() => {}}
-                />
-              </HiddenA11Y>
+              <input
+                type="text"
+                name="b_931f7d0fb92503537ca06456d_4b0ff01e85"
+                tabIndex={-1}
+                style={{ display: 'none' }}
+                value=""
+                onChange={() => {}}
+              />
               <div className="optionalParent">
                 <div className="clear foot">
                   <Button
