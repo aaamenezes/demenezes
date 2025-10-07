@@ -18,30 +18,13 @@
   margin-bottom: var(--spacing-h1);
 }
 
-.leadText {
-  font-family: var(--font-family-display);
+.postDescription {
   margin-bottom: var(--spacing-text);
-  line-height: var(--line-height-text);
-  font-size: var(--font-size-text);
-  letter-spacing: var(--letter-spacing-text);
   text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .leadText {
-    line-height: var(--line-height-h4);
-    font-size: var(--font-size-h4);
-    letter-spacing: var(--letter-spacing-h4);
-  }
-}
-
-.leadText strong {
-  font-weight: var(--font-weight-text);
 }
 
 .postHeaderFooter {
   text-align: center;
-  font-size: var(--font-size-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -54,8 +37,6 @@
   display: block;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  font-size: var(--font-size-small);
-  font-family: var(--font-family-display);
 }
 
 @media screen and (min-width: 768px) {
@@ -68,6 +49,7 @@
   margin-right: 0.3rem;
 }
 
+/* Precisa dessa merda aqui abaixo? Não dá pra fazer isso no HTML? */
 .postDate:not(:last-of-type)::after {
   content: ' - ';
 }
@@ -89,9 +71,6 @@
 .keywordItem {
   padding: 0.3rem 0.5rem;
   margin-bottom: 0.5rem;
-  line-height: var(--line-height-button);
-  font-size: var(--font-size-small);
-  font-family: var(--font-family-display);
   color: var(--color-neutral-100);
   background-color: var(--color-red-900);
 }
