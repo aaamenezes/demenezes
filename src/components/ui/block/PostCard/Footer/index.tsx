@@ -13,13 +13,13 @@ export default function PostCardFooter({
 }) {
   return (
     <footer className={clsx(S.postCardFooterWrapper, isCompact && S.isCompact)}>
-      <p className={S.postCardDate}>
+      <p className={clsx(S.postCardDate, 'postCardDate')}>
         {update && date
           ? `${update > date ? 'Publicado em ' : ''}${convertDate(date)}`
           : 'Não publicado'}
       </p>
       {update > date && (
-        <p className={S.postCardDate}>
+        <p className={clsx(S.postCardDate, 'postCardDate')}>
           {`Atualizado em ${convertDate(update)}`}
         </p>
       )}

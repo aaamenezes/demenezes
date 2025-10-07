@@ -28,3 +28,37 @@
   line-height: var(--line-height-xs);
 }
 
+/* ************************************************************************** */
+/* Post card */
+
+.postCategoryText {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
+}
+
+.postCardTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-sm);
+}
+
+.postCardDescription {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
+}
+
+.postCardDate {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
+}

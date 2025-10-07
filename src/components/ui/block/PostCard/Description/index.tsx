@@ -9,7 +9,13 @@ export default function PostCardDescription({
   isCompact: boolean;
 }) {
   return (
-    <p className={clsx(S.postCardDescriptionWrapper, isCompact && S.isCompact)}>
+    <p
+      className={clsx(
+        S.postCardDescriptionWrapper,
+        'postCardDescription',
+        isCompact && S.isCompact
+      )}
+    >
       {description}
     </p>
   );
