@@ -5,7 +5,6 @@ import FontWeight from './FontStyle/FontWeight';
 import LetterSpacing from './FontStyle/LetterSpacing';
 import LineHeight from './FontStyle/LineHeight';
 import Heading from './base/Heading';
-import Home from './parts/Home';
 import Post from './parts/Post';
 import Spacing from './spacing';
 
@@ -30,7 +29,6 @@ export default function StyleGuideScreen() {
           <Heading>Casos de uso</Heading>
         </summary>
         <Wrapper width="full">
-          <Home />
           <Post />
         </Wrapper>
       </details>
