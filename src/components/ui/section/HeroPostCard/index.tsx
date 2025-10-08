@@ -2,14 +2,14 @@ import { CSSProperties } from 'react';
 import { PostSummaryProps } from '../../../../types';
 import PostCardInfos from '../../block/PostCard/Infos';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function HeroPostCard({ post }: { post: PostSummaryProps }) {
   const { src } = post.thumbnail.responsiveImage;
 
   return (
     <div
-      className={S.heroWrapper}
+      className={style.heroWrapper}
       style={
         {
           '--background-image-xs': `url(${src}&w=425)`,
@@ -22,7 +22,7 @@ export default function HeroPostCard({ post }: { post: PostSummaryProps }) {
       }
     >
       <Wrapper width="full">
-        <Wrapper className={S.heroInner} width="xxxl" spacing={0} isFluid>
+        <Wrapper className={style.heroInner} width="xxxl" spacing={0} isFluid>
           <PostCardInfos post={post} isHero />
         </Wrapper>
       </Wrapper>

@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { clsx } from '../../../../utils/clsx';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Button({
   children,
@@ -24,7 +24,7 @@ export default function Button({
   return (
     <button
       onClick={handleClick}
-      className={clsx(S.button, className)}
+      className={clsx(style.button, className)}
       type={type}
       disabled={disabled}
       name={name}

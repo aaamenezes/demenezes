@@ -1,7 +1,7 @@
 import NextImage from 'next/image';
 import HiddenA11Y from '../../base/HiddenA11Y';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Greeting({
   greetingTitle,
@@ -29,8 +29,8 @@ export default function Greeting({
   } = profileImage;
 
   return (
-    <Wrapper className={S.greeting} width="lg">
-      <div className={S.imageWrapper}>
+    <Wrapper className={style.greeting} width="lg">
+      <div className={style.imageWrapper}>
         <NextImage
           src={src}
           alt={alt}
@@ -44,8 +44,8 @@ export default function Greeting({
       <h1>
         <HiddenA11Y>{greetingTitle}</HiddenA11Y>
       </h1>
-      <h2 className={S.greetingTitle}>{greetingSubtitle}</h2>
-      <p className={S.greetingText}>{greetingDescription}</p>
+      <h2 className={style.greetingTitle}>{greetingSubtitle}</h2>
+      <p className={style.greetingText}>{greetingDescription}</p>
     </Wrapper>
   );
 }

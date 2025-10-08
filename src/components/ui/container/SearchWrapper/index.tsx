@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react';
 import { clsx } from '../../../../utils/clsx';
 import ToggleModalButton from '../../block/ToggleModalButton';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function SearchWrapper() {
   const [isOpenSearch, setIsOpenSearch] = useState(false);
@@ -12,20 +12,23 @@ export default function SearchWrapper() {
   }, []);
 
   return (
-    <div className={S.search}>
+    <div className={style.search}>
       <ToggleModalButton
         onClick={toggleSearch}
         icon="search"
         color="gray"
-        className={S.toggleSearchModal}
+        className={style.toggleSearchModal}
         aria-labelledby="Abrir busca do blog"
       />
       <Wrapper
-        className={clsx(S.searchContent, isOpenSearch && S.isOpenSearch)}
+        className={clsx(
+          style.searchContent,
+          isOpenSearch && style.isOpenSearch
+        )}
         width="xl"
       >
         <ToggleModalButton
-          className={S.closeSearchButton}
+          className={style.closeSearchButton}
           onClick={toggleSearch}
           icon="close"
           color="gray"

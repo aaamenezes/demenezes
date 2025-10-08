@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { convertDate } from '../../../../utils/convertDate';
 import Label from '../../base/Label';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 import { clsx } from '../../../../utils/clsx';
 
 export default function PostHeader({
@@ -25,7 +25,7 @@ export default function PostHeader({
   const keywordsList = keywords.split(',').map(keyword => {
     const clearKeyword = keyword.trim();
     return (
-      <li className={clsx(S.keywordItem, 'postKeyword')} key={clearKeyword}>
+      <li className={clsx(style.keywordItem, 'postKeyword')} key={clearKeyword}>
         {clearKeyword}
       </li>
     );
@@ -33,29 +33,29 @@ export default function PostHeader({
 
   return (
     <div
-      className={S.postHeaderWrapper}
+      className={style.postHeaderWrapper}
       style={{ '--background-image': `url(${coverImage})` } as CSSProperties}
     >
       <Wrapper width="full" isFluid>
-        <Wrapper className={S.postHeaderInner} width="xxxl" spacing={0}>
-          <h1 className={clsx(S.postTitle, 'postTitle')}>{title}</h1>
+        <Wrapper className={style.postHeaderInner} width="xxxl" spacing={0}>
+          <h1 className={clsx(style.postTitle, 'postTitle')}>{title}</h1>
           <p>
-            <strong className={clsx(S.postDescription, 'postDescription')}>
+            <strong className={clsx(style.postDescription, 'postDescription')}>
               {description}
             </strong>
           </p>
-          <footer className={S.postHeaderFooter}>
-            <span className={clsx(S.postDate, 'postDate')}>
+          <footer className={style.postHeaderFooter}>
+            <span className={clsx(style.postDate, 'postDate')}>
               {update && date
                 ? `Publicado em ${convertDate(date)}`
                 : 'Não publicado'}
             </span>
             {update > date && (
-              <span className={clsx(S.postDate, 'postDate')}>
+              <span className={clsx(style.postDate, 'postDate')}>
                 {`Atualizado em ${convertDate(update)}`}
               </span>
             )}
-            <ul className={S.keywordsList}>{keywordsList}</ul>
+            <ul className={style.keywordsList}>{keywordsList}</ul>
           </footer>
           <Label>{category}</Label>
         </Wrapper>

@@ -1,5 +1,5 @@
 import NextImage from 'next/image';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Image({
   src,
@@ -27,7 +27,7 @@ export default function Image({
           margin: '0 auto',
         }}
       />
-      {title && <figcaption className={S.figcaption}>{title}</figcaption>}
+      {title && <figcaption className={style.figcaption}>{title}</figcaption>}
     </figure>
   );
 }

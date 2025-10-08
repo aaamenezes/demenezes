@@ -4,15 +4,15 @@ import Button from '../../base/Button';
 import HiddenA11Y from '../../base/HiddenA11Y';
 import Input from '../../base/Input';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
 
   return (
-    <Wrapper className={S.newsletterForm} width="full" isFluid>
+    <Wrapper className={style.newsletterForm} width="full" isFluid>
       <Wrapper width="md" spacing={0}>
-        <h3 className={clsx(S.newsletterTitle, 'newsletterFormTitle')}>
+        <h3 className={clsx(style.newsletterTitle, 'newsletterFormTitle')}>
           {title}
         </h3>
 
@@ -28,7 +28,7 @@ export default function Newsletter() {
             noValidate
           >
             <div id="mc_embed_signup_scroll">
-              <div className={S.inputsWrapper}>
+              <div className={style.inputsWrapper}>
                 <div className="mc-field-group">
                   <HiddenA11Y>
                     <label htmlFor="mce-FNAME">Informe seu nome</label>
@@ -84,7 +84,7 @@ export default function Newsletter() {
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    className={S.submitButton}
+                    className={style.submitButton}
                   >
                     Quero receber
                   </Button>

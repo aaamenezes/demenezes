@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import { iconMap } from './iconMap';
-import S from './styles.module.css';
+import style from './styles.module.css';
 import type { IconName } from './types';
 import { clsx } from '../../../../utils/clsx';
 
@@ -18,10 +18,10 @@ export default function Icon({
   const { className: mapIconClass, color: mapIconColor } = iconMap[name];
 
   const classes = clsx(
-    S.icon,
+    style.icon,
     mapIconClass,
     propIconClassName,
-    inline && S.inline
+    inline && style.inline
   );
 
   /**

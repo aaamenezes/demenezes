@@ -5,7 +5,7 @@ import LogoWrapper from '../../block/LogoWrapper';
 import ToggleModalButton from '../../block/ToggleModalButton';
 import Navigation from '../../container/Navigation';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PageHeader() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -26,15 +26,15 @@ export default function PageHeader() {
     <Wrapper
       width="full"
       className={clsx(
-        S.headerWrapper,
-        isOpenHeader && S.isOpenHeader,
-        currentPage === 'home' && S.isHome
+        style.headerWrapper,
+        isOpenHeader && style.isOpenHeader,
+        currentPage === 'home' && style.isHome
       )}
     >
-      <Wrapper className={S.headerInner} width="xxxl" spacing={0} isFluid>
+      <Wrapper className={style.headerInner} width="xxxl" spacing={0} isFluid>
         <LogoWrapper isHeader />
         <ToggleModalButton
-          className={S.toggleMenuButton}
+          className={style.toggleMenuButton}
           onClick={toggleMenu}
           icon="bars"
         />

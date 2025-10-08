@@ -4,7 +4,7 @@ import { clsx } from '../../../../utils/clsx';
 import { getPageInfos } from '../../../../utils/getPageInfos';
 import Link from '../../base/Link';
 import ToggleModalButton from '../../block/ToggleModalButton';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Navigation({
   isOpenMenu,
@@ -23,14 +23,14 @@ export default function Navigation({
 
     return (
       <li
-        className={clsx(S.navItem, isCurrentPage && S.isCurrentPage)}
+        className={clsx(style.navItem, isCurrentPage && style.isCurrentPage)}
         key={menu.title}
       >
         <Link
           className={clsx(
-            S.navLink,
+            style.navLink,
             'menuLink',
-            isCurrentPage && S.isCurrentPage
+            isCurrentPage && style.isCurrentPage
           )}
           href={menu.url}
         >
@@ -43,13 +43,13 @@ export default function Navigation({
   return (
     <>
       <div
-        className={clsx(S.overlay, isOpenMenu && S.isOpenMenu)}
+        className={clsx(style.overlay, isOpenMenu && style.isOpenMenu)}
         onClick={toggleMenu}
       />
-      <nav className={clsx(S.navWrapper, isOpenMenu && S.isOpenMenu)}>
-        <ul className={S.navList}>{navigationElements}</ul>
+      <nav className={clsx(style.navWrapper, isOpenMenu && style.isOpenMenu)}>
+        <ul className={style.navList}>{navigationElements}</ul>
         <ToggleModalButton
-          className={S.closeMenuMobileButton}
+          className={style.closeMenuMobileButton}
           onClick={toggleMenu}
           icon="close"
           color="neutral_800"

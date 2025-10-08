@@ -2,7 +2,7 @@ import NextLink from 'next/link';
 import { PropsWithChildren } from 'react';
 import { clsx } from '../../../../utils/clsx';
 import Icon from '../Icon';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Link({
   href,
@@ -19,13 +19,13 @@ export default function Link({
   return (
     <NextLink href={href} passHref legacyBehavior>
       <a
-        className={clsx(S.link, inline && S.inline, className)}
+        className={clsx(style.link, inline && style.inline, className)}
         target={isExternal ? '_blank' : '_self'}
         rel="noreferrer"
       >
         {isExternal && inline ? (
           <>
-            <span className={inline ? S.text : ''}>{children}</span>
+            <span className={inline ? style.text : ''}>{children}</span>
             <Icon name="external" inline={inline} />
           </>
         ) : (

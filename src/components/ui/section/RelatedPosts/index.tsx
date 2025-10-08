@@ -1,7 +1,7 @@
 import { PostSummaryProps } from '../../../../types';
 import PostCard from '../../block/PostCard';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function RelatedPosts({
   postCategory,
@@ -21,7 +21,7 @@ export default function RelatedPosts({
       <header>
         <h2>{`Veja outros posts sobre ${postCategory}`}</h2>
       </header>
-      <div className={S.relatedPostsGrid}>{relatedPostsElements}</div>
+      <div className={style.relatedPostsGrid}>{relatedPostsElements}</div>
     </Wrapper>
   );
 }

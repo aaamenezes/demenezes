@@ -1,7 +1,7 @@
 import { clsx } from '../../../../utils/clsx';
 import Link from '../../base/Link';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Pagination({
   currentPagination,
@@ -14,21 +14,21 @@ export default function Pagination({
   const nextLink = `/page/${+currentPagination + 1}`;
 
   return (
-    <Wrapper className={S.paginationWrapper} width="xxl" spacing={2}>
+    <Wrapper className={style.paginationWrapper} width="xxl" spacing={2}>
       {currentPagination > 1 && (
         <Link
-          className={clsx(S.paginationButton, S.isPrevious)}
+          className={clsx(style.paginationButton, style.isPrevious)}
           href={previousLink}
         >
           Posts mais recentes
         </Link>
       )}
       {!isLastPagination ? (
-        <Link className={S.paginationButton} href={nextLink}>
+        <Link className={style.paginationButton} href={nextLink}>
           Próxima página
         </Link>
       ) : (
-        <Link className={S.paginationButton} href="/">
+        <Link className={style.paginationButton} href="/">
           Parabéns, você chegou ao início do blog :)
         </Link>
       )}

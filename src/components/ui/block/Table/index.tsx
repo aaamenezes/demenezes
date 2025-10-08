@@ -1,4 +1,4 @@
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Table({
   tableTitle,
@@ -21,7 +21,7 @@ export default function Table({
     .replace('</table>', '');
 
   return (
-    <div className={S.tableWrapper}>
+    <div className={style.tableWrapper}>
       <table
         summary={tableSummary}
         dangerouslySetInnerHTML={{ __html: formatedTable }}

@@ -1,7 +1,9 @@
 import type { PropsWithChildren } from 'react';
 import { clsx } from '../../../../utils/clsx';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Label({ children }: PropsWithChildren) {
-  return <div className={clsx(S.label, 'postCategoryText')}>{children}</div>;
+  return (
+    <div className={clsx(style.label, 'postCategoryText')}>{children}</div>
+  );
 }

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { simplifyString } from '../../../../../utils/simplifyString';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export function handleHeading({ node }: any) {
   const id = simplifyString(node.children[0].value);
@@ -8,11 +8,11 @@ export function handleHeading({ node }: any) {
   if (node.level === 2) {
     return (
       <h2
-        className={S.title}
+        className={style.title}
         key={node.children[0].value + Math.random()}
         id={id}
       >
-        <a className={S.titleLink} href={`#${id}`}>
+        <a className={style.titleLink} href={`#${id}`}>
           {node.children[0].value}
         </a>
       </h2>
@@ -22,11 +22,11 @@ export function handleHeading({ node }: any) {
   if (node.level === 3) {
     return (
       <h3
-        className={S.title}
+        className={style.title}
         key={node.children[0].value + Math.random()}
         id={id}
       >
-        <a className={S.titleLink} href={`#${id}`}>
+        <a className={style.titleLink} href={`#${id}`}>
           {node.children[0].value}
         </a>
       </h3>
@@ -36,11 +36,11 @@ export function handleHeading({ node }: any) {
   if (node.level === 4) {
     return (
       <h4
-        className={S.title}
+        className={style.title}
         key={node.children[0].value + Math.random()}
         id={id}
       >
-        <a className={S.titleLink} href={`#${id}`}>
+        <a className={style.titleLink} href={`#${id}`}>
           {node.children[0].value}
         </a>
       </h4>
@@ -50,11 +50,11 @@ export function handleHeading({ node }: any) {
   if (node.level === 5) {
     return (
       <h5
-        className={S.title}
+        className={style.title}
         key={node.children[0].value + Math.random()}
         id={id}
       >
-        <a className={S.titleLink} href={`#${id}`}>
+        <a className={style.titleLink} href={`#${id}`}>
           {node.children[0].value}
         </a>
       </h5>
@@ -64,11 +64,11 @@ export function handleHeading({ node }: any) {
   if (node.level === 6) {
     return (
       <h6
-        className={S.title}
+        className={style.title}
         key={node.children[0].value + Math.random()}
         id={id}
       >
-        <a className={S.titleLink} href={`#${id}`}>
+        <a className={style.titleLink} href={`#${id}`}>
           {node.children[0].value}
         </a>
       </h6>

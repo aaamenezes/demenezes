@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { CSSProperties } from 'react';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function ProgressBar() {
   const [barWidth, setBarWidth] = useState(0);
@@ -26,7 +26,7 @@ export default function ProgressBar() {
 
   return (
     <div
-      className={S.bar}
+      className={style.bar}
       style={{ '--bar-width': `${barWidth}%` } as CSSProperties}
     />
   );

@@ -1,6 +1,6 @@
 import { clsx } from '../../../../../utils/clsx';
 import { convertDate } from '../../../../../utils/convertDate';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PostCardFooter({
   date,
@@ -12,14 +12,19 @@ export default function PostCardFooter({
   isCompact: boolean;
 }) {
   return (
-    <footer className={clsx(S.postCardFooterWrapper, isCompact && S.isCompact)}>
-      <p className={clsx(S.postCardDate, 'postCardDate')}>
+    <footer
+      className={clsx(
+        style.postCardFooterWrapper,
+        isCompact && style.isCompact
+      )}
+    >
+      <p className={clsx(style.postCardDate, 'postCardDate')}>
         {update && date
           ? `${update > date ? 'Publicado em ' : ''}${convertDate(date)}`
           : 'Não publicado'}
       </p>
       {update > date && (
-        <p className={clsx(S.postCardDate, 'postCardDate')}>
+        <p className={clsx(style.postCardDate, 'postCardDate')}>
           {`Atualizado em ${convertDate(update)}`}
         </p>
       )}

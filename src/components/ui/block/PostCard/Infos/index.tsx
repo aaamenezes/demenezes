@@ -4,7 +4,7 @@ import { clsx } from '../../../../../utils/clsx';
 import PostCardDescription from '../Description';
 import PostCardFooter from '../Footer';
 import PostCardHeader from '../Header';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PostCardInfos({
   post,
@@ -26,9 +26,9 @@ export default function PostCardInfos({
   return (
     <div
       className={clsx(
-        S.postCardInfosWrapper,
-        isHero && S.isHero,
-        isCompact && S.isCompact
+        style.postCardInfosWrapper,
+        isHero && style.isHero,
+        isCompact && style.isCompact
       )}
       style={
         {

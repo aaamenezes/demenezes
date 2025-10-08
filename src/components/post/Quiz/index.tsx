@@ -2,7 +2,7 @@ import { FormEvent, useCallback, useState } from 'react';
 import { clsx } from '../../../utils/clsx';
 import { simplifyString } from '../../../utils/simplifyString';
 import Button from '../../ui/base/Button';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Quiz({
   title,
@@ -25,15 +25,15 @@ export default function Quiz({
 
   return (
     <form
-      className={clsx(S.quizForm, isAnswered && S.isAnswered)}
+      className={clsx(style.quizForm, isAnswered && style.isAnswered)}
       onSubmit={handleSubmit}
     >
-      <header className={S.header}>
+      <header className={style.header}>
         <p>
           <strong>{title}</strong>
         </p>
       </header>
-      <ul className={S.alternativesList}>
+      <ul className={style.alternativesList}>
         {alternatives.map((alternative, index) => {
           const currentId = `${simplifyString(title)}-${index}`;
 
@@ -41,9 +41,10 @@ export default function Quiz({
             <li key={simplifyString(alternative)}>
               <input
                 className={clsx(
-                  S.alternativeInput,
-                  isAnswered && S.isAnswered,
-                  index === correctAlternativeIndex - 1 && S.isCorrectResponse
+                  style.alternativeInput,
+                  isAnswered && style.isAnswered,
+                  index === correctAlternativeIndex - 1 &&
+                    style.isCorrectResponse
                 )}
                 type="radio"
                 name={simplifyString(title)}
@@ -61,8 +62,12 @@ export default function Quiz({
           );
         })}
       </ul>
-      <footer className={S.footer}>
-        <Button className={S.submitButton} type="submit" disabled={isAnswered}>
+      <footer className={style.footer}>
+        <Button
+          className={style.submitButton}
+          type="submit"
+          disabled={isAnswered}
+        >
           Responder
         </Button>
         {isAnswered && (

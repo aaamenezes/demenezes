@@ -5,7 +5,7 @@ import Label from '../../base/Label';
 import Link from '../../base/Link';
 import Wrapper from '../../container/Wrapper';
 import PostCardInfos from './Infos';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PostCard({
   post,
@@ -22,16 +22,19 @@ export default function PostCard({
 
   return (
     <Wrapper
-      className={clsx(S.postCardWrapper, isCompact && S.isCompact)}
+      className={clsx(style.postCardWrapper, isCompact && style.isCompact)}
       width="xl"
       spacing={spacing || 7}
     >
       <div
-        className={clsx(S.postCardImageWrapper, isCompact && S.isCompact)}
+        className={clsx(
+          style.postCardImageWrapper,
+          isCompact && style.isCompact
+        )}
         aria-hidden="true"
       >
         <Link
-          className={S.postCardImageLink}
+          className={style.postCardImageLink}
           href={`/posts/${slug}`}
           tab-index="-1"
         >

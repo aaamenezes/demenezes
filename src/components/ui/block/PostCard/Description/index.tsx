@@ -1,5 +1,5 @@
 import { clsx } from '../../../../../utils/clsx';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PostCardDescription({
   description,
@@ -11,9 +11,9 @@ export default function PostCardDescription({
   return (
     <p
       className={clsx(
-        S.postCardDescriptionWrapper,
+        style.postCardDescriptionWrapper,
         'postCardDescription',
-        isCompact && S.isCompact
+        isCompact && style.isCompact
       )}
     >
       {description}

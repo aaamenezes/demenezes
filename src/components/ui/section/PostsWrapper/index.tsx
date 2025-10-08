@@ -4,7 +4,7 @@ import { getPageInfos } from '../../../../utils/getPageInfos';
 import PostCard from '../../block/PostCard';
 import HeroPostCard from '../HeroPostCard';
 import Newsletter from '../Newsletter';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PostsWrapper({
   postsList,
@@ -28,7 +28,7 @@ export default function PostsWrapper({
     .map(post => <PostCard key={post.title} post={post} />);
 
   return (
-    <main className={clsx(S.postsWrapper, !isHome && S.isHome)}>
+    <main className={clsx(style.postsWrapper, !isHome && style.isHome)}>
       {isHome && <HeroPostCard post={heroPost} />}
       {firstBlockPosts}
       <Newsletter />

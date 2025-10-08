@@ -3,7 +3,7 @@ import { clsx } from '../../../../utils/clsx';
 import Icon from '../../base/Icon';
 import { IconName } from '../../base/Icon/types';
 import Link from '../../base/Link';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function SocialMedia({
   isCenter = true,
@@ -11,16 +11,16 @@ export default function SocialMedia({
   isCenter?: boolean;
 }) {
   const socialElements = settings.socialMedia.map(socialMedia => (
-    <li className={S.socialItem} key={socialMedia.title}>
+    <li className={style.socialItem} key={socialMedia.title}>
       <Link
-        className={S.socialLink}
+        className={style.socialLink}
         href={socialMedia.url}
         aria-label={`Acessar o ${socialMedia.title} do autor do blog`}
         isExternal
       >
         {/* não gostei desse "as IconName", corrigir isso */}
         <Icon name={socialMedia.title as IconName} />
-        <span className={clsx(S.socialLabel, 'socialMediaLabel')}>
+        <span className={clsx(style.socialLabel, 'socialMediaLabel')}>
           {socialMedia.title}
         </span>
       </Link>
@@ -28,8 +28,8 @@ export default function SocialMedia({
   ));
 
   return (
-    <nav className={clsx(S.socialMediaWrapper, isCenter && S.isCenter)}>
-      <ul className={S.socialList}>{socialElements}</ul>
+    <nav className={clsx(style.socialMediaWrapper, isCenter && style.isCenter)}>
+      <ul className={style.socialList}>{socialElements}</ul>
     </nav>
   );
 }

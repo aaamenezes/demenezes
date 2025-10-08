@@ -1,7 +1,7 @@
 import { PostSummaryProps } from '../../../../../types';
 import { clsx } from '../../../../../utils/clsx';
 import Link from '../../../base/Link';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PostCardHeader({
   post,
@@ -19,13 +19,13 @@ export default function PostCardHeader({
       {isHero && <p className="postCategoryText">{category}</p>}
       <h3
         className={clsx(
-          S.postCardTitle,
-          isHero && S.isHero,
-          isCompact && S.isCompact
+          style.postCardTitle,
+          isHero && style.isHero,
+          isCompact && style.isCompact
         )}
       >
         <Link
-          className={clsx(S.postCardTitleLink, 'postCardTitle')}
+          className={clsx(style.postCardTitleLink, 'postCardTitle')}
           href={`/posts/${slug}`}
         >
           {title}

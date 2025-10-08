@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { PostProps } from '../../../../types';
 import StructuredTextDatoCMS from '../../container/StructuredTextDatoCMS';
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function PostContent({ post }: { post: PostProps }) {
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function PostContent({ post }: { post: PostProps }) {
   }, [post]);
 
   return (
-    <Wrapper className={S.postContent} width="lg" spacing={0}>
+    <Wrapper className={style.postContent} width="lg" spacing={0}>
       <StructuredTextDatoCMS data={post.data.post.content} />
     </Wrapper>
   );

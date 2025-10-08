@@ -1,5 +1,5 @@
 import Wrapper from '../../container/Wrapper';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Hobbies({
   hobbiesTitle,
@@ -10,7 +10,7 @@ export default function Hobbies({
 }) {
   return (
     <Wrapper as="section" width="md">
-      <h2 className={S.hobbiesTitle}>{hobbiesTitle}</h2>
+      <h2 className={style.hobbiesTitle}>{hobbiesTitle}</h2>
       <p>{hobbiesText}</p>
     </Wrapper>
   );

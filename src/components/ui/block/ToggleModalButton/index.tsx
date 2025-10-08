@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import Icon from '../../base/Icon';
 import { IconName } from '../../base/Icon/types';
-import S from './styles.module.css';
+import style from './styles.module.css';
 import { clsx } from '../../../../utils/clsx';
 
 export default function ToggleModalButton({
@@ -17,12 +17,12 @@ export default function ToggleModalButton({
 }) {
   return (
     <button
-      className={clsx(S.button, className)}
+      className={clsx(style.button, className)}
       style={{ '--button-color': color } as CSSProperties}
       onClick={onClick}
       color={color}
     >
-      <Icon className={S.i} name={icon} />
+      <Icon className={style.i} name={icon} />
     </button>
   );
 }

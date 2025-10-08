@@ -1,5 +1,5 @@
 import { useCallback, type CSSProperties, type PropsWithChildren } from 'react';
-import S from './styles.module.css';
+import style from './styles.module.css';
 import { clsx } from '../../../../utils/clsx';
 
 const breakpoints = {
@@ -61,7 +61,7 @@ export default function Wrapper({
 
   return (
     <div
-      className={clsx(S.container, className)}
+      className={clsx(style.container, className)}
       style={
         {
           '--margin-bottom': `${spacing}rem`,

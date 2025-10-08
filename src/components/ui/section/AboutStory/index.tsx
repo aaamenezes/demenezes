@@ -1,6 +1,6 @@
 import Wrapper from '../../container/Wrapper';
 import HighlightText from '../AboutHighlightText';
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 /**
  * Evento do google
@@ -37,7 +37,7 @@ export default function Story({
   return (
     <>
       <Wrapper width="md">
-        <h2 className={S.StoryTitle}>{historyTitle}</h2>
+        <h2 className={style.StoryTitle}>{historyTitle}</h2>
         <p>{firstParagraph}</p>
       </Wrapper>
       {remainingText}

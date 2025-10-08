@@ -1,4 +1,4 @@
-import S from './styles.module.css';
+import style from './styles.module.css';
 
 export default function Iframe({
   title,
@@ -9,7 +9,7 @@ export default function Iframe({
 }) {
   return (
     <iframe
-      className={S.iframe}
+      className={style.iframe}
       title={title}
       height="480"
       src={`https://www.youtube.com/embed/${videoID}`}
