@@ -9,6 +9,7 @@ export default function Table({
   tableSummary: string;
   tableContent: string;
 }) {
+  // resolver essa merda
   const formatedTable = '<caption>'
     .concat(tableTitle)
     .concat('</caption>')

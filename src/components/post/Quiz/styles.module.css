@@ -89,8 +89,6 @@
   align-items: center;
   width: 100%;
   padding: 0.66rem;
-  line-height: var(--line-height-button);
-  font-weight: var(--font-weight-button);
   text-transform: uppercase;
   text-align: center;
   border-radius: var(--border-radius);
