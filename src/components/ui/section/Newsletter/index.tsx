@@ -5,6 +5,7 @@ import HiddenA11Y from '../../base/HiddenA11Y';
 import Input from '../../base/Input';
 import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
+import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
@@ -12,7 +13,9 @@ export default function Newsletter() {
   return (
     <Wrapper className={style.newsletterForm} width="full" isFluid>
       <Wrapper width="md" spacing={0}>
-        <h3 className={clsx(style.newsletterTitle, 'newsletterFormTitle')}>
+        <h3
+          className={clsx(style.newsletterTitle, fontStyle.newsletterFormTitle)}
+        >
           {title}
         </h3>
 
@@ -36,7 +39,7 @@ export default function Newsletter() {
                   <Input
                     type="text"
                     name="FNAME"
-                    className="newsletterFormInput"
+                    className={fontStyle.newsletterFormInput}
                     id="mce-FNAME"
                     placeholder="Nome"
                     required

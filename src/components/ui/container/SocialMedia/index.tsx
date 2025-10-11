@@ -4,6 +4,7 @@ import Icon from '../../base/Icon';
 import { IconName } from '../../base/Icon/types';
 import Link from '../../base/Link';
 import style from './styles.module.css';
+import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function SocialMedia({
   isCenter = true,
@@ -20,7 +21,7 @@ export default function SocialMedia({
       >
         {/* não gostei desse "as IconName", corrigir isso */}
         <Icon name={socialMedia.title as IconName} />
-        <span className={clsx(style.socialLabel, 'socialMediaLabel')}>
+        <span className={clsx(style.socialLabel, fontStyle.socialMediaLabel)}>
           {socialMedia.title}
         </span>
       </Link>

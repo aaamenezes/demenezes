@@ -3,6 +3,7 @@ import { convertDate } from '../../../../utils/convertDate';
 import Label from '../../base/Label';
 import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
+import fontStyle from '../../../../../styles/font-style.module.css';
 import { clsx } from '../../../../utils/clsx';
 
 export default function PostHeader({
@@ -25,7 +26,10 @@ export default function PostHeader({
   const keywordsList = keywords.split(',').map(keyword => {
     const clearKeyword = keyword.trim();
     return (
-      <li className={clsx(style.keywordItem, 'postKeyword')} key={clearKeyword}>
+      <li
+        className={clsx(style.keywordItem, fontStyle.postKeyword)}
+        key={clearKeyword}
+      >
         {clearKeyword}
       </li>
     );
@@ -38,20 +42,24 @@ export default function PostHeader({
     >
       <Wrapper width="full" isFluid>
         <Wrapper className={style.postHeaderInner} width="xxxl" spacing={0}>
-          <h1 className={clsx(style.postTitle, 'postTitle')}>{title}</h1>
+          <h1 className={clsx(style.postTitle, fontStyle.postTitle)}>
+            {title}
+          </h1>
           <p>
-            <strong className={clsx(style.postDescription, 'postDescription')}>
+            <strong
+              className={clsx(style.postDescription, fontStyle.postDescription)}
+            >
               {description}
             </strong>
           </p>
           <footer className={style.postHeaderFooter}>
-            <span className={clsx(style.postDate, 'postDate')}>
+            <span className={clsx(style.postDate, fontStyle.postDate)}>
               {update && date
                 ? `Publicado em ${convertDate(date)}`
                 : 'Não publicado'}
             </span>
             {update > date && (
-              <span className={clsx(style.postDate, 'postDate')}>
+              <span className={clsx(style.postDate, fontStyle.postDate)}>
                 {`Atualizado em ${convertDate(update)}`}
               </span>
             )}

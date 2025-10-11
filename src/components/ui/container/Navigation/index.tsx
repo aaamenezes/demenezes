@@ -5,6 +5,7 @@ import { getPageInfos } from '../../../../utils/getPageInfos';
 import Link from '../../base/Link';
 import ToggleModalButton from '../../block/ToggleModalButton';
 import style from './styles.module.css';
+import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function Navigation({
   isOpenMenu,
@@ -29,7 +30,7 @@ export default function Navigation({
         <Link
           className={clsx(
             style.navLink,
-            'menuLink',
+            fontStyle.menuLink,
             isCurrentPage && style.isCurrentPage
           )}
           href={menu.url}

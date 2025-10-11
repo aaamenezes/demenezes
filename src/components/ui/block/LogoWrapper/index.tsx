@@ -1,6 +1,7 @@
 import { clsx } from '../../../../utils/clsx';
 import Link from '../../base/Link';
 import style from './styles.module.css';
+import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function LogoWrapper({ isHeader }: { isHeader?: boolean }) {
   // quando reativer o preview, resolver isso
@@ -11,7 +12,9 @@ export default function LogoWrapper({ isHeader }: { isHeader?: boolean }) {
 
   return (
     <Link className={style.logoLink} href="/">
-      <LogoTag className={clsx(style.logoText, 'logoText')}>{logoText}</LogoTag>
+      <LogoTag className={clsx(style.logoText, fontStyle.logoText)}>
+        {logoText}
+      </LogoTag>
     </Link>
   );
 }
