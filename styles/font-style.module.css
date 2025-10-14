@@ -188,6 +188,7 @@
   padding: 1rem !important;
 }
 
+/* Classe não usada por causa do problema de StructuredTextDatoCMS duplicado */
 .postQuoteCite {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-sm);
