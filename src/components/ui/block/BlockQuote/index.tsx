@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import StructuredTextDatoCMS from '../../container/StructuredTextDatoCMS';
+import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function BlockQuote({
   source,
@@ -14,7 +15,9 @@ export default function BlockQuote({
   return (
     <blockquote cite={source || ''}>
       {isDatoCMS ? <StructuredTextDatoCMS data={children} /> : children}
-      {author && <footer>{author}</footer>}
+      {author && (
+        <footer className={fontStyle.postQuoteAuthor}>{author}</footer>
+      )}
     </blockquote>
   );
 }
