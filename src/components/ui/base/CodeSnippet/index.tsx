@@ -1,4 +1,6 @@
 import { PropsWithChildren } from 'react';
+import { clsx } from '../../../../utils/clsx';
+import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function CodeBlock({
   children,
@@ -6,7 +8,9 @@ export default function CodeBlock({
 }: PropsWithChildren<{ language: string }>) {
   return (
     <pre className={`language-${language}`}>
-      <code className={`language-${language}`}>{children}</code>
+      <code className={clsx(`language-${language}`, fontStyle.postCode)}>
+        {children}
+      </code>
     </pre>
   );
 }
