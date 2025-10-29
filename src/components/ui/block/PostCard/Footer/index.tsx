@@ -14,10 +14,9 @@ export default function PostCardFooter({
 }) {
   return (
     <footer
-      className={clsx(
-        style.postCardFooterWrapper,
-        isCompact && style.isCompact
-      )}
+      className={clsx(style.postCardFooterWrapper, {
+        [style.isCompact]: isCompact,
+      })}
     >
       <p className={clsx(style.postCardDate, fontStyle.postCardDate)}>
         {update && date

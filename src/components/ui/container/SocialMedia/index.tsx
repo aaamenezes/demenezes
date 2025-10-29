@@ -29,7 +29,9 @@ export default function SocialMedia({
   ));
 
   return (
-    <nav className={clsx(style.socialMediaWrapper, isCenter && style.isCenter)}>
+    <nav
+      className={clsx(style.socialMediaWrapper, { [style.isCenter]: isCenter })}
+    >
       <ul className={style.socialList}>{socialElements}</ul>
     </nav>
   );

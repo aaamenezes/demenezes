@@ -21,10 +21,9 @@ export default function SearchWrapper() {
         aria-labelledby="Abrir busca do blog"
       />
       <Wrapper
-        className={clsx(
-          style.searchContent,
-          isOpenSearch && style.isOpenSearch
-        )}
+        className={clsx(style.searchContent, {
+          [style.isOpenSearch]: isOpenSearch,
+        })}
         width="xl"
       >
         <ToggleModalButton

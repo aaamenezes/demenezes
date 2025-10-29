@@ -9,7 +9,6 @@ export default function Head({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   componentProps: any;
 }) {
-  console.log(`sim`);
   const { currentPage } = getPageInfos();
   const router = useRouter();
   const baseURL = 'https://demenezes.dev';

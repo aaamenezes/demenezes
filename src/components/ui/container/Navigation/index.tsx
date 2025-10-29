@@ -24,15 +24,15 @@ export default function Navigation({
 
     return (
       <li
-        className={clsx(style.navItem, isCurrentPage && style.isCurrentPage)}
+        className={clsx(style.navItem, {
+          [style.isCurrentPage]: isCurrentPage,
+        })}
         key={menu.title}
       >
         <Link
-          className={clsx(
-            style.navLink,
-            fontStyle.menuLink,
-            isCurrentPage && style.isCurrentPage
-          )}
+          className={clsx(style.navLink, fontStyle.menuLink, {
+            [style.isCurrentPage]: isCurrentPage,
+          })}
           href={menu.url}
         >
           {menu.title}
@@ -44,10 +44,12 @@ export default function Navigation({
   return (
     <>
       <div
-        className={clsx(style.overlay, isOpenMenu && style.isOpenMenu)}
+        className={clsx(style.overlay, { [style.isOpenMenu]: isOpenMenu })}
         onClick={toggleMenu}
       />
-      <nav className={clsx(style.navWrapper, isOpenMenu && style.isOpenMenu)}>
+      <nav
+        className={clsx(style.navWrapper, { [style.isOpenMenu]: isOpenMenu })}
+      >
         <ul className={style.navList}>{navigationElements}</ul>
         <ToggleModalButton
           className={style.closeMenuMobileButton}

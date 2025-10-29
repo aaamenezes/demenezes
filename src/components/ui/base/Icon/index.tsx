@@ -17,12 +17,9 @@ export default function Icon({
 }) {
   const { className: mapIconClass, color: mapIconColor } = iconMap[name];
 
-  const classes = clsx(
-    style.icon,
-    mapIconClass,
-    propIconClassName,
-    inline && style.inline
-  );
+  const classes = clsx(style.icon, mapIconClass, propIconClassName, {
+    [style.inline]: inline,
+  });
 
   /**
    * remover espaço vazio desse componente

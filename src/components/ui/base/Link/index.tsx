@@ -19,7 +19,7 @@ export default function Link({
   return (
     <NextLink href={href} passHref legacyBehavior>
       <a
-        className={clsx(style.link, inline && style.inline, className)}
+        className={clsx(style.link, className, { [style.inline]: inline })}
         target={isExternal ? '_blank' : '_self'}
         rel="noreferrer"
       >

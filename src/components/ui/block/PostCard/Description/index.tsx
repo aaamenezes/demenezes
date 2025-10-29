@@ -14,7 +14,7 @@ export default function PostCardDescription({
       className={clsx(
         style.postCardDescriptionWrapper,
         fontStyle.postCardDescription,
-        isCompact && style.isCompact
+        { [style.isCompact]: isCompact }
       )}
     >
       {description}

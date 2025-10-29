@@ -25,11 +25,10 @@ export default function PostCardInfos({
 
   return (
     <div
-      className={clsx(
-        style.postCardInfosWrapper,
-        isHero && style.isHero,
-        isCompact && style.isCompact
-      )}
+      className={clsx(style.postCardInfosWrapper, {
+        [style.isHero]: isHero,
+        [style.isCompact]: isCompact,
+      })}
       style={
         {
           '--post-card-infos-width': getWrapperWidth(isHero, isCompact),

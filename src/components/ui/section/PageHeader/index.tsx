@@ -27,8 +27,8 @@ export default function PageHeader() {
       width="full"
       className={clsx(
         style.headerWrapper,
-        isOpenHeader && style.isOpenHeader,
-        currentPage === 'home' && style.isHome
+        { [style.isOpenHeader]: isOpenHeader },
+        { [style.isHome]: currentPage === 'home' }
       )}
     >
       <Wrapper className={style.headerInner} width="xxxl" spacing={0} isFluid>

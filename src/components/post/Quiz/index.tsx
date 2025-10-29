@@ -25,7 +25,7 @@ export default function Quiz({
 
   return (
     <form
-      className={clsx(style.quizForm, isAnswered && style.isAnswered)}
+      className={clsx(style.quizForm, { [style.isAnswered]: isAnswered })}
       onSubmit={handleSubmit}
     >
       <header className={style.header}>
@@ -40,12 +40,11 @@ export default function Quiz({
           return (
             <li key={simplifyString(alternative)}>
               <input
-                className={clsx(
-                  style.alternativeInput,
-                  isAnswered && style.isAnswered,
-                  index === correctAlternativeIndex - 1 &&
-                    style.isCorrectResponse
-                )}
+                className={clsx(style.alternativeInput, {
+                  [style.isAnswered]: isAnswered,
+                  [style.isCorrectResponse]:
+                    index === correctAlternativeIndex - 1,
+                })}
                 type="radio"
                 name={simplifyString(title)}
                 id={currentId}
