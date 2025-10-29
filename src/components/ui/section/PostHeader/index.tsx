@@ -59,9 +59,12 @@ export default function PostHeader({
                 : 'Não publicado'}
             </span>
             {update > date && (
-              <span className={clsx(style.postDate, fontStyle.postDate)}>
-                {`Atualizado em ${convertDate(update)}`}
-              </span>
+              <>
+                <span aria-hidden="true"> - </span>
+                <span className={clsx(style.postDate, fontStyle.postDate)}>
+                  {`Atualizado em ${convertDate(update)}`}
+                </span>
+              </>
             )}
             <ul className={style.keywordsList}>{keywordsList}</ul>
           </footer>

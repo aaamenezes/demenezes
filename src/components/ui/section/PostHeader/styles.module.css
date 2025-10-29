@@ -45,15 +45,6 @@
   }
 }
 
-.postDate:not(:last-of-type) {
-  margin-right: 0.3rem;
-}
-
-/* Precisa dessa merda aqui abaixo? Não dá pra fazer isso no HTML? */
-.postDate:not(:last-of-type)::after {
-  content: ' - ';
-}
-
 .keywordsList {
   display: flex;
   flex-wrap: wrap;
