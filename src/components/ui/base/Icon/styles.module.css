@@ -1,6 +1,5 @@
 .icon {
   padding: 0.66rem 0.88rem;
-  font-size: 1.2rem;
   color: var(--icon-color);
   transition: color var(--transition-fast)
 }
@@ -13,7 +12,6 @@
 
 .external {
   padding: initial;
-  font-size: 0.7rem;
 }
 
 .inline {

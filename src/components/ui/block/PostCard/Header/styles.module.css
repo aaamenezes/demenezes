@@ -30,12 +30,7 @@
   margin: var(--spacing-h3) 0;
 }
 
-.postCardTitle.isCompact {
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-h4);
-  line-height: var(--line-height-h4);
-  letter-spacing: var(--letter-spacing-h4);
-}
+.postCardTitle.isCompact {}
 
 .postCardTitleLink {
   padding: 0.5rem;

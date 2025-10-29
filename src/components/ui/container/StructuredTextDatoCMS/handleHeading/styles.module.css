@@ -27,7 +27,6 @@
   display: inline-block;
   margin-left: var(--spacing-small);
   vertical-align: middle;
-  font-size: var(--font-size-h4);
   text-decoration: none;
   color: var(--color-neutral-500);
   opacity: 0;
