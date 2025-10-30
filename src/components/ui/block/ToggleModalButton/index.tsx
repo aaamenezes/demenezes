@@ -1,8 +1,8 @@
+import Icon from '@/components/ui/base/Icon';
+import { clsx } from '@/utils/clsx';
 import type { CSSProperties } from 'react';
-import Icon from '../../base/Icon';
 import { IconName } from '../../base/Icon/types';
 import style from './styles.module.css';
-import { clsx } from '../../../../utils/clsx';
 
 export default function ToggleModalButton({
   onClick = () => {},
