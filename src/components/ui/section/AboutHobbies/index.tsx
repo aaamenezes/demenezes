@@ -1,4 +1,4 @@
-import Wrapper from '../../container/Wrapper';
+import Wrapper from '@/components/ui/container/Wrapper';
 import style from './styles.module.css';
 
 export default function Hobbies({
