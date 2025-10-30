@@ -1,10 +1,10 @@
+import Link from '@/components/ui/base/Link';
+import PostCardInfos from '@/components/ui/block/PostCard/Infos';
+import PostCategory from '@/components/ui/block/PostCategory';
+import Wrapper from '@/components/ui/container/Wrapper';
+import { PostSummaryProps } from '@/types';
+import { clsx } from '@/utils/clsx';
 import NextImage from 'next/image';
-import { PostSummaryProps } from '../../../../types';
-import { clsx } from '../../../../utils/clsx';
-import Link from '../../base/Link';
-import Wrapper from '../../container/Wrapper';
-import PostCategory from '../PostCategory';
-import PostCardInfos from './Infos';
 import style from './styles.module.css';
 
 export default function PostCard({
