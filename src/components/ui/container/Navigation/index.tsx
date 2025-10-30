@@ -1,11 +1,11 @@
-import { useRouter } from 'next/router';
+import fontStyle from '@/../styles/fontStyle.module.css';
+import Link from '@/components/ui/base/Link';
+import ToggleModalButton from '@/components/ui/block/ToggleModalButton';
 import settings from '@/data/settings.json';
-import { clsx } from '../../../../utils/clsx';
-import { getPageInfos } from '../../../../utils/getPageInfos';
-import Link from '../../base/Link';
-import ToggleModalButton from '../../block/ToggleModalButton';
+import { clsx } from '@/utils/clsx';
+import { getPageInfos } from '@/utils/getPageInfos';
+import { useRouter } from 'next/router';
 import style from './styles.module.css';
-import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function Navigation({
   isOpenMenu,
