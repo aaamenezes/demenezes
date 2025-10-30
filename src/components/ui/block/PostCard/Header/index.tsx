@@ -1,8 +1,8 @@
-import { PostSummaryProps } from '../../../../../types';
-import { clsx } from '../../../../../utils/clsx';
-import Link from '../../../base/Link';
+import fontStyle from '@/../styles/fontStyle.module.css';
+import Link from '@/components/ui/base/Link';
+import { PostSummaryProps } from '@/types';
+import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
-import fontStyle from '../../../../../../styles/font-style.module.css';
 
 export default function PostCardHeader({
   post,
