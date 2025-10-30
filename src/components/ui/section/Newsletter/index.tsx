@@ -1,11 +1,11 @@
+import fontStyle from '@/../styles/fontStyles.module.css';
+import Button from '@/components/ui/base/Button';
+import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
+import Input from '@/components/ui/base/Input';
+import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
-import { clsx } from '../../../../utils/clsx';
-import Button from '../../base/Button';
-import HiddenA11Y from '../../base/HiddenA11Y';
-import Input from '../../base/Input';
-import Wrapper from '../../container/Wrapper';
+import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
-import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
