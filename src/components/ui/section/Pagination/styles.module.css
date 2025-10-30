@@ -50,7 +50,7 @@
 .pagination:hover,
 .pagination:focus {
   color: var(--color-neutral-50);
-  border-color: var(--color-red-500);
+  border-color: var(--color-primary-500);
 }
 
 .pagination:hover::after,
@@ -65,7 +65,7 @@
   left: 0;
   height: 100%;
   width: 0;
-  background-color: var(--color-red-500);
+  background-color: var(--color-primary-500);
   transition: var(--transition-fast);
 }
 

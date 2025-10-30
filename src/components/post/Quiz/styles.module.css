@@ -43,7 +43,7 @@
 }
 
 .alternativeInput + button.isAnswered.isCorrectResponse {
-  border-color: var(--color-red-600);
+  border-color: var(--color-primary-600);
 }
 
 .alternativeInput + button label {
@@ -54,7 +54,7 @@
 
 .alternativeInput + button label.isAnswered.isCorrectResponse {
   color: var(--color-neutral-50);
-  background-color: var(--color-red-600);
+  background-color: var(--color-primary-600);
 }
 
 .footer {
@@ -114,7 +114,7 @@
   left: 0;
   height: 100%;
   width: 0;
-  background-color: var(--color-red-500);
+  background-color: var(--color-primary-500);
   transition: var(--transition-fast);
 }
 

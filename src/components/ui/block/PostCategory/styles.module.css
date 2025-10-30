@@ -5,7 +5,7 @@
   left: 0;
   padding: 0.44rem 0.66rem;
   color: var(--color-neutral-100);
-  background-color: var(--color-red-700);
+  background-color: var(--color-primary-700);
 }
 
 @media screen and (min-width: 768px) {

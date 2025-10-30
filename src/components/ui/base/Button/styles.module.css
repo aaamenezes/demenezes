@@ -10,5 +10,5 @@
 
 .button.inline {
   display: inline;
-  color: var(--color-red-700);
+  color: var(--color-primary-700);
 }

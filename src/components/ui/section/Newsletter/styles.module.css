@@ -27,9 +27,9 @@
   padding: 0.5rem 1rem;
   margin: 0 auto;
   color: var(--color-neutral-100);
-  background-color: var(--color-red-700);
+  background-color: var(--color-primary-700);
 }
 
 .submitButton:hover {
-  background-color: var(--color-red-900);
+  background-color: var(--color-primary-900);
 }

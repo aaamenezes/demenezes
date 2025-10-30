@@ -45,7 +45,7 @@
 
 .navLink.isCurrentPage {
   color: var(--color-neutral-100);
-  background-color: var(--color-red-700);
+  background-color: var(--color-primary-700);
 }
 
 @media screen and (min-width: 768px) {

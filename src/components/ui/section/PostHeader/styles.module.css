@@ -63,7 +63,7 @@
   padding: 0.3rem 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--color-neutral-100);
-  background-color: var(--color-red-900);
+  background-color: var(--color-primary-900);
 }
 
 .keywordItem:not(:last-child) {

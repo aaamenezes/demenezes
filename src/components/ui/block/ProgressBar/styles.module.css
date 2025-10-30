@@ -5,5 +5,5 @@
   left: 0;
   width: var(--bar-width);
   height: 2px;
-  background-color: var(--color-red-700);
+  background-color: var(--color-primary-700);
 }
