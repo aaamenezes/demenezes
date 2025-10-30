@@ -1,5 +1,5 @@
+import { clsx } from '@/utils/clsx';
 import { PropsWithChildren } from 'react';
-import { clsx } from '../../../../utils/clsx';
 import style from './styles.module.css';
 
 export default function Button({
