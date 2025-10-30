@@ -1,7 +1,7 @@
+import ToggleModalButton from '@/components/ui/block/ToggleModalButton';
+import Wrapper from '@/components/ui/container/Wrapper';
+import { clsx } from '@/utils/clsx';
 import { useCallback, useState } from 'react';
-import { clsx } from '../../../../utils/clsx';
-import ToggleModalButton from '../../block/ToggleModalButton';
-import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
 
 export default function SearchWrapper() {
