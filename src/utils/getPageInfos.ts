@@ -1,6 +1,6 @@
-import { useRouter } from 'next/router';
 import settings from '@/data/settings.json';
-import { PageName, PageProps } from '../types';
+import { PageName, PageProps } from '@/types';
+import { useRouter } from 'next/router';
 
 export function getPageInfos(): { currentPage: PageName } {
   const { pages } = settings;
