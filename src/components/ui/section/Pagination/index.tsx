@@ -1,6 +1,6 @@
-import { clsx } from '../../../../utils/clsx';
-import Link from '../../base/Link';
-import Wrapper from '../../container/Wrapper';
+import Link from '@/components/ui/base/Link';
+import Wrapper from '@/components/ui/container/Wrapper';
+import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
 
 export default function Pagination({
