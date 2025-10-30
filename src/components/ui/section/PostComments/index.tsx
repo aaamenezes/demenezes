@@ -1,5 +1,5 @@
+import Wrapper from '@/components/ui/container/Wrapper';
 import { useEffect } from 'react';
-import Wrapper from '../../container/Wrapper';
 
 export default function PostComments() {
   useEffect(() => {
