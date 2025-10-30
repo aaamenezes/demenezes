@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
-import settings from '../../../../settings.json';
+import settings from '@/data/settings.json';
 import { getPageInfos } from '../../../utils/getPageInfos';
 
 export default function Head({

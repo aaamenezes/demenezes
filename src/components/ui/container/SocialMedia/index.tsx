@@ -1,4 +1,4 @@
-import settings from '../../../../../settings.json';
+import settings from '@/data/settings.json';
 import { clsx } from '../../../../utils/clsx';
 import Icon from '../../base/Icon';
 import { IconName } from '../../base/Icon/types';

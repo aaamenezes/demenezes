@@ -1,4 +1,4 @@
-import settings from '../../../../../settings.json';
+import settings from '@/data/settings.json';
 import { ContactPageProps } from '../../../../types';
 import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';

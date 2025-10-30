@@ -1,5 +1,5 @@
 import { ParsedUrlQuery } from 'querystring';
-import settings from '../../settings.json';
+import settings from '@/data/settings.json';
 import { PostSummaryProps } from '../types';
 import { parseParam } from './parseParam';
 

@@ -1,4 +1,4 @@
-import settings from '../../../../../settings.json';
+import settings from '@/data/settings.json';
 import { clsx } from '../../../../utils/clsx';
 import Button from '../../base/Button';
 import HiddenA11Y from '../../base/HiddenA11Y';

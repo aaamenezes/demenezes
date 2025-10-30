@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import settings from '../../../../../settings.json';
+import settings from '@/data/settings.json';
 import { clsx } from '../../../../utils/clsx';
 import { getPageInfos } from '../../../../utils/getPageInfos';
 import Link from '../../base/Link';
