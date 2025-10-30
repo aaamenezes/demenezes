@@ -181,6 +181,14 @@
   line-height: var(--line-height-md) !important;
 }
 
+.postFigcaption {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-xs);
+}
+
 /* Classe não usada por causa do problema de StructuredTextDatoCMS duplicado */
 .postQuoteCite {
   font-family: var(--font-family-heading);
