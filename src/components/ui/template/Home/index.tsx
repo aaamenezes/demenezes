@@ -1,6 +1,6 @@
-import { HomeScreenProps } from '../../../../types';
-import PostsWrapper from '../../section/PostsWrapper';
-import Pagination from '../../section/Pagination';
+import Pagination from '@/components/ui/section/Pagination';
+import PostsWrapper from '@/components/ui/section/PostsWrapper';
+import { HomeScreenProps } from '@/types';
 
 export default function HomeScreen({
   currentPosts,
