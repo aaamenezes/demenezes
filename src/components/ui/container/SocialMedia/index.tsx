@@ -1,10 +1,10 @@
+import fontStyle from '@/../styles/fontStyles.module.css';
+import Icon from '@/components/ui/base/Icon';
+import { IconName } from '@/components/ui/base/Icon/types';
+import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';
-import { clsx } from '../../../../utils/clsx';
-import Icon from '../../base/Icon';
-import { IconName } from '../../base/Icon/types';
-import Link from '../../base/Link';
+import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
-import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function SocialMedia({
   isCenter = true,
