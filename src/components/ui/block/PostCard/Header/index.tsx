@@ -7,11 +7,11 @@ import style from './styles.module.css';
 export default function PostCardHeader({
   post,
   isHero = false,
-  isCompact,
+  isCompact = false,
 }: {
   post: PostSummaryProps;
   isHero?: boolean;
-  isCompact: boolean;
+  isCompact?: boolean;
 }) {
   const { category, slug, title } = post;
 
