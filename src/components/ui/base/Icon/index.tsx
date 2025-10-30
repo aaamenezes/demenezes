@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react';
 import { iconMap } from './iconMap';
 import style from './styles.module.css';
 import type { IconName } from './types';
-import { clsx } from '../../../../utils/clsx';
+import { clsx } from '@/utils/clsx';
 
 export default function Icon({
   name,
