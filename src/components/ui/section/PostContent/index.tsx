@@ -1,8 +1,8 @@
+import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
+import Wrapper from '@/components/ui/container/Wrapper';
+import { PostProps } from '@/types';
 import Prism from 'prismjs';
 import { useEffect } from 'react';
-import { PostProps } from '../../../../types';
-import StructuredTextDatoCMS from '../../container/StructuredTextDatoCMS';
-import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
 
 export default function PostContent({ post }: { post: PostProps }) {
