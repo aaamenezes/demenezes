@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
-import StructuredTextDatoCMS from '../../container/StructuredTextDatoCMS';
-import fontStyle from '../../../../../styles/font-style.module.css';
+import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
+import fontStyle from '@/../styles/font-style.module.css';
 
 export default function BlockQuote({
   source,

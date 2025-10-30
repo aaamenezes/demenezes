@@ -1,4 +1,4 @@
-import fontStyle from '@/styles/fontStyle.module.css';
+import fontStyle from '@/../styles/font-style.module.css';
 import { clsx } from '@/utils/clsx';
 import { PropsWithChildren } from 'react';
 
