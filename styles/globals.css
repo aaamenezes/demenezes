@@ -282,9 +282,6 @@
   /* ************************************************************************ */
   /* Outros */
 
-  --color-transparent: rgba(0, 0, 0, 0);
-  /* Obrigado Safari */
-
   --color-red-50-opacity-light: #fdeaed4D;
   --color-red-100-opacity-light: #fbcacf4D;
   --color-red-200-opacity-light: #e896954D;
@@ -377,9 +374,6 @@
   /* black */
   --color-neutral-900-opacity-hard: #121212E6;
   /* black */
-
-  --color-transparent: rgba(0, 0, 0, 0);
-  /* Obrigado Safari */
 
   --opacity-light-rgb: .3;
   --opacity-light-hex: 4D;
