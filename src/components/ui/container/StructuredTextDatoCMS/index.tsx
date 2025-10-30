@@ -1,4 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import HandleBlock from '@/components/ui/container/StructuredTextDatoCMS/HandleBlock';
+import HandleCode from '@/components/ui/container/StructuredTextDatoCMS/HandleCode';
+import HandleHeading from '@/components/ui/container/StructuredTextDatoCMS/HandleHeading';
+import HandleLink from '@/components/ui/container/StructuredTextDatoCMS/HandleLink';
+import HandleParagraph from '@/components/ui/container/StructuredTextDatoCMS/HandleParagraph';
 import {
   isCode,
   isHeading,
@@ -6,11 +11,6 @@ import {
   isParagraph,
 } from 'datocms-structured-text-utils';
 import { StructuredText, renderNodeRule } from 'react-datocms';
-import HandleLink from './HandleLink';
-import HandleCode from './HandleCode';
-import HandleHeading from './HandleHeading';
-import HandleBlock from './HandleBlock';
-import HandleParagraph from './HandleParagraph';
 
 export default function StructuredTextDatoCMS({ data }: { data: any }) {
   return (
