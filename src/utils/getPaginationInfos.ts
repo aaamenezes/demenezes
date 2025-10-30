@@ -1,6 +1,6 @@
-import { ParsedUrlQuery } from 'querystring';
 import settings from '@/data/settings.json';
-import { PostSummaryProps } from '../types';
+import { PostSummaryProps } from '@/types';
+import { ParsedUrlQuery } from 'querystring';
 import { parseParam } from './parseParam';
 
 export function getPaginationInfos(
