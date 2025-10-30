@@ -1,10 +1,10 @@
+import Logo from '@/components/ui/block/Logo';
+import ToggleModalButton from '@/components/ui/block/ToggleModalButton';
+import Navigation from '@/components/ui/container/Navigation';
+import Wrapper from '@/components/ui/container/Wrapper';
+import { clsx } from '@/utils/clsx';
+import { getPageInfos } from '@/utils/getPageInfos';
 import { useCallback, useEffect, useState } from 'react';
-import { clsx } from '../../../../utils/clsx';
-import { getPageInfos } from '../../../../utils/getPageInfos';
-import Logo from '../../block/Logo';
-import ToggleModalButton from '../../block/ToggleModalButton';
-import Navigation from '../../container/Navigation';
-import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
 
 export default function PageHeader() {
