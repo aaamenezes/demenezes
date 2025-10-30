@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Quiz from '../../../../post/Quiz';
-import TextBox from '../../../../post/TextBox';
-import Iframe from '../../../base/Iframe';
-import Image from '../../../base/Image';
-import Video from '../../../base/Video';
-import BlockQuote from '../../../block/BlockQuote';
-import Table from '../../../block/Table';
+import Quiz from '@/components/post/Quiz';
+import TextBox from '@/components/post/TextBox';
+import Iframe from '@/components/ui/base/Iframe';
+import Image from '@/components/ui/base/Image';
+import Video from '@/components/ui/base/Video';
+import BlockQuote from '@/components/ui/block/BlockQuote';
+import Table from '@/components/ui/block/Table';
 
 export default function HandleBlock({
   record,
