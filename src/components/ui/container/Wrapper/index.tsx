@@ -1,6 +1,6 @@
+import { clsx } from '@/utils/clsx';
 import { useCallback, type CSSProperties, type PropsWithChildren } from 'react';
 import style from './styles.module.css';
-import { clsx } from '../../../../utils/clsx';
 
 const breakpoints = {
   xs: 0,
