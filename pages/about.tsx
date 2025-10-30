@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import Head from '../src/components/meta/Head';
-import SocialMedia from '../src/components/ui/container/SocialMedia';
-import Wrapper from '../src/components/ui/container/Wrapper';
-import AboutCategories from '../src/components/ui/section/AboutCategories';
-import ContactForm from '../src/components/ui/section/AboutContactForm';
-import Greeting from '../src/components/ui/section/AboutGreeting';
-import Hobbies from '../src/components/ui/section/AboutHobbies';
-import Story from '../src/components/ui/section/AboutStory';
-import PageFooter from '../src/components/ui/section/PageFooter';
-import PageHeader from '../src/components/ui/section/PageHeader';
-import { getContent } from '../src/external/datoCMS';
+import Head from '@/components/meta/Head';
+import SocialMedia from '@/components/ui/container/SocialMedia';
+import Wrapper from '@/components/ui/container/Wrapper';
+import AboutCategories from '@/components/ui/section/AboutCategories';
+import ContactForm from '@/components/ui/section/AboutContactForm';
+import Greeting from '@/components/ui/section/AboutGreeting';
+import Hobbies from '@/components/ui/section/AboutHobbies';
+import StoryTitle from '@/components/ui/section/AboutStory';
+import PageFooter from '@/components/ui/section/PageFooter';
+import PageHeader from '@/components/ui/section/PageHeader';
+import { getContent } from '@/external/datoCMS';
 
 export default function About({
   aboutPageContent,
@@ -50,7 +50,7 @@ export default function About({
           categoriesTitle={categoriesTitle}
           categoryItems={categoryItemModule}
         />
-        <Story historyTitle={historyTitle} historyText={historyText} />
+        <StoryTitle historyTitle={historyTitle} historyText={historyText} />
         <Hobbies hobbiesTitle={hobbiesTitle} hobbiesText={hobbiesText} />
         <Wrapper as="section" width="sm">
           <SocialMedia isCenter />
