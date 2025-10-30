@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from 'react';
 import type { CSSProperties } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import style from './styles.module.css';
 
 export default function ProgressBar() {
