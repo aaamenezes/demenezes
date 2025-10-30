@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { convertDate } from '../../../../utils/convertDate';
-import Label from '../../base/Label';
+import PostCategory from '../../block/PostCategory';
 import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
 import fontStyle from '../../../../../styles/font-style.module.css';
@@ -68,7 +68,7 @@ export default function PostHeader({
             )}
             <ul className={style.keywordsList}>{keywordsList}</ul>
           </footer>
-          <Label>{category}</Label>
+          <PostCategory>{category}</PostCategory>
         </Wrapper>
       </Wrapper>
     </div>

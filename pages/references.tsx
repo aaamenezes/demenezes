@@ -52,7 +52,7 @@ import PageHeader from '../src/components/ui/section/PageHeader';
 //   margin: 0 0 ${({ theme }) => `${theme.spacing.h2}rem`};
 // `;
 
-// const ReferenceLabel = styled.p`
+// const ReferenceCategory = styled.p`
 //   position: initial;
 //   width: fit-content;
 //   margin-left: auto;
@@ -118,7 +118,7 @@ export default function References({
   //       <ReferenceItem key={url} referenceImage={image}>
   //         <Wrapper /* as={ReferenceItemWrapper} */ width="md" spacing={0}>
   //           <ReferenceTitle>{title}</ReferenceTitle>
-  //           <Label /* as={ReferenceLabel} */>{type}</Label>
+  //           <Category /* as={ReferenceCategory} */>{type}</Category>
   //           <p>{description}</p>
   //           <LinkButton href={url} external inline={!validateImageURL(image)}>
   //             {validateImageURL(image) ? (

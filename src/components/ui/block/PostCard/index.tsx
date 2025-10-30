@@ -1,9 +1,9 @@
 import NextImage from 'next/image';
 import { PostSummaryProps } from '../../../../types';
 import { clsx } from '../../../../utils/clsx';
-import Label from '../../base/Label';
 import Link from '../../base/Link';
 import Wrapper from '../../container/Wrapper';
+import PostCategory from '../PostCategory';
 import PostCardInfos from './Infos';
 import style from './styles.module.css';
 
@@ -48,7 +48,7 @@ export default function PostCard({
               objectFit: 'cover',
             }}
           />
-          <Label>{category}</Label>
+          <PostCategory>{category}</PostCategory>
         </Link>
       </div>
       <PostCardInfos post={post} isCompact={isCompact} />

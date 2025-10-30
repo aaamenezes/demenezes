@@ -14,14 +14,16 @@ export default function SocialMedia({
   const socialElements = settings.socialMedia.map(socialMedia => (
     <li className={style.socialItem} key={socialMedia.title}>
       <Link
-        className={style.socialLink}
+        className={style.socialMediaLink}
         href={socialMedia.url}
         aria-label={`Acessar o ${socialMedia.title} do autor do blog`}
         isExternal
       >
         {/* não gostei desse "as IconName", corrigir isso */}
         <Icon name={socialMedia.title as IconName} />
-        <span className={clsx(style.socialLabel, fontStyle.socialMediaLabel)}>
+        <span
+          className={clsx(style.socialMediaLabel, fontStyle.socialMediaLabel)}
+        >
           {socialMedia.title}
         </span>
       </Link>
@@ -32,7 +34,7 @@ export default function SocialMedia({
     <nav
       className={clsx(style.socialMediaWrapper, { [style.isCenter]: isCenter })}
     >
-      <ul className={style.socialList}>{socialElements}</ul>
+      <ul className={style.socialMediaList}>{socialElements}</ul>
     </nav>
   );
 }

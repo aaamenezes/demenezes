@@ -50,13 +50,15 @@ export default function Quiz({
                 id={currentId}
                 value={index}
               />
-              <button
-                onClick={() => setMarkedResponse(index)}
-                type="button"
-                disabled={isAnswered}
-              >
-                <label htmlFor={currentId}>{alternative}</label>
-              </button>
+              <label htmlFor={currentId}>
+                <button
+                  onClick={() => setMarkedResponse(index)}
+                  type="button"
+                  disabled={isAnswered}
+                >
+                  {alternative}
+                </button>
+              </label>
             </li>
           );
         })}

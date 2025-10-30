@@ -28,13 +28,13 @@
   display: none;
 }
 
-.alternativeInput:checked+button,
-.alternativeInput+button:hover {
+.alternativeInput:checked + button,
+.alternativeInput + button:hover {
   color: var(--color-neutral-50);
   background-color: var(--color-neutral-600);
 }
 
-.alternativeInput+button {
+.alternativeInput + button {
   width: 100%;
   border: 1px solid var(--color-neutral-600);
   border-radius: var(--border-radius);
@@ -42,17 +42,17 @@
   transition: var(--transition-fast);
 }
 
-.alternativeInput+button.isAnswered.isCorrectResponse {
+.alternativeInput + button.isAnswered.isCorrectResponse {
   border-color: var(--color-red-600);
 }
 
-.alternativeInput+button label {
+.alternativeInput + button label {
   display: block;
   padding: 0.5rem;
   cursor: pointer;
 }
 
-.alternativeInput+button label.isAnswered.isCorrectResponse {
+.alternativeInput + button label.isAnswered.isCorrectResponse {
   color: var(--color-neutral-50);
   background-color: var(--color-red-600);
 }
