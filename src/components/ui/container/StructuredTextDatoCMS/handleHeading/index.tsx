@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { clsx } from '../../../../../utils/clsx';
-import { simplifyString } from '../../../../../utils/simplifyString';
+import fontStyle from '@/../styles/fontStyle.module.css';
+import { clsx } from '@/utils/clsx';
+import { simplifyString } from '@/utils/simplifyString';
 import style from './styles.module.css';
-import fontStyle from '../../../../../../styles/font-style.module.css';
 
 export default function HandleHeading({ node }: any) {
   const id = simplifyString(node.children[0].value);
