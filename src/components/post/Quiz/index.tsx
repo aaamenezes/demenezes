@@ -1,7 +1,8 @@
 import { FormEvent, useCallback, useState } from 'react';
-import { clsx } from '../../../utils/clsx';
-import { simplifyString } from '../../../utils/simplifyString';
-import Button from '../../ui/base/Button';
+
+import Button from '@/components/ui/base/Button';
+import { clsx } from '@/utils/clsx';
+import { simplifyString } from '@/utils/simplifyString';
 import style from './styles.module.css';
 
 export default function Quiz({
