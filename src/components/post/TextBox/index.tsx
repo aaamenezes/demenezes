@@ -1,4 +1,4 @@
-import StructuredTextDatoCMS from '../../ui/container/StructuredTextDatoCMS';
+import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
 import style from './styles.module.css';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
