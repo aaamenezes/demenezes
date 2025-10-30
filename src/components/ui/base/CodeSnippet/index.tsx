@@ -1,6 +1,6 @@
+import fontStyle from '@/styles/fontStyle.module.css';
+import { clsx } from '@/utils/clsx';
 import { PropsWithChildren } from 'react';
-import { clsx } from '../../../../utils/clsx';
-import fontStyle from '../../../../../styles/font-style.module.css';
 
 export default function CodeBlock({
   children,
