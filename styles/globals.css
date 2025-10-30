@@ -282,26 +282,6 @@
   /* ************************************************************************ */
   /* Outros */
 
-  --color-neutral-50: #ffffff;
-  /* white */
-  --color-neutral-100: #fafafa;
-  /* white */
-  --color-neutral-200: #f5f5f5;
-  /* gray */
-  --color-neutral-300: #f0f0f0;
-  /* gray */
-  --color-neutral-400: #dedede;
-  /* gray */
-  --color-neutral-500: #c2c2c2;
-  /* gray */
-  --color-neutral-600: #979797;
-  /* gray */
-  --color-neutral-700: #555555;
-  /* gray */
-  --color-neutral-800: #323232;
-  /* black */
-  --color-neutral-900: #121212;
-  /* black */
   --color-transparent: rgba(0, 0, 0, 0);
   /* Obrigado Safari */
 
