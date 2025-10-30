@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { clsx } from '../../../../utils/clsx';
 import { getPageInfos } from '../../../../utils/getPageInfos';
-import LogoWrapper from '../../block/LogoWrapper';
+import Logo from '../../block/Logo';
 import ToggleModalButton from '../../block/ToggleModalButton';
 import Navigation from '../../container/Navigation';
 import Wrapper from '../../container/Wrapper';
@@ -32,7 +32,9 @@ export default function PageHeader() {
       )}
     >
       <Wrapper className={style.headerInner} width="xxxl" spacing={0} isFluid>
-        <LogoWrapper isHeader />
+        <h1>
+          <Logo />
+        </h1>
         <ToggleModalButton
           className={style.toggleMenuButton}
           onClick={toggleMenu}

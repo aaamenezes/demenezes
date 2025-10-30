@@ -1,4 +1,4 @@
-import LogoWrapper from '../../block/LogoWrapper';
+import Logo from '../../block/Logo';
 import SocialMedia from '../../container/SocialMedia';
 import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
@@ -8,7 +8,7 @@ export default function PageFooter() {
     <Wrapper className={style.footerWrapper} width="full" isFluid>
       <Wrapper className={style.footerInner} width="xxxl" spacing={0}>
         <SocialMedia />
-        <LogoWrapper />
+        <Logo />
       </Wrapper>
     </Wrapper>
   );
