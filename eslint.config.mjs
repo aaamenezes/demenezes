@@ -4,7 +4,7 @@ import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [
+export default tseslint.config([
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
@@ -43,6 +43,8 @@ export default [
       'react/react-in-jsx-scope': 'off',
       // Não exigir prop types
       'react/prop-types': 'off',
+      // Exigir palavra type nos imports de tipos
+      "@typescript-eslint/consistent-type-imports": "error",
     }
   },
-];
+]);
