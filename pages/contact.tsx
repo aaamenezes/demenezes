@@ -1,9 +1,9 @@
-import Head from '../src/components/meta/Head';
-import ContactForm from '../src/components/ui/section/AboutContactForm';
-import PageFooter from '../src/components/ui/section/PageFooter';
-import PageHeader from '../src/components/ui/section/PageHeader';
-import { getContent } from '../src/external/datoCMS';
-import { ContactPageProps } from '../src/types';
+import Head from '@/components/meta/Head';
+import ContactForm from '@/components/ui/section/AboutContactForm';
+import PageFooter from '@/components/ui/section/PageFooter';
+import PageHeader from '@/components/ui/section/PageHeader';
+import { getContent } from '@/external/datoCMS';
+import { ContactPageProps } from '@/types';
 
 export default function Contact({
   contactContent,
