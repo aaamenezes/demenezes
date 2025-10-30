@@ -1,7 +1,7 @@
 import Icon from '@/components/ui/base/Icon';
 import { clsx } from '@/utils/clsx';
 import type { CSSProperties } from 'react';
-import { IconName } from '../../base/Icon/types';
+import type { IconName } from '../../base/Icon/types';
 import style from './styles.module.css';
 
 export default function ToggleModalButton({

@@ -1,7 +1,7 @@
 import PostCardInfos from '@/components/ui/block/PostCard/Infos';
 import Wrapper from '@/components/ui/container/Wrapper';
-import { PostSummaryProps } from '@/types';
-import { CSSProperties } from 'react';
+import type { PostSummaryProps } from '@/types';
+import type { CSSProperties } from 'react';
 import style from './styles.module.css';
 
 export default function HeroPostCard({ post }: { post: PostSummaryProps }) {

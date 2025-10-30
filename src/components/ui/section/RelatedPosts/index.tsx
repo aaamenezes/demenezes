@@ -1,6 +1,6 @@
 import PostCard from '@/components/ui/block/PostCard';
 import Wrapper from '@/components/ui/container/Wrapper';
-import { PostSummaryProps } from '@/types';
+import type { PostSummaryProps } from '@/types';
 import style from './styles.module.css';
 
 export default function RelatedPosts({

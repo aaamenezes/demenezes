@@ -1,6 +1,6 @@
 import fontStyle from '@/../styles/fontStyles.module.css';
 import Icon from '@/components/ui/base/Icon';
-import { IconName } from '@/components/ui/base/Icon/types';
+import type { IconName } from '@/components/ui/base/Icon/types';
 import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';
 import { clsx } from '@/utils/clsx';

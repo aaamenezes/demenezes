@@ -1,7 +1,7 @@
 import Icon from '@/components/ui/base/Icon';
 import { clsx } from '@/utils/clsx';
 import NextLink from 'next/link';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import style from './styles.module.css';
 
 export default function Link({

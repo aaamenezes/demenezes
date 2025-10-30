@@ -1,7 +1,7 @@
 import PostCard from '@/components/ui/block/PostCard';
 import HeroPostCard from '@/components/ui/block/PostCard/Header';
 import Newsletter from '@/components/ui/section/Newsletter';
-import { PostSummaryProps } from '@/types';
+import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
 import { getPageInfos } from '@/utils/getPageInfos';
 import style from './styles.module.css';

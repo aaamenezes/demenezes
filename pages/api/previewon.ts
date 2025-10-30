@@ -3,7 +3,7 @@
 //   res.end('Draft mode is enabled');
 // }
 
-import { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function previewOn(
   _: NextApiRequest,

@@ -2,7 +2,7 @@ import Link from '@/components/ui/base/Link';
 import PostCardInfos from '@/components/ui/block/PostCard/Infos';
 import PostCategory from '@/components/ui/block/PostCategory';
 import Wrapper from '@/components/ui/container/Wrapper';
-import { PostSummaryProps } from '@/types';
+import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
 import NextImage from 'next/image';
 import style from './styles.module.css';

@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import fontStyle from '@/../styles/fontStyle.module.css';
 
 export default function HandleParagraph({ children }: PropsWithChildren) {

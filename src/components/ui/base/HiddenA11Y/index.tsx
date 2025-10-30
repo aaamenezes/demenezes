@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import style from './styles.module.css';
 
 export default function HiddenA11Y({ children }: PropsWithChildren) {

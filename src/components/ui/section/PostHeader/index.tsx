@@ -1,7 +1,7 @@
 import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
 import { convertDate } from '@/utils/convertDate';
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import fontStyle from '../../../styles/fontStyles.module.css';
 import PostCategory from '../../block/PostCategory';
 import style from './styles.module.css';

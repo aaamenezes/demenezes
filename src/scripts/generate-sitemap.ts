@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { SitemapItem } from '@/types';
+import type { SitemapItem } from '@/types';
 
 const BASE_URL = 'https://demenezes.dev/';
 

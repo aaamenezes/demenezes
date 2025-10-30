@@ -4,7 +4,7 @@ import PageHeader from '@/components/ui/section/PageHeader';
 import HomeScreen from '@/components/ui/template/Home';
 import { getContent } from '@/external/datoCMS';
 import { generateSitemap } from '@/scripts/generate-sitemap';
-import { HomePageProps, PostSummaryProps } from '@/types';
+import type { HomePageProps, PostSummaryProps } from '@/types';
 import { getPaginationInfos } from '@/utils/getPaginationInfos';
 import type { GetStaticPropsContext } from 'next';
 

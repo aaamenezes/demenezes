@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
 import fontStyle from '@/../styles/font-style.module.css';
 

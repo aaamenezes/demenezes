@@ -1,6 +1,6 @@
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
-import { ContactPageProps } from '@/types';
+import type { ContactPageProps } from '@/types';
 import style from './styles.module.css';
 
 export default function ContactForm({

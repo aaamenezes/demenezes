@@ -1,4 +1,4 @@
-import { CSSProperties, PropsWithChildren } from 'react';
+import type { CSSProperties, PropsWithChildren } from 'react';
 
 function Box({ children, style }: PropsWithChildren<{ style: string }>) {
   return (

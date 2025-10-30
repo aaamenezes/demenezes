@@ -1,6 +1,6 @@
 import fontStyle from '@/../styles/font-style.module.css';
 import { clsx } from '@/utils/clsx';
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 export default function Code({
   children,

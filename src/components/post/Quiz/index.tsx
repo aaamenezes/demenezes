@@ -1,4 +1,5 @@
-import { FormEvent, useCallback, useState } from 'react';
+import type { FormEvent} from 'react';
+import { useCallback, useState } from 'react';
 
 import Button from '@/components/ui/base/Button';
 import { clsx } from '@/utils/clsx';
