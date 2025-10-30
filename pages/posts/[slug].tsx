@@ -1,15 +1,15 @@
+import Head from '@/components/meta/Head';
+import ProgressBar from '@/components/ui/block/ProgressBar';
+import PageFooter from '@/components/ui/section/PageFooter';
+import PageHeader from '@/components/ui/section/PageHeader';
+import PostComments from '@/components/ui/section/PostComments';
+import PostContent from '@/components/ui/section/PostContent';
+import PostHeader from '@/components/ui/section/PostHeader';
+import RelatedPosts from '@/components/ui/section/RelatedPosts';
+import { getContent } from '@/external/datoCMS';
+import { PostProps, PostSummaryProps } from '@/types';
+import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
-import ProgressBar from '../../src/components/ui/block/ProgressBar';
-import PageFooter from '../../src/components/ui/section/PageFooter';
-import PageHeader from '../../src/components/ui/section/PageHeader';
-import PostComments from '../../src/components/ui/section/PostComments';
-import PostContent from '../../src/components/ui/section/PostContent';
-import PostHeader from '../../src/components/ui/section/PostHeader';
-import RelatedPosts from '../../src/components/ui/section/RelatedPosts';
-import { getContent } from '../../src/external/datoCMS';
-import { PostProps, PostSummaryProps } from '../../src/types';
-import { parseParam } from '../../src/utils/parseParam';
-import Head from '../../src/components/meta/Head';
 
 export default function Post({
   post,
