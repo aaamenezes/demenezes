@@ -282,10 +282,6 @@
   /* ************************************************************************ */
   /* Outros */
 
-  --box-shadow-low: 0 0 40px -30px black;
-  --box-shadow-medium: 0 0 40px -20px black;
-  --box-shadow-high: 0 0 40px -10px black;
-
   --color-red-50: #fdeaed;
   --color-red-100: #fbcacf;
   --color-red-200: #e89695;

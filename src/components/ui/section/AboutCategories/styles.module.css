@@ -42,7 +42,7 @@
 }
 
 .categoryItem:hover {
-  box-shadow: var(--box-shadow-high);
+  box-shadow: var(--box-shadow-lg);
 }
 
 .categoryItem:hover>* {
