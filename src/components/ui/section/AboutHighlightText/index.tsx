@@ -1,5 +1,5 @@
+import Wrapper from '@/components/ui/container/Wrapper';
 import { PropsWithChildren } from 'react';
-import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
 
 export default function HighlightText({ children }: PropsWithChildren) {
