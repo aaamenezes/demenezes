@@ -1,6 +1,6 @@
-import Logo from '../../block/Logo';
-import SocialMedia from '../../container/SocialMedia';
-import Wrapper from '../../container/Wrapper';
+import Logo from '@/components/ui/block/Logo';
+import SocialMedia from '@/components/ui/container/SocialMedia';
+import Wrapper from '@/components/ui/container/Wrapper';
 import style from './styles.module.css';
 
 export default function PageFooter() {
