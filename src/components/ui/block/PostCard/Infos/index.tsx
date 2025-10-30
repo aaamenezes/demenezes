@@ -1,9 +1,9 @@
+import PostCardDescription from '@/components/ui/block/PostCard/Description';
+import PostCardFooter from '@/components/ui/block/PostCard/Footer';
+import PostCardHeader from '@/components/ui/block/PostCard/Header';
+import { PostSummaryProps } from '@/types';
+import { clsx } from '@/utils/clsx';
 import { CSSProperties, useCallback } from 'react';
-import { PostSummaryProps } from '../../../../../types';
-import { clsx } from '../../../../../utils/clsx';
-import PostCardDescription from '../Description';
-import PostCardFooter from '../Footer';
-import PostCardHeader from '../Header';
 import style from './styles.module.css';
 
 export default function PostCardInfos({
