@@ -1,10 +1,10 @@
+import Wrapper from '@/components/ui/container/Wrapper';
+import { clsx } from '@/utils/clsx';
+import { convertDate } from '@/utils/convertDate';
 import { CSSProperties } from 'react';
-import { convertDate } from '../../../../utils/convertDate';
+import fontStyle from '../../../styles/fontStyles.module.css';
 import PostCategory from '../../block/PostCategory';
-import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
-import fontStyle from '../../../../../styles/font-style.module.css';
-import { clsx } from '../../../../utils/clsx';
 
 export default function PostHeader({
   title,
