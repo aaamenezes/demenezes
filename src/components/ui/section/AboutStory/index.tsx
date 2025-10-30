@@ -1,5 +1,5 @@
-import Wrapper from '../../container/Wrapper';
-import HighlightText from '../AboutHighlightText';
+import Wrapper from '@/components/ui/container/Wrapper';
+import HighlightText from '@/components/ui/section/AboutHighlightText';
 import style from './styles.module.css';
 
 /**
