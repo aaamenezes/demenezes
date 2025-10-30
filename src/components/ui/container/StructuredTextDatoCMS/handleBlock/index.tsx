@@ -7,7 +7,7 @@ import Video from '../../../base/Video';
 import BlockQuote from '../../../block/BlockQuote';
 import Table from '../../../block/Table';
 
-export function handleBlock({
+export default function HandleBlock({
   record,
 }: {
   record: {

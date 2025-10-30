@@ -2,7 +2,7 @@
 import Link from '../../../base/Link';
 import style from './styles.module.css';
 
-export function handleLink({ node }: any) {
+export default function HandleLink({ node }: any) {
   return (
     <Link
       className={style.textLink}
