@@ -1,6 +1,6 @@
+import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
+import Wrapper from '@/components/ui/container/Wrapper';
 import NextImage from 'next/image';
-import HiddenA11Y from '../../base/HiddenA11Y';
-import Wrapper from '../../container/Wrapper';
 import style from './styles.module.css';
 
 export default function Greeting({
