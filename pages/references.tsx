@@ -1,12 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// import { parser } from 'url-meta-scraper';
-// import { getContent } from '../src/external/datoCMS';
-// import { PaginationButton } from '../src/components/PaginationButton'
 
-import Head from '../src/components/meta/Head';
-import Wrapper from '../src/components/ui/container/Wrapper';
-import PageFooter from '../src/components/ui/section/PageFooter';
-import PageHeader from '../src/components/ui/section/PageHeader';
+import Head from '@/components/meta/Head';
+import Wrapper from '@/components/ui/container/Wrapper';
+import PageFooter from '@/components/ui/section/PageFooter';
+import PageHeader from '@/components/ui/section/PageHeader';
 
 // const ReferencesContainer = styled.header`
 //   padding-top: 6.6rem;
