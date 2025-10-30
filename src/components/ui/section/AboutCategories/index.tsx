@@ -1,6 +1,6 @@
-import Icon from '../../base/Icon';
-import { IconName } from '../../base/Icon/types';
-import Wrapper from '../../container/Wrapper';
+import Icon from '@/components/ui/base/Icon';
+import type { IconName } from '@/components/ui/base/Icon/types';
+import Wrapper from '@/components/ui/container/Wrapper';
 import style from './styles.module.css';
 
 export default function AboutCategories({
