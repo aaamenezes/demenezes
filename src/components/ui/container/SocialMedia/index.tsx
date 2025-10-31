@@ -1,4 +1,4 @@
-import fontStyle from '@/../styles/fontStyles.module.css';
+import fontStyle from '@/../styles/font-style.module.css';
 import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';
 import { clsx } from '@/utils/clsx';

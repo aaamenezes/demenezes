@@ -1,4 +1,4 @@
-import fontStyle from '@/../styles/fontStyles.module.css';
+import fontStyle from '@/../styles/font-style.module.css';
 import { clsx } from '@/utils/clsx';
 import { convertDate } from '@/utils/convertDate';
 import style from './styles.module.css';

@@ -1,4 +1,4 @@
-import fontStyle from '@/../styles/fontStyle.module.css';
+import fontStyle from '@/../styles/font-style.module.css';
 import Button from '@/components/ui/base/Button';
 import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';

@@ -1,4 +1,4 @@
-import fontStyle from '@/../styles/fontStyles.module.css';
+import fontStyle from '@/../styles/font-style.module.css';
 import Button from '@/components/ui/base/Button';
 import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
 import Input from '@/components/ui/base/Input';

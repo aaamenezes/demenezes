@@ -1,4 +1,4 @@
-import fontStyle from '@/../styles/fontStyle.module.css';
+import fontStyle from '@/../styles/font-style.module.css';
 import Link from '@/components/ui/base/Link';
 import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
