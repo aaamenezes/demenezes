@@ -45,6 +45,8 @@ export default tseslint.config([
       'react/prop-types': 'off',
       // Exigir palavra type nos imports de tipos
       "@typescript-eslint/consistent-type-imports": "error",
+      // Exigir palavra type nos exports de tipos
+      "@typescript-eslint/consistent-type-exports": "error",
     }
   },
 ]);
