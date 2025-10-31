@@ -1,7 +1,7 @@
 import { clsx } from '@/utils/clsx';
 import { ExternalLink } from 'lucide-react';
 import NextLink from 'next/link';
-import type { PropsWithChildren } from 'react';
+import type { ReactNode } from 'react';
 import style from './styles.module.css';
 
 export default function Link({
@@ -10,12 +10,13 @@ export default function Link({
   isExternal = false,
   inline = false,
   className = '',
-}: PropsWithChildren<{
+}: {
+  children: ReactNode;
   href: string;
   isExternal?: boolean;
   inline?: boolean;
   className?: string;
-}>) {
+}) {
   return (
     <NextLink href={href} passHref legacyBehavior>
       <a

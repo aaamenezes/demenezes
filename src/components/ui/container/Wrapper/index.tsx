@@ -1,5 +1,6 @@
 import { clsx } from '@/utils/clsx';
-import { useCallback, type CSSProperties, type PropsWithChildren } from 'react';
+import type { ReactNode } from 'react';
+import { useCallback, type CSSProperties } from 'react';
 import style from './styles.module.css';
 
 const breakpoints = {
@@ -16,18 +17,19 @@ type Breakpoint = keyof typeof breakpoints;
 type Width = Breakpoint | 'full';
 
 export default function Wrapper({
+  children,
   width,
   isFluid = false,
   spacing = 0,
   className = '',
-  children,
-}: PropsWithChildren<{
+}: {
+  children: ReactNode;
   width: Width;
   isFluid?: boolean;
   spacing?: number;
   as?: keyof HTMLElementTagNameMap;
   className?: string;
-}>) {
+}) {
   const getWrapperMaxWidth = useCallback(
     (width: Width, breakpoint: Breakpoint, isFluid: boolean) => {
       if (width && width !== 'full' && isFluid) {

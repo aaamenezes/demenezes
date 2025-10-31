@@ -1,6 +1,6 @@
-import type { CSSProperties, PropsWithChildren } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
-function Box({ children, style }: PropsWithChildren<{ style: string }>) {
+function Box({ children, style }: { children: ReactNode; style: string }) {
   return (
     <div
       style={

@@ -1,5 +1,5 @@
 import { clsx } from '@/utils/clsx';
-import type { MouseEvent, PropsWithChildren } from 'react';
+import type { MouseEvent, ReactNode } from 'react';
 import style from './styles.module.css';
 
 export default function Button({
@@ -10,14 +10,15 @@ export default function Button({
   name = '',
   className = '',
   id = '',
-}: PropsWithChildren<{
+}: {
+  children: ReactNode;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   name?: string;
   className?: string;
   id?: string;
-}>) {
+}) {
   /**
    * tab-index
    */
