@@ -1,5 +1,5 @@
-import Icon from '@/components/ui/base/Icon';
 import { clsx } from '@/utils/clsx';
+import { ExternalLink } from 'lucide-react';
 import NextLink from 'next/link';
 import type { PropsWithChildren } from 'react';
 import style from './styles.module.css';
@@ -26,7 +26,7 @@ export default function Link({
         {isExternal && inline ? (
           <>
             <span className={inline ? style.text : ''}>{children}</span>
-            <Icon name="external" inline={inline} />
+            <ExternalLink />
           </>
         ) : (
           children

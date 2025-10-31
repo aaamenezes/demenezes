@@ -1,6 +1,4 @@
 import fontStyle from '@/../styles/fontStyles.module.css';
-import Icon from '@/components/ui/base/Icon';
-import type { IconName } from '@/components/ui/base/Icon/types';
 import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';
 import { clsx } from '@/utils/clsx';
@@ -20,7 +18,7 @@ export default function SocialMedia({
         isExternal
       >
         {/* não gostei desse "as IconName", corrigir isso */}
-        <Icon name={socialMedia.title as IconName} />
+        {'>>>'}ICONE REDE SOCIAL AQUI{'<<<'}
         <span
           className={clsx(style.socialMediaLabel, fontStyle.socialMediaLabel)}
         >

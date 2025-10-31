@@ -1,5 +1,3 @@
-import Icon from '@/components/ui/base/Icon';
-import type { IconName } from '@/components/ui/base/Icon/types';
 import Wrapper from '@/components/ui/container/Wrapper';
 import style from './styles.module.css';
 
@@ -19,7 +17,7 @@ export default function AboutCategories({
       <li className={style.categoryItem} key={categoryItemTitle}>
         <h3 className={style.categoryItemTitle}>
           {/* não gostei desse "as IconName", corrigir isso */}
-          <Icon name={categoryItemIcon as IconName} color="black" />
+          {'>>>'}ICONE AQUI{'<<<'}
           <span>{categoryItemTitle}</span>
         </h3>
         <p className={style.categoryText}>{categoryItemDescription}</p>

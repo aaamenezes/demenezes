@@ -1,9 +1,10 @@
 import fontStyle from '@/../styles/fontStyle.module.css';
+import Button from '@/components/ui/base/Button';
 import Link from '@/components/ui/base/Link';
-import ToggleModalButton from '@/components/ui/block/ToggleModalButton';
 import settings from '@/data/settings.json';
 import { clsx } from '@/utils/clsx';
 import { getPageInfos } from '@/utils/getPageInfos';
+import { X } from 'lucide-react';
 import { useRouter } from 'next/router';
 import style from './styles.module.css';
 
@@ -51,12 +52,9 @@ export default function Navigation({
         className={clsx(style.navWrapper, { [style.isOpenMenu]: isOpenMenu })}
       >
         <ul className={style.navList}>{navigationElements}</ul>
-        <ToggleModalButton
-          className={style.closeMenuMobileButton}
-          onClick={toggleMenu}
-          icon="close"
-          color="neutral_800"
-        />
+        <Button onClick={toggleMenu} aria-label="Fechar menu de navegação">
+          <X />
+        </Button>
       </nav>
     </>
   );

@@ -1,9 +1,9 @@
+import Button from '@/components/ui/base/Button';
 import Logo from '@/components/ui/block/Logo';
-import ToggleModalButton from '@/components/ui/block/ToggleModalButton';
-import Navigation from '@/components/ui/container/Navigation';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
 import { getPageInfos } from '@/utils/getPageInfos';
+import { Menu } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import style from './styles.module.css';
 
@@ -35,12 +35,9 @@ export default function PageHeader() {
         <h1>
           <Logo />
         </h1>
-        <ToggleModalButton
-          className={style.toggleMenuButton}
-          onClick={toggleMenu}
-          icon="bars"
-        />
-        <Navigation isOpenMenu={isOpenMenu} toggleMenu={toggleMenu} />
+        <Button onClick={toggleMenu}>
+          <Menu />
+        </Button>
         {/* <SearchWrapper /> */}
       </Wrapper>
     </Wrapper>
