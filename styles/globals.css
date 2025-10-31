@@ -241,9 +241,9 @@
   /* ************************************************************************ */
   /* Opacity */
 
-  --opacity-sm: .3;
-  --opacity-md: .6;
-  --opacity-lg: .9;
+  --opacity-sm: .3; /* 4D */
+  --opacity-md: .6; /* 99 */
+  --opacity-lg: .9; /* E6 */
 
   /* ************************************************************************ */
   /* Spacing */
@@ -281,13 +281,6 @@
 
   /* ************************************************************************ */
   /* Outros */
-
-  --opacity-light-rgb: .3;
-  --opacity-light-hex: 4D;
-  --opacity-medium-rgb: .6;
-  --opacity-medium-hex: 99;
-  --opacity-hard-rgb: .9;
-  --opacity-hard-hex: E6;
 
   /* title: 'Ubuntu, sans-serif' */
   --font-family-display: 'Montserrat', sans-serif;
