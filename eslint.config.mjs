@@ -6,7 +6,14 @@ import pluginReact from "eslint-plugin-react";
 /** @type {import('eslint').Linter.Config[]} */
 export default tseslint.config([
   pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  },
   pluginReact.configs.flat.recommended,
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
