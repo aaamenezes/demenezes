@@ -289,30 +289,6 @@
   --z-index-modal: 1050;
   --z-index-popover: 1060;
   --z-index-tooltip: 1070;
-
-  /* ************************************************************************ */
-  /* Outros */
-
-  --z-index-under: -1;
-  --z-index-relative: 900;
-  --z-index-dropdown: 1000;
-  --z-index-absolute: 1010;
-  --z-index-sticky: 1020;
-  --z-index-fixed: 1030;
-  --z-index-modalBackdrop: 1040;
-  --z-index-modal: 1050;
-  --z-index-popover: 1060;
-  --z-index-tooltip: 1070;
-
-  /* Ainda não funciona, mas só pra salvar */
-  --media-xs: 0px;
-  --media-sm: 425px;
-  /* No Bootstrap era 576 mas achei mto próximo do MD */
-  --media-md: 768px;
-  --media-lg: 992px;
-  --media-xl: 1200px;
-  --media-xxl: 1600px;
-  --media-xxxl: 2000px;
 }
 
 * {
