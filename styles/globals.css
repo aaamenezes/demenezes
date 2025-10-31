@@ -293,10 +293,6 @@
   /* ************************************************************************ */
   /* Outros */
 
-  --transition-slow: 1.3s;
-  --transition-medium: 0.8s;
-  --transition-fast: 0.3s;
-
   --z-index-under: -1;
   --z-index-relative: 900;
   --z-index-dropdown: 1000;
