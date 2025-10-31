@@ -5,6 +5,7 @@ import { clsx } from '@/utils/clsx';
 import { getPageInfos } from '@/utils/getPageInfos';
 import { Menu } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
+import Navigation from '../../container/Navigation';
 import style from './styles.module.css';
 
 export default function PageHeader() {
@@ -38,6 +39,7 @@ export default function PageHeader() {
         <Button onClick={toggleMenu}>
           <Menu />
         </Button>
+        <Navigation isOpenMenu={isOpenMenu} toggleMenu={toggleMenu} />
         {/* <SearchWrapper /> */}
       </Wrapper>
     </Wrapper>
