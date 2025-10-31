@@ -1,17 +1,17 @@
 import { clsx } from '@/utils/clsx';
-import type { PropsWithChildren } from 'react';
+import type { MouseEvent, PropsWithChildren } from 'react';
 import style from './styles.module.css';
 
 export default function Button({
   children,
-  handleClick = () => {},
+  onClick = () => {},
   type = 'button',
   disabled = false,
   name = '',
   className = '',
   id = '',
 }: PropsWithChildren<{
-  handleClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   name?: string;
@@ -23,7 +23,7 @@ export default function Button({
    */
   return (
     <button
-      onClick={handleClick}
+      onClick={onClick}
       className={clsx(style.button, className)}
       type={type}
       disabled={disabled}
