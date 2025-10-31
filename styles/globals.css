@@ -293,44 +293,6 @@
   /* ************************************************************************ */
   /* Outros */
 
-  /* O tamanho maior sobrou '4.209rem' */
-  --font-size-h1: 3.157rem;
-  /* page title */
-  --font-size-h2: 2.369rem;
-  /* section title */
-  --font-size-h3: 1.777rem;
-  /* article title */
-  --font-size-h4: 1.333rem;
-  /* article subtitle */
-  --font-size-text: 1rem;
-  /* p, a, span */
-  --font-size-small: 0.75rem;
-  --font-size-html-xs: 16px;
-  --font-size-html-sm: 17px;
-  --font-size-html-md: 18px;
-  --font-size-html-lg: 19px;
-  --font-size-html-xl: 20px;
-
-  /*  */
-
-  /* black: 900 */
-  /* extra bold: 800 */
-  --font-weight-h1: 700;
-  /* bold */
-  --font-weight-h2: 600;
-  /* semi bold */
-  --font-weight-h3: 600;
-  /* semi bold */
-  --font-weight-h4: 500;
-  /* medium */
-  --font-weight-button: 600;
-  /* semi bold */
-  --font-weight-text: 400;
-  /* regular */
-  /* light: 300 */
-  /* extra light: 200 */
-  /* thin: 100 */
-
   --letter-spacing-h1: -1px;
   /* page title */
   --letter-spacing-h2: -0.5px;
@@ -395,44 +357,36 @@
 }
 
 html {
-  font-size: var(--font-size-html-xs);
   scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 425px) {
   html {
-    font-size: var(--font-size-html-xs);
   }
 }
 
 @media screen and (min-width: 768px) {
   html {
-    font-size: var(--font-size-html-sm);
   }
 }
 
 @media screen and (min-width: 992px) {
   html {
-    font-size: var(--font-size-html-md);
   }
 }
 
 @media screen and (min-width: 1200px) {
   html {
-    font-size: var(--font-size-html-lg);
   }
 }
 
 @media screen and (min-width: 1600px) {
   html {
-    font-size: var(--font-size-html-xl);
   }
 }
 
 body {
   line-height: var(--line-height-text);
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-text);
   font-family: var(--font-family-body);
   letter-spacing: var(--letter-spacing-text);
   color: var(--color-neutral-800);
@@ -441,7 +395,6 @@ body {
 
 nav {
   line-height: var(--line-height-button);
-  font-size: var(--font-size-small);
 }
 
 h1,
@@ -454,16 +407,12 @@ h4 {
 h1 {
   text-align: center;
   line-height: var(--line-height-h3);
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-h3);
   letter-spacing: var(--letter-spacing-h3);
 }
 
 @media screen and (min-width: 425px) {
   h1 {
     line-height: var(--line-height-h2);
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-h2);
     letter-spacing: var(--letter-spacing-h2);
   }
 }
@@ -471,8 +420,6 @@ h1 {
 @media screen and (min-width: 768px) {
   h1 {
     line-height: var(--line-height-h1);
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-h1);
     letter-spacing: var(--letter-spacing-h1);
   }
 }
@@ -482,8 +429,6 @@ h2 {
   margin-bottom: var(--spacing-h4);
   text-align: center;
   line-height: var(--line-height-h4);
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-h4);
   letter-spacing: var(--letter-spacing-h4);
 }
 
@@ -492,8 +437,6 @@ h2 {
     margin-top: calc(var(--spacing-h3) * 2);
     margin-bottom: var(--spacing-h3);
     line-height: var(--line-height-h3);
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-h3);
     letter-spacing: var(--letter-spacing-h3);
   }
 }
@@ -503,8 +446,6 @@ h2 {
     margin-top: calc(var(--spacing-h2) * 2);
     margin-bottom: var(--spacing-h2);
     line-height: var(--line-height-h2);
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-h2);
     letter-spacing: var(--letter-spacing-h2);
   }
 }
@@ -514,8 +455,6 @@ h3 {
   margin-bottom: var(--spacing-text);
   text-align: left;
   line-height: var(--line-height-text);
-  font-size: var(--font-size-h4);
-  font-weight: var(--font-weight-h2);
   letter-spacing: var(--letter-spacing-text);
 }
 
@@ -524,8 +463,6 @@ h3 {
     margin-top: calc(var(--spacing-h4) * 2);
     margin-bottom: var(--spacing-h4);
     line-height: var(--line-height-h4);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-h3);
     letter-spacing: var(--letter-spacing-h4);
   }
 }
@@ -535,7 +472,6 @@ h3 {
     margin-top: var(--spacing-h3);
     margin-bottom: var(--spacing-h3);
     line-height: var(--line-height-h3);
-    font-size: var(--font-size-h3);
     letter-spacing: var(--letter-spacing-h3);
   }
 }
@@ -545,8 +481,6 @@ h4 {
   margin-bottom: var(--spacing-text);
   text-align: left;
   line-height: var(--line-height-text);
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-h4);
   letter-spacing: var(--letter-spacing-text);
 }
 
@@ -555,7 +489,6 @@ h4 {
     margin-top: calc(var(--spacing-h4) * 2);
     margin-bottom: var(--spacing-h4);
     line-height: var(--line-height-h4);
-    font-size: var(--font-size-h4);
     letter-spacing: var(--letter-spacing-h4);
   }
 }
@@ -599,7 +532,6 @@ table th {
 }
 
 table thead tr {
-  font-weight: var(--font-weight-button);
   color: var(--color-neutral-50);
   background-color: var(--color-neutral-700);
 }
@@ -666,8 +598,6 @@ a:focus {
 button {
   border: none;
   outline: none;
-  font-weight: var(--font-weight-h1);
-  font-size: var(--font-size-small);
   font-family: var(--font-family-heading);
   background-color: transparent;
 }
@@ -679,7 +609,6 @@ input {
   margin-bottom: var(--spacing-small);
   border: none;
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-small);
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-50);
 }
@@ -689,7 +618,6 @@ input:focus {
 }
 
 strong {
-  font-weight: var(--font-weight-h1);
 }
 
 img,
@@ -711,7 +639,6 @@ code:not([class*="language-"]) {
   display: inline-block;
   padding: 0 0.4rem;
   border-radius: var(--border-radius);
-  font-size: var(--font-size-small);
   background-color: var(--color-neutral-200);
 }
 
