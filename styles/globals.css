@@ -301,109 +301,31 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (min-width: 425px) {
-  html {
-  }
-}
-
-@media screen and (min-width: 768px) {
-  html {
-  }
-}
-
-@media screen and (min-width: 992px) {
-  html {
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  html {
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  html {
-  }
-}
-
 body {
   font-family: var(--font-family-body);
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-50);
 }
 
-nav {
-}
-
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: var(--font-family-heading);
 }
 
-h1 {
-  text-align: center;
-}
-
-@media screen and (min-width: 425px) {
-  h1 {
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h1 {
-  }
-}
-
+h1,
 h2 {
   text-align: center;
 }
 
-@media screen and (min-width: 425px) {
-  h2 {
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h2 {
-  }
-}
-
-h3 {
+h3,
+h4,
+h5,
+h6 {
   text-align: left;
-}
-
-@media screen and (min-width: 425px) {
-  h3 {
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h3 {
-  }
-}
-
-h4 {
-  text-align: left;
-}
-
-@media screen and (min-width: 768px) {
-  h4 {
-  }
-}
-
-ul,
-ol {
-  margin-left: 2rem;
-}
-
-li {
-}
-
-p:not(:last-child),
-ul:not(:last-child),
-ol:not(:last-child) {
 }
 
 table {
@@ -512,9 +434,6 @@ input:focus {
   outline: none;
 }
 
-strong {
-}
-
 img,
 video {
   display: block;
@@ -542,28 +461,6 @@ code:not([class*="language-"]) {
     padding: 0.1rem 0.3rem;
     line-height: 1;
   }
-}
-
-figure:not(:first-child),
-table:not(:first-child),
-iframe:not(:first-child),
-blockquote:not(:first-child),
-hr:not(:first-child),
-pre[class*="language-"]:not(:first-child),
-[class*="TextBox"]:not(:first-child),
-.twitter-tweet:not(:first-child),
-video {
-}
-
-figure:not(:last-child),
-table:not(:last-child),
-iframe:not(:last-child),
-blockquote:not(:last-child),
-hr:not(:last-child),
-pre[class*="language-"]:not(:last-child),
-[class*="TextBox"]:not(:last-child),
-.twitter-tweet:not(:last-child),
-video {
 }
 
 iframe {
