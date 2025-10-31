@@ -154,6 +154,17 @@
   /*
   Fontes já instaladas na maioria dos sistemas operacionais
   https://modernfontstacks.com/
+
+  https://fonts.google.com/specimen/Vollkorn?query=Vollkorn
+  https://fonts.google.com/specimen/Source+Serif+Pro?query=Source+Serif+Pro
+  https://fonts.google.com/specimen/Libre+Baskerville?query=Baskerville
+  https://fonts.google.com/noto/specimen/Noto+Serif?query=Noto+Serif
+  https://fonts.google.com/specimen/Merriweather?query=Merriweather
+  https://fonts.google.com/specimen/Lora?query=Lora
+  https://fonts.google.com/specimen/Unna?query=Unna
+  https://fonts.google.com/specimen/Cardo?query=Cardo
+  https://fonts.google.com/specimen/Crimson+Text?query=Crimson+Text
+  https://fonts.google.com/specimen/Playfair+Display?query=Playfair+Display
   */
 
   /* ************************************************************************ */
@@ -281,31 +292,6 @@
 
   /* ************************************************************************ */
   /* Outros */
-
-  /* title: 'Ubuntu, sans-serif' */
-  --font-family-display: 'Montserrat', sans-serif;
-  --font-family-text: 'Vollkorn', serif;
-
-  /*
-  Fontes já instaladas na maioria dos sistemas operacionais
-  https://modernfontstacks.com/
-
-  https://fonts.google.com/specimen/Vollkorn?query=Vollkorn
-  https://fonts.google.com/specimen/Source+Serif+Pro?query=Source+Serif+Pro
-  https://fonts.google.com/specimen/Libre+Baskerville?query=Baskerville
-  https://fonts.google.com/noto/specimen/Noto+Serif?query=Noto+Serif
-  https://fonts.google.com/specimen/Merriweather?query=Merriweather
-  https://fonts.google.com/specimen/Lora?query=Lora
-  https://fonts.google.com/specimen/Unna?query=Unna
-  https://fonts.google.com/specimen/Cardo?query=Cardo
-  https://fonts.google.com/specimen/Crimson+Text?query=Crimson+Text
-  https://fonts.google.com/specimen/Playfair+Display?query=Playfair+Display
-
-  Fator de escala: 1500
-  Link do type-scale com a configuração atual
-
-  https://type-scale.com/?size=20&scale=1.500&text=A%20Visual%20Type%20Scale&font=Montserrat&fontweight=400&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
-  */
 
   /* O tamanho maior sobrou '4.209rem' */
   --font-size-h1: 3.157rem;
@@ -447,7 +433,7 @@ body {
   line-height: var(--line-height-text);
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-text);
-  font-family: var(--font-family-text);
+  font-family: var(--font-family-body);
   letter-spacing: var(--letter-spacing-text);
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-50);
@@ -462,7 +448,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-family-display);
+  font-family: var(--font-family-heading);
 }
 
 h1 {
@@ -682,7 +668,7 @@ button {
   outline: none;
   font-weight: var(--font-weight-h1);
   font-size: var(--font-size-small);
-  font-family: var(--font-family-display);
+  font-family: var(--font-family-heading);
   background-color: transparent;
 }
 
@@ -692,7 +678,7 @@ input {
   margin-top: var(--spacing-small);
   margin-bottom: var(--spacing-small);
   border: none;
-  font-family: var(--font-family-display);
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-small);
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-50);
