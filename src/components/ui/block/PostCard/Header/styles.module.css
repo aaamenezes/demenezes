@@ -27,7 +27,6 @@
 }
  
 .postCardTitle.isHero {
-  margin: var(--spacing-h3) 0;
 }
 
 .postCardTitle.isCompact {}

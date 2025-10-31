@@ -293,13 +293,6 @@
   /* ************************************************************************ */
   /* Outros */
 
-  --spacing-h1: 3rem;
-  --spacing-h2: 2.5rem;
-  --spacing-h3: 2rem;
-  --spacing-h4: 1.5rem;
-  --spacing-text: 1.5rem;
-  --spacing-small: 0.5rem;
-
   --transition-slow: 1.3s;
   --transition-medium: 0.8s;
   --transition-fast: 0.3s;
@@ -392,55 +385,39 @@ h1 {
 }
 
 h2 {
-  margin-top: calc(var(--spacing-h4) * 2);
-  margin-bottom: var(--spacing-h4);
   text-align: center;
 }
 
 @media screen and (min-width: 425px) {
   h2 {
-    margin-top: calc(var(--spacing-h3) * 2);
-    margin-bottom: var(--spacing-h3);
   }
 }
 
 @media screen and (min-width: 768px) {
   h2 {
-    margin-top: calc(var(--spacing-h2) * 2);
-    margin-bottom: var(--spacing-h2);
   }
 }
 
 h3 {
-  margin-top: calc(var(--spacing-text) * 2);
-  margin-bottom: var(--spacing-text);
   text-align: left;
 }
 
 @media screen and (min-width: 425px) {
   h3 {
-    margin-top: calc(var(--spacing-h4) * 2);
-    margin-bottom: var(--spacing-h4);
   }
 }
 
 @media screen and (min-width: 768px) {
   h3 {
-    margin-top: var(--spacing-h3);
-    margin-bottom: var(--spacing-h3);
   }
 }
 
 h4 {
-  margin-top: calc(var(--spacing-text) * 2);
-  margin-bottom: var(--spacing-text);
   text-align: left;
 }
 
 @media screen and (min-width: 768px) {
   h4 {
-    margin-top: calc(var(--spacing-h4) * 2);
-    margin-bottom: var(--spacing-h4);
   }
 }
 
@@ -450,13 +427,11 @@ ol {
 }
 
 li {
-  margin-bottom: var(--spacing-small);
 }
 
 p:not(:last-child),
 ul:not(:last-child),
 ol:not(:last-child) {
-  margin-bottom: var(--spacing-text);
 }
 
 table {
@@ -555,8 +530,6 @@ button {
 input {
   width: 100%;
   padding: 0.5rem 1rem;
-  margin-top: var(--spacing-small);
-  margin-bottom: var(--spacing-small);
   border: none;
   font-family: var(--font-family-heading);
   color: var(--color-neutral-800);
@@ -608,8 +581,6 @@ pre[class*="language-"]:not(:first-child),
 [class*="TextBox"]:not(:first-child),
 .twitter-tweet:not(:first-child),
 video {
-  margin-top: var(--spacing-h1) !important;
-  /* O !important serve para sobrescrever o CSS inline do Twitter */
 }
 
 figure:not(:last-child),
@@ -621,10 +592,6 @@ pre[class*="language-"]:not(:last-child),
 [class*="TextBox"]:not(:last-child),
 .twitter-tweet:not(:last-child),
 video {
-  margin-bottom: var(--spacing-h1) !important;
-  /**
-   * O !important serve para sobrescrever o CSS inline do Twitter
-   */
 }
 
 iframe {

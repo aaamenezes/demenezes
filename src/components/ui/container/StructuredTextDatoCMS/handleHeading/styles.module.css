@@ -17,7 +17,6 @@
 .titleLink {
   display: block;
   text-decoration-color: var(--color-transparent);
-  text-underline-offset: var(--spacing-small);
   text-decoration-style: dotted;
   transition: var(--transition-fast);
 }
@@ -25,7 +24,6 @@
 .titleLink::after {
   content: '#';
   display: inline-block;
-  margin-left: var(--spacing-small);
   vertical-align: middle;
   text-decoration: none;
   color: var(--color-neutral-500);

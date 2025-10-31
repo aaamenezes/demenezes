@@ -15,11 +15,9 @@
 }
 
 .postTitle {
-  margin-bottom: var(--spacing-h1);
 }
 
 .postDescription {
-  margin-bottom: var(--spacing-text);
   text-align: center;
 }
 
