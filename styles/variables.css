@@ -1,0 +1,292 @@
+:root {
+  /* ************************************************************************ */
+  /* Border radius */
+
+  --border-radius: 0.2rem;
+
+  /* ************************************************************************ */
+  /* Box shadow */
+
+  --box-shadow-sm: 0 0 40px -30px black;
+  --box-shadow-md: 0 0 40px -20px black;
+  --box-shadow-lg: 0 0 40px -10px black;
+
+  /* ************************************************************************ */
+  /* Breakpoints */
+
+  --media-xs: 0px;
+  --media-sm: 425px;
+  --media-md: 768px;
+  --media-lg: 992px;
+  --media-xl: 1200px;
+  --media-xxl: 1600px;
+  --media-xxxl: 2000px;
+
+  /* ************************************************************************ */
+  /* Color neutral */
+
+  --color-neutral-50: #ffffff; /* white */
+  --color-neutral-100: #fafafa; /* white */
+  --color-neutral-200: #f5f5f5; /* gray */
+  --color-neutral-300: #f0f0f0; /* gray */
+  --color-neutral-400: #dedede; /* gray */
+  --color-neutral-500: #c2c2c2; /* gray */
+  --color-neutral-600: #979797; /* gray */
+  --color-neutral-700: #555555; /* gray */
+  --color-neutral-800: #323232; /* black */
+  --color-neutral-900: #121212; /* black */
+
+  /* ************************************************************************ */
+  /* Color neutral opacity sm */
+
+  --color-neutral-50-opacity-sm: #ffffff4D; /* white */
+  --color-neutral-100-opacity-sm: #fafafa4D; /* white */
+  --color-neutral-200-opacity-sm: #f5f5f54D; /* gray */
+  --color-neutral-300-opacity-sm: #f0f0f04D; /* gray */
+  --color-neutral-400-opacity-sm: #dedede4D; /* gray */
+  --color-neutral-500-opacity-sm: #c2c2c24D; /* gray */
+  --color-neutral-600-opacity-sm: #9797974D; /* gray */
+  --color-neutral-700-opacity-sm: #5555554D; /* gray */
+  --color-neutral-800-opacity-sm: #3232324D; /* black */
+  --color-neutral-900-opacity-sm: #1212124D; /* black */
+
+  /* ************************************************************************ */
+  /* Color neutral opacity md */
+
+  --color-neutral-50-opacity-md: #ffffff99; /* white */
+  --color-neutral-100-opacity-md: #fafafa99; /* white */
+  --color-neutral-200-opacity-md: #f5f5f599; /* gray */
+  --color-neutral-300-opacity-md: #f0f0f099; /* gray */
+  --color-neutral-400-opacity-md: #dedede99; /* gray */
+  --color-neutral-500-opacity-md: #c2c2c299; /* gray */
+  --color-neutral-600-opacity-md: #97979799; /* gray */
+  --color-neutral-700-opacity-md: #55555599; /* gray */
+  --color-neutral-800-opacity-md: #32323299; /* black */
+  --color-neutral-900-opacity-md: #12121299; /* black */
+
+  /* ************************************************************************ */
+  /* Color neutral opacity lg */
+
+  --color-neutral-50-opacity-lg: #ffffffE6; /* white */
+  --color-neutral-100-opacity-lg: #fafafaE6; /* white */
+  --color-neutral-200-opacity-lg: #f5f5f5E6; /* gray */
+  --color-neutral-300-opacity-lg: #f0f0f0E6; /* gray */
+  --color-neutral-400-opacity-lg: #dededeE6; /* gray */
+  --color-neutral-500-opacity-lg: #c2c2c2E6; /* gray */
+  --color-neutral-600-opacity-lg: #979797E6; /* gray */
+  --color-neutral-700-opacity-lg: #555555E6; /* gray */
+  --color-neutral-800-opacity-lg: #323232E6; /* black */
+  --color-neutral-900-opacity-lg: #121212E6; /* black */
+
+  /* ************************************************************************ */
+  /* Color primary */
+
+  --color-primary-50: #fdeaed;
+  --color-primary-100: #fbcacf;
+  --color-primary-200: #e89695;
+  --color-primary-300: #db6d6c;
+  --color-primary-400: #e34d48;
+  --color-primary-500: #e63c2e;
+  --color-primary-600: #d8322d;
+  --color-primary-700: #c62827;
+  --color-primary-800: #b92121;
+  --color-primary-900: #aa1515;
+
+  /* ************************************************************************ */
+  /* Color primary opacity sm  */
+
+  --color-primary-50-opacity-sm: #fdeaed4D;
+  --color-primary-100-opacity-sm: #fbcacf4D;
+  --color-primary-200-opacity-sm: #e896954D;
+  --color-primary-300-opacity-sm: #db6d6c4D;
+  --color-primary-400-opacity-sm: #e34d484D;
+  --color-primary-500-opacity-sm: #e63c2e4D;
+  --color-primary-600-opacity-sm: #d8322d4D;
+  --color-primary-700-opacity-sm: #c628274D;
+  --color-primary-800-opacity-sm: #b921214D;
+  --color-primary-900-opacity-sm: #aa15154D;
+
+  /* ************************************************************************ */
+  /* Color primary opacity md  */
+
+  --color-primary-50-opacity-md: #fdeaed99;
+  --color-primary-100-opacity-md: #fbcacf99;
+  --color-primary-200-opacity-md: #e8969599;
+  --color-primary-300-opacity-md: #db6d6c99;
+  --color-primary-400-opacity-md: #e34d4899;
+  --color-primary-500-opacity-md: #e63c2e99;
+  --color-primary-600-opacity-md: #d8322d99;
+  --color-primary-700-opacity-md: #c6282799;
+  --color-primary-800-opacity-md: #b9212199;
+  --color-primary-900-opacity-md: #aa151599;
+
+  /* ************************************************************************ */
+  /* Color primary opacity lg  */
+
+  --color-primary-50-opacity-lg: #fdeaedE6;
+  --color-primary-100-opacity-lg: #fbcacfE6;
+  --color-primary-200-opacity-lg: #e89695E6;
+  --color-primary-300-opacity-lg: #db6d6cE6;
+  --color-primary-400-opacity-lg: #e34d48E6;
+  --color-primary-500-opacity-lg: #e63c2eE6;
+  --color-primary-600-opacity-lg: #d8322dE6;
+  --color-primary-700-opacity-lg: #c62827E6;
+  --color-primary-800-opacity-lg: #b92121E6;
+  --color-primary-900-opacity-lg: #aa1515E6;
+
+  /* ************************************************************************ */
+  /* Color transparent, obrigado Safari */
+
+  --color-transparent: rgba(0, 0, 0, 0);
+
+  /* ************************************************************************ */
+  /* Font family */
+
+  /* 100 - ... - 900; normal e italic */
+  --font-family-heading: 'Montserrat', sans-serif;
+
+  /* 400 - ... - 900; normal e italic */
+  --font-family-body: 'Vollkorn', serif;
+
+  /* 400 e 700; normal e italic */
+  --font-family-mono: 'Ubuntu Mono', sans-serif;
+
+  /*
+  Fontes já instaladas na maioria dos sistemas operacionais
+  https://modernfontstacks.com/
+
+  https://fonts.google.com/specimen/Vollkorn?query=Vollkorn
+  https://fonts.google.com/specimen/Source+Serif+Pro?query=Source+Serif+Pro
+  https://fonts.google.com/specimen/Libre+Baskerville?query=Baskerville
+  https://fonts.google.com/noto/specimen/Noto+Serif?query=Noto+Serif
+  https://fonts.google.com/specimen/Merriweather?query=Merriweather
+  https://fonts.google.com/specimen/Lora?query=Lora
+  https://fonts.google.com/specimen/Unna?query=Unna
+  https://fonts.google.com/specimen/Cardo?query=Cardo
+  https://fonts.google.com/specimen/Crimson+Text?query=Crimson+Text
+  https://fonts.google.com/specimen/Playfair+Display?query=Playfair+Display
+  */
+
+  /* ************************************************************************ */
+  /* Font size */
+
+  /* HTML */
+  --font-size-mobile: 18px;
+  --font-size-tablet: 19px;
+  --font-size-desktop: 20px;
+
+  /* Scale ratio */
+  --font-size-scale-ratio: 1.2;
+
+  /* Base font size */
+  --font-size-base: var(--font-size-mobile);
+
+  --font-size-xxxs: calc(var(--font-size-base) / pow(var(--font-size-scale-ratio), 2));
+  --font-size-xxs:  calc(var(--font-size-base) / pow(var(--font-size-scale-ratio), 1));
+  --font-size-xs:        var(--font-size-base);
+  --font-size-sm:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 1));
+  --font-size-md:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 2));
+  --font-size-lg:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 3));
+  --font-size-xl:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 4));
+  --font-size-xxl:  calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 5));
+  --font-size-xxxl: calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 6));
+
+  /* ************************************************************************ */
+  /* Font weight */
+  
+  --font-weight-100: 100; /* thin       */
+  --font-weight-200: 200; /* extralight */
+  --font-weight-300: 300; /* light      */
+  --font-weight-400: 400; /* regular    */
+  --font-weight-500: 500; /* medium     */
+  --font-weight-600: 600; /* semibold   */
+  --font-weight-700: 700; /* bold       */
+  --font-weight-800: 800; /* extrabold  */
+  --font-weight-900: 900; /* black      */
+
+  /*
+  Legendas, textos pequenos e corpo
+  xxxs: 100 - 400
+  xxs:  100 - 400
+  xs:   100 - 400
+  
+  Subtítulos
+  sm:   400 - 500
+  md:   400 - 500
+
+  Títulos de seção
+  lg:   500 - 600
+  xl:   500 - 600
+
+  H1, destaques e heros
+  xxl:  600 - 700
+  xxxl: 600 - 900
+  */
+
+  /* ************************************************************************ */
+  /* Letter spacing */
+
+  --letter-spacing-xxxs: -0.05em;
+  --letter-spacing-xxs: -0.025em;
+  --letter-spacing-xs: 0em;
+  --letter-spacing-sm: 0.025em;
+  --letter-spacing-md: 0.05em;
+  --letter-spacing-lg: 0.075em;
+  --letter-spacing-xl: 0.1em;
+  --letter-spacing-xxl: 0.125em;
+  --letter-spacing-xxxl: 0.15em;
+
+  /* ************************************************************************ */
+  /* Line height */
+
+  --line-height-xxxs: 0.6;
+  --line-height-xxs: 0.8;
+  --line-height-xs: 1;
+  --line-height-sm: 1.2;
+  --line-height-md: 1.4;
+  --line-height-lg: 1.6;
+  --line-height-xl: 1.8;
+  --line-height-xxl: 2;
+  --line-height-xxxl: 2.2;
+
+  /* ************************************************************************ */
+  /* Opacity */
+
+  --opacity-sm: .3; /* 4D */
+  --opacity-md: .6; /* 99 */
+  --opacity-lg: .9; /* E6 */
+
+  /* ************************************************************************ */
+  /* Spacing */
+
+  --spacing-xxxs: 0.0625rem;
+  --spacing-xxs: 0.125rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 2.5rem;
+  --spacing-xxxl: 4rem;
+
+  /* ************************************************************************ */
+  /* Transition */
+
+  --transition-slow: 1.3s;
+  --transition-medium: 0.8s;
+  --transition-fast: 0.3s;
+
+  /* ************************************************************************ */
+  /* Z index */
+
+  --z-index-under: -1;
+  --z-index-relative: 900;
+  --z-index-dropdown: 1000;
+  --z-index-absolute: 1010;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modalBackdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+}

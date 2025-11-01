@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { pageview } from '../src/external/GoogleAnalytics/gtag.ts'
 import GoogleAnalytics from '../src/external/GoogleAnalytics/index.tsx'
+import '../styles/variables.css'
+import '../styles/reset.css'
 import '../styles/globals.css'
 
 export default function MyApp({ Component, pageProps }) {
