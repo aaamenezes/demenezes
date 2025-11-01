@@ -44,8 +44,18 @@ export default tseslint.config([
       'no-underscore-dangle': 'off',
       // Permite aninhar if ternário
       'no-nested-ternary': 'off',
-      // Não permitir variáveis não utilizadas
-      'no-unused-vars': 'error',
+      /**
+       * Não permitir variáveis não utilizadas.
+       * Desativar regra base e usar a do TypeScript
+       */
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_', // ignora args iniciados com _
+          varsIgnorePattern: '^_', // ignora variáveis iniciadas com _
+        },
+      ],
       // Não exigir importação do React em arquivos com JSX
       'react/react-in-jsx-scope': 'off',
       // Não exigir prop types
