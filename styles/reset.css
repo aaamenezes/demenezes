@@ -1,3 +1,10 @@
+:root {
+  --color-transparent: rgba(0, 0, 0, 0);
+  --font-family-body: sans-serif;
+  --color-body: #000000;
+  --background-color-body: #AAAAAA;
+}
+
 /* ************************************************************************** */
 /**
  * Viewport
@@ -19,8 +26,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* pra que vertical-align ? */
-  vertical-align: baseline;
 }
 
 *::before,
@@ -28,48 +33,30 @@
   box-sizing: inherit;
 }
 
-/**
- * html root rules
- * 1. avoid 300ms click delay on touch devices that support the `touch-action`
- *    CSS property
- * 2. Prevent adjustments of font size after orientation changes in IE, on
- *    Windows Phone and iOS.
- * 3. Setting @viewport causes scrollbars to overlap content in IE11 and Edge,
- *    so we force a non-overlapping, non-auto-hiding scrollbar to counteract.
- * 4. Change the default tap highlight to be completely transparent in iOS.
- * 5. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
-  font-size: 100%;
-  scroll-behavior: smooth;
   /* 1 */
-  touch-action: manipulation;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  /* 3 */
-  -ms-overflow-style: scrollbar;
-  /* 4 */
-  -webkit-tap-highlight-color: var(--color-transparent);
-  /* 5 */
-  line-height: 1.15; /* 1 */
+  line-height: 1;
 }
 
 /**
- * body rules
- * 1. reset line-height to 1
- * 2. Set an explicit initial text-align value so that we can later use the
- *    `inherit` value on things like `<th>` elements.
- */
+* 1. Prevent adjustments of font size after orientation changes in IE, on Windows Phone and iOS.
+* 2. Avoid 300ms click delay on touch devices that support the `touch-action` CSS property
+* 3. Change the default tap highlight to be completely transparent in iOS.
+*/
 body {
   font-size: 100%;
   /* 1 */
-  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   font-family: var(--font-family-body);
+  scroll-behavior: smooth;
   /* 2 */
-  text-align: left;
-  color: var(--color-neutral-800);
-  background-color: var(--color-neutral-50);
+  touch-action: manipulation;
+  /* 3 */
+  -webkit-tap-highlight-color: var(--color-transparent);
+  color: var(--color-body);
+  background-color: var(--background-color-body);
 }
 
 /* ************************************************************************** */
