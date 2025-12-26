@@ -74,6 +74,11 @@ template {
 /**
  * Always hide an element with the `hidden` HTML attribute (from PureCSS).
  * Needed for proper display in IE 10-.
+ *
+ * Se um dia esse código der problema, tentar trocar por isso:
+ * [hidden]:not([hidden="until-found"]) {
+ *   display: none;
+ * }
  */
 [hidden] {
   display: none !important;
