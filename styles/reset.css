@@ -2,7 +2,8 @@
   --color-transparent: rgba(0, 0, 0, 0);
   --font-family-body: sans-serif;
   --color-body: #000000;
-  --background-color-body: #AAAAAA;
+  --background-color-body: #FFFFFF;
+  --font-size-small: 0.875rem;
 }
 
 /* ************************************************************************** */
@@ -146,7 +147,7 @@ q {
 }
 
 b, strong {
-  font-weight: var(--font-weight-700);
+  font-weight: 700;
 }
 
 i, em {
@@ -154,7 +155,7 @@ i, em {
 }
 
 small {
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-small);
 }
 
 /**
@@ -170,7 +171,7 @@ svg:not(:root) {
  */
 sub, sup {
   position: relative;
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-small);
   line-height: 0;
 }
 
