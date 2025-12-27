@@ -116,10 +116,15 @@ ol, ul {
   height: 0;
 }
 
+/**
+ * 1. Prevent clip box-shadow and border
+ */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1, se eu definir altura no globals, posso remover isso? */
-  overflow: visible; /* 2 */
+  display: block;
+  height: 1px;
+  border: none;
+  /* 1 */
+  overflow: visible;
 }
 
 /* ************************************************************************** */
