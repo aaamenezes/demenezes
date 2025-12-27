@@ -196,18 +196,6 @@ abbr[title] {
  *tr
  */
 
-/**
- * 1. Matches default `<td>` alignment by inheriting from the `<body>`, or the
- *    closest parent with a set `text-align`.
- * 2. Fix alignment for Safari
- */
-th {
-  /* 1 */
-  text-align: inherit;
-  /* 2 */
-  text-align: -webkit-match-parent;
-}
-
 /* ************************************************************************** */
 /**
  * Code
