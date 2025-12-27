@@ -214,18 +214,8 @@ samp {
   font-size: 1em;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- * 3. ???
- */
 pre {
-  /* 1 */
-  font-family: monospace;
-  /* 2 */
   overflow: auto;
-  /* 3 */
-  -ms-overflow-style: scrollbar;
 }
 
 /* ************************************************************************** */
