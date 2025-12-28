@@ -248,27 +248,19 @@ address {
 
 /**
  * Links
- * 1. Adds resets for links that are not covered by reset-and-normalize base
- * 2. Remove the gray background on active links in IE 10.
- * 3. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * 1. Remove the gray background on active links in IE 10.
  */
 a {
-  text-decoration: none; /* 1 */
-  color: currentColor;
-  color: inherit;
-  background-color: var(--color-transparent); /* 2 */
-  -webkit-text-decoration-skip: objects; /* 3 */
-}
-
-a:where(:focus, :-moz-focusring) {
-  outline: none;
+  /* 1 */
+  background-color: var(--color-transparent);
 }
 
 /**
  * Correct element display for output
  */
 output {
-  display: inline-block;
+  font: inherit;
+  color: inherit;
 }
 
 /* ************************************************************************** */
