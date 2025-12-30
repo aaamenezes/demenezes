@@ -264,8 +264,9 @@ output {
 }
 
 /* ************************************************************************** */
+/* ********************************** */
 /**
- * Form block
+ * Form container
  */
 
 /**
@@ -279,19 +280,11 @@ fieldset {
   min-width: 0;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
 legend {
-  box-sizing: border-box; /* 1 */
   display: block;
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-  color: inherit; /* 2 */
+  max-width: 100%;
+  white-space: normal;
+  color: inherit;
 }
 
 /**
