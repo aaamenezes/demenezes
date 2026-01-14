@@ -31,7 +31,7 @@
 
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -287,30 +287,75 @@ legend {
   color: inherit;
 }
 
+/* ********************************** */
 /**
- * Form inline
+ * Form button
  */
 
-button,
-[role="button"],
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  appearance: button;
-  -webkit-appearance: button;
-  text-align: center;
+/**
+* form element resets
+* 1. inherit font rules
+* 2. Show the overflow in IE.
+* 3. Remove the inheritance of text transform in Edge, Firefox, and IE.
+*/
+button
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: none;
+  border-radius: 0;
+  /* 1 */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: var(--color-transparent);
+  /* 2 */
+  overflow: visible;
+  /* 3 */
+  text-transform: none;
   cursor: pointer;
-  user-select: none;
+  -webkit-tap-highlight-color: var(--color-transparent);
+}
+
+:where(
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"]
+):disabled {
+  cursor: default;
+}
+
+:where(
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"]
+):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+:where(
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"]
+):focus:not(:focus-visible) {
+  outline: none;
 }
 
 /**
  * 1. Remove the inner border and padding in Firefox.
  */
-:where(button, [role="button"], [type="button"], [type="reset"], [type="submit"]):focus,
-:where(button, [role="button"], [type="button"], [type="reset"], [type="submit"])::-moz-focus-inner {
-  outline: none;
-  /* 1 */
-  border-style: none;
+:where(
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"]
+)::-moz-focus-inner {
+  border: none;
   padding: 0;
 }
 
