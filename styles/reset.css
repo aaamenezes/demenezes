@@ -370,16 +370,33 @@ input[type='submit'] {
 /**
  * form element resets
  * 1. Remove the margin in Firefox and Safari
- * 2. inherit font rules
  */
-button,
-optgroup,
-select,
+input,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  border: none;
+  border-radius: 0;
+  /* 1 */
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
+}
+
+select,
+optgroup {
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
 }
 
 /**
@@ -389,98 +406,67 @@ textarea {
  * See https://bugs.webkit.org/show_bug.cgi?id=139848
  * and https://github.com/twbs/bootstrap/issues/11266
  */
-input:where([type="date"], [type="time"], [type="datetime-local"], [type="month"]) {
-  -webkit-appearance: listbox;
+@supports (-webkit-appearance: listbox) {
+  input[type='date'],
+  input[type='time'],
+  input[type='datetime-local'],
+  input[type='month'] {
+    -webkit-appearance: listbox;
+  }
 }
 
-/**
- * 1. Add the correct box sizing in IE 10. Precisa mesmo???
- * 2. Remove the padding in IE 10. Precisa mesmo???
- */
-input:where([type="radio"], [type="checkbox"]) {
-  /* 1 */
-  box-sizing: border-box;
-  /* 2 */
-  padding: 0;
+input:where([type='radio'], [type='checkbox']) {
+  appearance: none;
 }
 
-input:focus {
+input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+input:focus:not(:focus-visible) {
   outline: none;
-}
-
-/**
- * form element resets
- * 1. Remove the margin in Firefox and Safari
- * 2. inherit font rules
- */
-input,
-button,
-select,
-optgroup,
-textarea {
-  border: none;
-  border-radius: 0;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-  background-color: var(--color-transparent);
-}
-
-/**
- * 1. Remove the default vertical scrollbar in IE 10+.
- * 2. Textareas should really only resize vertically so they don't break their
- *    (horizontal) containers.
- */
-textarea {
-  /* 1 */
-  overflow: auto;
-  /* 2 */
-  resize: vertical;
 }
 
 /**
  * Show the overflow in IE.
  */
-button,
 input {
   overflow: visible;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] {
-  /* 1 */
+input[type='search'] {
   -webkit-appearance: textfield;
-  /* 2 */
-  outline-offset: -2px;
 }
 
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ * Remove WebKit search decorations for custom styling
  */
-[type="search"]:where(::-webkit-search-cancel-button, ::-webkit-search-decoration) {
+input[type='search']:where(
+    ::-webkit-search-cancel-button,
+    ::-webkit-search-decoration
+  ) {
   -webkit-appearance: none;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- * Que porra é essa?
- */
-[type="number"]:where(::-webkit-inner-spin-button, ::-webkit-outer-spin-button) {
-  height: auto;
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='number']:where(
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button
+  ) {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-::-webkit-file-upload-button {
+:where(::-webkit-file-upload-button, ::file-selector-button) {
   /* 1 */
   -webkit-appearance: button;
   /* 2 */
@@ -488,23 +474,7 @@ input {
 }
 
 /**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- */
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * Remove the inheritance of word-wrap in Safari.
- * See https://github.com/twbs/bootstrap/issues/24990
- */
-select {
-  word-wrap: normal;
-}
-
-/**
- * 1. Remove the default vertical scrollbar in IE.
+ * 1. Remove the default vertical scrollbar in IE 10+.
  * 2. Textareas should really only resize vertically so they don't break their
  *    (horizontal) containers.
  */
