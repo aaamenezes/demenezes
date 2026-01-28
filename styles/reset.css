@@ -486,6 +486,17 @@ textarea {
 }
 
 /**
+ * 1. Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 2. Remove the inheritance of word-wrap in Safari. See https://github.com/twbs/bootstrap/issues/24990
+ */
+select {
+  /* 1 */
+  text-transform: none;
+  /* 2 */
+  word-wrap: normal;
+  /* ou overflow-wrap: normal; */
+}
+/**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
