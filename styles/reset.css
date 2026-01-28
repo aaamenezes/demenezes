@@ -510,6 +510,7 @@ progress {
 
 /*
  * Add the correct display in all browsers.
+ * Ensure native disclosure triangle is shown
  */
 summary {
   display: list-item;
