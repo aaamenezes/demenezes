@@ -532,22 +532,11 @@ summary {
  * See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
  * and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
  */
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex='-1']:focus:not(:focus-visible) {
   outline: 0;
-}
-
-/**
- * Suppress the focus outline on elements that cannot be accessed via keyboard.
- * This prevents an unwanted focus outline from appearing around elements that
- * might still respond to pointer events.
- * Credit: https://github.com/suitcss/base
- */
-[tabindex="-1"]:focus {
-  outline: 0
 }
 
 /* ************************************************************************** */
 /**
  * Third party
  */
-
