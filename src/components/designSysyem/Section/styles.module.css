@@ -1,0 +1,18 @@
+.section {
+  width: 80%;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #AAAAAA;
+}
+
+.sectionContent {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
