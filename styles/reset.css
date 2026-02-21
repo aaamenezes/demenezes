@@ -307,7 +307,8 @@ legend {
 * 2. Show the overflow in IE.
 * 3. Remove the inheritance of text transform in Edge, Firefox, and IE.
 */
-button input[type='button'],
+button,
+input[type='button'],
 input[type='reset'],
 input[type='submit'] {
   border: none;

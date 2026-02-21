@@ -2,7 +2,14 @@
   /* ************************************************************************ */
   /* Border radius */
 
-  --border-radius: 0.2rem;
+  --border-radius: 0.4rem;
+
+  /* ************************************************************************ */
+  /* Border */
+
+  --border-width-button: 2px;
+  --border-style-button: solid;
+  --border-color-button: 
 
   /* ************************************************************************ */
   /* Box shadow */
@@ -37,46 +44,46 @@
   --color-neutral-900: #121212; /* black */
 
   /* ************************************************************************ */
-  /* Color neutral opacity sm */
+  /* Color neutral opacity light */
 
-  --color-neutral-50-opacity-sm: #ffffff4D; /* white */
-  --color-neutral-100-opacity-sm: #fafafa4D; /* white */
-  --color-neutral-200-opacity-sm: #f5f5f54D; /* gray */
-  --color-neutral-300-opacity-sm: #f0f0f04D; /* gray */
-  --color-neutral-400-opacity-sm: #dedede4D; /* gray */
-  --color-neutral-500-opacity-sm: #c2c2c24D; /* gray */
-  --color-neutral-600-opacity-sm: #9797974D; /* gray */
-  --color-neutral-700-opacity-sm: #5555554D; /* gray */
-  --color-neutral-800-opacity-sm: #3232324D; /* black */
-  --color-neutral-900-opacity-sm: #1212124D; /* black */
-
-  /* ************************************************************************ */
-  /* Color neutral opacity md */
-
-  --color-neutral-50-opacity-md: #ffffff99; /* white */
-  --color-neutral-100-opacity-md: #fafafa99; /* white */
-  --color-neutral-200-opacity-md: #f5f5f599; /* gray */
-  --color-neutral-300-opacity-md: #f0f0f099; /* gray */
-  --color-neutral-400-opacity-md: #dedede99; /* gray */
-  --color-neutral-500-opacity-md: #c2c2c299; /* gray */
-  --color-neutral-600-opacity-md: #97979799; /* gray */
-  --color-neutral-700-opacity-md: #55555599; /* gray */
-  --color-neutral-800-opacity-md: #32323299; /* black */
-  --color-neutral-900-opacity-md: #12121299; /* black */
+  --color-neutral-50-opacity-light: #ffffff4D; /* white */
+  --color-neutral-100-opacity-light: #fafafa4D; /* white */
+  --color-neutral-200-opacity-light: #f5f5f54D; /* gray */
+  --color-neutral-300-opacity-light: #f0f0f04D; /* gray */
+  --color-neutral-400-opacity-light: #dedede4D; /* gray */
+  --color-neutral-500-opacity-light: #c2c2c24D; /* gray */
+  --color-neutral-600-opacity-light: #9797974D; /* gray */
+  --color-neutral-700-opacity-light: #5555554D; /* gray */
+  --color-neutral-800-opacity-light: #3232324D; /* black */
+  --color-neutral-900-opacity-light: #1212124D; /* black */
 
   /* ************************************************************************ */
-  /* Color neutral opacity lg */
+  /* Color neutral opacity medium */
 
-  --color-neutral-50-opacity-lg: #ffffffE6; /* white */
-  --color-neutral-100-opacity-lg: #fafafaE6; /* white */
-  --color-neutral-200-opacity-lg: #f5f5f5E6; /* gray */
-  --color-neutral-300-opacity-lg: #f0f0f0E6; /* gray */
-  --color-neutral-400-opacity-lg: #dededeE6; /* gray */
-  --color-neutral-500-opacity-lg: #c2c2c2E6; /* gray */
-  --color-neutral-600-opacity-lg: #979797E6; /* gray */
-  --color-neutral-700-opacity-lg: #555555E6; /* gray */
-  --color-neutral-800-opacity-lg: #323232E6; /* black */
-  --color-neutral-900-opacity-lg: #121212E6; /* black */
+  --color-neutral-50-opacity-medium: #ffffff99; /* white */
+  --color-neutral-100-opacity-medium: #fafafa99; /* white */
+  --color-neutral-200-opacity-medium: #f5f5f599; /* gray */
+  --color-neutral-300-opacity-medium: #f0f0f099; /* gray */
+  --color-neutral-400-opacity-medium: #dedede99; /* gray */
+  --color-neutral-500-opacity-medium: #c2c2c299; /* gray */
+  --color-neutral-600-opacity-medium: #97979799; /* gray */
+  --color-neutral-700-opacity-medium: #55555599; /* gray */
+  --color-neutral-800-opacity-medium: #32323299; /* black */
+  --color-neutral-900-opacity-medium: #12121299; /* black */
+
+  /* ************************************************************************ */
+  /* Color neutral opacity heavy */
+
+  --color-neutral-50-opacity-heavy: #ffffffE6; /* white */
+  --color-neutral-100-opacity-heavy: #fafafaE6; /* white */
+  --color-neutral-200-opacity-heavy: #f5f5f5E6; /* gray */
+  --color-neutral-300-opacity-heavy: #f0f0f0E6; /* gray */
+  --color-neutral-400-opacity-heavy: #dededeE6; /* gray */
+  --color-neutral-500-opacity-heavy: #c2c2c2E6; /* gray */
+  --color-neutral-600-opacity-heavy: #979797E6; /* gray */
+  --color-neutral-700-opacity-heavy: #555555E6; /* gray */
+  --color-neutral-800-opacity-heavy: #323232E6; /* black */
+  --color-neutral-900-opacity-heavy: #121212E6; /* black */
 
   /* ************************************************************************ */
   /* Color primary */
@@ -135,7 +142,7 @@
   --color-primary-900-opacity-lg: #aa1515E6;
 
   /* ************************************************************************ */
-  /* Color transparent, obrigado Safari */
+  /* Color transparent, thanks Safari */
 
   --color-transparent: rgba(0, 0, 0, 0);
 
@@ -143,13 +150,13 @@
   /* Font family */
 
   /* 100 - ... - 900; normal e italic */
-  --font-family-heading: 'Montserrat', sans-serif;
-
+  --font-family-montserrat: 'Montserrat', sans-serif;
   /* 400 - ... - 900; normal e italic */
-  --font-family-body: 'Vollkorn', serif;
-
+  --font-family-vollkorn: 'Vollkorn', serif;
   /* 400 e 700; normal e italic */
-  --font-family-mono: 'Ubuntu Mono', sans-serif;
+  --font-family-ubuntu-mono: 'Ubuntu Mono', sans-serif;
+
+  --font-family-button: var(--font-family-montserrat);
 
   /*
   Fontes já instaladas na maioria dos sistemas operacionais
@@ -171,15 +178,15 @@
   /* Font size */
 
   /* HTML */
-  --font-size-mobile: 18px;
+  /* --font-size-mobile: 18px;
   --font-size-tablet: 19px;
-  --font-size-desktop: 20px;
+  --font-size-desktop: 20px; */
 
   /* Scale ratio */
   --font-size-scale-ratio: 1.2;
 
   /* Base font size */
-  --font-size-base: var(--font-size-mobile);
+  --font-size-base: 1rem;
 
   --font-size-xxxs: calc(var(--font-size-base) / pow(var(--font-size-scale-ratio), 2));
   --font-size-xxs:  calc(var(--font-size-base) / pow(var(--font-size-scale-ratio), 1));
@@ -190,6 +197,8 @@
   --font-size-xl:   calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 4));
   --font-size-xxl:  calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 5));
   --font-size-xxxl: calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 6));
+
+  --font-size-button: var(--font-size-xxs);
 
   /* ************************************************************************ */
   /* Font weight */
@@ -223,6 +232,8 @@
   xxxl: 600 - 900
   */
 
+  --font-weight-button: var(--font-weight-500);
+
   /* ************************************************************************ */
   /* Letter spacing */
 
@@ -252,9 +263,18 @@
   /* ************************************************************************ */
   /* Opacity */
 
-  --opacity-sm: .3; /* 4D */
-  --opacity-md: .6; /* 99 */
-  --opacity-lg: .9; /* E6 */
+  --opacity-light: .3; /* 4D */
+  --opacity-medium: .6; /* 99 */
+  --opacity-heavy: .9; /* E6 */
+
+  --opacity-button-disabled: var(--opacity-medium);
+
+  /* ************************************************************************ */
+  /* Outline */
+
+  --outline-width-button: 2px;
+  --outline-style-button: solid;
+  --outline-color-button: var(--color-primary-500);
 
   /* ************************************************************************ */
   /* Spacing */

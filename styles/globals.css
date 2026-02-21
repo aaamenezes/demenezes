@@ -16,6 +16,10 @@
  * Global
  */
 
+html {
+  font-family: var(--font-family-body);
+}
+
 /* ************************************************************************** */
 /**
  * Hidden
@@ -215,6 +219,27 @@ a {
 /**
  * Form button
  */
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  font-size: var(--font-size-button);
+  font-family: var(--font-family-button);
+  font-weight: var(--font-weight-button);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+:is(
+  button,
+  input[type='button'],
+  input[type='reset'],
+  input[type='submit']
+):disabled {
+  opacity: var(--opacity-button-disabled);
+  pointer-events: none;
+}
 
 /* ********************************** */
 /**
