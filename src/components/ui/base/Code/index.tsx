@@ -1,4 +1,4 @@
-import fontStyle from '@/../styles/font-style.module.css';
+import styles from './styles.module.css';
 import { clsx } from '@/utils/clsx';
 import type { ReactNode } from 'react';
 
@@ -11,7 +11,7 @@ export default function Code({
 }) {
   return (
     <pre className={`language-${language}`}>
-      <code className={clsx(`language-${language}`, fontStyle.postCode)}>
+      <code className={clsx(`language-${language}`, styles.postCode)}>
         {children}
       </code>
     </pre>
