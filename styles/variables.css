@@ -275,6 +275,7 @@
   --outline-width-button: 2px;
   --outline-style-button: solid;
   --outline-color-button: var(--color-primary-500);
+  --outline-offset-button: 2px;
 
   /* ************************************************************************ */
   /* Spacing */

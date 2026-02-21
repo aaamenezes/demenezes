@@ -13,6 +13,7 @@
   outline-width: var(--outline-width-button);
   outline-style: var(--outline-style-button);
   outline-color: var(--outline-color-button);
+  outline-offset: var(--outline-offset-button);
 }
 
 .variant-filled {
