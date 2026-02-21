@@ -5,7 +5,7 @@ import { Menu } from 'lucide-react';
 import Page from '@/components/designSysyem/Page';
 import Section from '@/components/designSysyem/Section';
 
-export default function Test() {
+export default function DesignSystem() {
   const { src } = settings;
 
   return (
