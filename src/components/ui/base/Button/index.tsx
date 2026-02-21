@@ -12,9 +12,6 @@ export default function Button({
   className = '',
   id = '',
 }: ButtonProps) {
-  /**
-   * tab-index
-   */
   return (
     <button
       onClick={onClick}
