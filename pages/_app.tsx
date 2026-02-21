@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import type { AppProps } from 'next/app';
 import { pageview } from '../src/external/GoogleAnalytics/gtag';
 import GoogleAnalytics from '../src/external/GoogleAnalytics/index';
 
@@ -18,11 +19,11 @@ import '../styles/variables.css';
  */
 import '../styles/globals.css';
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = url => {
+    const handleRouteChange = (url: string) => {
       pageview(url);
     };
     router.events.on('routeChangeComplete', handleRouteChange);
