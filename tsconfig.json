@@ -112,6 +112,6 @@
       } /* Enable autocomplete to CSS Modules classNames. It must to add "typescript.tsserver.pluginPaths": ["typescript-plugin-css-modules"]" in VS Code settings. */
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "exclude": ["node_modules"]
 }
