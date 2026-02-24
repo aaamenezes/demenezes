@@ -15,13 +15,13 @@ export default function DesignSystem() {
         <link rel="stylesheet" href="/style/prism/vs-code.css" />
         {/* <link rel="stylesheet" href="/style/prism/dracula.css" /> */}
       </Head>
-      <Section heading="HTML">
+      <Section heading="HTML" direction="column">
         <Code language="html">{htmlExample}</Code>
       </Section>
-      <Section heading="CSS">
+      <Section heading="CSS" direction="column">
         <Code language="css">{cssExample}</Code>
       </Section>
-      <Section heading="JavaScript">
+      <Section heading="JavaScript" direction="column">
         <Code language="javascript">{jsExample}</Code>
       </Section>
     </Page>
