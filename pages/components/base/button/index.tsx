@@ -13,7 +13,7 @@ export default function DesignSystem() {
       <Head>
         <link rel="stylesheet" href={src.font} />
       </Head>
-      <Section heading="Filled">
+      <Section heading="Filled" direction="row">
         <Button variant="filled" type="button">
           Button
         </Button>
@@ -27,7 +27,7 @@ export default function DesignSystem() {
           Disabled
         </Button>
       </Section>
-      <Section heading="Outlined">
+      <Section heading="Outlined" direction="row">
         <Button variant="outlined" type="button">
           Button
         </Button>
@@ -41,7 +41,7 @@ export default function DesignSystem() {
           Disabled
         </Button>
       </Section>
-      <Section heading="Ghost">
+      <Section heading="Ghost" direction="row">
         <Button variant="ghost" type="button">
           Button
         </Button>
@@ -55,7 +55,7 @@ export default function DesignSystem() {
           Disabled
         </Button>
       </Section>
-      <Section heading="Link">
+      <Section heading="Link" direction="row">
         <Button variant="link" type="button">
           Button
         </Button>
@@ -69,7 +69,7 @@ export default function DesignSystem() {
           Disabled
         </Button>
       </Section>
-      <Section heading="Icon">
+      <Section heading="Icon" direction="row">
         <Button>
           <Menu size={16} />
         </Button>
