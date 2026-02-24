@@ -14,5 +14,13 @@
 .sectionContent {
   display: flex;
   gap: 0.5rem;
+}
+
+.sectionContent.row {
+  flex-direction: row;
   flex-wrap: wrap;
+}
+
+.sectionContent.column {
+  flex-direction: column;
 }
