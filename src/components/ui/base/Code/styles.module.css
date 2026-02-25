@@ -1,7 +1,10 @@
 .postCode {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-sm) !important;
-  font-weight: var(--font-weight-400);
-  letter-spacing: var(--letter-spacing-xs);
-  line-height: var(--line-height-md) !important;
+  word-break: break-word;
+  white-space: break-spaces;
+
+  font-family: var(--font-family-code);
+  font-size: var(--font-size-code);
+  font-weight: var(--font-weight-code);
+  letter-spacing: var(--letter-spacing-code);
+  line-height: var(--line-height-code) !important;
 }

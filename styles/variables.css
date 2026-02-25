@@ -157,6 +157,7 @@
   --font-family-ubuntu-mono: 'Ubuntu Mono', sans-serif;
 
   --font-family-button: var(--font-family-montserrat);
+  --font-family-code: var(--font-family-ubuntu-mono);
 
   /*
   Fontes já instaladas na maioria dos sistemas operacionais
@@ -199,6 +200,7 @@
   --font-size-xxxl: calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 6));
 
   --font-size-button: var(--font-size-xxs);
+  --font-size-code: var(--font-size-xs);
 
   /* ************************************************************************ */
   /* Font weight */
@@ -233,6 +235,7 @@
   */
 
   --font-weight-button: var(--font-weight-500);
+  --font-weight-code: var(--font-weight-400);
 
   /* ************************************************************************ */
   /* Letter spacing */
@@ -247,6 +250,8 @@
   --letter-spacing-xxl: 0.125em;
   --letter-spacing-xxxl: 0.15em;
 
+  --letter-spacing-code: var(--letter-spacing-xs);
+
   /* ************************************************************************ */
   /* Line height */
 
@@ -259,6 +264,8 @@
   --line-height-xl: 1.8;
   --line-height-xxl: 2;
   --line-height-xxxl: 2.2;
+
+  --line-height-code: var(--line-height-md);
 
   /* ************************************************************************ */
   /* Opacity */
