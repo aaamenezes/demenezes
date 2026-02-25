@@ -1,14 +1,8 @@
 import styles from './styles.module.css';
 import { clsx } from '@/utils/clsx';
-import type { ReactNode } from 'react';
+import type { CodeProps } from './types';
 
-export default function Code({
-  children,
-  language,
-}: {
-  children: ReactNode;
-  language: string;
-}) {
+export default function Code({ children, language }: CodeProps) {
   return (
     <pre className={`language-${language}`}>
       <code className={clsx(`language-${language}`, styles.postCode)}>
