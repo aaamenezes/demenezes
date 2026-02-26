@@ -323,7 +323,6 @@ input[type='submit'] {
   overflow: visible;
   /* 3 */
   text-transform: none;
-  cursor: pointer;
   -webkit-tap-highlight-color: var(--color-transparent);
 }
 
