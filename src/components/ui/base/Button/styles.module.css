@@ -4,9 +4,16 @@
   border-radius: var(--border-radius);
   border-width: var(--border-width-button);
   border-style: var(--border-style-button);
+  font-size: var(--font-size-button);
+  font-family: var(--font-family-button);
+  font-weight: var(--font-weight-button);
+  letter-spacing: var(--letter-spacing-button);
+  line-height: var(--line-height-button) !important;
+  text-transform: uppercase;
   transition:
     border-color var(--transition-fast),
     background-color var(--transition-fast);
+  cursor: pointer;
 }
 
 .button:focus {
@@ -14,6 +21,11 @@
   outline-style: var(--outline-style-button);
   outline-color: var(--outline-color-button);
   outline-offset: var(--outline-offset-button);
+}
+
+.button:disabled {
+  opacity: var(--opacity-button-disabled);
+  pointer-events: none;
 }
 
 .variant-filled {

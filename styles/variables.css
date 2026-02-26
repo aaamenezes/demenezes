@@ -250,6 +250,7 @@
   --letter-spacing-xxl: 0.125em;
   --letter-spacing-xxxl: 0.15em;
 
+  --letter-spacing-button: var(--letter-spacing-sm); /* ??? */
   --letter-spacing-code: var(--letter-spacing-xs);
 
   /* ************************************************************************ */
@@ -265,6 +266,7 @@
   --line-height-xxl: 2;
   --line-height-xxxl: 2.2;
 
+  --line-height-button: var(--line-height-sm); /* ??? */
   --line-height-code: var(--line-height-md);
 
   /* ************************************************************************ */
