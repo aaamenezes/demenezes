@@ -3,8 +3,6 @@ interface ClassMap {
 }
 
 export function clsx(...classes: (string | ClassMap)[]) {
-  // TODO: remove duplicate class names
-
   const classesList = classes.flatMap(item => {
     if (typeof item === 'string') return item.trim();
 
@@ -16,12 +14,6 @@ export function clsx(...classes: (string | ClassMap)[]) {
 
   const uniqueClassesList = [...new Set<string>(classesList)];
   const classesString = uniqueClassesList.join(' ').trim();
-  return classesString.replace(/\s+/g, ' '); // remove extra spaces
+  const classesStringNoExtraSpaces = classesString.replace(/\s+/g, ' ');
+  return classesStringNoExtraSpaces;
 }
-
-// return classes
-//   .filter(className => typeof className === 'string')
-//   .map(className => className.trim())
-//   .filter(className => className.length > 0)
-//   .join(' ')
-//   .replace(/\s+/g, ' '); // remove extra spaces
