@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ComponentsScreen from '@/components/ui/template/components';
+import ComponentsScreen from '@/components/ui/template/Components';
 import settings from '@/data/settings.json';
 import { useRouter } from 'next/router';
 
