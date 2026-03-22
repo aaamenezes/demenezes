@@ -1,16 +1,11 @@
-import type ButtonStory from '../../base/Button/story';
-import type CodeStory from '../../base/Code/story';
+export type Level = 'base' | 'block' | 'container' | 'section' | 'template';
 
-type Level = 'base' | 'block' | 'container' | 'section' | 'template';
-
-export interface ComponentProps {
+export interface ComponentPathProps {
   level: Level;
-  component: string;
+  componentName: string;
 }
 
-export interface ComponentsMapProps {
-  base: {
-    button: typeof ButtonStory;
-    code: typeof CodeStory;
-  };
-}
+export type ComponentsMapProps = Record<
+  Level,
+  Record<string, React.ComponentType>
+>;

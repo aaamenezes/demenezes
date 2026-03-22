@@ -3,10 +3,13 @@ import Page from '@/components/designSysyem/Page';
 import Section from '@/components/designSysyem/Section';
 import Sidebar from '@/components/designSysyem/Sidebar';
 import { getComponentByPath } from './getComponentByPath';
-import type { ComponentProps } from './types';
+import type { ComponentPathProps } from './types';
 
-export default function ComponentsScreen({ level, component }: ComponentProps) {
-  const Component = getComponentByPath({ level, component });
+export default function ComponentsScreen({
+  level,
+  componentName: component,
+}: ComponentPathProps) {
+  const Component = getComponentByPath({ level, componentName: component });
 
   return (
     <Page>
