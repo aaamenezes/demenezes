@@ -1,3 +1,5 @@
 .page {
   display: flex;
+  gap: 0.5rem;
+  min-height: 100vh;
 }
