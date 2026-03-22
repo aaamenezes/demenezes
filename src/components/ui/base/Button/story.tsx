@@ -1,11 +1,10 @@
 import Button from '@/components/ui/base/Button';
 import { Menu } from 'lucide-react';
-import Page from '@/components/designSysyem/Page';
 import Section from '@/components/designSysyem/Section';
 
 export default function ButtonStory() {
   return (
-    <Page>
+    <>
       <Section heading="Filled" direction="row">
         <Button variant="filled" type="button">
           Button
@@ -70,6 +69,6 @@ export default function ButtonStory() {
           <Menu size={16} />
         </Button>
       </Section>
-    </Page>
+    </>
   );
 }
