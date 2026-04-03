@@ -2,12 +2,10 @@ import Head from 'next/head';
 import ComponentsScreen from '@/components/ui/template/Components';
 import settings from '@/data/settings.json';
 import { useRouter } from 'next/router';
-import type { Level } from '@/components/ui/template/Components/types';
+import { levels, type Level } from '@/components/ui/template/Components/types';
 
-function validLevel(level: string | null): level is Level {
-  return ['base', 'block', 'container', 'section', 'template'].includes(
-    level || ''
-  );
+function validLevel(level: string): level is Level {
+  return levels.some(currentLevel => currentLevel === level);
 }
 
 export default function Components() {
