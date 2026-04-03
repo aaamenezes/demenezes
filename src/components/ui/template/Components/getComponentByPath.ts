@@ -1,4 +1,4 @@
-import { componentsByLevelMap } from 'pages/components/[level]/[componentName]';
+import { componentsByLevelMap } from './data';
 import type { ComponentPathProps } from './types';
 
 export function getComponentByPath({

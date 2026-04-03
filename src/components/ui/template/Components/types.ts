@@ -1,11 +1,4 @@
 export type Level = 'base' | 'block' | 'container' | 'section' | 'template';
-export const levels: Level[] = [
-  'base',
-  'block',
-  'container',
-  'section',
-  'template',
-];
 
 export interface ComponentPathProps {
   level: Level;

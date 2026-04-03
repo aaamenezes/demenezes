@@ -1,8 +1,9 @@
-import ButtonStory from '@/components/ui/base/Button/story';
-import CodeStory from '@/components/ui/base/Code/story';
 import ComponentsScreen from '@/components/ui/template/Components';
-import type { ComponentsMapProps } from '@/components/ui/template/Components/types';
-import { levels, type Level } from '@/components/ui/template/Components/types';
+import {
+  componentsByLevelMap,
+  levels,
+} from '@/components/ui/template/Components/data';
+import { type Level } from '@/components/ui/template/Components/types';
 import settings from '@/data/settings.json';
 import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
@@ -11,37 +12,6 @@ import Head from 'next/head';
 interface ComponentsPageProps {
   level: Level;
   componentName: string;
-}
-
-export const componentsByLevelMap: ComponentsMapProps = {
-  base: {
-    button: ButtonStory,
-    code: CodeStory,
-  },
-  block: {},
-  container: {},
-  section: {},
-  template: {},
-};
-
-function isValidLevel(level: string): level is Level {
-  return levels.some(currentLevel => currentLevel === level);
-}
-
-function getComponentsMapByLevel(level: Level) {
-  return componentsByLevelMap[level];
-}
-
-function isValidPath(level: string, componentName: string): boolean {
-  if (!level) return false;
-  if (!componentName) return false;
-
-  if (!isValidLevel(level)) return false;
-
-  const componentsMapByLevel = getComponentsMapByLevel(level);
-  if (!componentsMapByLevel[componentName]) return false;
-
-  return true;
 }
 
 export default function Components({
@@ -58,6 +28,27 @@ export default function Components({
       <ComponentsScreen level={level} componentName={componentName} />
     </>
   );
+}
+
+function isValidLevel(level: string): level is Level {
+  return levels.some(currentLevel => currentLevel === level);
+}
+
+function getComponentsMapByLevel(level: Level) {
+  return componentsByLevelMap[level];
+}
+
+function isValidPath(level: string, componentName: string): boolean {
+  if (!level) return false;
+  if (!componentName) return false;
+
+  if (!isValidLevel(level)) return false;
+
+  const componentsMap = getComponentsMapByLevel(level);
+  const currentComponent = componentsMap[componentName];
+  if (!currentComponent) return false;
+
+  return true;
 }
 
 export function getStaticProps(context: GetStaticPropsContext) {
