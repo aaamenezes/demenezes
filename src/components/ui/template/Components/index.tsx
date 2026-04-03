@@ -7,17 +7,17 @@ import type { ComponentPathProps } from './types';
 
 export default function ComponentsScreen({
   level,
-  componentName: component,
+  componentName,
 }: ComponentPathProps) {
-  const Component = getComponentByPath({ level, componentName: component });
+  const Component = getComponentByPath({ level, componentName });
 
   return (
     <Page>
       <Sidebar />
       <Content>
-        <Section heading="Filled" direction="row">
+        <Section heading="Nome do componente" direction="row">
           <h1>
-            {level} / {component}
+            {level} / {componentName}
           </h1>
         </Section>
         <Component />

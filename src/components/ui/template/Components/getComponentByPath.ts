@@ -1,21 +1,9 @@
-import ButtonStory from '@/components/ui/base/Button/story';
-import CodeStory from '@/components/ui/base/Code/story';
-import type { ComponentPathProps, ComponentsMapProps } from './types';
-
-const componentsMap: ComponentsMapProps = {
-  base: {
-    button: ButtonStory,
-    code: CodeStory,
-  },
-  block: {},
-  container: {},
-  section: {},
-  template: {},
-};
+import { componentsByLevelMap } from 'pages/components/[level]/[componentName]';
+import type { ComponentPathProps } from './types';
 
 export function getComponentByPath({
   level,
   componentName: component,
 }: ComponentPathProps) {
-  return componentsMap[level]?.[component] || null;
+  return componentsByLevelMap[level]?.[component] || null;
 }
