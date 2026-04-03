@@ -4,14 +4,9 @@ import ComponentsScreen from '@/components/ui/template/Components';
 import type { ComponentsMapProps } from '@/components/ui/template/Components/types';
 import { levels, type Level } from '@/components/ui/template/Components/types';
 import settings from '@/data/settings.json';
+import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
-import type { ParsedUrlQuery } from 'querystring';
-
-interface ComponentPathParams extends ParsedUrlQuery {
-  level: string;
-  componentName: string;
-}
 
 interface ComponentsPageProps {
   level: Level;
@@ -65,40 +60,24 @@ export default function Components({
   );
 }
 
-export function getStaticProps(
-  context: GetStaticPropsContext<ComponentPathParams>
-) {
+export function getStaticProps(context: GetStaticPropsContext) {
+  const pathErrorReturnedValue = {
+    redirect: {
+      destination: '/',
+      permanent: false,
+    },
+  };
+
   const { params } = context;
 
-  if (!params) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    };
-  }
+  if (!params) return pathErrorReturnedValue;
 
-  const { level: rawLevel, componentName } = params;
+  const { level, componentName } = params;
+  const parsedLevel = parseParam(level, '');
+  const parsedComponentName = parseParam(componentName, '');
 
-  if (!isValidLevel(rawLevel)) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    };
-  }
-
-  const level = rawLevel;
-
-  if (!isValidPath(level, componentName)) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    };
+  if (!isValidPath(parsedLevel, parsedComponentName)) {
+    return pathErrorReturnedValue;
   }
 
   return {
