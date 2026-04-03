@@ -110,15 +110,21 @@ export function getStaticProps(
 }
 
 export function getStaticPaths() {
-  const paths = Object.entries(componentsByLevelMap).flatMap(
-    ([level, componentsMap]) => {
-      return Object.keys(componentsMap).map(componentName => {
-        return {
-          params: { level, componentName },
-        };
-      });
-    }
-  );
+  const entries = Object.entries(componentsByLevelMap);
+
+  const levelWithComponents = entries.map(([level, componentsMap]) => {
+    const componentNames = Object.keys(componentsMap);
+
+    return componentNames.map(componentName => ({
+      level,
+      componentName,
+    }));
+  });
+
+  const flattened = levelWithComponents.flat();
+  const paths = flattened.map(({ level, componentName }) => ({
+    params: { level, componentName },
+  }));
 
   return {
     paths,
