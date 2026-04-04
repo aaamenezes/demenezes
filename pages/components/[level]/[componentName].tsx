@@ -5,6 +5,7 @@ import {
 } from '@/components/ui/template/Components/data';
 import { type Level } from '@/components/ui/template/Components/types';
 import settings from '@/data/settings.json';
+import { getDesignSystemValidPaths } from '@/utils/getDesignSystemValidPaths';
 import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
@@ -80,18 +81,9 @@ export function getStaticProps(context: GetStaticPropsContext) {
 }
 
 export function getStaticPaths() {
-  const entries = Object.entries(componentsByLevelMap);
+  const designSystemValidPaths = getDesignSystemValidPaths();
 
-  const levelWithComponents = entries.map(([level, componentsMap]) => {
-    const componentNames = Object.keys(componentsMap);
-
-    return componentNames.map(componentName => ({
-      level,
-      componentName,
-    }));
-  });
-
-  const flattened = levelWithComponents.flat();
+  const flattened = designSystemValidPaths.flat();
   const paths = flattened.map(({ level, componentName }) => ({
     params: { level, componentName },
   }));
