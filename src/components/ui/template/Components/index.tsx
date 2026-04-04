@@ -11,7 +11,7 @@ export default function ComponentsScreen({
   componentName,
 }: ComponentPathProps) {
   const Component = getComponentByPath({ level, componentName });
-  const capitalizedComponentName = capitalize(componentName);
+  const capitalizedComponentName = capitalize.firstLetter(componentName);
   const capitalizedComponentNameWithBrackets = `<${capitalizedComponentName}>`;
 
   return (
