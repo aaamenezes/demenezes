@@ -1,6 +1,7 @@
 import ButtonStory from '../../base/Button/story';
 import CodeStory from '../../base/Code/story';
 import HiddenA11YStory from '../../base/HiddenA11Y/story';
+import IframeStory from '../../base/Iframe/story';
 import type { Level, ComponentsMapProps } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -8,6 +9,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     button: ButtonStory,
     code: CodeStory,
     hiddenA11Y: HiddenA11YStory,
+    iframe: IframeStory,
   },
   block: {},
   container: {},
