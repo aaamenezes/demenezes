@@ -5,6 +5,10 @@
   background-color: #FFFFFF;
 }
 
+.section.isFull {
+  width: 100%;
+}
+
 .sectionTitle {
   text-align: left;
   margin-bottom: 1rem;

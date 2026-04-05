@@ -2,6 +2,11 @@
   padding: 1rem;
 }
 
+.link {
+  display: block;
+  padding: 0.5rem 0;
+}
+
 .isLinkActive {
   font-weight: var(--font-weight-700);
   color: var(--color-primary-500);

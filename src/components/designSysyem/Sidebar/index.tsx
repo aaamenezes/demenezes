@@ -18,7 +18,9 @@ export default function Sidebar() {
         <li key={`${level}-${componentName}`}>
           <Link
             href={href}
-            className={clsx({ [styles.isLinkActive]: isComponentActive })}
+            className={clsx(styles.link, {
+              [styles.isLinkActive]: isComponentActive,
+            })}
           >
             {componentName}
           </Link>
@@ -29,7 +31,7 @@ export default function Sidebar() {
 
   return (
     <aside className={styles.sidebar}>
-      <Section heading="Sidebar" direction="column">
+      <Section heading="Sidebar" direction="column" isFull>
         <ul>{sideBarContent}</ul>
       </Section>
     </aside>
