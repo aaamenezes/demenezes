@@ -1,19 +1,23 @@
+import { clsx } from '@/utils/clsx';
 import { useState } from 'react';
+import styles from './styles.module.css';
 
 export default function Input({
-  type = 'text',
   name,
+  placeholder,
+  type = 'text',
   className,
   id,
-  placeholder,
   required = false,
+  disabled = false,
 }: {
+  name: string;
+  placeholder: string;
   type?: string;
-  name?: string;
   className?: string;
-  id: string;
-  placeholder?: string;
+  id?: string;
   required?: boolean;
+  disabled?: boolean;
 }) {
   const [value, setValue] = useState('');
 
@@ -23,10 +27,11 @@ export default function Input({
       onChange={event => setValue(event.target.value)}
       type={type}
       name={name}
-      className={className}
+      className={clsx(styles.input, className || '')}
       id={id}
       placeholder={placeholder}
       required={required}
+      disabled={disabled}
     />
   );
 }

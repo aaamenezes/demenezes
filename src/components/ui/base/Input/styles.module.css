@@ -1,0 +1,22 @@
+.input {
+  max-width: 300px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  border-width: var(--border-width-input);
+  border-style: var(--border-style-input);
+  border-color: var(--color-primary-100);
+}
+
+.input[disabled] {
+  border-color: var(--color-neutral-400);
+  background-color: var(--color-neutral-400);
+}
+
+.input:hover:not([disabled]) {
+  border-color: var(--color-primary-300);
+}
+
+.input:focus {
+  border-color: var(--color-primary-600);
+  outline: none;
+}

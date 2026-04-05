@@ -9,7 +9,9 @@
 
   --border-width-button: 2px;
   --border-style-button: solid;
-  --border-color-button: 
+
+  --border-width-input: 2px;
+  --border-style-input: solid;
 
   /* ************************************************************************ */
   /* Box shadow */

@@ -3,7 +3,8 @@ import CodeStory from '../../base/Code/story';
 import HiddenA11YStory from '../../base/HiddenA11Y/story';
 import IframeStory from '../../base/Iframe/story';
 import ImageStory from '../../base/Image/story';
-import type { Level, ComponentsMapProps } from './types';
+import InputStory from '../../base/Input/story';
+import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
   base: {
@@ -12,6 +13,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     hiddenA11Y: HiddenA11YStory,
     iframe: IframeStory,
     image: ImageStory,
+    input: InputStory,
   },
   block: {},
   container: {},
