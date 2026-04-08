@@ -4,6 +4,7 @@ import HiddenA11YStory from '../../base/HiddenA11Y/story';
 import IframeStory from '../../base/Iframe/story';
 import ImageStory from '../../base/Image/story';
 import InputStory from '../../base/Input/story';
+import LinkStory from '../../base/Link/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -14,6 +15,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     iframe: IframeStory,
     image: ImageStory,
     input: InputStory,
+    link: LinkStory,
   },
   block: {},
   container: {},
