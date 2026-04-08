@@ -8,29 +8,30 @@ export default function Link({
   href,
   children,
   isExternal = false,
-  inline = false,
   className = '',
 }: {
   children: ReactNode;
   href: string;
   isExternal?: boolean;
-  inline?: boolean;
   className?: string;
 }) {
+  const isChildrenText = typeof children === 'string';
+  const showExternalIcon = isExternal && isChildrenText;
+
+  const linkClassNames = clsx(style.link, className, {
+    [style.block]: !isChildrenText,
+  });
+
   return (
     <NextLink href={href} passHref legacyBehavior>
       <a
-        className={clsx(style.link, className, { [style.inline]: inline })}
+        className={linkClassNames}
         target={isExternal ? '_blank' : '_self'}
         rel="noreferrer"
       >
-        {isExternal && inline ? (
-          <>
-            <span className={inline ? style.text : ''}>{children}</span>
-            <ExternalLink />
-          </>
-        ) : (
-          children
+        {children}{' '}
+        {showExternalIcon && (
+          <ExternalLink size={16} style={{ verticalAlign: 'bottom' }} />
         )}
       </a>
     </NextLink>

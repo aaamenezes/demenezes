@@ -1,14 +1,10 @@
-.text {
-  text-decoration: underline;
-}
-
 .link {
-  display: block;
-  text-decoration: none;
+  display: inline;
+  text-decoration: underline;
+  color: var(--color-primary-700);
   cursor: pointer;
 }
 
-.link.inline {
-  display: inline;
-  color: var(--color-primary-700);
+.block {
+  display: block;
 }
