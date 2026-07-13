@@ -35,18 +35,13 @@ function isValidLevel(level: string): level is Level {
   return levels.some(currentLevel => currentLevel === level);
 }
 
-function getComponentsMapByLevel(level: Level) {
-  return componentsByLevelMap[level];
-}
-
 function isValidPath(level: string, componentName: string): boolean {
   if (!level) return false;
   if (!componentName) return false;
 
   if (!isValidLevel(level)) return false;
 
-  const componentsMap = getComponentsMapByLevel(level);
-  const currentComponent = componentsMap[componentName];
+  const currentComponent = componentsByLevelMap[level][componentName];
   if (!currentComponent) return false;
 
   return true;
@@ -74,8 +69,8 @@ export function getStaticProps(context: GetStaticPropsContext) {
 
   return {
     props: {
-      level,
-      componentName,
+      level: parsedLevel,
+      componentName: parsedComponentName,
     },
   };
 }
