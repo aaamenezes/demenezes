@@ -1,12 +1,7 @@
 .section {
-  width: 80%;
   padding: 1rem;
   border-radius: 8px;
   background-color: #FFFFFF;
-}
-
-.section.isFull {
-  width: 100%;
 }
 
 .sectionTitle {

@@ -3,21 +3,17 @@ import style from './styles.module.css';
 
 export default function Section({
   heading,
-  direction = 'row',
   children,
-  isFull = false,
+  direction = 'column',
+  width = 100,
 }: {
   heading: string;
-  direction: 'row' | 'column';
   children: React.ReactNode;
-  isFull?: boolean;
+  direction?: 'row' | 'column';
+  width?: number;
 }) {
   return (
-    <section
-      className={clsx(style.section, {
-        [style.isFull]: isFull,
-      })}
-    >
+    <section className={style.section} style={{ width: `${width}%` }}>
       <h2 className={style.sectionTitle}>{heading}</h2>
       <div className={clsx(style.sectionContent, style[direction])}>
         {children}
