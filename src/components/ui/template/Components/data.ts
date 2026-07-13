@@ -5,6 +5,7 @@ import IframeStory from '../../base/Iframe/story';
 import ImageStory from '../../base/Image/story';
 import InputStory from '../../base/Input/story';
 import LinkStory from '../../base/Link/story';
+import VideoStory from '../../base/Video/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -16,6 +17,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     image: ImageStory,
     input: InputStory,
     link: LinkStory,
+    video: VideoStory,
   },
   block: {},
   container: {},
