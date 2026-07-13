@@ -31,7 +31,7 @@ export default function Sidebar() {
 
   return (
     <aside className={styles.sidebar}>
-      <Section heading="Sidebar" direction="column" isFull>
+      <Section heading="Sidebar" direction="column">
         <ul>{sideBarContent}</ul>
       </Section>
     </aside>
