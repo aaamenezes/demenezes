@@ -1,7 +1,6 @@
 import NextImage from 'next/image';
-import fontStyle from '../../../../../styles/font-style.module.css';
-import { clsx } from '../../../../utils/clsx';
 import style from './styles.module.css';
+import { clsx } from '../../../../utils/clsx';
 
 export default function Image({
   src,
@@ -30,11 +29,7 @@ export default function Image({
         }}
       />
       {title && (
-        <figcaption
-          className={clsx(style.figcaption, fontStyle.postFigcaption)}
-        >
-          {title}
-        </figcaption>
+        <figcaption className={clsx(style.figcaption)}>{title}</figcaption>
       )}
     </figure>
   );
