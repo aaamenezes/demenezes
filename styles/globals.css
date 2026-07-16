@@ -62,38 +62,6 @@ h6 {
   text-align: left;
 }
 
-blockquote {
-  border-left: 10px solid var(--color-red-100);
-  padding: 1rem 1rem 1rem 1.5rem;
-}
-
-blockquote p {
-  font-style: italic;
-}
-
-blockquote footer::before {
-  content: '—';
-  margin-right: 1rem;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-  content: '';
-  content: none;
-}
-
-blockquote,
-q {
-  quotes: '" ' ' "';
-}
-
 /* ************************************************************************** */
 /**
  * Table

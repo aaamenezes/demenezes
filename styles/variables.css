@@ -13,6 +13,9 @@
   --border-width-input: 2px;
   --border-style-input: solid;
 
+  --border-width-block-quote: var(--spacing-sm);
+  --border-style-block-quote: solid;
+
   /* ************************************************************************ */
   /* Box shadow */
 

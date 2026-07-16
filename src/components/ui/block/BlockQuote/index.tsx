@@ -1,10 +1,10 @@
 import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
-import fontStyle from '@/../styles/font-style.module.css';
+import style from './styles.module.css';
 import type { ReactNode } from 'react';
 
 export default function BlockQuote({
-  source,
   children,
+  source,
   author,
   isDatoCMS,
 }: {
@@ -14,11 +14,9 @@ export default function BlockQuote({
   isDatoCMS?: boolean;
 }) {
   return (
-    <blockquote cite={source || ''}>
+    <blockquote className={style.blockQuote} cite={source || ''}>
       {isDatoCMS ? <StructuredTextDatoCMS data={children} /> : children}
-      {author && (
-        <footer className={fontStyle.postQuoteAuthor}>{author}</footer>
-      )}
+      {author && <footer className={style.postQuoteAuthor}>{author}</footer>}
     </blockquote>
   );
 }
