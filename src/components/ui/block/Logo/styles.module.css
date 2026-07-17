@@ -1,7 +1,12 @@
 .logoLink {
   position: relative;
-  display: block;
+  text-decoration: none;
   transition: var(--transition-fast);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-600);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-xs);
 }
 
 .logoLink:hover::after,
@@ -17,10 +22,6 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-neutral-100);
+  background-color: currentColor;
   transition: var(--transition-fast);
-}
-
-.logoText {
-  display: block;
 }
