@@ -1,29 +1,48 @@
 import Link from '@/components/ui/base/Link';
+import { componentsByLevelMap } from '@/components/ui/template/Components/data';
 import { clsx } from '@/utils/clsx';
-import { getDesignSystemValidPaths } from '@/utils/getDesignSystemValidPaths';
+import { entriesOf, keysOf } from '@/utils/object';
 import { useRouter } from 'next/router';
 import Section from '../Section';
 import styles from './styles.module.css';
 
 export default function Sidebar() {
-  const designSystemValidPaths = getDesignSystemValidPaths();
-  const router = useRouter();
+  const entriesOfComponentsByLevelMap = entriesOf(componentsByLevelMap).map(
+    ([level, componentsMap]) => {
+      return [level, keysOf(componentsMap)] as const;
+    }
+  );
 
-  const sideBarContent = designSystemValidPaths.map(
-    ({ level, componentName }) => {
-      const href = `/components/${level}/${componentName}/`;
-      const isComponentActive = router.asPath === href;
+  const router = useRouter();
+  const { asPath } = router;
+
+  const sideBarContent = entriesOfComponentsByLevelMap.map(
+    ([level, componentNames]) => {
+      const levelString = level.toString();
 
       return (
-        <li key={`${level}-${componentName}`}>
-          <Link
-            href={href}
-            className={clsx(styles.link, {
-              [styles.isLinkActive]: isComponentActive,
-            })}
-          >
-            {componentName}
-          </Link>
+        <li key={levelString}>
+          <Section heading={levelString}>
+            <ul>
+              {componentNames.map(componentName => {
+                const href = `/components/${levelString}/${componentName}/`;
+                const isComponentActive = asPath === href;
+
+                return (
+                  <li key={componentName}>
+                    <Link
+                      href={href}
+                      className={clsx(styles.link, {
+                        [styles.isLinkActive]: isComponentActive,
+                      })}
+                    >
+                      {componentName}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </Section>
         </li>
       );
     }

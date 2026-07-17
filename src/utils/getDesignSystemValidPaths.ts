@@ -1,10 +1,11 @@
 import { componentsByLevelMap } from '@/components/ui/template/Components/data';
+import { entriesOf, keysOf } from './object';
 
 export function getDesignSystemValidPaths() {
-  const entries = Object.entries(componentsByLevelMap);
+  const entries = entriesOf(componentsByLevelMap);
 
   const levelWithComponents = entries.map(([level, componentsMap]) => {
-    const componentNames = Object.keys(componentsMap);
+    const componentNames = keysOf(componentsMap);
 
     return componentNames.map(componentName => ({
       level,
