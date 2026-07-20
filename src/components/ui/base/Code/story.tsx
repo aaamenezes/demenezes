@@ -5,13 +5,13 @@ import { cssExample, htmlExample, jsExample } from './examples';
 export default function CodeStory() {
   return (
     <>
-      <Section heading="HTML" direction="column">
+      <Section heading="HTML">
         <Code language="html">{htmlExample}</Code>
       </Section>
-      <Section heading="CSS" direction="column">
+      <Section heading="CSS">
         <Code language="css">{cssExample}</Code>
       </Section>
-      <Section heading="JavaScript" direction="column">
+      <Section heading="JavaScript">
         <Code language="javascript">{jsExample}</Code>
       </Section>
     </>

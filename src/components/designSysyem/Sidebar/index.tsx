@@ -50,7 +50,7 @@ export default function Sidebar() {
 
   return (
     <aside className={styles.sidebar}>
-      <Section heading="Sidebar" direction="column">
+      <Section heading="Sidebar">
         <ul>{sideBarContent}</ul>
       </Section>
     </aside>

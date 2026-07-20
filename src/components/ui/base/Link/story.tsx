@@ -5,15 +5,15 @@ import Link from '.';
 export default function LinkStory() {
   return (
     <>
-      <Section heading="Link interno" direction="column">
+      <Section heading="Link interno">
         <Link href="#">Link interno</Link>
       </Section>
-      <Section heading="Link externo" direction="column">
+      <Section heading="Link externo">
         <Link href="#" isExternal>
           Link externo
         </Link>
       </Section>
-      <Section heading="Imagem link interno" direction="column">
+      <Section heading="Imagem link interno">
         <Link href="#">
           <Image
             src="/favicon/ms-icon-310x310.png"
@@ -23,7 +23,7 @@ export default function LinkStory() {
           />
         </Link>
       </Section>
-      <Section heading="Imagem link externo" direction="column">
+      <Section heading="Imagem link externo">
         <Link href="#" isExternal>
           <Image
             src="/favicon/ms-icon-310x310.png"

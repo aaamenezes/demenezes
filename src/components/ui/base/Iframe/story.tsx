@@ -4,7 +4,7 @@ import Iframe from '.';
 export default function IframeStory() {
   return (
     <>
-      <Section heading="YouTube" direction="column">
+      <Section heading="YouTube">
         <Iframe title="YouTube video player" videoID="dQw4w9WgXcQ" />
       </Section>
     </>

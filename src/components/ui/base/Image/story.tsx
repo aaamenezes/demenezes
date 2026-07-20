@@ -4,7 +4,7 @@ import Image from '.';
 export default function ImageStory() {
   return (
     <>
-      <Section heading="Imagem" direction="column">
+      <Section heading="Imagem">
         <Image
           src="/favicon/ms-icon-310x310.png"
           width={150}

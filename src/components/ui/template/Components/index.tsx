@@ -18,10 +18,7 @@ export default function ComponentsScreen({
     <Page>
       <Sidebar />
       <Content>
-        <Section
-          heading={`${level} / ${capitalizedComponentNameWithBrackets}`}
-          direction="row"
-        >
+        <Section heading={`${level} / ${capitalizedComponentNameWithBrackets}`}>
           <></>
         </Section>
         <Component />

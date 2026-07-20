@@ -4,7 +4,7 @@ import Section from '@/components/designSysyem/Section';
 export default function BlockQuoteStory() {
   return (
     <>
-      <Section heading="Só citação" direction="row">
+      <Section heading="Só citação">
         <BlockQuote>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
@@ -13,7 +13,7 @@ export default function BlockQuoteStory() {
           </p>
         </BlockQuote>
       </Section>
-      <Section heading="Com autor" direction="row">
+      <Section heading="Com autor">
         <BlockQuote author="André Menezes">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non

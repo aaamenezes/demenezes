@@ -4,7 +4,7 @@ import style from './styles.module.css';
 export default function Section({
   heading,
   children,
-  direction = 'column',
+  direction,
   width = 100,
 }: {
   heading: string;
@@ -15,7 +15,13 @@ export default function Section({
   return (
     <section className={style.section} style={{ width: `${width}%` }}>
       <h2 className={style.sectionTitle}>{heading}</h2>
-      <div className={clsx(style.sectionContent, style[direction])}>
+      <div
+        className={clsx(style.sectionContent, {
+          [style.flex]: Boolean(direction),
+          [style.row]: direction === 'row',
+          [style.column]: direction === 'column',
+        })}
+      >
         {children}
       </div>
     </section>

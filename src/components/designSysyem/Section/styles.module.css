@@ -10,7 +10,7 @@
   color: #AAAAAA;
 }
 
-.sectionContent {
+.sectionContent.flex {
   display: flex;
   gap: 0.5rem;
 }
