@@ -8,6 +8,7 @@ import LinkStory from '../../base/Link/story';
 import VideoStory from '../../base/Video/story';
 import BlockQuoteStory from '../../block/BlockQuote/story';
 import LogoStory from '../../block/Logo/story';
+import PostCardStory from '../../block/PostCard/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -24,6 +25,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
   block: {
     blockQuote: BlockQuoteStory,
     logo: LogoStory,
+    postCard: PostCardStory,
   },
   container: {},
   section: {},
