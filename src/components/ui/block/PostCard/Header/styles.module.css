@@ -1,6 +1,6 @@
 .postCardTitle {
   display: inline-block;
-  margin: 0;
+  padding: var(--spacing-xs) var(--spacing-sm);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-700);
@@ -31,13 +31,12 @@
   color: var(--color-neutral-100);
 }
  
-.postCardTitle.isHero {
-}
+.postCardTitle.isHero {}
 
 .postCardTitle.isCompact {}
 
 .postCardTitleLink {
-  padding: 0.5rem;
+  text-decoration: none;
   transition: var(--transition-fast);
 }
 

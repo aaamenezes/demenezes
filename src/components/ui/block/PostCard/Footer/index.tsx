@@ -3,12 +3,12 @@ import { convertDate } from '@/utils/convertDate';
 import style from './styles.module.css';
 
 export default function PostCardFooter({
-  date,
-  update,
+  publicationDate,
+  updateDate,
   isCompact,
 }: {
-  date: string;
-  update: string;
+  publicationDate: string;
+  updateDate: string;
   isCompact: boolean;
 }) {
   return (
@@ -18,13 +18,13 @@ export default function PostCardFooter({
       })}
     >
       <p className={style.postCardDate}>
-        {update && date
-          ? `${update > date ? 'Publicado em ' : ''}${convertDate(date)}`
+        {updateDate && publicationDate
+          ? `${updateDate > publicationDate ? 'Publicado em ' : ''}${convertDate(publicationDate)}`
           : 'Não publicado'}
       </p>
-      {update > date && (
-        <p className={style.postCardDate}>
-          {`Atualizado em ${convertDate(update)}`}
+      {updateDate > publicationDate && (
+        <p className={clsx(style.postCardDate, style.postCardUpdateDate)}>
+          {`Atualizado em ${convertDate(updateDate)}`}
         </p>
       )}
     </footer>

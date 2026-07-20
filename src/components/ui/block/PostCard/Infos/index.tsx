@@ -3,7 +3,7 @@ import PostCardFooter from '@/components/ui/block/PostCard/Footer';
 import PostCardHeader from '@/components/ui/block/PostCard/Header';
 import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
-import type { CSSProperties} from 'react';
+import type { CSSProperties } from 'react';
 import { useCallback } from 'react';
 import style from './styles.module.css';
 
@@ -42,8 +42,8 @@ export default function PostCardInfos({
         isCompact={isCompact}
       />
       <PostCardFooter
-        date={_firstPublishedAt}
-        update={_updatedAt}
+        publicationDate={_firstPublishedAt}
+        updateDate={_updatedAt}
         isCompact={isCompact}
       />
     </div>

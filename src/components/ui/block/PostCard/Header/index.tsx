@@ -18,15 +18,12 @@ export default function PostCardHeader({
     <header>
       {isHero && <p className={style.postCategoryText}>{category}</p>}
       <h3
-        className={clsx({
+        className={clsx(style.postCardTitle, {
           [style.isHero]: isHero,
           [style.isCompact]: isCompact,
         })}
       >
-        <Link
-          className={clsx(style.postCardTitleLink, style.postCardTitle)}
-          href={`/posts/${slug}`}
-        >
+        <Link className={style.postCardTitleLink} href={`/posts/${slug}`}>
           {title}
         </Link>
       </h3>

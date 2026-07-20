@@ -9,7 +9,6 @@
 }
 
 .postCardDate {
-  margin: 0 !important;
   text-align: right;
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xxs);
@@ -17,4 +16,8 @@
   letter-spacing: var(--letter-spacing-md);
   line-height: var(--line-height-xs);
   color: var(--color-neutral-600);
+}
+
+.postCardUpdateDate {
+  margin-top: var(--spacing-sm);
 }
