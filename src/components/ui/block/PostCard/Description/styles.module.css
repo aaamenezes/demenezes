@@ -1,8 +1,13 @@
-.postCardDescriptionWrapper {
+.postCardDescription {
   padding: 0.5rem;
   margin: 1.1rem 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
 }
 
-.postCardDescriptionWrapper.isCompact {
+.postCardDescription.isCompact {
   display: none;
 }

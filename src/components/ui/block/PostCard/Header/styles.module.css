@@ -1,6 +1,11 @@
 .postCardTitle {
   display: inline-block;
   margin: 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-sm);
   background-image: linear-gradient(120deg,
       var(--color-primary-900) 0%,
       var(--color-primary-500) 100%);
@@ -34,4 +39,12 @@
 .postCardTitleLink {
   padding: 0.5rem;
   transition: var(--transition-fast);
+}
+
+.postCategoryText {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
 }

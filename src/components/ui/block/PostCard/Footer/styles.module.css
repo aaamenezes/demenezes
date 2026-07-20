@@ -11,5 +11,10 @@
 .postCardDate {
   margin: 0 !important;
   text-align: right;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
   color: var(--color-neutral-600);
 }

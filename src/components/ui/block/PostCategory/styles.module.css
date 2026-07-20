@@ -13,3 +13,11 @@
     bottom: 30%;
   }
 }
+
+.postCategoryText {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-md);
+  line-height: var(--line-height-xs);
+}
