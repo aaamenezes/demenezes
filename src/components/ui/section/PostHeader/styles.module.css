@@ -15,10 +15,20 @@
 }
 
 .postTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-sm);
 }
 
 .postDescription {
   text-align: center;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-400);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
 }
 
 .postHeaderFooter {
@@ -35,6 +45,11 @@
   display: block;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xxl);
+  line-height: var(--line-height-xs);
 }
 
 @media screen and (min-width: 768px) {
@@ -60,6 +75,11 @@
 .keywordItem {
   padding: 0.3rem 0.5rem;
   margin-bottom: 0.5rem;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-lg);
+  line-height: var(--line-height-xs);
   color: var(--color-neutral-100);
   background-color: var(--color-primary-900);
 }

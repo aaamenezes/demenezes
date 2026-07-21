@@ -42,38 +42,6 @@
 /* ************************************************************************** */
 /* Post content */
 
-.postTitle {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xxxl);
-  font-weight: var(--font-weight-700);
-  letter-spacing: var(--letter-spacing-sm);
-  line-height: var(--line-height-sm);
-}
-
-.postDescription {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-400);
-  letter-spacing: var(--letter-spacing-xs);
-  line-height: var(--line-height-md);
-}
-
-.postDate {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-500);
-  letter-spacing: var(--letter-spacing-xxl);
-  line-height: var(--line-height-xs);
-}
-
-.postKeyword {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xxxs);
-  font-weight: var(--font-weight-500);
-  letter-spacing: var(--letter-spacing-lg);
-  line-height: var(--line-height-xs);
-}
-
 .postH2 {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xxl);

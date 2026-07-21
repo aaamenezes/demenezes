@@ -1,8 +1,6 @@
 import Wrapper from '@/components/ui/container/Wrapper';
-import { clsx } from '@/utils/clsx';
 import { convertDate } from '@/utils/convertDate';
 import type { CSSProperties } from 'react';
-import fontStyle from '../../../styles/fontStyles.module.css';
 import PostCategory from '../../block/PostCategory';
 import style from './styles.module.css';
 
@@ -26,10 +24,7 @@ export default function PostHeader({
   const keywordsList = keywords.split(',').map(keyword => {
     const clearKeyword = keyword.trim();
     return (
-      <li
-        className={clsx(style.keywordItem, fontStyle.postKeyword)}
-        key={clearKeyword}
-      >
+      <li className={style.keywordItem} key={clearKeyword}>
         {clearKeyword}
       </li>
     );
@@ -42,18 +37,12 @@ export default function PostHeader({
     >
       <Wrapper width="full" isFluid>
         <Wrapper className={style.postHeaderInner} width="xxxl" spacing={0}>
-          <h1 className={clsx(style.postTitle, fontStyle.postTitle)}>
-            {title}
-          </h1>
+          <h1 className={style.postTitle}>{title}</h1>
           <p>
-            <strong
-              className={clsx(style.postDescription, fontStyle.postDescription)}
-            >
-              {description}
-            </strong>
+            <strong className={style.postDescription}>{description}</strong>
           </p>
           <footer className={style.postHeaderFooter}>
-            <span className={clsx(style.postDate, fontStyle.postDate)}>
+            <span className={style.postDate}>
               {update && date
                 ? `Publicado em ${convertDate(date)}`
                 : 'Não publicado'}
@@ -61,7 +50,7 @@ export default function PostHeader({
             {update > date && (
               <>
                 <span aria-hidden="true"> - </span>
-                <span className={clsx(style.postDate, fontStyle.postDate)}>
+                <span className={style.postDate}>
                   {`Atualizado em ${convertDate(update)}`}
                 </span>
               </>
