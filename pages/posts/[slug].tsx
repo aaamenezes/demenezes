@@ -10,6 +10,7 @@ import { getContent } from '@/external/datoCMS';
 import type { PostProps, PostSummaryProps } from '@/types';
 import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
+import { useRef } from 'react';
 
 export default function Post({
   post,
@@ -28,11 +29,13 @@ export default function Post({
     thumbnail,
   } = post.data.post;
 
+  const postContainerRef = useRef<HTMLElement>(null);
+
   return (
     <>
       <Head componentProps={{ post }} />
       <PageHeader />
-      <main style={{ marginBottom: '10%' }}>
+      <main style={{ marginBottom: '10%' }} ref={postContainerRef}>
         <PostHeader
           title={title}
           description={metaDescription}
@@ -46,7 +49,7 @@ export default function Post({
       </main>
       <PostComments />
       <RelatedPosts postCategory={category} relatedPosts={relatedPosts} />
-      <ProgressBar />
+      <ProgressBar containerReference={postContainerRef} />
       <PageFooter />
     </>
   );

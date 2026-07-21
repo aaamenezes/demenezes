@@ -9,6 +9,7 @@ import VideoStory from '../../base/Video/story';
 import BlockQuoteStory from '../../block/BlockQuote/story';
 import LogoStory from '../../block/Logo/story';
 import PostCardStory from '../../block/PostCard/story';
+import ProgressBarStory from '../../block/ProgressBar/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -26,6 +27,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     blockQuote: BlockQuoteStory,
     logo: LogoStory,
     postCard: PostCardStory,
+    progressBar: ProgressBarStory,
   },
   container: {},
   section: {},
