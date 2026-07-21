@@ -23,6 +23,7 @@ export default function Table({
   return (
     <div className={style.tableWrapper}>
       <table
+        className={style.table}
         summary={tableSummary}
         dangerouslySetInnerHTML={{ __html: formatedTable }}
       />

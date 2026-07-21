@@ -1,3 +1,56 @@
 .tableWrapper {
   overflow: auto;
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table caption {
+  caption-side: bottom;
+  /* visually hidden */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.table td,
+.table th {
+  padding: var(--spacing-sm);
+  text-align: center;
+}
+
+.table thead tr {
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-700);
+}
+
+.table thead tr:hover {
+  color: var(--color-neutral-100);
+  background-color: var(--color-primary-800);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--color-neutral-200);
+}
+
+.table tbody tr:hover {
+  color: var(--color-neutral-50);
+  background-color: var(--color-primary-300);
+}
+
+.table tfoot tr {
+  background-color: var(--color-neutral-400);
+}
+
+.table tfoot tr:hover {
+  color: var(--color-neutral-50);
+  background-color: var(--color-primary-400);
+}
