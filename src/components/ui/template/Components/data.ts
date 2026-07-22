@@ -11,6 +11,7 @@ import LogoStory from '../../block/Logo/story';
 import PostCardStory from '../../block/PostCard/story';
 import ProgressBarStory from '../../block/ProgressBar/story';
 import TableStory from '../../block/Table/story';
+import NavigationStory from '../../container/Navigation/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -31,7 +32,9 @@ export const componentsByLevelMap: ComponentsMapProps = {
     progressBar: ProgressBarStory,
     table: TableStory,
   },
-  container: {},
+  container: {
+    navigation: NavigationStory,
+  },
   section: {},
   template: {},
 };

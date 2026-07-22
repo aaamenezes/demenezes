@@ -12,7 +12,7 @@
 
 .overlay {
   position: fixed;
-  z-index: var(--z-index-under);
+  z-index: var(--z-index-fixed);
   top: 0;
   left: 0;
   width: 100vw;
@@ -31,6 +31,12 @@
 .navLink {
   display: block;
   padding: 1.1rem 5%;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-xs);
+  text-decoration: none;
   color: var(--color-neutral-800);
   background-color: var(--color-neutral-100);
 }
@@ -125,7 +131,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .navItem:hover::after,
   .navItem:focus-within::after {
     width: 100%;

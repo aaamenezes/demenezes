@@ -1,4 +1,3 @@
-import fontStyle from '@/../styles/font-style.module.css';
 import Button from '@/components/ui/base/Button';
 import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';
@@ -31,7 +30,7 @@ export default function Navigation({
         key={menu.title}
       >
         <Link
-          className={clsx(style.navLink, fontStyle.menuLink, {
+          className={clsx(style.navLink, {
             [style.isCurrentPage]: isCurrentPage,
           })}
           href={menu.url}
@@ -52,7 +51,11 @@ export default function Navigation({
         className={clsx(style.navWrapper, { [style.isOpenMenu]: isOpenMenu })}
       >
         <ul className={style.navList}>{navigationElements}</ul>
-        <Button onClick={toggleMenu} aria-label="Fechar menu de navegação">
+        <Button
+          className={style.closeMenuMobileButton}
+          onClick={toggleMenu}
+          aria-label="Fechar menu de navegação"
+        >
           <X />
         </Button>
       </nav>
