@@ -6,14 +6,19 @@ export default function Section({
   children,
   direction,
   width = 100,
+  backgroundColor,
 }: {
   heading: string;
   children: React.ReactNode;
   direction?: 'row' | 'column';
   width?: number;
+  backgroundColor?: string;
 }) {
   return (
-    <section className={style.section} style={{ width: `${width}%` }}>
+    <section
+      className={style.section}
+      style={{ width: `${width}%`, backgroundColor }}
+    >
       <h2 className={style.sectionTitle}>{heading}</h2>
       <div
         className={clsx(style.sectionContent, {
