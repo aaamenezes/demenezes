@@ -8,12 +8,12 @@
   }
 }
 
-.search {
+.searchWrapper {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  .search {
+  .searchWrapper {
     display: block;
   }
 }

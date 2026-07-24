@@ -13,7 +13,7 @@ export default function SearchWrapper() {
   }, []);
 
   return (
-    <div className={style.search}>
+    <div className={style.searchWrapper}>
       <Button aria-label="Abrir busca do blog" onClick={toggleSearch}>
         <Search />
       </Button>
