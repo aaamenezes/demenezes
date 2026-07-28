@@ -5,7 +5,7 @@ import style from './styles.module.css';
 
 const breakpoints = {
   xs: 0,
-  sm: 425, // No Bootstrap era 576 mas achei mto próximo do MD
+  sm: 425,
   md: 768,
   lg: 992,
   xl: 1200,
@@ -19,24 +19,20 @@ type Width = Breakpoint | 'full';
 export default function Wrapper({
   children,
   width,
-  isFluid = false,
-  spacing = 0,
   className = '',
 }: {
   children: ReactNode;
   width: Width;
-  isFluid?: boolean;
-  spacing?: number;
   as?: keyof HTMLElementTagNameMap;
   className?: string;
 }) {
   const getWrapperMaxWidth = useCallback(
-    (width: Width, breakpoint: Breakpoint, isFluid: boolean) => {
-      if (width && width !== 'full' && isFluid) {
+    (width: Width, breakpoint: Breakpoint) => {
+      if (width && width !== 'full') {
         return `${breakpoints[width]}px`;
       }
 
-      if (width && width !== 'full' && !isFluid) {
+      if (width && width !== 'full') {
         if (breakpoint === 'xs') return '100%';
         if (breakpoint === 'sm') return `${breakpoints.sm}px`;
 
@@ -66,14 +62,13 @@ export default function Wrapper({
       className={clsx(style.container, className)}
       style={
         {
-          '--margin-bottom': `${spacing}rem`,
-          '--max-width-xs': getWrapperMaxWidth(width, 'xs', isFluid),
-          '--max-width-sm': getWrapperMaxWidth(width, 'sm', isFluid),
-          '--max-width-md': getWrapperMaxWidth(width, 'md', isFluid),
-          '--max-width-lg': getWrapperMaxWidth(width, 'lg', isFluid),
-          '--max-width-xl': getWrapperMaxWidth(width, 'xl', isFluid),
-          '--max-width-xxl': getWrapperMaxWidth(width, 'xxl', isFluid),
-          '--max-width-xxxl': getWrapperMaxWidth(width, 'xxxl', isFluid),
+          '--max-width-xs': getWrapperMaxWidth(width, 'xs'),
+          '--max-width-sm': getWrapperMaxWidth(width, 'sm'),
+          '--max-width-md': getWrapperMaxWidth(width, 'md'),
+          '--max-width-lg': getWrapperMaxWidth(width, 'lg'),
+          '--max-width-xl': getWrapperMaxWidth(width, 'xl'),
+          '--max-width-xxl': getWrapperMaxWidth(width, 'xxl'),
+          '--max-width-xxxl': getWrapperMaxWidth(width, 'xxxl'),
           '--padding-xs': getWrapperPadding(width, 'xs'),
           '--padding-sm': getWrapperPadding(width, 'sm'),
           '--padding-md': getWrapperPadding(width, 'md'),
