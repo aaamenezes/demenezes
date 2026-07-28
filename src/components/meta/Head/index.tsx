@@ -100,7 +100,6 @@ export default function Head({
         crossOrigin="anonymous"
       />
       <link rel="stylesheet" href={src.font} />
-      <link rel="stylesheet" href={src.icon} />
       <link rel="stylesheet" href={src.codeThemeVsCode} />
 
       {/* FAVICON */}

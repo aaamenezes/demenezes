@@ -1,37 +1,46 @@
-import fontStyle from '@/../styles/font-style.module.css';
 import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';
-import { clsx } from '@/utils/clsx';
+import type { IconType } from 'react-icons';
+import { BiLogoDevTo } from 'react-icons/bi';
+import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import style from './styles.module.css';
 
-export default function SocialMedia({
-  isCenter = true,
-}: {
-  isCenter?: boolean;
-}) {
-  const socialElements = settings.socialMedia.map(socialMedia => (
-    <li className={style.socialItem} key={socialMedia.title}>
-      <Link
-        className={style.socialMediaLink}
-        href={socialMedia.url}
-        aria-label={`Acessar o ${socialMedia.title} do autor do blog`}
-        isExternal
-      >
-        {/* não gostei desse "as IconName", corrigir isso */}
-        {'>>>'}ICONE REDE SOCIAL AQUI{'<<<'}
-        <span
-          className={clsx(style.socialMediaLabel, fontStyle.socialMediaLabel)}
+export default function SocialMedia() {
+  const socialMediaMap: Record<string, IconType> = {
+    github: FaGithub,
+    linkedin: FaLinkedin,
+    twitter: FaXTwitter,
+    medium: FaMedium,
+    devto: BiLogoDevTo,
+  };
+
+  const socialElements = settings.socialMedia.map(socialMedia => {
+    const Icon = socialMediaMap[socialMedia.title];
+
+    return (
+      <li className={style.socialMediaItem} key={socialMedia.title}>
+        <Link
+          className={style.socialMediaLink}
+          href={socialMedia.url}
+          aria-label={`Acessar o ${socialMedia.title} do autor de André Menezes`}
+          isExternal
         >
-          {socialMedia.title}
-        </span>
-      </Link>
-    </li>
-  ));
+          {Icon && (
+            <Icon
+              size={24}
+              color={'var(--color-neutral-900)'}
+              className={style.socialMediaIcon}
+            />
+          )}
+          <span className={style.socialMediaLabel}>{socialMedia.title}</span>
+        </Link>
+      </li>
+    );
+  });
 
   return (
-    <nav
-      className={clsx(style.socialMediaWrapper, { [style.isCenter]: isCenter })}
-    >
+    <nav>
       <ul className={style.socialMediaList}>{socialElements}</ul>
     </nav>
   );
