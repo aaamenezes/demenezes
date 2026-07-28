@@ -12,6 +12,7 @@ import PostCardStory from '../../block/PostCard/story';
 import ProgressBarStory from '../../block/ProgressBar/story';
 import TableStory from '../../block/Table/story';
 import NavigationStory from '../../container/Navigation/story';
+import WrapperStory from '../../container/Wrapper/story';
 import SocialMediaStory from '../../container/SocialMedia/story';
 import type { ComponentsMapProps, Level } from './types';
 
@@ -36,6 +37,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
   container: {
     navigation: NavigationStory,
     socialMedia: SocialMediaStory,
+    wrapper: WrapperStory,
   },
   section: {},
   template: {},
