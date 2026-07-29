@@ -1,4 +1,5 @@
 import Wrapper from '@/components/ui/container/Wrapper';
+import CmsIcon from '../../base/CmsIcon';
 import style from './styles.module.css';
 
 export default function AboutCategories({
@@ -13,21 +14,22 @@ export default function AboutCategories({
   }>;
 }) {
   const CategoryItems = categoryItems.map(
-    ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => (
-      <li className={style.categoryItem} key={categoryItemTitle}>
-        <h3 className={style.categoryItemTitle}>
-          {/* não gostei desse "as IconName", corrigir isso */}
-          {'>>>'}ICONE AQUI{'<<<'}
-          <span>{categoryItemTitle}</span>
-        </h3>
-        <p className={style.categoryText}>{categoryItemDescription}</p>
-      </li>
-    )
+    ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => {
+      return (
+        <li className={style.categoryItem} key={categoryItemTitle}>
+          <h3 className={style.categoryItemTitle}>
+            <CmsIcon name={categoryItemIcon} />
+            <span>{categoryItemTitle}</span>
+          </h3>
+          <p className={style.categoryText}>{categoryItemDescription}</p>
+        </li>
+      );
+    }
   );
 
   return (
     <Wrapper as="section" width="xl">
-      <header>
+      <header className={style.categoriesHeader}>
         <h2 className={style.categoriesTitle}>{categoriesTitle}</h2>
       </header>
 

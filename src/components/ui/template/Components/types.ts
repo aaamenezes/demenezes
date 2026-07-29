@@ -1,3 +1,5 @@
+import type { ComponentType } from 'react';
+
 export type Level = 'base' | 'block' | 'container' | 'section' | 'template';
 
 export interface ComponentPathProps {
@@ -5,7 +7,4 @@ export interface ComponentPathProps {
   componentName: string;
 }
 
-export type ComponentsMapProps = Record<
-  Level,
-  Record<string, React.ComponentType>
->;
+export type ComponentsMapProps = Record<Level, Record<string, ComponentType>>;

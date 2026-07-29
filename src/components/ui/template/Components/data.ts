@@ -14,6 +14,7 @@ import TableStory from '../../block/Table/story';
 import NavigationStory from '../../container/Navigation/story';
 import WrapperStory from '../../container/Wrapper/story';
 import SocialMediaStory from '../../container/SocialMedia/story';
+import AboutCategoriesStory from '../../section/AboutCategories/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -39,7 +40,9 @@ export const componentsByLevelMap: ComponentsMapProps = {
     socialMedia: SocialMediaStory,
     wrapper: WrapperStory,
   },
-  section: {},
+  section: {
+    aboutCategories: AboutCategoriesStory,
+  },
   template: {},
 };
 
