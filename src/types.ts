@@ -112,3 +112,5 @@ export interface PageProps {
   keywords: string[];
   description: string;
 }
+
+export type Breakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
