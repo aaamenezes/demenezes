@@ -163,6 +163,8 @@
 
   --font-family-button: var(--font-family-montserrat);
   --font-family-code: var(--font-family-ubuntu-mono);
+  --font-family-heading: var(--font-family-montserrat);
+  --font-family-body: var(--font-family-vollkorn);
 
   /*
   Fontes já instaladas na maioria dos sistemas operacionais

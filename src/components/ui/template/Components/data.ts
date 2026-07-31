@@ -1,6 +1,6 @@
 import ButtonStory from '../../base/Button/story';
-import CodeStory from '../../base/Code/story';
 import CmsIconStory from '../../base/CmsIcon/story';
+import CodeStory from '../../base/Code/story';
 import HiddenA11YStory from '../../base/HiddenA11Y/story';
 import IframeStory from '../../base/Iframe/story';
 import ImageStory from '../../base/Image/story';
@@ -13,9 +13,10 @@ import PostCardStory from '../../block/PostCard/story';
 import ProgressBarStory from '../../block/ProgressBar/story';
 import TableStory from '../../block/Table/story';
 import NavigationStory from '../../container/Navigation/story';
-import WrapperStory from '../../container/Wrapper/story';
 import SocialMediaStory from '../../container/SocialMedia/story';
+import WrapperStory from '../../container/Wrapper/story';
 import AboutCategoriesStory from '../../section/AboutCategories/story';
+import AboutContactFormStory from '../../section/AboutContactForm/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -44,6 +45,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
   },
   section: {
     aboutCategories: AboutCategoriesStory,
+    aboutContactForm: AboutContactFormStory,
   },
   template: {},
 };

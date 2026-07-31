@@ -10,9 +10,11 @@ export default function ContactForm({
 }) {
   const { mailchimpIframeSrc } = settings.form.contact;
   const { contactTitle, contactText } = contactContent.data.contactSection;
-  const textElements = contactText
-    .split('\n')
-    .map(text => <p key={text}>{text}</p>);
+  const textElements = contactText.split('\n').map(text => (
+    <p key={text} className={style.contactText}>
+      {text}
+    </p>
+  ));
 
   return (
     <Wrapper className={style.contactForm} width="md">
