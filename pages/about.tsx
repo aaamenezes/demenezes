@@ -6,7 +6,7 @@ import Wrapper from '@/components/ui/container/Wrapper';
 import AboutCategories from '@/components/ui/section/AboutCategories';
 import ContactForm from '@/components/ui/section/AboutContactForm';
 import Greeting from '@/components/ui/section/AboutGreeting';
-import Hobbies from '@/components/ui/section/AboutHobbies';
+import AboutHobbies from '@/components/ui/section/AboutHobbies';
 import StoryTitle from '@/components/ui/section/AboutStory';
 import PageFooter from '@/components/ui/section/PageFooter';
 import PageHeader from '@/components/ui/section/PageHeader';
@@ -51,7 +51,7 @@ export default function About({
           categoryItems={categoryItemModule}
         />
         <StoryTitle historyTitle={historyTitle} historyText={historyText} />
-        <Hobbies hobbiesTitle={hobbiesTitle} hobbiesText={hobbiesText} />
+        <AboutHobbies hobbiesTitle={hobbiesTitle} hobbiesText={hobbiesText} />
         <Wrapper as="section" width="sm">
           <SocialMedia isCenter />
         </Wrapper>

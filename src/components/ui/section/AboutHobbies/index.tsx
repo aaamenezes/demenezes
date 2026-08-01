@@ -1,7 +1,7 @@
 import Wrapper from '@/components/ui/container/Wrapper';
 import style from './styles.module.css';
 
-export default function Hobbies({
+export default function AboutHobbies({
   hobbiesTitle,
   hobbiesText,
 }: {
@@ -11,7 +11,7 @@ export default function Hobbies({
   return (
     <Wrapper as="section" width="md">
       <h2 className={style.hobbiesTitle}>{hobbiesTitle}</h2>
-      <p>{hobbiesText}</p>
+      <p className={style.hobbiesText}>{hobbiesText}</p>
     </Wrapper>
   );
 }
