@@ -1,3 +1,4 @@
+import { keysOf } from '@/utils/object';
 import ButtonStory from '../../base/Button/story';
 import CmsIconStory from '../../base/CmsIcon/story';
 import CodeStory from '../../base/Code/story';
@@ -20,7 +21,7 @@ import AboutContactFormStory from '../../section/AboutContactForm/story';
 import AboutGreetingStory from '../../section/AboutGreeting/story';
 import AboutHighlightTextStory from '../../section/AboutHighlightText/story';
 import AboutHobbiesStory from '../../section/AboutHobbies/story';
-import { keysOf } from '@/utils/object';
+import AboutStoryStory from '../../section/AboutStory/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -53,6 +54,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     aboutGreeting: AboutGreetingStory,
     aboutHighlightText: AboutHighlightTextStory,
     aboutHobbies: AboutHobbiesStory,
+    aboutStory: AboutStoryStory,
   },
   template: {},
 };

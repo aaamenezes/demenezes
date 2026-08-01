@@ -13,7 +13,7 @@ import style from './styles.module.css';
  * https://twitter.com/yarasenger
  */
 
-export default function Story({
+export default function AboutStory({
   historyTitle,
   historyText,
 }: {
@@ -29,7 +29,7 @@ export default function Story({
         <HighlightText key={text}>{text}</HighlightText>
       ) : (
         <Wrapper width="md" key={text}>
-          <p>{text}</p>
+          <p className={style.storyText}>{text}</p>
         </Wrapper>
       )
     );
@@ -37,8 +37,8 @@ export default function Story({
   return (
     <>
       <Wrapper width="md">
-        <h2 className={style.StoryTitle}>{historyTitle}</h2>
-        <p>{firstParagraph}</p>
+        <h2 className={style.storyTitle}>{historyTitle}</h2>
+        <p className={style.storyText}>{firstParagraph}</p>
       </Wrapper>
       {remainingText}
     </>
