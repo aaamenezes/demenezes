@@ -4,8 +4,8 @@ import style from './styles.module.css';
 
 export default function HighlightText({ children }: { children: ReactNode }) {
   return (
-    <Wrapper className={style.highlightText} width="full" isFluid>
-      <Wrapper className={style.textWrapper} width="md" isFluid>
+    <Wrapper className={style.highlightText} width="full">
+      <Wrapper className={style.textWrapper} width="md">
         <p>{children}</p>
       </Wrapper>
     </Wrapper>

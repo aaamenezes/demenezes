@@ -18,6 +18,7 @@ import WrapperStory from '../../container/Wrapper/story';
 import AboutCategoriesStory from '../../section/AboutCategories/story';
 import AboutContactFormStory from '../../section/AboutContactForm/story';
 import AboutGreetingStory from '../../section/AboutGreeting/story';
+import AboutHighlightTextStory from '../../section/AboutHighlightText/story';
 import { keysOf } from '@/utils/object';
 import type { ComponentsMapProps, Level } from './types';
 
@@ -49,6 +50,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     aboutCategories: AboutCategoriesStory,
     aboutContactForm: AboutContactFormStory,
     aboutGreeting: AboutGreetingStory,
+    aboutHighlightText: AboutHighlightTextStory,
   },
   template: {},
 };
