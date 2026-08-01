@@ -36,10 +36,11 @@ export default function PostCardInfos({
         } as CSSProperties
       }
     >
-      <PostCardHeader post={post} isHero={isHero} isCompact={isCompact} />
+      <PostCardHeader post={post} isHero={isHero} />
       <PostCardDescription
         description={metaDescription}
         isCompact={isCompact}
+        isHero={isHero}
       />
       <PostCardFooter
         publicationDate={_firstPublishedAt}

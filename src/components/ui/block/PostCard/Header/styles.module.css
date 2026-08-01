@@ -30,14 +30,14 @@
 .postCardTitle:focus-within a {
   color: var(--color-neutral-100);
 }
- 
-.postCardTitle.isHero {}
-
-.postCardTitle.isCompact {}
 
 .postCardTitleLink {
   text-decoration: none;
   transition: var(--transition-fast);
+}
+
+.postCardTitleLink.isHero {
+  color: var(--color-neutral-100);
 }
 
 .postCategoryText {
@@ -46,4 +46,5 @@
   font-weight: var(--font-weight-500);
   letter-spacing: var(--letter-spacing-md);
   line-height: var(--line-height-xs);
+  color: var(--color-neutral-100);
 }

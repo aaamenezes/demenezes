@@ -22,6 +22,7 @@ import AboutGreetingStory from '../../section/AboutGreeting/story';
 import AboutHighlightTextStory from '../../section/AboutHighlightText/story';
 import AboutHobbiesStory from '../../section/AboutHobbies/story';
 import AboutStoryStory from '../../section/AboutStory/story';
+import HeroPostCardStory from '../../section/HeroPostCard/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -55,6 +56,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     aboutHighlightText: AboutHighlightTextStory,
     aboutHobbies: AboutHobbiesStory,
     aboutStory: AboutStoryStory,
+    heroPostCard: HeroPostCardStory,
   },
   template: {},
 };

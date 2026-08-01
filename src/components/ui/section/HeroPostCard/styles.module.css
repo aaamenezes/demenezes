@@ -36,7 +36,7 @@
   .heroWrapper {
     background-image:
       linear-gradient(270deg,
-        var(--color-neutral-900-opacity-hard) 55%,
+        var(--color-neutral-900-opacity-heavy) 55%,
         var(--color-neutral-600-opacity-medium) 100%),
       var(--background-image-lg);
   }
@@ -46,7 +46,7 @@
   .heroWrapper {
     background-image:
       linear-gradient(270deg,
-        var(--color-neutral-900-opacity-hard) 55%,
+        var(--color-neutral-900-opacity-heavy) 55%,
         var(--color-neutral-600-opacity-medium) 100%),
       var(--background-image-xl);
   }
@@ -56,7 +56,7 @@
   .heroWrapper {
     background-image:
       linear-gradient(270deg,
-        var(--color-neutral-900-opacity-hard) 55%,
+        var(--color-neutral-900-opacity-heavy) 55%,
         var(--color-neutral-600-opacity-medium) 100%),
       var(--background-image-xxl);
   }

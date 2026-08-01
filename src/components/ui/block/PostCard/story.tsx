@@ -20,7 +20,7 @@ export default function PostCardStory() {
               height: 600,
               alt: 'Imagem de capa do post',
               responsiveImage: {
-                src: '/favicon/ms-icon-310x310.png',
+                src: '/images/image.jpg',
               },
             },
           }}
@@ -42,7 +42,7 @@ export default function PostCardStory() {
               height: 600,
               alt: 'Imagem de capa do post',
               responsiveImage: {
-                src: '/favicon/ms-icon-310x310.png',
+                src: '/images/image.jpg',
               },
             },
           }}
@@ -64,7 +64,7 @@ export default function PostCardStory() {
               height: 600,
               alt: 'Imagem de capa do post',
               responsiveImage: {
-                src: '/favicon/ms-icon-310x310.png',
+                src: '/images/image.jpg',
               },
             },
           }}
@@ -94,7 +94,7 @@ export default function PostCardStory() {
                 height: 600,
                 alt: 'Imagem de capa do post',
                 responsiveImage: {
-                  src: '/favicon/ms-icon-310x310.png',
+                  src: '/images/image.jpg',
                 },
               },
             }}
@@ -115,7 +115,7 @@ export default function PostCardStory() {
                 height: 600,
                 alt: 'Imagem de capa do post',
                 responsiveImage: {
-                  src: '/favicon/ms-icon-310x310.png',
+                  src: '/images/image.jpg',
                 },
               },
             }}
@@ -136,7 +136,7 @@ export default function PostCardStory() {
                 height: 600,
                 alt: 'Imagem de capa do post',
                 responsiveImage: {
-                  src: '/favicon/ms-icon-310x310.png',
+                  src: '/images/image.jpg',
                 },
               },
             }}
@@ -157,7 +157,7 @@ export default function PostCardStory() {
                 height: 600,
                 alt: 'Imagem de capa do post',
                 responsiveImage: {
-                  src: '/favicon/ms-icon-310x310.png',
+                  src: '/images/image.jpg',
                 },
               },
             }}
@@ -178,7 +178,7 @@ export default function PostCardStory() {
                 height: 600,
                 alt: 'Imagem de capa do post',
                 responsiveImage: {
-                  src: '/favicon/ms-icon-310x310.png',
+                  src: '/images/image.jpg',
                 },
               },
             }}
@@ -199,7 +199,7 @@ export default function PostCardStory() {
                 height: 600,
                 alt: 'Imagem de capa do post',
                 responsiveImage: {
-                  src: '/favicon/ms-icon-310x310.png',
+                  src: '/images/image.jpg',
                 },
               },
             }}

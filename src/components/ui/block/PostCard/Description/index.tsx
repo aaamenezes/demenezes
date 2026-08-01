@@ -3,15 +3,18 @@ import style from './styles.module.css';
 
 export default function PostCardDescription({
   description,
-  isCompact,
+  isCompact = false,
+  isHero = false,
 }: {
   description: string;
-  isCompact: boolean;
+  isCompact?: boolean;
+  isHero?: boolean;
 }) {
   return (
     <p
       className={clsx(style.postCardDescription, {
         [style.isCompact]: isCompact,
+        [style.isHero]: isHero,
       })}
     >
       {description}

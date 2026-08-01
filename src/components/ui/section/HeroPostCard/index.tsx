@@ -7,22 +7,24 @@ import style from './styles.module.css';
 export default function HeroPostCard({ post }: { post: PostSummaryProps }) {
   const { src } = post.thumbnail.responsiveImage;
 
+  const separator = src.includes('?') ? '&' : '?';
+
   return (
     <div
       className={style.heroWrapper}
       style={
         {
-          '--background-image-xs': `url(${src}&w=425)`,
-          '--background-image-sm': `url(${src}&w=768)`,
-          '--background-image-md': `url(${src}&w=992)`,
-          '--background-image-lg': `url(${src}&w=1200)`,
-          '--background-image-xl': `url(${src}&w=1600)`,
-          '--background-image-xxl': `url(${src}&w=2600)`,
+          '--background-image-xs': `url(${src}${separator}w=425)`,
+          '--background-image-sm': `url(${src}${separator}w=768)`,
+          '--background-image-md': `url(${src}${separator}w=992)`,
+          '--background-image-lg': `url(${src}${separator}w=1200)`,
+          '--background-image-xl': `url(${src}${separator}w=1600)`,
+          '--background-image-xxl': `url(${src}${separator}w=2600)`,
         } as CSSProperties
       }
     >
       <Wrapper width="full">
-        <Wrapper className={style.heroInner} width="xxxl" spacing={0} isFluid>
+        <Wrapper className={style.heroInner} width="xxxl">
           <PostCardInfos post={post} isHero />
         </Wrapper>
       </Wrapper>

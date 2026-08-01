@@ -11,3 +11,7 @@
 .postCardDescription.isCompact {
   display: none;
 }
+
+.postCardDescription.isHero {
+  color: var(--color-neutral-100);
+}
