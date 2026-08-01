@@ -1,4 +1,3 @@
-import fontStyle from '@/../styles/font-style.module.css';
 import Button from '@/components/ui/base/Button';
 import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
 import Input from '@/components/ui/base/Input';
@@ -13,11 +12,7 @@ export default function Newsletter() {
   return (
     <Wrapper className={style.newsletterForm} width="full" isFluid>
       <Wrapper width="md" spacing={0}>
-        <h3
-          className={clsx(style.newsletterTitle, fontStyle.newsletterFormTitle)}
-        >
-          {title}
-        </h3>
+        <h3 className={style.newsletterTitle}>{title}</h3>
 
         {/* Begin Mailchimp Signup Form */}
         <div id="mc_embed_signup">
@@ -39,7 +34,7 @@ export default function Newsletter() {
                   <Input
                     type="text"
                     name="FNAME"
-                    className={fontStyle.newsletterFormInput}
+                    className={style.newsletterFormInput}
                     id="mce-FNAME"
                     placeholder="Nome"
                     required
@@ -54,7 +49,10 @@ export default function Newsletter() {
                   <Input
                     type="email"
                     name="EMAIL"
-                    className="newsletterFormInput required email"
+                    className={clsx(
+                      style.newsletterFormInput,
+                      'required email'
+                    )}
                     id="mce-EMAIL"
                     placeholder="Email"
                     required
