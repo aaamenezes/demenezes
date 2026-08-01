@@ -17,6 +17,7 @@ import SocialMediaStory from '../../container/SocialMedia/story';
 import WrapperStory from '../../container/Wrapper/story';
 import AboutCategoriesStory from '../../section/AboutCategories/story';
 import AboutContactFormStory from '../../section/AboutContactForm/story';
+import AboutGreetingStory from '../../section/AboutGreeting/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -46,6 +47,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
   section: {
     aboutCategories: AboutCategoriesStory,
     aboutContactForm: AboutContactFormStory,
+    aboutGreeting: AboutGreetingStory,
   },
   template: {},
 };
