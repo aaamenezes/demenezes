@@ -10,8 +10,8 @@ export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
 
   return (
-    <Wrapper className={style.newsletterForm} width="full" isFluid>
-      <Wrapper width="md" spacing={0}>
+    <Wrapper className={style.newsletterForm} width="full">
+      <Wrapper width="md">
         <h3 className={style.newsletterTitle}>{title}</h3>
 
         {/* Begin Mailchimp Signup Form */}

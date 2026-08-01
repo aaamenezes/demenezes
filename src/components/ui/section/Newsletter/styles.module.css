@@ -1,4 +1,5 @@
 .newsletterTitle {
+  margin-bottom: var(--spacing-xl);
   text-align: center;
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xl);
@@ -8,6 +9,7 @@
 }
 
 .newsletterFormInput {
+  width: 100%;
   font-family: var(--font-family-body);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-500);
@@ -16,32 +18,26 @@
 }
 
 .newsletterForm {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xxl);
   margin-bottom: 7rem;
-  background-color: var(--color-neutral-400);
+  background-color: var(--color-neutral-200);
 }
 
 .inputsWrapper {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
 }
 
 @media screen and (min-width: 768px) {
   .inputsWrapper {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: var(--spacing-md);
   }
 }
 
 .submitButton {
-  padding: 0.5rem 1rem;
+  display: block;
   margin: 0 auto;
-  color: var(--color-neutral-100);
-  background-color: var(--color-primary-700);
-}
-
-.submitButton:hover {
-  background-color: var(--color-primary-900);
 }

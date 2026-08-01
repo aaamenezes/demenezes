@@ -6,8 +6,8 @@ export default function Input({
   name,
   placeholder,
   type = 'text',
-  className,
-  id,
+  className = '',
+  id = '',
   required = false,
   disabled = false,
 }: {
