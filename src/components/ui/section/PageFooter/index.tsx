@@ -5,9 +5,9 @@ import style from './styles.module.css';
 
 export default function PageFooter() {
   return (
-    <Wrapper className={style.footerWrapper} width="full" isFluid>
-      <Wrapper className={style.footerInner} width="xxxl" spacing={0}>
-        <SocialMedia />
+    <Wrapper className={style.footerWrapper} width="full">
+      <Wrapper className={style.footerInner} width="xxxl">
+        <SocialMedia inverseColor />
         <Logo />
       </Wrapper>
     </Wrapper>

@@ -6,7 +6,11 @@ import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import style from './styles.module.css';
 
-export default function SocialMedia() {
+export default function SocialMedia({
+  inverseColor = false,
+}: {
+  inverseColor?: boolean;
+}) {
   const socialMediaMap: Record<string, IconType> = {
     github: FaGithub,
     linkedin: FaLinkedin,
@@ -14,6 +18,10 @@ export default function SocialMedia() {
     medium: FaMedium,
     devto: BiLogoDevTo,
   };
+
+  const socialMediaColor = inverseColor
+    ? 'var(--color-neutral-100)'
+    : 'var(--color-neutral-900)';
 
   const socialElements = settings.socialMedia.map(socialMedia => {
     const Icon = socialMediaMap[socialMedia.title];
@@ -29,7 +37,7 @@ export default function SocialMedia() {
           {Icon && (
             <Icon
               size={24}
-              color={'var(--color-neutral-900)'}
+              color={socialMediaColor}
               className={style.socialMediaIcon}
             />
           )}
