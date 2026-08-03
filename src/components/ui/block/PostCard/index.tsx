@@ -10,11 +10,9 @@ import style from './styles.module.css';
 export default function PostCard({
   post,
   isCompact = false,
-  spacing = 7,
 }: {
   post: PostSummaryProps;
   isCompact?: boolean;
-  spacing?: number;
 }) {
   const { title, slug, thumbnail, category } = post;
   const { width, height } = thumbnail;
@@ -24,7 +22,6 @@ export default function PostCard({
     <Wrapper
       className={clsx(style.postCardWrapper, { [style.isCompact]: isCompact })}
       width="xl"
-      spacing={spacing || 7}
     >
       <div
         className={clsx(style.postCardImageWrapper, {

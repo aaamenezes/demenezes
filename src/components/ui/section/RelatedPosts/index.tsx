@@ -13,13 +13,15 @@ export default function RelatedPosts({
   if (relatedPosts.length === 0) return <></>;
 
   const relatedPostsElements = relatedPosts.map(post => (
-    <PostCard key={post.title} post={post} isCompact spacing={0} />
+    <PostCard key={post.title} post={post} isCompact />
   ));
 
   return (
     <Wrapper as="section" width="xl">
       <header>
-        <h2>{`Veja outros posts sobre ${postCategory}`}</h2>
+        <h2
+          className={style.relatedPostsHeading}
+        >{`Veja outros posts sobre ${postCategory}`}</h2>
       </header>
       <div className={style.relatedPostsGrid}>{relatedPostsElements}</div>
     </Wrapper>
