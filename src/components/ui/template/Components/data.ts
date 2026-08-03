@@ -29,6 +29,7 @@ import PageHeaderStory from '../../section/PageHeader/story';
 import PaginationStory from '../../section/Pagination/story';
 import PostCommentsStory from '../../section/PostComments/story';
 import PostContentStory from '../../section/PostContent/story';
+import PostHeaderStory from '../../section/PostHeader/story';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -69,6 +70,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     pagination: PaginationStory,
     postComments: PostCommentsStory,
     postContent: PostContentStory,
+    postHeader: PostHeaderStory,
   },
   template: {},
 };

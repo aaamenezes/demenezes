@@ -35,30 +35,24 @@ export default function PostHeader({
       className={style.postHeaderWrapper}
       style={{ '--background-image': `url(${coverImage})` } as CSSProperties}
     >
-      <Wrapper width="full" isFluid>
-        <Wrapper className={style.postHeaderInner} width="xxxl" spacing={0}>
-          <h1 className={style.postTitle}>{title}</h1>
-          <p>
-            <strong className={style.postDescription}>{description}</strong>
-          </p>
-          <footer className={style.postHeaderFooter}>
-            <span className={style.postDate}>
-              {update && date
-                ? `Publicado em ${convertDate(date)}`
-                : 'Não publicado'}
-            </span>
-            {update > date && (
-              <>
-                <span aria-hidden="true"> - </span>
-                <span className={style.postDate}>
-                  {`Atualizado em ${convertDate(update)}`}
-                </span>
-              </>
-            )}
-            <ul className={style.keywordsList}>{keywordsList}</ul>
-          </footer>
-          <PostCategory>{category}</PostCategory>
-        </Wrapper>
+      <Wrapper className={style.postHeaderInner} width="xxxl">
+        <h1 className={style.postTitle}>{title}</h1>
+        <p className={style.postDescription}>{description}</p>
+        <footer className={style.postHeaderFooter}>
+          <span className={style.postDate}>
+            {update ? `Publicado em ${convertDate(date)}` : convertDate(date)}
+          </span>
+          {update > date && (
+            <>
+              <span aria-hidden="true"> - </span>
+              <span className={style.postDate}>
+                {`Atualizado em ${convertDate(update)}`}
+              </span>
+            </>
+          )}
+          <ul className={style.keywordsList}>{keywordsList}</ul>
+        </footer>
+        <PostCategory>{category}</PostCategory>
       </Wrapper>
     </div>
   );
