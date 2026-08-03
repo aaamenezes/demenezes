@@ -27,9 +27,8 @@ export default function PostsWrapper({
     .slice(secondBlockStart, secondBlockEnd)
     .map(post => <PostCard key={post.title} post={post} />);
 
-  // { [style.isHome]: !isHome } ??????
   return (
-    <main className={clsx(style.postsWrapper, { [style.isHome]: !isHome })}>
+    <main className={clsx(style.postsWrapper, { [style.isHome]: isHome })}>
       {isHome && <HeroPostCard post={heroPost} />}
       {firstBlockPosts}
       <Newsletter />
