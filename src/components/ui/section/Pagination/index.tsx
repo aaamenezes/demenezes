@@ -14,22 +14,24 @@ export default function Pagination({
   const nextLink = `/page/${+currentPagination + 1}`;
 
   return (
-    <Wrapper className={style.paginationWrapper} width="xxl" spacing={2}>
+    <Wrapper className={style.paginationWrapper} width="xxl">
       {currentPagination > 1 && (
         <Link
           className={clsx(style.paginationButton, style.isPrevious)}
           href={previousLink}
         >
-          Posts mais recentes
+          <span className={style.paginationButtonText}>
+            Posts mais recentes
+          </span>
         </Link>
       )}
       {!isLastPagination ? (
         <Link className={style.paginationButton} href={nextLink}>
-          Próxima página
+          <span className={style.paginationButtonText}>Próxima página</span>
         </Link>
       ) : (
         <Link className={style.paginationButton} href="/">
-          Parabéns, você chegou ao início do blog :)
+          <span className={style.paginationButtonText}>Início do blog :)</span>
         </Link>
       )}
     </Wrapper>
