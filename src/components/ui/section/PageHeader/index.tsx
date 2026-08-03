@@ -10,16 +10,20 @@ import style from './styles.module.css';
 
 export default function PageHeader() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isOpenHeader, setIsOpenHeader] = useState(true);
+  const [isMenuMobileOpen, setIsMenuMobileOpen] = useState(true);
   const { currentPage } = getPageInfos();
 
-  const toggleMenu = useCallback(() => {
-    setIsOpenMenu(currentState => !currentState);
+  const openMenu = useCallback(() => {
+    setIsOpenMenu(true);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsOpenMenu(false);
   }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      setIsOpenHeader(window.scrollY < window.innerHeight);
+      setIsMenuMobileOpen(window.scrollY < window.innerHeight);
     });
   }, []);
 
@@ -28,18 +32,22 @@ export default function PageHeader() {
       width="full"
       className={clsx(
         style.headerWrapper,
-        { [style.isOpenHeader]: isOpenHeader },
+        { [style.isMenuMobileOpen]: isMenuMobileOpen },
         { [style.isHome]: currentPage === 'home' }
       )}
     >
-      <Wrapper className={style.headerInner} width="xxxl" spacing={0} isFluid>
+      <Wrapper className={style.headerInner} width="xxxl">
         <h1>
           <Logo />
         </h1>
-        <Button onClick={toggleMenu}>
+        <Button
+          onClick={openMenu}
+          className={style.openMenuButton}
+          aria-label="Abrir menu de navegação"
+        >
           <Menu />
         </Button>
-        <Navigation isOpenMenu={isOpenMenu} toggleMenu={toggleMenu} />
+        <Navigation isOpenMenu={isOpenMenu} toggleMenu={closeMenu} />
         {/* <SearchWrapper /> */}
       </Wrapper>
     </Wrapper>

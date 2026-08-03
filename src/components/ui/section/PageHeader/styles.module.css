@@ -4,19 +4,32 @@
   z-index: var(--z-index-fixed);
   top: 0;
   left: 50%;
-  padding-top: 0.66rem;
-  padding-bottom: 0.66rem;
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
   color: var(--color-neutral-100);
   background-color: var(--color-neutral-900);
-  transition: var(--transition-medium);
+  transition: transform var(--transition-medium);
 }
 
-.headerWrapper.isOpenHeader {
+.headerWrapper.isMenuMobileOpen {
   transform: translate(-50%, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .headerWrapper.isMenuMobileOpen {
+    transform: translate(0, 0);
+  }
 }
 
 .headerWrapper.isHome {
   background-color: var(--color-transparent);
+}
+
+@media screen and (min-width: 768px) {
+  .headerWrapper {
+    position: static;
+    transform: translate(0, 0);
+  }
 }
 
 .headerInner {
@@ -26,7 +39,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .toggleMenuButton {
+  .openMenuButton {
     display: none;
   }
 }
