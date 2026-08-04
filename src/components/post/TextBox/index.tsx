@@ -1,8 +1,13 @@
 import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
+import type { DatoBlock } from '@/types';
+import type { StructuredTextGraphQlResponse } from 'react-datocms';
 import style from './styles.module.css';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function TextBox({ content }: { content: any }) {
+export default function TextBox({
+  content,
+}: {
+  content: StructuredTextGraphQlResponse<DatoBlock>;
+}) {
   return (
     <div className={style.textBox}>
       <StructuredTextDatoCMS data={content} />

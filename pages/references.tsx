@@ -171,7 +171,7 @@ export default function References({
   );
 }
 
-export async function getStaticProps() {
+export function getStaticProps() {
   // const referencesUrlAndType: ReferenceUrlAndType = await getContent(
   //   'allReferences',
   //   {}

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import Head from '@/components/meta/Head';
 import SocialMedia from '@/components/ui/container/SocialMedia';
 import Wrapper from '@/components/ui/container/Wrapper';
@@ -11,13 +9,14 @@ import StoryTitle from '@/components/ui/section/AboutStory';
 import PageFooter from '@/components/ui/section/PageFooter';
 import PageHeader from '@/components/ui/section/PageHeader';
 import { getContent } from '@/external/datoCMS';
+import type { AboutPageProps, ContactPageProps } from '@/types';
 
 export default function About({
   aboutPageContent,
   contactContent,
 }: {
-  aboutPageContent: any;
-  contactContent: any;
+  aboutPageContent: AboutPageProps;
+  contactContent: ContactPageProps;
 }) {
   const {
     greetingTitle,
@@ -53,7 +52,7 @@ export default function About({
         <StoryTitle historyTitle={historyTitle} historyText={historyText} />
         <AboutHobbies hobbiesTitle={hobbiesTitle} hobbiesText={hobbiesText} />
         <Wrapper as="section" width="sm">
-          <SocialMedia isCenter />
+          <SocialMedia />
         </Wrapper>
         <ContactForm contactContent={contactContent} />
         <Wrapper as="section" width="md">

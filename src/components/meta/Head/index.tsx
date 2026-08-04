@@ -1,4 +1,10 @@
 import settings from '@/data/settings.json';
+import type {
+  AboutPageProps,
+  ContactPageProps,
+  PostProps,
+  PostSummaryProps,
+} from '@/types';
 import { getPageInfos } from '@/utils/getPageInfos';
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
@@ -6,30 +12,38 @@ import { useRouter } from 'next/router';
 export default function Head({
   componentProps,
 }: {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  componentProps: any;
+  componentProps: {
+    currentPosts?: PostSummaryProps[];
+    currentPagination?: number;
+    isLastPagination?: boolean;
+    preview?: boolean;
+    post?: PostProps;
+    aboutPageContent?: AboutPageProps;
+    contactContent?: ContactPageProps;
+  };
 }) {
   const { currentPage } = getPageInfos();
   const router = useRouter();
   const baseURL = 'https://demenezes.dev';
 
   const isPostPage = currentPage === 'post';
+  const post = componentProps.post?.data.post;
 
   const { metadata, pages, src } = settings;
   const { titleBase, descriptionBase, keywordsBase } = metadata;
 
   const pageTitleFirstPart = isPostPage
-    ? componentProps.post.data.post.title
+    ? post?.title ?? pages[currentPage].pageTitle
     : pages[currentPage].pageTitle;
 
   const pageTitle = `${pageTitleFirstPart} | ${titleBase}`;
 
   const seoTitle = isPostPage
-    ? componentProps.post.data.post.seoTitle
+    ? post?.seoTitle || pageTitle
     : pageTitle;
 
   const pageDescriptionFirstPart = isPostPage
-    ? componentProps.post.data.post.metaDescription
+    ? post?.metaDescription ?? pages[currentPage].description
     : pages[currentPage].description;
 
   const pageDescription =
@@ -41,16 +55,16 @@ export default function Head({
     switch (currentPage) {
       case 'home':
       case 'listing':
-        return componentProps.currentPosts[0].thumbnail.url;
+        return componentProps.currentPosts?.[0]?.thumbnail.responsiveImage.src ?? '';
       case 'post':
-        return componentProps.post.data.post.thumbnail.url;
+        return post?.thumbnail.responsiveImage.src ?? '';
       case 'about':
-        return componentProps.aboutPageContent.data.profileImage.profileImage
-          .responsiveImage.src;
+        return componentProps.aboutPageContent?.data.profileImage.profileImage
+          .responsiveImage.src ?? '';
       case 'contact':
-        return componentProps.contactContent.data.profileImage.profileImage.responsiveImage.srcSet
+        return componentProps.contactContent?.data.profileImage.profileImage.responsiveImage.srcSet
           .split(',')[3]
-          .split(' ')[0];
+          ?.split(' ')[0] ?? '';
       default:
         return '';
     }
@@ -61,7 +75,7 @@ export default function Head({
   const pageKeywords = pages[currentPage].keywords
     .join(', ')
     .concat(', ')
-    .concat(isPostPage ? componentProps.post.data.post.keywords : '')
+    .concat(isPostPage ? post?.keywords ?? '' : '')
     .concat(', ')
     .concat(keywordsBase.join(', '))
     .replace(', , ', ', ');
@@ -191,18 +205,17 @@ export default function Head({
       <meta property="og:locale" content="pt_BR" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="twitter:card" content="summary" />
-      {componentProps.post &&
-        componentProps.post.data.post._firstPublishedAt && (
+      {post?._firstPublishedAt && (
           <meta
             property="article:published_time"
-            content={componentProps.post.data.post._firstPublishedAt}
+            content={post._firstPublishedAt}
           />
         )}
 
-      {componentProps.post && componentProps.post.data.post._updatedAt && (
+      {post?._updatedAt && (
         <meta
           property="article:modified_time"
-          content={componentProps.post.data.post._updatedAt}
+          content={post._updatedAt}
         />
       )}
       <meta

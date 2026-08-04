@@ -3,7 +3,7 @@ import type { SitemapItem } from '@/types';
 
 const BASE_URL = 'https://demenezes.dev/';
 
-export async function generateSitemap(postsSitemapData: SitemapItem[]) {
+export function generateSitemap(postsSitemapData: SitemapItem[]) {
   const allSitemapData = postsSitemapData;
   allSitemapData.push({ slug: '' }); // home
   allSitemapData.push({ slug: 'contact' });

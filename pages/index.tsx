@@ -49,7 +49,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     })
   );
 
-  await generateSitemap(postsSitemapData);
+  generateSitemap(postsSitemapData);
 
   return {
     props: {

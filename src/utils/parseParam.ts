@@ -1,11 +1,7 @@
 import type { ParsedUrlQuery } from 'querystring';
 
 export function parseParam(
-  param:
-    | ParsedUrlQuery['page']
-    | ParsedUrlQuery['slug']
-    | ParsedUrlQuery['id']
-    | ParsedUrlQuery['category'],
+  param: ParsedUrlQuery['page'],
   fallbackValue: string,
   index: number = 0
 ) {

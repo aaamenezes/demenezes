@@ -69,7 +69,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     preview
   ).then(data =>
     data.data.allPosts.filter(
-      (currentPost: PostProps['data']['post']) =>
+      currentPost =>
         currentPost.title !== post.data.post.title
     )
   );
@@ -85,7 +85,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 export async function getStaticPaths() {
   const routes = await getContent('routes', {});
-  const paths = routes.data.allPosts.map((post: PostProps['data']['post']) => ({
+  const paths = routes.data.allPosts.map(post => ({
     params: {
       slug: post.slug,
     },

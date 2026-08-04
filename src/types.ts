@@ -1,3 +1,8 @@
+import type {
+  StructuredTextGraphQlResponse,
+  StructuredTextGraphQlResponseRecord,
+} from 'react-datocms';
+
 /**
  * está muito ruim HomePagePros ~ HomeScreenProps
  * melhorar isso
@@ -31,6 +36,36 @@ export interface ContactPageProps {
   };
 }
 
+export interface AboutPageProps {
+  data: {
+    profileImage: {
+      profileImage: {
+        alt: string;
+        width: number;
+        height: number;
+        responsiveImage: {
+          src: string;
+        };
+      };
+    };
+    aboutPage: {
+      greetingTitle: string;
+      greetingSubtitle: string;
+      greetingDescription: string;
+      categoriesTitle: string;
+      categoryItemModule: Array<{
+        categoryItemTitle: string;
+        categoryItemDescription: string;
+        categoryItemIcon: string;
+      }>;
+      historyTitle: string;
+      historyText: string;
+      hobbiesTitle: string;
+      hobbiesText: string;
+    };
+  };
+}
+
 export type Category =
   | 'Front-end'
   | 'Carreira'
@@ -43,16 +78,9 @@ export interface PostProps {
   data: {
     post: {
       title: string;
+      seoTitle?: string;
       slug: string;
-      content: {
-        /**
-         * Acho que daqui pra baixo não compensa tipar corretamente
-         */
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        blocks: any[];
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        value: any;
-      };
+      content: StructuredTextGraphQlResponse<DatoBlock>;
       metaDescription: string;
       _firstPublishedAt: string;
       _updatedAt: string;
@@ -67,6 +95,83 @@ export interface PostProps {
         };
       };
     };
+  };
+}
+
+type DatoRecord<TypeName extends string, Fields> =
+  StructuredTextGraphQlResponseRecord & { __typename: TypeName } & Fields;
+
+export type DatoBlock =
+  | DatoRecord<
+      'ImageRecord',
+      {
+        image: {
+          alt: string;
+          title: string;
+          width: number;
+          height: number;
+          responsiveImage: { src: string };
+        };
+      }
+    >
+  | DatoRecord<
+      'ExternalVideoRecord',
+      { video: { title: string; providerUid: string } }
+    >
+  | DatoRecord<'VideoRecord', { video: { url: string; alt: string } }>
+  | DatoRecord<
+      'TableRecord',
+      { tableTitle: string; tableSummary: string; table: string }
+    >
+  | DatoRecord<
+      'TextBoxRecord',
+      { textBoxContent: StructuredTextGraphQlResponse<DatoBlock> }
+    >
+  | DatoRecord<
+      'BlockquoteRecord',
+      {
+        quoteContent: StructuredTextGraphQlResponse<DatoBlock>;
+        author: string;
+        source: string;
+      }
+    >
+  | DatoRecord<'TweetRecord', { tweetEmbedCodeblock: string }>
+  | DatoRecord<
+      'QuizRecord',
+      {
+        title: string;
+        alternativeOne: string;
+        alternativeTwo: string;
+        alternativeThree: string;
+        alternativeFour: string;
+        correctAlternativeIndex: number;
+      }
+    >;
+
+export interface RoutesProps {
+  data: {
+    allPosts: Array<Pick<PostProps['data']['post'], 'slug'>>;
+  };
+}
+
+export interface RelatedPostsProps {
+  data: {
+    allPosts: PostSummaryProps[];
+  };
+}
+
+export interface AllPostsProps {
+  data: {
+    allPosts: PostSummaryProps[];
+  };
+}
+
+export interface ReferencesProps {
+  data: {
+    allReferences: Array<{
+      url: string;
+      referenceType: string;
+    }>;
   };
 }
 

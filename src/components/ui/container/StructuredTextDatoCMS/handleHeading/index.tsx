@@ -1,20 +1,25 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { clsx } from '@/utils/clsx';
 import { simplifyString } from '@/utils/simplifyString';
+import { isSpan } from 'datocms-structured-text-utils';
+import type { Heading } from 'datocms-structured-text-utils';
 import style from './styles.module.css';
 
-export default function HandleHeading({ node }: any) {
-  const id = simplifyString(node.children[0].value);
+export default function HandleHeading({ node }: { node: Heading }) {
+  const headingText = node.children
+    .filter(isSpan)
+    .map(child => child.value)
+    .join('');
+  const id = simplifyString(headingText);
 
   if (node.level === 2) {
     return (
       <h2
         className={clsx(style.title, style.postH2)}
-        key={node.children[0].value + Math.random()}
+        key={headingText + Math.random()}
         id={id}
       >
         <a className={style.titleLink} href={`#${id}`}>
-          {node.children[0].value}
+          {headingText}
         </a>
       </h2>
     );
@@ -24,11 +29,11 @@ export default function HandleHeading({ node }: any) {
     return (
       <h3
         className={clsx(style.title, style.postH3)}
-        key={node.children[0].value + Math.random()}
+        key={headingText + Math.random()}
         id={id}
       >
         <a className={style.titleLink} href={`#${id}`}>
-          {node.children[0].value}
+          {headingText}
         </a>
       </h3>
     );
@@ -38,11 +43,11 @@ export default function HandleHeading({ node }: any) {
     return (
       <h4
         className={clsx(style.title, style.postH4)}
-        key={node.children[0].value + Math.random()}
+        key={headingText + Math.random()}
         id={id}
       >
         <a className={style.titleLink} href={`#${id}`}>
-          {node.children[0].value}
+          {headingText}
         </a>
       </h4>
     );
@@ -52,11 +57,11 @@ export default function HandleHeading({ node }: any) {
     return (
       <h5
         className={clsx(style.title, style.postH5)}
-        key={node.children[0].value + Math.random()}
+        key={headingText + Math.random()}
         id={id}
       >
         <a className={style.titleLink} href={`#${id}`}>
-          {node.children[0].value}
+          {headingText}
         </a>
       </h5>
     );
@@ -66,11 +71,11 @@ export default function HandleHeading({ node }: any) {
     return (
       <h6
         className={clsx(style.title, style.postH6)}
-        key={node.children[0].value + Math.random()}
+        key={headingText + Math.random()}
         id={id}
       >
         <a className={style.titleLink} href={`#${id}`}>
-          {node.children[0].value}
+          {headingText}
         </a>
       </h6>
     );

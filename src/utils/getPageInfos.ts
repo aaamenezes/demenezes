@@ -17,7 +17,7 @@ export function getPageInfos(): { currentPage: PageName } {
    */
   const currentPage =
     (Object.entries(pages) as [PageName, PageProps][]).find(page => {
-      return (page as [PageName, PageProps])[1].url === pathname;
+      return page[1].url === pathname;
     })?.[0] || 'home';
 
   return { currentPage };

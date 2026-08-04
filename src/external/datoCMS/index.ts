@@ -1,4 +1,14 @@
-type QueryType =
+import type {
+  AboutPageProps,
+  AllPostsProps,
+  ContactPageProps,
+  PostProps,
+  ReferencesProps,
+  RelatedPostsProps,
+  RoutesProps,
+} from '@/types';
+
+export type QueryType =
   | 'aboutPage'
   | 'allPosts'
   | 'allReferences'
@@ -10,6 +20,16 @@ type QueryType =
 interface PageData {
   slug?: string;
   category?: string;
+}
+
+interface QueryResponseMap {
+  aboutPage: AboutPageProps;
+  allPosts: AllPostsProps;
+  allReferences: ReferencesProps;
+  post: PostProps;
+  relatedPosts: RelatedPostsProps;
+  routes: RoutesProps;
+  contactSection: ContactPageProps;
 }
 
 function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
@@ -195,13 +215,13 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
   };
 }
 
-export async function getContent(
-  queryType: QueryType,
+export async function getContent<T extends QueryType>(
+  queryType: T,
   { slug, category }: PageData,
   preview = false
-) {
+): Promise<QueryResponseMap[T]> {
   const datoCMSURL = `https://graphql.datocms.com/${preview ? 'preview' : ''}`;
   const options = getQueryOptions(queryType, { slug, category });
   const response = await fetch(datoCMSURL, options);
-  return response.json();
+  return response.json() as Promise<QueryResponseMap[T]>;
 }

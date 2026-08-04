@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Quiz from '@/components/post/Quiz';
 import TextBox from '@/components/post/TextBox';
 import Iframe from '@/components/ui/base/Iframe';
@@ -6,15 +5,12 @@ import Image from '@/components/ui/base/Image';
 import Video from '@/components/ui/base/Video';
 import BlockQuote from '@/components/ui/block/BlockQuote';
 import Table from '@/components/ui/block/Table';
+import type { DatoBlock } from '@/types';
 
 export default function HandleBlock({
   record,
 }: {
-  record: {
-    __typename: string;
-    id: string;
-    [key: string]: any;
-  };
+  record: DatoBlock;
 }) {
   const { __typename } = record;
   switch (__typename) {
@@ -54,9 +50,11 @@ export default function HandleBlock({
       return <TextBox key={Math.random()} content={record.textBoxContent} />;
     case 'BlockquoteRecord':
       return (
-        <BlockQuote source={record.source} author={record.author} isDatoCMS>
-          {record.quoteContent}
-        </BlockQuote>
+        <BlockQuote
+          source={record.source}
+          author={record.author}
+          datoContent={record.quoteContent}
+        />
       );
     case 'TweetRecord':
       return (
