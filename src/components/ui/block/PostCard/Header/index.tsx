@@ -1,6 +1,7 @@
 import Link from '@/components/ui/base/Link';
 import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
+import PostCategory from '../../PostCategory';
 import style from './styles.module.css';
 
 export default function PostCardHeader({
@@ -14,7 +15,7 @@ export default function PostCardHeader({
 
   return (
     <header>
-      {isHero && <p className={style.postCategoryText}>{category}</p>}
+      {isHero && <PostCategory>{category}</PostCategory>}
       <h3 className={style.postCardTitle}>
         <Link
           className={clsx(style.postCardTitleLink, {

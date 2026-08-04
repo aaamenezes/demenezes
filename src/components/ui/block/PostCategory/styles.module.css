@@ -1,23 +1,20 @@
-.label {
+.postCategoryText {
   position: absolute;
   z-index: var(--z-index-absolute);
   bottom: 0;
   left: 0;
-  padding: 0.44rem 0.66rem;
-  color: var(--color-neutral-100);
-  background-color: var(--color-primary-700);
-}
-
-@media screen and (min-width: 768px) {
-  .label {
-    bottom: 30%;
-  }
-}
-
-.postCategoryText {
+  padding: var(--spacing-sm) var(--spacing-md);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xxxs);
   font-weight: var(--font-weight-500);
   letter-spacing: var(--letter-spacing-md);
   line-height: var(--line-height-xs);
+  color: var(--color-neutral-100);
+  background-color: var(--color-primary-700);
+}
+
+@media screen and (min-width: 768px) {
+  .postCategoryText {
+    bottom: 30%;
+  }
 }
