@@ -23,10 +23,8 @@ export default function HeroPostCard({ post }: { post: PostSummaryProps }) {
         } as CSSProperties
       }
     >
-      <Wrapper width="full">
-        <Wrapper className={style.heroInner} width="xxxl">
-          <PostCardInfos post={post} isHero />
-        </Wrapper>
+      <Wrapper className={style.heroInner} width="xxxl">
+        <PostCardInfos post={post} isHero />
       </Wrapper>
     </div>
   );

@@ -1,4 +1,6 @@
 .heroWrapper {
+  display: flex;
+  align-items: center;
   min-height: 80vh;
   background-image:
     linear-gradient(270deg,
