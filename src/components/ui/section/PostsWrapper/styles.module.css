@@ -1,3 +1,7 @@
+.postsWrapper {
+  padding-top: var(--spacing-xxxl);
+}
+
 .postsWrapper.isHome {
-  padding-top: 6.6rem;
+  padding-top: 0;
 }

@@ -10,7 +10,7 @@ import style from './styles.module.css';
 
 export default function PageHeader() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isMenuMobileOpen, setIsMenuMobileOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
   const { currentPage } = getPageInfos();
 
   const openMenu = useCallback(() => {
@@ -23,7 +23,7 @@ export default function PageHeader() {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      setIsMenuMobileOpen(window.scrollY < window.innerHeight);
+      setIsOpen(window.scrollY < window.innerHeight);
     });
   }, []);
 
@@ -33,7 +33,7 @@ export default function PageHeader() {
       as="header"
       className={clsx(
         style.headerWrapper,
-        { [style.isMenuMobileOpen]: isMenuMobileOpen },
+        { [style.isOpen]: isOpen },
         { [style.isHome]: currentPage === 'home' }
       )}
     >

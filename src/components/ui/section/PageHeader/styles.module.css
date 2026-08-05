@@ -11,25 +11,18 @@
   transition: transform var(--transition-medium);
 }
 
-.headerWrapper.isMenuMobileOpen {
+.headerWrapper.isOpen {
   transform: translate(-50%, 0);
 }
 
 @media screen and (min-width: 768px) {
-  .headerWrapper.isMenuMobileOpen {
-    transform: translate(0, 0);
+  .headerWrapper.isOpen {
+    transform: translate(-50%, 0);
   }
 }
 
 .headerWrapper.isHome {
   background-color: var(--color-transparent);
-}
-
-@media screen and (min-width: 768px) {
-  .headerWrapper {
-    position: static;
-    transform: translate(0, 0);
-  }
 }
 
 .headerInner {
