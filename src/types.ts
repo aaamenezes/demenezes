@@ -98,8 +98,10 @@ export interface PostProps {
   };
 }
 
-type DatoRecord<TypeName extends string, Fields> =
-  StructuredTextGraphQlResponseRecord & { __typename: TypeName } & Fields;
+type DatoRecord<
+  TypeName extends string,
+  Fields,
+> = StructuredTextGraphQlResponseRecord & { __typename: TypeName } & Fields;
 
 export type DatoBlock =
   | DatoRecord<
@@ -219,3 +221,14 @@ export interface PageProps {
 }
 
 export type Breakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
+
+export type Spacing =
+  | 'xxxs'
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xxxl';
