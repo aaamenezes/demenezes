@@ -4,8 +4,9 @@
   z-index: var(--z-index-fixed);
   top: 0;
   left: 50%;
-  padding-top: var(--spacing-sm);
-  padding-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: var(--color-neutral-100);
   background-color: var(--color-neutral-900);
   transition: transform var(--transition-medium);
@@ -23,12 +24,6 @@
 
 .headerWrapper.isHome {
   background-color: var(--color-transparent);
-}
-
-.headerInner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 @media screen and (min-width: 768px) {

@@ -29,7 +29,7 @@ export default function PageHeader() {
 
   return (
     <Wrapper
-      width="full"
+      width="xxxl"
       as="header"
       className={clsx(
         style.headerWrapper,
@@ -37,20 +37,18 @@ export default function PageHeader() {
         { [style.isHome]: currentPage === 'home' }
       )}
     >
-      <Wrapper className={style.headerInner} width="xxxl">
-        <h1>
-          <Logo />
-        </h1>
-        <Button
-          onClick={openMenu}
-          className={style.openMenuButton}
-          aria-label="Abrir menu de navegação"
-        >
-          <Menu />
-        </Button>
-        <Navigation isOpenMenu={isOpenMenu} toggleMenu={closeMenu} />
-        {/* <SearchWrapper /> */}
-      </Wrapper>
+      <h1>
+        <Logo />
+      </h1>
+      <Button
+        onClick={openMenu}
+        className={style.openMenuButton}
+        aria-label="Abrir menu de navegação"
+      >
+        <Menu />
+      </Button>
+      <Navigation isOpenMenu={isOpenMenu} toggleMenu={closeMenu} />
+      {/* <SearchWrapper /> */}
     </Wrapper>
   );
 }
