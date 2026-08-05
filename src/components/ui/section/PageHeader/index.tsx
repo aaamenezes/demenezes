@@ -30,6 +30,7 @@ export default function PageHeader() {
   return (
     <Wrapper
       width="full"
+      as="header"
       className={clsx(
         style.headerWrapper,
         { [style.isMenuMobileOpen]: isMenuMobileOpen },
