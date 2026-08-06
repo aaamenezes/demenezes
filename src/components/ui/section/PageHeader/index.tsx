@@ -4,13 +4,12 @@ import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
 import { getPageInfos } from '@/utils/getPageInfos';
 import { Menu } from 'lucide-react';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import Navigation from '../../container/Navigation';
 import style from './styles.module.css';
 
 export default function PageHeader() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
   const { currentPage } = getPageInfos();
 
   const openMenu = useCallback(() => {
@@ -24,18 +23,11 @@ export default function PageHeader() {
   const isHomePage = currentPage === 'home';
   const isPostPage = currentPage === 'post';
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setIsOpen(window.scrollY < window.innerHeight);
-    });
-  }, []);
-
   return (
     <Wrapper
       width="xxxl"
       as="header"
       className={clsx(style.headerWrapper, {
-        [style.isOpen]: isOpen,
         [style.withBackgroundColor]: !isHomePage && !isPostPage,
       })}
     >

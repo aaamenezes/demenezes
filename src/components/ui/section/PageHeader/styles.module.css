@@ -1,27 +1,11 @@
 .headerWrapper {
-  position: fixed;
-  transform: translate(-50%, -100%);
-  z-index: var(--z-index-fixed);
-  top: 0;
-  left: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform var(--transition-medium);
 }
 
 .headerWrapper.withBackgroundColor {
   background-color: var(--color-neutral-900);
-}
-
-.headerWrapper.isOpen {
-  transform: translate(-50%, 0);
-}
-
-@media screen and (min-width: 768px) {
-  .headerWrapper.withBackgroundColor.isOpen {
-    transform: translate(-50%, 0);
-  }
 }
 
 @media screen and (min-width: 768px) {

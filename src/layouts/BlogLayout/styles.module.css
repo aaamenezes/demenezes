@@ -1,0 +1,19 @@
+.fixedPageHeader {
+  position: fixed;
+  transform: translate(-50%, -100%);
+  z-index: var(--z-index-fixed);
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transition: transform var(--transition-medium);
+}
+
+.fixedPageHeader.isOpen {
+  transform: translate(-50%, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .fixedPageHeader.withBackgroundColor.isOpen {
+    transform: translate(-50%, 0);
+  }
+}
