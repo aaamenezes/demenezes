@@ -7,6 +7,10 @@
   font-weight: var(--font-weight-600);
   letter-spacing: var(--letter-spacing-sm);
   line-height: var(--line-height-xs);
+  color: var(--color-neutral-900);
+}
+
+.logoLink.colorInverse {
   color: var(--color-neutral-50);
 }
 
