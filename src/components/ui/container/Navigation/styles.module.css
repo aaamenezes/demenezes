@@ -44,8 +44,12 @@
 @media screen and (min-width: 768px) {
   .navLink {
     padding: 0.88rem;
-    color: var(--color-neutral-50);
+    color: var(--color-neutral-900);
     background-color: var(--color-transparent);
+  }
+  
+  .navLink.isDesktopColorInverse {
+    color: var(--color-neutral-50);
   }
 }
 
