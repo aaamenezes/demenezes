@@ -3,6 +3,7 @@ import { convertDate } from '@/utils/convertDate';
 import type { CSSProperties } from 'react';
 import PostCategory from '../../block/PostCategory';
 import style from './styles.module.css';
+import type { PostHeaderProps } from './types';
 
 export default function PostHeader({
   title,
@@ -12,15 +13,7 @@ export default function PostHeader({
   category,
   keywords,
   coverImage,
-}: {
-  title: string;
-  description: string;
-  date: string;
-  update: string;
-  category: string;
-  keywords: string;
-  coverImage: string;
-}) {
+}: PostHeaderProps) {
   const keywordsList = keywords.split(',').map(keyword => {
     const clearKeyword = keyword.trim();
     return (
