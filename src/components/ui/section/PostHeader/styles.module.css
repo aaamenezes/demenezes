@@ -1,4 +1,7 @@
 .postHeaderWrapper {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
   padding-top: var(--spacing-sm);
   padding-bottom: var(--spacing-xxl);
   background-image:

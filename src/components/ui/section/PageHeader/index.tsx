@@ -21,6 +21,9 @@ export default function PageHeader() {
     setIsOpenMenu(false);
   }, []);
 
+  const isHomePage = currentPage === 'home';
+  const isPostPage = currentPage === 'post';
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setIsOpen(window.scrollY < window.innerHeight);
@@ -31,14 +34,13 @@ export default function PageHeader() {
     <Wrapper
       width="xxxl"
       as="header"
-      className={clsx(
-        style.headerWrapper,
-        { [style.isOpen]: isOpen },
-        { [style.isHome]: currentPage === 'home' }
-      )}
+      className={clsx(style.headerWrapper, {
+        [style.isOpen]: isOpen,
+        [style.withBackgroundColor]: !isHomePage && !isPostPage,
+      })}
     >
       <h1>
-        <Logo />
+        <Logo isColorInverse={!isPostPage} />
       </h1>
       <Button
         onClick={openMenu}

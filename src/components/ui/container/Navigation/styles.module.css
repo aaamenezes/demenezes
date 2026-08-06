@@ -54,7 +54,7 @@
 }
 
 .navLink.isCurrentPage {
-  color: var(--color-neutral-100);
+  color: var(--color-neutral-50);
   background-color: var(--color-primary-700);
 }
 
