@@ -1,12 +1,11 @@
 import Head from '@/components/meta/Head';
 import ProgressBar from '@/components/ui/block/ProgressBar';
-import PageFooter from '@/components/ui/section/PageFooter';
-import PageHeader from '@/components/ui/section/PageHeader';
 import PostComments from '@/components/ui/section/PostComments';
 import PostContent from '@/components/ui/section/PostContent';
 import PostHeader from '@/components/ui/section/PostHeader';
 import RelatedPosts from '@/components/ui/section/RelatedPosts';
 import { getContent } from '@/external/datoCMS';
+import { getBlogLayout } from '@/layouts/getLayouts';
 import type { PostProps, PostSummaryProps } from '@/types';
 import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
@@ -34,7 +33,6 @@ export default function Post({
   return (
     <>
       <Head componentProps={{ post }} />
-      <PageHeader />
       <main style={{ marginBottom: '10%' }} ref={postContainerRef}>
         <PostHeader
           title={title}
@@ -50,10 +48,11 @@ export default function Post({
       <PostComments />
       <RelatedPosts postCategory={category} relatedPosts={relatedPosts} />
       <ProgressBar containerReference={postContainerRef} />
-      <PageFooter />
     </>
   );
 }
+
+Post.getLayout = getBlogLayout;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const { params, preview } = context;

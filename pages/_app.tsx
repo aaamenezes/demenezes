@@ -1,6 +1,8 @@
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import type { ReactElement, ReactNode } from 'react';
+import { useEffect } from 'react';
 import { pageview } from '../src/external/GoogleAnalytics/gtag';
 import GoogleAnalytics from '../src/external/GoogleAnalytics/index';
 
@@ -19,7 +21,15 @@ import '../styles/variables.css';
  */
 import '../styles/globals.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
 
   useEffect(() => {
@@ -32,9 +42,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
+  const getLayout = Component.getLayout ?? (page => page);
+
   return (
     <>
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
       <GoogleAnalytics />
     </>
   );

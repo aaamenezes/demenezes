@@ -2,8 +2,7 @@
 
 import Head from '@/components/meta/Head';
 import Wrapper from '@/components/ui/container/Wrapper';
-import PageFooter from '@/components/ui/section/PageFooter';
-import PageHeader from '@/components/ui/section/PageHeader';
+import { getBlogLayout } from '@/layouts/getLayouts';
 
 // const ReferencesContainer = styled.header`
 //   padding-top: 6.6rem;
@@ -150,7 +149,6 @@ export default function References({
   return (
     <>
       <Head componentProps={{}} />
-      <PageHeader />
       <Wrapper width="full">
         <Wrapper width="xxl">
           <h1>Em construção...</h1>
@@ -166,10 +164,11 @@ export default function References({
           {/* <ButtonsWrapper>{buttonsItems}</ButtonsWrapper> */}
         </Wrapper>
       </Wrapper>
-      <PageFooter />
     </>
   );
 }
+
+References.getLayout = getBlogLayout;
 
 export function getStaticProps() {
   // const referencesUrlAndType: ReferenceUrlAndType = await getContent(

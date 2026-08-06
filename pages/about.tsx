@@ -6,9 +6,8 @@ import ContactForm from '@/components/ui/section/AboutContactForm';
 import Greeting from '@/components/ui/section/AboutGreeting';
 import AboutHobbies from '@/components/ui/section/AboutHobbies';
 import StoryTitle from '@/components/ui/section/AboutStory';
-import PageFooter from '@/components/ui/section/PageFooter';
-import PageHeader from '@/components/ui/section/PageHeader';
 import { getContent } from '@/external/datoCMS';
+import { getBlogLayout } from '@/layouts/getLayouts';
 import type { AboutPageProps, ContactPageProps } from '@/types';
 
 export default function About({
@@ -37,7 +36,6 @@ export default function About({
           aboutPageContent,
         }}
       />
-      <PageHeader />
       <main>
         <Greeting
           greetingTitle={greetingTitle}
@@ -59,10 +57,11 @@ export default function About({
           <p>Muito prazer!</p>
         </Wrapper>
       </main>
-      <PageFooter />
     </>
   );
 }
+
+About.getLayout = getBlogLayout;
 
 export async function getStaticProps() {
   const aboutPageContent = await getContent('aboutPage', {});

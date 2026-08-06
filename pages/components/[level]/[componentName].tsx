@@ -4,11 +4,10 @@ import {
   levels,
 } from '@/components/ui/template/Components/data';
 import { type Level } from '@/components/ui/template/Components/types';
-import settings from '@/data/settings.json';
+import { getStoriesLayout } from '@/layouts/getLayouts';
 import { getDesignSystemValidPaths } from '@/utils/getDesignSystemValidPaths';
 import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
-import Head from 'next/head';
 
 interface ComponentsPageProps {
   level: Level;
@@ -19,17 +18,10 @@ export default function Components({
   level,
   componentName,
 }: ComponentsPageProps) {
-  const { src } = settings;
-  return (
-    <>
-      <Head>
-        <link rel="stylesheet" href={src.font} />
-        <link rel="stylesheet" href="/style/prism/vs-code.css" />
-      </Head>
-      <ComponentsScreen level={level} componentName={componentName} />
-    </>
-  );
+  return <ComponentsScreen level={level} componentName={componentName} />;
 }
+
+Components.getLayout = getStoriesLayout;
 
 function isValidLevel(level: string): level is Level {
   return levels.some(currentLevel => currentLevel === level);
