@@ -1,11 +1,11 @@
 import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
 import Wrapper from '@/components/ui/container/Wrapper';
-import type { PostProps } from '@/types';
 import Prism from 'prismjs';
 import { useEffect } from 'react';
 import style from './styles.module.css';
+import type { PostContentProps } from './types';
 
-export default function PostContent({ post }: { post: PostProps }) {
+export default function PostContent({ post }: PostContentProps) {
   useEffect(() => {
     Prism.highlightAll();
   }, [post]);
