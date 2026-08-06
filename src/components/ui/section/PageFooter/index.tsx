@@ -8,7 +8,7 @@ export default function PageFooter() {
     <Wrapper className={style.footerWrapper} width="full">
       <Wrapper className={style.footerInner} width="xxxl">
         <SocialMedia inverseColor />
-        <Logo />
+        <Logo isColorInverse />
       </Wrapper>
     </Wrapper>
   );
