@@ -26,13 +26,13 @@ export default function Navigation({
       <li
         className={clsx(style.navItem, {
           [style.isCurrentPage]: isCurrentPage,
+          [style.isDesktopColorInverse]: currentPage !== 'post',
         })}
         key={menu.title}
       >
         <Link
           className={clsx(style.navLink, {
             [style.isCurrentPage]: isCurrentPage,
-            [style.isDesktopColorInverse]: currentPage !== 'post',
           })}
           href={menu.url}
         >

@@ -47,8 +47,8 @@
     color: var(--color-neutral-900);
     background-color: var(--color-transparent);
   }
-  
-  .navLink.isDesktopColorInverse {
+
+  .navItem.isDesktopColorInverse .navLink {
     color: var(--color-neutral-50);
   }
 }
@@ -122,9 +122,13 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-neutral-100);
+    background-color: var(--color-neutral-900);
     transition: var(--transition-fast);
     pointer-events: none;
+  }
+  
+  .navItem.isDesktopColorInverse::after {
+    background-color: var(--color-neutral-50);
   }
 }
 
