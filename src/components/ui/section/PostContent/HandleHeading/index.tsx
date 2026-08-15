@@ -15,7 +15,7 @@ export default function HandleHeading({ node }: { node: Heading }) {
     return (
       <h2 className={clsx(style.heading, style.h2)} key={headingText} id={id}>
         <a className={style.headingLink} href={`#${id}`}>
-          {headingText}
+          <span className={style.headingLinkText}>{headingText}</span>
         </a>
       </h2>
     );
@@ -25,7 +25,7 @@ export default function HandleHeading({ node }: { node: Heading }) {
     return (
       <h3 className={clsx(style.heading, style.h3)} key={headingText} id={id}>
         <a className={style.headingLink} href={`#${id}`}>
-          {headingText}
+          <span className={style.headingLinkText}>{headingText}</span>
         </a>
       </h3>
     );
@@ -35,7 +35,7 @@ export default function HandleHeading({ node }: { node: Heading }) {
     return (
       <h4 className={clsx(style.heading, style.h4)} key={headingText} id={id}>
         <a className={style.headingLink} href={`#${id}`}>
-          {headingText}
+          <span className={style.headingLinkText}>{headingText}</span>
         </a>
       </h4>
     );
@@ -45,7 +45,7 @@ export default function HandleHeading({ node }: { node: Heading }) {
     return (
       <h5 className={clsx(style.heading, style.h5)} key={headingText} id={id}>
         <a className={style.headingLink} href={`#${id}`}>
-          {headingText}
+          <span className={style.headingLinkText}>{headingText}</span>
         </a>
       </h5>
     );
@@ -55,7 +55,7 @@ export default function HandleHeading({ node }: { node: Heading }) {
     return (
       <h6 className={clsx(style.heading, style.h6)} key={headingText} id={id}>
         <a className={style.headingLink} href={`#${id}`}>
-          {headingText}
+          <span className={style.headingLinkText}>{headingText}</span>
         </a>
       </h6>
     );
