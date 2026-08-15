@@ -1,20 +1,15 @@
 import { clsx } from '@/utils/clsx';
 import { ExternalLink } from 'lucide-react';
 import NextLink from 'next/link';
-import type { ReactNode } from 'react';
 import style from './styles.module.css';
+import type { LinkProps } from './types';
 
 export default function Link({
   href,
   children,
   isExternal = false,
   className = '',
-}: {
-  children: ReactNode;
-  href: string;
-  isExternal?: boolean;
-  className?: string;
-}) {
+}: LinkProps) {
   const isChildrenText = typeof children === 'string';
   const showExternalIcon = isExternal && isChildrenText;
 
@@ -23,17 +18,13 @@ export default function Link({
   });
 
   return (
-    <NextLink href={href} passHref legacyBehavior>
-      <a
-        className={linkClassNames}
-        target={isExternal ? '_blank' : '_self'}
-        rel="noreferrer"
-      >
-        {children}{' '}
-        {showExternalIcon && (
-          <ExternalLink size={16} style={{ verticalAlign: 'bottom' }} />
-        )}
-      </a>
+    <NextLink
+      href={href}
+      className={linkClassNames}
+      target={isExternal ? '_blank' : '_self'}
+      rel="noreferrer"
+    >
+      {children} {showExternalIcon && <ExternalLink size={16} />}
     </NextLink>
   );
 }

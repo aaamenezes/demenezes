@@ -5,7 +5,7 @@ import style from '../styles.module.css';
 export default function HandleLink({ node }: { node: LinkNode }) {
   return (
     <Link
-      className={style.textLink}
+      className={style.linkText}
       key={`${node.children[0].value} - ${node.url}`}
       href={node.url}
       isExternal={node.meta && node.meta[0].value === '_blank'}

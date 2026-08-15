@@ -100,12 +100,12 @@
   line-height: var(--line-height-sm);
 }
 
-.postContent .textLink {
+.postContent .linkText {
   text-decoration-line: underline;
 }
 
-.postContent .textLink:hover,
-.postContent .textLink:focus {
+.postContent .linkText:hover,
+.postContent .linkText:focus {
   text-decoration-thickness: 3px;
 }
 
