@@ -6,12 +6,9 @@ import Video from '@/components/ui/base/Video';
 import BlockQuote from '@/components/ui/block/BlockQuote';
 import Table from '@/components/ui/block/Table';
 import type { DatoBlock } from '@/types';
+import styles from '../styles.module.css';
 
-export default function HandleBlock({
-  record,
-}: {
-  record: DatoBlock;
-}) {
+export default function HandleBlock({ record }: { record: DatoBlock }) {
   const { __typename } = record;
   switch (__typename) {
     case 'ImageRecord':
@@ -23,6 +20,7 @@ export default function HandleBlock({
           height={record.image.height}
           alt={record.image.alt}
           title={record.image.title}
+          className={styles.image}
         />
       );
     case 'ExternalVideoRecord':

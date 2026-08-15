@@ -1,6 +1,6 @@
 import Link from '@/components/ui/base/Link';
 import type { Link as LinkNode } from 'datocms-structured-text-utils';
-import style from './styles.module.css';
+import style from '../styles.module.css';
 
 export default function HandleLink({ node }: { node: LinkNode }) {
   return (

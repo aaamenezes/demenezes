@@ -1,6 +1,7 @@
 import NextImage from 'next/image';
 import style from './styles.module.css';
 import { clsx } from '../../../../utils/clsx';
+import type { ImageProps } from './types';
 
 export default function Image({
   src,
@@ -8,15 +9,10 @@ export default function Image({
   height,
   alt,
   title,
-}: {
-  src: string;
-  width: number;
-  height: number;
-  alt: string;
-  title?: string;
-}) {
+  className = '',
+}: ImageProps) {
   return (
-    <figure>
+    <figure className={className}>
       <NextImage
         src={src}
         width={width}

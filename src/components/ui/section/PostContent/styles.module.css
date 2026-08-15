@@ -1,3 +1,143 @@
 .postContent {
   overflow: hidden;
 }
+
+.postContent > *:not(:last-child) {
+  margin-bottom: var(--spacing-lg);
+}
+
+.postContent .image {
+  margin: var(--spacing-xxxl) 0;
+}
+
+.postContent .code {
+  /* Sobrescrever Prism */
+  margin: var(--spacing-xl) 0 !important;
+}
+
+.postContent .heading {
+  margin: var(--spacing-xxxl) 0 var(--spacing-xxl);
+  scroll-margin-top: var(--spacing-lg);
+}
+
+.heading:first-child {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 425px) {
+  .postContent .heading {
+    scroll-margin-top: var(--spacing-xl);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .postContent .heading {
+    scroll-margin-top: var(--spacing-xxl);
+  }
+}
+
+.postContent .headingLink {
+  display: block;
+  text-decoration-color: var(--color-transparent);
+  text-decoration-style: dotted;
+  transition: var(--transition-fast);
+}
+
+.postContent .headingLink::after {
+  content: ' #';
+  font-size: 0.75em;
+  color: var(--color-neutral-500);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.postContent .headingLink:hover,
+.postContent .headingLink:focus {
+  text-decoration-color: var(--color-neutral-500);
+}
+
+.postContent .headingLink:hover::after {
+  opacity: 1;
+}
+
+.postContent .h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-sm);
+}
+
+.postContent .h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-xxs);
+  line-height: var(--line-height-sm);
+}
+
+.postContent .h4 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-sm);
+}
+
+.postContent .h5 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-sm);
+}
+
+.postContent .h6 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-sm);
+  line-height: var(--line-height-sm);
+}
+
+.postContent .textLink {
+  text-decoration-line: underline;
+}
+
+.postContent .textLink:hover,
+.postContent .textLink:focus {
+  text-decoration-thickness: 3px;
+}
+
+.postContent .ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.postContent .li {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-400);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
+}
+
+.postContent .li:not(:last-child) {
+  margin-bottom: var(--spacing-xs);
+}
+
+.postContent .li::before {
+  content: none;
+}
+
+.postContent .p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-400);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
+}
+
+.postContent .p code {
+  font-size: var(--font-size-xs);
+}

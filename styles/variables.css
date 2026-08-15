@@ -207,7 +207,7 @@
   --font-size-xxxl: calc(var(--font-size-base) * pow(var(--font-size-scale-ratio), 6));
 
   --font-size-button: var(--font-size-xxs);
-  --font-size-code: var(--font-size-xs);
+  --font-size-code: var(--font-size-xxs);
 
   /* ************************************************************************ */
   /* Font weight */

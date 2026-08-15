@@ -1,10 +1,19 @@
-.postCode {
+.pre {
+  /* sobrescrever Prism */
+  padding: var(--spacing-md) var(--spacing-lg) !important;
+  /* sobrescrever Prism */
+  border: none !important;
+}
+
+.code {
   word-break: break-word;
   white-space: break-spaces;
 
   font-family: var(--font-family-code);
-  font-size: var(--font-size-code);
+  /* sobrescrever Prism */
+  font-size: var(--font-size-code) !important;
   font-weight: var(--font-weight-code);
   letter-spacing: var(--letter-spacing-code);
+  /* sobrescrever Prism */
   line-height: var(--line-height-code) !important;
 }

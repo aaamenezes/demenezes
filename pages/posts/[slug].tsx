@@ -33,7 +33,7 @@ export default function Post({
   return (
     <>
       <Head componentProps={{ post }} />
-      <main style={{ marginBottom: '10%' }} ref={postContainerRef}>
+      <main ref={postContainerRef}>
         <PostHeader
           title={title}
           description={metaDescription}
@@ -68,8 +68,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     preview
   ).then(data =>
     data.data.allPosts.filter(
-      currentPost =>
-        currentPost.title !== post.data.post.title
+      currentPost => currentPost.title !== post.data.post.title
     )
   );
 

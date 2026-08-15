@@ -1,8 +1,8 @@
-import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
+import StructuredTextDatoCMS from '@/components/ui/section/PostContent/StructuredTextDatoCMS';
 import type { DatoBlock } from '@/types';
-import style from './styles.module.css';
 import type { ReactNode } from 'react';
 import type { StructuredTextGraphQlResponse } from 'react-datocms';
+import style from './styles.module.css';
 
 export default function BlockQuote({
   children,

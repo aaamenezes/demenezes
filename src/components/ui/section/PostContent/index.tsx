@@ -1,7 +1,7 @@
-import StructuredTextDatoCMS from '@/components/ui/container/StructuredTextDatoCMS';
 import Wrapper from '@/components/ui/container/Wrapper';
 import Prism from 'prismjs';
 import { useEffect } from 'react';
+import StructuredTextDatoCMS from './StructuredTextDatoCMS';
 import style from './styles.module.css';
 import type { PostContentProps } from './types';
 
