@@ -1,8 +1,7 @@
-import type { Spacing } from '@/types';
 import { clsx } from '@/utils/clsx';
-import { type CSSProperties, type ReactNode } from 'react';
+import { useMemo, type CSSProperties } from 'react';
 import style from './styles.module.css';
-import type { WrapperMaxWidth } from './types';
+import type { WrapperProps } from './types';
 
 export default function Wrapper({
   children,
@@ -12,21 +11,19 @@ export default function Wrapper({
   paddingY,
   as: Tag = 'div',
   className = '',
-}: {
-  children: ReactNode;
-  width: WrapperMaxWidth;
-  padding?: Spacing;
-  paddingX?: Spacing;
-  paddingY?: Spacing;
-  as?: keyof HTMLElementTagNameMap;
-  className?: string;
-}) {
+}: WrapperProps) {
+  const maxWidth = useMemo(() => {
+    if (width === 'full') return '100%';
+    if (width.endsWith('ch')) return width;
+    return `var(--media-${width})`;
+  }, [width]);
+
   return (
     <Tag
       className={clsx(style.wrapper, className)}
       style={
         {
-          '--max-width': width === 'full' ? '100%' : `var(--media-${width})`,
+          '--max-width': maxWidth,
           '--padding-x': `var(--spacing-${paddingX || padding})`,
           '--padding-y': `var(--spacing-${paddingY || padding})`,
         } as CSSProperties

@@ -11,7 +11,7 @@ export default function PostContent({ post }: PostContentProps) {
   }, [post]);
 
   return (
-    <Wrapper className={style.postContent} width="lg">
+    <Wrapper className={style.postContent} width="75ch">
       <StructuredTextDatoCMS data={post.data.post.content} />
     </Wrapper>
   );

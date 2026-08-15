@@ -87,6 +87,16 @@ export default function WrapperStory() {
           </p>
         </Wrapper>
       </Section>
+
+      <Section heading="Character width">
+        <Wrapper width="75ch">
+          <p>
+            Wrapper com largura máxima de 75 caracteres. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Laborum mollitia, at magni sequi
+            similique iusto quis non eos amet quisquam pariatur!
+          </p>
+        </Wrapper>
+      </Section>
     </>
   );
 }
