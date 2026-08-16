@@ -143,6 +143,6 @@
   line-height: var(--line-height-lg);
 }
 
-.postContent .p code {
+.postContent .p .inlineCode {
   font-size: var(--font-size-xs);
 }
