@@ -78,8 +78,8 @@ code:not([class*='language-']) {
   display: inline-block;
   padding: 0 0.4rem;
   border-radius: var(--border-radius);
-  color: var(--color-neutral-50);
-  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-000);
+  background-color: var(--color-neutral-300);
 }
 
 /* ************************************************************************** */

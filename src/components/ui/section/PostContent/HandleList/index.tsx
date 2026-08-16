@@ -1,20 +1,18 @@
-import type { List as ListNode } from 'datocms-structured-text-utils';
+import { Children, cloneElement, isValidElement, type ReactNode } from 'react';
 import styles from '../styles.module.css';
+import { clsx } from '@/utils/clsx';
 
-export default function HandleList({ node }: { node: ListNode }) {
+export default function HandleList({ children }: { children: ReactNode }) {
   return (
     <ul className={styles.ul}>
-      {node.children.map(child => {
-        const text =
-          child.children[0].children[0].type === 'span'
-            ? child.children[0].children[0].value
-            : '';
+      {Children.map(children, child => {
+        if (!isValidElement<{ className?: string }>(child)) {
+          return child;
+        }
 
-        return (
-          <li key={text} className={styles.li}>
-            {text}
-          </li>
-        );
+        return cloneElement(child, {
+          className: clsx(child?.props?.className || '', styles.li),
+        });
       })}
     </ul>
   );

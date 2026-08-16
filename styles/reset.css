@@ -119,7 +119,7 @@ ul {
 
 :where(ol, ul) > li::before {
   content: '\200B';
-  display: block;
+  display: inline-block;
   height: 0;
 }
 

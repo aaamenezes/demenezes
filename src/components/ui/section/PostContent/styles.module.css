@@ -135,6 +135,10 @@
   content: none;
 }
 
+.postContent .li > .p {
+  display: inline;
+}
+
 .postContent .p {
   font-family: var(--font-family-body);
   font-size: var(--font-size-sm);
