@@ -13,14 +13,10 @@ export default function Link({
   const isChildrenText = typeof children === 'string';
   const showExternalIcon = isExternal && isChildrenText;
 
-  const linkClassNames = clsx(style.link, className, {
-    [style.block]: !isChildrenText,
-  });
-
   return (
     <NextLink
       href={href}
-      className={linkClassNames}
+      className={clsx(style.link, className)}
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
     >
