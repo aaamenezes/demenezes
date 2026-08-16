@@ -13,18 +13,18 @@ function convertClassMapToClassName(classMap: ClassMap) {
   return truthyClassNames;
 }
 
-function convertStringToClassName(classString: string) {
-  return classString.trim();
+function convertStringToClassName(stringClassName: string) {
+  return stringClassName.trim();
 }
 
 export function clsx(...classNames: (string | ClassMap)[]) {
-  const classNamesList = classNames.flatMap(item => {
+  const classNameList = classNames.flatMap(item => {
     if (typeof item === 'string') return convertStringToClassName(item);
     return convertClassMapToClassName(item);
   });
 
-  const uniqueClassNamesList = [...new Set<string>(classNamesList)];
-  const classNamesString = uniqueClassNamesList.join(' ').trim();
-  const classNamesStringNoExtraSpaces = classNamesString.replace(/\s+/g, ' ');
-  return classNamesStringNoExtraSpaces;
+  const uniqueClassNameArray = [...new Set<string>(classNameList)];
+  const classNameString = uniqueClassNameArray.join(' ').trim();
+  const classNameStringNoExtraSpaces = classNameString.replace(/\s+/g, ' ');
+  return classNameStringNoExtraSpaces;
 }
