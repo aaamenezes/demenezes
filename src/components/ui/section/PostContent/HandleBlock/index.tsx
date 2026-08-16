@@ -45,7 +45,7 @@ export default function HandleBlock({ record }: { record: DatoBlock }) {
         />
       );
     case 'TextBoxRecord':
-      return <TextBox key={Math.random()} content={record.textBoxContent} />;
+      return <TextBox content={record.textBoxContent} />;
     case 'BlockquoteRecord':
       return (
         <BlockQuote
