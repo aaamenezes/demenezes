@@ -1,7 +1,7 @@
 import { clsx } from '@/utils/clsx';
 import { simplifyString } from '@/utils/simplifyString';
-import { isSpan } from 'datocms-structured-text-utils';
 import type { Heading } from 'datocms-structured-text-utils';
+import { isSpan } from 'datocms-structured-text-utils';
 import style from '../styles.module.css';
 
 export default function HandleHeading({ node }: { node: Heading }) {

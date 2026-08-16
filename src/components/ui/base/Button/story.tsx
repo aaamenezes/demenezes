@@ -1,6 +1,6 @@
+import Section from '@/components/designSysyem/Section';
 import Button from '@/components/ui/base/Button';
 import { Menu } from 'lucide-react';
-import Section from '@/components/designSysyem/Section';
 
 export default function ButtonStory() {
   return (

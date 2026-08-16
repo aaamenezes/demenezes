@@ -1,5 +1,5 @@
-import Table from '.';
 import Section from '@/components/designSysyem/Section';
+import Table from '.';
 
 export default function TableStory() {
   return (

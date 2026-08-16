@@ -1,5 +1,5 @@
-import BlockQuote from '.';
 import Section from '@/components/designSysyem/Section';
+import BlockQuote from '.';
 
 export default function BlockQuoteStory() {
   return (

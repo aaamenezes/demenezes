@@ -1,5 +1,5 @@
-import fs from 'fs';
 import type { SitemapItem } from '@/types';
+import fs from 'fs';
 
 const BASE_URL = 'https://demenezes.dev/';
 
@@ -14,8 +14,8 @@ export function generateSitemap(postsSitemapData: SitemapItem[]) {
       const updatedAt = _updatedAt
         ? `<lastmod>${_updatedAt}</lastmod>`
         : slug === ''
-        ? `<lastmod>${allSitemapData[0]._updatedAt}</lastmod>`
-        : '';
+          ? `<lastmod>${allSitemapData[0]._updatedAt}</lastmod>`
+          : '';
 
       return `  <url>
         <loc>${`${BASE_URL}${slug}`}</loc>

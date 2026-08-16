@@ -1,6 +1,6 @@
 import Link from '@/components/ui/base/Link';
-import style from './styles.module.css';
 import { clsx } from '@/utils/clsx';
+import style from './styles.module.css';
 
 export default function Logo({
   isColorInverse = false,

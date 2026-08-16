@@ -1,6 +1,6 @@
 import NextImage from 'next/image';
-import style from './styles.module.css';
 import { clsx } from '../../../../utils/clsx';
+import style from './styles.module.css';
 import type { ImageProps } from './types';
 
 export default function Image({

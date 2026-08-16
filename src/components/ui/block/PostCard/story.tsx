@@ -1,5 +1,5 @@
-import PostCard from '.';
 import Section from '@/components/designSysyem/Section';
+import PostCard from '.';
 
 export default function PostCardStory() {
   return (
