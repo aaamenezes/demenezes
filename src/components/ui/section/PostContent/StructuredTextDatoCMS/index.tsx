@@ -9,7 +9,7 @@ import {
 import type { StructuredTextGraphQlResponse } from 'react-datocms';
 import { renderNodeRule, StructuredText } from 'react-datocms';
 import HandleBlock from '../HandleBlock';
-import HandleBlockCode from '../HandleCode';
+import HandleBlockCode from '../HandleBlockCode';
 import HandleHeading from '../HandleHeading';
 import HandleLink from '../HandleLink';
 import HandleList from '../HandleList';
