@@ -1,5 +1,6 @@
 .blockQuote {
-  border-left: var(--border-width-block-quote) var(--border-style-block-quote) var(--color-primary-100);
+  border-left: var(--border-width-block-quote) var(--border-style-block-quote)
+    var(--color-primary-100);
   padding: 1rem 1rem 1rem 1.5rem;
 }
 

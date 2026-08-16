@@ -18,7 +18,7 @@
   list-style-type: none;
 }
 
-.alternativesList>li::before {
+.alternativesList > li::before {
   content: '\\200B';
   display: block;
   height: 0;

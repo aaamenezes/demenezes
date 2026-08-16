@@ -1,7 +1,7 @@
-import pluginJs from "@eslint/js";
-import pluginReact from "eslint-plugin-react";
-import globals from "globals";
-import tseslint from "typescript-eslint";
+import pluginJs from '@eslint/js';
+import pluginReact from 'eslint-plugin-react';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default tseslint.config([
@@ -16,13 +16,14 @@ export default tseslint.config([
   },
   pluginReact.configs.flat.recommended,
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     languageOptions: { globals: globals.browser },
-    settings: { react: { version: "detect" } },
+    settings: { react: { version: 'detect' } },
     rules: {
       // Permitir JSX tanto em arquivos .js quanto em .jsx
       'react/jsx-filename-extension': [
-        1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }
+        1,
+        { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
       ],
       // Não permitir uso de var, converter para let
       'no-var': 'error',
@@ -61,9 +62,9 @@ export default tseslint.config([
       // Não exigir prop types
       'react/prop-types': 'off',
       // Exigir palavra type nos imports de tipos
-      "@typescript-eslint/consistent-type-imports": "error",
+      '@typescript-eslint/consistent-type-imports': 'error',
       // Exigir palavra type nos exports de tipos
-      "@typescript-eslint/consistent-type-exports": "error",
-    }
+      '@typescript-eslint/consistent-type-exports': 'error',
+    },
   },
 ]);

@@ -33,17 +33,15 @@ export default function Head({
   const { titleBase, descriptionBase, keywordsBase } = metadata;
 
   const pageTitleFirstPart = isPostPage
-    ? post?.title ?? pages[currentPage].pageTitle
+    ? (post?.title ?? pages[currentPage].pageTitle)
     : pages[currentPage].pageTitle;
 
   const pageTitle = `${pageTitleFirstPart} | ${titleBase}`;
 
-  const seoTitle = isPostPage
-    ? post?.seoTitle || pageTitle
-    : pageTitle;
+  const seoTitle = isPostPage ? post?.seoTitle || pageTitle : pageTitle;
 
   const pageDescriptionFirstPart = isPostPage
-    ? post?.metaDescription ?? pages[currentPage].description
+    ? (post?.metaDescription ?? pages[currentPage].description)
     : pages[currentPage].description;
 
   const pageDescription =
@@ -55,16 +53,22 @@ export default function Head({
     switch (currentPage) {
       case 'home':
       case 'listing':
-        return componentProps.currentPosts?.[0]?.thumbnail.responsiveImage.src ?? '';
+        return (
+          componentProps.currentPosts?.[0]?.thumbnail.responsiveImage.src ?? ''
+        );
       case 'post':
         return post?.thumbnail.responsiveImage.src ?? '';
       case 'about':
-        return componentProps.aboutPageContent?.data.profileImage.profileImage
-          .responsiveImage.src ?? '';
+        return (
+          componentProps.aboutPageContent?.data.profileImage.profileImage
+            .responsiveImage.src ?? ''
+        );
       case 'contact':
-        return componentProps.contactContent?.data.profileImage.profileImage.responsiveImage.srcSet
-          .split(',')[3]
-          ?.split(' ')[0] ?? '';
+        return (
+          componentProps.contactContent?.data.profileImage.profileImage.responsiveImage.srcSet
+            .split(',')[3]
+            ?.split(' ')[0] ?? ''
+        );
       default:
         return '';
     }
@@ -75,7 +79,7 @@ export default function Head({
   const pageKeywords = pages[currentPage].keywords
     .join(', ')
     .concat(', ')
-    .concat(isPostPage ? post?.keywords ?? '' : '')
+    .concat(isPostPage ? (post?.keywords ?? '') : '')
     .concat(', ')
     .concat(keywordsBase.join(', '))
     .replace(', , ', ', ');
@@ -206,17 +210,14 @@ export default function Head({
       <meta name="theme-color" content="#ffffff" />
       <meta name="twitter:card" content="summary" />
       {post?._firstPublishedAt && (
-          <meta
-            property="article:published_time"
-            content={post._firstPublishedAt}
-          />
-        )}
+        <meta
+          property="article:published_time"
+          content={post._firstPublishedAt}
+        />
+      )}
 
       {post?._updatedAt && (
-        <meta
-          property="article:modified_time"
-          content={post._updatedAt}
-        />
+        <meta property="article:modified_time" content={post._updatedAt} />
       )}
       <meta
         name="google-adsense-account"

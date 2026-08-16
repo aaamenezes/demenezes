@@ -5,8 +5,10 @@
   padding: var(--spacing-xxl);
   margin-bottom: var(--spacing-xxxl);
   background-image:
-    linear-gradient(var(--color-neutral-400-opacity-heavy) 100%,
-      var(--color-neutral-400-opacity-heavy) 100%),
+    linear-gradient(
+      var(--color-neutral-400-opacity-heavy) 100%,
+      var(--color-neutral-400-opacity-heavy) 100%
+    ),
     var(--background-image);
   background-position: center;
   background-size: cover;

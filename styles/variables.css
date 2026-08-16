@@ -37,7 +37,7 @@
   /* ************************************************************************ */
   /* Color neutral */
 
-  --color-neutral-50: #ffffff; /* white */
+  --color-neutral-50: #ffffff;  /* white */
   --color-neutral-100: #fafafa; /* white */
   --color-neutral-200: #f5f5f5; /* gray */
   --color-neutral-300: #f0f0f0; /* gray */
@@ -51,21 +51,21 @@
   /* ************************************************************************ */
   /* Color neutral opacity light */
 
-  --color-neutral-50-opacity-light: #ffffff4D; /* white */
-  --color-neutral-100-opacity-light: #fafafa4D; /* white */
-  --color-neutral-200-opacity-light: #f5f5f54D; /* gray */
-  --color-neutral-300-opacity-light: #f0f0f04D; /* gray */
-  --color-neutral-400-opacity-light: #dedede4D; /* gray */
-  --color-neutral-500-opacity-light: #c2c2c24D; /* gray */
-  --color-neutral-600-opacity-light: #9797974D; /* gray */
-  --color-neutral-700-opacity-light: #5555554D; /* gray */
-  --color-neutral-800-opacity-light: #3232324D; /* black */
-  --color-neutral-900-opacity-light: #1212124D; /* black */
+  --color-neutral-50-opacity-light: #ffffff4d;  /* white */
+  --color-neutral-100-opacity-light: #fafafa4d; /* white */
+  --color-neutral-200-opacity-light: #f5f5f54d; /* gray */
+  --color-neutral-300-opacity-light: #f0f0f04d; /* gray */
+  --color-neutral-400-opacity-light: #dedede4d; /* gray */
+  --color-neutral-500-opacity-light: #c2c2c24d; /* gray */
+  --color-neutral-600-opacity-light: #9797974d; /* gray */
+  --color-neutral-700-opacity-light: #5555554d; /* gray */
+  --color-neutral-800-opacity-light: #3232324d; /* black */
+  --color-neutral-900-opacity-light: #1212124d; /* black */
 
   /* ************************************************************************ */
   /* Color neutral opacity medium */
 
-  --color-neutral-50-opacity-medium: #ffffff99; /* white */
+  --color-neutral-50-opacity-medium: #ffffff99;  /* white */
   --color-neutral-100-opacity-medium: #fafafa99; /* white */
   --color-neutral-200-opacity-medium: #f5f5f599; /* gray */
   --color-neutral-300-opacity-medium: #f0f0f099; /* gray */
@@ -79,16 +79,16 @@
   /* ************************************************************************ */
   /* Color neutral opacity heavy */
 
-  --color-neutral-50-opacity-heavy: #ffffffE6; /* white */
-  --color-neutral-100-opacity-heavy: #fafafaE6; /* white */
-  --color-neutral-200-opacity-heavy: #f5f5f5E6; /* gray */
-  --color-neutral-300-opacity-heavy: #f0f0f0E6; /* gray */
-  --color-neutral-400-opacity-heavy: #dededeE6; /* gray */
-  --color-neutral-500-opacity-heavy: #c2c2c2E6; /* gray */
-  --color-neutral-600-opacity-heavy: #979797E6; /* gray */
-  --color-neutral-700-opacity-heavy: #555555E6; /* gray */
-  --color-neutral-800-opacity-heavy: #323232E6; /* black */
-  --color-neutral-900-opacity-heavy: #121212E6; /* black */
+  --color-neutral-50-opacity-heavy: #ffffffe6;  /* white */
+  --color-neutral-100-opacity-heavy: #fafafae6; /* white */
+  --color-neutral-200-opacity-heavy: #f5f5f5e6; /* gray */
+  --color-neutral-300-opacity-heavy: #f0f0f0e6; /* gray */
+  --color-neutral-400-opacity-heavy: #dededee6; /* gray */
+  --color-neutral-500-opacity-heavy: #c2c2c2e6; /* gray */
+  --color-neutral-600-opacity-heavy: #979797e6; /* gray */
+  --color-neutral-700-opacity-heavy: #555555e6; /* gray */
+  --color-neutral-800-opacity-heavy: #323232e6; /* black */
+  --color-neutral-900-opacity-heavy: #121212e6; /* black */
 
   /* ************************************************************************ */
   /* Color primary */
@@ -107,16 +107,16 @@
   /* ************************************************************************ */
   /* Color primary opacity sm  */
 
-  --color-primary-50-opacity-sm: #fdeaed4D;
-  --color-primary-100-opacity-sm: #fbcacf4D;
-  --color-primary-200-opacity-sm: #e896954D;
-  --color-primary-300-opacity-sm: #db6d6c4D;
-  --color-primary-400-opacity-sm: #e34d484D;
-  --color-primary-500-opacity-sm: #e63c2e4D;
-  --color-primary-600-opacity-sm: #d8322d4D;
-  --color-primary-700-opacity-sm: #c628274D;
-  --color-primary-800-opacity-sm: #b921214D;
-  --color-primary-900-opacity-sm: #aa15154D;
+  --color-primary-50-opacity-sm: #fdeaed4d;
+  --color-primary-100-opacity-sm: #fbcacf4d;
+  --color-primary-200-opacity-sm: #e896954d;
+  --color-primary-300-opacity-sm: #db6d6c4d;
+  --color-primary-400-opacity-sm: #e34d484d;
+  --color-primary-500-opacity-sm: #e63c2e4d;
+  --color-primary-600-opacity-sm: #d8322d4d;
+  --color-primary-700-opacity-sm: #c628274d;
+  --color-primary-800-opacity-sm: #b921214d;
+  --color-primary-900-opacity-sm: #aa15154d;
 
   /* ************************************************************************ */
   /* Color primary opacity md  */
@@ -135,16 +135,16 @@
   /* ************************************************************************ */
   /* Color primary opacity lg  */
 
-  --color-primary-50-opacity-lg: #fdeaedE6;
-  --color-primary-100-opacity-lg: #fbcacfE6;
-  --color-primary-200-opacity-lg: #e89695E6;
-  --color-primary-300-opacity-lg: #db6d6cE6;
-  --color-primary-400-opacity-lg: #e34d48E6;
-  --color-primary-500-opacity-lg: #e63c2eE6;
-  --color-primary-600-opacity-lg: #d8322dE6;
-  --color-primary-700-opacity-lg: #c62827E6;
-  --color-primary-800-opacity-lg: #b92121E6;
-  --color-primary-900-opacity-lg: #aa1515E6;
+  --color-primary-50-opacity-lg: #fdeaede6;
+  --color-primary-100-opacity-lg: #fbcacfe6;
+  --color-primary-200-opacity-lg: #e89695e6;
+  --color-primary-300-opacity-lg: #db6d6ce6;
+  --color-primary-400-opacity-lg: #e34d48e6;
+  --color-primary-500-opacity-lg: #e63c2ee6;
+  --color-primary-600-opacity-lg: #d8322de6;
+  --color-primary-700-opacity-lg: #c62827e6;
+  --color-primary-800-opacity-lg: #b92121e6;
+  --color-primary-900-opacity-lg: #aa1515e6;
 
   /* ************************************************************************ */
   /* Color transparent, thanks Safari */
@@ -211,7 +211,7 @@
 
   /* ************************************************************************ */
   /* Font weight */
-  
+
   --font-weight-100: 100; /* thin       */
   --font-weight-200: 200; /* extralight */
   --font-weight-300: 300; /* light      */
@@ -279,9 +279,9 @@
   /* ************************************************************************ */
   /* Opacity */
 
-  --opacity-light: .3; /* 4D */
-  --opacity-medium: .6; /* 99 */
-  --opacity-heavy: .9; /* E6 */
+  --opacity-light: 0.3;  /* 4D */
+  --opacity-medium: 0.6; /* 99 */
+  --opacity-heavy: 0.9;  /* E6 */
 
   --opacity-button-disabled: var(--opacity-medium);
 

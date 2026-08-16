@@ -6,8 +6,8 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'www.datocms-assets.com',
-        port: ''
-      }
-    ]
-  }
-}
+        port: '',
+      },
+    ],
+  },
+};

@@ -3,9 +3,11 @@
   align-items: center;
   min-height: 80vh;
   background-image:
-    linear-gradient(270deg,
+    linear-gradient(
+      270deg,
       var(--color-neutral-900-opacity-medium),
-      var(--color-neutral-900-opacity-medium)),
+      var(--color-neutral-900-opacity-medium)
+    ),
     var(--background-image-xs);
   background-repeat: no-repeat;
   background-position: center;
@@ -16,9 +18,11 @@
 @media screen and (min-width: 425px) {
   .heroWrapper {
     background-image:
-      linear-gradient(270deg,
+      linear-gradient(
+        270deg,
         var(--color-neutral-900-opacity-medium),
-        var(--color-neutral-900-opacity-medium)),
+        var(--color-neutral-900-opacity-medium)
+      ),
       var(--background-image-sm);
   }
 }
@@ -26,9 +30,11 @@
 @media screen and (min-width: 768px) {
   .heroWrapper {
     background-image:
-      linear-gradient(270deg,
+      linear-gradient(
+        270deg,
         var(--color-neutral-900-opacity-medium) 55%,
-        var(--color-neutral-600-opacity-medium) 100%),
+        var(--color-neutral-600-opacity-medium) 100%
+      ),
       var(--background-image-md);
   }
 }
@@ -36,9 +42,11 @@
 @media screen and (min-width: 992px) {
   .heroWrapper {
     background-image:
-      linear-gradient(270deg,
+      linear-gradient(
+        270deg,
         var(--color-neutral-900-opacity-heavy) 55%,
-        var(--color-neutral-600-opacity-medium) 100%),
+        var(--color-neutral-600-opacity-medium) 100%
+      ),
       var(--background-image-lg);
   }
 }
@@ -46,9 +54,11 @@
 @media screen and (min-width: 1200px) {
   .heroWrapper {
     background-image:
-      linear-gradient(270deg,
+      linear-gradient(
+        270deg,
         var(--color-neutral-900-opacity-heavy) 55%,
-        var(--color-neutral-600-opacity-medium) 100%),
+        var(--color-neutral-600-opacity-medium) 100%
+      ),
       var(--background-image-xl);
   }
 }
@@ -56,9 +66,11 @@
 @media screen and (min-width: 1600px) {
   .heroWrapper {
     background-image:
-      linear-gradient(270deg,
+      linear-gradient(
+        270deg,
         var(--color-neutral-900-opacity-heavy) 55%,
-        var(--color-neutral-600-opacity-medium) 100%),
+        var(--color-neutral-600-opacity-medium) 100%
+      ),
       var(--background-image-xxl);
   }
 }
