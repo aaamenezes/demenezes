@@ -2,7 +2,7 @@ import { clsx } from '@/utils/clsx';
 import styles from './styles.module.css';
 import type { CodeProps } from './types';
 
-export default function Code({
+export default function BlockCode({
   children,
   language,
   className = '',

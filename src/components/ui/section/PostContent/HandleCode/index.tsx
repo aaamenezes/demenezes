@@ -1,4 +1,4 @@
-import Code from '@/components/ui/base/Code';
+import BlockCode from '@/components/ui/base/BlockCode';
 import type { Code as CodeNode } from 'datocms-structured-text-utils';
 import styles from '../styles.module.css';
 
@@ -10,8 +10,8 @@ export default function HandleCode({ node }: { node: CodeNode }) {
     : 'typescript';
 
   return (
-    <Code key={node.code} language={language} className={styles.code}>
+    <BlockCode key={node.code} language={language} className={styles.blockCode}>
       {node.code}
-    </Code>
+    </BlockCode>
   );
 }

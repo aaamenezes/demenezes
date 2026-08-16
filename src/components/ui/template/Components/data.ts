@@ -1,7 +1,7 @@
 import { keysOf } from '@/utils/object';
 import ButtonStory from '../../base/Button/story';
 import CmsIconStory from '../../base/CmsIcon/story';
-import CodeStory from '../../base/Code/story';
+import CodeStory from '../../base/BlockCode/story';
 import HiddenA11YStory from '../../base/HiddenA11Y/story';
 import IframeStory from '../../base/Iframe/story';
 import ImageStory from '../../base/Image/story';

@@ -1,18 +1,18 @@
 import Section from '@/components/designSysyem/Section';
-import Code from '@/components/ui/base/Code';
+import BlockCode from '@/components/ui/base/BlockCode';
 import { cssExample, htmlExample, jsExample } from './examples';
 
 export default function CodeStory() {
   return (
     <>
       <Section heading="HTML">
-        <Code language="html">{htmlExample}</Code>
+        <BlockCode language="html">{htmlExample}</BlockCode>
       </Section>
       <Section heading="CSS">
-        <Code language="css">{cssExample}</Code>
+        <BlockCode language="css">{cssExample}</BlockCode>
       </Section>
       <Section heading="JavaScript">
-        <Code language="javascript">{jsExample}</Code>
+        <BlockCode language="javascript">{jsExample}</BlockCode>
       </Section>
     </>
   );
