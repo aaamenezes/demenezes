@@ -39,7 +39,7 @@
     "typescript-plugin-css-modules": "^5.1.0"
   },
   "engines": {
-    "node": "22.x"
+    "node": "24.x"
   },
   "license": "MIT"
 }
