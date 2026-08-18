@@ -1,8 +1,8 @@
 import Quiz from '@/components/post/Quiz';
 import TextBox from '@/components/post/TextBox';
-import Iframe from '@/components/ui/base/Iframe';
 import Image from '@/components/ui/base/Image';
 import Video from '@/components/ui/base/Video';
+import YouTube from '@/components/ui/base/YouTube';
 import BlockQuote from '@/components/ui/block/BlockQuote';
 import Table from '@/components/ui/block/Table';
 import type { DatoBlock } from '@/types';
@@ -25,10 +25,10 @@ export default function HandleBlock({ record }: { record: DatoBlock }) {
       );
     case 'ExternalVideoRecord':
       return (
-        <Iframe
+        <YouTube
           key={record.id}
           title={record.video.title}
-          videoID={record.video.providerUid}
+          videoId={record.video.providerUid}
         />
       );
     case 'VideoRecord':

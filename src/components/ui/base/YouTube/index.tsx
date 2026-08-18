@@ -1,18 +1,18 @@
 import style from './styles.module.css';
 
-export default function Iframe({
+export default function YouTube({
   title,
-  videoID,
+  videoId,
 }: {
   title: string;
-  videoID: string;
+  videoId: string;
 }) {
   return (
     <iframe
-      className={style.iframe}
+      className={style.youTube}
       title={title}
       height="480"
-      src={`https://www.youtube.com/embed/${videoID}`}
+      src={`https://www.youtube.com/embed/${videoId}`}
       allow="accelerometer;clipboard-write;encrypted-media;picture-in-picture"
       allowFullScreen
     />

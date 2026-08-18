@@ -3,11 +3,11 @@ import ButtonStory from '../../base/Button/story';
 import CmsIconStory from '../../base/CmsIcon/story';
 import CodeStory from '../../base/BlockCode/story';
 import HiddenA11YStory from '../../base/HiddenA11Y/story';
-import IframeStory from '../../base/Iframe/story';
 import ImageStory from '../../base/Image/story';
 import InputStory from '../../base/Input/story';
 import LinkStory from '../../base/Link/story';
 import VideoStory from '../../base/Video/story';
+import YouTubeStory from '../../base/YouTube/story';
 import BlockQuoteStory from '../../block/BlockQuote/story';
 import LogoStory from '../../block/Logo/story';
 import PostCardStory from '../../block/PostCard/story';
@@ -40,11 +40,11 @@ export const componentsByLevelMap: ComponentsMapProps = {
     code: CodeStory,
     cmsIcon: CmsIconStory,
     hiddenA11Y: HiddenA11YStory,
-    iframe: IframeStory,
     image: ImageStory,
     input: InputStory,
     link: LinkStory,
     video: VideoStory,
+    youTube: YouTubeStory,
   },
   block: {
     blockQuote: BlockQuoteStory,

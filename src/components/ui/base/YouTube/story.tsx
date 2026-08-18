@@ -1,11 +1,11 @@
 import Section from '@/components/designSysyem/Section';
-import Iframe from '.';
+import YouTube from '.';
 
-export default function IframeStory() {
+export default function YouTubeStory() {
   return (
     <>
       <Section heading="YouTube">
-        <Iframe title="YouTube video player" videoID="dQw4w9WgXcQ" />
+        <YouTube title="YouTube video player" videoId="dQw4w9WgXcQ" />
       </Section>
     </>
   );
