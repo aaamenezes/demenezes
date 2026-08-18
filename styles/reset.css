@@ -60,7 +60,6 @@ body {
   /* 2 */
   touch-action: manipulation;
   /* 3 */
-  -webkit-tap-highlight-color: var(--color-transparent);
   color: var(--color-body);
   background-color: var(--background-color-body);
 }
@@ -323,7 +322,6 @@ input[type='submit'] {
   overflow: visible;
   /* 3 */
   text-transform: none;
-  -webkit-tap-highlight-color: var(--color-transparent);
 }
 
 :where(
