@@ -27,8 +27,8 @@
   background-size: 100% 108%;
 }
 
-.postCardTitle:hover a,
-.postCardTitle:focus-within a {
+.postCardTitle:hover .postCardTitleLink,
+.postCardTitle:focus-within .postCardTitleLink {
   color: var(--color-neutral-100);
 }
 
