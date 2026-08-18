@@ -1,17 +1,16 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
-  - [Testar validade e risco da propriedade -webkit-tap-highlight-color](#testar-validade-e-risco-da-propriedade--webkit-tap-highlight-color)
   - [Analisar se `clsx` deve aceitar valor nulo](#analisar-se-clsx-deve-aceitar-valor-nulo)
-  - [Melhorar `PostsWrapper`](#melhorar-postswrapper)
   - [Analisar necessidade de props key em `HandleBlock`](#analisar-necessidade-de-props-key-em-handleblock)
   - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
-  - [Padronizar `title` e `heading`](#padronizar-title-e-heading)
+  - [\[🚫 CRIAR COMPONENTE\] Padronizar `title` e `heading`](#-criar-componente-padronizar-title-e-heading)
+  - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
   - [Corrigir line-height de datas](#corrigir-line-height-de-datas)
   - [Analisar necessidade do componente PostCategory](#analisar-necessidade-do-componente-postcategory)
   - [Resolver links externos abrindo na mesma aba](#resolver-links-externos-abrindo-na-mesma-aba)
-  - [Aplicar React Portal no `Navigation`](#aplicar-react-portal-no-navigation)
   - [Testar mudança de retrato para paisagem no mobile](#testar-mudança-de-retrato-para-paisagem-no-mobile)
   - [Testar site mobile](#testar-site-mobile)
+  - [\[🚫 ATUALIZAR VERSOES\] Aplicar React Portal no `Navigation`](#-atualizar-versoes-aplicar-react-portal-no-navigation)
 - [Ajustes/criação de componentes com médias/grandes mudanças visuais](#ajustescriação-de-componentes-com-médiasgrandes-mudanças-visuais)
   - [Analisar necessidade do componente Quiz](#analisar-necessidade-do-componente-quiz)
   - [Melhorar componente input](#melhorar-componente-input)
@@ -24,20 +23,12 @@
   - [Implementar preview](#implementar-preview)
   - [Criar regra ESLint para proibir uso do `Object.`](#criar-regra-eslint-para-proibir-uso-do-object)
   - [Resolver erro de hydration](#resolver-erro-de-hydration)
-  - [Realizar atualização de versões](#realizar-atualização-de-versões)
+  - [Atualizar versões](#atualizar-versões)
   - [Implementar padrão composite](#implementar-padrão-composite)
   - [Aplicar SDD](#aplicar-sdd)
   - [Implementar testes](#implementar-testes)
 
 # Ajustes de código sem impacto visual
-
-## Testar validade e risco da propriedade -webkit-tap-highlight-color
-
-A propriedade `-webkit-tap-highlight-color` faz com que o touch no safari mobile não tenha cor. Testar se é necessário. Verificar em Safari mobile se é necessário mesmo ou pode ser removido.
-
-- css
-- cross-browser
-- acessibilidade
 
 ## Analisar se `clsx` deve aceitar valor nulo
 
@@ -57,17 +48,6 @@ Tem um exemplo desse uso em `src/components/ui/section/PostContent/HandleList/in
 
 - css
 - padrão
-
-## Melhorar `PostsWrapper`
-
-Esse componente hoje é dividido em `firstBlockPosts` e `secondBlockPosts` com o formulário de newsletter no meio. Além disso ele não tem story.
-
-Analisar se vale a pena manter assim, ou se removo o componente e monto ele manualmente quando precisar.
-
-Antes de saber o que fazer, aplicar composite na base.
-
-- story
-- component
 
 ## Analisar necessidade de props key em `HandleBlock`
 
@@ -112,16 +92,29 @@ Ou posso passar uma array de duas posições no argumento de clsx `clsx(style.my
 - css
 - padrão
 
-## Padronizar `title` e `heading`
+## [🚫 CRIAR COMPONENTE] Padronizar `title` e `heading`
 
-Trocar todos os títulos por:
+Localizar em todo o código por trechos que esteja escrito as 3 palavras abaixo, e reavaliar se o texto não deve ser trocada por outra palavra:
 
-- `heading` quando se referir (especificamente) ao texto que identifica uma seção ou conteúdo
-- `title` quando se referir (genericamente) a qualquer título (CardTitle, ModalTitle, PageTitle)
+- `heading` quando se referir (especificamente) ao texto que identifica uma seção ou conteúdo, é a tag HTML h1, h2... 
+- `title` quando se referir (genericamente) a qualquer título de componente (CardTitle, ModalTitle, PageTitle)
+
+Essas palavras devem ser usadas tanto no nome dos componentes, quanto className, variáveis, funções, etc.
 
 - organizar código
 - padrão
 - nomenclatura
+
+## [🚫 COMPOSITE] Melhorar `PostsWrapper`
+
+Esse componente hoje é dividido em `firstBlockPosts` e `secondBlockPosts` com o formulário de newsletter no meio. Além disso ele não tem story.
+
+Analisar se vale a pena manter assim, ou se removo o componente e monto ele manualmente quando precisar.
+
+Antes de saber o que fazer, aplicar composite na base.
+
+- story
+- component
 
 # Ajustes em componentes com pequens mudanças visuais
 
@@ -146,13 +139,6 @@ Ao final desse post http://localhost:3000/posts/map-javascript-array/#callback t
 
 - componente
 
-## Aplicar React Portal no `Navigation`
-
-Aguardar tarefa de atualização do next e react. Usar o react portal para o componente `Navigation` (mobile), e de busca desktop (quando houver).
-
-- react
-- componente
-
 ## Testar mudança de retrato para paisagem no mobile
 
 Se houver problema de ajuste de tamanho de fonte quando a tela mobile muda de retrato pra paisagem, ver o `text-size-adjust:100%`
@@ -166,6 +152,13 @@ Testar scroll vertical e horizontal, zoom, etc. Se der algo errado, a culpa é d
 
 - css
 - browser
+
+## [🚫 ATUALIZAR VERSOES] Aplicar React Portal no `Navigation`
+
+Aguardar tarefa de atualização do next e react. Usar o react portal para o componente `Navigation` (mobile), e de busca desktop (quando houver).
+
+- react
+- componente
 
 # Ajustes/criação de componentes com médias/grandes mudanças visuais
 
@@ -224,7 +217,6 @@ Criar componente de <Text></Text> e colocar no lugar de todos p, strong, span, h
 
 ## Criar componente de `Heading`
 
-
 Criar componente de <Heading></Heading> e colocar no lugar de todos h1h2h3h4h5h6, etc
 
 - padrão
@@ -261,7 +253,7 @@ Erro de hydration http://localhost:3000/posts/como-usar-foreach-javascript-exemp
 - react
 - next
 
-## Realizar atualização de versões
+## Atualizar versões
 
 Atualizar next pro 15, react pro 19, e depois react-dom pro 19.
 
