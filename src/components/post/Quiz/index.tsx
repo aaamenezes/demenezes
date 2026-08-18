@@ -40,7 +40,7 @@ export default function Quiz({
           const currentId = `${simplifyString(title)}-${index}`;
 
           return (
-            <li key={simplifyString(alternative)}>
+            <li className={style.alternativeItem} key={simplifyString(alternative)}>
               <input
                 className={clsx(style.alternativeInput, {
                   [style.isAnswered]: isAnswered,
@@ -52,8 +52,13 @@ export default function Quiz({
                 id={currentId}
                 value={index}
               />
-              <label htmlFor={currentId}>
+              <label className={style.alternativeLabel} htmlFor={currentId}>
                 <button
+                  className={clsx(style.alternativeButton, {
+                    [style.isAnswered]: isAnswered,
+                    [style.isCorrectResponse]:
+                      index === correctAlternativeIndex - 1,
+                  })}
                   onClick={() => setMarkedResponse(index)}
                   type="button"
                   disabled={isAnswered}
@@ -74,7 +79,7 @@ export default function Quiz({
           Responder
         </Button>
         {isAnswered && (
-          <p>
+          <p className={style.feedback}>
             {responseIsCorrect ? (
               <>
                 <span>Resposta certa!</span>
