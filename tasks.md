@@ -1,8 +1,6 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
   - [Testar validade e risco da propriedade -webkit-tap-highlight-color](#testar-validade-e-risco-da-propriedade--webkit-tap-highlight-color)
-  - [Seletor CSS de baixo desempenho](#seletor-css-de-baixo-desempenho)
   - [Analisar se `clsx` deve aceitar valor nulo](#analisar-se-clsx-deve-aceitar-valor-nulo)
-  - [Analisar possível melhoria no código do Componente `table`](#analisar-possível-melhoria-no-código-do-componente-table)
   - [Melhorar `PostsWrapper`](#melhorar-postswrapper)
   - [Analisar necessidade de props key em `HandleBlock`](#analisar-necessidade-de-props-key-em-handleblock)
   - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
@@ -41,13 +39,6 @@ A propriedade `-webkit-tap-highlight-color` faz com que o touch no safari mobile
 - cross-browser
 - acessibilidade
 
-## Seletor CSS de baixo desempenho
-
-Rever seletores CSS que terminam com tag html ou algo mto genérico
-
-- css
-- padrão
-
 ## Analisar se `clsx` deve aceitar valor nulo
 
 A função `clsx` não aceita `null`, `undefined`. Ela poderia aceitar e tratar isso lá dentro. Senão, obriga a fazer `myClassName || ''` na hora de chamar o método.
@@ -66,18 +57,6 @@ Tem um exemplo desse uso em `src/components/ui/section/PostContent/HandleList/in
 
 - css
 - padrão
-
-## Analisar possível melhoria no código do Componente `table`
-
-Hoje esse componente vem do CMS, mas preciso contatenar strings, e fica cheio de gambiarra: `/src/components/ui/block/Table/index.tsx`.
-
-http://localhost:3000/posts/valores-absolutos-relativos-css/
-
-Verificar se vale a pena ou não mexer nele, pelo mesmo motivo do componente quiz.
-
-- organizar código
-- componente
-- cms
 
 ## Melhorar `PostsWrapper`
 

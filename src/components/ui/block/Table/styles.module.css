@@ -9,7 +9,7 @@
   border-spacing: 0;
 }
 
-.table caption {
+.tableCaption {
   caption-side: bottom;
   /* visually hidden */
   position: absolute;
@@ -22,36 +22,36 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.table td,
-.table th {
+.tableData,
+.tableHeader {
   padding: var(--spacing-sm);
   text-align: center;
 }
 
-.table thead tr {
+.tableHead .tableRow {
   color: var(--color-neutral-50);
   background-color: var(--color-neutral-700);
 }
 
-.table thead tr:hover {
+.tableHead .tableRow:hover {
   color: var(--color-neutral-100);
   background-color: var(--color-primary-800);
 }
 
-.table tbody tr:nth-child(even) {
+.tableBody .tableRow:nth-child(even) {
   background-color: var(--color-neutral-200);
 }
 
-.table tbody tr:hover {
+.tableBody .tableRow:hover {
   color: var(--color-neutral-50);
   background-color: var(--color-primary-300);
 }
 
-.table tfoot tr {
+.tableFoot .tableRow {
   background-color: var(--color-neutral-400);
 }
 
-.table tfoot tr:hover {
+.tableFoot .tableRow:hover {
   color: var(--color-neutral-50);
   background-color: var(--color-primary-400);
 }
