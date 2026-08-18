@@ -2,15 +2,12 @@
   border-left: var(--border-width-block-quote) var(--border-style-block-quote)
     var(--color-primary-100);
   padding: 1rem 1rem 1rem 1.5rem;
+  font-style: italic;
 }
 
-.blockQuote footer::before {
+.postQuoteAuthor::before {
   content: '—';
   margin-right: 1rem;
-}
-
-.blockQuote *:not(footer) {
-  font-style: italic;
 }
 
 .postQuoteAuthor {
@@ -20,4 +17,5 @@
   font-weight: var(--font-weight-500);
   letter-spacing: var(--letter-spacing-xs);
   line-height: var(--line-height-md);
+  font-style: normal;
 }
