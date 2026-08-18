@@ -10,21 +10,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-xxxl);
 }
 
 @media screen and (min-width: 768px) {
   .footerInner {
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-}
-
-.footerInner > *:not(:last-child) {
-  margin-bottom: var(--spacing-xxxl);
-}
-
-@media screen and (min-width: 768px) {
-  .footerInner > *:not(:last-child) {
-    margin-bottom: 0;
   }
 }

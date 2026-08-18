@@ -1,7 +1,8 @@
 .socialMediaList {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--spacing-lg);
   margin: 0;
 }
