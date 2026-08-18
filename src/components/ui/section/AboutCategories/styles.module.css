@@ -53,7 +53,8 @@
   box-shadow: var(--box-shadow-lg);
 }
 
-.categoryItem:hover > * {
+.categoryItem:hover .categoryItemTitle,
+.categoryItem:hover .categoryText {
   opacity: 1;
 }
 
