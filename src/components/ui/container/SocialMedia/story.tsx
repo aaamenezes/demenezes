@@ -7,6 +7,12 @@ export default function SocialMediaStory() {
       <Section heading="Padrão">
         <SocialMedia />
       </Section>
+      <Section
+        heading="Cor inversa"
+        backgroundColor="var(--color-neutral-900)"
+      >
+        <SocialMedia inverseColor />
+      </Section>
     </>
   );
 }

@@ -149,23 +149,28 @@
   "socialMedia": [
     {
       "title": "github",
-      "url": "https://github.com/aaamenezes"
+      "url": "https://github.com/aaamenezes",
+      "color": "#9BA5AA"
     },
     {
       "title": "linkedin",
-      "url": "https://www.linkedin.com/in/aaamenezes"
+      "url": "https://www.linkedin.com/in/aaamenezes",
+      "color": "#0073AF"
     },
     {
       "title": "twitter",
-      "url": "https://twitter.com/aaamenezes"
+      "url": "https://twitter.com/aaamenezes",
+      "color": "#4EA6E9"
     },
     {
       "title": "medium",
-      "url": "https://medium.com/@demenezes"
+      "url": "https://medium.com/@demenezes",
+      "color": "#9BA5AA"
     },
     {
       "title": "devto",
-      "url": "https://dev.to/demenezes"
+      "url": "https://dev.to/demenezes",
+      "color": "#9BA5AA"
     }
   ],
   "src": {

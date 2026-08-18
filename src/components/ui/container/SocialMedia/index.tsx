@@ -2,7 +2,7 @@ import Link from '@/components/ui/base/Link';
 import settings from '@/data/settings.json';
 import type { IconType } from 'react-icons';
 import { BiLogoDevTo } from 'react-icons/bi';
-import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import style from './styles.module.css';
 
@@ -17,14 +17,14 @@ export default function SocialMedia({
     twitter: FaXTwitter,
     medium: FaMedium,
     devto: BiLogoDevTo,
+    instagram: FaInstagram,
   };
-
-  const socialMediaColor = inverseColor
-    ? 'var(--color-neutral-100)'
-    : 'var(--color-neutral-900)';
 
   const socialElements = settings.socialMedia.map(socialMedia => {
     const Icon = socialMediaMap[socialMedia.title];
+    const color = inverseColor
+      ? 'var(--color-neutral-100)'
+      : (socialMedia.color ?? 'var(--color-neutral-900)');
 
     return (
       <li className={style.socialMediaItem} key={socialMedia.title}>
@@ -35,11 +35,7 @@ export default function SocialMedia({
           isExternal
         >
           {Icon && (
-            <Icon
-              size={24}
-              color={socialMediaColor}
-              className={style.socialMediaIcon}
-            />
+            <Icon size={24} color={color} className={style.socialMediaIcon} />
           )}
           <span className={style.socialMediaLabel}>{socialMedia.title}</span>
         </Link>
