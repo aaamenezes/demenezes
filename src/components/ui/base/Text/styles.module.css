@@ -1,0 +1,43 @@
+.font-family-heading   { font-family: var(--font-family-heading);   }
+.font-family-body      { font-family: var(--font-family-body);      }
+.font-family-monospace { font-family: var(--font-family-monospace); }
+
+.font-size-xxxs { font-size: var(--font-size-xxs);  }
+.font-size-xxs  { font-size: var(--font-size-xxs);  }
+.font-size-xs   { font-size: var(--font-size-xs);   }
+.font-size-sm   { font-size: var(--font-size-sm);   }
+.font-size-md   { font-size: var(--font-size-md);   }
+.font-size-lg   { font-size: var(--font-size-lg);   }
+.font-size-xl   { font-size: var(--font-size-xl);   }
+.font-size-xxl  { font-size: var(--font-size-xxl);  }
+.font-size-xxxl { font-size: var(--font-size-xxxl); }
+
+.font-weight-100 { font-weight: var(--font-weight-100); }
+.font-weight-200 { font-weight: var(--font-weight-200); }
+.font-weight-300 { font-weight: var(--font-weight-300); }
+.font-weight-400 { font-weight: var(--font-weight-400); }
+.font-weight-500 { font-weight: var(--font-weight-500); }
+.font-weight-600 { font-weight: var(--font-weight-600); }
+.font-weight-700 { font-weight: var(--font-weight-700); }
+.font-weight-800 { font-weight: var(--font-weight-800); }
+.font-weight-900 { font-weight: var(--font-weight-900); }
+
+.letter-spacing-xxxs { letter-spacing: var(--letter-spacing-xxxs); }
+.letter-spacing-xxs  { letter-spacing: var(--letter-spacing-xxs);  }
+.letter-spacing-xs   { letter-spacing: var(--letter-spacing-xs);   }
+.letter-spacing-sm   { letter-spacing: var(--letter-spacing-sm);   }
+.letter-spacing-md   { letter-spacing: var(--letter-spacing-md);   }
+.letter-spacing-lg   { letter-spacing: var(--letter-spacing-lg);   }
+.letter-spacing-xl   { letter-spacing: var(--letter-spacing-xl);   }
+.letter-spacing-xxl  { letter-spacing: var(--letter-spacing-xxl);  }
+.letter-spacing-xxxl { letter-spacing: var(--letter-spacing-xxxl); }
+
+.line-height-xxxs { line-height: var(--line-height-xxxs); }
+.line-height-xxs  { line-height: var(--line-height-xxs);  }
+.line-height-xs   { line-height: var(--line-height-xs);   }
+.line-height-sm   { line-height: var(--line-height-sm);   }
+.line-height-md   { line-height: var(--line-height-md);   }
+.line-height-lg   { line-height: var(--line-height-lg);   }
+.line-height-xl   { line-height: var(--line-height-xl);   }
+.line-height-xxl  { line-height: var(--line-height-xxl);  }
+.line-height-xxxl { line-height: var(--line-height-xxxl); }
