@@ -1,9 +1,11 @@
+import { entriesOf } from './object';
+
 interface ClassMap {
   [key: string]: boolean;
 }
 
 function convertClassMapToClassName(classMap: ClassMap) {
-  const entries = Object.entries(classMap);
+  const entries = entriesOf(classMap);
 
   const truthyClassNames = entries.flatMap(entry => {
     const [className, condition] = entry;

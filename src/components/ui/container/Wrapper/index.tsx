@@ -10,7 +10,7 @@ export default function Wrapper({
   paddingX,
   paddingY,
   as: Tag = 'div',
-  className = '',
+  className,
 }: WrapperProps) {
   const maxWidth = useMemo(() => {
     if (width === 'full') return '100%';
@@ -20,7 +20,7 @@ export default function Wrapper({
 
   return (
     <Tag
-      className={clsx(style.wrapper, className)}
+      className={clsx(style.wrapper, className || '')}
       style={
         {
           '--max-width': maxWidth,

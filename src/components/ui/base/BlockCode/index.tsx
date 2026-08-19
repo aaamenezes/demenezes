@@ -5,7 +5,7 @@ import type { CodeProps } from './types';
 export default function BlockCode({
   children,
   language,
-  className = '',
+  className,
 }: CodeProps) {
   return (
     <pre className={clsx(`language-${language}`, styles.pre, className)}>

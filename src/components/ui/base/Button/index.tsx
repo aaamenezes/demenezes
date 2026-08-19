@@ -9,7 +9,7 @@ export default function Button({
   type = 'button',
   disabled = false,
   name = '',
-  className = '',
+  className,
   id = '',
 }: ButtonProps) {
   return (

@@ -6,7 +6,7 @@ export default function Input({
   name,
   placeholder,
   type = 'text',
-  className = '',
+  className,
   id = '',
   required = false,
   disabled = false,

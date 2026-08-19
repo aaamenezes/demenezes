@@ -8,7 +8,7 @@ export default function Link({
   href,
   children,
   isExternal = false,
-  className = '',
+  className,
 }: LinkProps) {
   const isChildrenText = typeof children === 'string';
   const showExternalIcon = isExternal && isChildrenText;

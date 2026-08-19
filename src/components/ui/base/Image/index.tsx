@@ -9,7 +9,7 @@ export default function Image({
   height,
   alt,
   title,
-  className = '',
+  className,
 }: ImageProps) {
   return (
     <figure className={className}>
