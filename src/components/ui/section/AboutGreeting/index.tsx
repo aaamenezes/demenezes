@@ -1,3 +1,4 @@
+import Text from '@/components/ui/base/Text';
 import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
 import Wrapper from '@/components/ui/container/Wrapper';
 import NextImage from 'next/image';
@@ -44,8 +45,10 @@ export default function Greeting({
       <h1>
         <HiddenA11Y>{greetingTitle}</HiddenA11Y>
       </h1>
-      <h2 className={style.greetingTitle}>{greetingSubtitle}</h2>
-      <p className={style.greetingText}>{greetingDescription}</p>
+      <h2 className={style.greetingSubtitle}>{greetingSubtitle}</h2>
+      <Text lineHeight="md" className={style.greetingDescription}>
+        {greetingDescription}
+      </Text>
     </Wrapper>
   );
 }

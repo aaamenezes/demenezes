@@ -18,7 +18,7 @@
   }
 }
 
-.greetingTitle {
+.greetingSubtitle {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-700);
@@ -26,17 +26,12 @@
   line-height: var(--line-height-sm);
 }
 
-.greetingText {
+.greetingDescription {
   text-align: center;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-400);
-  letter-spacing: var(--letter-spacing-xs);
-  line-height: var(--line-height-md);
 }
 
 @media screen and (min-width: 768px) {
-  .greetingText {
+  .greetingDescription {
     text-align: left;
   }
 }
