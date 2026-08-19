@@ -2,14 +2,6 @@
   margin-bottom: var(--spacing-lg);
 }
 
-.categoriesTitle {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-700);
-  letter-spacing: var(--letter-spacing-xs);
-  line-height: var(--line-height-sm);
-}
-
 .categoriesList {
   display: grid;
   grid-template-columns: 1fr;
@@ -66,11 +58,6 @@
   gap: var(--spacing-sm);
   margin-top: 0;
   margin-bottom: 1rem;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-700);
-  letter-spacing: var(--letter-spacing-xs);
-  line-height: var(--line-height-sm);
 }
 
 @media screen and (min-width: 768px) {

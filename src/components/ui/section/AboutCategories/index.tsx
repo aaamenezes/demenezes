@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import CmsIcon from '../../base/CmsIcon';
@@ -18,10 +19,10 @@ export default function AboutCategories({
     ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => {
       return (
         <li className={style.categoryItem} key={categoryItemTitle}>
-          <h3 className={style.categoryItemTitle}>
+          <Heading level={3} size="lg" className={style.categoryItemTitle}>
             <CmsIcon name={categoryItemIcon} />
             <Text as="span">{categoryItemTitle}</Text>
-          </h3>
+          </Heading>
           <Text className={style.categoryText}>{categoryItemDescription}</Text>
         </li>
       );
@@ -31,7 +32,7 @@ export default function AboutCategories({
   return (
     <Wrapper as="section" width="xl">
       <header className={style.categoriesHeader}>
-        <h2 className={style.categoriesTitle}>{categoriesTitle}</h2>
+        <Heading>{categoriesTitle}</Heading>
       </header>
 
       <ul className={style.categoriesList}>{CategoryItems}</ul>
