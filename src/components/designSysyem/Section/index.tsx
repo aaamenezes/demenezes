@@ -1,4 +1,5 @@
 import { clsx } from '@/utils/clsx';
+import Heading from '@/components/ui/base/Heading';
 import style from './styles.module.css';
 
 export default function Section({
@@ -19,7 +20,7 @@ export default function Section({
       className={style.section}
       style={{ width: `${width}%`, backgroundColor }}
     >
-      <h2 className={style.sectionTitle}>{heading}</h2>
+      <Heading className={style.sectionTitle}>{heading}</Heading>
       <div
         className={clsx(style.sectionContent, {
           [style.flex]: Boolean(direction),

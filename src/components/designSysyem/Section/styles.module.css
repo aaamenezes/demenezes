@@ -1,13 +1,13 @@
 .section {
   padding: 1rem;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: var(--color-neutral-50);
 }
 
 .sectionTitle {
   text-align: left;
   margin-bottom: 1rem;
-  color: #aaaaaa;
+  color: var(--color-neutral-500);
 }
 
 .sectionContent.flex {
