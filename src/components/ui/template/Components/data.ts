@@ -1,11 +1,12 @@
 import { keysOf } from '@/utils/object';
+import CodeStory from '../../base/BlockCode/story';
 import ButtonStory from '../../base/Button/story';
 import CmsIconStory from '../../base/CmsIcon/story';
-import CodeStory from '../../base/BlockCode/story';
 import HiddenA11YStory from '../../base/HiddenA11Y/story';
 import ImageStory from '../../base/Image/story';
 import InputStory from '../../base/Input/story';
 import LinkStory from '../../base/Link/story';
+import TextStory from '../../base/Text/story';
 import VideoStory from '../../base/Video/story';
 import YouTubeStory from '../../base/YouTube/story';
 import BlockQuoteStory from '../../block/BlockQuote/story';
@@ -43,6 +44,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     image: ImageStory,
     input: InputStory,
     link: LinkStory,
+    text: TextStory,
     video: VideoStory,
     youTube: YouTubeStory,
   },
