@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
 import Wrapper from '@/components/ui/container/Wrapper';
@@ -42,10 +43,10 @@ export default function Greeting({
           height={height}
         />
       </div>
-      <h1>
+      <Heading level={1}>
         <HiddenA11Y>{greetingTitle}</HiddenA11Y>
-      </h1>
-      <h2 className={style.greetingSubtitle}>{greetingSubtitle}</h2>
+      </Heading>
+      <Heading>{greetingSubtitle}</Heading>
       <Text lineHeight="md" className={style.greetingDescription}>
         {greetingDescription}
       </Text>
