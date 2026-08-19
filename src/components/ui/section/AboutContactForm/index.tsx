@@ -1,3 +1,4 @@
+import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
 import type { ContactPageProps } from '@/types';
@@ -11,9 +12,9 @@ export default function ContactForm({
   const { mailchimpIframeSrc } = settings.form.contact;
   const { contactTitle, contactText } = contactContent.data.contactSection;
   const textElements = contactText.split('\n').map(text => (
-    <p key={text} className={style.contactText}>
+    <Text key={text} lineHeight="md">
       {text}
-    </p>
+    </Text>
   ));
 
   return (
