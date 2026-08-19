@@ -1,3 +1,4 @@
+import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import HighlightText from '@/components/ui/section/AboutHighlightText';
 import style from './styles.module.css';
@@ -29,7 +30,7 @@ export default function AboutStory({
         <HighlightText key={text}>{text}</HighlightText>
       ) : (
         <Wrapper width="md" key={text}>
-          <p className={style.storyText}>{text}</p>
+          <Text lineHeight="md">{text}</Text>
         </Wrapper>
       )
     );
@@ -38,7 +39,7 @@ export default function AboutStory({
     <>
       <Wrapper width="md">
         <h2 className={style.storyTitle}>{historyTitle}</h2>
-        <p className={style.storyText}>{firstParagraph}</p>
+        <Text lineHeight="md">{firstParagraph}</Text>
       </Wrapper>
       {remainingText}
     </>
