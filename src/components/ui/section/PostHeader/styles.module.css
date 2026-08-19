@@ -32,11 +32,6 @@
 
 .postDescription {
   text-align: center;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-400);
-  letter-spacing: var(--letter-spacing-xs);
-  line-height: var(--line-height-md);
 }
 
 .postHeaderFooter {
@@ -53,11 +48,6 @@
   display: block;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-500);
-  letter-spacing: var(--letter-spacing-xxl);
-  line-height: var(--line-height-xs);
 }
 
 @media screen and (min-width: 768px) {

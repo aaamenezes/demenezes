@@ -31,20 +31,41 @@ export default function PostHeader({
     >
       <Wrapper className={style.postHeaderInner} width="xxxl">
         <h1 className={style.postTitle}>{title}</h1>
-        <p className={style.postDescription}>{description}</p>
+        <Text
+          family="heading"
+          size="sm"
+          lineHeight="md"
+          className={style.postDescription}
+        >
+          {description}
+        </Text>
         <footer className={style.postHeaderFooter}>
-          <span className={style.postDate}>
+          <Text
+            as="span"
+            family="heading"
+            size="xxs"
+            weight={500}
+            letterSpacing="xxl"
+            className={style.postDate}
+          >
             {update ? `Publicado em ${convertDate(date)}` : convertDate(date)}
-          </span>
+          </Text>
           {update > date && (
             <>
               <Text as="span" ariaHidden={true}>
                 {' '}
                 -{' '}
               </Text>
-              <span className={style.postDate}>
+              <Text
+                as="span"
+                family="heading"
+                size="xxs"
+                weight={500}
+                letterSpacing="xxl"
+                className={style.postDate}
+              >
                 {`Atualizado em ${convertDate(update)}`}
-              </span>
+              </Text>
             </>
           )}
           <ul className={style.keywordsList}>{keywordsList}</ul>
