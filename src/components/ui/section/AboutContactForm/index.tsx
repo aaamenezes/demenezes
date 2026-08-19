@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
@@ -19,7 +20,7 @@ export default function ContactForm({
 
   return (
     <Wrapper className={style.contactForm} width="md">
-      <h2 className={style.contactTitle}>{contactTitle}</h2>
+      <Heading className={style.contactTitle}>{contactTitle}</Heading>
       {textElements}
       <iframe
         className={style.mailchimpContactForm}
