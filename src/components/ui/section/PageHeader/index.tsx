@@ -1,4 +1,5 @@
 import Button from '@/components/ui/base/Button';
+import Heading from '@/components/ui/base/Heading';
 import Logo from '@/components/ui/block/Logo';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
@@ -31,9 +32,9 @@ export default function PageHeader() {
         [style.withBackgroundColor]: !isHomePage && !isPostPage,
       })}
     >
-      <h1>
+      <Heading level={1}>
         <Logo isColorInverse={!isPostPage} />
-      </h1>
+      </Heading>
       <Button
         onClick={openMenu}
         className={style.openMenuButton}
