@@ -161,13 +161,13 @@
   /* 400 e 700; normal e italic */
   --font-family-ubuntu-mono: 'Ubuntu Mono', sans-serif;
 
-  --font-family-button: var(--font-family-montserrat);
-  --font-family-code: var(--font-family-ubuntu-mono);
-
   --font-family-heading: var(--font-family-montserrat);
   --font-family-body: var(--font-family-vollkorn);
   --font-family-monospace: var(--font-family-ubuntu-mono);
-
+  
+  --font-family-button: var(--font-family-heading);
+  --font-family-code: var(--font-family-monospace);
+  
   /*
   Fontes já instaladas na maioria dos sistemas operacionais
   https://modernfontstacks.com/
