@@ -22,7 +22,7 @@ export default function AboutCategories({
             <CmsIcon name={categoryItemIcon} />
             <Text as="span">{categoryItemTitle}</Text>
           </h3>
-          <p className={style.categoryText}>{categoryItemDescription}</p>
+          <Text className={style.categoryText}>{categoryItemDescription}</Text>
         </li>
       );
     }
