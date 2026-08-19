@@ -1,4 +1,5 @@
 import Link from '@/components/ui/base/Link';
+import Text from '@/components/ui/base/Text';
 import settings from '@/data/settings.json';
 import type { IconType } from 'react-icons';
 import { BiLogoDevTo } from 'react-icons/bi';
@@ -37,7 +38,15 @@ export default function SocialMedia({
           {Icon && (
             <Icon size={24} color={color} className={style.socialMediaIcon} />
           )}
-          <span className={style.socialMediaLabel}>{socialMedia.title}</span>
+          <Text
+            as="span"
+            family="heading"
+            size="xxs"
+            weight={500}
+            className={style.socialMediaLabel}
+          >
+            {socialMedia.title}
+          </Text>
         </Link>
       </li>
     );
