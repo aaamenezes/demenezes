@@ -1,4 +1,5 @@
 import Link from '@/components/ui/base/Link';
+import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
@@ -20,18 +21,46 @@ export default function Pagination({
           className={clsx(style.paginationButton, style.isPrevious)}
           href={previousLink}
         >
-          <span className={style.paginationButtonText}>
+          <Text
+            as="span"
+            family="heading"
+            size="xxs"
+            weight={500}
+            letterSpacing="sm"
+            lineHeight="sm"
+            className={style.paginationButtonText}
+          >
             Posts mais recentes
-          </span>
+          </Text>
         </Link>
       )}
       {!isLastPagination ? (
         <Link className={style.paginationButton} href={nextLink}>
-          <span className={style.paginationButtonText}>Próxima página</span>
+          <Text
+            as="span"
+            family="heading"
+            size="xxs"
+            weight={500}
+            letterSpacing="sm"
+            lineHeight="sm"
+            className={style.paginationButtonText}
+          >
+            Próxima página
+          </Text>
         </Link>
       ) : (
         <Link className={style.paginationButton} href="/">
-          <span className={style.paginationButtonText}>Início do blog :)</span>
+          <Text
+            as="span"
+            family="heading"
+            size="xxs"
+            weight={500}
+            letterSpacing="sm"
+            lineHeight="sm"
+            className={style.paginationButtonText}
+          >
+            Início do blog :)
+          </Text>
         </Link>
       )}
     </Wrapper>

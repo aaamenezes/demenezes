@@ -16,11 +16,6 @@
   position: relative;
   width: 100%;
   padding: var(--spacing-sm) var(--spacing-md);
-  font-family: var(--font-family-button);
-  font-size: var(---font-size-button);
-  font-weight: var(--font-weight-button);
-  letter-spacing: var(--letter-spacing-button);
-  line-height: var(--line-height-button);
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
