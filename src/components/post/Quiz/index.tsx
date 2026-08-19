@@ -6,6 +6,24 @@ import type { FormEvent } from 'react';
 import { useCallback, useState } from 'react';
 import style from './styles.module.css';
 
+/***
+ * Esse component não está sendo usado pelos posts até hoje 19/08/2026
+ * Acessar https://demenezes-dev.admin.datocms.com/cda-explorer
+ * Usar query abaixo
+ * {
+  allPosts(first: 100) {
+    slug
+    content {
+      blocks {
+        __typename
+      }
+    }
+  }
+}
+ * E confirmar que o resultado da consulta não menciona "quiz".
+ * Sendo assim, esse componente está fora de alguns padrão da codebase
+ */
+
 export default function Quiz({
   title,
   alternatives,
