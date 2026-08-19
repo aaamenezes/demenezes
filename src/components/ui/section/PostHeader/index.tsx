@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { convertDate } from '@/utils/convertDate';
@@ -30,7 +31,13 @@ export default function PostHeader({
       style={{ '--background-image': `url(${coverImage})` } as CSSProperties}
     >
       <Wrapper className={style.postHeaderInner} width="xxxl">
-        <h1 className={style.postTitle}>{title}</h1>
+        <Heading
+          level={1}
+          size="xxxl"
+          letterSpacing="sm"
+        >
+          {title}
+        </Heading>
         <Text
           family="heading"
           size="sm"
