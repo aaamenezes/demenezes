@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import HighlightText from '@/components/ui/section/AboutHighlightText';
@@ -38,7 +39,7 @@ export default function AboutStory({
   return (
     <>
       <Wrapper width="md">
-        <h2 className={style.storyTitle}>{historyTitle}</h2>
+        <Heading className={style.storyTitle}>{historyTitle}</Heading>
         <Text lineHeight="md">{firstParagraph}</Text>
       </Wrapper>
       {remainingText}
