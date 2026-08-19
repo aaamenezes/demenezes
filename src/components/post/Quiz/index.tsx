@@ -100,7 +100,7 @@ export default function Quiz({
           Responder
         </Button>
         {isAnswered && (
-          <p className={style.feedback}>
+          <Text className={style.feedback}>
             {responseIsCorrect ? (
               <>
                 <Text as="span">Resposta certa!</Text>
@@ -112,7 +112,7 @@ export default function Quiz({
                 <Text as="span">😥🤡☠️👎🏽💣❌☢️0️⃣</Text>
               </>
             )}
-          </p>
+          </Text>
         )}
       </footer>
     </form>
