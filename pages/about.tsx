@@ -1,4 +1,5 @@
 import Head from '@/components/meta/Head';
+import Text from '@/components/ui/base/Text';
 import SocialMedia from '@/components/ui/container/SocialMedia';
 import Wrapper from '@/components/ui/container/Wrapper';
 import AboutCategories from '@/components/ui/section/AboutCategories';
@@ -54,7 +55,7 @@ export default function About({
         </Wrapper>
         <ContactForm contactContent={contactContent} />
         <Wrapper as="section" width="md">
-          <p>Muito prazer!</p>
+          <Text>Muito prazer!</Text>
         </Wrapper>
       </main>
     </>

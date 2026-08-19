@@ -1,3 +1,4 @@
+import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import CmsIcon from '../../base/CmsIcon';
 import style from './styles.module.css';
@@ -19,7 +20,7 @@ export default function AboutCategories({
         <li className={style.categoryItem} key={categoryItemTitle}>
           <h3 className={style.categoryItemTitle}>
             <CmsIcon name={categoryItemIcon} />
-            <span>{categoryItemTitle}</span>
+            <Text as="span">{categoryItemTitle}</Text>
           </h3>
           <p className={style.categoryText}>{categoryItemDescription}</p>
         </li>

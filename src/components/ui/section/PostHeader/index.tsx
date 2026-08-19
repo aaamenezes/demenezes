@@ -1,3 +1,4 @@
+import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { convertDate } from '@/utils/convertDate';
 import type { CSSProperties } from 'react';
@@ -37,7 +38,10 @@ export default function PostHeader({
           </span>
           {update > date && (
             <>
-              <span aria-hidden="true"> - </span>
+              <Text as="span" ariaHidden={true}>
+                {' '}
+                -{' '}
+              </Text>
               <span className={style.postDate}>
                 {`Atualizado em ${convertDate(update)}`}
               </span>

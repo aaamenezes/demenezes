@@ -1,7 +1,9 @@
+import Text from '@/components/ui/base/Text';
+
 export default function Video({ url, alt }: { url: string; alt: string }) {
   return (
     <video src={url} controls>
-      <p>{alt}</p>
+      <Text>{alt}</Text>
     </video>
   );
 }

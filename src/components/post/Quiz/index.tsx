@@ -1,9 +1,9 @@
-import type { FormEvent } from 'react';
-import { useCallback, useState } from 'react';
-
 import Button from '@/components/ui/base/Button';
+import Text from '@/components/ui/base/Text';
 import { clsx } from '@/utils/clsx';
 import { simplifyString } from '@/utils/simplifyString';
+import type { FormEvent } from 'react';
+import { useCallback, useState } from 'react';
 import style from './styles.module.css';
 
 export default function Quiz({
@@ -31,16 +31,19 @@ export default function Quiz({
       onSubmit={handleSubmit}
     >
       <header className={style.header}>
-        <p>
-          <strong>{title}</strong>
-        </p>
+        <Text>
+          <Text as="strong">{title}</Text>
+        </Text>
       </header>
       <ul className={style.alternativesList}>
         {alternatives.map((alternative, index) => {
           const currentId = `${simplifyString(title)}-${index}`;
 
           return (
-            <li className={style.alternativeItem} key={simplifyString(alternative)}>
+            <li
+              className={style.alternativeItem}
+              key={simplifyString(alternative)}
+            >
               <input
                 className={clsx(style.alternativeInput, {
                   [style.isAnswered]: isAnswered,
@@ -82,13 +85,13 @@ export default function Quiz({
           <p className={style.feedback}>
             {responseIsCorrect ? (
               <>
-                <span>Resposta certa!</span>
-                <span>😃🎉🎊🎯🥇🏳️‍⚧️💓💯🔟⬆️🔝</span>
+                <Text as="span">Resposta certa!</Text>
+                <Text as="span">😃🎉🎊🎯🥇🏳️‍⚧️💓💯🔟⬆️🔝</Text>
               </>
             ) : (
               <>
-                <span>Resposta Errada...</span>
-                <span>😥🤡☠️👎🏽💣❌☢️0️⃣</span>
+                <Text as="span">Resposta Errada...</Text>
+                <Text as="span">😥🤡☠️👎🏽💣❌☢️0️⃣</Text>
               </>
             )}
           </p>
