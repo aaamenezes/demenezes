@@ -1,41 +1,11 @@
+import type {
+  FontFamily,
+  FontSize,
+  FontWeight,
+  LetterSpacing,
+  LineHeight,
+} from '@/types';
 import type { HTMLAttributes, ReactNode } from 'react';
-
-type FontSize =
-  | 'xxxs'
-  | 'xxs'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xxxl';
-
-type FontWeight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
-
-type LetterSpacing =
-  | 'xxxs'
-  | 'xxs'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xxxl';
-
-type LineHeight =
-  | 'xxxs'
-  | 'xxs'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xxxl';
-
-type FontFamily = 'body' | 'heading' | 'monospace';
 
 export interface TextProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;

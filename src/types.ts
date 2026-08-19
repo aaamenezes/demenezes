@@ -3,6 +3,43 @@ import type {
   StructuredTextGraphQlResponseRecord,
 } from 'react-datocms';
 
+export type FontSize =
+  | 'xxxs'
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xxxl';
+
+export type FontWeight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+
+export type LetterSpacing =
+  | 'xxxs'
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xxxl';
+
+export type LineHeight =
+  | 'xxxs'
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xxxl';
+
+export type FontFamily = 'body' | 'heading' | 'monospace';
+
 /**
  * está muito ruim HomePagePros ~ HomeScreenProps
  * melhorar isso
