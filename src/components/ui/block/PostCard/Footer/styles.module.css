@@ -1,23 +1,12 @@
 .postCardFooterWrapper {
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
 }
 
 @media screen and (min-width: 768px) {
   .postCardFooterWrapper.isCompact {
-    margin-top: 0.44rem;
+    margin-top: var(--spacing-sm);
   }
-}
-
-.postCardDate {
-  text-align: right;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-500);
-  letter-spacing: var(--letter-spacing-md);
-  line-height: var(--line-height-xs);
-  color: var(--color-neutral-600);
-}
-
-.postCardUpdateDate {
-  margin-top: var(--spacing-sm);
 }
