@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import style from './styles.module.css';
@@ -11,7 +12,7 @@ export default function AboutHobbies({
 }) {
   return (
     <Wrapper as="section" width="md">
-      <h2 className={style.hobbiesTitle}>{hobbiesTitle}</h2>
+      <Heading className={style.hobbiesTitle}>{hobbiesTitle}</Heading>
       <Text lineHeight="md">{hobbiesText}</Text>
     </Wrapper>
   );
