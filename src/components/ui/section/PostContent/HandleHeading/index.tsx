@@ -1,4 +1,4 @@
-import { clsx } from '@/utils/clsx';
+import Text from '@/components/ui/base/Text';
 import { simplifyString } from '@/utils/simplifyString';
 import type { Heading as HeadingNode } from 'datocms-structured-text-utils';
 import { isSpan } from 'datocms-structured-text-utils';
@@ -21,24 +21,31 @@ export default function HandleHeading({
       .join('')
   );
 
-  function isValidClassName(
-    className: string
-  ): className is keyof typeof style {
-    return className in style;
-  }
+  const headingTypographyMap = {
+    1: { size: 'xxl', letterSpacing: 'xs' },
+    2: { size: 'xxl', letterSpacing: 'xs' },
+    3: { size: 'xl', letterSpacing: 'xxs' },
+    4: { size: 'lg', letterSpacing: 'xs' },
+    5: { size: 'md', letterSpacing: 'xs' },
+    6: { size: 'sm', letterSpacing: 'sm' },
+  } as const;
 
-  const headingLevelClassName = isValidClassName(HeadingLevel)
-    ? style[HeadingLevel]
-    : style.h2;
+  const typography = headingTypographyMap[node.level];
 
   return (
-    <HeadingLevel
-      className={clsx(style.heading, headingLevelClassName)}
-      key={anchorLink}
-      id={anchorLink}
-    >
+    <HeadingLevel className={style.heading} key={anchorLink} id={anchorLink}>
       <a className={style.headingLink} href={`#${anchorLink}`}>
-        <span className={style.headingLinkText}>{children}</span>
+        <Text
+          as="span"
+          family="heading"
+          size={typography.size}
+          weight={700}
+          letterSpacing={typography.letterSpacing}
+          lineHeight="sm"
+          className={style.headingLinkText}
+        >
+          {children}
+        </Text>
       </a>
     </HeadingLevel>
   );
