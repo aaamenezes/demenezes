@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import Head from '@/components/meta/Head';
+import Heading from '@/components/ui/base/Heading';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { getBlogLayout } from '@/layouts/getLayouts';
 
@@ -151,7 +152,7 @@ export default function References({
       <Head componentProps={{}} />
       <Wrapper width="full">
         <Wrapper width="xxl">
-          <h1>Em construção...</h1>
+          <Heading level={1}>Em construção...</Heading>
           <div>
             <pre>{JSON.stringify(referencesMetaData, null, 2)}</pre>
           </div>
