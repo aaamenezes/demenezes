@@ -2,6 +2,7 @@ import { keysOf } from '@/utils/object';
 import CodeStory from '../../base/BlockCode/story';
 import ButtonStory from '../../base/Button/story';
 import CmsIconStory from '../../base/CmsIcon/story';
+import HeadingStory from '../../base/Heading/story';
 import HiddenA11YStory from '../../base/HiddenA11Y/story';
 import ImageStory from '../../base/Image/story';
 import InputStory from '../../base/Input/story';
@@ -40,6 +41,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     button: ButtonStory,
     code: CodeStory,
     cmsIcon: CmsIconStory,
+    heading: HeadingStory,
     hiddenA11Y: HiddenA11YStory,
     image: ImageStory,
     input: InputStory,
