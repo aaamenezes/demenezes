@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import Link from '@/components/ui/base/Link';
 import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
@@ -16,7 +17,12 @@ export default function PostCardHeader({
   return (
     <header>
       {isHero && <PostCategory>{category}</PostCategory>}
-      <h3 className={style.postCardTitle}>
+      <Heading
+        level={3}
+        size="lg"
+        letterSpacing="sm"
+        className={style.postCardTitle}
+      >
         <Link
           className={clsx(style.postCardTitleLink, {
             [style.isHero]: isHero,
@@ -25,7 +31,7 @@ export default function PostCardHeader({
         >
           {title}
         </Link>
-      </h3>
+      </Heading>
     </header>
   );
 }
