@@ -1,3 +1,4 @@
+import Heading from '@/components/ui/base/Heading';
 import PostCard from '@/components/ui/block/PostCard';
 import Wrapper from '@/components/ui/container/Wrapper';
 import type { PostSummaryProps } from '@/types';
@@ -19,9 +20,7 @@ export default function RelatedPosts({
   return (
     <Wrapper as="section" width="xl">
       <header>
-        <h2
-          className={style.relatedPostsHeading}
-        >{`Veja outros posts sobre ${postCategory}`}</h2>
+        <Heading>{`Veja outros posts sobre ${postCategory}`}</Heading>
       </header>
       <div className={style.relatedPostsGrid}>{relatedPostsElements}</div>
     </Wrapper>
