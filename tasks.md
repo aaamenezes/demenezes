@@ -2,6 +2,7 @@
   - [Analisar se `clsx` deve aceitar valor nulo](#analisar-se-clsx-deve-aceitar-valor-nulo)
   - [Analisar necessidade de props key em `HandleBlock`](#analisar-necessidade-de-props-key-em-handleblock)
   - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
+  - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
   - [\[🚫 CRIAR COMPONENTE\] Padronizar `title` e `heading`](#-criar-componente-padronizar-title-e-heading)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
@@ -90,6 +91,16 @@ Ou posso passar uma array de duas posições no argumento de clsx `clsx(style.my
 
 - css
 - padrão
+
+## Analisar necessidade de valor default em prop opcional
+
+As props marcadas como opcionais nos componentes (`?`) nem sempre precisam de valor default. O `className` por exemplo não precisa, se eu defino um valor padrão como string vazia, e não passo o className na hora de chamar o componente, eu envio para a DOM um atributo `class` sem valor nenhum, desnecessariamente. Então não é porque uma prop é opcional que ela precisa de valor default:
+
+- Prop obrigatória: devo informar na invocação, e caso não faça, o Typescript irá me alertas. Exemplo: `src` na `Image`
+- Prop não obrigatória com valor default: aqui o valor é obrigatório, mas posso dar a liberdade de deixar como opcional, apenas definindo um valor default. Esse recurso o componente PRECISA para funcionar, e caso não seja informado eu configuro o valor padrão. Exemplo: `variant` com valor default `filled` no `Button`
+- Prop não obrigatória sem valor defualt: recurso opcional ao componente, se não for informado eu apenas omito esse recurso. Exemplo: `className` em grande parte dos componente.
+
+O foco dessa mudança é o terceiro item acima. Fazer um relatório de props que hoje são marcadas como opcionais, e que possuem valor default desnecessariamente.
 
 ## [🚫 CRIAR COMPONENTE] Padronizar `title` e `heading`
 
