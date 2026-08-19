@@ -1,11 +1,6 @@
 .newsletterTitle {
   margin-bottom: var(--spacing-xl);
   text-align: center;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-700);
-  letter-spacing: var(--letter-spacing-xs);
-  line-height: var(--line-height-sm);
 }
 
 .newsletterFormInput {

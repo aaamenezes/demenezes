@@ -1,5 +1,6 @@
 import Button from '@/components/ui/base/Button';
 import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
+import Heading from '@/components/ui/base/Heading';
 import Input from '@/components/ui/base/Input';
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
@@ -12,7 +13,9 @@ export default function Newsletter() {
   return (
     <Wrapper className={style.newsletterForm} width="full">
       <Wrapper width="md">
-        <h3 className={style.newsletterTitle}>{title}</h3>
+        <Heading level={3} className={style.newsletterTitle}>
+          {title}
+        </Heading>
 
         {/* Begin Mailchimp Signup Form */}
         <div id="mc_embed_signup">
