@@ -18,7 +18,6 @@
   - [Melhorar componente input](#melhorar-componente-input)
   - [Criar novos `StructuredTextDatoCMS`](#criar-novos-structuredtextdatocms)
   - [Criar componente de grid](#criar-componente-de-grid)
-  - [Criar componente de `Heading`](#criar-componente-de-heading)
 - [Configurações estruturais](#configurações-estruturais)
   - [Implementar busca](#implementar-busca)
   - [Implementar preview](#implementar-preview)
@@ -220,13 +219,6 @@ O `RelatedPosts` usa um grid para exibir posts relacionados, e renderiza `PostCa
 
 - componente
 - padrão
-
-## Criar componente de `Heading`
-
-Criar componente de <Heading></Heading> e colocar no lugar de todos h1h2h3h4h5h6, etc
-
-- padrão
-- componente
 
 # Configurações estruturais
 
