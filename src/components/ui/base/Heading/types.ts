@@ -15,4 +15,6 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   weight?: FontWeight;
   letterSpacing?: LetterSpacing;
   lineHeight?: LineHeight;
+  className?: string;
+  id?: string;
 }

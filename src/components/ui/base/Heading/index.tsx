@@ -11,6 +11,7 @@ export default function Heading({
   letterSpacing = 'xs',
   lineHeight = 'sm',
   className,
+  id,
 }: HeadingProps) {
   const Tag = `h${level}` as keyof HTMLElementTagNameMap;
 
@@ -24,6 +25,7 @@ export default function Heading({
         styles[`letter-spacing-${letterSpacing}`],
         styles[`line-height-${lineHeight}`]
       )}
+      id={id}
     >
       {children}
     </Tag>
