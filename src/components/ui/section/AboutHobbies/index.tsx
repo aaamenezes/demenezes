@@ -4,16 +4,16 @@ import Wrapper from '@/components/ui/container/Wrapper';
 import style from './styles.module.css';
 
 export default function AboutHobbies({
-  hobbiesTitle,
-  hobbiesText,
+  hobbiesHeading,
+  hobbiesDescription,
 }: {
-  hobbiesTitle: string;
-  hobbiesText: string;
+  hobbiesHeading: string;
+  hobbiesDescription: string;
 }) {
   return (
     <Wrapper as="section" width="md">
-      <Heading className={style.hobbiesTitle}>{hobbiesTitle}</Heading>
-      <Text lineHeight="md">{hobbiesText}</Text>
+      <Heading className={style.hobbiesHeading}>{hobbiesHeading}</Heading>
+      <Text lineHeight="md">{hobbiesDescription}</Text>
     </Wrapper>
   );
 }

@@ -22,17 +22,17 @@ export default function SocialMedia({
   };
 
   const socialElements = settings.socialMedia.map(socialMedia => {
-    const Icon = socialMediaMap[socialMedia.title];
+    const Icon = socialMediaMap[socialMedia.name];
     const color = inverseColor
       ? 'var(--color-neutral-100)'
       : (socialMedia.color ?? 'var(--color-neutral-900)');
 
     return (
-      <li className={style.socialMediaItem} key={socialMedia.title}>
+      <li className={style.socialMediaItem} key={socialMedia.name}>
         <Link
           className={style.socialMediaLink}
           href={socialMedia.url}
-          aria-label={`Acessar o ${socialMedia.title} do autor de André Menezes`}
+          aria-label={`Acessar o ${socialMedia.name} do autor de André Menezes`}
           isExternal
         >
           {Icon && (
@@ -45,7 +45,7 @@ export default function SocialMedia({
             weight={500}
             className={style.socialMediaLabel}
           >
-            {socialMedia.title}
+            {socialMedia.name}
           </Text>
         </Link>
       </li>

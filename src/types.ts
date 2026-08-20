@@ -86,18 +86,18 @@ export interface AboutPageProps {
       };
     };
     aboutPage: {
-      greetingTitle: string;
-      greetingSubtitle: string;
+      greetingHeading: string;
+      greetingSubheading: string;
       greetingDescription: string;
-      categoriesTitle: string;
+      categoriesHeading: string;
       categoryItemModule: Array<{
         categoryItemTitle: string;
         categoryItemDescription: string;
         categoryItemIcon: string;
       }>;
-      historyTitle: string;
+      historyHeading: string;
       historyText: string;
-      hobbiesTitle: string;
+      hobbiesHeading: string;
       hobbiesText: string;
     };
   };
@@ -146,7 +146,7 @@ export type DatoBlock =
       {
         image: {
           alt: string;
-          title: string;
+          caption: string;
           width: number;
           height: number;
           responsiveImage: { src: string };
@@ -160,7 +160,7 @@ export type DatoBlock =
   | DatoRecord<'VideoRecord', { video: { url: string; alt: string } }>
   | DatoRecord<
       'TableRecord',
-      { tableTitle: string; tableSummary: string; table: string }
+      { caption: string; tableSummary: string; table: string }
     >
   | DatoRecord<
       'TextBoxRecord',
@@ -178,7 +178,7 @@ export type DatoBlock =
   | DatoRecord<
       'QuizRecord',
       {
-        title: string;
+        question: string;
         alternativeOne: string;
         alternativeTwo: string;
         alternativeThree: string;

@@ -5,7 +5,7 @@ export default function AboutCategoriesStory() {
   return (
     <Section heading="Default">
       <AboutCategories
-        categoriesTitle="Categorias"
+        categoriesHeading="Categorias"
         categoryItems={[
           {
             categoryItemIcon: 'code-xml',

@@ -20,7 +20,7 @@ export default function ContactForm({
 
   return (
     <Wrapper className={style.contactForm} width="md">
-      <Heading className={style.contactTitle}>{contactTitle}</Heading>
+      <Heading className={style.contactHeading}>{contactTitle}</Heading>
       {textElements}
       <iframe
         className={style.mailchimpContactForm}

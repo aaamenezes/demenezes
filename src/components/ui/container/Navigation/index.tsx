@@ -20,7 +20,7 @@ export default function Navigation({
   const navigationElements = settings.navigationMenu.map(menu => {
     const isCurrentPage =
       router.pathname === menu.url ||
-      (currentPage === 'listing' && menu.title === 'Home');
+      (currentPage === 'listing' && menu.label === 'Home');
 
     return (
       <li
@@ -28,7 +28,7 @@ export default function Navigation({
           [style.isCurrentPage]: isCurrentPage,
           [style.isDesktopColorInverse]: currentPage !== 'post',
         })}
-        key={menu.title}
+        key={menu.label}
       >
         <Link
           className={clsx(style.navLink, {
@@ -36,7 +36,7 @@ export default function Navigation({
           })}
           href={menu.url}
         >
-          {menu.title}
+          {menu.label}
         </Link>
       </li>
     );

@@ -13,7 +13,7 @@ export default function Newsletter() {
   return (
     <Wrapper className={style.newsletterForm} width="full">
       <Wrapper width="md">
-        <Heading level={3} className={style.newsletterTitle}>
+        <Heading level={3} className={style.newsletterHeading}>
           {title}
         </Heading>
 

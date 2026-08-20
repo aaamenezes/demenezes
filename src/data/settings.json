@@ -2,32 +2,32 @@
   "categories": [
     {
       "icon": "code",
-      "title": "Front-end",
+      "name": "Front-end",
       "description": "HTML, CSS, Javascript e mão na massa"
     },
     {
       "icon": "job",
-      "title": "Carreira",
+      "name": "Carreira",
       "description": "Mercado de trabalho"
     },
     {
       "icon": "people",
-      "title": "Pessoas",
+      "name": "Pessoas",
       "description": "Comunidade e eventos"
     },
     {
       "icon": "balance",
-      "title": "Produtividade",
+      "name": "Produtividade",
       "description": "Dicas, truques, "
     },
     {
       "icon": "terminal",
-      "title": "Ferramentas",
+      "name": "Ferramentas",
       "description": "Libs, plugins, pacotes, Git, NPM, Yarn, Bash"
     },
     {
       "icon": "tool",
-      "title": "Equipamentos",
+      "name": "Equipamentos",
       "description": "Periféricos, acessórios, etc"
     }
   ],
@@ -49,12 +49,12 @@
       "alt": "Foto de perfil",
       "ratio": "4x3"
     },
-    "title": "Página sobre",
-    "subtitle": "Que bom que vc está aqui!",
+    "heading": "Página sobre",
+    "subheading": "Que bom que vc está aqui!",
     "text": "Criei esse blog pra falar sobre programação front-end, fazer parte da comunidade e ajudar qualquer um que precise."
   },
   "hobbies": {
-    "title": "Hobbies",
+    "heading": "Hobbies",
     "text": "Meus principais hobbies são ler, tocar violão, jogar futebol, sair com amigos, ir para a praia e jogar vídeo game."
   },
   "metadata": {
@@ -70,19 +70,19 @@
   },
   "navigationMenu": [
     {
-      "title": "Home",
+      "label": "Home",
       "url": "/"
     },
     {
-      "title": "Sobre",
+      "label": "Sobre",
       "url": "/about"
     },
     {
-      "title": "Contato",
+      "label": "Contato",
       "url": "/contact"
     },
     {
-      "title": "Referências",
+      "label": "Referências",
       "url": "/references"
     }
   ],
@@ -148,27 +148,27 @@
   },
   "socialMedia": [
     {
-      "title": "github",
+      "name": "github",
       "url": "https://github.com/aaamenezes",
       "color": "#9BA5AA"
     },
     {
-      "title": "linkedin",
+      "name": "linkedin",
       "url": "https://www.linkedin.com/in/aaamenezes",
       "color": "#0073AF"
     },
     {
-      "title": "twitter",
+      "name": "twitter",
       "url": "https://twitter.com/aaamenezes",
       "color": "#4EA6E9"
     },
     {
-      "title": "medium",
+      "name": "medium",
       "url": "https://medium.com/@demenezes",
       "color": "#9BA5AA"
     },
     {
-      "title": "devto",
+      "name": "devto",
       "url": "https://dev.to/demenezes",
       "color": "#9BA5AA"
     }
@@ -180,7 +180,7 @@
     "codeThemeVsDracula": "/style/prism/dracula.css"
   },
   "story": {
-    "title": "Como tudo começou...",
+    "heading": "Como tudo começou...",
     "body": [
       "A primeira vez que \"programei\" na vida foi durante o técnico em Redes de Computadores que fiz no Senai. Digo \"programei\", porque foi em HTML e CSS, e tem uma galera que faz treta se chamar elas de linguagem de programação. Mas sempre foi algo por hobbie mesmo, até porque eu achava muito difícil (e é).",
       "Nas duas primeiras empresas que trabalhei como suporte eu fiz questão de criar uma intranet pra documentar os manuais do setor. Fiz isso subindo um servidorzinho com o famigerado Xampp (Apache, MySQL e PHP), mas entendia muito pouco de PHP. Isso tudo foi por volta de 2011 ~ 2013.",

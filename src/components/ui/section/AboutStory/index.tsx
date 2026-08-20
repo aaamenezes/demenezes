@@ -16,10 +16,10 @@ import style from './styles.module.css';
  */
 
 export default function AboutStory({
-  historyTitle,
+  historyHeading,
   historyText,
 }: {
-  historyTitle: string;
+  historyHeading: string;
   historyText: string;
 }) {
   const firstParagraph = historyText.split('\n')[0];
@@ -39,7 +39,7 @@ export default function AboutStory({
   return (
     <>
       <Wrapper width="md">
-        <Heading className={style.storyTitle}>{historyTitle}</Heading>
+        <Heading className={style.storyHeading}>{historyHeading}</Heading>
         <Text lineHeight="md">{firstParagraph}</Text>
       </Wrapper>
       {remainingText}

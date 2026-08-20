@@ -19,7 +19,7 @@ export default function HandleBlock({ record }: { record: DatoBlock }) {
           width={record.image.width}
           height={record.image.height}
           alt={record.image.alt}
-          title={record.image.title}
+          caption={record.image.caption}
           className={styles.image}
         />
       );
@@ -39,7 +39,7 @@ export default function HandleBlock({ record }: { record: DatoBlock }) {
       return (
         <Table
           key={record.id}
-          tableTitle={record.tableTitle}
+          caption={record.caption}
           tableSummary={record.tableSummary}
           tableContent={record.table}
         />
@@ -65,7 +65,7 @@ export default function HandleBlock({ record }: { record: DatoBlock }) {
     case 'QuizRecord':
       return (
         <Quiz
-          title={record.title}
+          question={record.question}
           alternatives={[
             record.alternativeOne,
             record.alternativeTwo,

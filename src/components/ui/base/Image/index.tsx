@@ -8,7 +8,7 @@ export default function Image({
   width,
   height,
   alt,
-  title,
+  caption,
   className,
 }: ImageProps) {
   return (
@@ -24,8 +24,8 @@ export default function Image({
           margin: '0 auto',
         }}
       />
-      {title && (
-        <figcaption className={clsx(style.figcaption)}>{title}</figcaption>
+      {caption && (
+        <figcaption className={clsx(style.figcaption)}>{caption}</figcaption>
       )}
     </figure>
   );

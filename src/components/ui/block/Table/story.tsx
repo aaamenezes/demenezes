@@ -6,7 +6,7 @@ export default function TableStory() {
     <>
       <Section heading="Default">
         <Table
-          tableTitle="Título da Tabela"
+          caption="Título da Tabela"
           tableSummary="Está é uma tabela de exemplo para demonstração do componente Table"
           tableContent={`<table>
             <thead>

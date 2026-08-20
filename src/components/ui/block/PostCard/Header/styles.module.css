@@ -1,4 +1,4 @@
-.postCardTitle {
+.postCardHeading {
   display: inline-block;
   background-image: linear-gradient(
     120deg,
@@ -12,28 +12,28 @@
 }
 
 @media screen and (min-width: 768px) {
-  .postCardTitle {
+  .postCardHeading {
     background-size: 100% 0.2rem;
   }
 }
 
-.postCardTitle:hover,
-.postCardTitle:focus-within {
+.postCardHeading:hover,
+.postCardHeading:focus-within {
   background-size: 100% 108%;
 }
 
-.postCardTitle:hover .postCardTitleLink,
-.postCardTitle:focus-within .postCardTitleLink {
+.postCardHeading:hover .postCardHeadingLink,
+.postCardHeading:focus-within .postCardHeadingLink {
   color: var(--color-neutral-100);
 }
 
-.postCardTitleLink {
+.postCardHeadingLink {
   display: block;
   padding: var(--spacing-xs) var(--spacing-sm);
   text-decoration: none;
   transition: var(--transition-fast);
 }
 
-.postCardTitleLink.isHero {
+.postCardHeadingLink.isHero {
   color: var(--color-neutral-100);
 }

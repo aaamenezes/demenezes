@@ -3,6 +3,6 @@ export interface ImageProps {
   width: number;
   height: number;
   alt: string;
-  title?: string;
+  caption?: string;
   className?: string;
 }

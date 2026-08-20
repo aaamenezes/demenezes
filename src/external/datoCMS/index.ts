@@ -46,18 +46,18 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
         }
       }
       aboutPage {
-        greetingTitle
-        greetingSubtitle
+        greetingHeading: greetingTitle
+        greetingSubheading: greetingSubtitle
         greetingDescription
-        categoriesTitle
+        categoriesHeading: categoriesTitle
         categoryItemModule {
           categoryItemTitle
           categoryItemDescription
           categoryItemIcon
         }
-        historyTitle
+        historyHeading: historyTitle
         historyText
-        hobbiesTitle
+        hobbiesHeading: hobbiesTitle
         hobbiesText
       }
     }`,
@@ -123,7 +123,7 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
               id
               image {
                 alt
-                title
+                caption: title
                 width
                 height
                 responsiveImage(imgixParams: {auto: format}) {
@@ -147,7 +147,7 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
             }
             ... on TableRecord {
               id
-              tableTitle
+              caption: tableTitle
               tableSummary
               table
             }
@@ -171,7 +171,7 @@ function getQueryOptions(queryType: QueryType, { slug, category }: PageData) {
             }
             ... on QuizRecord {
               id
-              title
+              question: title
               alternativeOne
               alternativeTwo
               alternativeThree

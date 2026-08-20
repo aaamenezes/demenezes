@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import StructuredTextDatoCMS from './StructuredTextDatoCMS';
 import style from './styles.module.css';
 import type { PostContentProps } from './types';
-import YouTube from '../../base/YouTube';
 
 export default function PostContent({ post }: PostContentProps) {
   useEffect(() => {
@@ -14,7 +13,6 @@ export default function PostContent({ post }: PostContentProps) {
   return (
     <Wrapper className={style.postContent} width="75ch">
       <StructuredTextDatoCMS data={post.data.post.content} />
-      <YouTube title="YouTube video player" videoId="dQw4w9WgXcQ" />
     </Wrapper>
   );
 }

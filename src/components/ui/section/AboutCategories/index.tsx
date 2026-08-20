@@ -5,10 +5,10 @@ import CmsIcon from '../../base/CmsIcon';
 import style from './styles.module.css';
 
 export default function AboutCategories({
-  categoriesTitle,
+  categoriesHeading,
   categoryItems,
 }: {
-  categoriesTitle: string;
+  categoriesHeading: string;
   categoryItems: Array<{
     categoryItemIcon: string;
     categoryItemTitle: string;
@@ -19,9 +19,11 @@ export default function AboutCategories({
     ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => {
       return (
         <li className={style.categoryItem} key={categoryItemTitle}>
-          <Heading level={3} size="lg" className={style.categoryItemTitle}>
+          <Heading level={3} size="lg" className={style.categoryItemHeading}>
             <CmsIcon name={categoryItemIcon} />
-            <Text as="span">{categoryItemTitle}</Text>
+            <Text as="span" inheritTypographyStyles>
+              {categoryItemTitle}
+            </Text>
           </Heading>
           <Text className={style.categoryText}>{categoryItemDescription}</Text>
         </li>
@@ -32,7 +34,7 @@ export default function AboutCategories({
   return (
     <Wrapper as="section" width="xl">
       <header className={style.categoriesHeader}>
-        <Heading>{categoriesTitle}</Heading>
+        <Heading>{categoriesHeading}</Heading>
       </header>
 
       <ul className={style.categoriesList}>{CategoryItems}</ul>

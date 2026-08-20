@@ -45,12 +45,12 @@
   box-shadow: var(--box-shadow-lg);
 }
 
-.categoryItem:hover .categoryItemTitle,
+.categoryItem:hover .categoryItemHeading,
 .categoryItem:hover .categoryText {
   opacity: 1;
 }
 
-.categoryItemTitle {
+.categoryItemHeading {
   display: flex;
   flex-direction: column;
   justify-content: center;

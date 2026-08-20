@@ -25,11 +25,11 @@ import style from './styles.module.css';
  */
 
 export default function Quiz({
-  title,
+  question,
   alternatives,
   correctAlternativeIndex,
 }: {
-  title: string;
+  question: string;
   alternatives: string[];
   correctAlternativeIndex: number;
 }) {
@@ -50,12 +50,12 @@ export default function Quiz({
     >
       <header className={style.header}>
         <Text>
-          <Text as="strong">{title}</Text>
+          <Text as="strong">{question}</Text>
         </Text>
       </header>
       <ul className={style.alternativesList}>
         {alternatives.map((alternative, index) => {
-          const currentId = `${simplifyString(title)}-${index}`;
+          const currentId = `${simplifyString(question)}-${index}`;
 
           return (
             <li
@@ -69,7 +69,7 @@ export default function Quiz({
                     index === correctAlternativeIndex - 1,
                 })}
                 type="radio"
-                name={simplifyString(title)}
+                name={simplifyString(question)}
                 id={currentId}
                 value={index}
               />

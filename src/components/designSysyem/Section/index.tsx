@@ -20,7 +20,7 @@ export default function Section({
       className={style.section}
       style={{ width: `${width}%`, backgroundColor }}
     >
-      <Heading className={style.sectionTitle}>{heading}</Heading>
+      <Heading className={style.sectionHeading}>{heading}</Heading>
       <div
         className={clsx(style.sectionContent, {
           [style.flex]: Boolean(direction),

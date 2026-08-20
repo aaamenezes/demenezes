@@ -18,11 +18,11 @@ function addClassToTags(html: string, tagName: string, className: string) {
 }
 
 export default function Table({
-  tableTitle,
+  caption,
   tableSummary,
   tableContent,
 }: {
-  tableTitle: string;
+  caption: string;
   tableSummary: string;
   tableContent: string;
 }) {
@@ -42,11 +42,11 @@ export default function Table({
     tableBody
   );
 
-  const formattedTable = `<caption class="${style.tableCaption}">${tableTitle}</caption>${tableWithClasses}`;
+  const formattedTable = `<caption class="${style.tableCaption}">${caption}</caption>${tableWithClasses}`;
 
   /*
   const formatedTable = '<caption>'
-    .concat(tableTitle)
+    .concat(caption)
     .concat('</caption>')
     .concat(tableContent)
     .split('>')

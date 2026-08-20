@@ -21,10 +21,10 @@ export default function PostCardHeader({
         level={3}
         size="lg"
         letterSpacing="sm"
-        className={style.postCardTitle}
+        className={style.postCardHeading}
       >
         <Link
-          className={clsx(style.postCardTitleLink, {
+          className={clsx(style.postCardHeadingLink, {
             [style.isHero]: isHero,
           })}
           href={`/posts/${slug}`}

@@ -6,7 +6,7 @@ import AboutCategories from '@/components/ui/section/AboutCategories';
 import ContactForm from '@/components/ui/section/AboutContactForm';
 import Greeting from '@/components/ui/section/AboutGreeting';
 import AboutHobbies from '@/components/ui/section/AboutHobbies';
-import StoryTitle from '@/components/ui/section/AboutStory';
+import AboutStory from '@/components/ui/section/AboutStory';
 import { getContent } from '@/external/datoCMS';
 import { getBlogLayout } from '@/layouts/getLayouts';
 import type { AboutPageProps, ContactPageProps } from '@/types';
@@ -19,14 +19,14 @@ export default function About({
   contactContent: ContactPageProps;
 }) {
   const {
-    greetingTitle,
-    greetingSubtitle,
+    greetingHeading,
+    greetingSubheading,
     greetingDescription,
-    categoriesTitle,
+    categoriesHeading,
     categoryItemModule,
-    historyTitle,
+    historyHeading,
     historyText,
-    hobbiesTitle,
+    hobbiesHeading,
     hobbiesText,
   } = aboutPageContent.data.aboutPage;
 
@@ -39,17 +39,20 @@ export default function About({
       />
       <main>
         <Greeting
-          greetingTitle={greetingTitle}
-          greetingSubtitle={greetingSubtitle}
+          greetingHeading={greetingHeading}
+          greetingSubheading={greetingSubheading}
           greetingDescription={greetingDescription}
           profileImage={aboutPageContent.data.profileImage.profileImage}
         />
         <AboutCategories
-          categoriesTitle={categoriesTitle}
+          categoriesHeading={categoriesHeading}
           categoryItems={categoryItemModule}
         />
-        <StoryTitle historyTitle={historyTitle} historyText={historyText} />
-        <AboutHobbies hobbiesTitle={hobbiesTitle} hobbiesText={hobbiesText} />
+        <AboutStory historyHeading={historyHeading} historyText={historyText} />
+        <AboutHobbies
+          hobbiesHeading={hobbiesHeading}
+          hobbiesDescription={hobbiesText}
+        />
         <Wrapper as="section" width="sm">
           <SocialMedia />
         </Wrapper>

@@ -6,13 +6,13 @@ import NextImage from 'next/image';
 import style from './styles.module.css';
 
 export default function Greeting({
-  greetingTitle,
-  greetingSubtitle,
+  greetingHeading,
+  greetingSubheading,
   greetingDescription,
   profileImage,
 }: {
-  greetingTitle: string;
-  greetingSubtitle: string;
+  greetingHeading: string;
+  greetingSubheading: string;
   greetingDescription: string;
   profileImage: {
     alt: string;
@@ -44,9 +44,9 @@ export default function Greeting({
         />
       </div>
       <Heading level={1}>
-        <HiddenA11Y>{greetingTitle}</HiddenA11Y>
+        <HiddenA11Y>{greetingHeading}</HiddenA11Y>
       </Heading>
-      <Heading>{greetingSubtitle}</Heading>
+      <Heading>{greetingSubheading}</Heading>
       <Text lineHeight="md" className={style.greetingDescription}>
         {greetingDescription}
       </Text>
