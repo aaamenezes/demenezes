@@ -4,7 +4,7 @@
   - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
   - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
   - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
-  - [\[🚫 CRIAR COMPONENTE\] Padronizar `title` e `heading`](#-criar-componente-padronizar-title-e-heading)
+  - [Criar arquivos types.ts em todos componentes](#criar-arquivos-typests-em-todos-componentes)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
   - [Corrigir line-height de datas](#corrigir-line-height-de-datas)
@@ -104,18 +104,7 @@ O foco dessa mudança é o terceiro item acima. Fazer um relatório de props que
 
 ## Padronizar paths do Typescript
 
-## [🚫 CRIAR COMPONENTE] Padronizar `title` e `heading`
-
-Localizar em todo o código por trechos que esteja escrito as 3 palavras abaixo, e reavaliar se o texto não deve ser trocada por outra palavra:
-
-- `heading` quando se referir (especificamente) ao texto que identifica uma seção ou conteúdo, é a tag HTML h1, h2... 
-- `title` quando se referir (genericamente) a qualquer título de componente (CardTitle, ModalTitle, PageTitle)
-
-Essas palavras devem ser usadas tanto no nome dos componentes, quanto className, variáveis, funções, etc.
-
-- organizar código
-- padrão
-- nomenclatura
+## Criar arquivos types.ts em todos componentes
 
 ## [🚫 COMPOSITE] Melhorar `PostsWrapper`
 
@@ -246,7 +235,10 @@ Criar regra no ESLint para não usar Object.keys, Object.values e Object.entries
 
 ## Resolver erro de hydration
 
-Erro de hydration http://localhost:3000/posts/como-usar-foreach-javascript-exemplos/
+Erro de hydration
+
+- http://localhost:3000/posts/como-usar-foreach-javascript-exemplos/
+- http://localhost:3000/posts/imagem-quadrada-redonda-css/
 
 - react
 - next
