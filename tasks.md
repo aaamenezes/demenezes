@@ -3,6 +3,7 @@
   - [Analisar necessidade de props key em `HandleBlock`](#analisar-necessidade-de-props-key-em-handleblock)
   - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
   - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
+  - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
   - [\[🚫 CRIAR COMPONENTE\] Padronizar `title` e `heading`](#-criar-componente-padronizar-title-e-heading)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
@@ -101,6 +102,8 @@ As props marcadas como opcionais nos componentes (`?`) nem sempre precisam de va
 - Prop não obrigatória sem valor defualt: recurso opcional ao componente, se não for informado eu apenas omito esse recurso. Exemplo: `className` em grande parte dos componente.
 
 O foco dessa mudança é o terceiro item acima. Fazer um relatório de props que hoje são marcadas como opcionais, e que possuem valor default desnecessariamente.
+
+## Padronizar paths do Typescript
 
 ## [🚫 CRIAR COMPONENTE] Padronizar `title` e `heading`
 
