@@ -10,12 +10,20 @@ export default function TextStory() {
       </Section>
       <Section heading="Texto inline">
         <Text>
-          Texto com <Text as="span">um trecho inline</Text> no mesmo parágrafo.
+          Texto com{' '}
+          <Text as="span" inheritTypographyStyles>
+            um trecho inline
+          </Text>{' '}
+          no mesmo parágrafo.
         </Text>
       </Section>
       <Section heading="Ênfase">
         <Text>
-          Texto com <Text as="strong">ênfase semântica</Text>.
+          Texto com{' '}
+          <Text as="strong" inheritTypographyStyles>
+            ênfase semântica
+          </Text>
+          .
         </Text>
       </Section>
       <Section heading="Todas as props tipográficas">
@@ -37,7 +45,11 @@ export default function TextStory() {
           letterSpacing="sm"
           lineHeight="sm"
         >
-          Texto pai com <Text as="span" inheritTypographyStyles>tipografia herdada</Text>.
+          Texto pai com{' '}
+          <Text as="span" inheritTypographyStyles>
+            tipografia herdada
+          </Text>
+          .
         </Text>
       </Section>
     </>
