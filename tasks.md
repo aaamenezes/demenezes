@@ -1,5 +1,4 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
-  - [Analisar se `clsx` deve aceitar valor nulo](#analisar-se-clsx-deve-aceitar-valor-nulo)
   - [Analisar necessidade de props key em `HandleBlock`](#analisar-necessidade-de-props-key-em-handleblock)
   - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
   - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
@@ -29,25 +28,6 @@
   - [Implementar testes](#implementar-testes)
 
 # Ajustes de código sem impacto visual
-
-## Analisar se `clsx` deve aceitar valor nulo
-
-A função `clsx` não aceita `null`, `undefined`. Ela poderia aceitar e tratar isso lá dentro. Senão, obriga a fazer `myClassName || ''` na hora de chamar o método.
-
-Internalizar no `clsx`:
-
-- Vantagem: facilitar o uso
-- Desvantagem: arriscar esconder uma classe que não tá sendo renderizada e difícil de debugar
-
-Deixar responsabilidade fora do `clsx`:
-
-- Vantagem: deixar claro que uma classe pode não ser inserida
-- DesvantagemÇ facilitar a invocação do método
-
-Tem um exemplo desse uso em `src/components/ui/section/PostContent/HandleList/index.tsx`
-
-- css
-- padrão
 
 ## Analisar necessidade de props key em `HandleBlock`
 
