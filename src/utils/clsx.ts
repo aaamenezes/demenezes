@@ -1,33 +1,40 @@
-import { entriesOf } from './object';
+// type ClassMap = Record<string, boolean>;
 
-type ClassMap = Record<string, boolean>;
+// function convertClassMapToClassName(classMap: ClassMap) {
+//   const entries = entriesOf(classMap);
 
-type ClassName = string | null | undefined | ClassMap;
+//   const truthyClassNames = entries.flatMap(entry => {
+//     const [className, condition] = entry;
+//     return condition ? className.trim() : [];
+//   });
 
-function convertClassMapToClassName(classMap: ClassMap) {
-  const entries = entriesOf(classMap);
+//   return truthyClassNames;
+// }
 
-  const truthyClassNames = entries.flatMap(entry => {
-    const [className, condition] = entry;
-    return condition ? className.trim() : [];
-  });
+// function convertStringToClassName(stringClassName: string) {
+//   return stringClassName.trim();
+// }
 
-  return truthyClassNames;
-}
+// export function clsx(...classNames: ClassName[]) {
+//   const classNameList = classNames.flatMap(item => {
+//     if (!item) return [];
+//     if (typeof item === 'string') return convertStringToClassName(item);
+//     return convertClassMapToClassName(item);
+//   });
 
-function convertStringToClassName(stringClassName: string) {
-  return stringClassName.trim();
-}
+//   const uniqueClassNameArray = [...new Set<string>(classNameList)];
+//   const classNameString = uniqueClassNameArray.join(' ').trim();
+//   const classNameStringNoExtraSpaces = classNameString.replace(/\s+/g, ' ');
+//   return classNameStringNoExtraSpaces;
+// }
+
+type ClassName = string | false | null | undefined;
 
 export function clsx(...classNames: ClassName[]) {
-  const classNameList = classNames.flatMap(item => {
-    if (!item) return [];
-    if (typeof item === 'string') return convertStringToClassName(item);
-    return convertClassMapToClassName(item);
-  });
-
-  const uniqueClassNameArray = [...new Set<string>(classNameList)];
-  const classNameString = uniqueClassNameArray.join(' ').trim();
-  const classNameStringNoExtraSpaces = classNameString.replace(/\s+/g, ' ');
-  return classNameStringNoExtraSpaces;
+  const truthy = classNames.filter(className => typeof className === 'string');
+  const trimmed = truthy.map(className => className.trim());
+  const unique = [...new Set<string>(trimmed)];
+  const string = unique.join(' ').trim();
+  const noExtraSpaces = string.replace(/\s+/g, ' ');
+  return noExtraSpaces;
 }

@@ -22,11 +22,12 @@ export default function Section({
     >
       <Heading className={style.sectionHeading}>{heading}</Heading>
       <div
-        className={clsx(style.sectionContent, {
-          [style.flex]: Boolean(direction),
-          [style.row]: direction === 'row',
-          [style.column]: direction === 'column',
-        })}
+        className={clsx(
+          style.sectionContent,
+          Boolean(direction) && style.flex,
+          direction === 'row' && style.row,
+          direction === 'column' && style.column
+        )}
       >
         {children}
       </div>

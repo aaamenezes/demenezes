@@ -45,7 +45,7 @@ export default function Quiz({
 
   return (
     <form
-      className={clsx(style.quizForm, { [style.isAnswered]: isAnswered })}
+      className={clsx(style.quizForm, isAnswered && style.isAnswered)}
       onSubmit={handleSubmit}
     >
       <header className={style.header}>
@@ -63,11 +63,12 @@ export default function Quiz({
               key={simplifyString(alternative)}
             >
               <input
-                className={clsx(style.alternativeInput, {
-                  [style.isAnswered]: isAnswered,
-                  [style.isCorrectResponse]:
-                    index === correctAlternativeIndex - 1,
-                })}
+                className={clsx(
+                  style.alternativeInput,
+                  isAnswered && style.isAnswered,
+                  index === correctAlternativeIndex - 1 &&
+                    style.isCorrectResponse
+                )}
                 type="radio"
                 name={simplifyString(question)}
                 id={currentId}
@@ -75,11 +76,12 @@ export default function Quiz({
               />
               <label className={style.alternativeLabel} htmlFor={currentId}>
                 <button
-                  className={clsx(style.alternativeButton, {
-                    [style.isAnswered]: isAnswered,
-                    [style.isCorrectResponse]:
-                      index === correctAlternativeIndex - 1,
-                  })}
+                  className={clsx(
+                    style.alternativeButton,
+                    isAnswered && style.isAnswered,
+                    index === correctAlternativeIndex - 1 &&
+                      style.isCorrectResponse
+                  )}
                   onClick={() => setMarkedResponse(index)}
                   type="button"
                   disabled={isAnswered}

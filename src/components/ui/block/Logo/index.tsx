@@ -12,7 +12,7 @@ export default function Logo({
 
   return (
     <Link
-      className={clsx(style.logoLink, { [style.colorInverse]: isColorInverse })}
+      className={clsx(style.logoLink, isColorInverse && style.colorInverse)}
       href="/"
     >
       {preview ? 'Preview' : 'deMenezes'}

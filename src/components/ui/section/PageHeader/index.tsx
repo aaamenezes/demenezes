@@ -28,9 +28,10 @@ export default function PageHeader() {
     <Wrapper
       width="xxxl"
       as="header"
-      className={clsx(style.headerWrapper, {
-        [style.withBackgroundColor]: !isHomePage && !isPostPage,
-      })}
+      className={clsx(
+        style.headerWrapper,
+        !isHomePage && !isPostPage && style.withBackgroundColor
+      )}
     >
       <Heading level={1}>
         <Logo isColorInverse={!isPostPage} />

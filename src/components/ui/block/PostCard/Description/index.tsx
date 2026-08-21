@@ -13,10 +13,11 @@ export default function PostCardDescription({
 }) {
   return (
     <Text
-      className={clsx(style.postCardDescription, {
-        [style.isCompact]: isCompact,
-        [style.isHero]: isHero,
-      })}
+      className={clsx(
+        style.postCardDescription,
+        isCompact && style.isCompact,
+        isHero && style.isHero
+      )}
     >
       {description}
     </Text>

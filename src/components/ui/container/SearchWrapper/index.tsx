@@ -18,9 +18,10 @@ export default function SearchWrapper() {
         <Search />
       </Button>
       <Wrapper
-        className={clsx(style.searchContent, {
-          [style.isOpenSearch]: isOpenSearch,
-        })}
+        className={clsx(
+          style.searchContent,
+          isOpenSearch && style.isOpenSearch
+        )}
         width="xl"
       >
         <Button onClick={toggleSearch}>

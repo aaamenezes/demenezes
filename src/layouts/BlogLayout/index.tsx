@@ -19,7 +19,7 @@ export default function BlogLayout({
   return (
     <>
       <div
-        className={clsx(styles.fixedPageHeader, { [styles.isOpen]: isOpen })}
+        className={clsx(styles.fixedPageHeader, isOpen && styles.isOpen)}
       >
         <PageHeader />
       </div>

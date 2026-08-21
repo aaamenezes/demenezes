@@ -20,13 +20,14 @@ export default function PostCard({
 
   return (
     <Wrapper
-      className={clsx(style.postCardWrapper, { [style.isCompact]: isCompact })}
+      className={clsx(style.postCardWrapper, isCompact && style.isCompact)}
       width="xl"
     >
       <div
-        className={clsx(style.postCardImageWrapper, {
-          [style.isCompact]: isCompact,
-        })}
+        className={clsx(
+          style.postCardImageWrapper,
+          isCompact && style.isCompact
+        )}
         aria-hidden="true"
       >
         <Link

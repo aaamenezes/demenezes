@@ -32,9 +32,10 @@ export default function Sidebar() {
                   <li key={componentName}>
                     <Link
                       href={href}
-                      className={clsx(styles.link, {
-                        [styles.isLinkActive]: isComponentActive,
-                      })}
+                      className={clsx(
+                        styles.link,
+                        isComponentActive && styles.isLinkActive
+                      )}
                     >
                       {componentName}
                     </Link>
