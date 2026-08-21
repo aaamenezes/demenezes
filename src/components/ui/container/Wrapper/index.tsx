@@ -20,7 +20,7 @@ export default function Wrapper({
 
   return (
     <Tag
-      className={clsx(style.wrapper, className || '')}
+      className={clsx(style.wrapper, className)}
       style={
         {
           '--max-width': maxWidth,

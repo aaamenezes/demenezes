@@ -18,7 +18,7 @@ export default function Heading({
   return (
     <Tag
       className={clsx(
-        className || '',
+        className,
         styles[`font-family-${family}`],
         styles[`font-size-${size}`],
         styles[`font-weight-${weight}`],

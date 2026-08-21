@@ -27,7 +27,7 @@ export default function Input({
       onChange={event => setValue(event.target.value)}
       type={type}
       name={name}
-      className={clsx(styles.input, className || '')}
+      className={clsx(styles.input, className)}
       id={id}
       placeholder={placeholder}
       required={required}

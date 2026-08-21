@@ -27,7 +27,7 @@ export default function Text({
 
   return (
     <Tag
-      className={clsx(...typographyClassNames, className || '')}
+      className={clsx(...typographyClassNames, className)}
       aria-hidden={ariaHidden}
     >
       {children}

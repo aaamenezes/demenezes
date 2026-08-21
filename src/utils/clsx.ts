@@ -1,8 +1,8 @@
 import { entriesOf } from './object';
 
-interface ClassMap {
-  [key: string]: boolean;
-}
+type ClassMap = Record<string, boolean>;
+
+type ClassName = string | null | undefined | ClassMap;
 
 function convertClassMapToClassName(classMap: ClassMap) {
   const entries = entriesOf(classMap);
@@ -19,8 +19,9 @@ function convertStringToClassName(stringClassName: string) {
   return stringClassName.trim();
 }
 
-export function clsx(...classNames: (string | ClassMap)[]) {
+export function clsx(...classNames: ClassName[]) {
   const classNameList = classNames.flatMap(item => {
+    if (!item) return [];
     if (typeof item === 'string') return convertStringToClassName(item);
     return convertClassMapToClassName(item);
   });

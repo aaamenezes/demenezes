@@ -11,7 +11,7 @@ export default function HandleList({ children }: { children: ReactNode }) {
         }
 
         return cloneElement(child, {
-          className: clsx(child?.props?.className || '', styles.li),
+          className: clsx(child?.props?.className, styles.li),
         });
       })}
     </ul>
