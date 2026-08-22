@@ -3,10 +3,10 @@
   - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
-  - [Analisar necessidade do componente PostCategory](#analisar-necessidade-do-componente-postcategory)
   - [Resolver links externos abrindo na mesma aba](#resolver-links-externos-abrindo-na-mesma-aba)
   - [Testar mudança de retrato para paisagem no mobile](#testar-mudança-de-retrato-para-paisagem-no-mobile)
   - [Testar site mobile](#testar-site-mobile)
+  - [\[🚫 COMPOSITE\] Analisar necessidade do componente PostCategory](#-composite-analisar-necessidade-do-componente-postcategory)
   - [\[🚫 ATUALIZAR VERSOES\] Aplicar React Portal no `Navigation`](#-atualizar-versoes-aplicar-react-portal-no-navigation)
 - [Ajustes/criação de componentes com médias/grandes mudanças visuais](#ajustescriação-de-componentes-com-médiasgrandes-mudanças-visuais)
   - [Analisar necessidade do componente Quiz](#analisar-necessidade-do-componente-quiz)
@@ -51,15 +51,6 @@ Antes de saber o que fazer, aplicar composite na base.
 
 # Ajustes em componentes com pequens mudanças visuais
 
-## Analisar necessidade do componente PostCategory
-
-Esse componente não tem story. Não parece ser vantagem ter ele como um componente isolado, pode ser chamado e estilizado separadamente. Antes de saber o que fazer, aplicar composite na base.
-
-- story
-- component
-- react
-- padrão
-
 ## Resolver links externos abrindo na mesma aba
 
 Ao final desse post http://localhost:3000/posts/map-javascript-array/#callback tem links externos, mas estão abrindo na mesma página. O conteúdo do link que o CMS tá mandando não está sendo passado pro componente Link.
@@ -79,6 +70,15 @@ Testar scroll vertical e horizontal, zoom, etc. Se der algo errado, a culpa é d
 
 - css
 - browser
+
+## [🚫 COMPOSITE] Analisar necessidade do componente PostCategory
+
+Esse componente não tem story. Não parece ser vantagem ter ele como um componente isolado, pode ser chamado e estilizado separadamente. Antes de saber o que fazer, aplicar composite na base.
+
+- story
+- component
+- react
+- padrão
 
 ## [🚫 ATUALIZAR VERSOES] Aplicar React Portal no `Navigation`
 
