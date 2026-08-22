@@ -1,10 +1,10 @@
 import PostCardInfos from '@/components/ui/block/PostCard/Infos';
 import Wrapper from '@/components/ui/container/Wrapper';
-import type { PostSummaryProps } from '@/types';
 import type { CSSProperties } from 'react';
 import style from './styles.module.css';
+import type { HeroPostCardProps } from './types';
 
-export default function HeroPostCard({ post }: { post: PostSummaryProps }) {
+export default function HeroPostCard({ post }: HeroPostCardProps) {
   const { src } = post.thumbnail.responsiveImage;
 
   const separator = src.includes('?') ? '&' : '?';

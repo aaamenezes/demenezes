@@ -1,12 +1,8 @@
 import Text from '@/components/ui/base/Text';
-import type { ReactNode } from 'react';
 import styles from './styles.module.css';
+import type { PostCardDateTextProps } from './types';
 
-export default function PostCardDateText({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function PostCardDateText({ children }: PostCardDateTextProps) {
   return (
     <Text
       family="heading"

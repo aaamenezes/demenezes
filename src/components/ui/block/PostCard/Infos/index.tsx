@@ -1,21 +1,17 @@
 import PostCardDescription from '@/components/ui/block/PostCard/Description';
 import PostCardFooter from '@/components/ui/block/PostCard/Footer';
 import PostCardHeader from '@/components/ui/block/PostCard/Header';
-import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
 import type { CSSProperties } from 'react';
 import { useCallback } from 'react';
 import style from './styles.module.css';
+import type { PostCardInfosProps } from './types';
 
 export default function PostCardInfos({
   post,
   isHero = false,
   isCompact = false,
-}: {
-  post: PostSummaryProps;
-  isHero?: boolean;
-  isCompact?: boolean;
-}) {
+}: PostCardInfosProps) {
   const { _firstPublishedAt, metaDescription, _updatedAt } = post;
 
   const getWrapperWidth = useCallback((isHero: boolean, compact: boolean) => {

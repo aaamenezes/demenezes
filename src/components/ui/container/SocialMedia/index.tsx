@@ -6,12 +6,11 @@ import { BiLogoDevTo } from 'react-icons/bi';
 import { FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import style from './styles.module.css';
+import type { SocialMediaProps } from './types';
 
 export default function SocialMedia({
   inverseColor = false,
-}: {
-  inverseColor?: boolean;
-}) {
+}: SocialMediaProps) {
   const socialMediaMap: Record<string, IconType> = {
     github: FaGithub,
     linkedin: FaLinkedin,

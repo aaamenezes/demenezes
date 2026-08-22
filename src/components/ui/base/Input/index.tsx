@@ -1,6 +1,7 @@
 import { clsx } from '@/utils/clsx';
 import { useState } from 'react';
 import styles from './styles.module.css';
+import type { InputProps } from './types';
 
 export default function Input({
   name,
@@ -10,15 +11,7 @@ export default function Input({
   id = '',
   required = false,
   disabled = false,
-}: {
-  name: string;
-  placeholder: string;
-  type?: string;
-  className?: string;
-  id?: string;
-  required?: boolean;
-  disabled?: boolean;
-}) {
+}: InputProps) {
   const [value, setValue] = useState('');
 
   return (

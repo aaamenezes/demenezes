@@ -1,18 +1,11 @@
 import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import { simplifyString } from '@/utils/simplifyString';
-import type { Heading as HeadingNode } from 'datocms-structured-text-utils';
 import { isSpan } from 'datocms-structured-text-utils';
-import type { ReactNode } from 'react';
 import style from '../styles.module.css';
+import type { HandleHeadingProps } from './types';
 
-export default function HandleHeading({
-  node,
-  children,
-}: {
-  node: HeadingNode;
-  children: ReactNode;
-}) {
+export default function HandleHeading({ node, children }: HandleHeadingProps) {
   const anchorLink = simplifyString(
     node.children
       .filter(isSpan)

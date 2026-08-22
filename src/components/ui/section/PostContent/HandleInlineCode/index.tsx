@@ -1,12 +1,10 @@
 import styles from '../styles.module.css';
+import type { HandleInlineCodeProps } from './types';
 
 export default function HandleInlineCode({
   children,
   key,
-}: {
-  children: React.ReactNode;
-  key: string;
-}) {
+}: HandleInlineCodeProps) {
   return (
     <code className={styles.inlineCode} key={key}>
       {children}

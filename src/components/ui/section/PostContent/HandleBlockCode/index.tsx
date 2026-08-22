@@ -1,8 +1,8 @@
 import BlockCode from '@/components/ui/base/BlockCode';
-import type { Code as CodeNode } from 'datocms-structured-text-utils';
 import styles from '../styles.module.css';
+import type { HandleBlockCodeProps } from './types';
 
-export default function HandleBlockCode({ node }: { node: CodeNode }) {
+export default function HandleBlockCode({ node }: HandleBlockCodeProps) {
   const language = ['html', 'css', 'javascript', 'js', 'typescript'].includes(
     node.language ?? ''
   )

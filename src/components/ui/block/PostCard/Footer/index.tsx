@@ -2,16 +2,13 @@ import { clsx } from '@/utils/clsx';
 import { convertDate } from '@/utils/convertDate';
 import PostCardDateText from './PostCardDateText';
 import style from './styles.module.css';
+import type { PostCardFooterProps } from './types';
 
 export default function PostCardFooter({
   publicationDate,
   updateDate,
   isCompact,
-}: {
-  publicationDate: string;
-  updateDate: string;
-  isCompact: boolean;
-}) {
+}: PostCardFooterProps) {
   function getPublicationDateContent() {
     if (!publicationDate) return 'Não publicado';
     if (!updateDate) return 'Não publicado';

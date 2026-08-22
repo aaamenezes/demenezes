@@ -3,6 +3,7 @@ import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import HighlightText from '@/components/ui/section/AboutHighlightText';
 import style from './styles.module.css';
+import type { AboutStoryProps } from './types';
 
 /**
  * Evento do google
@@ -18,10 +19,7 @@ import style from './styles.module.css';
 export default function AboutStory({
   historyHeading,
   historyText,
-}: {
-  historyHeading: string;
-  historyText: string;
-}) {
+}: AboutStoryProps) {
   const firstParagraph = historyText.split('\n')[0];
   const remainingText = historyText
     .split('\n')

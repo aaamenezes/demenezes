@@ -5,6 +5,7 @@ import { simplifyString } from '@/utils/simplifyString';
 import type { FormEvent } from 'react';
 import { useCallback, useState } from 'react';
 import style from './styles.module.css';
+import type { QuizProps } from './types';
 
 /***
  * Esse component não está sendo usado pelos posts até hoje 19/08/2026
@@ -28,11 +29,7 @@ export default function Quiz({
   question,
   alternatives,
   correctAlternativeIndex,
-}: {
-  question: string;
-  alternatives: string[];
-  correctAlternativeIndex: number;
-}) {
+}: QuizProps) {
   const [isAnswered, setIsAnswered] = useState(false);
   const [markedResponse, setMarkedResponse] = useState<number | null>(null);
   const [responseIsCorrect, setResponseIsCorrect] = useState(false);

@@ -5,10 +5,10 @@ import Video from '@/components/ui/base/Video';
 import YouTube from '@/components/ui/base/YouTube';
 import BlockQuote from '@/components/ui/block/BlockQuote';
 import Table from '@/components/ui/block/Table';
-import type { DatoBlock } from '@/types';
 import styles from '../styles.module.css';
+import type { HandleBlockProps } from './types';
 
-export default function HandleBlock({ record }: { record: DatoBlock }) {
+export default function HandleBlock({ record }: HandleBlockProps) {
   const { __typename } = record;
   switch (__typename) {
     case 'ImageRecord':

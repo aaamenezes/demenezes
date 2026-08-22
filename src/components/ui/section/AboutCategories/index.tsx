@@ -3,18 +3,12 @@ import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import CmsIcon from '../../base/CmsIcon';
 import style from './styles.module.css';
+import type { AboutCategoriesProps } from './types';
 
 export default function AboutCategories({
   categoriesHeading,
   categoryItems,
-}: {
-  categoriesHeading: string;
-  categoryItems: Array<{
-    categoryItemIcon: string;
-    categoryItemTitle: string;
-    categoryItemDescription: string;
-  }>;
-}) {
+}: AboutCategoriesProps) {
   const CategoryItems = categoryItems.map(
     ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => {
       return (

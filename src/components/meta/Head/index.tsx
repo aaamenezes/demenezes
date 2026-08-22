@@ -1,27 +1,10 @@
 import settings from '@/data/settings.json';
-import type {
-  AboutPageProps,
-  ContactPageProps,
-  PostProps,
-  PostSummaryProps,
-} from '@/types';
 import { getPageInfos } from '@/utils/getPageInfos';
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
+import type { HeadProps } from './types';
 
-export default function Head({
-  componentProps,
-}: {
-  componentProps: {
-    currentPosts?: PostSummaryProps[];
-    currentPagination?: number;
-    isLastPagination?: boolean;
-    preview?: boolean;
-    post?: PostProps;
-    aboutPageContent?: AboutPageProps;
-    contactContent?: ContactPageProps;
-  };
-}) {
+export default function Head({ componentProps }: HeadProps) {
   const { currentPage } = getPageInfos();
   const router = useRouter();
   const baseURL = 'https://demenezes.dev';

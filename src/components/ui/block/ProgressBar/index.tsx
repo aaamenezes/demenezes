@@ -1,12 +1,9 @@
 import type { CSSProperties } from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import style from './styles.module.css';
+import type { ProgressBarProps } from './types';
 
-export default function ProgressBar({
-  containerReference,
-}: {
-  containerReference: React.RefObject<HTMLElement | null>;
-}) {
+export default function ProgressBar({ containerReference }: ProgressBarProps) {
   const [barWidth, setBarWidth] = useState(0);
 
   const setNewBarWidth = useCallback(() => {

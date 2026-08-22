@@ -1,8 +1,8 @@
 import Text from '@/components/ui/base/Text';
-import type { ReactNode } from 'react';
 import style from '../styles.module.css';
+import type { HandleParagraphProps } from './types';
 
-export default function HandleParagraph({ children }: { children: ReactNode }) {
+export default function HandleParagraph({ children }: HandleParagraphProps) {
   return (
     <Text size="sm" lineHeight="lg" className={style.p}>
       {children}

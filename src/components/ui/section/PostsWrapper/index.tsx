@@ -1,17 +1,14 @@
 import PostCard from '@/components/ui/block/PostCard';
 import Newsletter from '@/components/ui/section/Newsletter';
-import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
 import HeroPostCard from '../HeroPostCard';
 import style from './styles.module.css';
+import type { PostsWrapperProps } from './types';
 
 export default function PostsWrapper({
   postsList,
   isHome = false,
-}: {
-  postsList: PostSummaryProps[];
-  isHome?: boolean;
-}) {
+}: PostsWrapperProps) {
   const heroPost = postsList[0];
 
   const firstBlockStart = isHome ? 1 : 0;

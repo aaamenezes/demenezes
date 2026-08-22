@@ -1,28 +1,17 @@
 import Heading from '@/components/ui/base/Heading';
-import Text from '@/components/ui/base/Text';
 import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
+import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import NextImage from 'next/image';
 import style from './styles.module.css';
+import type { AboutGreetingProps } from './types';
 
 export default function Greeting({
   greetingHeading,
   greetingSubheading,
   greetingDescription,
   profileImage,
-}: {
-  greetingHeading: string;
-  greetingSubheading: string;
-  greetingDescription: string;
-  profileImage: {
-    alt: string;
-    responsiveImage: {
-      src: string;
-    };
-    width: number;
-    height: number;
-  };
-}) {
+}: AboutGreetingProps) {
   const {
     alt,
     width,

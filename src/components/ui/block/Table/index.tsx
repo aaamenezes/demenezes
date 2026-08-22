@@ -1,5 +1,5 @@
 import style from './styles.module.css';
-
+import type { TableProps } from './types';
 function addClassToTags(html: string, tagName: string, className: string) {
   const openingTag = new RegExp(`<${tagName}(\\s[^>]*)?>`, 'gi');
   const classAttribute = /\\bclass=(["'])(.*?)\\1/i;
@@ -21,11 +21,7 @@ export default function Table({
   caption,
   tableSummary,
   tableContent,
-}: {
-  caption: string;
-  tableSummary: string;
-  tableContent: string;
-}) {
+}: TableProps) {
   const tableBody = tableContent
     .replace(/^\s*<table\b[^>]*>/i, '')
     .replace(/<\/table>\s*$/i, '');

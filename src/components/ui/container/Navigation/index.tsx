@@ -6,14 +6,12 @@ import { getPageInfos } from '@/utils/getPageInfos';
 import { X } from 'lucide-react';
 import { useRouter } from 'next/router';
 import style from './styles.module.css';
+import type { NavigationProps } from './types';
 
 export default function Navigation({
   isOpenMenu,
   toggleMenu,
-}: {
-  isOpenMenu: boolean;
-  toggleMenu: () => void;
-}) {
+}: NavigationProps) {
   const router = useRouter();
   const { currentPage } = getPageInfos();
 

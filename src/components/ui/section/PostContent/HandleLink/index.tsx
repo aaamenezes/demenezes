@@ -1,14 +1,8 @@
 import Link from '@/components/ui/base/Link';
-import type { Link as LinkNode } from 'datocms-structured-text-utils';
 import style from '../styles.module.css';
+import type { HandleLinkProps } from './types';
 
-export default function HandleLink({
-  node,
-  children,
-}: {
-  node: LinkNode;
-  children: React.ReactNode;
-}) {
+export default function HandleLink({ node, children }: HandleLinkProps) {
   return (
     <Link
       className={style.a}

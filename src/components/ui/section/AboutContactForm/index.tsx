@@ -2,14 +2,10 @@ import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
-import type { ContactPageProps } from '@/types';
 import style from './styles.module.css';
+import type { AboutContactFormProps } from './types';
 
-export default function ContactForm({
-  contactContent,
-}: {
-  contactContent: ContactPageProps;
-}) {
+export default function ContactForm({ contactContent }: AboutContactFormProps) {
   const { mailchimpIframeSrc } = settings.form.contact;
   const { contactTitle, contactText } = contactContent.data.contactSection;
   const textElements = contactText.split('\n').map(text => (

@@ -1,12 +1,7 @@
 import style from './styles.module.css';
+import type { YouTubeProps } from './types';
 
-export default function YouTube({
-  title,
-  videoId,
-}: {
-  title: string;
-  videoId: string;
-}) {
+export default function YouTube({ title, videoId }: YouTubeProps) {
   return (
     <iframe
       className={style.youTube}

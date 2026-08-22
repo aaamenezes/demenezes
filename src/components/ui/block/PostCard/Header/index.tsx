@@ -1,17 +1,14 @@
 import Heading from '@/components/ui/base/Heading';
 import Link from '@/components/ui/base/Link';
-import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
 import PostCategory from '../../PostCategory';
 import style from './styles.module.css';
+import type { PostCardHeaderProps } from './types';
 
 export default function PostCardHeader({
   post,
   isHero = false,
-}: {
-  post: PostSummaryProps;
-  isHero?: boolean;
-}) {
+}: PostCardHeaderProps) {
   const { category, slug, title } = post;
 
   return (

@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
 import style from './styles.module.css';
+import type { PostCategoryProps } from './types';
 
-export default function PostCategory({ children }: { children: ReactNode }) {
+export default function PostCategory({ children }: PostCategoryProps) {
   return <div className={style.postCategoryText}>{children}</div>;
 }

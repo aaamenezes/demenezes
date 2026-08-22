@@ -2,18 +2,12 @@ import Link from '@/components/ui/base/Link';
 import PostCardInfos from '@/components/ui/block/PostCard/Infos';
 import PostCategory from '@/components/ui/block/PostCategory';
 import Wrapper from '@/components/ui/container/Wrapper';
-import type { PostSummaryProps } from '@/types';
 import { clsx } from '@/utils/clsx';
 import NextImage from 'next/image';
 import style from './styles.module.css';
+import type { PostCardProps } from './types';
 
-export default function PostCard({
-  post,
-  isCompact = false,
-}: {
-  post: PostSummaryProps;
-  isCompact?: boolean;
-}) {
+export default function PostCard({ post, isCompact = false }: PostCardProps) {
   const { title, slug, thumbnail, category } = post;
   const { width, height } = thumbnail;
   const { src } = thumbnail.responsiveImage;

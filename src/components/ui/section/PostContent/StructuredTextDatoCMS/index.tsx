@@ -1,4 +1,3 @@
-import type { DatoBlock } from '@/types';
 import {
   isCode,
   isHeading,
@@ -6,7 +5,6 @@ import {
   isList,
   isParagraph,
 } from 'datocms-structured-text-utils';
-import type { StructuredTextGraphQlResponse } from 'react-datocms';
 import { renderMarkRule, renderNodeRule, StructuredText } from 'react-datocms';
 import HandleBlock from '../HandleBlock';
 import HandleBlockCode from '../HandleBlockCode';
@@ -15,12 +13,11 @@ import HandleInlineCode from '../HandleInlineCode';
 import HandleLink from '../HandleLink';
 import HandleList from '../HandleList';
 import HandleParagraph from '../HandleParagraph';
+import type { StructuredTextDatoCMSProps } from './types';
 
 export default function StructuredTextDatoCMS({
   data,
-}: {
-  data: StructuredTextGraphQlResponse<DatoBlock>;
-}) {
+}: StructuredTextDatoCMSProps) {
   return (
     <StructuredText
       data={data}

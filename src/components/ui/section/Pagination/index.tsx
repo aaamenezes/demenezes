@@ -3,14 +3,12 @@ import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
+import type { PaginationProps } from './types';
 
 export default function Pagination({
   currentPagination,
   isLastPagination,
-}: {
-  currentPagination: number;
-  isLastPagination: boolean;
-}) {
+}: PaginationProps) {
   const previousLink = `/page/${+currentPagination - 1}`.replace('page/1', '');
   const nextLink = `/page/${+currentPagination + 1}`;
 

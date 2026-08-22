@@ -1,6 +1,7 @@
-import { clsx } from '@/utils/clsx';
 import Heading from '@/components/ui/base/Heading';
+import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
+import type { SectionProps } from './types';
 
 export default function Section({
   heading,
@@ -8,13 +9,7 @@ export default function Section({
   direction,
   width = 100,
   backgroundColor,
-}: {
-  heading: string;
-  children: React.ReactNode;
-  direction?: 'row' | 'column';
-  width?: number;
-  backgroundColor?: string;
-}) {
+}: SectionProps) {
   return (
     <section
       className={style.section}
