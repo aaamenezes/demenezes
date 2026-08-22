@@ -1,6 +1,5 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
   - [Analisar necessidade de props key em `HandleBlock`](#analisar-necessidade-de-props-key-em-handleblock)
-  - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
   - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
   - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
@@ -34,42 +33,6 @@ Preciso das props "key" em `src/components/ui/section/PostContent/HandleBlock/in
 
 - cms
 - react
-
-## Validar existência de className no módulo de CSS do componente
-
-Tem um método isValidClassName em src/components/ui/section/PostContent/HandleHeading/index.tsx que verifica se uma classe existe no css module, para evitar erro de tipagem em códigos assim `style[customClassName]`.
-
-Posso criar um método genérico para usar em toda code base:
-
-```ts
-function isValidClassName(
-  className: string,
-  styleMap: Record<string, string>
-): className is keyof typeof styleMap {
-  return className in styleMap;
-}
-```
-
-Ou arrumar uma forma de incorporar essa lógica no clsx, para evitar de validar `isValidClassName(HeadingLevel)` em cada componente.
-
-Por exemplo, posso criar um método auxiliar assim:
-
-```ts
-function getValidClassName(
-  className: string,
-  styleMap: Record<string, string>
-) {
-  if (className in style) return className;
-  return '';
-}
-```
-
-E entre os argumentos do clsx chamar o disparo desse método `clsx(style.myElement, getValidClassName(customClassName, styleMap))`. Isso exige chamar método, e achei meio ruim.
-
-Ou posso passar uma array de duas posições no argumento de clsx `clsx(style.myElement, [customClassName, styleMap])`, mas fica confuso, não deixa claro se pode mais classes nessa array.
-
-- css
-- padrão
 
 ## Analisar necessidade de valor default em prop opcional
 
