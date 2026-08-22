@@ -3,7 +3,6 @@
   - [Validar existência de className no módulo de CSS do componente](#validar-existência-de-classname-no-módulo-de-css-do-componente)
   - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
   - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
-  - [Criar arquivos types.ts em todos componentes](#criar-arquivos-typests-em-todos-componentes)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
   - [Corrigir line-height de datas](#corrigir-line-height-de-datas)
@@ -84,7 +83,6 @@ O foco dessa mudança é o terceiro item acima. Fazer um relatório de props que
 
 ## Padronizar paths do Typescript
 
-## Criar arquivos types.ts em todos componentes
 
 ## [🚫 COMPOSITE] Melhorar `PostsWrapper`
 
