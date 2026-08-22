@@ -14,7 +14,6 @@ export default function HandleBlock({ record }: HandleBlockProps) {
     case 'ImageRecord':
       return (
         <Image
-          key={record.id}
           src={record.image.responsiveImage.src}
           width={record.image.width}
           height={record.image.height}
@@ -26,19 +25,15 @@ export default function HandleBlock({ record }: HandleBlockProps) {
     case 'ExternalVideoRecord':
       return (
         <YouTube
-          key={record.id}
           title={record.video.title}
           videoId={record.video.providerUid}
         />
       );
     case 'VideoRecord':
-      return (
-        <Video key={record.id} url={record.video.url} alt={record.video.alt} />
-      );
+      return <Video url={record.video.url} alt={record.video.alt} />;
     case 'TableRecord':
       return (
         <Table
-          key={record.id}
           caption={record.caption}
           tableSummary={record.tableSummary}
           tableContent={record.table}

@@ -1,5 +1,4 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
-  - [Analisar necessidade de props key em `HandleBlock`](#analisar-necessidade-de-props-key-em-handleblock)
   - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
   - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
@@ -26,13 +25,6 @@
   - [Implementar testes](#implementar-testes)
 
 # Ajustes de código sem impacto visual
-
-## Analisar necessidade de props key em `HandleBlock`
-
-Preciso das props "key" em `src/components/ui/section/PostContent/HandleBlock/index.tsx`?
-
-- cms
-- react
 
 ## Analisar necessidade de valor default em prop opcional
 
