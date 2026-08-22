@@ -3,7 +3,6 @@
   - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
-  - [Corrigir line-height de datas](#corrigir-line-height-de-datas)
   - [Analisar necessidade do componente PostCategory](#analisar-necessidade-do-componente-postcategory)
   - [Resolver links externos abrindo na mesma aba](#resolver-links-externos-abrindo-na-mesma-aba)
   - [Testar mudança de retrato para paisagem no mobile](#testar-mudança-de-retrato-para-paisagem-no-mobile)
@@ -51,12 +50,6 @@ Antes de saber o que fazer, aplicar composite na base.
 - component
 
 # Ajustes em componentes com pequens mudanças visuais
-
-## Corrigir line-height de datas
-
-Corrigir line-height de data de publicação e data de atualização
-
-- css
 
 ## Analisar necessidade do componente PostCategory
 
