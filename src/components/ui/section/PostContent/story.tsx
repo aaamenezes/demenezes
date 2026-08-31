@@ -37,6 +37,72 @@ const post: PostProps = {
                   },
                 ],
               },
+              {
+                type: 'list',
+                style: 'bulleted',
+                children: [
+                  {
+                    type: 'listItem',
+                    children: [
+                      {
+                        type: 'paragraph',
+                        children: [
+                          {
+                            type: 'span',
+                            value: 'Uma referência para uma ',
+                          },
+                          {
+                            type: 'link',
+                            url: '/posts',
+                            children: [
+                              {
+                                type: 'span',
+                                value: 'página interna',
+                              },
+                            ],
+                          },
+                          {
+                            type: 'span',
+                            value: '.',
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  {
+                    type: 'listItem',
+                    children: [
+                      {
+                        type: 'paragraph',
+                        children: [
+                          {
+                            type: 'span',
+                            value: 'Uma referência para um ',
+                          },
+                          {
+                            type: 'link',
+                            url: 'https://www.datocms.com/',
+                            meta: [
+                              { id: 'rel', value: 'noreferrer' },
+                              { id: 'target', value: '_blank' },
+                            ],
+                            children: [
+                              {
+                                type: 'span',
+                                value: 'site externo',
+                              },
+                            ],
+                          },
+                          {
+                            type: 'span',
+                            value: '.',
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
             ],
           },
         },

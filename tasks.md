@@ -3,7 +3,6 @@
   - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
-  - [Resolver links externos abrindo na mesma aba](#resolver-links-externos-abrindo-na-mesma-aba)
   - [Testar mudança de retrato para paisagem no mobile](#testar-mudança-de-retrato-para-paisagem-no-mobile)
   - [Testar site mobile](#testar-site-mobile)
   - [\[🚫 COMPOSITE\] Analisar necessidade do componente PostCategory](#-composite-analisar-necessidade-do-componente-postcategory)
@@ -50,12 +49,6 @@ Antes de saber o que fazer, aplicar composite na base.
 - component
 
 # Ajustes em componentes com pequens mudanças visuais
-
-## Resolver links externos abrindo na mesma aba
-
-Ao final desse post http://localhost:3000/posts/map-javascript-array/#callback tem links externos, mas estão abrindo na mesma página. O conteúdo do link que o CMS tá mandando não está sendo passado pro componente Link.
-
-- componente
 
 ## Testar mudança de retrato para paisagem no mobile
 

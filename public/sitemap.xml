@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+        <loc>https://demenezes.dev/posts/como-usar-foreach-javascript-exemplos</loc>
+        <lastmod>2026-08-22</lastmod>
+      </url>
+  <url>
+        <loc>https://demenezes.dev/posts/filter-javascript-array</loc>
+        <lastmod>2026-08-22</lastmod>
+      </url>
+  <url>
+        <loc>https://demenezes.dev/posts/map-javascript-array</loc>
+        <lastmod>2026-08-22</lastmod>
+      </url>
+  <url>
         <loc>https://demenezes.dev/posts/limite-ideal-caracteres-por-linha-codigo</loc>
         <lastmod>2025-05-26</lastmod>
       </url>
@@ -49,20 +61,8 @@
         <lastmod>2023-11-01</lastmod>
       </url>
   <url>
-        <loc>https://demenezes.dev/posts/filter-javascript-array</loc>
-        <lastmod>2023-10-17</lastmod>
-      </url>
-  <url>
-        <loc>https://demenezes.dev/posts/map-javascript-array</loc>
-        <lastmod>2023-10-08</lastmod>
-      </url>
-  <url>
         <loc>https://demenezes.dev/posts/codecon-summit-presencial-2023</loc>
         <lastmod>2023-09-13</lastmod>
-      </url>
-  <url>
-        <loc>https://demenezes.dev/posts/como-usar-foreach-javascript-exemplos</loc>
-        <lastmod>2023-09-04</lastmod>
       </url>
   <url>
         <loc>https://demenezes.dev/posts/diferenca-entre-array-htmlcollection-nodelist-domtokenlist-namednodemap</loc>
@@ -170,7 +170,7 @@
       </url>
   <url>
         <loc>https://demenezes.dev/</loc>
-        <lastmod>2025-05-26</lastmod>
+        <lastmod>2026-08-22</lastmod>
       </url>
   <url>
         <loc>https://demenezes.dev/contact</loc>

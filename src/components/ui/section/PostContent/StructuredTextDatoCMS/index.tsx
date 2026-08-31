@@ -3,6 +3,7 @@ import {
   isHeading,
   isLink,
   isList,
+  isListItem,
   isParagraph,
 } from 'datocms-structured-text-utils';
 import { renderMarkRule, renderNodeRule, StructuredText } from 'react-datocms';
@@ -12,6 +13,7 @@ import HandleHeading from '../HandleHeading';
 import HandleInlineCode from '../HandleInlineCode';
 import HandleLink from '../HandleLink';
 import HandleList from '../HandleList';
+import HandleListItem from '../HandleListItem';
 import HandleParagraph from '../HandleParagraph';
 import type { StructuredTextDatoCMSProps } from './types';
 
@@ -27,6 +29,7 @@ export default function StructuredTextDatoCMS({
         renderNodeRule(isHeading, HandleHeading),
         renderNodeRule(isParagraph, HandleParagraph),
         renderNodeRule(isList, HandleList),
+        renderNodeRule(isListItem, HandleListItem),
       ]}
       customMarkRules={[renderMarkRule('code', HandleInlineCode)]}
       renderBlock={HandleBlock}

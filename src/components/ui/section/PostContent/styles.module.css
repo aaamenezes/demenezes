@@ -65,10 +65,6 @@
   opacity: 1;
 }
 
-.postContent .a {
-  text-decoration-line: underline;
-}
-
 .postContent .a:hover,
 .postContent .a:focus {
   text-decoration-thickness: 3px;
