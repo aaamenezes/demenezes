@@ -1,8 +1,8 @@
 import Section from '@/components/designSysyem/Section';
+import Button from '@/components/ui/base/Button';
 import { Menu } from 'lucide-react';
 import { useCallback, useState } from 'react';
 import Navigation from '.';
-import Button from '../../base/Button';
 
 export default function NavigationStory() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);

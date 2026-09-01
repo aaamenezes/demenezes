@@ -1,7 +1,7 @@
 import PostCard from '@/components/ui/block/PostCard';
 import Newsletter from '@/components/ui/section/Newsletter';
 import { clsx } from '@/utils/clsx';
-import HeroPostCard from '../HeroPostCard';
+import HeroPostCard from '@/components/ui/section/HeroPostCard';
 import styles from './styles.module.css';
 import type { PostsWrapperProps } from './types';
 

@@ -1,7 +1,7 @@
 import Heading from '@/components/ui/base/Heading';
 import Link from '@/components/ui/base/Link';
 import { clsx } from '@/utils/clsx';
-import PostCategory from '../../PostCategory';
+import PostCategory from '@/components/ui/block/PostCategory';
 import styles from './styles.module.css';
 import type { PostCardHeaderProps } from './types';
 

@@ -3,7 +3,7 @@ import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { convertDate } from '@/utils/convertDate';
 import type { CSSProperties } from 'react';
-import PostCategory from '../../block/PostCategory';
+import PostCategory from '@/components/ui/block/PostCategory';
 import styles from './styles.module.css';
 import type { PostHeaderProps } from './types';
 

@@ -1,5 +1,5 @@
+import { clsx } from '@/utils/clsx';
 import NextImage from 'next/image';
-import { clsx } from '../../../../utils/clsx';
 import styles from './styles.module.css';
 import type { ImageProps } from './types';
 

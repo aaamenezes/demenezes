@@ -2,7 +2,7 @@ import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
 import { Search, X } from 'lucide-react';
 import { useCallback, useState } from 'react';
-import Button from '../../base/Button';
+import Button from '@/components/ui/base/Button';
 import styles from './styles.module.css';
 
 export default function SearchWrapper() {

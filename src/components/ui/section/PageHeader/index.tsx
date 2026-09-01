@@ -6,7 +6,7 @@ import { clsx } from '@/utils/clsx';
 import { getPageInfos } from '@/utils/getPageInfos';
 import { Menu } from 'lucide-react';
 import { useCallback, useState } from 'react';
-import Navigation from '../../container/Navigation';
+import Navigation from '@/components/ui/container/Navigation';
 import styles from './styles.module.css';
 
 export default function PageHeader() {
