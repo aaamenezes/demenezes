@@ -1,14 +1,16 @@
 import Button from '@/components/ui/base/Button';
-import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
 import Heading from '@/components/ui/base/Heading';
 import Input from '@/components/ui/base/Input';
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
 import { clsx } from '@/utils/clsx';
+import { useState } from 'react';
 import styles from './styles.module.css';
 
 export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   return (
     <Wrapper className={styles.newsletterForm} width="full">
@@ -31,25 +33,22 @@ export default function Newsletter() {
             <div id="mc_embed_signup_scroll">
               <div className={styles.inputsWrapper}>
                 <div className="mc-field-group">
-                  <HiddenA11Y>
-                    <label htmlFor="mce-FNAME">Informe seu nome</label>
-                  </HiddenA11Y>
                   <Input
+                    label="Informe seu nome"
                     type="text"
                     name="FNAME"
                     className={styles.newsletterFormInput}
                     id="mce-FNAME"
                     placeholder="Nome"
+                    value={name}
+                    onChange={event => setName(event.target.value)}
+                    hideLabel
                     required
                   />
                 </div>
                 <div className="mc-field-group">
-                  <HiddenA11Y>
-                    <label htmlFor="mce-EMAIL">
-                      Informe seu endereço de email
-                    </label>
-                  </HiddenA11Y>
                   <Input
+                    label="Informe seu endereço de email"
                     type="email"
                     name="EMAIL"
                     className={clsx(
@@ -58,6 +57,9 @@ export default function Newsletter() {
                     )}
                     id="mce-EMAIL"
                     placeholder="Email"
+                    value={email}
+                    onChange={event => setEmail(event.target.value)}
+                    hideLabel
                     required
                   />
                 </div>

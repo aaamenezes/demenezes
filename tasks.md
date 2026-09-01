@@ -1,6 +1,4 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
-  - [Analisar necessidade de valor default em prop opcional](#analisar-necessidade-de-valor-default-em-prop-opcional)
-  - [Padronizar paths do Typescript](#padronizar-paths-do-typescript)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
 - [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
   - [Testar mudança de retrato para paisagem no mobile](#testar-mudança-de-retrato-para-paisagem-no-mobile)
@@ -8,8 +6,6 @@
   - [\[🚫 COMPOSITE\] Analisar necessidade do componente PostCategory](#-composite-analisar-necessidade-do-componente-postcategory)
   - [\[🚫 ATUALIZAR VERSOES\] Aplicar React Portal no `Navigation`](#-atualizar-versoes-aplicar-react-portal-no-navigation)
 - [Ajustes/criação de componentes com médias/grandes mudanças visuais](#ajustescriação-de-componentes-com-médiasgrandes-mudanças-visuais)
-  - [Analisar necessidade do componente Quiz](#analisar-necessidade-do-componente-quiz)
-  - [Melhorar componente input](#melhorar-componente-input)
   - [Criar novos `StructuredTextDatoCMS`](#criar-novos-structuredtextdatocms)
   - [Criar componente de grid](#criar-componente-de-grid)
 - [Configurações estruturais](#configurações-estruturais)
@@ -23,19 +19,6 @@
   - [Implementar testes](#implementar-testes)
 
 # Ajustes de código sem impacto visual
-
-## Analisar necessidade de valor default em prop opcional
-
-As props marcadas como opcionais nos componentes (`?`) nem sempre precisam de valor default. O `className` por exemplo não precisa, se eu defino um valor padrão como string vazia, e não passo o className na hora de chamar o componente, eu envio para a DOM um atributo `class` sem valor nenhum, desnecessariamente. Então não é porque uma prop é opcional que ela precisa de valor default:
-
-- Prop obrigatória: devo informar na invocação, e caso não faça, o Typescript irá me alertas. Exemplo: `src` na `Image`
-- Prop não obrigatória com valor default: aqui o valor é obrigatório, mas posso dar a liberdade de deixar como opcional, apenas definindo um valor default. Esse recurso o componente PRECISA para funcionar, e caso não seja informado eu configuro o valor padrão. Exemplo: `variant` com valor default `filled` no `Button`
-- Prop não obrigatória sem valor defualt: recurso opcional ao componente, se não for informado eu apenas omito esse recurso. Exemplo: `className` em grande parte dos componente.
-
-O foco dessa mudança é o terceiro item acima. Fazer um relatório de props que hoje são marcadas como opcionais, e que possuem valor default desnecessariamente.
-
-## Padronizar paths do Typescript
-
 
 ## [🚫 COMPOSITE] Melhorar `PostsWrapper`
 
@@ -81,28 +64,6 @@ Aguardar tarefa de atualização do next e react. Usar o react portal para o com
 - componente
 
 # Ajustes/criação de componentes com médias/grandes mudanças visuais
-
-## Analisar necessidade do componente Quiz
-
-Analisar a viabilidade de manter esse componente na base:
-
-- Não vou postar mais
-- Acho que nunca usei (confirmar isso)
-- Vou passar o blog pra site pessoal
-- Rever todo CSS e font style dele
-
-- css
-- componente
-
-## Melhorar componente input
-
-Alterações:
-
-- Colocar o componente label obrigatório lá dentro
-- Pedir name e id como obrigatório (para usar no htmlFor do label)
-
-- organizar código
-- componente
 
 ## Criar novos `StructuredTextDatoCMS`
 

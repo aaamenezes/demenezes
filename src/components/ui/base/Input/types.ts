@@ -1,9 +1,15 @@
+import type { ChangeEventHandler, HTMLInputTypeAttribute } from 'react';
+
 export interface InputProps {
+  label: string;
   name: string;
   placeholder: string;
-  className?: string;
-  id?: string;
+  id: string;
+  value: string;
+  onChange: ChangeEventHandler<HTMLInputElement>;
+  hideLabel?: boolean;
   required?: boolean;
   disabled?: boolean;
-  type?: string;
+  className?: string;
+  type?: HTMLInputTypeAttribute;
 }

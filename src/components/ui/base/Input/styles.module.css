@@ -1,3 +1,8 @@
+.label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
 .input {
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--border-radius);
