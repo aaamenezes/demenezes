@@ -4,14 +4,14 @@ import type { HeadingProps } from './types';
 
 export default function Heading({
   children,
+  className,
+  id,
   level = 2,
   family = 'heading',
   size = 'xl',
   weight = 700,
   letterSpacing = 'xs',
   lineHeight = 'sm',
-  className,
-  id,
 }: HeadingProps) {
   const Tag = `h${level}` as keyof HTMLElementTagNameMap;
 

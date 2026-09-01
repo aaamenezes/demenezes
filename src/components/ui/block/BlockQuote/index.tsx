@@ -9,7 +9,7 @@ export default function BlockQuote({
   datoContent,
 }: BlockQuoteProps) {
   return (
-    <blockquote className={style.blockQuote} cite={source || ''}>
+    <blockquote className={style.blockQuote} cite={source}>
       {datoContent ? <StructuredTextDatoCMS data={datoContent} /> : children}
       {author && <footer className={style.postQuoteAuthor}>{author}</footer>}
     </blockquote>

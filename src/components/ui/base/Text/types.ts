@@ -9,10 +9,10 @@ import type { HTMLAttributes, ReactNode } from 'react';
 
 export type TextProps = HTMLAttributes<HTMLElement> & {
   children: ReactNode;
-  as?: 'p' | 'span' | 'strong';
   className?: string;
   ariaHidden?: boolean;
   inheritTypographyStyles?: boolean;
+  as?: 'p' | 'span' | 'strong';
   family?: FontFamily;
   size?: FontSize;
   weight?: FontWeight;

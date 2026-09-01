@@ -3,7 +3,7 @@ import { clsx } from '@/utils/clsx';
 import style from './styles.module.css';
 import type { LogoProps } from './types';
 
-export default function Logo({ isColorInverse = false }: LogoProps) {
+export default function Logo({ isColorInverse }: LogoProps) {
   // quando reativar o preview, resolver isso
   const preview = false;
 

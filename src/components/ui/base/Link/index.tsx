@@ -7,7 +7,7 @@ import type { LinkProps } from './types';
 export default function Link({
   href,
   children,
-  isExternal = false,
+  isExternal,
   className,
 }: LinkProps) {
   const isChildrenText = typeof children === 'string';

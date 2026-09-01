@@ -4,6 +4,6 @@ export interface SectionProps {
   heading: string;
   children: ReactNode;
   direction?: 'row' | 'column';
-  width?: number;
   backgroundColor?: string;
+  width?: number;
 }

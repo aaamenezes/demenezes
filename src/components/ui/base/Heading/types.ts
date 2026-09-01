@@ -9,12 +9,12 @@ import type { HTMLAttributes, ReactNode } from 'react';
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   children: ReactNode;
+  className?: string;
+  id?: string;
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   family?: FontFamily;
   size?: FontSize;
   weight?: FontWeight;
   letterSpacing?: LetterSpacing;
   lineHeight?: LineHeight;
-  className?: string;
-  id?: string;
 }

@@ -7,9 +7,9 @@ export type WrapperMaxWidth = BreakpointsNoXs | 'full' | `${number}ch`;
 export type WrapperProps = {
   children: ReactNode;
   width: WrapperMaxWidth;
-  padding?: Spacing;
+  className?: string;
   paddingX?: Spacing;
   paddingY?: Spacing;
+  padding?: Spacing;
   as?: keyof HTMLElementTagNameMap;
-  className?: string;
 };

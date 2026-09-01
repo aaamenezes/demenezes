@@ -6,11 +6,11 @@ import type { WrapperProps } from './types';
 export default function Wrapper({
   children,
   width,
-  padding = 'md',
+  className,
   paddingX,
   paddingY,
+  padding = 'md',
   as: Tag = 'div',
-  className,
 }: WrapperProps) {
   const maxWidth = useMemo(() => {
     if (width === 'full') return '100%';

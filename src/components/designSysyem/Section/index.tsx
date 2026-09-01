@@ -7,8 +7,8 @@ export default function Section({
   heading,
   children,
   direction,
-  width = 100,
   backgroundColor,
+  width = 100,
 }: SectionProps) {
   return (
     <section

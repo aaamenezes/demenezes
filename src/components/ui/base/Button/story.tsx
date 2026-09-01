@@ -6,7 +6,12 @@ export default function ButtonStory() {
   return (
     <>
       <Section heading="Filled" direction="row">
-        <Button variant="filled" type="button">
+        <Button
+          variant="filled"
+          type="button"
+          name="button-name"
+          onClick={() => alert('Button clicked!')}
+        >
           Button
         </Button>
         <Button variant="filled" type="submit">

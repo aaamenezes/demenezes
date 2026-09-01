@@ -4,13 +4,13 @@ import type { ButtonProps } from './types';
 
 export default function Button({
   children,
-  variant = 'filled',
-  onClick = () => {},
-  type = 'button',
-  disabled = false,
-  name = '',
+  onClick,
+  disabled,
+  name,
   className,
-  id = '',
+  id,
+  variant = 'filled',
+  type = 'button',
 }: ButtonProps) {
   return (
     <button

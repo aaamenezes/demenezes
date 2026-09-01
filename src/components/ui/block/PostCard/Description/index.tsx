@@ -5,8 +5,8 @@ import type { PostCardDescriptionProps } from './types';
 
 export default function PostCardDescription({
   description,
-  isCompact = false,
-  isHero = false,
+  isCompact,
+  isHero,
 }: PostCardDescriptionProps) {
   return (
     <Text

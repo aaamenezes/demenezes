@@ -6,11 +6,11 @@ import type { InputProps } from './types';
 export default function Input({
   name,
   placeholder,
-  type = 'text',
   className,
-  id = '',
-  required = false,
-  disabled = false,
+  id,
+  required,
+  disabled,
+  type = 'text',
 }: InputProps) {
   const [value, setValue] = useState('');
 

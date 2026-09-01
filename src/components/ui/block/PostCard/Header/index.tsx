@@ -5,10 +5,7 @@ import PostCategory from '../../PostCategory';
 import style from './styles.module.css';
 import type { PostCardHeaderProps } from './types';
 
-export default function PostCardHeader({
-  post,
-  isHero = false,
-}: PostCardHeaderProps) {
+export default function PostCardHeader({ post, isHero }: PostCardHeaderProps) {
   const { category, slug, title } = post;
 
   return (

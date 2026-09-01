@@ -5,10 +5,10 @@ import type { TextProps } from './types';
 
 export default function Text({
   children,
-  as: Tag = 'p',
   className,
   ariaHidden,
   inheritTypographyStyles,
+  as: Tag = 'p',
   family = 'body',
   size = 'xs',
   weight = 400,

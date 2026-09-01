@@ -5,7 +5,7 @@ export default function InputStory() {
   return (
     <>
       <Section heading="Input">
-        <Input name="example" placeholder="Placeholder" />
+        <Input name="example" placeholder="Placeholder" id="example" />
       </Section>
       <Section heading="Input disabled">
         <Input name="example" placeholder="Placeholder" disabled />

@@ -5,10 +5,7 @@ import HeroPostCard from '../HeroPostCard';
 import style from './styles.module.css';
 import type { PostsWrapperProps } from './types';
 
-export default function PostsWrapper({
-  postsList,
-  isHome = false,
-}: PostsWrapperProps) {
+export default function PostsWrapper({ postsList, isHome }: PostsWrapperProps) {
   const heroPost = postsList[0];
 
   const firstBlockStart = isHome ? 1 : 0;

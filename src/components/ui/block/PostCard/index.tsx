@@ -7,7 +7,7 @@ import NextImage from 'next/image';
 import style from './styles.module.css';
 import type { PostCardProps } from './types';
 
-export default function PostCard({ post, isCompact = false }: PostCardProps) {
+export default function PostCard({ post, isCompact }: PostCardProps) {
   const { title, slug, thumbnail, category } = post;
   const { width, height } = thumbnail;
   const { src } = thumbnail.responsiveImage;

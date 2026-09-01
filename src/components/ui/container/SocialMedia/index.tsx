@@ -8,9 +8,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import style from './styles.module.css';
 import type { SocialMediaProps } from './types';
 
-export default function SocialMedia({
-  inverseColor = false,
-}: SocialMediaProps) {
+export default function SocialMedia({ inverseColor }: SocialMediaProps) {
   const socialMediaMap: Record<string, IconType> = {
     github: FaGithub,
     linkedin: FaLinkedin,
