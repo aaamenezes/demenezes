@@ -1,7 +1,7 @@
 import PostCardInfos from '@/components/ui/block/PostCard/Infos';
 import Wrapper from '@/components/ui/container/Wrapper';
 import type { CSSProperties } from 'react';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { HeroPostCardProps } from './types';
 
 export default function HeroPostCard({ post }: HeroPostCardProps) {
@@ -11,7 +11,7 @@ export default function HeroPostCard({ post }: HeroPostCardProps) {
 
   return (
     <div
-      className={style.heroWrapper}
+      className={styles.heroWrapper}
       style={
         {
           '--background-image-xs': `url(${src}${separator}w=425)`,
@@ -23,7 +23,7 @@ export default function HeroPostCard({ post }: HeroPostCardProps) {
         } as CSSProperties
       }
     >
-      <Wrapper className={style.heroInner} width="xxxl">
+      <Wrapper className={styles.heroInner} width="xxxl">
         <PostCardInfos post={post} isHero />
       </Wrapper>
     </div>

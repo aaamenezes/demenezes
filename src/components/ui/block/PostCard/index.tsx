@@ -4,7 +4,7 @@ import PostCategory from '@/components/ui/block/PostCategory';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
 import NextImage from 'next/image';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { PostCardProps } from './types';
 
 export default function PostCard({ post, isCompact }: PostCardProps) {
@@ -14,18 +14,18 @@ export default function PostCard({ post, isCompact }: PostCardProps) {
 
   return (
     <Wrapper
-      className={clsx(style.postCardWrapper, isCompact && style.isCompact)}
+      className={clsx(styles.postCardWrapper, isCompact && styles.isCompact)}
       width="xl"
     >
       <div
         className={clsx(
-          style.postCardImageWrapper,
-          isCompact && style.isCompact
+          styles.postCardImageWrapper,
+          isCompact && styles.isCompact
         )}
         aria-hidden="true"
       >
         <Link
-          className={style.postCardImageLink}
+          className={styles.postCardImageLink}
           href={`/posts/${slug}`}
           tab-index="-1"
         >

@@ -1,6 +1,6 @@
 import { clsx } from '@/utils/clsx';
 import { useMemo, type CSSProperties } from 'react';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { WrapperProps } from './types';
 
 export default function Wrapper({
@@ -20,7 +20,7 @@ export default function Wrapper({
 
   return (
     <Tag
-      className={clsx(style.wrapper, className)}
+      className={clsx(styles.wrapper, className)}
       style={
         {
           '--max-width': maxWidth,

@@ -1,6 +1,6 @@
 import { clsx } from '@/utils/clsx';
 import typographyStyles from '@styles/typography.module.css';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { TextProps } from './types';
 
 export default function Text({
@@ -16,7 +16,7 @@ export default function Text({
   lineHeight = 'xs',
 }: TextProps) {
   const typographyClassNames = inheritTypographyStyles
-    ? [style.text]
+    ? [styles.text]
     : [
         typographyStyles[`font-family-${family}`],
         typographyStyles[`font-size-${size}`],

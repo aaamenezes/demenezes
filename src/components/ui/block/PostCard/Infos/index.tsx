@@ -4,7 +4,7 @@ import PostCardHeader from '@/components/ui/block/PostCard/Header';
 import { clsx } from '@/utils/clsx';
 import type { CSSProperties } from 'react';
 import { useCallback } from 'react';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { PostCardInfosProps } from './types';
 
 export default function PostCardInfos({
@@ -23,9 +23,9 @@ export default function PostCardInfos({
   return (
     <div
       className={clsx(
-        style.postCardInfosWrapper,
-        isHero && style.isHero,
-        isCompact && style.isCompact
+        styles.postCardInfosWrapper,
+        isHero && styles.isHero,
+        isCompact && styles.isCompact
       )}
       style={
         {

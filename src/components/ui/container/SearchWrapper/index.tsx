@@ -3,7 +3,7 @@ import { clsx } from '@/utils/clsx';
 import { Search, X } from 'lucide-react';
 import { useCallback, useState } from 'react';
 import Button from '../../base/Button';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 
 export default function SearchWrapper() {
   const [isOpenSearch, setIsOpenSearch] = useState(false);
@@ -13,14 +13,14 @@ export default function SearchWrapper() {
   }, []);
 
   return (
-    <div className={style.searchWrapper}>
+    <div className={styles.searchWrapper}>
       <Button aria-label="Abrir busca do blog" onClick={toggleSearch}>
         <Search />
       </Button>
       <Wrapper
         className={clsx(
-          style.searchContent,
-          isOpenSearch && style.isOpenSearch
+          styles.searchContent,
+          isOpenSearch && styles.isOpenSearch
         )}
         width="xl"
       >

@@ -1,6 +1,6 @@
 import Heading from '@/components/ui/base/Heading';
 import { clsx } from '@/utils/clsx';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { SectionProps } from './types';
 
 export default function Section({
@@ -12,16 +12,16 @@ export default function Section({
 }: SectionProps) {
   return (
     <section
-      className={style.section}
+      className={styles.section}
       style={{ width: `${width}%`, backgroundColor }}
     >
-      <Heading className={style.sectionHeading}>{heading}</Heading>
+      <Heading className={styles.sectionHeading}>{heading}</Heading>
       <div
         className={clsx(
-          style.sectionContent,
-          Boolean(direction) && style.flex,
-          direction === 'row' && style.row,
-          direction === 'column' && style.column
+          styles.sectionContent,
+          Boolean(direction) && styles.flex,
+          direction === 'row' && styles.row,
+          direction === 'column' && styles.column
         )}
       >
         {children}

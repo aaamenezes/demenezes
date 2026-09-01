@@ -5,7 +5,7 @@ import type { IconType } from 'react-icons';
 import { BiLogoDevTo } from 'react-icons/bi';
 import { FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { SocialMediaProps } from './types';
 
 export default function SocialMedia({ inverseColor }: SocialMediaProps) {
@@ -25,22 +25,22 @@ export default function SocialMedia({ inverseColor }: SocialMediaProps) {
       : (socialMedia.color ?? 'var(--color-neutral-900)');
 
     return (
-      <li className={style.socialMediaItem} key={socialMedia.name}>
+      <li className={styles.socialMediaItem} key={socialMedia.name}>
         <Link
-          className={style.socialMediaLink}
+          className={styles.socialMediaLink}
           href={socialMedia.url}
           aria-label={`Acessar o ${socialMedia.name} do autor de André Menezes`}
           isExternal
         >
           {Icon && (
-            <Icon size={24} color={color} className={style.socialMediaIcon} />
+            <Icon size={24} color={color} className={styles.socialMediaIcon} />
           )}
           <Text
             as="span"
             family="heading"
             size="xxs"
             weight={500}
-            className={style.socialMediaLabel}
+            className={styles.socialMediaLabel}
           >
             {socialMedia.name}
           </Text>
@@ -51,7 +51,7 @@ export default function SocialMedia({ inverseColor }: SocialMediaProps) {
 
   return (
     <nav>
-      <ul className={style.socialMediaList}>{socialElements}</ul>
+      <ul className={styles.socialMediaList}>{socialElements}</ul>
     </nav>
   );
 }

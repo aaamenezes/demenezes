@@ -1,5 +1,5 @@
 import Link from '@/components/ui/base/Link';
-import style from '../styles.module.css';
+import styles from '../styles.module.css';
 import type { HandleLinkProps } from './types';
 
 export default function HandleLink({ node, children }: HandleLinkProps) {
@@ -9,7 +9,7 @@ export default function HandleLink({ node, children }: HandleLinkProps) {
 
   return (
     <Link
-      className={style.a}
+      className={styles.a}
       key={`${node.children[0].value} - ${node.url}`}
       href={node.url}
       isExternal={isExternal}

@@ -1,7 +1,7 @@
 import { clsx } from '@/utils/clsx';
 import { ExternalLink } from 'lucide-react';
 import NextLink from 'next/link';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { LinkProps } from './types';
 
 export default function Link({
@@ -16,7 +16,7 @@ export default function Link({
   return (
     <NextLink
       href={href}
-      className={clsx(style.link, className)}
+      className={clsx(styles.link, className)}
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
     >

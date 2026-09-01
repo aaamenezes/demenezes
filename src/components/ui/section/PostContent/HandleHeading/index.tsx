@@ -2,7 +2,7 @@ import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import { simplifyString } from '@/utils/simplifyString';
 import { isSpan } from 'datocms-structured-text-utils';
-import style from '../styles.module.css';
+import styles from '../styles.module.css';
 import type { HandleHeadingProps } from './types';
 
 export default function HandleHeading({ node, children }: HandleHeadingProps) {
@@ -27,16 +27,16 @@ export default function HandleHeading({ node, children }: HandleHeadingProps) {
   return (
     <Heading
       level={node.level}
-      className={style.heading}
+      className={styles.heading}
       key={anchorLink}
       id={anchorLink}
       {...typography}
     >
-      <a className={style.headingLink} href={`#${anchorLink}`}>
+      <a className={styles.headingLink} href={`#${anchorLink}`}>
         <Text
           as="span"
           inheritTypographyStyles
-          className={style.headingLinkText}
+          className={styles.headingLinkText}
         >
           {children}
         </Text>

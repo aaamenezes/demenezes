@@ -1,7 +1,7 @@
 import { clsx } from '@/utils/clsx';
 import { convertDate } from '@/utils/convertDate';
 import PostCardDateText from './PostCardDateText';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { PostCardFooterProps } from './types';
 
 export default function PostCardFooter({
@@ -23,8 +23,8 @@ export default function PostCardFooter({
   return (
     <footer
       className={clsx(
-        style.postCardFooterWrapper,
-        isCompact && style.isCompact
+        styles.postCardFooterWrapper,
+        isCompact && styles.isCompact
       )}
     >
       <PostCardDateText>{getPublicationDateContent()}</PostCardDateText>

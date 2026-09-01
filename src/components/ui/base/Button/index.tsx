@@ -1,5 +1,5 @@
 import { clsx } from '@/utils/clsx';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { ButtonProps } from './types';
 
 export default function Button({
@@ -15,7 +15,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={clsx(style.button, style[`variant-${variant}`], className)}
+      className={clsx(styles.button, styles[`variant-${variant}`], className)}
       type={type}
       disabled={disabled}
       name={name}

@@ -2,7 +2,7 @@ import Link from '@/components/ui/base/Link';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { clsx } from '@/utils/clsx';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { PaginationProps } from './types';
 
 export default function Pagination({
@@ -13,10 +13,10 @@ export default function Pagination({
   const nextLink = `/page/${+currentPagination + 1}`;
 
   return (
-    <Wrapper className={style.paginationWrapper} width="xxl">
+    <Wrapper className={styles.paginationWrapper} width="xxl">
       {currentPagination > 1 && (
         <Link
-          className={clsx(style.paginationButton, style.isPrevious)}
+          className={clsx(styles.paginationButton, styles.isPrevious)}
           href={previousLink}
         >
           <Text
@@ -26,14 +26,14 @@ export default function Pagination({
             weight={500}
             letterSpacing="sm"
             lineHeight="sm"
-            className={style.paginationButtonText}
+            className={styles.paginationButtonText}
           >
             Posts mais recentes
           </Text>
         </Link>
       )}
       {!isLastPagination ? (
-        <Link className={style.paginationButton} href={nextLink}>
+        <Link className={styles.paginationButton} href={nextLink}>
           <Text
             as="span"
             family="heading"
@@ -41,13 +41,13 @@ export default function Pagination({
             weight={500}
             letterSpacing="sm"
             lineHeight="sm"
-            className={style.paginationButtonText}
+            className={styles.paginationButtonText}
           >
             Próxima página
           </Text>
         </Link>
       ) : (
-        <Link className={style.paginationButton} href="/">
+        <Link className={styles.paginationButton} href="/">
           <Text
             as="span"
             family="heading"
@@ -55,7 +55,7 @@ export default function Pagination({
             weight={500}
             letterSpacing="sm"
             lineHeight="sm"
-            className={style.paginationButtonText}
+            className={styles.paginationButtonText}
           >
             Início do blog :)
           </Text>

@@ -1,4 +1,4 @@
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { TableProps } from './types';
 function addClassToTags(html: string, tagName: string, className: string) {
   const openingTag = new RegExp(`<${tagName}(\\s[^>]*)?>`, 'gi');
@@ -27,18 +27,18 @@ export default function Table({
     .replace(/<\/table>\s*$/i, '');
 
   const tableWithClasses = [
-    ['thead', style.tableHead],
-    ['tbody', style.tableBody],
-    ['tfoot', style.tableFoot],
-    ['tr', style.tableRow],
-    ['th', style.tableHeader],
-    ['td', style.tableData],
+    ['thead', styles.tableHead],
+    ['tbody', styles.tableBody],
+    ['tfoot', styles.tableFoot],
+    ['tr', styles.tableRow],
+    ['th', styles.tableHeader],
+    ['td', styles.tableData],
   ].reduce(
     (html, [tagName, className]) => addClassToTags(html, tagName, className),
     tableBody
   );
 
-  const formattedTable = `<caption class="${style.tableCaption}">${caption}</caption>${tableWithClasses}`;
+  const formattedTable = `<caption class="${styles.tableCaption}">${caption}</caption>${tableWithClasses}`;
 
   /*
   const formatedTable = '<caption>'
@@ -53,9 +53,9 @@ export default function Table({
   */
 
   return (
-    <div className={style.tableWrapper}>
+    <div className={styles.tableWrapper}>
       <table
-        className={style.table}
+        className={styles.table}
         summary={tableSummary}
         dangerouslySetInnerHTML={{ __html: formattedTable }}
       />

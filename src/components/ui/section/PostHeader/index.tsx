@@ -4,7 +4,7 @@ import Wrapper from '@/components/ui/container/Wrapper';
 import { convertDate } from '@/utils/convertDate';
 import type { CSSProperties } from 'react';
 import PostCategory from '../../block/PostCategory';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { PostHeaderProps } from './types';
 
 export default function PostHeader({
@@ -19,7 +19,7 @@ export default function PostHeader({
   const keywordsList = keywords.split(',').map(keyword => {
     const clearKeyword = keyword.trim();
     return (
-      <li className={style.keywordItem} key={clearKeyword}>
+      <li className={styles.keywordItem} key={clearKeyword}>
         {clearKeyword}
       </li>
     );
@@ -27,10 +27,10 @@ export default function PostHeader({
 
   return (
     <div
-      className={style.postHeaderWrapper}
+      className={styles.postHeaderWrapper}
       style={{ '--background-image': `url(${coverImage})` } as CSSProperties}
     >
-      <Wrapper className={style.postHeaderInner} width="xxxl">
+      <Wrapper className={styles.postHeaderInner} width="xxxl">
         <Heading
           level={1}
           size="xxxl"
@@ -42,18 +42,18 @@ export default function PostHeader({
           family="heading"
           size="sm"
           lineHeight="md"
-          className={style.postDescription}
+          className={styles.postDescription}
         >
           {description}
         </Text>
-        <footer className={style.postHeaderFooter}>
+        <footer className={styles.postHeaderFooter}>
           <Text
             as="span"
             family="heading"
             size="xxs"
             weight={500}
             letterSpacing="xxl"
-            className={style.postDate}
+            className={styles.postDate}
           >
             {update ? `Publicado em ${convertDate(date)}` : convertDate(date)}
           </Text>
@@ -69,13 +69,13 @@ export default function PostHeader({
                 size="xxs"
                 weight={500}
                 letterSpacing="xxl"
-                className={style.postDate}
+                className={styles.postDate}
               >
                 {`Atualizado em ${convertDate(update)}`}
               </Text>
             </>
           )}
-          <ul className={style.keywordsList}>{keywordsList}</ul>
+          <ul className={styles.keywordsList}>{keywordsList}</ul>
         </footer>
         <PostCategory>{category}</PostCategory>
       </Wrapper>

@@ -5,7 +5,7 @@ import { clsx } from '@/utils/clsx';
 import { getPageInfos } from '@/utils/getPageInfos';
 import { X } from 'lucide-react';
 import { useRouter } from 'next/router';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { NavigationProps } from './types';
 
 export default function Navigation({
@@ -23,14 +23,14 @@ export default function Navigation({
     return (
       <li
         className={clsx(
-          style.navItem,
-          isCurrentPage && style.isCurrentPage,
-          currentPage !== 'post' && style.isDesktopColorInverse
+          styles.navItem,
+          isCurrentPage && styles.isCurrentPage,
+          currentPage !== 'post' && styles.isDesktopColorInverse
         )}
         key={menu.label}
       >
         <Link
-          className={clsx(style.navLink, isCurrentPage && style.isCurrentPage)}
+          className={clsx(styles.navLink, isCurrentPage && styles.isCurrentPage)}
           href={menu.url}
         >
           {menu.label}
@@ -42,15 +42,15 @@ export default function Navigation({
   return (
     <>
       <button
-        className={clsx(style.overlay, isOpenMenu && style.isOpenMenu)}
+        className={clsx(styles.overlay, isOpenMenu && styles.isOpenMenu)}
         onClick={toggleMenu}
         aria-label="Fechar menu de navegação"
         type="button"
       />
-      <nav className={clsx(style.navWrapper, isOpenMenu && style.isOpenMenu)}>
-        <ul className={style.navList}>{navigationElements}</ul>
+      <nav className={clsx(styles.navWrapper, isOpenMenu && styles.isOpenMenu)}>
+        <ul className={styles.navList}>{navigationElements}</ul>
         <Button
-          className={style.closeMenuMobileButton}
+          className={styles.closeMenuMobileButton}
           onClick={toggleMenu}
           aria-label="Fechar menu de navegação"
         >

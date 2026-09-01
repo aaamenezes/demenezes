@@ -2,7 +2,7 @@ import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { AboutContactFormProps } from './types';
 
 export default function ContactForm({ contactContent }: AboutContactFormProps) {
@@ -15,11 +15,11 @@ export default function ContactForm({ contactContent }: AboutContactFormProps) {
   ));
 
   return (
-    <Wrapper className={style.contactForm} width="md">
-      <Heading className={style.contactHeading}>{contactTitle}</Heading>
+    <Wrapper className={styles.contactForm} width="md">
+      <Heading className={styles.contactHeading}>{contactTitle}</Heading>
       {textElements}
       <iframe
-        className={style.mailchimpContactForm}
+        className={styles.mailchimpContactForm}
         title="Formulário de contato"
         src={mailchimpIframeSrc}
         frameBorder="0"

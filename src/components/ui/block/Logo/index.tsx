@@ -1,6 +1,6 @@
 import Link from '@/components/ui/base/Link';
 import { clsx } from '@/utils/clsx';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { LogoProps } from './types';
 
 export default function Logo({ isColorInverse }: LogoProps) {
@@ -9,7 +9,7 @@ export default function Logo({ isColorInverse }: LogoProps) {
 
   return (
     <Link
-      className={clsx(style.logoLink, isColorInverse && style.colorInverse)}
+      className={clsx(styles.logoLink, isColorInverse && styles.colorInverse)}
       href="/"
     >
       {preview ? 'Preview' : 'deMenezes'}

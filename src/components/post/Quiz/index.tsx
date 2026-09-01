@@ -4,7 +4,7 @@ import { clsx } from '@/utils/clsx';
 import { simplifyString } from '@/utils/simplifyString';
 import type { FormEvent } from 'react';
 import { useCallback, useState } from 'react';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { QuizProps } from './types';
 
 /***
@@ -42,42 +42,42 @@ export default function Quiz({
 
   return (
     <form
-      className={clsx(style.quizForm, isAnswered && style.isAnswered)}
+      className={clsx(styles.quizForm, isAnswered && styles.isAnswered)}
       onSubmit={handleSubmit}
     >
-      <header className={style.header}>
+      <header className={styles.header}>
         <Text>
           <Text as="strong">{question}</Text>
         </Text>
       </header>
-      <ul className={style.alternativesList}>
+      <ul className={styles.alternativesList}>
         {alternatives.map((alternative, index) => {
           const currentId = `${simplifyString(question)}-${index}`;
 
           return (
             <li
-              className={style.alternativeItem}
+              className={styles.alternativeItem}
               key={simplifyString(alternative)}
             >
               <input
                 className={clsx(
-                  style.alternativeInput,
-                  isAnswered && style.isAnswered,
+                  styles.alternativeInput,
+                  isAnswered && styles.isAnswered,
                   index === correctAlternativeIndex - 1 &&
-                    style.isCorrectResponse
+                    styles.isCorrectResponse
                 )}
                 type="radio"
                 name={simplifyString(question)}
                 id={currentId}
                 value={index}
               />
-              <label className={style.alternativeLabel} htmlFor={currentId}>
+              <label className={styles.alternativeLabel} htmlFor={currentId}>
                 <button
                   className={clsx(
-                    style.alternativeButton,
-                    isAnswered && style.isAnswered,
+                    styles.alternativeButton,
+                    isAnswered && styles.isAnswered,
                     index === correctAlternativeIndex - 1 &&
-                      style.isCorrectResponse
+                      styles.isCorrectResponse
                   )}
                   onClick={() => setMarkedResponse(index)}
                   type="button"
@@ -90,16 +90,16 @@ export default function Quiz({
           );
         })}
       </ul>
-      <footer className={style.footer}>
+      <footer className={styles.footer}>
         <Button
-          className={style.submitButton}
+          className={styles.submitButton}
           type="submit"
           disabled={isAnswered}
         >
           Responder
         </Button>
         {isAnswered && (
-          <Text className={style.feedback}>
+          <Text className={styles.feedback}>
             {responseIsCorrect ? (
               <>
                 <Text as="span">Resposta certa!</Text>

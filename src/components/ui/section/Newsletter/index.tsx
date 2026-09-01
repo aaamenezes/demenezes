@@ -5,15 +5,15 @@ import Input from '@/components/ui/base/Input';
 import Wrapper from '@/components/ui/container/Wrapper';
 import settings from '@/data/settings.json';
 import { clsx } from '@/utils/clsx';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 
 export default function Newsletter() {
   const { title, mailchimpFormAction } = settings.form.signup;
 
   return (
-    <Wrapper className={style.newsletterForm} width="full">
+    <Wrapper className={styles.newsletterForm} width="full">
       <Wrapper width="md">
-        <Heading level={3} className={style.newsletterHeading}>
+        <Heading level={3} className={styles.newsletterHeading}>
           {title}
         </Heading>
 
@@ -29,7 +29,7 @@ export default function Newsletter() {
             noValidate
           >
             <div id="mc_embed_signup_scroll">
-              <div className={style.inputsWrapper}>
+              <div className={styles.inputsWrapper}>
                 <div className="mc-field-group">
                   <HiddenA11Y>
                     <label htmlFor="mce-FNAME">Informe seu nome</label>
@@ -37,7 +37,7 @@ export default function Newsletter() {
                   <Input
                     type="text"
                     name="FNAME"
-                    className={style.newsletterFormInput}
+                    className={styles.newsletterFormInput}
                     id="mce-FNAME"
                     placeholder="Nome"
                     required
@@ -53,7 +53,7 @@ export default function Newsletter() {
                     type="email"
                     name="EMAIL"
                     className={clsx(
-                      style.newsletterFormInput,
+                      styles.newsletterFormInput,
                       'required email'
                     )}
                     id="mce-EMAIL"
@@ -88,7 +88,7 @@ export default function Newsletter() {
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    className={style.submitButton}
+                    className={styles.submitButton}
                   >
                     Quero receber
                   </Button>

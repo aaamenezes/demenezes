@@ -7,7 +7,7 @@ import { getPageInfos } from '@/utils/getPageInfos';
 import { Menu } from 'lucide-react';
 import { useCallback, useState } from 'react';
 import Navigation from '../../container/Navigation';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 
 export default function PageHeader() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -29,8 +29,8 @@ export default function PageHeader() {
       width="xxxl"
       as="header"
       className={clsx(
-        style.headerWrapper,
-        !isHomePage && !isPostPage && style.withBackgroundColor
+        styles.headerWrapper,
+        !isHomePage && !isPostPage && styles.withBackgroundColor
       )}
     >
       <Heading level={1}>
@@ -38,7 +38,7 @@ export default function PageHeader() {
       </Heading>
       <Button
         onClick={openMenu}
-        className={style.openMenuButton}
+        className={styles.openMenuButton}
         aria-label="Abrir menu de navegação"
       >
         <Menu />

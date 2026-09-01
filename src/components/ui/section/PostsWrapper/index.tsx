@@ -2,7 +2,7 @@ import PostCard from '@/components/ui/block/PostCard';
 import Newsletter from '@/components/ui/section/Newsletter';
 import { clsx } from '@/utils/clsx';
 import HeroPostCard from '../HeroPostCard';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { PostsWrapperProps } from './types';
 
 export default function PostsWrapper({ postsList, isHome }: PostsWrapperProps) {
@@ -21,7 +21,7 @@ export default function PostsWrapper({ postsList, isHome }: PostsWrapperProps) {
     .map(post => <PostCard key={post.title} post={post} />);
 
   return (
-    <main className={clsx(style.postsWrapper, isHome && style.isHome)}>
+    <main className={clsx(styles.postsWrapper, isHome && styles.isHome)}>
       {isHome && <HeroPostCard post={heroPost} />}
       {firstBlockPosts}
       <Newsletter />

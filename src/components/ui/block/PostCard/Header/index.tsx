@@ -2,7 +2,7 @@ import Heading from '@/components/ui/base/Heading';
 import Link from '@/components/ui/base/Link';
 import { clsx } from '@/utils/clsx';
 import PostCategory from '../../PostCategory';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { PostCardHeaderProps } from './types';
 
 export default function PostCardHeader({ post, isHero }: PostCardHeaderProps) {
@@ -15,10 +15,10 @@ export default function PostCardHeader({ post, isHero }: PostCardHeaderProps) {
         level={3}
         size="lg"
         letterSpacing="sm"
-        className={style.postCardHeading}
+        className={styles.postCardHeading}
       >
         <Link
-          className={clsx(style.postCardHeadingLink, isHero && style.isHero)}
+          className={clsx(styles.postCardHeadingLink, isHero && styles.isHero)}
           href={`/posts/${slug}`}
         >
           {title}

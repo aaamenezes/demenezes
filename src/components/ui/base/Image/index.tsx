@@ -1,6 +1,6 @@
 import NextImage from 'next/image';
 import { clsx } from '../../../../utils/clsx';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { ImageProps } from './types';
 
 export default function Image({
@@ -25,7 +25,7 @@ export default function Image({
         }}
       />
       {caption && (
-        <figcaption className={clsx(style.figcaption)}>{caption}</figcaption>
+        <figcaption className={clsx(styles.figcaption)}>{caption}</figcaption>
       )}
     </figure>
   );

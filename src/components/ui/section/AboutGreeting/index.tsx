@@ -3,7 +3,7 @@ import HiddenA11Y from '@/components/ui/base/HiddenA11Y';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
 import NextImage from 'next/image';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { AboutGreetingProps } from './types';
 
 export default function Greeting({
@@ -20,8 +20,8 @@ export default function Greeting({
   } = profileImage;
 
   return (
-    <Wrapper className={style.greeting} width="lg">
-      <div className={style.imageWrapper}>
+    <Wrapper className={styles.greeting} width="lg">
+      <div className={styles.imageWrapper}>
         <NextImage
           src={src}
           alt={alt}
@@ -36,7 +36,7 @@ export default function Greeting({
         <HiddenA11Y>{greetingHeading}</HiddenA11Y>
       </Heading>
       <Heading>{greetingSubheading}</Heading>
-      <Text lineHeight="md" className={style.greetingDescription}>
+      <Text lineHeight="md" className={styles.greetingDescription}>
         {greetingDescription}
       </Text>
     </Wrapper>

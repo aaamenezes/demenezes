@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import { useCallback, useEffect, useState } from 'react';
-import style from './styles.module.css';
+import styles from './styles.module.css';
 import type { ProgressBarProps } from './types';
 
 export default function ProgressBar({ containerReference }: ProgressBarProps) {
@@ -29,7 +29,7 @@ export default function ProgressBar({ containerReference }: ProgressBarProps) {
 
   return (
     <div
-      className={style.bar}
+      className={styles.bar}
       style={{ '--bar-width': `${barWidth}%` } as CSSProperties}
     />
   );
