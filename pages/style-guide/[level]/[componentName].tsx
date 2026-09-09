@@ -1,9 +1,9 @@
-import ComponentsScreen from '@/components/ui/template/Components';
+import StyleGuideScreen from '@/components/ui/template/StyleGuide';
 import {
   componentsByLevelMap,
   levels,
-} from '@/components/ui/template/Components/data';
-import { type Level } from '@/components/ui/template/Components/types';
+} from '@/components/ui/template/StyleGuide/data';
+import { type Level } from '@/components/ui/template/StyleGuide/types';
 import { getStoriesLayout } from '@/layouts/getLayouts';
 import { getDesignSystemValidPaths } from '@/utils/getDesignSystemValidPaths';
 import { parseParam } from '@/utils/parseParam';
@@ -18,7 +18,7 @@ export default function Components({
   level,
   componentName,
 }: ComponentsPageProps) {
-  return <ComponentsScreen level={level} componentName={componentName} />;
+  return <StyleGuideScreen level={level} componentName={componentName} />;
 }
 
 Components.getLayout = getStoriesLayout;

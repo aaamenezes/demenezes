@@ -1,4 +1,4 @@
-import Section from '@/components/designSysyem/Section';
+import Section from '@/components/styleGuide/Section';
 import Button from '@/components/ui/base/Button';
 import { Menu } from 'lucide-react';
 

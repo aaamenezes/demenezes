@@ -1,4 +1,4 @@
-import Section from '@/components/designSysyem/Section';
+import Section from '@/components/styleGuide/Section';
 import BlockCode from '@/components/ui/base/BlockCode';
 import { cssExample, htmlExample, jsExample } from './examples';
 

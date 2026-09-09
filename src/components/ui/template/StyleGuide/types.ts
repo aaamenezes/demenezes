@@ -2,7 +2,7 @@ import type { ComponentType } from 'react';
 
 export type Level = 'base' | 'block' | 'container' | 'section' | 'template';
 
-export interface ComponentPathProps {
+export interface StyleGuideScreenProps {
   level: Level;
   componentName: string;
 }

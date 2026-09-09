@@ -1,5 +1,5 @@
 import Link from '@/components/ui/base/Link';
-import { componentsByLevelMap } from '@/components/ui/template/Components/data';
+import { componentsByLevelMap } from '@/components/ui/template/StyleGuide/data';
 import { clsx } from '@/utils/clsx';
 import { entriesOf, keysOf } from '@/utils/object';
 import { useRouter } from 'next/router';

@@ -1,7 +1,7 @@
+import CmsIcon from '@/components/ui/base/CmsIcon';
 import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
-import CmsIcon from '@/components/ui/base/CmsIcon';
 import styles from './styles.module.css';
 import type { AboutCategoriesProps } from './types';
 

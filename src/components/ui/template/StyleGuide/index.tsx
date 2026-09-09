@@ -1,15 +1,15 @@
-import Content from '@/components/designSysyem/Content';
-import Page from '@/components/designSysyem/Page';
-import Section from '@/components/designSysyem/Section';
-import Sidebar from '@/components/designSysyem/Sidebar';
+import Content from '@/components/styleGuide/Content';
+import Page from '@/components/styleGuide/Page';
+import Section from '@/components/styleGuide/Section';
+import Sidebar from '@/components/styleGuide/Sidebar';
 import { capitalize } from '@/utils/capitalize';
 import { getComponentByPath } from './getComponentByPath';
-import type { ComponentPathProps } from './types';
+import type { StyleGuideScreenProps } from './types';
 
-export default function ComponentsScreen({
+export default function StyleGuideScreen({
   level,
   componentName,
-}: ComponentPathProps) {
+}: StyleGuideScreenProps) {
   const Component = getComponentByPath({ level, componentName });
   const capitalizedComponentName = capitalize.firstLetter(componentName);
   const capitalizedComponentNameWithBrackets = `<${capitalizedComponentName}>`;

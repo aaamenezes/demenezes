@@ -1,5 +1,5 @@
+import Section from '@/components/styleGuide/Section';
 import Button from '@/components/ui/base/Button';
-import Section from '@/components/designSysyem/Section';
 import Grid from '.';
 
 export default function GridStory() {

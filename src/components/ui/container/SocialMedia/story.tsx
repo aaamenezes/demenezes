@@ -1,4 +1,4 @@
-import Section from '@/components/designSysyem/Section';
+import Section from '@/components/styleGuide/Section';
 import SocialMedia from '.';
 
 export default function SocialMediaStory() {
@@ -7,10 +7,7 @@ export default function SocialMediaStory() {
       <Section heading="Padrão">
         <SocialMedia />
       </Section>
-      <Section
-        heading="Cor inversa"
-        backgroundColor="var(--color-neutral-900)"
-      >
+      <Section heading="Cor inversa" backgroundColor="var(--color-neutral-900)">
         <SocialMedia inverseColor />
       </Section>
     </>

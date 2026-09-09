@@ -1,4 +1,4 @@
-import Section from '@/components/designSysyem/Section';
+import Section from '@/components/styleGuide/Section';
 import type { PostProps } from '@/types';
 import PostContent from '.';
 

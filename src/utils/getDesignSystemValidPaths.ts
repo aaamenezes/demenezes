@@ -1,4 +1,4 @@
-import { componentsByLevelMap } from '@/components/ui/template/Components/data';
+import { componentsByLevelMap } from '@/components/ui/template/StyleGuide/data';
 import { entriesOf, keysOf } from './object';
 
 export function getDesignSystemValidPaths() {
