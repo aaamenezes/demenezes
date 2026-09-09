@@ -1,4 +1,5 @@
 import Section from '@/components/designSysyem/Section';
+import Grid from '@/components/ui/container/Grid';
 import PostCard from '.';
 
 export default function PostCardStory() {
@@ -71,13 +72,7 @@ export default function PostCardStory() {
         />
       </Section>
       <Section heading="Compacto">
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '1rem',
-          }}
-        >
+        <Grid minColumnWidth={300} gap="md">
           <PostCard
             isCompact
             post={{
@@ -204,7 +199,7 @@ export default function PostCardStory() {
               },
             }}
           />
-        </div>
+        </Grid>
       </Section>
     </>
   );

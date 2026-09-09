@@ -1,13 +1,9 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
-- [Ajustes em componentes com pequens mudanças visuais](#ajustes-em-componentes-com-pequens-mudanças-visuais)
   - [Testar mudança de retrato para paisagem no mobile](#testar-mudança-de-retrato-para-paisagem-no-mobile)
   - [Testar site mobile](#testar-site-mobile)
   - [\[🚫 COMPOSITE\] Analisar necessidade do componente PostCategory](#-composite-analisar-necessidade-do-componente-postcategory)
   - [\[🚫 ATUALIZAR VERSOES\] Aplicar React Portal no `Navigation`](#-atualizar-versoes-aplicar-react-portal-no-navigation)
-- [Ajustes/criação de componentes com médias/grandes mudanças visuais](#ajustescriação-de-componentes-com-médiasgrandes-mudanças-visuais)
-  - [Criar novos `StructuredTextDatoCMS`](#criar-novos-structuredtextdatocms)
-  - [Criar componente de grid](#criar-componente-de-grid)
 - [Configurações estruturais](#configurações-estruturais)
   - [Implementar busca](#implementar-busca)
   - [Implementar preview](#implementar-preview)
@@ -30,8 +26,6 @@ Antes de saber o que fazer, aplicar composite na base.
 
 - story
 - component
-
-# Ajustes em componentes com pequens mudanças visuais
 
 ## Testar mudança de retrato para paisagem no mobile
 
@@ -62,32 +56,6 @@ Aguardar tarefa de atualização do next e react. Usar o react portal para o com
 
 - react
 - componente
-
-# Ajustes/criação de componentes com médias/grandes mudanças visuais
-
-## Criar novos `StructuredTextDatoCMS`
-
-Esse componente renderiza conteúdo vindo do CMS. Já existe o principal, que renderiza o conteúdo do post.
-
-Para evitar importação cíclica, criar mais 2:
-
-- Um para o conteúdo do `TextBox`, que geralmente contém apenas textos e títulos
-- E outro para o `BlockQuote`, que geralmente tem apenas um parágrafo
-
-- cms
-- componente
-
-## Criar componente de grid
-
-O `RelatedPosts` usa um grid para exibir posts relacionados, e renderiza `PostCard` dentro.
-
-- Criar o componente de grid
-- Aplicar no `RelatedPosts`
-- Aplicar também em `src/components/ui/block/PostCard/story.tsx`
-- Se certificar que removi o style inline em `src/components/ui/block/PostCard/story.tsx`
-
-- componente
-- padrão
 
 # Configurações estruturais
 

@@ -1,4 +1,3 @@
-import { keysOf } from '@/utils/object';
 import CodeStory from '@/components/ui/base/BlockCode/story';
 import ButtonStory from '@/components/ui/base/Button/story';
 import CmsIconStory from '@/components/ui/base/CmsIcon/story';
@@ -15,6 +14,7 @@ import LogoStory from '@/components/ui/block/Logo/story';
 import PostCardStory from '@/components/ui/block/PostCard/story';
 import ProgressBarStory from '@/components/ui/block/ProgressBar/story';
 import TableStory from '@/components/ui/block/Table/story';
+import GridStory from '@/components/ui/container/Grid/story';
 import NavigationStory from '@/components/ui/container/Navigation/story';
 import SocialMediaStory from '@/components/ui/container/SocialMedia/story';
 import WrapperStory from '@/components/ui/container/Wrapper/story';
@@ -34,6 +34,7 @@ import PostContentStory from '@/components/ui/section/PostContent/story';
 import PostHeaderStory from '@/components/ui/section/PostHeader/story';
 import PostsWrapperStory from '@/components/ui/section/PostsWrapper/story';
 import RelatedPostsStory from '@/components/ui/section/RelatedPosts/story';
+import { keysOf } from '@/utils/object';
 import type { ComponentsMapProps, Level } from './types';
 
 export const componentsByLevelMap: ComponentsMapProps = {
@@ -58,6 +59,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     table: TableStory,
   },
   container: {
+    grid: GridStory,
     navigation: NavigationStory,
     socialMedia: SocialMediaStory,
     wrapper: WrapperStory,
