@@ -241,14 +241,17 @@ export type PageName =
   | 'post'
   | 'about'
   | 'contact'
-  | 'references';
+  | 'references'
+  | 'style-guide';
+
 export type PageUrl =
   | '/'
   | '/page/[page]'
   | '/posts/[slug]'
   | '/about'
   | '/contact'
-  | '/references';
+  | '/references'
+  | '/style-guide';
 
 export interface PageProps {
   pageTitle: PageName;

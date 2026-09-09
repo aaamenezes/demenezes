@@ -27,6 +27,25 @@ export default tseslint.config([
       ],
       // Não permitir uso de var, converter para let
       'no-var': 'error',
+      // Usar helpers tipados para preservar as chaves e os valores do objeto
+      'no-restricted-properties': [
+        'error',
+        {
+          object: 'Object',
+          property: 'keys',
+          message: 'Use keysOf from src/utils/object.ts instead.',
+        },
+        {
+          object: 'Object',
+          property: 'values',
+          message: 'Use valuesOf from src/utils/object.ts instead.',
+        },
+        {
+          object: 'Object',
+          property: 'entries',
+          message: 'Use entriesOf from src/utils/object.ts instead.',
+        },
+      ],
       // Permitir tabs para identação
       'no-tabs': ['error', { allowIndentationTabs: true }],
       // Permitir export não default também
@@ -65,6 +84,12 @@ export default tseslint.config([
       '@typescript-eslint/consistent-type-imports': 'error',
       // Exigir palavra type nos exports de tipos
       '@typescript-eslint/consistent-type-exports': 'error',
+    },
+  },
+  {
+    files: ['src/utils/object.ts'],
+    rules: {
+      'no-restricted-properties': 'off',
     },
   },
 ]);
