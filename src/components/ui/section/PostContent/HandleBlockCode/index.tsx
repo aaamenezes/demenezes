@@ -9,9 +9,17 @@ export default function HandleBlockCode({ node }: HandleBlockCodeProps) {
     ? (node.language as 'html' | 'css' | 'javascript' | 'js' | 'typescript')
     : 'typescript';
 
+  /**
+   * Isso foi necessário porque o texto do código enviado pelo DatoCMS
+   * continha caracteres de espaço não separáveis (non-breaking space) que
+   * estavam causando problemas na renderização do código. O replace garante
+   * que os espaços sejam tratados corretamente.
+   */
+  const code = node.code.replace(/\u00A0/g, ' ');
+
   return (
     <BlockCode key={node.code} language={language} className={styles.blockCode}>
-      {node.code}
+      {code}
     </BlockCode>
   );
 }

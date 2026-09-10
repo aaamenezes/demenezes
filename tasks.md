@@ -1,12 +1,11 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
+  - [Trocar string por type personalizado](#trocar-string-por-type-personalizado)
   - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
   - [\[🚫 COMPOSITE\] Analisar necessidade do componente PostCategory](#-composite-analisar-necessidade-do-componente-postcategory)
   - [\[🚫 ATUALIZAR VERSOES\] Aplicar React Portal no `Navigation`](#-atualizar-versoes-aplicar-react-portal-no-navigation)
   - [\[🚫 DEPLOY\] Testar mudança de retrato para paisagem no mobile](#-deploy-testar-mudança-de-retrato-para-paisagem-no-mobile)
   - [\[🚫 DEPLOY\] Testar site mobile](#-deploy-testar-site-mobile)
 - [Configurações estruturais](#configurações-estruturais)
-  - [Criar regra ESLint para proibir uso do `Object.`](#criar-regra-eslint-para-proibir-uso-do-object)
-  - [Resolver erro de hydration](#resolver-erro-de-hydration)
   - [Implementar padrão composite](#implementar-padrão-composite)
   - [Reorganizar componentes](#reorganizar-componentes)
   - [Revisar /src/](#revisar-src)
@@ -20,6 +19,13 @@
   - [My Splitwise](#my-splitwise)
 
 # Ajustes de código sem impacto visual
+
+## Trocar string por type personalizado
+
+É possível trocar a `string` em `src/components/ui/template/StyleGuide/types.ts` para algo como `ComponentName`?
+
+- padrão
+- typescript
 
 ## [🚫 COMPOSITE] Melhorar `PostsWrapper`
 
@@ -63,23 +69,6 @@ Testar scroll vertical e horizontal, zoom, etc. Se der algo errado, a culpa é d
 - browser
 
 # Configurações estruturais
-
-## Criar regra ESLint para proibir uso do `Object.`
-
-Criar regra no ESLint para não usar Object.keys, Object.values e Object.entries. Em vez disso usar keysOf, valuesOf e entriesOf, métodos presente em `src/utils/object.ts`. Eles retornam o objeto com seus devidos tipos.
-
-- eslint
-- padrão
-
-## Resolver erro de hydration
-
-Erro de hydration
-
-- http://localhost:3000/posts/como-usar-foreach-javascript-exemplos/
-- http://localhost:3000/posts/imagem-quadrada-redonda-css/
-
-- react
-- next
 
 ## Implementar padrão composite
 
