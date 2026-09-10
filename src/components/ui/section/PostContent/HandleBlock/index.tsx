@@ -21,7 +21,9 @@ export default function HandleBlock({ record }: HandleBlockProps) {
             alt={record.image.alt}
             className={styles.image}
           />
-          <Figure.Figcaption>{record.image.caption}</Figure.Figcaption>
+          {record.image.caption && (
+            <Figure.Figcaption>{record.image.caption}</Figure.Figcaption>
+          )}
         </Figure>
       );
     case 'ExternalVideoRecord':
@@ -45,11 +47,12 @@ export default function HandleBlock({ record }: HandleBlockProps) {
       return <TextBox content={record.textBoxContent} />;
     case 'BlockquoteRecord':
       return (
-        <BlockQuote
-          source={record.source}
-          author={record.author}
-          datoContent={record.quoteContent}
-        />
+        <BlockQuote source={record.source}>
+          <BlockQuote.Quote datoContent={record.quoteContent} />
+          {record.author && (
+            <BlockQuote.Author>{record.author}</BlockQuote.Author>
+          )}
+        </BlockQuote>
       );
     case 'TweetRecord':
       return (

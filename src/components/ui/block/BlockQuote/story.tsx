@@ -1,5 +1,4 @@
 import Section from '@/components/styleGuide/Section';
-import Text from '@/components/ui/base/Text';
 import BlockQuote from '.';
 
 export default function BlockQuoteStory() {
@@ -7,20 +6,31 @@ export default function BlockQuoteStory() {
     <>
       <Section heading="Só citação">
         <BlockQuote>
-          <Text>
+          <BlockQuote.Quote>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
             risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
             nec, ultricies
-          </Text>
+          </BlockQuote.Quote>
         </BlockQuote>
       </Section>
-      <Section heading="Com autor">
+      <Section heading="Com autor no início">
         <BlockQuote author="André Menezes">
-          <Text>
+          <BlockQuote.Author>André Menezes</BlockQuote.Author>
+          <BlockQuote.Quote>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
             risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
             nec, ultricies
-          </Text>
+          </BlockQuote.Quote>
+        </BlockQuote>
+      </Section>
+      <Section heading="Com autor no final">
+        <BlockQuote>
+          <BlockQuote.Quote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+            risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+            nec, ultricies
+          </BlockQuote.Quote>
+          <BlockQuote.Author>André Menezes</BlockQuote.Author>
         </BlockQuote>
       </Section>
     </>
