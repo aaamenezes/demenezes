@@ -25,7 +25,7 @@ export default function Sidebar() {
           <Section heading={levelString}>
             <ul>
               {componentNames.map(componentName => {
-                const href = `/components/${levelString}/${componentName}/`;
+                const href = `/style-guide/${levelString}/${componentName}/`;
                 const isComponentActive = asPath === href;
 
                 return (

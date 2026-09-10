@@ -1,6 +1,6 @@
 import Quiz from '@/components/post/Quiz';
 import TextBox from '@/components/post/TextBox';
-import Image from '@/components/ui/base/Image';
+import Figure from '@/components/ui/base/Figure';
 import Video from '@/components/ui/base/Video';
 import YouTube from '@/components/ui/base/YouTube';
 import BlockQuote from '@/components/ui/block/BlockQuote';
@@ -13,14 +13,16 @@ export default function HandleBlock({ record }: HandleBlockProps) {
   switch (__typename) {
     case 'ImageRecord':
       return (
-        <Image
-          src={record.image.responsiveImage.src}
-          width={record.image.width}
-          height={record.image.height}
-          alt={record.image.alt}
-          caption={record.image.caption}
-          className={styles.image}
-        />
+        <Figure>
+          <Figure.Image
+            src={record.image.responsiveImage.src}
+            width={record.image.width}
+            height={record.image.height}
+            alt={record.image.alt}
+            className={styles.image}
+          />
+          <Figure.Figcaption>{record.image.caption}</Figure.Figcaption>
+        </Figure>
       );
     case 'ExternalVideoRecord':
       return (

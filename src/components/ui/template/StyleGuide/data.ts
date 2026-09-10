@@ -1,9 +1,9 @@
 import CodeStory from '@/components/ui/base/BlockCode/story';
 import ButtonStory from '@/components/ui/base/Button/story';
 import CmsIconStory from '@/components/ui/base/CmsIcon/story';
+import FigureStory from '@/components/ui/base/Figure/story';
 import HeadingStory from '@/components/ui/base/Heading/story';
 import HiddenA11YStory from '@/components/ui/base/HiddenA11Y/story';
-import ImageStory from '@/components/ui/base/Image/story';
 import InputStory from '@/components/ui/base/Input/story';
 import LinkStory from '@/components/ui/base/Link/story';
 import TextStory from '@/components/ui/base/Text/story';
@@ -44,7 +44,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     cmsIcon: CmsIconStory,
     heading: HeadingStory,
     hiddenA11Y: HiddenA11YStory,
-    image: ImageStory,
+    figure: FigureStory,
     input: InputStory,
     link: LinkStory,
     text: TextStory,

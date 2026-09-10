@@ -1,5 +1,5 @@
 import Section from '@/components/styleGuide/Section';
-import Image from '@/components/ui/base/Image';
+import Figure from '@/components/ui/base/Figure';
 import Link from '.';
 
 export default function LinkStory() {
@@ -15,22 +15,26 @@ export default function LinkStory() {
       </Section>
       <Section heading="Imagem link interno">
         <Link href="#">
-          <Image
-            src="/favicon/ms-icon-310x310.png"
-            width={150}
-            height={150}
-            alt="Description of the image"
-          />
+          <Figure>
+            <Figure.Image
+              src="/favicon/ms-icon-310x310.png"
+              width={150}
+              height={150}
+              alt="Description of the image"
+            />
+          </Figure>
         </Link>
       </Section>
       <Section heading="Imagem link externo">
         <Link href="#" isExternal>
-          <Image
-            src="/favicon/ms-icon-310x310.png"
-            width={150}
-            height={150}
-            alt="Description of the image"
-          />
+          <Figure>
+            <Figure.Image
+              src="/favicon/ms-icon-310x310.png"
+              width={150}
+              height={150}
+              alt="Description of the image"
+            />
+          </Figure>
         </Link>
       </Section>
     </>
