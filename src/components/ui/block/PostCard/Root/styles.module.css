@@ -1,4 +1,4 @@
-.postCardWrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .postCardWrapper {
+  .wrapper {
     flex-direction: row;
     justify-content: space-between;
     box-shadow: none;
@@ -15,19 +15,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  .postCardWrapper:hover {
+  .wrapper:hover {
     box-shadow: 0 0 2rem -1rem var(--color-neutral-800);
   }
 }
 
 @media screen and (min-width: 425px) {
-  .postCardWrapper.isCompact {
+  .wrapper.isCompact {
     padding: 1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .postCardWrapper.isCompact {
+  .wrapper.isCompact {
     flex-direction: column;
     justify-content: flex-start;
     padding: 1rem;
@@ -35,32 +35,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .postCardWrapper.isCompact {
+  .wrapper.isCompact {
     padding: 1rem;
   }
-}
-
-.postCardImageWrapper {
-  position: relative;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 768px) {
-  .postCardImageWrapper {
-    width: 35%;
-    margin-bottom: 0;
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .postCardImageWrapper.isCompact {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-}
-
-.postCardImageLink {
-  position: relative;
 }

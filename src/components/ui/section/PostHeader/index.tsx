@@ -2,7 +2,7 @@ import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import PostCategory from '@/components/ui/block/PostCategory';
 import Wrapper from '@/components/ui/container/Wrapper';
-import { convertDate } from '@/utils/convertDate';
+import { formatDate } from '@/utils/formatDate';
 import type { CSSProperties } from 'react';
 import styles from './styles.module.css';
 import type { PostHeaderProps } from './types';
@@ -31,11 +31,7 @@ export default function PostHeader({
       style={{ '--background-image': `url(${coverImage})` } as CSSProperties}
     >
       <Wrapper className={styles.postHeaderInner} width="xxxl">
-        <Heading
-          level={1}
-          size="xxxl"
-          letterSpacing="sm"
-        >
+        <Heading level={1} size="xxxl" letterSpacing="sm">
           {title}
         </Heading>
         <Text
@@ -55,7 +51,7 @@ export default function PostHeader({
             letterSpacing="xxl"
             className={styles.postDate}
           >
-            {update ? `Publicado em ${convertDate(date)}` : convertDate(date)}
+            {update ? `Publicado em ${formatDate(date)}` : formatDate(date)}
           </Text>
           {update > date && (
             <>
@@ -71,7 +67,7 @@ export default function PostHeader({
                 letterSpacing="xxl"
                 className={styles.postDate}
               >
-                {`Atualizado em ${convertDate(update)}`}
+                {`Atualizado em ${formatDate(update)}`}
               </Text>
             </>
           )}

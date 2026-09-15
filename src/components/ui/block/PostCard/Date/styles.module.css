@@ -1,4 +1,4 @@
-.postCardFooterWrapper {
+.footer {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
@@ -6,7 +6,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .postCardFooterWrapper.isCompact {
+  .footer.isCompact {
     margin-top: var(--spacing-sm);
   }
+}
+
+.date {
+  text-align: right;
+  color: var(--color-neutral-600);
 }

@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 35%;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper.isCompact {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.link {
+  position: relative;
+}

@@ -11,7 +11,27 @@ export default function RelatedPosts({
   if (relatedPosts.length === 0) return <></>;
 
   const relatedPostsElements = relatedPosts.map(post => (
-    <PostCard key={post.title} post={post} isCompact />
+    <PostCard
+      key={post.title}
+      category={post.category}
+      slug={post.slug}
+      isCompact
+    >
+      <PostCard.Image
+        width={post.thumbnail.width}
+        height={post.thumbnail.height}
+        alt={post.thumbnail.alt}
+        src={post.thumbnail.responsiveImage.src}
+      ></PostCard.Image>
+      <PostCard.Infos>
+        <PostCard.Title>{post.title}</PostCard.Title>
+        <PostCard.Description>{post.metaDescription}</PostCard.Description>
+        <PostCard.Date
+          publicationDate={post._firstPublishedAt}
+          updateDate={post._updatedAt}
+        />
+      </PostCard.Infos>
+    </PostCard>
   ));
 
   return (

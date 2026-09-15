@@ -1,5 +1,3 @@
-export interface PostCardDescriptionProps {
-  description: string;
-  isCompact?: boolean;
-  isHero?: boolean;
+export interface DescriptionProps {
+  children: string;
 }

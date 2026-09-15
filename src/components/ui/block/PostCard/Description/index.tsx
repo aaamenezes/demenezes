@@ -1,13 +1,12 @@
 import Text from '@/components/ui/base/Text';
 import { clsx } from '@/utils/clsx';
+import { usePostCardContext } from '../context';
 import styles from './styles.module.css';
-import type { PostCardDescriptionProps } from './types';
+import type { DescriptionProps } from './types';
 
-export default function PostCardDescription({
-  description,
-  isCompact,
-  isHero,
-}: PostCardDescriptionProps) {
+function Description({ children }: DescriptionProps) {
+  const { isCompact, isHero } = usePostCardContext();
+
   return (
     <Text
       className={clsx(
@@ -16,7 +15,11 @@ export default function PostCardDescription({
         isHero && styles.isHero
       )}
     >
-      {description}
+      {children}
     </Text>
   );
 }
+
+Description.displayName = 'PostCard.Description';
+
+export default Description;

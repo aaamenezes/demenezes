@@ -1,49 +1,16 @@
-import Link from '@/components/ui/base/Link';
-import PostCardInfos from '@/components/ui/block/PostCard/Infos';
-import PostCategory from '@/components/ui/block/PostCategory';
-import Wrapper from '@/components/ui/container/Wrapper';
-import { clsx } from '@/utils/clsx';
-import NextImage from 'next/image';
-import styles from './styles.module.css';
-import type { PostCardProps } from './types';
+import Date from './Date';
+import Description from './Description';
+import Image from './Image';
+import Infos from './Infos';
+import Root from './Root';
+import Title from './Title';
 
-export default function PostCard({ post, isCompact }: PostCardProps) {
-  const { title, slug, thumbnail, category } = post;
-  const { width, height } = thumbnail;
-  const { src } = thumbnail.responsiveImage;
+const PostCard = Object.assign(Root, {
+  Image,
+  Infos,
+  Title,
+  Description,
+  Date,
+});
 
-  return (
-    <Wrapper
-      className={clsx(styles.postCardWrapper, isCompact && styles.isCompact)}
-      width="xl"
-    >
-      <div
-        className={clsx(
-          styles.postCardImageWrapper,
-          isCompact && styles.isCompact
-        )}
-        aria-hidden="true"
-      >
-        <Link
-          className={styles.postCardImageLink}
-          href={`/posts/${slug}`}
-          tab-index="-1"
-        >
-          <NextImage
-            src={src}
-            alt={`Imagem de capa do post: ${title}`}
-            width={width}
-            height={height}
-            sizes="(max-width: 767px) 100vw, 30vw"
-            style={{
-              aspectRatio: '4 / 3',
-              objectFit: 'cover',
-            }}
-          />
-          <PostCategory>{category}</PostCategory>
-        </Link>
-      </div>
-      <PostCardInfos post={post} isCompact={isCompact} />
-    </Wrapper>
-  );
-}
+export default PostCard;

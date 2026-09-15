@@ -1,7 +1,5 @@
-import type { PostSummaryProps } from '@/types';
+import type { ReactNode } from 'react';
 
-export interface PostCardInfosProps {
-  post: PostSummaryProps;
-  isHero?: boolean;
-  isCompact?: boolean;
+export interface InfosProps {
+  children: ReactNode;
 }

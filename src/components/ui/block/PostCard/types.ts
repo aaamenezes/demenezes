@@ -1,6 +1,6 @@
-import type { PostSummaryProps } from '@/types';
+import type { PostCardProps } from './Root/types';
 
-export interface PostCardProps {
-  post: PostSummaryProps;
-  isCompact?: boolean;
-}
+export type PostCardContextValue = Pick<
+  PostCardProps,
+  'isCompact' | 'isHero' | 'category' | 'slug'
+>;

@@ -1,24 +1,21 @@
-import PostCardDescription from '@/components/ui/block/PostCard/Description';
-import PostCardFooter from '@/components/ui/block/PostCard/Footer';
-import PostCardHeader from '@/components/ui/block/PostCard/Header';
 import { clsx } from '@/utils/clsx';
 import type { CSSProperties } from 'react';
 import { useCallback } from 'react';
+import { usePostCardContext } from '../context';
 import styles from './styles.module.css';
-import type { PostCardInfosProps } from './types';
+import type { InfosProps } from './types';
 
-export default function PostCardInfos({
-  post,
-  isHero = false,
-  isCompact = false,
-}: PostCardInfosProps) {
-  const { _firstPublishedAt, metaDescription, _updatedAt } = post;
+function Infos({ children }: InfosProps) {
+  const { isCompact, isHero } = usePostCardContext();
 
-  const getWrapperWidth = useCallback((isHero: boolean, compact: boolean) => {
-    if (compact) return '100%';
-    if (isHero) return '50%';
-    return '62%';
-  }, []);
+  const getInfosWidth = useCallback(
+    (isHero: boolean | undefined, compact: boolean | undefined) => {
+      if (compact) return '100%';
+      if (isHero) return '50%';
+      return '62%';
+    },
+    []
+  );
 
   return (
     <div
@@ -29,21 +26,15 @@ export default function PostCardInfos({
       )}
       style={
         {
-          '--post-card-infos-width': getWrapperWidth(isHero, isCompact),
+          '--post-card-infos-width': getInfosWidth(isHero, isCompact),
         } as CSSProperties
       }
     >
-      <PostCardHeader post={post} isHero={isHero} />
-      <PostCardDescription
-        description={metaDescription}
-        isCompact={isCompact}
-        isHero={isHero}
-      />
-      <PostCardFooter
-        publicationDate={_firstPublishedAt}
-        updateDate={_updatedAt}
-        isCompact={isCompact}
-      />
+      {children}
     </div>
   );
 }
+
+Infos.displayName = 'PostCard.Infos';
+
+export default Infos;
