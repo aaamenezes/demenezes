@@ -1,5 +1,4 @@
 import Link from '@/components/ui/base/Link';
-import PostCategory from '@/components/ui/block/PostCategory';
 import { clsx } from '@/utils/clsx';
 import NextImage from 'next/image';
 import { usePostCardContext } from '../context';
@@ -26,7 +25,7 @@ function Image({ src, alt, width, height }: ImageProps) {
             objectFit: 'cover',
           }}
         />
-        <PostCategory>{category}</PostCategory>
+        <div className={styles.category}>{category}</div>
       </Link>
     </div>
   );

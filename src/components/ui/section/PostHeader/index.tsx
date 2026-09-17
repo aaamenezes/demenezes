@@ -1,6 +1,5 @@
 import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
-import PostCategory from '@/components/ui/block/PostCategory';
 import Wrapper from '@/components/ui/container/Wrapper';
 import { formatDate } from '@/utils/formatDate';
 import type { CSSProperties } from 'react';
@@ -73,7 +72,7 @@ export default function PostHeader({
           )}
           <ul className={styles.keywordsList}>{keywordsList}</ul>
         </footer>
-        <PostCategory>{category}</PostCategory>
+        <div className={styles.category}>{category}</div>
       </Wrapper>
     </div>
   );
