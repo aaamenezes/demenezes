@@ -6,13 +6,13 @@ import HeadingStory from '@/components/ui/base/Heading/story';
 import HiddenA11YStory from '@/components/ui/base/HiddenA11Y/story';
 import InputStory from '@/components/ui/base/Input/story';
 import LinkStory from '@/components/ui/base/Link/story';
+import ProgressBarStory from '@/components/ui/base/ProgressBar/story';
 import TextStory from '@/components/ui/base/Text/story';
 import VideoStory from '@/components/ui/base/Video/story';
 import YouTubeStory from '@/components/ui/base/YouTube/story';
 import BlockQuoteStory from '@/components/ui/block/BlockQuote/story';
 import LogoStory from '@/components/ui/block/Logo/story';
 import PostCardStory from '@/components/ui/block/PostCard/story';
-import ProgressBarStory from '@/components/ui/block/ProgressBar/story';
 import TableStory from '@/components/ui/block/Table/story';
 import GridStory from '@/components/ui/container/Grid/story';
 import NavigationStory from '@/components/ui/container/Navigation/story';
@@ -47,6 +47,7 @@ export const componentsByLevelMap: ComponentsMapProps = {
     figure: FigureStory,
     input: InputStory,
     link: LinkStory,
+    progressBar: ProgressBarStory,
     text: TextStory,
     video: VideoStory,
     youTube: YouTubeStory,
@@ -55,7 +56,6 @@ export const componentsByLevelMap: ComponentsMapProps = {
     blockQuote: BlockQuoteStory,
     logo: LogoStory,
     postCard: PostCardStory,
-    progressBar: ProgressBarStory,
     table: TableStory,
   },
   container: {

@@ -1,5 +1,5 @@
 import Head from '@/components/meta/Head';
-import ProgressBar from '@/components/ui/block/ProgressBar';
+import ProgressBar from '@/components/ui/base/ProgressBar';
 import PostComments from '@/components/ui/section/PostComments';
 import PostContent from '@/components/ui/section/PostContent';
 import PostHeader from '@/components/ui/section/PostHeader';
