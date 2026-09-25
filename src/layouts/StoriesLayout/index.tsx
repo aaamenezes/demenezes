@@ -1,11 +1,8 @@
 import settings from '@/data/settings.json';
 import Head from 'next/head';
+import type { StoriesLayoutProps } from './types';
 
-export default function StoriesLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function StoriesLayout({ children }: StoriesLayoutProps) {
   const { src } = settings;
 
   return (

@@ -1,14 +1,17 @@
 - [Ajustes de código sem impacto visual](#ajustes-de-código-sem-impacto-visual)
+  - [AGENTS.MD](#agentsmd)
   - [Trocar string por type personalizado](#trocar-string-por-type-personalizado)
-  - [\[🚫 COMPOSITE\] Melhorar `PostsWrapper`](#-composite-melhorar-postswrapper)
-  - [\[🚫 COMPOSITE\] Analisar necessidade do componente PostCategory](#-composite-analisar-necessidade-do-componente-postcategory)
+  - [Inserir textos explicativos no style-guide](#inserir-textos-explicativos-no-style-guide)
+  - [Inserir contratos/interfaces no style-guide](#inserir-contratosinterfaces-no-style-guide)
+  - [Inserir código de cada exemplo do style-guide](#inserir-código-de-cada-exemplo-do-style-guide)
+  - [\[🚫 COMPOUND\] Melhorar `PostsWrapper`](#-compound-melhorar-postswrapper)
   - [\[🚫 ATUALIZAR VERSOES\] Aplicar React Portal no `Navigation`](#-atualizar-versoes-aplicar-react-portal-no-navigation)
   - [\[🚫 DEPLOY\] Testar mudança de retrato para paisagem no mobile](#-deploy-testar-mudança-de-retrato-para-paisagem-no-mobile)
   - [\[🚫 DEPLOY\] Testar site mobile](#-deploy-testar-site-mobile)
 - [Configurações estruturais](#configurações-estruturais)
-  - [Implementar padrão composite](#implementar-padrão-composite)
-  - [Reorganizar componentes](#reorganizar-componentes)
-  - [Revisar /src/](#revisar-src)
+  - [Resolver problema de deploy na Vercel](#resolver-problema-de-deploy-na-vercel)
+  - [\[🚫 COMPOUND\] Reorganizar componentes](#-compound-reorganizar-componentes)
+  - [\[🚫 COMPOUND\] Revisar /src/](#-compound-revisar-src)
 - [Atualizar versões](#atualizar-versões)
   - [Aplicar SDD](#aplicar-sdd)
   - [Implementar busca](#implementar-busca)
@@ -20,6 +23,13 @@
 
 # Ajustes de código sem impacto visual
 
+## AGENTS.MD
+
+Ler sobre esse arquivo, melhorar o que está escrito atualmente.
+
+- inteligência artificial
+- padrão
+
 ## Trocar string por type personalizado
 
 É possível trocar a `string` em `src/components/ui/template/StyleGuide/types.ts` para algo como `ComponentName`?
@@ -27,25 +37,36 @@
 - padrão
 - typescript
 
-## [🚫 COMPOSITE] Melhorar `PostsWrapper`
+## Inserir textos explicativos no style-guide
+
+## Inserir contratos/interfaces no style-guide
+
+Mostrar contrato/interface/api de cada componente na página do style-guide.
+
+O componente de Table já existente talvez seja um bom formato.
+
+Props, types (não mostrar custom type como ButtonVariant, e sim as próprias variantes)
+
+- style-guide
+
+## Inserir código de cada exemplo do style-guide
+
+Mostrar o código usado para renderizar cada exemplo do componente no style-guide.
+
+Como se fosse uma demonstração de como criar AQUELE componente.
+
+- style-guide
+
+## [🚫 COMPOUND] Melhorar `PostsWrapper`
 
 Esse componente hoje é dividido em `firstBlockPosts` e `secondBlockPosts` com o formulário de newsletter no meio. Além disso ele não tem story.
 
 Analisar se vale a pena manter assim, ou se removo o componente e monto ele manualmente quando precisar.
 
-Antes de saber o que fazer, aplicar composite na base.
+Antes de saber o que fazer, aplicar COMPOUND na base.
 
 - story
 - component
-
-## [🚫 COMPOSITE] Analisar necessidade do componente PostCategory
-
-Esse componente não tem story. Não parece ser vantagem ter ele como um componente isolado, pode ser chamado e estilizado separadamente. Antes de saber o que fazer, aplicar composite na base.
-
-- story
-- component
-- react
-- padrão
 
 ## [🚫 ATUALIZAR VERSOES] Aplicar React Portal no `Navigation`
 
@@ -70,22 +91,16 @@ Testar scroll vertical e horizontal, zoom, etc. Se der algo errado, a culpa é d
 
 # Configurações estruturais
 
-## Implementar padrão composite
+## Resolver problema de deploy na Vercel
 
-Implementar padrão composite nos componentes
-
-- react
-- componente
-- padrão
-
-## Reorganizar componentes
+## [🚫 COMPOUND] Reorganizar componentes
 
 - Mover componentes de `src/designSystems` para `src/ui`
 - Mover componentes de `src/meta` para `src/`
 - Mover componentes de `src/post` para `src/ui`
 - Mover componentes de `src/ui` para `src/` e remover `src/ui`
 
-## Revisar /src/
+## [🚫 COMPOUND] Revisar /src/
 
 Rever as pastas dentro de `/src/`, se nomes fazem sentido, se a organização faz sentido.
 
