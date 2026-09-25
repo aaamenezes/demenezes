@@ -1,0 +1,8 @@
+.tableRow:nth-child(odd) {
+  background-color: var(--color-neutral-200);
+}
+
+.tableRow:hover {
+  color: var(--color-neutral-50);
+  background-color: var(--color-primary-300);
+}

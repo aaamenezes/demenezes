@@ -1,0 +1,4 @@
+.tableCell {
+  padding: var(--spacing-sm);
+  text-align: center;
+}

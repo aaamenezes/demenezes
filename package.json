@@ -13,6 +13,7 @@
     "critters": "0.0.7",
     "date-fns": "2.16.1",
     "datocms-structured-text-utils": "^2.0.1",
+    "html-entities": "^2.6.0",
     "install": "^0.13.0",
     "lucide-react": "^0.548.0",
     "next": "^13.0.6",

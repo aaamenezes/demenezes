@@ -1,5 +1,4 @@
-export interface TableProps {
-  caption: string;
-  tableSummary: string;
-  tableContent: string;
+export interface Cell {
+  label: string;
+  // attributes?: {};
 }

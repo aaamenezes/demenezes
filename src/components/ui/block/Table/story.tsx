@@ -6,45 +6,102 @@ export default function TableStory() {
     <>
       <Section heading="Default">
         <Table
-          caption="Título da Tabela"
-          tableSummary="Está é uma tabela de exemplo para demonstração do componente Table"
-          tableContent={`<table>
-            <thead>
-              <tr>
-                <th>Coluna 1</th>
-                <th>Coluna 2</th>
-                <th>Coluna 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Linha 1, Coluna 1</td>
-                <td>Linha 1, Coluna 2</td>
-                <td>Linha 1, Coluna 3</td>
-              </tr>
-              <tr>
-                <td>Linha 2, Coluna 1</td>
-                <td>Linha 2, Coluna 2</td>
-                <td>Linha 2, Coluna 3</td>
-              </tr>
-              <tr>
-                <td>Linha 3, Coluna 1</td>
-                <td>Linha 3, Coluna 2</td>
-                <td>Linha 3, Coluna 3</td>
-              </tr>
-              <tr>
-                <td>Linha 4, Coluna 1</td>
-                <td>Linha 4, Coluna 2</td>
-                <td>Linha 4, Coluna 3</td>
-              </tr>
-              <tr>
-                <td>Linha 5, Coluna 1</td>
-                <td>Linha 5, Coluna 2</td>
-                <td>Linha 5, Coluna 3</td>
-              </tr>
-            </tbody>
-          </table>`}
-        />
+          caption="Tabela de exemplo"
+          summary="Essa é uma tabela de exemplo para demonstração do componente Table"
+        >
+          <Table.Header
+            cells={[
+              { label: 'Column 1' },
+              { label: 'Column 2' },
+              { label: 'Column 3' },
+            ]}
+          />
+          <Table.Body
+            rows={[
+              [
+                { label: 'Row 1, Column 1' },
+                { label: 'Row 1, Column 2' },
+                { label: 'Row 1, Column 3' },
+              ],
+              [
+                { label: 'Row 2, Column 1' },
+                { label: 'Row 2, Column 2' },
+                { label: 'Row 2, Column 3' },
+              ],
+              [
+                { label: 'Row 3, Column 1' },
+                { label: 'Row 3, Column 2' },
+                { label: 'Row 3, Column 3' },
+              ],
+            ]}
+          />
+          <Table.Footer
+            cells={[
+              { label: 'Footer 1' },
+              { label: 'Footer 2' },
+              { label: 'Footer 3' },
+            ]}
+          />
+        </Table>
+      </Section>
+      <Section heading="Without footer">
+        <Table
+          caption="Tabela de exemplo"
+          summary="Essa é uma tabela de exemplo para demonstração do componente Table"
+        >
+          <Table.Header
+            cells={[
+              { label: 'Column 1' },
+              { label: 'Column 2' },
+              { label: 'Column 3' },
+            ]}
+          />
+          <Table.Body
+            rows={[
+              [
+                { label: 'Row 1, Column 1' },
+                { label: 'Row 1, Column 2' },
+                { label: 'Row 1, Column 3' },
+              ],
+              [
+                { label: 'Row 2, Column 1' },
+                { label: 'Row 2, Column 2' },
+                { label: 'Row 2, Column 3' },
+              ],
+              [
+                { label: 'Row 3, Column 1' },
+                { label: 'Row 3, Column 2' },
+                { label: 'Row 3, Column 3' },
+              ],
+            ]}
+          />
+        </Table>
+      </Section>
+      <Section heading="Without footer and header">
+        <Table
+          caption="Tabela de exemplo"
+          summary="Essa é uma tabela de exemplo para demonstração do componente Table"
+        >
+          <Table.Body
+            rows={[
+              [
+                { label: 'Row 1, Column 1' },
+                { label: 'Row 1, Column 2' },
+                { label: 'Row 1, Column 3' },
+              ],
+              [
+                { label: 'Row 2, Column 1' },
+                { label: 'Row 2, Column 2' },
+                { label: 'Row 2, Column 3' },
+              ],
+              [
+                { label: 'Row 3, Column 1' },
+                { label: 'Row 3, Column 2' },
+                { label: 'Row 3, Column 3' },
+              ],
+            ]}
+          />
+        </Table>
       </Section>
     </>
   );

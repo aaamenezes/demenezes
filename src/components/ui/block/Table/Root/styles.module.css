@@ -1,0 +1,21 @@
+.tableWrapper {
+  overflow: auto;
+}
+
+.table {
+  font-family: var(--font-family-heading);
+  width: 100%;
+}
+
+.tableCaption {
+  caption-side: bottom;
+  /* visually hidden */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+}

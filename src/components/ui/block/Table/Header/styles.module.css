@@ -1,0 +1,9 @@
+.tableHeader {
+  padding: var(--spacing-sm);
+  text-align: center;
+}
+
+.tableRow {
+  color: var(--color-neutral-50);
+  background-color: var(--color-neutral-700);
+}
