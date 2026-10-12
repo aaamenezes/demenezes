@@ -1,41 +1,47 @@
 .grid {
   display: grid;
   grid-template-columns: var(--grid-template-columns-xs);
-  gap: var(--grid-gap, 0);
+  gap: var(--grid-gap-xs);
 }
 
 @media screen and (min-width: 425px) {
   .grid {
     grid-template-columns: var(--grid-template-columns-sm);
+    gap: var(--grid-gap-sm);
   }
 }
 
 @media screen and (min-width: 768px) {
   .grid {
     grid-template-columns: var(--grid-template-columns-md);
+    gap: var(--grid-gap-md);
   }
 }
 
 @media screen and (min-width: 992px) {
   .grid {
     grid-template-columns: var(--grid-template-columns-lg);
+    gap: var(--grid-gap-lg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .grid {
     grid-template-columns: var(--grid-template-columns-xl);
+    gap: var(--grid-gap-xl);
   }
 }
 
 @media screen and (min-width: 1600px) {
   .grid {
     grid-template-columns: var(--grid-template-columns-xxl);
+    gap: var(--grid-gap-xxl);
   }
 }
 
 @media screen and (min-width: 2000px) {
   .grid {
     grid-template-columns: var(--grid-template-columns-xxxl);
+    gap: var(--grid-gap-xxxl);
   }
 }

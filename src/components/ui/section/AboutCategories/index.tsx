@@ -2,36 +2,56 @@ import CmsIcon from '@/components/ui/base/CmsIcon';
 import Heading from '@/components/ui/base/Heading';
 import Text from '@/components/ui/base/Text';
 import Wrapper from '@/components/ui/container/Wrapper';
-import styles from './styles.module.css';
+import Grid from '../../container/Grid';
 import type { AboutCategoriesProps } from './types';
 
 export default function AboutCategories({
   categoriesHeading,
   categoryItems,
 }: AboutCategoriesProps) {
-  const CategoryItems = categoryItems.map(
+  const categoryItemsElement = categoryItems.map(
     ({ categoryItemIcon, categoryItemTitle, categoryItemDescription }) => {
       return (
-        <li className={styles.categoryItem} key={categoryItemTitle}>
-          <Heading level={3} size="lg" className={styles.categoryItemHeading}>
-            <CmsIcon name={categoryItemIcon} />
-            <Text as="span" inheritTypographyStyles>
-              {categoryItemTitle}
-            </Text>
-          </Heading>
-          <Text className={styles.categoryText}>{categoryItemDescription}</Text>
-        </li>
+        <Wrapper
+          as="li"
+          width="full"
+          padding="none"
+          direction="column"
+          alignItems="center"
+          gap="md"
+          key={categoryItemTitle}
+        >
+          <Wrapper
+            width="full"
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            gap="sm"
+            padding="none"
+          >
+            <CmsIcon name={categoryItemIcon} size={18} />
+            <Heading level={3} size="lg">
+              <Text as="span" inheritTypographyStyles>
+                {categoryItemTitle}
+              </Text>
+            </Heading>
+          </Wrapper>
+          <Text>{categoryItemDescription}</Text>
+        </Wrapper>
       );
     }
   );
-
   return (
-    <Wrapper as="section" width="xl">
-      <header className={styles.categoriesHeader}>
+    <Wrapper width="full" as="section">
+      <Wrapper width="xxl" as="header" direction="column" gap="lg">
         <Heading>{categoriesHeading}</Heading>
-      </header>
-
-      <ul className={styles.categoriesList}>{CategoryItems}</ul>
+        <Grid
+          columns={{ xs: 1, sm: 2, md: 2, lg: 2, xl: 3, xxl: 3, xxxl: 3 }}
+          as="ul"
+        >
+          {categoryItemsElement}
+        </Grid>
+      </Wrapper>
     </Wrapper>
   );
 }

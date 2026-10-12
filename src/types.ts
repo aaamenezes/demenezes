@@ -263,6 +263,7 @@ export interface PageProps {
 export type Breakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 export type Spacing =
+  | 'none'
   | 'xxxs'
   | 'xxs'
   | 'xs'
