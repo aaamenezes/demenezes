@@ -2,7 +2,7 @@ import Head from '@/components/meta/Head';
 import ContactForm from '@/components/ui/section/AboutContactForm';
 import { getContent } from '@/external/datoCMS';
 import { getBlogLayout } from '@/layouts/getLayouts';
-import type { ContactPageProps } from '@/types';
+import type { ContactPageProps } from '@/types/pages';
 
 export default function Contact({
   contactContent,

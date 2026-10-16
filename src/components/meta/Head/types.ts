@@ -1,9 +1,5 @@
-import type {
-  AboutPageProps,
-  ContactPageProps,
-  PostProps,
-  PostSummaryProps,
-} from '@/types';
+import type { AboutPageProps, ContactPageProps } from '@/types/pages';
+import type { PostProps, PostSummaryProps } from '@/types/post';
 
 export interface HeadProps {
   componentProps: {

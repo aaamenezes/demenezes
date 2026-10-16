@@ -2,11 +2,11 @@ import type {
   AboutPageProps,
   AllPostsProps,
   ContactPageProps,
-  PostProps,
   ReferencesProps,
   RelatedPostsProps,
   RoutesProps,
-} from '@/types';
+} from '@/types/pages';
+import type { PostProps } from '@/types/post';
 
 export type QueryType =
   | 'aboutPage'

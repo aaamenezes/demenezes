@@ -3,7 +3,8 @@ import HomeScreen from '@/components/ui/template/Home';
 import { getContent } from '@/external/datoCMS';
 import { getBlogLayout } from '@/layouts/getLayouts';
 import { generateSitemap } from '@/scripts/generate-sitemap';
-import type { HomePageProps, PostSummaryProps } from '@/types';
+import type { HomePageProps } from '@/types/pages';
+import type { PostSummaryProps } from '@/types/post';
 import { getPaginationInfos } from '@/utils/getPaginationInfos';
 import type { GetStaticPropsContext } from 'next';
 

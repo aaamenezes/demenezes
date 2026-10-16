@@ -7,52 +7,62 @@
 
 .wrapper.flex {
   display: flex;
-  justify-content: var(--justify-content);
-  align-items: var(--align-items);
+  flex-direction: var(--flex-direction-xs);
+  justify-content: var(--justify-content-xs);
+  align-items: var(--align-items-xs);
   gap: var(--grid-gap-xs);
 }
 
 @media screen and (min-width: 425px) {
   .wrapper.flex {
+    flex-direction: var(--flex-direction-sm);
+    justify-content: var(--justify-content-sm);
+    align-items: var(--align-items-sm);
     gap: var(--grid-gap-sm);
   }
 }
 
 @media screen and (min-width: 768px) {
   .wrapper.flex {
+    flex-direction: var(--flex-direction-md);
+    justify-content: var(--justify-content-md);
+    align-items: var(--align-items-md);
     gap: var(--grid-gap-md);
   }
 }
 
 @media screen and (min-width: 992px) {
   .wrapper.flex {
+    flex-direction: var(--flex-direction-lg);
+    justify-content: var(--justify-content-lg);
+    align-items: var(--align-items-lg);
     gap: var(--grid-gap-lg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .wrapper.flex {
+    flex-direction: var(--flex-direction-xl);
+    justify-content: var(--justify-content-xl);
+    align-items: var(--align-items-xl);
     gap: var(--grid-gap-xl);
   }
 }
 
 @media screen and (min-width: 1600px) {
   .wrapper.flex {
+    flex-direction: var(--flex-direction-xxl);
+    justify-content: var(--justify-content-xxl);
+    align-items: var(--align-items-xxl);
     gap: var(--grid-gap-xxl);
   }
 }
 
 @media screen and (min-width: 2000px) {
   .wrapper.flex {
+    flex-direction: var(--flex-direction-xxxl);
+    justify-content: var(--justify-content-xxxl);
+    align-items: var(--align-items-xxxl);
     gap: var(--grid-gap-xxxl);
   }
-}
-
-.wrapper.flex.row {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.wrapper.flex.column {
-  flex-direction: column;
 }

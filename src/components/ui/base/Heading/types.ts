@@ -4,7 +4,7 @@ import type {
   FontWeight,
   LetterSpacing,
   LineHeight,
-} from '@/types';
+} from '@/types/typography';
 import type { HTMLAttributes, ReactNode } from 'react';
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {

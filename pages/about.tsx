@@ -9,7 +9,7 @@ import AboutHobbies from '@/components/ui/section/AboutHobbies';
 import AboutStory from '@/components/ui/section/AboutStory';
 import { getContent } from '@/external/datoCMS';
 import { getBlogLayout } from '@/layouts/getLayouts';
-import type { AboutPageProps, ContactPageProps } from '@/types';
+import type { AboutPageProps, ContactPageProps } from '@/types/pages';
 
 export default function About({
   aboutPageContent,
