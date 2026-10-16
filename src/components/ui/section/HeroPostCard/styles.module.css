@@ -78,3 +78,83 @@
 .heroInner {
   position: relative;
 }
+
+.postCardInfosWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .postCardInfosWrapper {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .postCardInfosWrapper {
+    margin-left: auto;
+  }
+
+  .postCardInfosWrapper.isCompact {
+    margin-left: initial;
+  }
+}
+
+.title {
+  display: inline-block;
+  background-image: linear-gradient(
+    120deg,
+    var(--color-primary-900) 0%,
+    var(--color-primary-500) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  background-position: 0 100%;
+  transition: var(--transition-fast);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    background-size: 100% 0.2rem;
+  }
+}
+
+.title:hover,
+.title:focus-within {
+  background-size: 100% 108%;
+}
+
+.link {
+  display: block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  color: var(--color-neutral-100);
+}
+
+.postCardDescription {
+  padding: 0.5rem;
+  margin: 1.1rem 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-500);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-md);
+  color: var(--color-neutral-100);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+}
+
+.date {
+  text-align: right;
+  color: var(--color-neutral-600);
+}
+

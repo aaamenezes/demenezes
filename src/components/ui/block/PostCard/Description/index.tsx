@@ -5,14 +5,13 @@ import styles from './styles.module.css';
 import type { DescriptionProps } from './types';
 
 function Description({ children }: DescriptionProps) {
-  const { isCompact, isHero } = usePostCardContext();
+  const { isCompact } = usePostCardContext();
 
   return (
     <Text
       className={clsx(
         styles.postCardDescription,
-        isCompact && styles.isCompact,
-        isHero && styles.isHero
+        isCompact && styles.isCompact
       )}
     >
       {children}
