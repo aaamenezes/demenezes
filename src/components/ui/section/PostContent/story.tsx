@@ -1,6 +1,6 @@
 import Section from '@/components/styleGuide/Section';
-import type { PostProps } from '@/types';
 import PostContent from '.';
+import type { PostProps } from '@/types/post';
 
 const post: PostProps = {
   data: {

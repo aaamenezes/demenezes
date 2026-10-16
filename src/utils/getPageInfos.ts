@@ -1,5 +1,5 @@
 import settings from '@/data/settings.json';
-import type { PageName } from '@/types';
+import type { PageName } from '@/types/pages';
 import { useRouter } from 'next/router';
 import { entriesOf } from './object';
 

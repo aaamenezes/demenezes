@@ -150,7 +150,7 @@ export default function References({
   return (
     <>
       <Head componentProps={{}} />
-      <Wrapper width="full">
+      <Wrapper>
         <Wrapper width="xxl">
           <Heading level={1}>Em construção...</Heading>
           <div>

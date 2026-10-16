@@ -6,7 +6,7 @@ import PostHeader from '@/components/ui/section/PostHeader';
 import RelatedPosts from '@/components/ui/section/RelatedPosts';
 import { getContent } from '@/external/datoCMS';
 import { getBlogLayout } from '@/layouts/getLayouts';
-import type { PostProps, PostSummaryProps } from '@/types';
+import type { PostProps, PostSummaryProps } from '@/types/post';
 import { parseParam } from '@/utils/parseParam';
 import type { GetStaticPropsContext } from 'next';
 import { useRef } from 'react';

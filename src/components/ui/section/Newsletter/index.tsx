@@ -13,7 +13,7 @@ export default function Newsletter() {
   const [email, setEmail] = useState('');
 
   return (
-    <Wrapper className={styles.newsletterForm} width="full">
+    <Wrapper className={styles.newsletterForm}>
       <Wrapper width="md">
         <Heading level={3} className={styles.newsletterHeading}>
           {title}

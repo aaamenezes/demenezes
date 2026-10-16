@@ -24,7 +24,6 @@ import AboutGreetingStory from '@/components/ui/section/AboutGreeting/story';
 import AboutHighlightTextStory from '@/components/ui/section/AboutHighlightText/story';
 import AboutHobbiesStory from '@/components/ui/section/AboutHobbies/story';
 import AboutStoryStory from '@/components/ui/section/AboutStory/story';
-import HeroPostCardStory from '@/components/ui/section/HeroPostCard/story';
 import NewsletterStory from '@/components/ui/section/Newsletter/story';
 import PageFooterStory from '@/components/ui/section/PageFooter/story';
 import PageHeaderStory from '@/components/ui/section/PageHeader/story';
@@ -71,7 +70,6 @@ export const componentsByLevelMap: ComponentsMapProps = {
     aboutHighlightText: AboutHighlightTextStory,
     aboutHobbies: AboutHobbiesStory,
     aboutStory: AboutStoryStory,
-    heroPostCard: HeroPostCardStory,
     newsletter: NewsletterStory,
     pageFooter: PageFooterStory,
     pageHeader: PageHeaderStory,

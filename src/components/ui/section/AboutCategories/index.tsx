@@ -14,7 +14,6 @@ export default function AboutCategories({
       return (
         <Wrapper
           as="li"
-          width="full"
           padding="none"
           direction="column"
           alignItems="center"
@@ -22,7 +21,6 @@ export default function AboutCategories({
           key={categoryItemTitle}
         >
           <Wrapper
-            width="full"
             direction="row"
             justifyContent="center"
             alignItems="center"
@@ -42,7 +40,7 @@ export default function AboutCategories({
     }
   );
   return (
-    <Wrapper width="full" as="section">
+    <Wrapper as="section">
       <Wrapper width="xxl" as="header" direction="column" gap="lg">
         <Heading>{categoriesHeading}</Heading>
         <Grid
